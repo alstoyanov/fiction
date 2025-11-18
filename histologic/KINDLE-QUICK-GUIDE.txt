@@ -1,0 +1,120 @@
+================================================================================
+                    HISTOLOGIC STORIES → KINDLE
+                         Quick Guide
+================================================================================
+
+YOUR EBOOK IS READY: histologic-stories.epub (in project root)
+
+================================================================================
+                    THREE WAYS TO GET IT ON KINDLE
+================================================================================
+
+METHOD 1: PUBLISH ON AMAZON (Sell Your Book)
+────────────────────────────────────────────────────────────────────────────
+1. Go to: https://kdp.amazon.com
+2. Create account / Sign in
+3. Click "Create" → "Kindle eBook"
+4. Upload: histologic-stories.epub (EPUB works!)
+5. Amazon converts automatically
+6. Set price ($2.99 recommended)
+7. Publish!
+
+Result: Book for sale on Amazon, earn royalties
+
+
+METHOD 2: EMAIL TO YOUR KINDLE (Personal Reading)
+────────────────────────────────────────────────────────────────────────────
+1. Install Calibre: https://calibre-ebook.com
+
+2. Convert EPUB to MOBI:
+   Run: scripts\convert-to-kindle.bat
+   
+3. Find your Kindle email:
+   Go to: https://www.amazon.com/mycd
+   Look for: yourname@kindle.com
+
+4. Email histologic-stories.mobi to your Kindle email
+
+5. Book appears on your Kindle (within minutes)
+
+
+METHOD 3: USB TRANSFER (Offline)
+────────────────────────────────────────────────────────────────────────────
+1. Convert: scripts\convert-to-kindle.bat
+
+2. Connect Kindle via USB
+
+3. Copy histologic-stories.mobi to Kindle's "documents" folder
+
+4. Eject Kindle
+
+5. Book appears in library
+
+
+================================================================================
+                         QUICK COMMANDS
+================================================================================
+
+Convert to Kindle format:
+    scripts\convert-to-kindle.bat
+
+Or manually with Calibre:
+    ebook-convert histologic-stories.epub histologic-stories.mobi
+
+================================================================================
+                         WHAT YOU NEED
+================================================================================
+
+For Personal Use (Methods 2 & 3):
+    ✓ Calibre (free): https://calibre-ebook.com
+    ✓ Your Kindle email address
+    ✓ USB cable (for Method 3)
+
+For Publishing (Method 1):
+    ✓ Amazon KDP account (free)
+    ✓ Book cover (1600x2560 pixels)
+    ✓ Tax information
+
+================================================================================
+                         TROUBLESHOOTING
+================================================================================
+
+"Calibre not found"
+    → Install from https://calibre-ebook.com
+    → Restart computer
+    → Try again
+
+"Email not working"
+    → Check Kindle email at amazon.com/mycd
+    → Must send from approved email
+    → File must be .mobi (not .epub)
+
+"Book not on Kindle"
+    → Connect to WiFi
+    → Check "All" items (not just "Downloaded")
+    → Settings → Sync
+    → Wait a few minutes
+
+================================================================================
+                         RECOMMENDED PATH
+================================================================================
+
+For Testing/Personal Use:
+    1. Run: scripts\convert-to-kindle.bat
+    2. Email .mobi to your Kindle
+    3. Read and test
+
+For Publishing:
+    1. Go to kdp.amazon.com
+    2. Upload .epub directly
+    3. Let Amazon convert
+    4. Publish and sell
+
+================================================================================
+
+NEED MORE HELP? See: SEND-TO-KINDLE.md
+
+READY TO CONVERT? Run: scripts\convert-to-kindle.bat
+
+================================================================================
+

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{STORY_DESCRIPTION}}">
+    <meta name="author" content="Histologic Universe">
+    <title>{{STORY_TITLE}} - Histologic Universe</title>
+    
+    <style>
+        /* ==================== VARIABLES ==================== */
+        :root {
+            --primary-color: #1a1a2e;
+            --secondary-color: #16213e;
+            --accent-color: #0f3460;
+            --highlight-color: #e94560;
+            --text-color: #2d2d2d;
+            --text-light: #666;
+            --bg-color: #f8f9fa;
+            --paper-color: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-heavy: 0 4px 16px rgba(0, 0, 0, 0.15);
+            
+            --font-serif: 'Georgia', 'Times New Roman', serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            --font-mono: 'Courier New', monospace;
+            
+            --max-width: 800px;
+            --spacing-unit: 1.5rem;
+        }
+        
+        /* ==================== RESET & BASE ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-serif);
+            line-height: 1.8;
+            color: var(--text-color);
+            background: var(--bg-color);
+            background-image: 
+                linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px),
+                linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        /* ==================== LAYOUT ==================== */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        /* ==================== HEADER ==================== */
+        .story-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            margin: -2rem -1.5rem 3rem;
+            text-align: center;
+            box-shadow: var(--shadow-heavy);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .story-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(255,255,255,0.03) 50px,
+                    rgba(255,255,255,0.03) 51px
+                );
+            pointer-events: none;
+        }
+        
+        .story-header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .universe-label {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .story-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .story-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        .story-meta {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .meta-icon {
+            opacity: 0.7;
+        }
+        
+        /* ==================== CONTENT ==================== */
+        .story-content {
+            background: var(--paper-color);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            border-radius: 4px;
+            margin-bottom: 3rem;
+        }
+        
+        /* ==================== TYPOGRAPHY ==================== */
+        .story-content h1,
+        .story-content h2,
+        .story-content h3 {
+            font-family: var(--font-sans);
+            color: var(--primary-color);
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+        
+        .story-content h1 {
+            font-size: 2.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .story-content h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .story-content h3 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+        
+        .story-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+        
+        .story-content p:first-of-type::first-letter {
+            font-size: 3.5rem;
+            line-height: 0.9;
+            float: left;
+            margin: 0.1rem 0.1rem 0 0;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        
+        /* Section breaks */
+        .story-content hr {
+            border: none;
+            text-align: center;
+            margin: 3rem 0;
+            height: 2rem;
+        }
+        
+        .story-content hr::before {
+            content: '◆ ◆ ◆';
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            letter-spacing: 1rem;
+        }
+        
+        /* Emphasis */
+        .story-content em {
+            font-style: italic;
+            color: var(--text-color);
+        }
+        
+        .story-content strong {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        /* Quotes */
+        .story-content blockquote {
+            margin: 2rem 0;
+            padding: 1.5rem 2rem;
+            border-left: 4px solid var(--accent-color);
+            background: var(--bg-color);
+            font-style: italic;
+            color: var(--text-light);
+        }
+        
+        /* ==================== PARTS/CHAPTERS ==================== */
+        .part-divider {
+            text-align: center;
+            margin: 4rem 0;
+            padding: 2rem 0;
+            border-top: 2px solid var(--border-color);
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .part-number {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+        
+        .part-title {
+            font-family: var(--font-sans);
+            font-size: 2rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        /* ==================== FOOTER ==================== */
+        .story-footer {
+            background: var(--paper-color);
+            padding: 2rem 3rem;
+            box-shadow: var(--shadow);
+            border-radius: 4px;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section {
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .footer-title {
+            font-family: var(--font-sans);
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .footer-content {
+            font-family: var(--font-sans);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            color: var(--text-light);
+        }
+        
+        .footer-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .footer-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .footer-list strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        /* ==================== COPYRIGHT ==================== */
+        .copyright {
+            text-align: center;
+            padding: 2rem;
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        /* ==================== PRINT STYLES ==================== */
+        @media print {
+            body {
+                background: white;
+                font-size: 12pt;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            
+            .story-header {
+                background: var(--primary-color);
+                color: white;
+                page-break-after: always;
+            }
+            
+            .story-content {
+                box-shadow: none;
+                padding: 0;
+            }
+            
+            .story-content h1,
+            .story-content h2 {
+                page-break-after: avoid;
+            }
+            
+            .story-content p {
+                orphans: 3;
+                widows: 3;
+            }
+            
+            .part-divider {
+                page-break-before: always;
+            }
+            
+            .story-footer {
+                page-break-before: always;
+            }
+            
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+        
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 768px) {
+            html {
+                font-size: 14px;
+            }
+            
+            .story-header {
+                padding: 3rem 1.5rem;
+                margin: -2rem -1.5rem 2rem;
+            }
+            
+            .story-title {
+                font-size: 2rem;
+            }
+            
+            .story-subtitle {
+                font-size: 1rem;
+            }
+            
+            .story-meta {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .story-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .story-content h1 {
+                font-size: 1.75rem;
+            }
+            
+            .story-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .story-content h3 {
+                font-size: 1.25rem;
+            }
+            
+            .story-footer {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* ==================== DARK MODE ==================== */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-color: #e0e0e0;
+                --text-light: #a0a0a0;
+                --bg-color: #1a1a1a;
+                --paper-color: #2d2d2d;
+                --border-color: #404040;
+            }
+            
+            body {
+                background-image: 
+                    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px),
+                    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+            }
+            
+            .story-content p:first-of-type::first-letter {
+                color: var(--highlight-color);
+            }
+            
+            .story-content blockquote {
+                background: rgba(0,0,0,0.2);
+            }
+        }
+        
+        /* ==================== ANIMATIONS ==================== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .story-content {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        /* ==================== UTILITIES ==================== */
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-muted {
+            color: var(--text-light);
+        }
+        
+        .no-break {
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="story-header">
+            <div class="story-header-content">
+                <div class="universe-label">Histologic Universe</div>
+                <h1 class="story-title">{{STORY_TITLE}}</h1>
+                <p class="story-subtitle">{{STORY_SUBTITLE}}</p>
+                
+                <div class="story-meta">
+                    <div class="meta-item">
+                        <span class="meta-icon">📖</span>
+                        <span>{{WORD_COUNT}} words</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">⏱️</span>
+                        <span>{{READING_TIME}} min read</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">📅</span>
+                        <span>{{PUBLICATION_DATE}}</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="story-content">
+            {{STORY_CONTENT}}
+        </main>
+
+        <!-- Footer -->
+        <footer class="story-footer">
+            <div class="footer-section">
+                <h3 class="footer-title">About This Story</h3>
+                <div class="footer-content">
+                    {{STORY_DESCRIPTION}}
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Key Themes</h3>
+                <ul class="footer-list">
+                    {{THEMES_LIST}}
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Characters</h3>
+                <ul class="footer-list">
+                    {{CHARACTERS_LIST}}
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">World-Building Elements</h3>
+                <div class="footer-content">
+                    {{WORLDBUILDING_ELEMENTS}}
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Connections</h3>
+                <div class="footer-content">
+                    {{STORY_CONNECTIONS}}
+                </div>
+            </div>
+        </footer>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>© {{YEAR}} Histologic Universe. All rights reserved.</p>
+            <p class="text-muted">This is a work of fiction set in a science fiction universe where history has become an exact science.</p>
+        </div>
+    </div>
+
+    <!-- Reading progress indicator -->
+    <script>
+        // Add reading progress indicator
+        const progressBar = document.createElement('div');
+        progressBar.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #0f3460, #e94560);
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.1s ease;
+        `;
+        document.body.appendChild(progressBar);
+
+        window.addEventListener('scroll', () => {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight - windowHeight;
+            const scrolled = window.scrollY;
+            const progress = (scrolled / documentHeight) * 100;
+            progressBar.style.width = progress + '%';
+        });
+    </script>
+</body>
+</html>
+

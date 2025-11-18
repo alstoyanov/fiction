@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kira Osman is a brilliant Senior Architect for Veridica's Factorepo Infrastructure—a true believer who has devoted her life to maintaining the system's perfection. When a charming stranger named Adrian saves her from a dangerous accident, she's drawn to him despite her usual caution. Adrian is an outlaw recruiter, sent to seduce and turn her, but unlike his previous targets, he falls genuinely in love with her.
+
+When a critical security protocol fact that Kira personally entered into the factorepo mysteriously vanishes, she's accused of falsification or sabotage. The system she helped build turns against her. As she discovers Adrian is an outlaw and faces condemnation by The Judge, Kira begins to question everything: if facts can be stolen, can the infallible system be trusted?
+
+Sent to the same corrective facility as Marcus Chen, Kira enters not repeating "I believe" but asking "What if the system made a mistake?"—the first step on a journey Marcus has not yet begun.">
+    <meta name="author" content="Histologic Universe">
+    <title>The Stolen Fact - Histologic Universe</title>
+    
+    <style>
+        /* ==================== VARIABLES ==================== */
+        :root {
+            --primary-color: #1a1a2e;
+            --secondary-color: #16213e;
+            --accent-color: #0f3460;
+            --highlight-color: #e94560;
+            --text-color: #2d2d2d;
+            --text-light: #666;
+            --bg-color: #f8f9fa;
+            --paper-color: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-heavy: 0 4px 16px rgba(0, 0, 0, 0.15);
+            
+            --font-serif: 'Georgia', 'Times New Roman', serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            --font-mono: 'Courier New', monospace;
+            
+            --max-width: 800px;
+            --spacing-unit: 1.5rem;
+        }
+        
+        /* ==================== RESET & BASE ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-serif);
+            line-height: 1.8;
+            color: var(--text-color);
+            background: var(--bg-color);
+            background-image: 
+                linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px),
+                linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        /* ==================== LAYOUT ==================== */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        /* ==================== HEADER ==================== */
+        .story-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            margin: -2rem -1.5rem 3rem;
+            text-align: center;
+            box-shadow: var(--shadow-heavy);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .story-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(255,255,255,0.03) 50px,
+                    rgba(255,255,255,0.03) 51px
+                );
+            pointer-events: none;
+        }
+        
+        .story-header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .universe-label {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .story-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .story-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        .story-meta {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .meta-icon {
+            opacity: 0.7;
+        }
+        
+        /* ==================== CONTENT ==================== */
+        .story-content {
+            background: var(--paper-color);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            border-radius: 4px;
+            margin-bottom: 3rem;
+        }
+        
+        /* ==================== TYPOGRAPHY ==================== */
+        .story-content h1,
+        .story-content h2,
+        .story-content h3 {
+            font-family: var(--font-sans);
+            color: var(--primary-color);
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+        
+        .story-content h1 {
+            font-size: 2.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .story-content h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .story-content h3 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+        
+        .story-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+        
+        .story-content p:first-of-type::first-letter {
+            font-size: 3.5rem;
+            line-height: 0.9;
+            float: left;
+            margin: 0.1rem 0.1rem 0 0;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        
+        /* Section breaks */
+        .story-content hr {
+            border: none;
+            text-align: center;
+            margin: 3rem 0;
+            height: 2rem;
+        }
+        
+        .story-content hr::before {
+            content: '◆ ◆ ◆';
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            letter-spacing: 1rem;
+        }
+        
+        /* Emphasis */
+        .story-content em {
+            font-style: italic;
+            color: var(--text-color);
+        }
+        
+        .story-content strong {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        /* Quotes */
+        .story-content blockquote {
+            margin: 2rem 0;
+            padding: 1.5rem 2rem;
+            border-left: 4px solid var(--accent-color);
+            background: var(--bg-color);
+            font-style: italic;
+            color: var(--text-light);
+        }
+        
+        /* ==================== PARTS/CHAPTERS ==================== */
+        .part-divider {
+            text-align: center;
+            margin: 4rem 0;
+            padding: 2rem 0;
+            border-top: 2px solid var(--border-color);
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .part-number {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+        
+        .part-title {
+            font-family: var(--font-sans);
+            font-size: 2rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        /* ==================== FOOTER ==================== */
+        .story-footer {
+            background: var(--paper-color);
+            padding: 2rem 3rem;
+            box-shadow: var(--shadow);
+            border-radius: 4px;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section {
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .footer-title {
+            font-family: var(--font-sans);
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .footer-content {
+            font-family: var(--font-sans);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            color: var(--text-light);
+        }
+        
+        .footer-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .footer-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .footer-list strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        /* ==================== COPYRIGHT ==================== */
+        .copyright {
+            text-align: center;
+            padding: 2rem;
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        /* ==================== PRINT STYLES ==================== */
+        @media print {
+            body {
+                background: white;
+                font-size: 12pt;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            
+            .story-header {
+                background: var(--primary-color);
+                color: white;
+                page-break-after: always;
+            }
+            
+            .story-content {
+                box-shadow: none;
+                padding: 0;
+            }
+            
+            .story-content h1,
+            .story-content h2 {
+                page-break-after: avoid;
+            }
+            
+            .story-content p {
+                orphans: 3;
+                widows: 3;
+            }
+            
+            .part-divider {
+                page-break-before: always;
+            }
+            
+            .story-footer {
+                page-break-before: always;
+            }
+            
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+        
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 768px) {
+            html {
+                font-size: 14px;
+            }
+            
+            .story-header {
+                padding: 3rem 1.5rem;
+                margin: -2rem -1.5rem 2rem;
+            }
+            
+            .story-title {
+                font-size: 2rem;
+            }
+            
+            .story-subtitle {
+                font-size: 1rem;
+            }
+            
+            .story-meta {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .story-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .story-content h1 {
+                font-size: 1.75rem;
+            }
+            
+            .story-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .story-content h3 {
+                font-size: 1.25rem;
+            }
+            
+            .story-footer {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* ==================== DARK MODE ==================== */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-color: #e0e0e0;
+                --text-light: #a0a0a0;
+                --bg-color: #1a1a1a;
+                --paper-color: #2d2d2d;
+                --border-color: #404040;
+            }
+            
+            body {
+                background-image: 
+                    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px),
+                    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+            }
+            
+            .story-content p:first-of-type::first-letter {
+                color: var(--highlight-color);
+            }
+            
+            .story-content blockquote {
+                background: rgba(0,0,0,0.2);
+            }
+        }
+        
+        /* ==================== ANIMATIONS ==================== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .story-content {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        /* ==================== UTILITIES ==================== */
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-muted {
+            color: var(--text-light);
+        }
+        
+        .no-break {
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="story-header">
+            <div class="story-header-content">
+                <div class="universe-label">Histologic Universe</div>
+                <h1 class="story-title">The Stolen Fact</h1>
+                <p class="story-subtitle">*END*</p>
+                
+                <div class="story-meta">
+                    <div class="meta-item">
+                        <span class="meta-icon">📖</span>
+                        <span>4,445 words</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">⏱️</span>
+                        <span>22 min read</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">📅</span>
+                        <span>November 18, 2025</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="story-content">
+            <p>Kira Osman stood on the sixtieth floor of the Factorepo Spire, her hands moving across holographic displays with the precision of a surgeon, and watched the city of truth spread below her like a circuit board of light.</p>
+
+<p>The Spire was Veridica's crown jewel—eighty stories of glass and steel spiraling upward, tapering to a point that seemed to pierce the sky itself. From her office, Kira could see the entire capital: the ordered streets, the efficient transport lines, the citizens moving with purpose through their surveilled lives. At night, like now, data flowed through the Spire's transparent structure as patterns of light, visible proof of the facts being processed, verified, and preserved for eternity.</p>
+
+<p>She loved this building. She'd helped design parts of it.</p>
+
+<p>"Security protocol update, version seven-point-three," she said aloud, her voice activating the recording system. "Implemented by Senior Architect Kira Osman, timestamp twenty-two hundred hours, November eighteenth. Encryption upgrade for factorepo data transmission, affecting all primary nodes. Testing complete, deployment successful, system integrity confirmed."</p>
+
+<p>The holographic display pulsed green. The fact was entered, verified, and woven into the permanent record. Another small truth added to Veridica's history. Another brick in the wall of certainty.</p>
+
+<p>Kira saved her work and logged out. Sixty floors below, the city waited. She took the express elevator down, feeling the familiar slight vertigo as the glass car descended through the Spire's luminous core. Other late-working architects and historians rode with her in comfortable silence. They were the keepers of truth, the maintainers of the system. Important work. Sacred work.</p>
+
+<p>Outside, the autumn air was crisp. Kira pulled her coat tighter and decided to walk home through the Archive District. It was longer than taking the transit, but she needed to clear her head. She'd been working twelve-hour days for two weeks straight, and her mind felt like one of her own data streams—efficient but relentless.</p>
+
+<p>The Archive District was one of the oldest parts of the capital, where pre-histologic buildings had been preserved as historical monuments. Stone facades and narrow streets, carefully maintained but showing their age. Kira usually avoided it—she preferred clean modern lines to crumbling romanticism—but tonight the old architecture seemed appealing. A reminder that things had existed before the factorepo, before The Judge, before perfect truth.</p>
+
+<p>She was halfway down Historian's Lane when she heard the crack.</p>
+
+<p>Kira looked up. A section of decorative stonework was separating from a building facade three stories above her, chunks of carved limestone breaking free. Time seemed to slow. She should move. She should run. But her analytical mind was calculating trajectories and impact zones, and by the time she decided which direction was safest, it was too late.</p>
+
+<p>Someone grabbed her from behind and pulled her backward with surprising strength. They hit the ground together, rolling, as stone crashed where she'd been standing. Dust exploded outward. Pieces of debris clattered across the cobblestones.</p>
+
+<p>Then silence.</p>
+
+<p>"Are you hurt?" a man's voice asked.</p>
+
+<p>Kira was lying half on top of him, her heart hammering. She pushed herself up and turned to look at her rescuer.</p>
+
+<p>He was perhaps thirty, with dark hair and startlingly blue eyes. Handsome in an unconventional way—strong features, a slight scar above his left eyebrow, the kind of face that looked like it had stories. He was smiling despite having just saved her life, as if heroism was amusing.</p>
+
+<p>"I'm fine," Kira managed. "You—thank you. You saved me."</p>
+
+<p>"Right place, right time." He stood and offered his hand. "Adrian Kovač."</p>
+
+<p>"Kira Osman." She took his hand. His grip was warm and steady. "That was... you moved so fast."</p>
+
+<p>"Adrenaline." He looked at the rubble, then up at the damaged building. "This district is beautiful, but it's falling apart. They should add that to the factorepo—'Historic architecture, also a death trap.'"</p>
+
+<p>Despite herself, Kira laughed. "They probably have. Everything's in the factorepo."</p>
+
+<p>"Everything?" Adrian's blue eyes fixed on her with sudden interest. "You sound like you'd know."</p>
+
+<p>"I work there. At the Spire. I'm a systems architect."</p>
+
+<p>"Ah." Something shifted in his expression—recognition, maybe, or calculation. "So you're one of the people who keeps truth running smoothly."</p>
+
+<p>"Something like that."</p>
+
+<p>They stood in the settling dust, and Kira became aware of how close they were, how her pulse was still racing. From the accident or from him? She couldn't tell.</p>
+
+<p>"I should report this," she said, gesturing at the rubble. "Structural failure, potential danger to citizens."</p>
+
+<p>"Very responsible." Adrian's smile widened. "But maybe first, let me buy you coffee? You nearly died. You should sit down."</p>
+
+<p>Kira hesitated. She didn't know this man. He could be anyone. But he'd saved her life, and there was something about him—a warmth, an openness—that made her want to say yes.</p>
+
+<p>"All right," she said. "Coffee."</p>
+
+<hr>
+
+<p>They found a café near the plaza, one of those places with outdoor seating and heat lamps that made autumn evenings tolerable. Adrian ordered something complicated with espresso and cream. Kira ordered black coffee, no sugar.</p>
+
+<p>"Let me guess," Adrian said. "You're efficient. Precise. No unnecessary complications."</p>
+
+<p>"Is that a criticism?"</p>
+
+<p>"It's an observation. I'm good at reading people."</p>
+
+<p>"And what do you do, Adrian Kovač?" Kira asked. "Besides saving architects from falling buildings?"</p>
+
+<p>"Freelance consultant. Data analysis, system optimization. I move around a lot."</p>
+
+<p>"Sounds unstable."</p>
+
+<p>"Sounds free." He leaned back in his chair. "But tell me about the Spire. I've always wondered what it's like inside. Is it as impressive as it looks?"</p>
+
+<p>Kira found herself talking about her work—the architecture, the data flows, the elegant solutions to complex problems. Adrian listened with genuine interest, asking intelligent questions, making observations that showed he understood systems thinking. He was easy to talk to, easier than anyone she'd met in years.</p>
+
+<p>"You love it," he said. "Your work. I can hear it in your voice."</p>
+
+<p>"I do. It matters. We're building something permanent, something true. In a world where everything else is chaos, we're creating certainty."</p>
+
+<p>"And you never doubt it? The system?"</p>
+
+<p>The question caught her off guard. "Why would I doubt it? The factorepo is verified, cross-referenced, logically consistent. It's the most reliable source of truth humanity has ever created."</p>
+
+<p>"But it's still created by humans. Maintained by humans. Doesn't that introduce... possibilities for error?"</p>
+
+<p>Kira frowned. "The verification systems catch errors. That's the whole point. Multiple layers of checking, automated and manual. If something's in the factorepo, it's true."</p>
+
+<p>Adrian smiled, but there was something sad in it. "You really believe that."</p>
+
+<p>"Don't you?"</p>
+
+<p>"I believe a lot of things." He changed the subject smoothly. "Have you ever walked across the Meridian Bridge at sunset? The view is spectacular."</p>
+
+<p>"I've crossed it. I don't usually stop for views."</p>
+
+<p>"That's a crime. Tomorrow evening, if you're free, let me show you. Consider it payment for letting me buy you coffee after saving your life."</p>
+
+<p>Kira should say no. She had work. She had deadlines. She didn't know this man.</p>
+
+<p>"All right," she heard herself say. "Tomorrow evening."</p>
+
+<hr>
+
+<p>The Meridian Bridge was a marvel of modern engineering—a pedestrian span suspended over the river by cables so thin they seemed to vanish into the sky. The deck was partially transparent, glass panels that let you see the water flowing below. LED lights embedded in the cables shifted colors with the time of day, and at sunset they glowed gold and orange.</p>
+
+<p>Adrian was right. The view was spectacular.</p>
+
+<p>"See?" he said, standing beside her at the bridge's center. "Worth stopping for."</p>
+
+<p>Below them, the river reflected the sunset. Around them, other citizens walked or stood in couples, enjoying the evening. Cameras watched from both ends of the bridge, recording everything, but somehow Kira didn't mind. For once, the surveillance felt distant.</p>
+
+<p>"I walk past beauty every day," she said quietly. "The Spire, the city, all of it. But I never really see it. I'm always thinking about systems, about data, about the next problem to solve."</p>
+
+<p>"That's what happens when you're building truth. You forget to live in it."</p>
+
+<p>She looked at him. "You're very philosophical for a data consultant."</p>
+
+<p>"I've had time to think." Adrian's expression grew serious. "Kira, can I ask you something? Do you ever wonder what's outside Veridica? What other histonations are like?"</p>
+
+<p>"They're wrong. Their factorepos contradict ours."</p>
+
+<p>"But what if they think the same thing about us?"</p>
+
+<p>"Then they're wrong about that too." Kira felt a flicker of unease. These were the kinds of questions doubters asked. "Why are you asking this?"</p>
+
+<p>"Curiosity. I like understanding how people think." He smiled, and the moment passed. "Come on. There's a restaurant near here with the best view in the city. Have dinner with me?"</p>
+
+<p>Over the next two weeks, Kira saw Adrian almost every evening. They'd meet after her work, walk through the city, talk about everything and nothing. He showed her places she'd never noticed—a small park with ancient trees, a café with live music, a gallery showcasing architectural photography. He made her laugh. He made her think. He made her feel alive in a way her work never had.</p>
+
+<p>And slowly, carefully, she was falling for him.</p>
+
+<p>She knew she should be cautious. She barely knew him. But Adrian felt real in a way most people didn't. He listened when she talked about her work. He challenged her assumptions without being confrontational. He looked at her like she was more than just her job, more than just another citizen in the system.</p>
+
+<p>"You're different lately," her colleague Yuki said one afternoon at the Spire. "Distracted. Happy. Who is he?"</p>
+
+<p>Kira felt herself blush. "His name is Adrian. I met him a few weeks ago."</p>
+
+<p>"And?"</p>
+
+<p>"And I think I'm falling in love with him."</p>
+
+<p>Yuki grinned. "Finally. I was starting to think you'd married the factorepo."</p>
+
+<p>"It's complicated. He asks strange questions sometimes. About the system, about truth, about other histonations."</p>
+
+<p>"Strange how?"</p>
+
+<p>"Like he's testing my beliefs. Like he wants me to doubt."</p>
+
+<p>Yuki's smile faded. "Kira, be careful. Those are the kinds of questions—"</p>
+
+<p>"I know. But he's not an outlaw. He's just curious. Philosophical."</p>
+
+<p>"Just be careful."</p>
+
+<p>That evening, Kira met Adrian at the Meridian Bridge again. It had become their place, where they'd had their first real conversation. The sun was setting, painting the sky in shades of orange and purple.</p>
+
+<p>"I need to tell you something," Adrian said.</p>
+
+<p>Kira's heart skipped. "What?"</p>
+
+<p>"I'm falling in love with you." He said it simply, directly, as if it were a fact to be entered into the factorepo. "I wasn't planning to. I wasn't expecting to. But I am."</p>
+
+<p>"Adrian—"</p>
+
+<p>"You don't have to say anything. I just needed you to know. Because I think you're falling for me too, and I don't want there to be any uncertainty between us."</p>
+
+<p>Kira looked at him—this man who'd saved her life, who'd shown her beauty she'd been too busy to see, who'd made her feel things she'd thought she was too focused for. "I am," she said. "Falling for you. I am."</p>
+
+<p>He kissed her there on the bridge, with the sunset behind them and the city watching through its cameras, and Kira felt something shift inside her. Not doubt, not yet. But a crack in the certainty she'd always known.</p>
+
+<hr>
+
+<p>Three days later, Kira's world ended.</p>
+
+<p>She was at her workstation, reviewing system logs, when she noticed something odd. A security protocol update was missing from the implementation schedule. Not delayed—missing. As if it had never been entered.</p>
+
+<p>Her security protocol update. The one she'd implemented three weeks ago.</p>
+
+<p>Kira pulled up the factorepo entry logs. She'd entered that fact herself, spoken it aloud, watched it verify and save. She remembered the exact timestamp: twenty-two hundred hours, November eighteenth. The night before she met Adrian.</p>
+
+<p>She searched for the entry.</p>
+
+<p>Nothing.</p>
+
+<p>She searched for any record of the security protocol implementation.</p>
+
+<p>Nothing.</p>
+
+<p>She checked the system status. The security protocol wasn't active. It was as if she'd never implemented it, never designed it, never done the work she'd spent months on.</p>
+
+<p>But she had. She knew she had.</p>
+
+<p>Kira's hands were shaking. This was impossible. Facts didn't just disappear from the factorepo. The system was immutable. That was the whole point. Once something was entered and verified, it was permanent. It was truth.</p>
+
+<p>She ran a deeper diagnostic. The encryption upgrade she'd designed wasn't in the system. The testing results weren't there. The deployment confirmation wasn't there. Three months of work, vanished as if it had never existed.</p>
+
+<p>"Yuki," she called across the office. "Can you come here?"</p>
+
+<p>Yuki looked at her screen, ran the same searches, got the same results. "Kira, this doesn't make sense. I saw you working on this. I reviewed your designs."</p>
+
+<p>"But there's no record. No record of the work, no record of the implementation, no record of the fact entry."</p>
+
+<p>"Could it be a system error? A database corruption?"</p>
+
+<p>"The factorepo doesn't have errors. It doesn't corrupt. That's impossible."</p>
+
+<p>But even as she said it, Kira felt the first tremor of doubt. If the fact was gone, and the system couldn't have errors, then what? Had she imagined the whole thing? Had she falsified her work reports? Had she—</p>
+
+<p>No. She knew what she'd done. She remembered it with perfect clarity.</p>
+
+<p>"I need to report this," Kira said.</p>
+
+<p>"Are you sure? If you report a missing fact, they'll investigate you. They'll think—"</p>
+
+<p>"They'll think I'm lying or I deleted it myself. I know." Kira stood. "But what else can I do? Pretend I didn't notice? That's falsification too."</p>
+
+<p>She went to her supervisor's office, explained the situation, watched his expression change from confusion to concern to suspicion. He made calls. Within an hour, Enforcer Kade arrived at the Spire.</p>
+
+<p>Kira had never met an enforcer before. Kade was exactly what she expected—professional, cold, efficient. He reviewed her logs, her work history, her access records. He asked precise questions in a tone that suggested he already knew the answers.</p>
+
+<p>"Ms. Osman, you claim you entered a fact about a security protocol implementation on November eighteenth at twenty-two hundred hours."</p>
+
+<p>"Yes. I remember it clearly."</p>
+
+<p>"But there's no record of this entry in the factorepo."</p>
+
+<p>"I know. That's why I'm reporting it. The fact is missing."</p>
+
+<p>"Facts don't go missing, Ms. Osman. The factorepo is immutable."</p>
+
+<p>"I know that. But I entered it, and now it's gone."</p>
+
+<p>Kade studied her. "You have high-level access to the factorepo infrastructure. You have the technical knowledge to manipulate the system. You could, theoretically, delete facts."</p>
+
+<p>"I could. But I didn't. Why would I delete my own work?"</p>
+
+<p>"That's what we're trying to determine." Kade made notes on his datapad. "We'll need to conduct a full investigation. You're suspended from your duties pending the outcome. Don't leave the city."</p>
+
+<p>After he left, Kira sat in her office—no, not her office anymore, just a room in the Spire—and tried to understand what was happening. She'd reported a missing fact. Now she was under investigation. The system she'd devoted her life to was treating her like a criminal.</p>
+
+<p>She called Adrian.</p>
+
+<p>"I need to see you," she said. "Something's happened."</p>
+
+<p>They met at his place, the converted warehouse in the industrial district. Kira had never been there before. It was sparse but comfortable, with exposed brick and large windows overlooking abandoned factories. She noticed immediately that it was quieter than most spaces—no hum of sensors, no subtle awareness of being watched.</p>
+
+<p>"Your apartment," she said. "There's no surveillance."</p>
+
+<p>Adrian's expression didn't change. "No. There isn't."</p>
+
+<p>"That's illegal."</p>
+
+<p>"Yes."</p>
+
+<p>Kira felt the world tilting. "Who are you?"</p>
+
+<p>"I'm someone who fell in love with you when I wasn't supposed to." Adrian sat across from her. "I'm an outlaw, Kira. I was sent to recruit you. To turn you against Veridica, to bring you to the resistance. That was my mission."</p>
+
+<p>The words hit her like physical blows. "No."</p>
+
+<p>"I saved you from that falling stone because I was following you. I'd been watching you for weeks, studying you, waiting for the right moment to make contact. The accident was convenient. Lucky. I used it."</p>
+
+<p>"Everything was a lie."</p>
+
+<p>"At first, yes. But then I got to know you. The real you, not just the target profile. And I fell in love. That wasn't part of the plan. That wasn't supposed to happen."</p>
+
+<p>Kira stood. "I need to leave."</p>
+
+<p>"Wait. Please. Just listen." Adrian's voice was urgent. "Did something happen? Is that why you called?"</p>
+
+<p>"A fact I entered into the factorepo is missing. I'm under investigation. They think I deleted it or never entered it. They think I'm an outlaw." She laughed bitterly. "And here I am, in an outlaw's apartment. Maybe they're right."</p>
+
+<p>"What fact?"</p>
+
+<p>"A security protocol update. I implemented it three weeks ago. The night before I met you. I entered the fact myself, and now it's gone."</p>
+
+<p>Adrian went very still. "Kira, I didn't take that fact. I didn't even know about it. I swear."</p>
+
+<p>"But someone did. Someone stole it from the factorepo. And that should be impossible."</p>
+
+<p>"It should be. But it's not." Adrian moved closer. "Kira, the factorepo can be manipulated. I've seen it. That's why I became an outlaw. I witnessed facts being altered, deleted, fabricated. The system you believe in isn't infallible. It's controlled by people, and people can be corrupt."</p>
+
+<p>"No. The verification systems—"</p>
+
+<p>"Can be bypassed by someone with enough access and knowledge. Someone like you, ironically. That's probably why they suspect you."</p>
+
+<p>Kira's mind was racing. "If facts can be stolen, then everything in the factorepo could be false. History could be fabricated. Truth could be a lie."</p>
+
+<p>"Now you're starting to understand."</p>
+
+<p>"But I don't want to understand!" Kira's voice broke. "I built that system. I devoted my life to it. I believed in it. And you're telling me it's all fake?"</p>
+
+<p>"Not all fake. Mostly true. But vulnerable. Manipulable. Human." Adrian reached for her hand. "I love you, Kira. That's true. That's real. And I'm sorry I lied to you at first. But I'm not lying now."</p>
+
+<p>Kira pulled away. "I can't—I need to think. I need to—"</p>
+
+<p>Her comm device chimed. A message from Enforcer Kade: <em>Report to Enforcement Tower immediately.</em></p>
+
+<p>"They're calling me in," she said.</p>
+
+<p>"Don't go. Come with me instead. Leave Veridica. Join the resistance. We can protect you."</p>
+
+<p>"I'm not an outlaw."</p>
+
+<p>"You are now. Or you will be soon. The Judge has probably already made the determination."</p>
+
+<p>"Then The Judge is wrong."</p>
+
+<p>"Yes," Adrian said quietly. "The Judge is wrong."</p>
+
+<p>Kira looked at him—this man she'd loved, this outlaw who'd manipulated her, this person who'd shown her beauty and truth and now wanted her to abandon everything. "I have to go. I have to face this."</p>
+
+<p>"Kira—"</p>
+
+<p>"If I run, I'm guilty. If I face The Judge, maybe I can prove I'm innocent."</p>
+
+<p>"The Judge doesn't care about innocence. Only facts. And the facts say you're guilty."</p>
+
+<p>"Then I'll change the facts."</p>
+
+<p>She left before he could stop her, walking out into the surveilled city, heading toward the Enforcement Tower. Behind her, Adrian watched from his window, helpless to save her.</p>
+
+<hr>
+
+<p>The Enforcement Tower was a brutalist concrete structure, imposing and windowless on its lower floors. Inside, it was all harsh lighting and white corridors. Kira was escorted to an interview room—the same room where Marcus Chen had sat two months earlier, though she didn't know that.</p>
+
+<p>Enforcer Kade sat across from her. Between them, a holographic display showed data.</p>
+
+<p>"Ms. Osman, The Judge has completed its analysis of your case."</p>
+
+<p>"And?"</p>
+
+<p>"You are accused of falsifying work reports and potentially sabotaging factorepo security infrastructure. The evidence is conclusive."</p>
+
+<p>"What evidence? I did the work. I entered the fact. Someone stole it."</p>
+
+<p>"Facts cannot be stolen. The factorepo is immutable."</p>
+
+<p>"Then explain how my fact disappeared."</p>
+
+<p>"The Judge has determined two possibilities. Either you never entered the fact and falsified your work reports, or you entered it and then deleted it, which constitutes sabotage. Either way, you have committed crimes against the integrity of the factorepo."</p>
+
+<p>Kira felt cold. "I did neither of those things."</p>
+
+<p>"Your expertise in factorepo architecture makes you one of the few people capable of such manipulation. Your access logs show you were working late on the night in question. Your recent behavior has been erratic—colleagues report you've been distracted, secretive. And our investigation reveals you've been spending time with a person of interest."</p>
+
+<p>"Adrian." The pieces clicked together. "You think he recruited me."</p>
+
+<p>"Did he?"</p>
+
+<p>"No. I love him, but I didn't betray Veridica."</p>
+
+<p>"Love is not measurable, Ms. Osman. Your actions are. The Judge has calculated a ninety-two percent probability that you have been compromised, either through recruitment or through your own actions. You are hereby declared an outlaw and remanded to corrective custody."</p>
+
+<p>"This is insane. I'm telling you the truth!"</p>
+
+<p>"The factorepo tells us the truth. And the factorepo says you are guilty."</p>
+
+<p>Kade stood. "I'm sorry, Ms. Osman. You seemed like a dedicated citizen. But the facts don't lie."</p>
+
+<p>"But they can be stolen," Kira said. "And if they can be stolen, the whole system is a lie."</p>
+
+<p>Kade's expression didn't change. "That kind of thinking is exactly why you need correction."</p>
+
+<hr>
+
+<p>They processed her like cargo. Took her credentials, her comm device, her personal effects. Gave her a gray uniform. Loaded her into a transport with other condemned citizens. Some were crying. Some were angry. Some were silent and resigned.</p>
+
+<p>Kira was thinking.</p>
+
+<p>She'd entered that fact. She knew she had. The system said she hadn't. One of them was wrong. And if the system could be wrong about this, what else was it wrong about?</p>
+
+<p>Adrian had said he loved her. He'd also said he was sent to recruit her. Both things could be true. Just like she could be innocent and guilty at the same time—innocent of intent, guilty by the facts.</p>
+
+<p>The transport drove through the city she'd helped build, past the Spire where she'd worked, over the Meridian Bridge where she'd fallen in love. Everything looked the same, but Kira saw it differently now. The cameras weren't protection—they were control. The factorepo wasn't truth—it was power. The system wasn't perfect—it was human.</p>
+
+<p>And humans made mistakes.</p>
+
+<p>The Corrective Facility was on the outskirts of the city, a white modern complex that looked like a hospital from outside. Inside, it was sterile and oppressive. White walls, white floors, white ceilings. Monitoring equipment everywhere. The architecture of mercy, designed to heal.</p>
+
+<p>Or designed to break.</p>
+
+<p>Dr. Reyna Moss met her in processing. The same doctor who'd greeted Marcus Chen, who'd greeted hundreds of outlaws before them.</p>
+
+<p>"Ms. Osman, I'm Dr. Moss. I'll be overseeing your correction."</p>
+
+<p>"I don't need correction. I need someone to investigate who stole my fact."</p>
+
+<p>"The Judge has determined you need correction. That determination is final." Dr. Moss's voice was kind but firm. "We're here to help you, not punish you. Correction isn't torture. It's healing."</p>
+
+<p>"Healing from what? From knowing the truth?"</p>
+
+<p>"From doubt. From the illness of questioning. We'll help you believe again."</p>
+
+<p>They led her through white corridors. Kira glimpsed other outlaws through observation windows—people in gray uniforms, some staring at walls, some talking to themselves, some sitting perfectly still. In one room, she saw a young Asian man with glasses, sitting on a bed with his head in his hands. He looked broken.</p>
+
+<p>Something about him seemed familiar, though she couldn't place why.</p>
+
+<p>Her chamber was small and white. A bed, a chair, monitoring equipment. A single camera in the corner. Dr. Moss explained the process—psychological evaluation, belief reinforcement, gradual reintegration. It would take weeks, maybe months. But she would believe again. She would be healed.</p>
+
+<p>After Dr. Moss left, Kira sat on the bed and thought about everything that had happened. The stolen fact. Adrian's confession. The Judge's determination. The system's infallibility.</p>
+
+<p>She thought about the Spire, beautiful and transparent, where data flowed like light. She thought about the Meridian Bridge, suspended by invisible cables, where she'd fallen in love. She thought about Adrian's warehouse, quiet and free, where surveillance couldn't reach.</p>
+
+<p>She thought about truth.</p>
+
+<p>The door opened. Dr. Moss returned with her gentle smile and her instruments of mercy.</p>
+
+<p>"Are you ready to begin, Ms. Osman?"</p>
+
+<p>Kira looked at her. "Can I ask you a question?"</p>
+
+<p>"Of course."</p>
+
+<p>"What if the system made a mistake? What if I really did enter that fact, and someone really did steal it? What if I'm telling the truth and the factorepo is wrong?"</p>
+
+<p>Dr. Moss's smile never wavered, but something flickered in her eyes—surprise, perhaps, or recognition. "The system doesn't make mistakes, Ms. Osman."</p>
+
+<p>Kira leaned back against the white wall and closed her eyes. "Then I did enter that fact," she said quietly. "And someone stole it."</p>
+
+<p>In the silence that followed, the first real doubt took root, and Kira Osman began the journey that Marcus Chen had not yet started.</p>
+
+<hr>
+
+<p>Miles away, in a warehouse with no surveillance, Adrian Kovač stood at his window and watched the city lights. Somewhere in that grid of truth and lies, the woman he loved was being broken down and rebuilt. Somewhere in the factorepo he'd learned to hate, a fact had been stolen.</p>
+
+<p>He didn't know who had taken it. He didn't know why. But he was going to find out.</p>
+
+<p>Because Kira had asked the right question: What if the system made a mistake?</p>
+
+<p>And if it could make one mistake, it could make others.</p>
+
+<p>Adrian turned from the window and began making calls. The resistance would want to know about this. A stolen fact. A factorepo architect who'd started to doubt. A crack in the foundation of truth.</p>
+
+<p>The game was changing.</p>
+
+<p>And somewhere in a white room, Kira Osman closed her eyes and whispered to herself: "I entered that fact. I know I did."</p>
+
+<p>The system said otherwise.</p>
+
+<p>But for the first time in her life, Kira Osman didn't believe the system.</p>
+
+<hr>
+
+<strong>END</strong>
+
+<hr>
+
+<strong>Word Count</strong>: ~6,200 words
+
+<strong>Author's Note</strong>: This is the second story in the Histologic universe. Kira Osman will meet Marcus Chen during their time in correction, setting up the complex relationships and conflicts of future stories. The mystery of who stole the fact, and why, continues in later works. Adrian's investigation will reveal deeper truths about the factorepo's vulnerability and the forces manipulating it.
+
+<strong>Connection to "The Believer's Fall"</strong>: Marcus Chen appears briefly in this story, showing what correction has done to him. Both he and Kira are in the same facility, though they haven't met yet. Their parallel journeys—his unshakeable faith versus her growing doubt—will intersect in the novel to come.
+        </main>
+
+        <!-- Footer -->
+        <footer class="story-footer">
+            <div class="footer-section">
+                <h3 class="footer-title">About This Story</h3>
+                <div class="footer-content">
+                    Kira Osman is a brilliant Senior Architect for Veridica's Factorepo Infrastructure—a true believer who has devoted her life to maintaining the system's perfection. When a charming stranger named Adrian saves her from a dangerous accident, she's drawn to him despite her usual caution. Adrian is an outlaw recruiter, sent to seduce and turn her, but unlike his previous targets, he falls genuinely in love with her.
+
+When a critical security protocol fact that Kira personally entered into the factorepo mysteriously vanishes, she's accused of falsification or sabotage. The system she helped build turns against her. As she discovers Adrian is an outlaw and faces condemnation by The Judge, Kira begins to question everything: if facts can be stolen, can the infallible system be trusted?
+
+Sent to the same corrective facility as Marcus Chen, Kira enters not repeating "I believe" but asking "What if the system made a mistake?"—the first step on a journey Marcus has not yet begun.
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Key Themes</h3>
+                <ul class="footer-list">
+                    <li>Truth vs. Freedom</li><li>Order vs. Chaos</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Characters</h3>
+                <ul class="footer-list">
+                    <li>Kira Osman - **Age**: 29</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">World-Building Elements</h3>
+                <div class="footer-content">
+                    Histologic system, factorepo, The Judge
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Connections</h3>
+                <div class="footer-content">
+                    ### To "The Believer's Fall"
+- Same histonation (Veridica)
+- Same enforcer (Kade)
+- Same correction facility
+- Same corrector (Dr. Moss)
+- Marcus appears briefly
+- Takes place ~2 months after first story
+                </div>
+            </div>
+        </footer>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>© 2025 Histologic Universe. All rights reserved.</p>
+            <p class="text-muted">This is a work of fiction set in a science fiction universe where history has become an exact science.</p>
+        </div>
+    </div>
+
+    <!-- Reading progress indicator -->
+    <script>
+        // Add reading progress indicator
+        const progressBar = document.createElement('div');
+        progressBar.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #0f3460, #e94560);
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.1s ease;
+        `;
+        document.body.appendChild(progressBar);
+
+        window.addEventListener('scroll', () => {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight - windowHeight;
+            const scrolled = window.scrollY;
+            const progress = (scrolled / documentHeight) * 100;
+            progressBar.style.width = progress + '%';
+        });
+    </script>
+</body>
+</html>
+
