@@ -37,6 +37,20 @@
   - Key roles and hierarchy
   - Conflict types summary
 
+### Nations and Geopolitics
+- **Full**: [worldbuilding/nations-full.md](../worldbuilding/nations-full.md)
+  - Seven major nations detailed
+  - Five Histologic nations (Veridica, Chronos, Memoria, Axiom, Synthesis)
+  - Two non-Histologic nations (SFW, CNT)
+  - Travel regulations and border dynamics
+  - International conflicts and tensions
+  - Future war scenarios
+  
+- **Concise**: [worldbuilding/nations-concise.md](../worldbuilding/nations-concise.md)
+  - Quick reference for all nations
+  - Key conflicts and relationships
+  - Travel and border summary
+
 ### Technology [TO BE CREATED]
 - Factorepo technical specifications
 - The Judge architecture
@@ -102,16 +116,18 @@
 ### Complete
 ✅ Core system (full and concise)
 ✅ Society structure (full and concise)
+✅ Nations and geopolitics (full and concise)
 ✅ Glossary
 ✅ Quick start guide
 ✅ Project rules
 ✅ Templates (character and plot)
 ✅ README
+✅ First short story: "The Believer's Fall"
+✅ Second short story: "The Stolen Fact"
 
 ### In Progress
-🔄 Specific histonations
-🔄 Initial characters
-🔄 First plots
+🔄 Additional characters
+🔄 Additional plots
 
 ### Planned
 ⏳ Technology specifications

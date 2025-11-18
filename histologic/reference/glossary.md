@@ -31,6 +31,7 @@
 - A group of people who share the same history
 - Defined by belief in a specific factorepo, not by language or tradition
 - Each has its own territory (histocircle) and Judge
+- Seven major nations exist (five Histologic, two non-Histologic)
 
 **Histocircle**
 - The territory occupied by a histonation
@@ -47,6 +48,63 @@
 - Person who questions the truthfulness of their nation's history
 - Must either: undergo correction or leave the histocircle
 - Cannot remain in histonation while doubting its truth
+
+## Major Nations
+
+### Histologic Nations
+
+**Veridica**
+- "Truth Through Precision"
+- First Histologic nation (founded 2087)
+- North American Eastern Seaboard and Great Lakes region
+- Most extensive factorepo, strictest protocols
+- Technocratic meritocracy with rigid class system
+
+**Chronos**
+- "Every Moment Matters"
+- Founded 2091 (first histobranch from Veridica)
+- North American Midwest and Great Plains
+- Obsessive temporal precision, mandatory neural interfaces
+- Algorithmic democracy, continuous life-logging
+
+**Memoria**
+- "Context Over Data"
+- Founded 2095
+- Western Europe (France, Germany, Benelux, Northern Italy)
+- Emphasizes cultural and artistic facts
+- Cultural meritocracy, selective surveillance
+
+**Axiom**
+- "Truth Through Logic"
+- Founded 2098 (branched from Memoria)
+- Scandinavia, Baltic States, Eastern Europe
+- Emphasizes logical derivation over fact collection
+- Pure logocracy, The Judge is absolute authority
+
+**Synthesis**
+- "Unity Through Compromise"
+- Founded 2103 (formed by refugees from multiple histobranches)
+- East Asia (Korea, Japan, Taiwan)
+- Maintains multiple parallel factorepos
+- Hybrid system, most democratic and tolerant
+
+### Non-Histologic Nations
+
+**Sovereignty of Free Will (SFW)**
+- "Truth Cannot Be Mechanized"
+- Founded 2089 (rejected Histologic from beginning)
+- Middle East, North Africa, South Asia (Iran, Turkey, Egypt, Arabian Peninsula, Pakistan, Afghanistan)
+- Religious foundation (Islamic, Christian, other faiths unified), believes free will incompatible with deterministic history
+- Democratic republic with strong religious influence
+- Active military conflict with CNT along massive shared border
+
+**Confederacy of Natural Truth (CNT)**
+- "Reality Needs No Recording"
+- Founded 2090 (violent rejection of Histologic)
+- Russia, Central Asia, Caucasus, Eastern Europe (Russia, Kazakhstan, Uzbekistan, Turkmenistan, Georgia, Armenia, Azerbaijan)
+- Believes truth exists in present moment only
+- Authoritarian confederation, history is what rulers say it is
+- Active military conflict with SFW along massive shared border (Caucasus through Central Asia)
 
 ## Systems and Technology
 
@@ -74,6 +132,18 @@
 - Most common type of military conflict
 - Often involves internal fighting and military fracturing
 
+**Fact War**
+- Conflict between Histologic nations fought through factorepo contradictions
+- Each nation tries to prove the other's history is flawed
+- No physical combat, but psychological and economic damage
+- Examples: Veridica vs. Chronos "Temporal War", Veridica vs. Axiom "Philosophical War"
+
+**The Cold War**
+- Ongoing conflict between Histologic and non-Histologic nations
+- Constant cyber attacks, economic warfare, propaganda
+- Proxy conflicts in neutral territories
+- Preparing for eventual hot war
+
 **Resource Conflict**
 - War over physical resources
 - Less common due to high casualties and unclear outcomes
@@ -91,6 +161,17 @@
 - Accepts conqueror's factorepo as truth
 - Those who disagree become outlaws
 - Complete ideological conquest
+
+**Travel Regulations**
+- Complex rules governing movement between nations
+- Vary dramatically based on origin and destination
+- Often require factorepo synchronization, monitoring devices, or neural interfaces
+- Outlaws face severe restrictions or cannot travel at all
+
+**Outlander Laws**
+- Laws governing visitors from other nations
+- Range from welcoming (Synthesis, Memoria) to completely prohibitive (Chronos to non-Histologic)
+- Often include mandatory reporting, fact contribution, or surveillance acceptance
 
 ## Truth and Logic
 

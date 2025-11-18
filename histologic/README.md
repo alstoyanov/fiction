@@ -24,7 +24,9 @@ histologic/
 │   ├── core-system-full.md
 │   ├── core-system-concise.md
 │   ├── society-structure-full.md
-│   └── society-structure-concise.md
+│   ├── society-structure-concise.md
+│   ├── nations-full.md
+│   └── nations-concise.md
 │
 ├── characters/                 # Character profiles and development
 │   └── [character files will go here]
@@ -58,7 +60,8 @@ histologic/
 2. **Review the Glossary**: `reference/glossary.md`
 3. **Understand the Core System**: `worldbuilding/core-system-concise.md`
 4. **Understand Society**: `worldbuilding/society-structure-concise.md`
-5. **Choose your story type** and start creating!
+5. **Explore the Nations**: `worldbuilding/nations-concise.md`
+6. **Choose your story type** and start creating!
 
 ### For Deep Dives
 
@@ -76,6 +79,10 @@ A supercomputer that resolves all legal disputes by analyzing the factorepo thro
 
 ### Histonations
 Groups of people unified by belief in a specific version of history. Each has its own factorepo and territory (histocircle). Questioning your nation's history makes you an outlaw.
+
+**Seven Major Nations:**
+- **Five Histologic**: Veridica (the original), Chronos (neural interfaces), Memoria (cultural emphasis), Axiom (pure logic), Synthesis (multiple truths)
+- **Two Non-Histologic**: Sovereignty of Free Will (religious, democratic), Confederacy of Natural Truth (authoritarian, flexible truth)
 
 ### Outlaws
 People who doubt their histonation's truth. Must choose between corrective facilities (forced belief) or exile. Live in neutral zones or underground.
@@ -99,7 +106,19 @@ This universe is rich with conflict and drama:
 - **Interpersonal**: Relationships across incompatible truths, family divided by belief
 - **Social**: Correction vs. freedom, surveillance vs. privacy, conformity vs. individuality
 - **Political**: Histobranch wars, conquest by division, factorepo manipulation
+- **International**: Fact wars between Histologic nations, Cold War with non-Histologic nations, active combat between SFW and CNT
 - **Philosophical**: What is truth? Can history be objective? What makes us human?
+
+### Story Types Enabled
+
+- **Fact Wars**: Veridica vs. Chronos, philosophical conflicts fought through contradictions
+- **Espionage**: Spies operating across incompatible truths
+- **Defection**: Fleeing from one system to another, carrying dangerous secrets
+- **Border Stories**: Dangerous crossings, refugees, smugglers
+- **Cross-Nation Romance**: Love across ideological divides
+- **Diplomatic Thrillers**: Preventing wars while navigating impossible contradictions
+- **Revolution**: Outlaws uniting across borders to challenge the system
+- **War Stories**: Building toward The Great War (Histologic vs. Non-Histologic)
 
 ## Document Versioning System
 
@@ -132,15 +151,21 @@ See `PROJECT-RULES.md` for detailed guidelines.
 - ✅ Project structure and organization
 - ✅ Core system documentation (full and concise)
 - ✅ Society structure documentation (full and concise)
+- ✅ Nations and geopolitics (full and concise)
+- ✅ Seven major nations defined with conflicts
+- ✅ Travel regulations and border dynamics
 - ✅ Glossary of terms
 - ✅ Character and plot templates
 - ✅ Quick start guide
+- ✅ Nations quick reference guide
+- ✅ World map guide
 - ✅ Project rules and guidelines
+- ✅ First short story: "The Believer's Fall"
+- ✅ Second short story: "The Stolen Fact"
 
 ### In Progress
-- 🔄 Developing specific histonations
-- 🔄 Creating initial characters
-- 🔄 Outlining first plots
+- 🔄 Creating additional characters
+- 🔄 Outlining additional plots
 
 ### To Do
 - ⏳ Technology specifications (factorepo, Judge, surveillance)
