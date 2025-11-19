@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="08-the-pattern.html" class="nav-button">← Previous: Chapter 8: The Pattern</a>
+            <div class="nav-center">Chapter 9: The Evidence</div>
+            <a href="10-the-triplets-reunite.html" class="nav-button">Next: Chapter 10: The Triplets Reunite →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Kira Osman (third-person limited) | <strong>Timeline:</strong> August 16, 2106 (Day 16 in facility) - Early morning</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 9: The Evidence</h1>
+<h2>POV: Kira Osman</h2>
+<p>Kira had always been good with systems. She understood how they worked, how data flowed, how patterns emerged from chaos. But the system she was infiltrating now was more complex than any she'd encountered.</p>
+<p>And infinitely more dangerous.</p>
+<p>It was 0300, and she was in the maintenance room again, fingers flying across a keyboard that shouldn't exist in a correction facility. Nikolai had built it from scavenged parts—a testament to his brilliance and their desperation.</p>
+<p>On the screen: live feeds from the factorepo backend. Not just Veridica's local repository, but connections to the central Judge system. Nikolai had found a backdoor, and Kira was exploiting it.</p>
+<p>She was looking for one thing: proof that Minister Chen Zhao was directly manipulating The Judge.</p>
+<p>The evidence Nikolai had gathered showed fact manipulation from the Minister's office. But that could be explained away—rogue officials, unauthorized access, technical glitches. What they needed was proof of intent. Proof that the corruption went to the very top. Proof that couldn't be dismissed or explained away.</p>
+<p>Kira navigated through layers of security, using techniques she'd learned from less-than-legal sources. The Judge's architecture was sophisticated, but it had been built by humans. And humans made mistakes.</p>
+<p>She found the first layer: access logs. Thousands of entries, most routine. But there—a pattern. Regular access from terminal ID MO-7743. Minister's Office, terminal 7743.</p>
+<p>Same number as the patient Dr. Tanaka had refused to correct. Sarah. Patient 7743.</p>
+<p>Not a coincidence. A message. A signature.</p>
+<p>Kira dug deeper. What was terminal 7743 accessing? Fact verification protocols. Conviction processing systems. Judge decision inputs.</p>
+<p>She pulled up specific entries. Her hands froze on the keyboard.</p>
+<p><strong>August 1, 2106, 14:35:00</strong> - Terminal MO-7743 accessed conviction processing<br />
+<strong>August 1, 2106, 14:36:00</strong> - Eight conviction packages uploaded simultaneously<br />
+<strong>August 1, 2106, 14:37:22</strong> - All eight convictions processed by The Judge</p>
+<p>Two minutes. Someone had uploaded eight pre-prepared conviction packages, and The Judge had rubber-stamped them all in 82 seconds.</p>
+<p>Not evaluation. Not analysis. Not judgment.</p>
+<p>Execution of pre-determined outcomes.</p>
+<p>Kira's breath came faster. This was it. This was the smoking gun. Proof that their convictions weren't judgments—they were assassinations. Character assassinations, but assassinations nonetheless.</p>
+<p>She started downloading everything. Every access log, every file, every piece of evidence. The data chip Nikolai had prepared filled rapidly.</p>
+<p>A sound behind her.</p>
+<p>Kira spun, heart hammering.</p>
+<p>Mikhail stood in the doorway, white hair glowing in the server lights.</p>
+<p>"You should be in your cell," Kira whispered harshly.</p>
+<p>"So should you." Mikhail moved into the room with surprising stealth. "But here we both are, stealing fire from the gods."</p>
+<p>"I'm gathering evidence."</p>
+<p>"Prometheus gathered fire. The gods punished him for it." Mikhail settled into a chair. "But humanity needed that fire. So he stole it anyway."</p>
+<p>"I don't have time for riddles, Mikhail."</p>
+<p>"It's not a riddle. It's a warning." The old man's voice was serious. "What you're stealing—this evidence, this truth—it will burn. It will burn the system. It will burn the people who built it. But it might also burn you."</p>
+<p>"I know the risks."</p>
+<p>"Do you?" Mikhail leaned forward. "The old stories knew: truth-tellers are martyrs. Prometheus was chained to a rock, his liver eaten by eagles every day for eternity. That's what happens to those who steal fire from the gods."</p>
+<p>"The gods aren't real, Mikhail."</p>
+<p>"No. But the people who think they're gods are very real. And very dangerous." He paused. "I'm not telling you to stop. I'm telling you to be ready for what comes after."</p>
+<p>Kira turned back to her screen. The download was at 73%. "I'm ready."</p>
+<p>"Are you ready to watch Marcus die for this? Because that's what might happen. He's staying. Fighting. And they will kill him for it."</p>
+<p>Kira's hands stilled on the keyboard. "He won't be alone."</p>
+<p>"No. He'll have you. And you'll have him. And together, you'll have a slightly better chance of surviving." Mikhail started humming, then sang softly:</p>
+<p><em>"People try to put us down, talking 'bout my generation,</em><br />
+<em>Just because we get around, talking 'bout my generation...</em><br />
+<em>Hope I die before I get old..."</em></p>
+<p>"The Who," Kira said. "My Generation."</p>
+<p>"A song about young people fighting the old order. About refusing to become what they hate. About dying young rather than living as hypocrites." Mikhail's eyes were distant. "Every generation thinks they'll be the one to change everything. Most fail. But some succeed. The question is: which will you be?"</p>
+<p>"I don't know."</p>
+<p>"Good answer. Certainty is the enemy of wisdom." Mikhail stood. "Finish your theft, Prometheus. Steal the fire. But remember: fire burns. Use it wisely."</p>
+<p>He left as silently as he'd arrived.</p>
+<p>Kira sat alone with the humming servers and the downloading evidence. 89%. 94%. 98%.</p>
+<p>Complete.</p>
+<p>She ejected the data chip, held it up to the light. Such a small thing. Such enormous consequences.</p>
+<p>This chip contained proof of systematic corruption. Proof that The Judge was manipulated. Proof that eight people were targeted and convicted without real judgment. Proof that the system everyone trusted was fundamentally broken.</p>
+<p>Mikhail was right. This would burn. The question was: could they control the fire? Or would it consume everything, including them?</p>
+<p>Kira pocketed the chip and erased her tracks. She was good at covering her digital footprints. By morning, there would be no evidence she'd been here.</p>
+<p>Except for what she'd stolen.</p>
+<hr />
+<p>Back in her cell, Kira couldn't sleep. Her mind raced through possibilities, contingencies, plans.</p>
+<p>They had three data chips now. Nikolai's evidence of live manipulation. Reeves's documents of Project Correction. And now her proof of pre-determined convictions.</p>
+<p>Three independent sources. Three different types of evidence. Together, they painted an undeniable picture of corruption.</p>
+<p>But evidence alone wasn't enough. They needed to escape. They needed to publish. They needed to survive long enough to make the truth matter.</p>
+<p>A soft knock. Kira opened her door to find Marcus standing there, looking as sleepless as she felt.</p>
+<p>"Can't stop thinking either?" he asked.</p>
+<p>"Come in."</p>
+<p>They sat on her bed, shoulders touching, speaking in whispers.</p>
+<p>"I found something," Kira said. "Proof that our convictions were pre-determined. Uploaded to The Judge two minutes before processing. We were never judged, Marcus. We were executed."</p>
+<p>Marcus was silent for a long moment. "Show me."</p>
+<p>Kira pulled out her brass tablet—facility-issued, but she'd modified it. She displayed the evidence: the access logs, the timestamps, the conviction packages.</p>
+<p>Marcus studied it with his analyst's eye. She watched his face as understanding dawned, then horror, then cold fury.</p>
+<p>"Minister Chen Zhao," he said quietly. "My distant relative. He did this. He targeted us, prepared our convictions, fed them to The Judge like data into a machine."</p>
+<p>"Yes."</p>
+<p>"And The Judge just... accepted them. No analysis. No evaluation. Just rubber-stamped pre-determined outcomes."</p>
+<p>"Yes."</p>
+<p>Marcus's hands clenched into fists. "The Judge is supposed to be infallible. Objective. Incorruptible. That's the whole point of Histologic. That's what makes it work. If The Judge can be manipulated like this, if it's just a tool for those in power..."</p>
+<p>"Then the system is broken," Kira finished. "Not flawed. Broken."</p>
+<p>"No." Marcus's voice was firm. "The Judge is broken. The implementation is broken. But the ideal—objective truth, verified facts, shared history—that's still sound. We just need to build a Judge that can't be manipulated. A system with real safeguards, real independence, real integrity."</p>
+<p>"That's ambitious."</p>
+<p>"That's necessary." Marcus looked at her. "Kira, this evidence—combined with what Nikolai and Reeves have—this could bring down the entire government. Not just Chen Zhao. Everyone complicit in this."</p>
+<p>"I know."</p>
+<p>"Are you ready for that? For the chaos that will follow?"</p>
+<p>Kira thought about it. Chaos. Uncertainty. The collapse of order. Everything she'd been trained to prevent, everything she'd worked to maintain.</p>
+<p>But order built on lies wasn't order. It was oppression with better branding.</p>
+<p>"Yes," she said. "I'm ready. Because the alternative is worse. The alternative is letting them continue. Letting them target more people, break more lives, corrupt more truth. I can't live with that."</p>
+<p>"Neither can I." Marcus took her hand. "We're really doing this. We're going to war with our own government."</p>
+<p>"Not war. Revolution." Kira squeezed his hand. "There's a difference. War is about destruction. Revolution is about transformation."</p>
+<p>"Semantics."</p>
+<p>"Important semantics." Kira smiled slightly. "You're the idealist. I'm the pragmatist. Together, we're... what? Pragmatic idealists?"</p>
+<p>"Idealistic pragmatists?"</p>
+<p>"Either way, we're probably insane."</p>
+<p>"Definitely insane." Marcus leaned closer. "But I'd rather be insane with you than sane and complicit."</p>
+<p>They sat in comfortable silence, hands intertwined, shoulders touching. Outside, the facility was quiet. Inside, two people were planning revolution.</p>
+<p>"Marcus," Kira said softly. "When this is over—if we survive—what do you want?"</p>
+<p>"What do you mean?"</p>
+<p>"I mean, what do you want for yourself? Not for Veridica, not for the system. For you. What does Marcus Chen want?"</p>
+<p>Marcus was quiet for a long moment. "I want to not regret my choices. I want to look back and know I did the right thing, even if it was hard. Even if it cost me everything."</p>
+<p>"That's very noble."</p>
+<p>"That's very me." He smiled. "What about you? What does Kira Osman want?"</p>
+<p>"I want..." Kira paused, thinking. "I want to build something. Not just tear down the corrupt system. Build something better. A factorepo that can't be manipulated. A Judge that can't be corrupted. A system that actually works the way it's supposed to."</p>
+<p>"That's very pragmatic."</p>
+<p>"That's very me." She smiled back. "See? Pragmatic idealist and idealistic pragmatist. We're perfect for each other."</p>
+<p>The words hung in the air between them. Perfect for each other. It was the closest either had come to acknowledging what was growing between them.</p>
+<p>Marcus's thumb traced circles on the back of her hand. "Kira, I need to tell you something."</p>
+<p>"What?"</p>
+<p>"When I reported Elena, when I chose duty over love, I told myself it was the right thing. The necessary thing. That personal feelings couldn't compromise professional responsibility." He met her eyes. "I was wrong. Not about reporting her—she was breaking laws, helping people escape. But about the reasoning. I thought love was a weakness. A contamination. Something to be corrected."</p>
+<p>"And now?"</p>
+<p>"Now I think love is the only thing that can't be corrupted. The only truth that doesn't need a system to verify it. The only fact that exists independent of databases and judges and verification protocols." He paused. "I think I was contaminated, Kira. But not by Elena. By the system. By the belief that duty mattered more than humanity. That order mattered more than compassion. That truth could exist without love."</p>
+<p>Kira felt her breath catch. "Marcus..."</p>
+<p>"I'm not saying I love you. We barely know each other. We're in an impossible situation. We might die in two weeks." He smiled. "But I'm saying I could. Love you. If we survive. If we have time. If we get the chance to be more than just allies in a revolution."</p>
+<p>Kira's analytical mind screamed at her to be cautious, to be practical, to not let emotions compromise the mission. But her heart—the part of her she'd trained herself to ignore—was saying something different.</p>
+<p>"I could too," she said softly. "Love you. If we survive."</p>
+<p>They leaned toward each other, and for a moment, Kira thought they might kiss. But Marcus pulled back slightly.</p>
+<p>"Not yet," he said. "Not until we're free. Not until we've done what we need to do. I don't want our first kiss to be in a prison cell, surrounded by lies and corruption. I want it to be in freedom. In truth. In a world we helped make better."</p>
+<p>"That's very romantic."</p>
+<p>"I'm discovering I might be a romantic." Marcus stood, helped her to her feet. "Get some sleep, Kira. Tomorrow, we show the others what you found. We finalize the escape plan. We prepare for revolution."</p>
+<p>"Pragmatic and romantic. You're full of surprises, Marcus Chen."</p>
+<p>"So are you, Kira Osman."</p>
+<p>After he left, Kira lay in bed, staring at the ceiling, her mind full of evidence and revolution and the possibility of love.</p>
+<p>She'd spent her life believing in precision, in data, in systems. She'd thought emotions were bugs in the code, inefficiencies to be minimized.</p>
+<p>But maybe emotions were features, not bugs. Maybe love was the most important data point of all. Maybe the system had failed because it tried to eliminate humanity instead of serving it.</p>
+<p>She fell asleep thinking about Marcus's words: <em>Love is the only truth that doesn't need a system to verify it.</em></p>
+<p>He was right. And that truth was going to help them burn the corrupt system down and build something better from the ashes.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="08-the-pattern.html" class="nav-button">← Previous: Chapter 8: The Pattern</a>
+            <div class="nav-center">Chapter 9: The Evidence</div>
+            <a href="10-the-triplets-reunite.html" class="nav-button">Next: Chapter 10: The Triplets Reunite →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

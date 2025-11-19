@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="07-the-journalist.html" class="nav-button">← Previous: Chapter 7: The Journalist</a>
+            <div class="nav-center">Chapter 8: The Pattern</div>
+            <a href="09-the-evidence.html" class="nav-button">Next: Chapter 9: The Evidence →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Marcus Chen (third-person limited) | <strong>Timeline:</strong> August 15, 2106 (Day 15 in facility) - Early morning</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 8: The Pattern</h1>
+<h2>POV: Marcus Chen</h2>
+<h2>PART TWO: THE CRACKS</h2>
+<p>Marcus had always believed in patterns. As an analyst, he'd spent years finding them—connections between facts, relationships between data points, the hidden structures that revealed truth.</p>
+<p>Now, lying awake in his cell at 0200, he was seeing a pattern he wished he couldn't see.</p>
+<p>The evidence was undeniable. Eight simultaneous convictions. Live fact manipulation from the Minister's office. "Project Correction" with its chilling Phase 2. Dr. Reeves's testimony. Nikolai's technical proof. Isaiah's documentation.</p>
+<p>All of it pointed to one inescapable conclusion: the system Marcus had dedicated his life to was fundamentally corrupt.</p>
+<p>Not flawed. Not imperfect. Corrupt.</p>
+<p>The distinction mattered. A flawed system could be fixed. An imperfect system could be improved. But a corrupt system—one designed from the beginning to be manipulable, one where the corruption was the point—that couldn't be fixed. It had to be replaced.</p>
+<p>Marcus sat up, head in his hands. This was his crisis of faith, and it was tearing him apart.</p>
+<p>He'd betrayed Elena for this system. He'd reported the woman he loved because he believed in objective truth, in verified facts, in the sanctity of history. He'd chosen duty over love because he thought duty mattered more.</p>
+<p>And it had all been for nothing. The system he'd sacrificed everything for was a lie.</p>
+<p>No. Not a lie. That was too simple.</p>
+<p>Marcus stood, paced his small cell. Think clearly. Analyze precisely. Don't let emotion cloud judgment.</p>
+<p>The ideal of Histologic was sound: objective truth, verified through facts, creating a shared history that prevented the wars and chaos of the pre-Histologic era. That ideal had saved humanity from itself.</p>
+<p>But Veridica's implementation was corrupt. Someone—multiple someones—had taken that beautiful ideal and twisted it into a tool of control. They'd built backdoors into The Judge. They'd created systems that allowed fact manipulation. They'd turned truth into a weapon.</p>
+<p>The ideal wasn't the problem. The people wielding it were.</p>
+<p>That distinction was everything. Because if the ideal was sound, it could be reclaimed. If the corruption was human, it could be removed. If the system was hijacked, it could be liberated.</p>
+<p>Marcus stopped pacing. That was it. That was the pattern he'd been trying to see.</p>
+<p>They weren't fighting Histologic. They were fighting for it.</p>
+<p>A soft knock on his door. Marcus opened it to find Kira standing there, looking as sleepless as he felt.</p>
+<p>"Can't sleep either?" she asked quietly.</p>
+<p>"Too much thinking."</p>
+<p>"May I come in?"</p>
+<p>Marcus stepped aside. Kira entered, and he closed the door carefully. They sat on his bed, shoulders almost touching, speaking in whispers.</p>
+<p>"I've been analyzing the data," Kira said. "Nikolai's evidence, Reeves's documents, everything we know. And I keep coming back to one question."</p>
+<p>"What question?"</p>
+<p>"Why now? Why target us now? What changed?"</p>
+<p>Marcus thought about it. "Maybe we got too close to something. Each of us, independently, was investigating or questioning or discovering something that threatened them."</p>
+<p>"But we weren't coordinating. We didn't know each other. How could we be a threat?"</p>
+<p>"Unless..." Marcus's mind raced. "Unless the threat wasn't what we'd discovered. It was what we could discover. Together."</p>
+<p>Kira's eyes widened. "They saw the potential. Eight specialists with complementary skills. If we ever worked together, we could expose the entire conspiracy."</p>
+<p>"So they preemptively imprisoned us. Put us all in one place where they could monitor us, control us, eventually break us."</p>
+<p>"But they made a mistake," Kira said. "They put us together. They gave us access to each other's knowledge. They created exactly what they feared."</p>
+<p>Marcus nodded slowly. "It's almost like... like they wanted us to figure it out. Like this is some kind of test."</p>
+<p>"Or a trap."</p>
+<p>They sat in silence for a moment, the implications sinking in.</p>
+<p>"Marcus," Kira said softly, "what are you going to do? When we escape, I mean. The others have plans—Isaiah to SFW, Dr. Tanaka to Chronos, Alexei to the resistance. But you... you're different. You still believe."</p>
+<p>"I do," Marcus admitted. "I believe in Histologic. In the ideal of it. In what it could be if it wasn't corrupted."</p>
+<p>"So what will you do?"</p>
+<p>"I'll stay," Marcus said, and saying it out loud made it real. "I'll stay in Veridica. As an outlaw, yes. Hidden, yes. But I'll stay. And I'll fight to reclaim the system from those who've corrupted it."</p>
+<p>"That's dangerous. More dangerous than escaping."</p>
+<p>"I know. But it's necessary." Marcus turned to face her. "Kira, if we all leave—if everyone who knows the truth abandons Veridica—then the corruption wins. They get to keep controlling the system, keep manipulating facts, keep silencing anyone who questions. But if someone stays, if someone fights from the inside, then there's hope for change."</p>
+<p>"You can't do it alone."</p>
+<p>"I know." Marcus met her eyes. "That's why I'm hoping you'll stay with me."</p>
+<p>Kira was silent for a long moment. "You're asking me to give up safety. To stay in a nation that convicted me, that wants to break me, that will hunt us forever."</p>
+<p>"Yes."</p>
+<p>"You're asking me to risk everything on the chance that we can fix a broken system."</p>
+<p>"Yes."</p>
+<p>"You're asking me to believe in something I don't believe in."</p>
+<p>"No," Marcus said softly. "I'm asking you to believe in something you do believe in. Truth. Real truth. The kind that doesn't need a system to enforce it. You said it yourself: real truth just is. Help me prove that. Help me show that truth can exist without corruption, that Histologic can work if we make it work."</p>
+<p>Kira looked away. "Why me?"</p>
+<p>"Because you're brilliant. Because you see patterns I miss. Because you're pragmatic where I'm idealistic. Because together, we're stronger than apart." Marcus paused. "And because I trust you. More than I've trusted anyone since Elena."</p>
+<p>"Don't," Kira said sharply. "Don't compare me to her."</p>
+<p>"I'm not. You're nothing like her." Marcus's voice was gentle. "Elena was a mission. You're... you're real."</p>
+<p>Kira turned back to him, and Marcus saw something in her eyes—vulnerability, hope, fear.</p>
+<p>"I don't believe in Histologic," she said. "I don't believe in the system. But I believe in you. And maybe that's enough."</p>
+<p>"It is," Marcus said. "It's more than enough."</p>
+<p>They sat close, not quite touching, the space between them charged with possibility.</p>
+<p>"We're going to fail, you know," Kira said. "The odds of two outlaws exposing and reforming a corrupt system are astronomical."</p>
+<p>"Probably."</p>
+<p>"We'll be hunted. Constantly. We'll never be safe."</p>
+<p>"No."</p>
+<p>"We might die."</p>
+<p>"Yes."</p>
+<p>"And you still want to do this?"</p>
+<p>Marcus smiled. "I have to. It's who I am. I'm the analyst who believes in truth. The idealist who thinks systems can work. The fool who chose duty over love and regretted it." He looked at her. "I can't make that mistake again. I can't choose the easy path over the right one."</p>
+<p>"The right one isn't always the smart one."</p>
+<p>"No. But it's still right."</p>
+<p>Kira laughed softly. "You're impossible, Marcus Chen."</p>
+<p>"I've been told that before."</p>
+<p>"And yet..." Kira reached out, took his hand. "I'm going to stay with you anyway. Because you're right. Someone has to fight. Someone has to try. And if it's going to be you, then I'm not letting you do it alone."</p>
+<p>Marcus squeezed her hand. "Thank you."</p>
+<p>"Don't thank me yet. We haven't escaped. We haven't exposed anything. We haven't changed anything. We're just two people with a plan that will probably get us killed."</p>
+<p>"It's a start."</p>
+<p>"It's insane."</p>
+<p>"That too."</p>
+<p>They smiled at each other, and Marcus felt something shift. This wasn't just an alliance anymore. This was partnership. This was trust. This was—</p>
+<p>"Marcus," Kira said softly. "When this is over, when we've done what we can do, win or lose... will you tell me about her? About Elena?"</p>
+<p>"Yes. If you want to hear it."</p>
+<p>"I do. Because I need to understand what you're fighting for. What you sacrificed. What you're trying to reclaim."</p>
+<p>"It's not about reclaiming Elena," Marcus said. "It's about reclaiming myself. The person I was before I betrayed everything I believed in for a system that betrayed me."</p>
+<p>"And who is that person?"</p>
+<p>"I'm still figuring that out." Marcus stood, helped Kira to her feet. "But I think he's someone who fights for truth. Who believes in ideals. Who chooses love over fear."</p>
+<p>Kira moved to the door, paused. "Get some sleep, Marcus. We have a lot of work ahead of us."</p>
+<p>"You too."</p>
+<p>She left, silent as a shadow.</p>
+<p>Marcus lay back down, but he didn't sleep. His mind was too active, too full of patterns and plans and possibilities.</p>
+<p>They were going to escape. They were going to expose the corruption. They were going to fight to reclaim Histologic from those who'd corrupted it.</p>
+<p>It was ambitious. Dangerous. Probably impossible.</p>
+<p>But it was right. And right mattered more than safe.</p>
+<p>Marcus closed his eyes and thought of Elena one last time. Her face. Her voice. Her final words: <em>"You still don't understand. But you will."</em></p>
+<p>He understood now. She'd been trying to show him that the system was corrupt. That truth was bigger than The Judge. That love mattered more than duty.</p>
+<p>She'd been right. And he'd been too blind to see it.</p>
+<p>But he saw it now. And he was going to make it right.</p>
+<p>Not by destroying the system. By saving it. By proving that Histologic could work if good people fought for it.</p>
+<p>That was his mission now. His purpose. His path.</p>
+<p>And Kira would walk it with him.</p>
+<p>Together, they would crack the system wide open. Together, they would expose the corruption. Together, they would fight for a truth that didn't need lies to survive.</p>
+<p>The pattern was clear now. The path was set.</p>
+<p>All they had to do was survive long enough to walk it.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="07-the-journalist.html" class="nav-button">← Previous: Chapter 7: The Journalist</a>
+            <div class="nav-center">Chapter 8: The Pattern</div>
+            <a href="09-the-evidence.html" class="nav-button">Next: Chapter 9: The Evidence →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

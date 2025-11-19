@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="13-the-conscience.html" class="nav-button">← Previous: Chapter 13: The Conscience</a>
+            <div class="nav-center">Chapter 14: The Story</div>
+            <a href="15-the-believers-doubt.html" class="nav-button">Next: Chapter 15: The Believer's Doubt →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Isaiah Okonkwo (third-person limited) | <strong>Timeline:</strong> August 20, 2106 (Day 20 in facility) - 2 days until escape</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 14: The Story</h1>
+<h2>POV: Isaiah Okonkwo</h2>
+<p>Two days until escape. Forty-eight hours until the story became real.</p>
+<p>Isaiah sat in his cell, eyes closed, reviewing the mental manuscript he'd been composing for two weeks. Every word, every scene, every piece of evidence, perfectly preserved in his photographic memory.</p>
+<p>The story was complete. All it needed now was to be written down. Published. Shared with the world.</p>
+<p>He opened his eyes and began to mentally organize the final structure:</p>
+<p><strong>TITLE: "THE CORRECTION: How Eight People Discovered the Truth About Veridica's Histologic System"</strong></p>
+<p><strong>PART ONE: THE GATHERING</strong><br />
+- Eight convictions, one second<br />
+- Eight specialists, one facility<br />
+- Eight stories, one truth</p>
+<p><strong>PART TWO: THE DISCOVERY</strong><br />
+- Evidence of corruption<br />
+- Live fact manipulation<br />
+- Pre-determined convictions<br />
+- Project Correction revealed</p>
+<p><strong>PART THREE: THE ESCAPE</strong><br />
+- Fact storm weapon<br />
+- Fifteen minutes of chaos<br />
+- Eight people running toward freedom<br />
+- The system breaking down</p>
+<p><strong>PART FOUR: THE AFTERMATH</strong><br />
+- Publication and exposure<br />
+- Government response<br />
+- International reaction<br />
+- The beginning of change</p>
+<p>It was good. It was strong. It was true.</p>
+<p>But it wasn't just about facts and evidence. Mikhail had been right about that. Stories transformed people. Facts informed, but stories changed hearts.</p>
+<p>So Isaiah had woven in the human elements: Marcus's crisis of faith. Kira's precision and pragmatism. The Volkov brothers' reunion. Dr. Tanaka's ethical courage. His own journey from observer to participant.</p>
+<p>And Mikhail. Always Mikhail, with his songs and riddles and old wisdom, reminding them that some truths couldn't be measured by The Judge.</p>
+<p>Isaiah pulled out his brass tablet—modified by Nikolai, of course—and began typing. Not the full story. Just the opening. The hook. The paragraph that would make people keep reading:</p>
+<p><em>"On August 1, 2106, at exactly 14:37:22, The Judge—Veridica's supposedly infallible arbiter of truth—processed eight convictions for ideological contamination. The convictions were identical in timestamp, suggesting simultaneous processing. But The Judge processes sequentially, one case at a time. This impossibility was the first crack in a system that claimed to be perfect. This is the story of how eight people discovered that crack, and how they used it to break the system wide open."</em></p>
+<p>Good. Direct. Compelling. True.</p>
+<p>A knock on his door. Isaiah saved his work, encrypted it, hid it in layers of innocent-looking files.</p>
+<p>Marcus entered, looking as sleepless as Isaiah felt.</p>
+<p>"Can't stop thinking either?" Marcus asked.</p>
+<p>"I'm a journalist. Thinking is my job."</p>
+<p>"May I?" Marcus gestured to the chair.</p>
+<p>"Of course."</p>
+<p>They sat in comfortable silence for a moment. They'd become friends over these two weeks. Not just allies, but friends. Two men who believed in truth, even when truth was dangerous.</p>
+<p>"I've been thinking about Elena," Marcus said finally. "About what I did. Reporting her. Choosing duty over love."</p>
+<p>"Regrets?"</p>
+<p>"Yes and no." Marcus leaned forward. "I regret hurting her. I regret betraying her. But I don't regret believing in truth. I just regret believing the system was the only way to find it."</p>
+<p>"That's a good distinction."</p>
+<p>"It's the distinction that matters." Marcus paused. "Isaiah, when you write this story—and you will write it—I need you to include something."</p>
+<p>"What?"</p>
+<p>"That I was wrong. That I betrayed someone I loved for a system that betrayed me. That I learned too late that love and truth aren't enemies. That the biggest lie the system told was that we had to choose between them."</p>
+<p>Isaiah nodded slowly. "That's a powerful admission."</p>
+<p>"It's a necessary one. Because if my story can help one person choose differently—choose love and truth instead of duty and lies—then maybe my mistake wasn't for nothing."</p>
+<p>"Your story will help more than one person, Marcus. It will help thousands. Maybe millions."</p>
+<p>"Then make sure you tell it right. Tell the truth, but tell it with compassion. Show that I was a fool, but a well-meaning fool. Show that the system corrupts good people by making them think they're doing good."</p>
+<p>"I will." Isaiah made a mental note, adding it to his manuscript. "What about Kira? Do you want me to include your relationship?"</p>
+<p>Marcus smiled. "Yes. All of it. The falling in love while planning revolution. The decision to wait until we're free for our first kiss. The choice to stay together and fight. All of it."</p>
+<p>"That's very romantic."</p>
+<p>"I'm discovering I'm a romantic." Marcus stood. "Two days, Isaiah. Two days until we escape. Two days until you can write this story down and publish it. Are you ready?"</p>
+<p>"I've been ready since the moment I was convicted. This is what I do. I bear witness. I document. I tell the truth." Isaiah met his eyes. "The question is: are you ready? Because once this story is published, there's no going back. You'll be a wanted man. A traitor. An outlaw. Forever."</p>
+<p>"I'm already all those things. At least this way, people will know why."</p>
+<p>After Marcus left, Isaiah returned to his mental manuscript. He added Marcus's admission, his reflection on love and truth, his transformation from true believer to pragmatic idealist.</p>
+<p>The story was getting better. More human. More real.</p>
+<hr />
+<p>Later that day, Isaiah found Mikhail in the library. The old man was reading poetry—Whitman, naturally.</p>
+<p>"Walt Whitman," Isaiah said, sitting beside him. "Song of Myself?"</p>
+<p>"The greatest American poem," Mikhail agreed. "Listen to this:</p>
+<p><em>'Do I contradict myself?</em><br />
+<em>Very well then I contradict myself,</em><br />
+<em>(I am large, I contain multitudes.)'</em></p>
+<p>"That's what we are, Isaiah. Multitudes. Contradictions. Complex, messy, beautiful humans. That's what your story needs to capture."</p>
+<p>"I'm trying."</p>
+<p>"You're succeeding." Mikhail closed the book. "I've been watching you. Observing. Documenting the documenter. And I see what you're doing. You're not just recording facts. You're capturing souls."</p>
+<p>"That's very poetic."</p>
+<p>"I'm old. I'm allowed to be poetic." Mikhail smiled. "When you publish this story, when the world reads it, they'll see eight people. Eight souls. Eight different paths to the same truth. That's powerful, Isaiah. That's transformative."</p>
+<p>"I hope so."</p>
+<p>"I know so. Because I've read a lot of stories. Heard a lot of songs. And the ones that endure are the ones that show truth in all its complexity. The ones that don't simplify. The ones that honor the multitudes we contain."</p>
+<p>Isaiah thought about his manuscript. About the eight people he was documenting. About their contradictions and complexities and humanity.</p>
+<p>"Mikhail, can I ask you something?"</p>
+<p>"Always."</p>
+<p>"Why songs? Why do you speak in songs and riddles instead of just saying what you mean?"</p>
+<p>Mikhail was quiet for a moment. "Because songs carry truth in ways words alone can't. Because riddles make people think instead of just accepting. Because the old ways of teaching—through story and song and metaphor—those ways honored the complexity of truth."</p>
+<p>"The Judge doesn't understand metaphor."</p>
+<p>"Exactly. That's its weakness. That's why it can be corrupted. Because it only sees literal truth, not deeper truth. It can't understand that sometimes a song contains more truth than a database."</p>
+<p>"Like 'You'll Never Walk Alone.'"</p>
+<p>"Like 'You'll Never Walk Alone.'" Mikhail's eyes were distant. "That song has sustained people through wars, disasters, grief, loss. Not because it's factually accurate—we all walk alone sometimes. But because it's emotionally true. It's aspirationally true. It's the truth we need, not just the truth that is."</p>
+<p>"I want to include that in the story. The songs. The riddles. The old wisdom."</p>
+<p>"Good. Because that's part of the truth too. That's part of what the system tried to erase. Cultural memory. Emotional truth. The wisdom that can't be quantified."</p>
+<p>Isaiah made another mental note. A whole section about Mikhail. About the old songs. About the truths The Judge couldn't measure.</p>
+<p>"Two days," Mikhail said. "Two days until you become the story instead of just documenting it."</p>
+<p>"I've always been part of the story. I just didn't realize it until now."</p>
+<p>"That's the best kind of journalism. The kind where you're honest about your role. Where you acknowledge that observation changes what's observed. Where you admit you're human, not just a recording device."</p>
+<p>"Subjective journalism."</p>
+<p>"Honest journalism." Mikhail stood. "Come. Let's walk. I want to show you something."</p>
+<p>They walked through the facility, Mikhail leading. They ended up in the garden, at the north wall. The wall they would climb in two days.</p>
+<p>"Look at this wall," Mikhail said. "What do you see?"</p>
+<p>"A barrier. An obstacle. A prison wall."</p>
+<p>"Yes. And also: a threshold. A boundary between captivity and freedom. A place of transformation." Mikhail touched the brass-reinforced stone. "In two days, we'll cross this threshold. We'll transform from inmates to escapees. From victims to victors. From broken to free."</p>
+<p>"If we make it."</p>
+<p>"When we make it." Mikhail's voice was firm. "Because we have something the system doesn't: hope. Love. Songs. Stories. The things that make us human. The things that can't be corrected or controlled or contained."</p>
+<p>Isaiah looked at the wall. At the threshold. At the boundary between his current life and his future.</p>
+<p>"When I write this story," he said slowly, "I'm going to end it here. At this wall. With eight people crossing from captivity to freedom. With the promise that the story isn't over. That it's just beginning."</p>
+<p>"Perfect." Mikhail smiled. "Because the best stories don't end. They transform. They continue. They inspire others to write their own stories."</p>
+<p>"And what's your story, Mikhail? The old man who sings songs and speaks in riddles. Who are you really?"</p>
+<p>"I'm a keeper of memory. A preserver of wisdom. A reminder that the past matters, that culture matters, that some truths transcend systems." Mikhail's expression was serious. "I'm also a tired old man who wants to see young people free. Who wants to know that the old songs will be remembered. Who wants to believe that love endures."</p>
+<p>"It does. You've proven that."</p>
+<p>"We've proven that. All eight of us. Together."</p>
+<p>They stood at the wall, two men preparing to cross a threshold, preparing to transform, preparing to be free.</p>
+<p>"Two days," Isaiah said. "Two days until the story becomes real."</p>
+<p>"The story is already real," Mikhail corrected. "In two days, we just make it public."</p>
+<p>Isaiah closed his eyes and added this moment to his mental manuscript. The wall. The threshold. The promise of transformation.</p>
+<p>The story was complete. All it needed now was an ending.</p>
+<p>And in two days, they would write that ending together.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="13-the-conscience.html" class="nav-button">← Previous: Chapter 13: The Conscience</a>
+            <div class="nav-center">Chapter 14: The Story</div>
+            <a href="15-the-believers-doubt.html" class="nav-button">Next: Chapter 15: The Believer's Doubt →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

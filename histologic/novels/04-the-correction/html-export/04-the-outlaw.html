@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="03-the-enforcer.html" class="nav-button">← Previous: Chapter 3: The Enforcer</a>
+            <div class="nav-center">Chapter 4: The Outlaw</div>
+            <a href="05-the-technician.html" class="nav-button">Next: Chapter 5: The Technician →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Alexei Volkov (third-person limited) | <strong>Timeline:</strong> August 9, 2106 (Day 9 in facility)</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 4: The Outlaw</h1>
+<h2>POV: Alexei Volkov</h2>
+<p>Alexei had escaped from three prisons before this one. The first time, he'd been nineteen and stupid, locked up for "dangerous questions" after a university protest. The second time, twenty-four, caught helping families defect to Chronos. The third time, twenty-eight, after a resistance operation went sideways.</p>
+<p>Each escape had taught him something. The first: guards were human and made mistakes. The second: systems had patterns you could exploit. The third: sometimes you needed help from the inside.</p>
+<p>This time, he had all three advantages. And something more: six allies who were just as smart and just as motivated as he was.</p>
+<p>Seven, if you counted Mikhail. Though Alexei suspected the old man was smarter than all of them combined.</p>
+<p>He lay on his cell bed, hands behind his head, staring at the ceiling and planning. The facility had good security—better than the others he'd escaped from. Brass-reinforced doors, biometric scanners, guards who actually paid attention. But every system had weaknesses. You just had to find them.</p>
+<p>The door opened. Alexei didn't move, didn't react. Let them think he was relaxed, unconcerned, maybe even a little broken.</p>
+<p>"Alexei Volkov." Dr. Reeves stood in the doorway. "Your turn for individual session."</p>
+<p>Ah. So Dmitri's warning had been accurate. They were working through the group systematically.</p>
+<p>Alexei sat up slowly, stretched like a cat. "Can't wait. I love talking about my feelings."</p>
+<p>Reeves's expression didn't change. "This way."</p>
+<p>The walk to Reeves's office took them through the main corridor. Alexei noted everything: guard positions, camera angles, door mechanisms, emergency exits. Old habits. Useful habits.</p>
+<p>In the office, Alexei took the offered chair and immediately put his feet up on Reeves's desk.</p>
+<p>"Comfortable?" Reeves asked dryly.</p>
+<p>"Very. Nice office. I like the books. 'Neural Correction Through Behavioral Modification.' Catchy title. Is it a bestseller?"</p>
+<p>"Sit properly, please."</p>
+<p>Alexei dropped his feet, grinned. "You're no fun."</p>
+<p>"I'm not here to be fun. I'm here to help you."</p>
+<p>"Help me what? Escape? Because I'm all for that."</p>
+<p>Reeves pulled out a brass tablet, began making notes. "You've escaped from three facilities before this one. Why?"</p>
+<p>"Because I don't like cages."</p>
+<p>"Why were you in those cages?"</p>
+<p>"Because I asked questions. Helped people. Believed in freedom." Alexei leaned forward. "You know, dangerous stuff."</p>
+<p>"You don't take this seriously."</p>
+<p>"Oh, I take it very seriously." Alexei's grin faded. "I take it so seriously that I've dedicated my life to fighting it. The system you're trying to correct me into believing? It's broken. Corrupt. Built on lies. And I'm not going to pretend otherwise just to make you feel better about your job."</p>
+<p>Reeves studied him. "You're very certain."</p>
+<p>"I'm very experienced. I've seen behind the curtain, Dr. Reeves. I've seen how facts get manipulated, how people get silenced, how the system protects itself at the expense of truth. You can't correct that out of me because it's not a belief. It's knowledge."</p>
+<p>"Knowledge can be recontextualized."</p>
+<p>"That's a fancy word for brainwashing."</p>
+<p>"That's a crude word for education."</p>
+<p>They stared at each other. Alexei felt the familiar thrill of verbal sparring. He'd always enjoyed this—the dance of words, the battle of wits.</p>
+<p>"Let me ask you something," Alexei said. "Do you actually believe in what you're doing? Or are you just following orders?"</p>
+<p>"I believe in helping people."</p>
+<p>"That's not an answer."</p>
+<p>Reeves set down his tablet. "What do you want me to say, Alexei? That I have doubts? That I question the system? That would be very convenient for you, wouldn't it?"</p>
+<p>"It would be honest."</p>
+<p>"Honesty is complicated."</p>
+<p>"Only when you're lying to yourself."</p>
+<p>Reeves smiled slightly. "You're good at this. Provocation. Manipulation. Getting people to reveal more than they intend. Your aunt Elena taught you well."</p>
+<p>Alexei's blood ran cold. "How do you know about Elena?"</p>
+<p>"I know everything about you. Your family. Your history. Your connections." Reeves leaned forward. "I know Elena Volkov coordinates resistance operations across three nations. I know she's planning something. And I know she's going to try to extract you from this facility."</p>
+<p>Trap. This was a trap. Alexei forced himself to stay calm, to keep his expression neutral.</p>
+<p>"I don't know what you're talking about."</p>
+<p>"Don't insult my intelligence. Or yours." Reeves pulled up a file on his tablet. "Elena Volkov. Age 42. Former military intelligence. Defected eight years ago. Currently leads the largest resistance network in Veridica. She's your father's sister. She's been watching this facility since you arrived."</p>
+<p>Alexei said nothing. What could he say? Deny it and look like a liar. Confirm it and endanger Elena.</p>
+<p>"Here's what I don't understand," Reeves continued. "Why would the resistance want all eight of you? Yes, you're skilled. Yes, you're knowledgeable. But you're also high-risk. Extracting eight people from a secure facility? That's not a rescue. That's a statement."</p>
+<p>"Maybe they just really like us."</p>
+<p>"Or maybe," Reeves said slowly, "someone wants you out of here. Someone who put you in here in the first place."</p>
+<p>Alexei's mind raced. What was Reeves saying?</p>
+<p>"Think about it," Reeves continued. "Eight specialists, all convicted simultaneously, all placed in the same facility, all in the same group. That's not random. That's not even efficient. That's deliberate. Someone wanted you here. Together. Why?"</p>
+<p>"You tell me. You're the one with all the answers."</p>
+<p>"I don't have answers. I have questions." Reeves stood, paced to the window. "I have questions about why my facility suddenly receives eight high-value inmates. I have questions about why I'm ordered to correct you but given no real tools to do so. I have questions about why Director Kovač seems afraid of you."</p>
+<p>"Maybe because we're dangerous."</p>
+<p>"You're not dangerous to us." Reeves turned. "You're dangerous to someone else. Someone higher up. Someone who wants you silenced or controlled or... tested."</p>
+<p>"Tested for what?"</p>
+<p>"That's what I'm trying to figure out." Reeves returned to his desk. "Here's what I think, Alexei. I think you and your seven friends are pawns in a game you don't understand. I think someone is using you. And I think that someone is very, very powerful."</p>
+<p>Alexei processed this. It aligned with what they'd discovered in the library. But hearing it from Reeves, from someone inside the system...</p>
+<p>"Why are you telling me this?"</p>
+<p>"Because I'm tired of being used too." Reeves's voice was quiet. "I became a correction specialist because I believed in helping people. I believed in the system. But lately, I've been asked to do things that don't help people. I've been asked to break them instead."</p>
+<p>"Like us?"</p>
+<p>"Like you." Reeves met his eyes. "I was ordered to use enhanced correction techniques on your group. Neural manipulation. Memory alteration. Things that aren't healing. Things that are weapons."</p>
+<p>"And?"</p>
+<p>"And I refused. Which means I'm probably next for correction myself." Reeves smiled bitterly. "So you see, Alexei, we're not so different. We're both fighting a system that's bigger than us. We're both trying to survive."</p>
+<p>Alexei leaned back, reassessing. This wasn't a trap. Or if it was, it was the most elaborate one he'd ever seen.</p>
+<p>"What do you want from me?"</p>
+<p>"Information. Cooperation. A way out for both of us." Reeves pulled out a small device—a data chip. "This contains everything I've collected on your group. Conviction records. Orders I've received. Communications from higher up. It's evidence of systematic corruption."</p>
+<p>"Why give it to me?"</p>
+<p>"Because you're going to escape. Elena will make sure of that. And when you do, someone needs to publish this. Someone needs to expose what's happening here." Reeves held out the chip. "Your friend Isaiah. He's a journalist. He has international connections. He can get this story out."</p>
+<p>Alexei took the chip slowly. "You're helping us escape?"</p>
+<p>"I'm giving you tools. What you do with them is your choice." Reeves stood. "Session's over. Return to your cell. And Alexei? Be careful. Whatever game is being played here, the stakes are higher than you think."</p>
+<p>Alexei walked back to his cell in a daze. The chip felt heavy in his palm, heavier than its physical weight.</p>
+<p>Dr. Reeves was helping them. Or using them. Or both.</p>
+<p>Either way, they had an ally inside the system. That changed everything.</p>
+<p>In his cell, Alexei hid the chip in a crack in the wall behind his bed. Then he lay down and stared at the ceiling, mind racing through possibilities.</p>
+<p>Elena was planning an extraction. Reeves had confirmed it. Which meant time was running out. They needed to coordinate, needed to plan, needed to move fast.</p>
+<p>But they also needed to be careful. Because if Reeves was right—if they were pawns in a larger game—then escaping might be exactly what someone wanted them to do.</p>
+<p>The question was: who? And why?</p>
+<p>Alexei closed his eyes and thought about his aunt. Elena was brilliant, strategic, always three steps ahead. If she was planning an extraction, she had a reason. And if someone was using them, she'd know.</p>
+<p>He just had to trust her.</p>
+<p>Trust, and prepare.</p>
+<p>Because in three days, they'd meet again in the library. And this time, Alexei would have evidence. Real, undeniable evidence of corruption.</p>
+<p>The kind of evidence that could change everything.</p>
+<p>Or get them all killed.</p>
+<p>Either way, it would be interesting.</p>
+<p>Alexei smiled in the darkness. He'd always loved interesting.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="03-the-enforcer.html" class="nav-button">← Previous: Chapter 3: The Enforcer</a>
+            <div class="nav-center">Chapter 4: The Outlaw</div>
+            <a href="05-the-technician.html" class="nav-button">Next: Chapter 5: The Technician →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

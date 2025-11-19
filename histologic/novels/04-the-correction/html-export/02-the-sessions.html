@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="01-arrival.html" class="nav-button">← Previous: Chapter 1: Arrival</a>
+            <div class="nav-center">Chapter 2: The Sessions</div>
+            <a href="03-the-enforcer.html" class="nav-button">Next: Chapter 3: The Enforcer →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Kira Osman (third-person limited) | <strong>Timeline:</strong> August 7, 2106 (Day 7 in facility) - Night</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 2: The Sessions</h1>
+<h2>POV: Kira Osman</h2>
+<p>The library was supposed to be locked after 2100. Nikolai had ensured it wasn't.</p>
+<p>Kira arrived first, slipping through the heavy brass door into the darkness. She didn't turn on the lights—too obvious. Instead, she navigated by memory and the pale moonlight filtering through tall windows. The library smelled of old paper and brass polish, familiar and comforting.</p>
+<p>She'd always loved libraries. Data had order here. Books didn't lie, didn't disappear, didn't rewrite themselves when no one was looking.</p>
+<p>Except they did now. That's why she was here.</p>
+<p>Footsteps in the corridor. Kira pressed herself against a bookshelf, watching the door. A shadow slipped through—tall, lean. Isaiah. He nodded to her, said nothing, took position by the window where he could watch the grounds.</p>
+<p>More footsteps. The Volkov triplets entered together, moving with eerie synchronization despite their different styles. Dmitri scanned for threats. Alexei grinned like this was an adventure. Nikolai looked terrified.</p>
+<p>Dr. Tanaka came next, moving with quiet grace. She touched Kira's shoulder gently—<em>I'm here, you're not alone</em>—and settled into a chair.</p>
+<p>Marcus arrived last, hesitant. He paused in the doorway, silhouetted by corridor light, and Kira saw the war in his posture: duty versus curiosity, belief versus doubt.</p>
+<p>"Close the door," she said quietly. "We don't have much time."</p>
+<p>Marcus stepped inside, shut the door. Darkness enveloped them.</p>
+<p>"Nikolai," Kira said. "Security?"</p>
+<p>"Disabled for this wing," Nikolai whispered. "Thirty minutes. Maybe forty if we're lucky."</p>
+<p>"Then let's not waste it." Kira moved to a reading table, spread out the papers she'd collected. "I've been gathering evidence. So has Nikolai. We need to share what we know."</p>
+<p>"This is dangerous," Dmitri said, but he moved closer to see.</p>
+<p>"More dangerous than staying ignorant?" Alexei countered.</p>
+<p>"Both," Dr. Tanaka said softly. "Which is why we must be careful."</p>
+<p>Kira pulled out the first document—a photocopy she'd made from facility records. "Our conviction records. All eight of us. Look at the timestamps."</p>
+<p>Marcus leaned in, his analyst's eyes scanning the data. She watched him process it, saw the moment understanding hit.</p>
+<p>"Same day," he said. "August 1st, 2106. All of us."</p>
+<p>"Same time," Kira added. "14:37:22. All eight convictions processed in the same second."</p>
+<p>"That's impossible," Marcus said automatically. "The Judge processes sequentially. It can't—"</p>
+<p>"It can't process eight separate cases simultaneously," Kira finished. "Not unless they were batched. Prepared in advance. Processed together."</p>
+<p>Silence.</p>
+<p>"We were targeted," Isaiah said, his voice carrying the weight of documentation. "This wasn't eight separate investigations leading to eight separate convictions. This was one operation."</p>
+<p>"But why?" Dmitri asked. "What connects us?"</p>
+<p>"That's what I've been trying to figure out." Nikolai pulled out his own papers—printouts from facility systems he shouldn't have been able to access. "I've been looking at our backgrounds. What we all have in common."</p>
+<p>He spread them on the table. Eight files. Eight lives reduced to data points.</p>
+<p>"Marcus: factorepo analyst, Level 3. Access to regional systems."</p>
+<p>"Kira: factorepo technician, Level 4. Meticulous recorder, eidetic memory."</p>
+<p>"Dmitri: enforcer, Level 5. Knowledge of security protocols."</p>
+<p>"Alexei: known outlaw, resistance connections."</p>
+<p>"Me: factorepo technician, Level 5. Systems architecture specialist."</p>
+<p>"Dr. Tanaka: neural correction specialist. Knowledge of how correction works."</p>
+<p>"Isaiah: investigative journalist. International connections, publication access."</p>
+<p>"Mikhail: historian. Knowledge of pre-Histologic era, cultural memory."</p>
+<p>Nikolai looked up. "We're not random. We're specialists. Each of us has knowledge or skills that could threaten the system."</p>
+<p>"Or fix it," Marcus said quietly.</p>
+<p>Everyone looked at him.</p>
+<p>"Think about it," Marcus continued, his voice gaining strength. "If you wanted to expose corruption in Histologic—if you wanted to prove the system was being manipulated—you'd need exactly these skills. Data analysis. Technical expertise. Security knowledge. Resistance contacts. Understanding of correction. Media access. Historical context. Cultural memory."</p>
+<p>"We're a threat," Kira said, seeing it clearly now. "Together, we could uncover and expose systematic corruption."</p>
+<p>"So they locked us up before we could," Alexei finished, grinning despite the gravity. "They saw us coming and removed us from the board."</p>
+<p>"But they made a mistake," Dr. Tanaka said softly. "They put us all in the same place."</p>
+<p>"Where we could meet," Isaiah added. "Compare notes. Combine our knowledge."</p>
+<p>"They thought correction would break us," Dmitri said, understanding dawning. "Make us doubt ourselves, forget what we knew, become compliant."</p>
+<p>"Instead," Kira said, "they gave us exactly what we needed: time, proximity, and a common enemy."</p>
+<p>Marcus was shaking his head, but not in denial—in wonder. "This is... if this is true, if we were deliberately targeted and imprisoned to silence us, then the corruption goes higher than I thought. Much higher."</p>
+<p>"How high?" Nikolai asked.</p>
+<p>"Judge-level," Marcus said, and the words seemed to hurt him. "Someone with access to The Judge itself. Someone who can manipulate convictions, alter facts, control the system."</p>
+<p>A sound in the corridor—footsteps.</p>
+<p>Everyone froze.</p>
+<p>The footsteps passed. Continued. Faded.</p>
+<p>"We need to be more careful," Dr. Tanaka whispered. "If they realize we're organizing—"</p>
+<p>"They'll separate us," Dmitri finished. "Or worse."</p>
+<p>"Then we work fast," Alexei said. "We gather evidence, we plan, we move."</p>
+<p>"Move where?" Marcus asked. "Even if we escape, where do we go? If the corruption is Judge-level, nowhere in Veridica is safe."</p>
+<p>"Other nations," Isaiah said. "I have contacts in SFW. They'd publish this story."</p>
+<p>"I have family in Chronos," Dr. Tanaka added. "They'd give us sanctuary."</p>
+<p>"The resistance has safe houses," Alexei said. "My aunt Elena can extract us."</p>
+<p>"But first," Kira said, bringing them back to focus, "we need proof. Solid, undeniable proof. The kind even The Judge can't ignore."</p>
+<p>"Or the kind that proves The Judge is compromised," Marcus said quietly.</p>
+<p>They all looked at him again. The true believer, speaking heresy.</p>
+<p>"I'm not saying Histologic is wrong," Marcus continued, his voice steady despite the tremor in his hands. "I'm saying Veridica's implementation is corrupt. The ideal is sound. The execution is poisoned."</p>
+<p>"Semantics," Alexei said, but not unkindly. "Corrupt system, corrupt ideal—what's the difference?"</p>
+<p>"The difference," Marcus said, "is whether we're fighting to destroy something or save it."</p>
+<p>"We can debate philosophy later," Kira interrupted. "Right now, we need a plan. Nikolai, can you access the facility's main servers?"</p>
+<p>"Maybe. If I can get to the data center."</p>
+<p>"I can get you there," Dmitri said. "I know the security rotations."</p>
+<p>"I can create a distraction," Alexei offered. "I'm good at those."</p>
+<p>"Isaiah, you document everything," Kira continued. "Every piece of evidence, every connection. If we get out, you publish it."</p>
+<p>"Already doing it," Isaiah said, tapping his temple. "Photographic memory. Every word of this conversation is recorded here."</p>
+<p>"Dr. Tanaka, we'll need medical support. If this goes wrong—"</p>
+<p>"I'll be ready," Tanaka said simply.</p>
+<p>"And Mikhail?" Kira asked, realizing the old man hadn't spoken yet.</p>
+<p>From the shadows, Mikhail's voice emerged, singing softly:</p>
+<p><em>"We shall overcome, we shall overcome,</em><br />
+<em>We shall overcome someday...</em><br />
+<em>Oh, deep in my heart, I do believe,</em><br />
+<em>We shall overcome someday."</em></p>
+<p>He stepped into the moonlight, his white hair glowing silver. "The old songs knew. Every oppressed people sang this song. Every generation that fought for truth. Now it's our turn."</p>
+<p>"That's not a plan," Dmitri said.</p>
+<p>"It's better than a plan," Mikhail replied. "It's hope. And hope, my rigid friend, is what they can't correct out of us. Hope is what makes us dangerous."</p>
+<p>Kira felt something shift in the room. These eight people—so different, so unlikely—were becoming something more. Not just inmates. Not just victims.</p>
+<p>A team.</p>
+<p>"We meet again in three days," she said. "Same time, same place. Nikolai, can you keep security disabled?"</p>
+<p>"I'll find a way."</p>
+<p>"Good. Everyone, be careful. Act normal in sessions. Don't give them any reason to suspect."</p>
+<p>"Too late for that," Alexei said, grinning. "I'm always suspicious."</p>
+<p>Despite everything, Kira smiled. "Then be normally suspicious."</p>
+<p>They began to disperse, slipping out one by one, careful intervals between each departure.</p>
+<p>Marcus lingered. "Kira," he said quietly. "Thank you. For organizing this. For... seeing what I couldn't."</p>
+<p>"You're seeing it now," she said. "That's what matters."</p>
+<p>"I still believe," he said. "In Histologic. In truth. In the system."</p>
+<p>"I know. That's why we need you." Kira met his eyes. "True believers make the best reformers. They know what they're fighting for."</p>
+<p>Marcus nodded slowly. "And what are you fighting for?"</p>
+<p>"Truth," Kira said simply. "Real truth. Not the manufactured kind."</p>
+<p>"Aren't they the same?"</p>
+<p>"I used to think so." She gathered her papers. "Now I know better. Real truth doesn't need a system to enforce it. It just is."</p>
+<p>She left him there, standing in the moonlight, wrestling with belief and doubt.</p>
+<p>In her cell later, Kira couldn't sleep. Her mind raced through possibilities, plans, contingencies. They had thirty minutes in the library. Thirty minutes to coordinate eight people with eight different skills toward one impossible goal.</p>
+<p>It wasn't enough time.</p>
+<p>But it was a start.</p>
+<p>And starts, she'd learned, were everything. The first line of code determined the whole program. The first fact in a database shaped all the others. The first step of a journey decided the destination.</p>
+<p>They'd taken their first step tonight.</p>
+<p>Now they just had to survive the journey.</p>
+<p>Through her small window, she could see the gardens—perfect, manicured, controlled. Beautiful prison for beautiful lies.</p>
+<p>But somewhere beyond those walls was truth. Real, messy, complicated truth.</p>
+<p>And eight people were going to find it.</p>
+<p>Or die trying.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="01-arrival.html" class="nav-button">← Previous: Chapter 1: Arrival</a>
+            <div class="nav-center">Chapter 2: The Sessions</div>
+            <a href="03-the-enforcer.html" class="nav-button">Next: Chapter 3: The Enforcer →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

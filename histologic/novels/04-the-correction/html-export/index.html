@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Table of Contents</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        .toc {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .toc h2 {
+            color: var(--brass);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .part {
+            margin: 2rem 0;
+        }
+
+        .part-title {
+            color: var(--light-brass);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .chapter-list {
+            list-style: none;
+        }
+
+        .chapter-list li {
+            margin: 0.75rem 0;
+        }
+
+        .chapter-list a {
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            background: var(--bg-light);
+            border-left: 3px solid var(--brass);
+            transition: all 0.3s ease;
+        }
+
+        .chapter-list a:hover {
+            background: var(--bg-medium);
+            border-left-color: var(--light-brass);
+            transform: translateX(5px);
+        }
+
+        .chapter-number {
+            color: var(--brass);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .chapter-title {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-left: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            
+            <div class="part">
+                <div class="part-title">Part One: The Gathering</div>
+                <ul class="chapter-list">
+                    <li><a href="00-prologue.html"><span class="chapter-number">Prologue:</span> The Conviction</a></li>
+                    <li><a href="01-arrival.html"><span class="chapter-number">Chapter 1:</span> Arrival <span class="chapter-title">(Marcus)</span></a></li>
+                    <li><a href="02-the-sessions.html"><span class="chapter-number">Chapter 2:</span> The Sessions <span class="chapter-title">(Kira)</span></a></li>
+                    <li><a href="03-the-enforcer.html"><span class="chapter-number">Chapter 3:</span> The Enforcer <span class="chapter-title">(Dmitri)</span></a></li>
+                    <li><a href="04-the-outlaw.html"><span class="chapter-number">Chapter 4:</span> The Outlaw <span class="chapter-title">(Alexei)</span></a></li>
+                    <li><a href="05-the-technician.html"><span class="chapter-number">Chapter 5:</span> The Technician <span class="chapter-title">(Nikolai)</span></a></li>
+                    <li><a href="06-the-doctor.html"><span class="chapter-number">Chapter 6:</span> The Doctor <span class="chapter-title">(Yuki)</span></a></li>
+                    <li><a href="07-the-journalist.html"><span class="chapter-number">Chapter 7:</span> The Journalist <span class="chapter-title">(Isaiah)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="part">
+                <div class="part-title">Part Two: The Cracks</div>
+                <ul class="chapter-list">
+                    <li><a href="08-the-pattern.html"><span class="chapter-number">Chapter 8:</span> The Pattern <span class="chapter-title">(Marcus)</span></a></li>
+                    <li><a href="09-the-evidence.html"><span class="chapter-number">Chapter 9:</span> The Evidence <span class="chapter-title">(Kira)</span></a></li>
+                    <li><a href="10-the-triplets-reunite.html"><span class="chapter-number">Chapter 10:</span> The Triplets Reunite <span class="chapter-title">(Dmitri)</span></a></li>
+                    <li><a href="11-the-network.html"><span class="chapter-number">Chapter 11:</span> The Network <span class="chapter-title">(Alexei)</span></a></li>
+                    <li><a href="12-the-corruption.html"><span class="chapter-number">Chapter 12:</span> The Corruption <span class="chapter-title">(Nikolai)</span></a></li>
+                    <li><a href="13-the-conscience.html"><span class="chapter-number">Chapter 13:</span> The Conscience <span class="chapter-title">(Yuki)</span></a></li>
+                    <li><a href="14-the-story.html"><span class="chapter-number">Chapter 14:</span> The Story <span class="chapter-title">(Isaiah)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="part">
+                <div class="part-title">Part Three: The Plan</div>
+                <ul class="chapter-list">
+                    <li><a href="15-the-believers-doubt.html"><span class="chapter-number">Chapter 15:</span> The Believer's Doubt <span class="chapter-title">(Marcus)</span></a></li>
+                    <li><a href="16-the-alliance.html"><span class="chapter-number">Chapter 16:</span> The Alliance <span class="chapter-title">(Kira)</span></a></li>
+                    <li><a href="17-the-inside-help.html"><span class="chapter-number">Chapter 17:</span> The Inside Help <span class="chapter-title">(Dmitri)</span></a></li>
+                    <li><a href="18-the-plan.html"><span class="chapter-number">Chapter 18:</span> The Plan <span class="chapter-title">(Alexei)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="part">
+                <div class="part-title">Part Four: The Storm</div>
+                <ul class="chapter-list">
+                    <li><a href="19-the-fact-storm.html"><span class="chapter-number">Chapter 19:</span> The Fact Storm <span class="chapter-title">(Marcus)</span></a></li>
+                    <li><a href="20-the-breakout.html"><span class="chapter-number">Chapter 20:</span> The Breakout <span class="chapter-title">(Kira)</span></a></li>
+                    <li><a href="21-the-escape.html"><span class="chapter-number">Chapter 21:</span> The Escape <span class="chapter-title">(Dmitri)</span></a></li>
+                    <li><a href="22-the-pursuit.html"><span class="chapter-number">Chapter 22:</span> The Pursuit <span class="chapter-title">(Alexei)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="part">
+                <div class="part-title">Part Five: The Divergence</div>
+                <ul class="chapter-list">
+                    <li><a href="23-the-divergence.html"><span class="chapter-number">Chapter 23:</span> The Divergence <span class="chapter-title">(Isaiah)</span></a></li>
+                    <li><a href="24-the-love.html"><span class="chapter-number">Chapter 24:</span> The Love <span class="chapter-title">(Kira)</span></a></li>
+                    <li><a href="25-the-mission.html"><span class="chapter-number">Chapter 25:</span> The Mission <span class="chapter-title">(Marcus)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="part">
+                <ul class="chapter-list">
+                    <li><a href="26-epilogue.html"><span class="chapter-number">Epilogue:</span> Seven Paths</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                27 chapters | ~49,500 words | Complete novel
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

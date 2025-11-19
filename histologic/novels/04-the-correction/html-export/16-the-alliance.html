@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="15-the-believers-doubt.html" class="nav-button">← Previous: Chapter 15: The Believer's Doubt</a>
+            <div class="nav-center">Chapter 16: The Alliance</div>
+            <a href="17-the-inside-help.html" class="nav-button">Next: Chapter 17: The Inside Help →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Kira Osman (third-person limited) | <strong>Timeline:</strong> August 22, 2106 - 0200-0400 hours (12-10 hours before escape)</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 16: The Alliance</h1>
+<h2>POV: Kira Osman</h2>
+<p>Twelve hours until escape. 0200 hours. The facility was quiet, but the maintenance room was alive with activity.</p>
+<p>All eight of them gathered for the first time in one place: Marcus, Kira, the three Volkov brothers, Dr. Tanaka, Isaiah, and Mikhail. Eight people who'd been strangers three weeks ago. Eight people who were now family.</p>
+<p>Kira stood at the center, a brass tablet in her hands, displaying the complete escape plan. This was her element: organization, precision, systems thinking. This was what she did best.</p>
+<p>"Listen carefully," she said. "We have one chance. One window. Fifteen minutes. If we miss it, we're trapped. If we fail, we're dead. So we don't miss it, and we don't fail. Understood?"</p>
+<p>Seven nods. Seven faces showing fear and determination in equal measure.</p>
+<p>"Good. Let's go through it step by step."</p>
+<p>Kira pulled up the timeline:</p>
+<p><strong>1350 HOURS - FIVE MINUTES BEFORE</strong><br />
+- All inmates in designated positions<br />
+- Nikolai in maintenance room, ready to trigger sabotage<br />
+- Dr. Tanaka in medical wing with Director Kovač<br />
+- Others in cells or common areas</p>
+<p><strong>1355 HOURS - FACT STORM BEGINS</strong><br />
+- Elena triggers fact storm from outside<br />
+- Reality becomes unstable<br />
+- Facility systems start failing<br />
+- Nikolai triggers sabotage simultaneously</p>
+<p><strong>1355-1400 - CHAOS WINDOW (5 MINUTES)</strong><br />
+- Staff evacuates per emergency protocols<br />
+- Security systems disabled<br />
+- Cameras offline<br />
+- Doors unlocked<br />
+- Alarms delayed</p>
+<p><strong>1400-1405 - MOVEMENT (5 MINUTES)</strong><br />
+- All eight converge on north garden<br />
+- Director Kovač ensures path is clear<br />
+- No guards in area (evacuated)<br />
+- Move quickly but carefully</p>
+<p><strong>1405-1410 - EXTRACTION (5 MINUTES)</strong><br />
+- Climb north wall<br />
+- Elena's team waiting outside<br />
+- Password: "The old songs remember"<br />
+- Transport to safe house</p>
+<p><strong>1410 HOURS - WINDOW CLOSES</strong><br />
+- Fact storm ends<br />
+- Systems begin recovering<br />
+- Pursuit begins<br />
+- We must be gone</p>
+<p>"Fifteen minutes," Kira repeated. "From storm start to escape complete. That's all we have."</p>
+<p>"What if the storm lasts longer?" Dmitri asked, his tactical mind already finding problems.</p>
+<p>"It won't. Elena has it calibrated precisely. Fifteen minutes of maximum chaos, then it dissipates. Any longer and it becomes dangerous—people die in extended fact storms."</p>
+<p>"What if it ends early?"</p>
+<p>"Then we adapt. But Elena's done this before. She knows how to control it."</p>
+<p>"What if the systems recover faster than expected?" This from Nikolai, who knew the systems intimately.</p>
+<p>"Then you trigger secondary sabotage. You have backup protocols, yes?"</p>
+<p>"Three layers deep. If one fails, the next activates. If all three fail..." Nikolai shrugged. "Then we're very unlucky."</p>
+<p>"We won't be unlucky," Marcus said firmly. "We've planned too well. We've prepared too thoroughly. We're ready."</p>
+<p>Kira loved him for that. For his certainty when everyone else was doubting. For his faith when everyone else was afraid.</p>
+<p>"Let's go through individual roles," she said, pulling up the next screen.</p>
+<p><strong>NIKOLAI - TECHNICAL</strong><br />
+- Trigger sabotage at 1355:00<br />
+- Disable cameras, alarms, locks<br />
+- Jam communications<br />
+- Preserve evidence (three data chips)<br />
+- Join group at north garden by 1402</p>
+<p><strong>DMITRI - TACTICAL</strong><br />
+- Lead movement through facility<br />
+- Navigate optimal route<br />
+- Handle any unexpected guards<br />
+- Ensure everyone reaches wall safely<br />
+- First over wall, secure landing zone</p>
+<p><strong>ALEXEI - COORDINATION</strong><br />
+- Maintain contact with Elena (hidden comm device)<br />
+- Confirm extraction team ready<br />
+- Give password at wall<br />
+- Coordinate timing<br />
+- Last over wall, ensure no one left behind</p>
+<p><strong>DR. TANAKA - MEDICAL</strong><br />
+- Stay with Director Kovač until 1358<br />
+- Ensure Kovač follows through<br />
+- Provide medical support if needed<br />
+- Bring emergency supplies<br />
+- Help anyone injured during escape</p>
+<p><strong>ISAIAH - DOCUMENTATION</strong><br />
+- Carry all evidence<br />
+- Document escape (mental notes)<br />
+- Preserve story<br />
+- Ensure nothing left behind<br />
+- Backup for Alexei if comm fails</p>
+<p><strong>MARCUS - LEADERSHIP</strong><br />
+- Keep group together<br />
+- Make decisions if plan changes<br />
+- Maintain morale<br />
+- Support anyone struggling<br />
+- Ensure no one panics</p>
+<p><strong>MIKHAIL - ANCHOR</strong><br />
+- Sing "You'll Never Walk Alone" during storm<br />
+- Keep everyone psychologically stable<br />
+- Remind everyone of humanity<br />
+- Help anyone disoriented by fact storm<br />
+- Provide hope</p>
+<p><strong>KIRA - COORDINATION</strong><br />
+- Overall timing<br />
+- Ensure everyone knows their role<br />
+- Backup for Nikolai if technical fails<br />
+- Problem-solving if anything goes wrong<br />
+- Second over wall after Dmitri</p>
+<p>"Questions?" Kira asked.</p>
+<p>"What about Director Kovač?" Dr. Tanaka asked. "What happens to her?"</p>
+<p>"She stays. She has to. If she escapes with us, it's obvious she helped. If she stays, she can claim we overpowered her, that she was a victim."</p>
+<p>"They won't believe that."</p>
+<p>"Maybe not. But it gives her plausible deniability. It gives her a chance." Kira's voice was gentle. "She's choosing to help us knowing the cost. We have to respect that choice."</p>
+<p>Dr. Tanaka nodded, though her expression was troubled.</p>
+<p>"What if someone gets injured during the escape?" This from Alexei.</p>
+<p>"Dr. Tanaka treats them if possible. If not, we carry them. We don't leave anyone behind."</p>
+<p>"Even if it means we all get caught?"</p>
+<p>"Even then." Kira's voice was firm. "We're a team. We're family. We escape together or not at all."</p>
+<p>"That's tactically unsound," Dmitri said. "If someone's injured badly, they'll slow us down. Better to—"</p>
+<p>"No." Marcus interrupted. "Kira's right. We don't leave anyone. That's not negotiable."</p>
+<p>Dmitri looked at his brothers, saw their agreement, nodded. "Understood. No one left behind."</p>
+<p>"Good." Kira pulled up the next screen: the route.</p>
+<p>"From cells to north garden: three possible paths. Primary route goes through the east corridor, past the library, through the garden entrance. Secondary route goes through the west corridor, past the dining hall. Tertiary route goes through the medical wing."</p>
+<p>She highlighted each path on the map.</p>
+<p>"Dmitri, you'll choose the route based on real-time conditions. Whichever is clearest, safest, fastest. We follow your lead."</p>
+<p>"Understood."</p>
+<p>"The wall itself is four meters high. Brass-reinforced stone. Nikolai has disabled the sensors. Dmitri and I go over first, secure ropes. Everyone else follows. Alexei goes last, ensures no one's left behind."</p>
+<p>"Four meters is high," Isaiah said. "I'm not exactly athletic."</p>
+<p>"You'll manage. Adrenaline helps. And we'll have ropes." Kira smiled. "Besides, you're documenting history. You can't do that if you're still in prison."</p>
+<p>Isaiah smiled back. "Good point."</p>
+<p>"What about the fact storm itself?" Marcus asked. "What will it feel like?"</p>
+<p>Everyone looked at Mikhail. He'd lived through fact storms before. He knew.</p>
+<p>"Reality will flicker," Mikhail said quietly. "You'll see things that aren't there. Hear things that didn't happen. Remember things that never were. Your senses will lie to you. Your memories will contradict themselves. It's... disorienting. Terrifying. Some people go mad."</p>
+<p>"How do we stay sane?" Kira asked.</p>
+<p>"You hold onto something real. Something that can't be altered by contradictory facts." Mikhail's eyes were distant. "For me, it's always been songs. Music exists independent of history. A melody doesn't need verification. A rhythm doesn't need The Judge's approval. Songs are real in a way facts can never be."</p>
+<p>"So we sing," Marcus said.</p>
+<p>"So we sing," Mikhail agreed. "When reality breaks down, when you can't trust your eyes or ears or memories, you sing. You hold onto the song. You hold onto each other. And you walk through the storm together."</p>
+<p>"You'll never walk alone," Kira said softly.</p>
+<p>"You'll never walk alone," Mikhail confirmed.</p>
+<p>They sat in silence for a moment, eight people preparing to walk through chaos, preparing to trust each other with their lives, preparing to become something more than inmates.</p>
+<p>"There's one more thing," Kira said. "After we escape. After we reach the safe house. We're going to split up."</p>
+<p>That got everyone's attention.</p>
+<p>"Split up?" Marcus asked. "Why?"</p>
+<p>"Because eight people traveling together are easy to track. Eight people going in different directions are impossible to follow." Kira pulled up the final screen: divergence paths.</p>
+<p>"Dr. Tanaka: Chronos. You have contacts there. You can continue your work, help refugees, build support for reform."</p>
+<p>"Isaiah: SFW. You have contacts there too. You can publish the story, expose the corruption, build international pressure."</p>
+<p>"Dmitri and Alexei: Resistance network. You'll work with Elena, coordinate operations, help other escapees."</p>
+<p>"Nikolai: Underground. You'll maintain the technical infrastructure, keep the hidden networks running, support resistance operations."</p>
+<p>"Mikhail: Wherever you want. You've earned freedom. You can rest."</p>
+<p>"And you and Marcus?" Dr. Tanaka asked.</p>
+<p>"We stay. In Veridica. As outlaws." Kira looked at Marcus, saw his nod of agreement. "We stay and fight from within. We gather more evidence. We build a network of reformist believers. We work to fix the system from inside."</p>
+<p>"That's the most dangerous path," Dmitri said.</p>
+<p>"Yes. But it's necessary. Someone has to stay. Someone has to fight for reform instead of just destruction. Someone has to prove that Histologic can work if it's done right."</p>
+<p>"You'll be hunted," Alexei said. "Constantly. They'll never stop looking for you."</p>
+<p>"I know. But we're not running. We're fighting." Kira squeezed Marcus's hand. "Together."</p>
+<p>"You're insane," Nikolai said. But he was smiling. "Both of you. Completely insane."</p>
+<p>"Probably," Marcus agreed. "But it's the right kind of insane."</p>
+<p>"The necessary kind," Kira added.</p>
+<p>They went through the plan three more times. Every detail. Every contingency. Every possible problem and solution. By the time they finished, it was 0400 hours.</p>
+<p>Ten hours until escape.</p>
+<p>"Get some rest," Kira said. "Sleep if you can. Eat breakfast. Act normal. Don't give any indication that today is different."</p>
+<p>"One more thing," Mikhail said. He stood, opened his arms. "Come here. All of you."</p>
+<p>They gathered in a circle, arms around each other, eight people who'd become family.</p>
+<p>"Whatever happens today," Mikhail said, "whatever comes next, remember this moment. Remember that we chose each other. Remember that we walked through the storm together. Remember that love is stronger than systems, that hope endures, that songs remember what databases forget."</p>
+<p>He started humming, and one by one, they joined in:</p>
+<p><em>"When you walk through a storm, hold your head up high,</em><br />
+<em>And don't be afraid of the dark.</em><br />
+<em>At the end of the storm, there's a golden sky,</em><br />
+<em>And the sweet silver song of a lark.</em><br />
+<em>Walk on through the wind, walk on through the rain,</em><br />
+<em>Though your dreams be tossed and blown.</em><br />
+<em>Walk on, walk on, with hope in your heart,</em><br />
+<em>And you'll never walk alone...</em><br />
+<em>You'll never walk alone."</em></p>
+<p>They sang it together, quietly, eight voices in harmony, eight people united by more than just a plan.</p>
+<p>When the song ended, they held the moment, held each other, held the promise.</p>
+<p>Then they separated, one by one, returning to their cells, preparing for the day that would change everything.</p>
+<p>Kira walked back with Marcus, their hands intertwined.</p>
+<p>"We're really doing this," she said.</p>
+<p>"We're really doing this," he agreed.</p>
+<p>"We're probably going to die."</p>
+<p>"Probably. But we'll die free. We'll die fighting. We'll die together."</p>
+<p>"That's very romantic."</p>
+<p>"I'm a romantic fool. You said so yourself."</p>
+<p>Kira laughed, kissed him gently. "My romantic fool."</p>
+<p>They reached her cell. She didn't want to let go of his hand. Didn't want to be alone. Didn't want to face the next ten hours without him.</p>
+<p>"Stay," she said. "Just until dawn. I don't want to be alone."</p>
+<p>"Neither do I."</p>
+<p>They lay on her narrow bed, fully clothed, arms around each other, not sleeping but not quite awake. Just being together. Just being human.</p>
+<p>"Kira," Marcus whispered. "If something goes wrong. If we get separated. If I don't make it—"</p>
+<p>"Don't."</p>
+<p>"I need to say it. If I don't make it, you keep going. You keep fighting. You build the system we dreamed of. You don't give up."</p>
+<p>"The same goes for you. If I don't make it, you keep going. You stay. You fight. You fix the system. You don't give up."</p>
+<p>"Deal."</p>
+<p>"Deal."</p>
+<p>They held each other as the night faded into dawn. As the last hours of captivity ticked away. As freedom—or death—drew closer.</p>
+<p>Ten hours. Six hundred minutes. Thirty-six thousand seconds.</p>
+<p>And then: everything would change.</p>
+<p>The alliance was ready. The plan was set. The team was united.</p>
+<p>Now all they had to do was execute.</p>
+<p>And survive.</p>
+<p>And walk through the storm together.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="15-the-believers-doubt.html" class="nav-button">← Previous: Chapter 15: The Believer's Doubt</a>
+            <div class="nav-center">Chapter 16: The Alliance</div>
+            <a href="17-the-inside-help.html" class="nav-button">Next: Chapter 17: The Inside Help →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

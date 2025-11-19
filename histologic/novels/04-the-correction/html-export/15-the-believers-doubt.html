@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="14-the-story.html" class="nav-button">← Previous: Chapter 14: The Story</a>
+            <div class="nav-center">Chapter 15: The Believer's Doubt</div>
+            <a href="16-the-alliance.html" class="nav-button">Next: Chapter 16: The Alliance →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Marcus Chen (third-person limited) | <strong>Timeline:</strong> August 21, 2106 (Day 21 in facility) - 1 day until escape</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 15: The Believer's Doubt</h1>
+<h2>POV: Marcus Chen</h2>
+<p>One day until escape. Twenty-four hours until everything changed.</p>
+<p>Marcus stood in the correction chamber—empty now, no session scheduled—staring at the brass walls that had witnessed so many attempts to break him.</p>
+<p>They'd failed. He was still Marcus Chen. Still a believer in Histologic. Still convinced that objective truth, verified facts, and shared history were the foundation of civilization.</p>
+<p>But he was no longer a believer in Veridica.</p>
+<p>That was the distinction that had taken him two weeks to understand. The system wasn't the problem. The implementation was. The ideal wasn't corrupt. The people running it were.</p>
+<p>Histologic worked. The Judge could work. Factorepos could work. But only if they were truly independent. Only if they couldn't be manipulated. Only if they served truth instead of power.</p>
+<p>"Deep thoughts?"</p>
+<p>Marcus turned to find Elena standing in the doorway. Not the real Elena—she was outside, coordinating the extraction. This was the Elena in his mind. The Elena he'd betrayed. The Elena he'd loved.</p>
+<p>He blinked, and the vision faded. Just his imagination. Just guilt manifesting as hallucination.</p>
+<p>But the question remained: Was he making the same mistake again? Choosing ideology over humanity? Choosing system over people?</p>
+<p>No. This time was different. This time he was choosing both. Choosing to fix the system so it could serve people properly. Choosing to stay and fight instead of running away.</p>
+<p>Choosing love—for Kira, for truth, for Veridica itself—over comfort.</p>
+<p>The door opened again. This time, it was real. Kira entered, her expression concerned.</p>
+<p>"You've been in here for an hour," she said. "Everyone's worried."</p>
+<p>"I'm fine. Just thinking."</p>
+<p>"About?"</p>
+<p>"About whether I'm making the right choice. Staying. Fighting. Risking everything for a system that betrayed me."</p>
+<p>Kira moved closer. "You're not fighting for the system. You're fighting for the ideal. There's a difference."</p>
+<p>"Is there? Or am I just rationalizing? Telling myself I'm being noble when I'm really just being stubborn?"</p>
+<p>"You're being both. Noble and stubborn. Idealistic and practical. Romantic and pragmatic." Kira smiled. "You contain multitudes, Marcus Chen. Just like Whitman said."</p>
+<p>Marcus laughed despite himself. "Isaiah's been quoting that a lot."</p>
+<p>"Because it's true. We're all contradictions. We're all complex. That's what makes us human instead of data points."</p>
+<p>"The Judge doesn't understand contradictions."</p>
+<p>"No. That's why it fails. That's why it can be corrupted. Because it tries to reduce humans to simple variables. But we're not simple. We're multitudes."</p>
+<p>Marcus sat on the brass bench where he'd spent hours being corrected. Kira sat beside him, their shoulders touching.</p>
+<p>"Tell me I'm not crazy," Marcus said quietly. "Tell me that staying here, fighting from within, trying to reform a corrupt system—tell me that's not insane."</p>
+<p>"It's completely insane," Kira said. "It's also completely necessary. And completely you."</p>
+<p>"What if I fail? What if I can't fix it? What if I just end up dead or imprisoned again?"</p>
+<p>"Then you fail trying. Then you die fighting. Then you're imprisoned knowing you did the right thing." Kira took his hand. "Marcus, you asked me once what I wanted. I told you I wanted to build something. Not just tear down the corrupt system, but build something better."</p>
+<p>"I remember."</p>
+<p>"I can't build it alone. I need someone who believes in the ideal. Someone who understands what we're trying to create. Someone who won't give up when it gets hard." She squeezed his hand. "I need you. Not just as a partner in revolution. As a partner in building. As a partner in life."</p>
+<p>Marcus felt his breath catch. "Kira..."</p>
+<p>"I know. We barely know each other. We're in an impossible situation. We might die tomorrow." She smiled. "But I also know that I've never met anyone who made me want to be better. Who made me believe that ideals matter. Who made me think that maybe, just maybe, we could actually fix this broken world."</p>
+<p>"That's a lot of pressure."</p>
+<p>"You can handle it. You're Marcus Chen. True believer. Pragmatic idealist. Romantic fool." Her eyes were warm. "My romantic fool, if you'll have me."</p>
+<p>Marcus looked at her. At this brilliant, precise, pragmatic woman who'd somehow fallen for an idealistic analyst with too much faith and too little sense.</p>
+<p>"I betrayed Elena," he said quietly. "I chose duty over love. I reported her, got her exiled, destroyed what we had. What makes you think I won't do the same to you?"</p>
+<p>"Because you learned from it. Because you're different now. Because you understand that love and duty aren't enemies." Kira's voice was gentle but firm. "And because I'm not asking you to choose between me and your ideals. I'm asking you to choose both. To love me and fight for truth. To be human and be principled. To contain multitudes."</p>
+<p>"What if I can't? What if I have to choose?"</p>
+<p>"Then you choose what's right. And I'll understand. Because that's who you are. That's why I love you."</p>
+<p>The words hung in the air between them. Love. She'd said it. Not "could love" or "might love." Love. Present tense. Real.</p>
+<p>"You love me?" Marcus asked.</p>
+<p>"Yes. I love you. I love your stubborn idealism. I love your crisis of faith. I love that you're staying to fight even though it's insane. I love that you want to fix the system instead of just destroying it." Kira smiled. "I love your multitudes, Marcus Chen."</p>
+<p>Marcus felt something break inside him. Not break apart. Break open. Like a dam releasing water it had held too long.</p>
+<p>"I love you too," he said. "I love your precision. I love your pragmatism. I love that you see systems and want to build better ones. I love that you're staying with me even though I'm probably going to get us both killed."</p>
+<p>"Probably," Kira agreed. "But we'll die trying to fix things. That's better than living and watching them break."</p>
+<p>They sat in silence, hands intertwined, in the correction chamber that had tried to break them and failed.</p>
+<p>"Tomorrow," Marcus said. "Tomorrow we escape. Tomorrow we become outlaws. Tomorrow we start fighting."</p>
+<p>"Tomorrow," Kira agreed. "But tonight, we're still here. Still together. Still human."</p>
+<p>"Still multitudes."</p>
+<p>"Still multitudes."</p>
+<p>Marcus leaned closer. "I said I wanted to wait until we were free for our first kiss. Until we were out of this prison, in a world we'd helped make better."</p>
+<p>"I remember."</p>
+<p>"I was wrong. We're already free. Because we chose to be. Because we chose each other. Because we chose to fight." He cupped her face gently. "We don't need to wait for freedom. We are freedom."</p>
+<p>"That's very philosophical."</p>
+<p>"I'm discovering I'm philosophical." Marcus smiled. "May I kiss you, Kira Osman?"</p>
+<p>"You may, Marcus Chen."</p>
+<p>Their first kiss was soft, gentle, full of promise. It tasted like hope and revolution and love. It felt like coming home and starting a journey simultaneously.</p>
+<p>When they pulled apart, both were smiling.</p>
+<p>"Worth the wait?" Kira asked.</p>
+<p>"Worth everything," Marcus replied.</p>
+<p>They sat together in the correction chamber, two people in love, two revolutionaries preparing for war, two multitudes containing hope and fear and determination and doubt and love and courage.</p>
+<p>Tomorrow, they would escape. Tomorrow, they would fight. Tomorrow, they would begin the long work of fixing a broken system.</p>
+<p>But tonight, they were just Marcus and Kira. Two people who'd found each other in the worst place possible and decided that love was worth fighting for.</p>
+<p>The believer's doubt had been resolved. Not by finding certainty, but by accepting uncertainty. Not by choosing between love and truth, but by choosing both.</p>
+<p>Marcus Chen was ready. For escape. For revolution. For love. For whatever came next.</p>
+<p>He contained multitudes. And that was enough.</p>
+<hr />
+<p>Later that night, Marcus couldn't sleep. He left his cell and wandered the facility, thinking about tomorrow, about the future, about everything that could go wrong.</p>
+<p>He found Mikhail in the garden, sitting on a bench, looking at the stars through the brass-reinforced glass dome.</p>
+<p>"Can't sleep either?" Marcus asked.</p>
+<p>"Old men don't need much sleep. We've slept enough in our lives." Mikhail patted the bench. "Sit. Tell me what's troubling you."</p>
+<p>Marcus sat. "Tomorrow. Everything. The escape. The future. The possibility of failure."</p>
+<p>"Ah. The weight of tomorrow." Mikhail nodded. "There's a song about that. About people facing impossible odds. About those who fight anyway."</p>
+<p>He sang softly:</p>
+<p><em>"We shall overcome, we shall overcome,</em><br />
+<em>We shall overcome someday.</em><br />
+<em>Oh, deep in my heart, I do believe,</em><br />
+<em>We shall overcome someday."</em></p>
+<p>"You sang that before," Marcus said. "In the first group session."</p>
+<p>"I did. Because it's true. Because it's the song of every revolution. Every movement. Every person who ever stood up and said 'no more.'" Mikhail looked at the stars. "Do you know the history of that song, Marcus?"</p>
+<p>"No."</p>
+<p>"It was sung by slaves. By civil rights marchers. By workers striking for fair wages. By people in impossible situations who refused to give up hope." Mikhail's voice was gentle. "It was sung by people who had every reason to despair. Who faced violence, oppression, death. And they sang it anyway. Because hope is a choice. Victory is a choice. Overcoming is a choice."</p>
+<p>"What if we don't overcome? What if we fail?"</p>
+<p>"Then we fail singing. We fail fighting. We fail hoping." Mikhail smiled. "But we don't fail by giving up. We don't fail by accepting injustice. We don't fail by choosing safety over right."</p>
+<p>"You make it sound simple."</p>
+<p>"It is simple. Not easy, but simple." Mikhail stood, offered his hand to Marcus. "Come. I want to show you something."</p>
+<p>They walked to the north wall. The wall they would climb tomorrow. The threshold between captivity and freedom.</p>
+<p>"Look at this wall," Mikhail said. "What do you see?"</p>
+<p>"A barrier. An obstacle. A challenge."</p>
+<p>"Yes. And also: proof that we can be contained. Proof that systems can control us. Proof that power can build walls." Mikhail touched the brass-reinforced stone. "But here's what the powerful forget: walls can be climbed. Barriers can be crossed. Obstacles can be overcome."</p>
+<p>"If we survive."</p>
+<p>"When we survive." Mikhail's voice was firm. "Because we have something they don't. We have each other. We have love. We have hope. We have songs that remember when walls fell and people were freed."</p>
+<p>"What if that's not enough?"</p>
+<p>"Then we make it enough. We choose to make it enough." Mikhail looked at Marcus. "You kissed her tonight. Kira. I saw you leaving the correction chamber. Both of you smiling like fools."</p>
+<p>Marcus felt himself blush. "Yes."</p>
+<p>"Good. Love is the most revolutionary act. Love says: 'You matter more than systems. You matter more than power. You matter more than safety.'" Mikhail's eyes were warm. "You chose love, Marcus. You chose to stay and fight. You chose to believe that tomorrow can be better than today. That's the most radical thing a person can do."</p>
+<p>"It doesn't feel radical. It feels terrifying."</p>
+<p>"All radical acts are terrifying. That's how you know they matter." Mikhail started humming, then sang:</p>
+<p><em>"All you need is love, love,</em><br />
+<em>Love is all you need..."</em></p>
+<p>"The Beatles again," Marcus said, smiling despite his fear.</p>
+<p>"The Beatles understood. Love isn't weakness. Love is strength. Love is revolution. Love is the thing that makes us human instead of machines." Mikhail put a hand on Marcus's shoulder. "Tomorrow, we climb this wall. We walk through the storm. We choose freedom over safety. And we do it because we love. We love truth. We love justice. We love each other. We love the world enough to fight for it."</p>
+<p>"I'm still scared."</p>
+<p>"Good. Fear keeps you alive. Fear keeps you sharp. Fear keeps you human." Mikhail smiled. "But don't let fear stop you. Let it propel you. Let it remind you what you're fighting for."</p>
+<p>They stood at the wall, two men preparing for revolution, preparing for freedom, preparing for whatever came next.</p>
+<p>"Thank you, Mikhail," Marcus said. "For the songs. For the wisdom. For reminding us that we're human."</p>
+<p>"Thank you for listening. For believing. For choosing to fight." Mikhail's voice was soft. "Tomorrow, Marcus Chen, you become a revolutionary. You become an outlaw. You become a builder of new systems. Are you ready?"</p>
+<p>"No. But I'm going anyway."</p>
+<p>"That's the spirit. That's the courage. That's the love." Mikhail started walking back. "Get some sleep, Marcus. Tomorrow, we make history. Real history. The kind that can't be erased or manipulated or corrected. The kind that lives in hearts and songs and stories."</p>
+<p>Marcus stayed at the wall a moment longer, looking up at the stars, thinking about tomorrow, about Kira, about the future they would build together.</p>
+<p>The believer's doubt was gone. In its place: certainty. Not the false certainty of systems and databases. The real certainty of love and choice and commitment.</p>
+<p>Tomorrow, he would climb this wall. Tomorrow, he would become an outlaw. Tomorrow, he would start the long work of fixing a broken system.</p>
+<p>But tonight, he was Marcus Chen. Believer in Histologic. Lover of Kira Osman. Revolutionary. Multitude.</p>
+<p>And that was enough.</p>
+<p>He returned to his cell and, for the first time in weeks, slept peacefully.</p>
+<p>Tomorrow would come soon enough.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="14-the-story.html" class="nav-button">← Previous: Chapter 14: The Story</a>
+            <div class="nav-center">Chapter 15: The Believer's Doubt</div>
+            <a href="16-the-alliance.html" class="nav-button">Next: Chapter 16: The Alliance →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

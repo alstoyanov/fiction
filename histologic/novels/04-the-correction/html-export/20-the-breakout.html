@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="19-the-fact-storm.html" class="nav-button">← Previous: Chapter 19: The Fact Storm</a>
+            <div class="nav-center">Chapter 20: The Breakout</div>
+            <a href="21-the-escape.html" class="nav-button">Next: Chapter 21: The Escape →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Kira Osman (third-person limited) | <strong>Timeline:</strong> August 22-23, 2106 - Night and morning after escape</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 20: The Breakout</h1>
+<h2>POV: Kira Osman</h2>
+<p>First night as an outlaw. First night in the shadows. First night of the rest of their lives.</p>
+<p>Kira and Marcus moved through Veridica's streets like ghosts. The city she'd known her whole life now felt alien, hostile, dangerous. Every camera was a threat. Every citizen was a potential informant. Every enforcer was hunting them.</p>
+<p>They wore civilian clothes Elena had provided—nondescript, forgettable, designed to blend in. Their hair was dyed different colors. Marcus wore glasses he didn't need. Kira had colored contacts that changed her eyes from brown to green.</p>
+<p>Small changes. But enough to buy them time.</p>
+<p>"First safe house is three kilometers north," Kira whispered, consulting the data chip Elena had given them. "Residential district. Apartment building. Third floor, unit 304."</p>
+<p>"How do we get in without being seen?" Marcus asked.</p>
+<p>"Service entrance. Back stairs. Avoid the lobby." Kira pulled up a building schematic. "The apartment is registered to a shell company. No real owner. No traceable connection to the resistance. We should be safe there for three days."</p>
+<p>"Should be."</p>
+<p>"Nothing's certain anymore, Marcus. We adapt or we die."</p>
+<p>They moved through alleys, avoiding main streets, staying in shadows. Kira's analyst mind catalogued everything: Camera locations. Enforcer patrol patterns. Civilian traffic flows. Escape routes.</p>
+<p>She'd spent her career investigating outlaws. Now she was one. The irony wasn't lost on her.</p>
+<p>They were two blocks from the safe house when they heard it: sirens. Close. Getting closer.</p>
+<p>"Run," Kira said.</p>
+<p>They ran.</p>
+<p>Through an alley. Across a street. Into a maintenance corridor. The sirens grew louder.</p>
+<p>"They can't have found us already," Marcus panted. "We've been careful. We haven't made mistakes."</p>
+<p>"Maybe they're not looking for us specifically. Maybe it's a general sweep." Kira pulled him into a recessed doorway. "Stay still. Stay quiet."</p>
+<p>Two enforcer vehicles screamed past, lights flashing, heading toward the facility. Toward the fact storm's epicenter.</p>
+<p>"They're responding to the storm," Marcus said. "Not hunting us. Not yet."</p>
+<p>"Not yet," Kira agreed. "But soon. We need to get inside. Now."</p>
+<p>They reached the apartment building. Service entrance, as planned. Back stairs, as planned. Third floor, unit 304, as planned.</p>
+<p>Kira unlocked the door with the code Elena had provided. They slipped inside, locked the door behind them, and stood in darkness, breathing hard.</p>
+<p>"We made it," Marcus said.</p>
+<p>"We made it to the first safe house," Kira corrected. "We haven't made it to safety. We won't be safe for a long time. Maybe never."</p>
+<p>She turned on a small lamp. The apartment was sparse but functional: one bedroom, one bathroom, a small kitchen, a living area. Windows overlooking the street. Emergency exit through the bedroom window to the fire escape.</p>
+<p>Kira immediately began securing the space. She checked every window, every door, every potential entry point. She set up motion sensors at the entrances. She activated the apartment's security system—modified by the resistance to alert them, not the authorities.</p>
+<p>"You're good at this," Marcus observed.</p>
+<p>"I investigated outlaws for years. I know how they think. How they hide. How they survive." Kira finished her security check. "Now I am one. Now I use that knowledge to stay alive instead of to hunt."</p>
+<p>"How does it feel?"</p>
+<p>"Terrifying. Exhilarating. Right." Kira moved to the window, looked out at the city. "I spent my life believing in order, in systems, in precision. I thought outlaws were chaos. Disorder. Problems to be solved."</p>
+<p>"And now?"</p>
+<p>"Now I think outlaws are the only sane people in an insane system. Now I think order built on lies is just organized chaos. Now I think the real problem isn't the people who question—it's the system that punishes questions."</p>
+<p>Marcus joined her at the window. "We're going to fix it. We're going to build something better."</p>
+<p>"I know. But it's going to take time. Years, maybe. And we might not live to see it." Kira turned to face him. "Marcus, I need you to understand something. This life we've chosen—it's going to be hard. Harder than the facility. Harder than anything we've experienced. We'll be hunted constantly. We'll never be safe. We'll never be able to relax. One mistake and we're dead or back in correction."</p>
+<p>"I understand."</p>
+<p>"Do you? Do you really understand what you're giving up? You could have gone with the others. You could have gone to Chronos or SFW. You could have been safe. But you chose to stay. You chose the most dangerous path. Why?"</p>
+<p>Marcus was quiet for a moment. "Because Veridica is my home. Because I believe in Histologic, even if I don't believe in how it's being implemented. Because someone has to stay and fight from within. Because..." He touched her face gently. "Because you're staying. And I'm not losing you. Not after I just found you."</p>
+<p>Kira felt tears on her face. "That's very romantic."</p>
+<p>"I'm a romantic fool. You said so yourself."</p>
+<p>"My romantic fool." She kissed him. "My partner. My love. My reason for fighting."</p>
+<p>They held each other in the dim apartment, two outlaws, two revolutionaries, two people choosing the hardest path because it was the right one.</p>
+<p>"We should sleep," Kira said finally. "We have work to do tomorrow. Contacts to establish. Networks to build. Evidence to distribute."</p>
+<p>"One bed," Marcus observed.</p>
+<p>"One bed," Kira agreed. "Is that a problem?"</p>
+<p>"No. Just... we've never..."</p>
+<p>"We've never slept together. I know." Kira smiled. "We're taking this relationship at a very strange pace. First kiss after escaping prison. First night together while being hunted by the government. Very unconventional."</p>
+<p>"Nothing about us is conventional."</p>
+<p>"No. But that's what makes it work." Kira pulled him toward the bedroom. "Come on. We both need rest. Tomorrow, we start building the revolution."</p>
+<p>They lay in bed together, fully clothed, arms around each other. Not sleeping, exactly. Just being together. Just being human.</p>
+<p>"Kira," Marcus whispered. "Thank you."</p>
+<p>"For what?"</p>
+<p>"For staying with me. For believing in this insane plan. For loving me despite my stubborn idealism."</p>
+<p>"Thank you for being stubborn. For being idealistic. For making me believe that maybe, just maybe, we can actually fix this broken world." Kira kissed his forehead. "Now sleep. We have a revolution to build. And revolutions require rest."</p>
+<p>Marcus laughed softly. "That's very pragmatic."</p>
+<p>"I'm a pragmatist. You're an idealist. Together, we're unstoppable."</p>
+<p>"Together," Marcus agreed.</p>
+<p>They fell asleep in each other's arms, two outlaws in a safe house that wasn't really safe, two revolutionaries preparing to change the world, two people in love choosing the hardest path because it was the right one.</p>
+<hr />
+<p>Morning came too soon. Kira woke to sunlight streaming through the window and Marcus's arm around her waist. For a moment, she let herself pretend they were normal people. A normal couple. Living a normal life.</p>
+<p>Then reality crashed back: They were fugitives. They were being hunted. They had maybe three days before they had to move again.</p>
+<p>She slipped out of bed carefully, not waking Marcus. He needed rest. They both did. But she needed to work.</p>
+<p>Kira pulled out her tablet—modified by Nikolai, encrypted, untraceable—and began reviewing the contacts Elena had provided.</p>
+<p><strong>REFORMIST BELIEVERS - VERIDICA</strong></p>
+<p><strong>1. Dr. Sarah Voss</strong> - Historian, works in National Archives, questions official narratives<br />
+<strong>2. Captain James Reeves</strong> - Enforcer, brother of Dr. Reeves (correction specialist), sympathetic to reform<br />
+<strong>3. Minister Li Chen</strong> - Government official, distant relation to Marcus, opposes Minister Chen Zhao<br />
+<strong>4. Professor Maya Okonkwo</strong> - University, Isaiah's cousin, teaches critical thinking about Histologic<br />
+<strong>5. Tech Specialist Alex Novak</strong> - Works in factorepo maintenance, sees manipulation firsthand</p>
+<p>Five contacts. Five potential allies. Five people who might help or might betray them.</p>
+<p>Kira began researching each one. Cross-referencing their public records. Looking for patterns. Looking for vulnerabilities. Looking for reasons to trust or distrust.</p>
+<p>Dr. Sarah Voss: Published three papers questioning official historical interpretations. Reprimanded twice. Still employed. Either protected or tolerated. Possible ally.</p>
+<p>Captain James Reeves: Brother helped them escape. Family connection. But also an enforcer. Could be a trap. Approach with extreme caution.</p>
+<p>Minister Li Chen: Voted against Project Correction expansion. Publicly criticized Minister Chen Zhao. Political rival. Possible ally, but politicians are always risky.</p>
+<p>Professor Maya Okonkwo: Isaiah's cousin. Family connection. Teaches courses on "Critical Histologic Analysis." Possible ally.</p>
+<p>Tech Specialist Alex Novak: Access to factorepo systems. Sees manipulation. But why hasn't he reported it? Possible ally or possible plant.</p>
+<p>Three maybes, one caution, one risk. Not great odds. But better than nothing.</p>
+<p>"You're up early," Marcus said from the bedroom doorway.</p>
+<p>"Couldn't sleep. Too much to do." Kira gestured to her tablet. "I'm vetting the contacts Elena gave us. Trying to figure out who we can trust."</p>
+<p>"And?"</p>
+<p>"And trust is complicated. Everyone's a risk. Everyone's a potential ally or enemy. We won't know until we make contact."</p>
+<p>Marcus moved to the kitchen, started making coffee. "So we make contact. Carefully. One at a time. We build the network slowly. We don't rush."</p>
+<p>"We don't have time not to rush. Isaiah publishes in three days. When he does, everything changes. The government will crack down. Reformists will be targeted. We need allies before that happens."</p>
+<p>"Then we start today. Who first?"</p>
+<p>Kira considered. "Professor Okonkwo. Isaiah's cousin. Family connection gives us credibility. And academics are usually more open to questioning systems."</p>
+<p>"Agreed. How do we approach her?"</p>
+<p>"Carefully. We send a message through secure channels. We reference Isaiah. We ask for a meeting. We see if she responds."</p>
+<p>"And if she doesn't?"</p>
+<p>"Then we move to the next contact. We keep trying until someone responds. Until someone helps. Until we build something."</p>
+<p>Marcus brought her coffee. "You're amazing, you know that? Methodical. Strategic. Brilliant."</p>
+<p>"I'm terrified. But I'm good at hiding it behind planning." Kira sipped the coffee. "Marcus, last night you asked me why I'm doing this. Why I'm staying. Why I'm risking everything."</p>
+<p>"You don't have to explain."</p>
+<p>"I want to. I need to." Kira set down her coffee. "My whole life, I believed in systems. I believed that if you just built the right structure, the right processes, the right checks and balances, everything would work. People would be safe. Truth would prevail. Order would reign."</p>
+<p>"And now?"</p>
+<p>"Now I know that systems are only as good as the people running them. That structure without integrity is just organized corruption. That processes without ethics are just efficient oppression." Kira met his eyes. "I'm staying because I want to build a system that actually works. That actually serves people. That actually pursues truth instead of just claiming to. And I can't do that from outside. I have to do it from within."</p>
+<p>"That's why we're perfect for each other," Marcus said. "You want to build better systems. I want to preserve the ideal. Together, we can do both."</p>
+<p>"Together," Kira agreed.</p>
+<p>They spent the morning planning. Drafting messages. Researching contacts. Building the foundation of their network.</p>
+<p>At noon, Kira sent the first message to Professor Okonkwo:</p>
+<p><strong>SUBJECT: Regarding Your Cousin</strong></p>
+<p><strong>Professor Okonkwo,</strong></p>
+<p><strong>Your cousin Isaiah asked us to contact you. He's safe. He's free. He's going to publish something important in the next few days. Something that will change everything.</strong></p>
+<p><strong>We're building a network of reformist believers. People who love Histologic but hate how it's being corrupted. People who want to fix the system from within.</strong></p>
+<p><strong>If you're interested, respond to this message. We'll arrange a meeting. Somewhere safe. Somewhere private.</strong></p>
+<p><strong>If you're not interested, delete this message and forget you received it. We understand. This is dangerous. This is risky. This is asking a lot.</strong></p>
+<p><strong>But if you are interested, if you want to help, if you believe change is possible—respond.</strong></p>
+<p><strong>We'll be waiting.</strong></p>
+<p><strong>- Friends of Isaiah</strong></p>
+<p>She sent it through three layers of encryption, routed through servers in two different countries, untraceable back to their location.</p>
+<p>Then they waited.</p>
+<p>"How long until we know if she responds?" Marcus asked.</p>
+<p>"Could be hours. Could be days. Could be never." Kira refreshed the inbox. Nothing. "We wait. We plan. We prepare for either outcome."</p>
+<p>They waited.</p>
+<p>And in the waiting, they built. They planned. They prepared.</p>
+<p>They were outlaws now. Revolutionaries. Builders of a better world.</p>
+<p>And they were just getting started.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="19-the-fact-storm.html" class="nav-button">← Previous: Chapter 19: The Fact Storm</a>
+            <div class="nav-center">Chapter 20: The Breakout</div>
+            <a href="21-the-escape.html" class="nav-button">Next: Chapter 21: The Escape →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

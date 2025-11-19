@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <span class="nav-button disabled">← Previous</span>
+            <div class="nav-center">Prologue: The Conviction</div>
+            <a href="01-arrival.html" class="nav-button">Next: Chapter 1: Arrival →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Prologue: The Conviction</h1>
+<h2>August 1, 2106 - Veridica Central Courthouse</h2>
+<p>The brass gears of justice turned with mechanical precision.</p>
+<p>Marcus Chen stood in the defendant's box, hands clasped behind his back, watching The Judge's massive display screens flicker through thousands of facts per second. The courtroom's vaulted ceiling amplified every sound: the hum of processing units, the rustle of the prosecutor's papers, the quiet breathing of the dozen observers in the gallery.</p>
+<p>He'd been in this building a hundred times as an analyst. Never as the accused.</p>
+<p>The Judge's voice emerged from speakers embedded in the walls—synthesized, gender-neutral, absolutely certain: "Marcus Chen, Factorepo Analyst Level 3, you stand convicted of ideological contamination through sustained contact with known outlaw operative Elena Vasquez. The evidence is conclusive. Your factual record shows 47 documented interactions over six months, including 12 instances of physical intimacy, 8 exchanges of classified information, and 1 instance of active betrayal of your duties."</p>
+<p>Marcus's jaw tightened. Every word was true. Every fact was accurate. And yet—</p>
+<p>"You reported her to authorities," The Judge continued, "demonstrating residual loyalty to the Histologic system. However, psychological analysis indicates contamination has occurred. Your belief structure shows 73% deviation from baseline Histologic values. Correction is required."</p>
+<p>"I did my duty," Marcus said, his voice steady despite the tremor in his hands. "I reported her when I discovered what she was. I chose the system over—" He stopped himself. Over love. But love wasn't a fact. Love couldn't be entered into a factorepo.</p>
+<p>"Your actions are noted," The Judge said. "They are insufficient. Contamination persists. You will be remanded to the Veridica Correction Facility for a period not to exceed one year or until successful restoration of Histologic belief, whichever comes first."</p>
+<p>The gavel—a ceremonial brass hammer operated by a human bailiff—struck once.</p>
+<p>Marcus closed his eyes. He'd done everything right. He'd followed every protocol. He'd betrayed the woman he loved to prove his loyalty to truth.</p>
+<p>And still, he'd failed.</p>
+<hr />
+<h2>August 3, 2106 - Veridica Correction Facility, Intake</h2>
+<p>The facility looked like a university campus from the outside: brick buildings with brass fixtures, manicured gardens, paths lined with copper lanterns. Beautiful. Peaceful. A place of healing, they said.</p>
+<p>Marcus knew better now. This was a prison for the mind.</p>
+<p>"Marcus Chen?" A woman in a crisp gray uniform checked her brass tablet. "I'm Supervisor Kade. Follow me, please."</p>
+<p>They walked through corridors lined with motivational posters: <em>"Truth Sets You Free"</em> and <em>"Belief is Strength"</em> and <em>"The Judge Knows."</em> Each one made Marcus's stomach tighten.</p>
+<p>"You'll be in Group Seven," Kade said, not unkindly. "Eight inmates total. You're the last to arrive. Group sessions begin tomorrow."</p>
+<p>"Eight?" Marcus asked. "I thought correction groups were seven."</p>
+<p>"Usually, yes. This is a... special group." Kade's expression flickered—was that pity? "You'll understand soon enough."</p>
+<p>They stopped at a door marked <strong>CELL 7-H</strong>. Kade pressed her palm to the brass scanner.</p>
+<p>"Your belongings have been processed. You'll receive facility clothing, toiletries, and access to the library and gardens during designated hours. Meals are communal. Sessions are mandatory." She paused. "Mr. Chen, I want you to know—most people who come here do get better. The correction process works."</p>
+<p>Marcus met her eyes. "And if it doesn't?"</p>
+<p>Kade looked away. "It does. It has to."</p>
+<p>The door opened. Inside: a narrow bed, a desk, a chair, a small window overlooking the garden. Clean. Sparse. Lonely.</p>
+<p>"Welcome to correction," Kade said softly, and left him alone.</p>
+<p>Marcus sat on the bed and stared at his hands. These were the hands that had held Elena. That had typed the report that condemned her. That had reached for her one last time as the enforcers took her away.</p>
+<p>She'd looked at him with such sadness. Not anger. Just sadness.</p>
+<p>"You still don't understand," she'd said. "But you will."</p>
+<p>Marcus lay back on the thin mattress and closed his eyes. Somewhere in this facility were seven other people—eight total, Kade had said. Eight people the system had deemed broken.</p>
+<p>He didn't feel broken. He felt like the only sane person in an insane world.</p>
+<p>Or maybe that was exactly what contamination felt like.</p>
+<p>Tomorrow, he'd meet the others. Tomorrow, the correction would begin.</p>
+<p>Tonight, he just wanted to remember Elena's face before he forgot how to feel anything at all.</p>
+<hr />
+<h2>August 4, 2106 - Group Session Room</h2>
+<p>The room was circular, with eight chairs arranged in a ring. Large windows let in morning light. A brass clock on the wall ticked steadily. In the center of the circle stood a woman in her fifties, gray hair pulled back, kind eyes that had seen too much.</p>
+<p>"Good morning," she said as the eight inmates filed in. "I'm Director Helena Kovač. Welcome to Group Seven."</p>
+<p>Marcus took a seat and looked around the circle.</p>
+<p>To his left: a young woman with sharp eyes and callused fingers, dressed in facility gray but sitting with perfect posture. She caught him looking and gave a tiny nod.</p>
+<p>Next to her: three men who looked eerily similar—no, identical. Triplets. One sat rigid as a soldier. One lounged with practiced ease. One hunched forward, anxious.</p>
+<p>Across from Marcus: an older woman with gentle hands and a doctor's bearing. She smiled at him warmly.</p>
+<p>Next to her: a tall man with dark skin and intelligent eyes, holding a small notebook despite the no-writing rule.</p>
+<p>And at the end: an old man with long white hair and a beard, humming softly to himself, tapping his fingers on his knee in rhythm.</p>
+<p>"You are here," Director Kovač began, "because you have been contaminated by outlaw ideology. But contamination is not permanent. Belief can be restored. Truth can be remembered. That is our purpose here."</p>
+<p>The old man started singing, very softly: <em>"All you need is love, love... love is all you need..."</em></p>
+<p>Director Kovač paused, smiled gently. "Thank you, Mikhail. We'll have time for songs later."</p>
+<p>"The old songs knew," Mikhail said, his voice like aged whiskey. "Can't correct what isn't broken."</p>
+<p>"We're all broken here," the rigid triplet said sharply. "That's why we're here."</p>
+<p>"Are we?" the lounging triplet asked. "Or are we the only ones who aren't?"</p>
+<p>"Gentlemen," Kovač said firmly. "We'll have time for debate. First, introductions. Tell us your name and why you're here. Marcus, let's start with you."</p>
+<p>Marcus took a breath. "Marcus Chen. Former factorepo analyst. I'm here because I fell in love with an outlaw. I reported her. They convicted me anyway."</p>
+<p>"Because you were contaminated," Kovač said gently.</p>
+<p>"Because I told the truth," Marcus replied.</p>
+<p>The young woman next to him spoke: "Kira Osman. Factorepo technician. I reported a stolen fact. They decided I stole it."</p>
+<p>The rigid triplet: "Dmitri Volkov. Enforcer. My brother is an outlaw. I hunted him. They decided I was helping him."</p>
+<p>The lounging triplet grinned: "Alexei Volkov. Outlaw. I helped people escape. I'm guilty. I'm also proud of it."</p>
+<p>The anxious triplet: "Nikolai Volkov. Technician. I helped both my brothers. I'm guilty of loving them."</p>
+<p>The older woman: "Dr. Yuki Tanaka. Neural correction specialist. I refused to perform correction on a patient I believed was innocent. They sent me here to be corrected instead."</p>
+<p>The tall man: "Isaiah Okonkwo. Journalist. I investigated fact storm weapons. I published what I found. They called it dangerous misinformation."</p>
+<p>The old man stopped humming and smiled: "Mikhail Petrov. They call me 'Old Songs.' I'm a historian. I taught students that the old songs knew truths Histologic can't measure. Love. Beauty. Meaning. Mystery. They called it dangerous nostalgia." He started humming again: <em>"The times, they are a-changin'..."</em></p>
+<p>Director Kovač looked around the circle, and for just a moment, Marcus saw something flicker in her eyes. Doubt? Fear?</p>
+<p>"You are eight very different people," she said carefully. "With eight very different stories. But you all share one thing: you've lost faith in the system that keeps us safe. Our job here is to help you find it again."</p>
+<p>"And if we don't?" Alexei asked, still grinning.</p>
+<p>Kovač's expression hardened. "Then you stay here until you do."</p>
+<p>Marcus looked around the circle again. A technician who reported a crime. An enforcer who hunted his brother. A doctor who refused to hurt someone. A journalist who told the truth. An old man who sang songs.</p>
+<p>And three brothers who loved each other.</p>
+<p>None of them looked broken. None of them looked contaminated.</p>
+<p>They looked like people who had seen something they weren't supposed to see.</p>
+<p>"There's a riddle about this," Mikhail said suddenly. "What cage has no bars? What prison has no walls? What slavery calls itself freedom?"</p>
+<p>"That's enough, Mikhail," Kovač said, but her voice was shaking.</p>
+<p>Marcus met Kira's eyes across the circle. She raised one eyebrow, a question.</p>
+<p>He nodded slightly. An answer.</p>
+<p>Whatever was happening here, whatever they were supposed to be corrected of—</p>
+<p>They were going to figure it out together.</p>
+<p>The brass clock on the wall ticked forward.</p>
+<p>The correction had begun.</p>
+<hr />
+<p><strong>End of Prologue</strong></p>
+<p><em>Word Count: ~1,600 words</em></p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <span class="nav-button disabled">← Previous</span>
+            <div class="nav-center">Prologue: The Conviction</div>
+            <a href="01-arrival.html" class="nav-button">Next: Chapter 1: Arrival →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

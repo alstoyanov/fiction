@@ -103,6 +103,21 @@ Concise profiles for all characters across the Histologic Series. For detailed p
 **Quote**: "History doesn't repeat, but it rhymes."
 **Alignment**: Neutral Good
 
+### 9. Mikhail "Old Songs" Petrov
+**Novels**: Novels 04-08
+**Role**: Historian, folk archivist, WISE SPEAKER (unique style)
+**Age**: 68 → 73
+**Background**: Pre-Histologic era historian, convicted for "dangerous nostalgia"
+**Arc**: Mysterious → Wise Guide → Teacher → Legacy
+**Traits**: Nostalgic, wise, gentle, cryptic, musical
+**Skills**: Knows 1,000+ songs, riddles, old wisdom, perfect pitch
+**Communication**: Speaks through SONGS, RIDDLES, and OLD QUOTES
+**Wisdom**: Pre-Histologic truths Histologic can't resolve (love, grief, meaning, beauty)
+**Key Moment**: Sings at Alexei's funeral, preserves old wisdom (Novel 07)
+**Quote**: "The old songs knew truths we've forgotten."
+**Special**: Constantly recalls and sings songs from before Histologic
+**Alignment**: Neutral Good
+
 ---
 
 ## THE ARCHITECTS (Antagonists)
@@ -403,8 +418,9 @@ Concise profiles for all characters across the Histologic Series. For detailed p
 ### WISE SPEAKERS (Provide Meaningful Truths)
 1. **Dr. Yuki Tanaka** - Medical/healing wisdom ✅
 2. **Isaiah Okonkwo** - Historical/journalistic insights
-3. **The Counselor** (AI) - Computational wisdom
-4. **Professor Adrian Volkov** (Architect) - Academic knowledge (corrupted)
+3. **Mikhail "Old Songs" Petrov** - Pre-Histologic wisdom through SONGS, RIDDLES, QUOTES ✅
+4. **The Counselor** (AI) - Computational wisdom
+5. **Professor Adrian Volkov** (Architect) - Academic knowledge (corrupted)
 
 ### HUMOROUS CHARACTERS
 1. **Alexei Volkov** - Gallows humor, light in darkness
@@ -485,8 +501,9 @@ Concise profiles for all characters across the Histologic Series. For detailed p
 ---
 
 **Created**: November 19, 2025
-**Total Characters**: 36+ detailed
-**Main Characters**: 26
+**Total Characters**: 37+ detailed (including Mikhail "Old Songs")
+**Main Characters**: 27
 **Secondary Characters**: 10+
+**Wise Speakers**: 5 (Dr. Tanaka, Isaiah, Mikhail, The Counselor, Prof. Volkov)
 **Status**: ✅ COMPLETE - Ready for series reference
 

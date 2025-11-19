@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="12-the-corruption.html" class="nav-button">← Previous: Chapter 12: The Corruption</a>
+            <div class="nav-center">Chapter 13: The Conscience</div>
+            <a href="14-the-story.html" class="nav-button">Next: Chapter 14: The Story →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Dr. Yuki Tanaka (third-person limited) | <strong>Timeline:</strong> August 19, 2106 (Day 19 in facility) - 3 days until escape</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 13: The Conscience</h1>
+<h2>POV: Dr. Yuki Tanaka</h2>
+<p>Three days until escape. Seventy-two hours until everything changed.</p>
+<p>Yuki sat in her cell, hands folded in her lap, breathing slowly. In, out. In, out. Finding the calm center that had sustained her through twenty years of healing work.</p>
+<p>But today, the calm was harder to find. Because today, she had to convince Director Kovač to commit fully. To cross the line from sympathizer to accomplice. To choose treason over duty.</p>
+<p>It was a heavy thing to ask. Yuki knew that. She'd spent her life healing people, not recruiting them into dangerous conspiracies.</p>
+<p>But sometimes healing required breaking first. Sometimes you had to lance the wound before it could close properly.</p>
+<p>A knock on her door. Right on time.</p>
+<p>Director Kovač entered, her expression troubled. She'd looked troubled for days now, ever since Yuki had shown her the truth.</p>
+<p>"Dr. Tanaka," Kovač said formally. "You asked to see me."</p>
+<p>"Please, sit." Yuki gestured to the chair. "We need to talk. About three days from now."</p>
+<p>Kovač sat, her hands trembling slightly. "I've been thinking about what you said. About helping. About looking the other way."</p>
+<p>"And?"</p>
+<p>"And I don't know if I can." Kovač's voice was pained. "I've spent fifteen years building this facility. Fifteen years believing I was helping people. If I help you escape, I'm admitting that everything I've done was wrong. That I've been complicit in... in torture. In breaking people instead of healing them."</p>
+<p>"Yes," Yuki said gently. "That's exactly what you're admitting. And it's the hardest thing you'll ever do."</p>
+<p>"Then why should I do it?"</p>
+<p>"Because the alternative is worse." Yuki leaned forward. "Director, you have two choices. You can continue as you are, knowing the truth but doing nothing. You can keep running this facility, keep correcting people, keep breaking them in the name of healing. And you can live with that knowledge for the rest of your life."</p>
+<p>"Or?"</p>
+<p>"Or you can help us. You can look the other way when we escape. You can give us a chance. And yes, you'll lose everything—your position, your career, your reputation. But you'll keep something more important: your integrity. Your humanity. Your soul."</p>
+<p>Kovač closed her eyes. "You make it sound simple."</p>
+<p>"It is simple. Not easy, but simple." Yuki's voice was compassionate but firm. "I'm a healer, Director. I've spent twenty years learning how to help people recover from trauma. And I can tell you this: the wound you're carrying—the knowledge of what you've been complicit in—that wound won't heal if you ignore it. It will fester. It will poison you. It will destroy you from the inside."</p>
+<p>"So I should destroy myself from the outside instead?"</p>
+<p>"No. You should acknowledge the wound. Clean it. Let it heal properly." Yuki paused. "You asked me once why I refused to correct Patient 7743. Sarah. Do you remember?"</p>
+<p>"You said she didn't need correction. She needed answers."</p>
+<p>"Yes. And you need the same thing. You don't need correction, Director. You need to answer one question: What kind of person do you want to be?"</p>
+<p>Kovač was silent for a long moment. "I wanted to be someone who helped people. Who made a difference. Who healed instead of hurt."</p>
+<p>"Then be that person. Starting now."</p>
+<p>"It's too late. I've already hurt so many people."</p>
+<p>"It's never too late to stop hurting people. It's never too late to start healing." Yuki reached out, touched Kovač's hand gently. "Director, I've treated hundreds of patients. Some of them carried guilt for things they'd done. Terrible things. And you know what I learned? Guilt without action is just self-indulgence. Real redemption requires change. Requires doing better. Requires making amends."</p>
+<p>"How do I make amends for fifteen years of breaking people?"</p>
+<p>"You start by helping eight people escape. Then you work to reform the system. Then you spend the rest of your life healing instead of breaking." Yuki smiled. "It's not enough. It will never be enough. But it's something. And something is better than nothing."</p>
+<p>Kovač looked at her hands. "What do you need from me?"</p>
+<p>"Three days from now, at 1355 hours, a fact storm will hit this facility. Reality will become unstable. Systems will fail. Staff will evacuate according to emergency protocols."</p>
+<p>"I know those protocols. I wrote them."</p>
+<p>"Good. Then you know that inmates are supposed to be locked in their cells during fact storms. For their safety."</p>
+<p>"Yes."</p>
+<p>"We need you to not lock us in. We need you to make sure the north garden wall is accessible. We need you to evacuate staff away from that area. We need you to give us fifteen minutes."</p>
+<p>"That's all?"</p>
+<p>"That's everything." Yuki's voice was gentle. "Fifteen minutes. That's all we're asking. Fifteen minutes of looking the other way. Fifteen minutes of choosing healing over breaking."</p>
+<p>Kovač stood, paced. "If I do this, if I help you, I'll be arrested. Tried. Convicted. Sent to a facility like this one. Maybe worse."</p>
+<p>"Probably."</p>
+<p>"I'll lose everything."</p>
+<p>"Yes."</p>
+<p>"And you think that's worth it?"</p>
+<p>"I think integrity is always worth it. I think being able to look at yourself in the mirror is worth it. I think knowing you did the right thing, even when it cost you everything, is worth it." Yuki stood as well. "But I can't make that choice for you, Director. Only you can decide what your integrity is worth."</p>
+<p>They stood in silence. Outside, the perfect gardens swayed in the breeze. Inside, one woman asked another to commit treason for the sake of conscience.</p>
+<p>"I need to think about it," Kovač said finally.</p>
+<p>"Of course. You have three days."</p>
+<p>"That's not much time."</p>
+<p>"No. But it's enough time to decide what kind of person you want to be."</p>
+<p>Kovač moved to the door, paused. "Dr. Tanaka, if I do this—if I help you—will you tell me something?"</p>
+<p>"What?"</p>
+<p>"Sarah. Patient 7743. The one you refused to correct. Is she... is she okay?"</p>
+<p>Yuki's expression darkened. "No. They found someone else to correct her. Someone who didn't refuse. She's compliant now. Obedient. Broken. She'll never ask dangerous questions again. She'll never be curious again. She'll never be fully human again."</p>
+<p>Kovač's face crumpled. "I approved that. I signed the order. I thought... I thought it was necessary."</p>
+<p>"I know. That's the wound you're carrying. That's what you need to heal." Yuki's voice was gentle but uncompromising. "You can't undo what was done to Sarah. But you can prevent it from happening to eight more people. You can choose differently this time."</p>
+<p>"It won't bring her back."</p>
+<p>"No. But it will honor her. It will mean her suffering wasn't for nothing. It will mean you learned from your mistake." Yuki moved closer. "Director, guilt is useless without change. Regret is meaningless without action. You can feel terrible about Sarah for the rest of your life, or you can make sure no one else becomes Sarah. Your choice."</p>
+<p>Kovač nodded slowly, tears on her face. "Three days. I'll give you an answer in three days."</p>
+<p>"That's all I ask."</p>
+<p>After Kovač left, Yuki returned to her meditation. But this time, she wasn't seeking calm. She was seeking strength.</p>
+<p>Three days. Seventy-two hours. And then either Kovač would help them, or they'd have to escape without her help.</p>
+<p>Either way, they were leaving. Either way, they were breaking free.</p>
+<p>But it would be easier—safer—with Kovač's help. And more than that, it would be healing. For Kovač. For the system. For everyone.</p>
+<p>Yuki closed her eyes and thought about Sarah. About the young woman who'd asked dangerous questions. Who'd been curious. Who'd been broken for the crime of thinking.</p>
+<p>That was what the system did. It broke people. It called it correction, called it healing, called it necessary. But it was just breaking. Just control. Just fear disguised as help.</p>
+<p>And Yuki had been complicit. For years, she'd performed corrections, believing she was helping. Believing the system knew best. Believing that sometimes you had to break people to fix them.</p>
+<p>She'd been wrong. And now she had to make it right.</p>
+<p>Starting with eight people. Then the system itself. Then everyone who'd been broken.</p>
+<p>It was ambitious. Impossible, probably.</p>
+<p>But necessary. Always necessary.</p>
+<hr />
+<p>That evening, Yuki found Mikhail in the garden during their designated outdoor time. The old man was humming, tending to flowers that didn't need tending.</p>
+<p>"She'll help us," Yuki said quietly, sitting beside him.</p>
+<p>"You sound certain."</p>
+<p>"I am. She's a good person. She just needs time to remember that."</p>
+<p>Mikhail smiled. "You're good at seeing the best in people, Dr. Tanaka. That's a rare gift."</p>
+<p>"It's a healer's gift. We have to believe people can get better. Otherwise, what's the point?"</p>
+<p>"Indeed." Mikhail pulled a weed, examined it. "There's a song about this. About people who help even when it costs them everything. About those who choose right over safe."</p>
+<p>He sang softly:</p>
+<p><em>"If I can help somebody as I pass along,</em><br />
+<em>If I can cheer somebody with a word or song,</em><br />
+<em>If I can show somebody he's traveling wrong,</em><br />
+<em>Then my living will not be in vain..."</em></p>
+<p>"That's beautiful," Yuki said. "What is it?"</p>
+<p>"An old gospel song. 'If I Can Help Somebody.' It was sung by people who had nothing but still helped others. People who understood that the measure of a life isn't what you accumulate, but what you give away."</p>
+<p>"Director Kovač is learning that lesson."</p>
+<p>"We all are." Mikhail looked at her. "You're giving away your safety, your career, your freedom. For eight people you barely know. Why?"</p>
+<p>"Because they're people. Because they need help. Because I can help." Yuki smiled. "Because my living will not be in vain."</p>
+<p>"You're a good person, Dr. Yuki Tanaka."</p>
+<p>"I'm trying to be. That's all any of us can do. Try to be good. Try to help. Try to heal instead of hurt."</p>
+<p>They sat in comfortable silence, two healers in a broken system, preparing to break it further so it could be rebuilt better.</p>
+<p>"Three days," Mikhail said. "Three days until we walk through the storm."</p>
+<p>"Together," Yuki added. "We'll never walk alone."</p>
+<p>"Never alone," Mikhail agreed. "That's the promise. That's the covenant. That's what makes us human instead of variables in someone's experiment."</p>
+<p>Yuki thought about Nikolai, about his uncle's files, about the cold clinical notes treating people like data points.</p>
+<p>"We're not variables," she said firmly. "We're people. And people heal. People change. People choose to be better."</p>
+<p>"Even when it costs everything?"</p>
+<p>"Especially then. That's when it matters most."</p>
+<p>Three days. Seventy-two hours. And then they would prove that people were stronger than systems. That healing was more powerful than breaking. That love endured when everything else failed.</p>
+<p>Yuki closed her eyes and felt the sun on her face. Three more days of captivity. Three more days of being broken.</p>
+<p>And then: freedom. Healing. Hope.</p>
+<p>She was ready. They all were.</p>
+<p>The conscience of the group had spoken. Now it was time to act.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="12-the-corruption.html" class="nav-button">← Previous: Chapter 12: The Corruption</a>
+            <div class="nav-center">Chapter 13: The Conscience</div>
+            <a href="14-the-story.html" class="nav-button">Next: Chapter 14: The Story →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

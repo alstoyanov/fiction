@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="00-prologue.html" class="nav-button">← Previous: Prologue: The Conviction</a>
+            <div class="nav-center">Chapter 1: Arrival</div>
+            <a href="02-the-sessions.html" class="nav-button">Next: Chapter 2: The Sessions →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Marcus Chen (first-person perspective) | <strong>Timeline:</strong> August 4-7, 2106 (Days 4-7 in facility)</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 1: Arrival</h1>
+<h2>POV: Marcus Chen</h2>
+<p>The first three days in the Correction Facility followed a rhythm as precise as The Judge's processing cycles.</p>
+<p>Wake at 0600. Breakfast at 0630 in the communal dining hall—a bright space with copper fixtures and windows overlooking gardens that looked too perfect to be real. Group session at 0800. Individual reflection time at 1000. Lunch at 1200. Physical exercise at 1400. Library time at 1600. Dinner at 1800. Personal time until lights out at 2200.</p>
+<p>Every hour accounted for. Every moment structured. Every activity designed to remind them: <em>You are here to be fixed.</em></p>
+<p>Marcus sat in the dining hall on his fourth morning, pushing reconstituted eggs around his plate. The food was nutritious, tasteless, efficient. Like everything else here.</p>
+<p>"You're not eating," a voice said.</p>
+<p>He looked up. The young woman from Group Seven—Kira—stood with her tray, eyebrow raised in question.</p>
+<p>"May I?" she asked, gesturing to the empty seat across from him.</p>
+<p>Marcus nodded. "Kira, right? The technician."</p>
+<p>"Former technician." She sat with precise movements, everything economical. "And you're Marcus. The analyst who did everything right and got convicted anyway."</p>
+<p>"That about sums it up."</p>
+<p>Kira took a bite of her eggs, chewed thoughtfully. "These taste like cardboard mixed with regret."</p>
+<p>Despite himself, Marcus smiled. "That's... surprisingly accurate."</p>
+<p>"I'm good with precision." She leaned forward slightly, voice dropping. "I've been watching the others. Have you noticed?"</p>
+<p>"Noticed what?"</p>
+<p>"We're not random." Kira's eyes were sharp, focused. "Eight people, eight very different backgrounds. But Director Kovač watches us like we're a science experiment. And the guards—they're nervous around us."</p>
+<p>Marcus glanced around the dining hall. Other groups sat at their designated tables, eating quietly, some talking in low voices. Group Seven's table was in the corner, slightly isolated.</p>
+<p>"Maybe they're nervous because of Alexei," Marcus said. "He's an admitted outlaw."</p>
+<p>"Or maybe they're nervous because we're all connected somehow, and they know it." Kira pulled a small piece of paper from her sleeve—how had she gotten paper?—and slid it across the table. "Don't look at it now. Read it in your cell."</p>
+<p>"How did you—"</p>
+<p>"I'm a technician. I know how systems work. Including this one." She stood, picked up her tray. "See you at group session, Marcus. Try to eat something. You'll need your strength."</p>
+<p>She walked away, leaving Marcus staring at the folded paper on the table. He palmed it quickly, slipping it into his pocket.</p>
+<p>Around him, the dining hall continued its quiet morning routine. But Marcus's heart was racing.</p>
+<p><em>We're all connected somehow.</em></p>
+<p>What had Kira found?</p>
+<hr />
+<p>The group session room felt different on the fourth day. The same circular arrangement, the same brass clock ticking on the wall, the same eight chairs. But the atmosphere had shifted.</p>
+<p>Director Kovač stood in the center, but today she wasn't alone. A man in a white coat stood beside her—thin, sharp-featured, with eyes that assessed them like specimens.</p>
+<p>"Good morning," Kovač said. "This is Dr. Thomas Reeves, our chief correction specialist. He'll be observing today's session."</p>
+<p>Mikhail hummed softly: <em>"Every breath you take, every move you make, I'll be watching you..."</em></p>
+<p>Dr. Reeves's expression didn't change, but his eyes lingered on Mikhail for a long moment.</p>
+<p>"Today," Kovač continued, "we'll be discussing belief. What it means to believe in something. What it means to lose that belief. And what it means to find it again."</p>
+<p>"I never lost my belief," Marcus said immediately. "I believe in Histologic. I believe in the system. I just—"</p>
+<p>"You just what, Marcus?" Reeves asked, his voice clinical.</p>
+<p>"I just think Veridica has been corrupted." The words came out before Marcus could stop them. "The system is perfect. The implementation is flawed."</p>
+<p>"Interesting," Reeves said, making a note on his brass tablet. "You separate the ideal from the reality."</p>
+<p>"Don't we all?" Alexei asked, lounging in his chair. "Isn't that what faith is? Believing in something despite evidence to the contrary?"</p>
+<p>"Faith requires evidence," Marcus shot back. "That's the whole point of Histologic. We don't believe blindly. We believe based on facts."</p>
+<p>"And when the facts are lies?" Kira asked quietly.</p>
+<p>The room went silent.</p>
+<p>Dr. Reeves looked at Kira with sudden interest. "What makes you think the facts are lies, Ms. Osman?"</p>
+<p>"I don't think. I know." Kira met his gaze steadily. "I reported a stolen fact. A fact I personally entered into the factorepo. I have perfect recall. I remember every character, every timestamp. It was there. Then it wasn't. Then I was accused of fabricating it."</p>
+<p>"Memory is fallible," Reeves said.</p>
+<p>"Mine isn't." Kira's voice was flat, certain. "I have eidetic memory for data. It's why I was hired. It's why I was good at my job. And it's why I know—absolutely know—that fact was stolen."</p>
+<p>"By whom?" Kovač asked, and Marcus heard something in her voice. Not challenge. Curiosity.</p>
+<p>"That's what I'd like to know," Kira said.</p>
+<p>Dmitri spoke up, his voice hard: "I hunted my brother for three years. I tracked him across two nations. I nearly caught him twice. I did my duty." He looked at Alexei, pain and anger mixing in his expression. "And they convicted me of helping him. Me. I who gave up everything to stop him."</p>
+<p>"Maybe they convicted you because you were too close," Dr. Tanaka said gently. "Sometimes the system makes mistakes when emotions are involved."</p>
+<p>"The Judge doesn't make mistakes," Marcus said automatically.</p>
+<p>"Doesn't it?" Isaiah spoke for the first time that session. "I documented seventeen cases of fact storm weapons being tested on civilian populations. I had sources, evidence, testimony. I published it. The next day, all my sources recanted. All my evidence disappeared from the factorepo. All my testimony was deemed unreliable." He leaned forward. "Either I hallucinated an entire investigation, or someone with access to the factorepo erased it."</p>
+<p>"That's impossible," Marcus said, but his voice lacked conviction.</p>
+<p>"Is it?" Isaiah asked. "Or is it just impossible for you to believe?"</p>
+<p>Mikhail started singing, his voice surprisingly strong:</p>
+<p><em>"How many roads must a man walk down, before you call him a man?</em><br />
+<em>How many seas must a white dove sail, before she sleeps in the sand?</em><br />
+<em>The answer, my friend, is blowing in the wind...</em>"</p>
+<p>"Mikhail," Kovač said, but gently. "What are you trying to tell us?"</p>
+<p>The old man stopped singing and smiled. "The old songs knew: some questions don't have answers in databases. Some truths can't be factchecked. How do you prove love? How do you derive hope? How do you calculate the weight of a soul?" He looked around the circle. "We're here because we asked questions The Judge can't answer. That's not contamination. That's being human."</p>
+<p>Dr. Reeves made another note. "Interesting perspective, Mr. Petrov. Though I'd argue that's exactly what contamination looks like—rejecting objective truth in favor of subjective experience."</p>
+<p>"And I'd argue," Mikhail replied, "that objective truth without subjective experience is just data. The old times knew the difference. We've forgotten."</p>
+<p>"The old times," Reeves said coldly, "were chaotic, violent, and nearly destroyed humanity. Histologic saved us from that chaos."</p>
+<p>"Did it?" Alexei asked. "Or did it just make the chaos more orderly?"</p>
+<p>Reeves stood abruptly. "Director Kovač, I think we've heard enough for today. I'll prepare my assessment."</p>
+<p>He left the room, his footsteps echoing in the corridor.</p>
+<p>The eight inmates sat in silence, looking at each other.</p>
+<p>Finally, Nikolai spoke, his voice quiet: "We're not going to be corrected, are we?"</p>
+<p>"No," Kovač said, and her voice was shaking. "I don't think you are."</p>
+<p>She looked around the circle, and Marcus saw it clearly now: she was afraid. Not of them. For them.</p>
+<p>"Session dismissed," she said quietly. "Please return to your cells."</p>
+<p>As they filed out, Marcus felt Kira slip something else into his hand. Another note.</p>
+<p>In his cell, he read both messages.</p>
+<p>The first, from breakfast: <em>"Check your conviction record. Look at the judge signature. Then look at the others' records. Same signature. Same date. Same time. We were processed together."</em></p>
+<p>The second, from the session: <em>"Library. Tonight. 2100. Nikolai can get us in. We need to talk. All of us."</em></p>
+<p>Marcus sat on his bed, staring at the notes.</p>
+<p>Seven other people. Eight total. All convicted around the same time, sent to the same facility, placed in the same group.</p>
+<p>Kira was right. They weren't random.</p>
+<p>They were targeted.</p>
+<p>But why?</p>
+<p>Outside his window, the perfect gardens swayed in a breeze that felt manufactured. The brass clock on his wall ticked forward.</p>
+<p>Tonight, at 2100, he would get answers.</p>
+<p>Or he would discover that Kira was right about something else too:</p>
+<p>The facts were lies.</p>
+<p>And if the facts were lies, what did that make him? A true believer in a false system? Or a fool who'd betrayed love for nothing?</p>
+<p>Marcus closed his eyes and saw Elena's face again. Her sad smile. Her final words: <em>"You still don't understand. But you will."</em></p>
+<p>He was beginning to.</p>
+<p>And it terrified him.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="00-prologue.html" class="nav-button">← Previous: Prologue: The Conviction</a>
+            <div class="nav-center">Chapter 1: Arrival</div>
+            <a href="02-the-sessions.html" class="nav-button">Next: Chapter 2: The Sessions →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

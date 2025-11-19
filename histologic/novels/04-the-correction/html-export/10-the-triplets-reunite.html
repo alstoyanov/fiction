@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="09-the-evidence.html" class="nav-button">← Previous: Chapter 9: The Evidence</a>
+            <div class="nav-center">Chapter 10: The Triplets Reunite</div>
+            <a href="11-the-network.html" class="nav-button">Next: Chapter 11: The Network →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Dmitri Volkov (third-person limited) | <strong>Timeline:</strong> August 17, 2106 (Day 17 in facility)</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 10: The Triplets Reunite</h1>
+<h2>POV: Dmitri Volkov</h2>
+<p>Three years. Three years since Dmitri had seen his brothers together. Three years of hunting one while the other hid in plain sight. Three years of duty over family, law over love, order over blood.</p>
+<p>Now, in a storage room deep in the facility's basement, the three of them stood face to face for the first time since their mother's funeral.</p>
+<p>Dmitri looked at his brothers—his mirror images, his other selves—and felt something break inside him. Not break apart. Break open.</p>
+<p>"Brothers," he said, and his voice cracked on the word.</p>
+<p>Alexei moved first, pulling Dmitri into a fierce embrace. "Brother," he said, and there was no mockery in it, no distance, just pure emotion.</p>
+<p>Nikolai joined them, and suddenly they were three again, arms around each other, three parts of one whole, reunited after too long apart.</p>
+<p>They stood like that for a long moment, not speaking, just being together. Dmitri felt tears on his face and didn't care. Let them fall. Let the rigid enforcer crack. Let the dutiful soldier remember he was human.</p>
+<p>Finally, they pulled apart, but stayed close, hands on each other's shoulders, maintaining contact.</p>
+<p>"I'm sorry," Dmitri said. "For hunting you, Alexei. For three years of—"</p>
+<p>"Don't," Alexei interrupted. "You did what you thought was right. I did what I thought was right. We were both right. We were both wrong. It doesn't matter anymore."</p>
+<p>"It matters to me."</p>
+<p>"Then I forgive you." Alexei's eyes were serious. "And you need to forgive yourself. Because we have work to do, and we need you whole, not broken by guilt."</p>
+<p>Dmitri nodded, unable to speak.</p>
+<p>Nikolai's voice was soft: "I should apologize too. For helping both of you. For lying to both of you. For trying to keep everyone happy and making everyone miserable instead."</p>
+<p>"You kept us together," Dmitri said. "Even when we were apart, you were the bridge. Don't apologize for that."</p>
+<p>"I tried to help Alexei escape while you were hunting him," Nikolai continued. "I sabotaged your investigations, Dmitri. I deleted evidence. I warned him when you were close. I betrayed you."</p>
+<p>"You saved me," Alexei said quietly. "Multiple times."</p>
+<p>"And you broke my heart," Dmitri added. "But you did it out of love. For both of us. I understand that now."</p>
+<p>They sat on storage crates, three identical faces in the dim light. It was disorienting, seeing his own face twice over. Like looking in mirrors that looked back.</p>
+<p>"We're really doing this," Alexei said. "Escaping together. Fighting together. For the first time in three years, we're on the same side."</p>
+<p>"We were always on the same side," Nikolai said. "We just didn't know it. We thought we were fighting each other. But we were all fighting the same enemy. We just couldn't see it."</p>
+<p>"The system," Dmitri said. "The corruption. The people who manipulated us into fighting each other."</p>
+<p>"Divide and conquer," Alexei agreed. "Classic tactic. Keep the Volkov brothers separated, keep them fighting each other, and they're no threat. But together..."</p>
+<p>"Together, we're dangerous," Dmitri finished. He allowed himself a small smile. "I've missed this. Planning with you. Strategizing. Being brothers instead of enemies."</p>
+<p>"I've missed it too." Alexei's grin was genuine. "Though I have to admit, you were a worthy opponent. You almost caught me twice."</p>
+<p>"Almost doesn't count."</p>
+<p>"In hunting, it does. It means you were good. Just not quite good enough." Alexei's tone was teasing, affectionate.</p>
+<p>"Next time, I will be."</p>
+<p>"There won't be a next time. We're on the same team now."</p>
+<p>"Good." Dmitri felt the weight he'd been carrying for three years begin to lift. "Because I'm tired of chasing you. I'd rather fight beside you."</p>
+<p>Nikolai pulled out a brass tablet. "Then let's talk strategy. Aunt Elena is coordinating from outside. She's planning an extraction, but she needs inside help. That's us."</p>
+<p>"What's the plan?" Dmitri asked, his tactical mind engaging.</p>
+<p>"Fact storm," Nikolai said. "Elena will trigger a massive one, targeting the facility's location. Reality will start flickering, systems will fail, staff will evacuate. In the chaos, we escape."</p>
+<p>"Fact storms are dangerous," Dmitri said. "People die in them. Reality becomes unstable. You can't trust your senses."</p>
+<p>"I know. But it's the best distraction we have. And Elena knows how to control them. She's done it before."</p>
+<p>"When?"</p>
+<p>"Three years ago. When I escaped the first time." Alexei's expression was distant. "She triggered a localized storm, just enough to create confusion. I walked out while everyone was trying to figure out which reality was real."</p>
+<p>"And this time?"</p>
+<p>"This time, eight of us walk out. Plus anyone else who wants to come." Alexei looked at Dmitri. "We're not leaving people behind if we can help it. Other inmates, staff who want out, anyone who's trapped by this system."</p>
+<p>"That's ambitious."</p>
+<p>"That's necessary." Alexei's voice was firm. "We're not just escaping. We're making a statement. We're showing that the system can be beaten. That resistance is possible. That people can be free."</p>
+<p>Dmitri considered it. The enforcer in him saw a dozen ways it could go wrong. The brother in him saw a chance to finally do something right.</p>
+<p>"I'm in," he said. "But we do it smart. We plan every detail. We have contingencies for contingencies. We don't just run blindly into chaos."</p>
+<p>"Agreed," Nikolai said. "That's why we need you. Your tactical expertise. Your knowledge of security protocols. Your ability to think three steps ahead."</p>
+<p>"And your ability to keep us alive," Alexei added. "Because I'm good at escaping. But you're good at surviving. There's a difference."</p>
+<p>They spent the next hour planning. Dmitri outlined security rotations, weak points, emergency protocols. Alexei described extraction routes, safe houses, resistance contacts. Nikolai explained how he could disable systems, create diversions, manipulate data.</p>
+<p>Three brothers. Three skill sets. One mission.</p>
+<p>It felt right. It felt whole. It felt like coming home.</p>
+<p>"There's something else," Nikolai said quietly. "Something I need to tell you both."</p>
+<p>"What?" Dmitri asked.</p>
+<p>"Our uncle. Professor Adrian Volkov. He's one of them. One of the Architects."</p>
+<p>The words hit like a physical blow. Dmitri felt his world tilt.</p>
+<p>"What?"</p>
+<p>"I found his name in the files. He's part of the conspiracy. He helped design Project Correction. He..." Nikolai's voice broke. "He specifically recommended us. His own nephews. As test subjects."</p>
+<p>Alexei's face went cold. "He targeted us?"</p>
+<p>"Yes. Because we're triplets. Because we have different ideologies. Because we're perfect test subjects for seeing if the system could break family bonds." Nikolai looked at his hands. "We weren't random. We weren't even collateral damage. We were deliberately chosen. By family."</p>
+<p>Dmitri felt rage building. Pure, cold rage. "He used us."</p>
+<p>"He used everyone," Nikolai said. "But yes. He used us specifically. And he justified it as 'for the greater good.' For testing the system. For science."</p>
+<p>"I'm going to kill him," Alexei said flatly.</p>
+<p>"No," Dmitri said, surprising himself. "We're going to expose him. We're going to make sure everyone knows what he did. Death is too easy. He needs to live with what he's done. He needs to face the family he betrayed."</p>
+<p>"Dmitri's right," Nikolai said. "Revenge is easy. Justice is hard. We choose justice."</p>
+<p>They sat in silence, processing the betrayal. Their uncle. Their father's brother. The man who'd taught them history, who'd encouraged their education, who'd seemed to care.</p>
+<p>He'd been using them all along.</p>
+<p>"We tell Aunt Elena," Dmitri said finally. "She needs to know her brother is a traitor."</p>
+<p>"She might already know," Alexei said. "She's smart. She's connected. She might have suspected."</p>
+<p>"Then we confirm it. And we make sure he faces consequences."</p>
+<p>They heard footsteps in the corridor. Quickly, they separated, pretending to be organizing supplies. A guard passed, didn't look in.</p>
+<p>When the footsteps faded, they reconvened.</p>
+<p>"We need to be more careful," Dmitri said. "If they catch us meeting like this, they'll separate us. Maybe worse."</p>
+<p>"Agreed. We use Nikolai's communication system. We meet only when necessary. We act normal in sessions." Alexei looked at his brothers. "But we stay connected. No matter what. We don't let them divide us again."</p>
+<p>"Never again," Nikolai agreed.</p>
+<p>"Never again," Dmitri echoed.</p>
+<p>They clasped hands in the center of their circle. Three hands, identical, united.</p>
+<p>"For family," Alexei said.</p>
+<p>"For truth," Dmitri added.</p>
+<p>"For freedom," Nikolai finished.</p>
+<p>They held the moment, three brothers who'd been enemies, now allies, now family again.</p>
+<p>Then they separated, slipping out one by one, careful intervals, maintaining the fiction that they were just three inmates who happened to look alike.</p>
+<p>But Dmitri knew the truth. They weren't just three inmates. They were three parts of one whole. Three brothers who'd found each other again. Three warriors who would fight together.</p>
+<p>And nothing—not the system, not their uncle, not the Architects themselves—would separate them again.</p>
+<hr />
+<p>Back in his cell, Dmitri lay awake, thinking about family. About the bonds that tied people together. About the betrayals that tore them apart.</p>
+<p>His uncle had betrayed them. Had used them. Had treated them as experiments rather than family.</p>
+<p>But his brothers had saved him. Had forgiven him. Had welcomed him back despite three years of hunting and fighting.</p>
+<p>That was the difference between the system and humanity. The system saw people as data points, as variables, as resources to be used. Humanity saw people as people. As family. As worth saving.</p>
+<p>Dmitri had spent three years serving the system. Now he would spend however long it took serving humanity.</p>
+<p>Starting with his brothers. Then the other inmates. Then everyone trapped by the corrupt system.</p>
+<p>It was ambitious. Dangerous. Probably impossible.</p>
+<p>But it was right. And right mattered more than safe.</p>
+<p>He closed his eyes and, for the first time in three years, slept peacefully.</p>
+<p>His brothers were back. His family was whole.</p>
+<p>And together, they would burn the corrupt system down.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="09-the-evidence.html" class="nav-button">← Previous: Chapter 9: The Evidence</a>
+            <div class="nav-center">Chapter 10: The Triplets Reunite</div>
+            <a href="11-the-network.html" class="nav-button">Next: Chapter 11: The Network →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

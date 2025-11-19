@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="17-the-inside-help.html" class="nav-button">← Previous: Chapter 17: The Inside Help</a>
+            <div class="nav-center">Chapter 18: The Plan</div>
+            <a href="19-the-fact-storm.html" class="nav-button">Next: Chapter 19: The Fact Storm →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Alexei Volkov (third-person limited) | <strong>Timeline:</strong> August 22, 2106 - 1330-1355+ hours (30 minutes before to escape begins)</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 18: The Plan</h1>
+<h2>POV: Alexei Volkov</h2>
+<p>Thirty minutes until escape. 1330 hours. The final countdown.</p>
+<p>Alexei sat in his cell, the hidden comm device pressed against his ear, listening to Elena's final briefing.</p>
+<p>"Extraction team is in position," Elena's voice crackled through the encrypted channel. "North wall, exactly as planned. We have three vehicles, medical supplies, and safe house coordinates. We're ready."</p>
+<p>"Copy that," Alexei whispered. "We're ready too. All eight confirmed. Kovač is committed. Nikolai's sabotage is armed. We're go for 1355."</p>
+<p>"Good. Listen carefully, Alexei. The fact storm I'm triggering—it's going to be intense. More intense than anything you've experienced before. Reality is going to break down completely. You need to stay focused. Stay together. Don't let anyone wander off."</p>
+<p>"We have Mikhail. He'll keep us anchored."</p>
+<p>"Good. He's experienced with storms. Trust him." Elena paused. "Alexei, I need to tell you something. About your uncle."</p>
+<p>Alexei's jaw tightened. "What about him?"</p>
+<p>"He knows. About the escape. About the plan. About everything."</p>
+<p>"How?"</p>
+<p>"He's an Architect. He has access to systems we can't even imagine. He's been watching you. All three of you. The whole time."</p>
+<p>"Then why hasn't he stopped us?"</p>
+<p>"Because he wants to see if you'll succeed. If his experiment will fail completely. If family bonds really are stronger than his system." Elena's voice was cold. "He's treating your escape as data. As the final test. As proof one way or another."</p>
+<p>Alexei felt rage building. "He's watching us escape like we're lab rats."</p>
+<p>"Yes. And that's exactly why you need to succeed. Not just for yourselves. For everyone he's ever experimented on. For everyone he's ever treated as data instead of human." Elena's voice softened. "Alexei, I'm sorry. I'm sorry my brother became this. I'm sorry he hurt you. I'm sorry I didn't see it sooner."</p>
+<p>"It's not your fault, Aunt Elena."</p>
+<p>"It is. Family is supposed to protect family. I failed." A pause. "But I won't fail again. I'll get you out. All of you. I promise."</p>
+<p>"We know. We trust you."</p>
+<p>"Thirty minutes, Alexei. Thirty minutes until you're free. Until you're with me again. Until we can hug and cry and be family again."</p>
+<p>"Thirty minutes," Alexei agreed. "We'll make it. We have to."</p>
+<p>"You will. I believe in you. I believe in all of you." Elena's voice was fierce. "Now go. Get everyone in position. And Alexei?"</p>
+<p>"Yes?"</p>
+<p>"I love you. Tell your brothers I love them. Tell all eight of you that you're not alone. That we're waiting. That freedom is thirty minutes away."</p>
+<p>"I will. I love you too, Aunt Elena."</p>
+<p>The comm went silent. Alexei sat for a moment, processing. His uncle knew. Was watching. Was treating their escape as the final experiment.</p>
+<p>Good. Let him watch. Let him see his experiment fail. Let him see that family was stronger than systems, that love was stronger than control, that humans were more than data points.</p>
+<p>Alexei stood, pocketed the comm device, and left his cell. Time to gather everyone. Time to get in position. Time to execute the plan.</p>
+<hr />
+<p>At 1340 hours, twenty minutes before escape, all eight gathered in the library. One last meeting. One last moment together before chaos.</p>
+<p>"Elena confirms extraction team ready," Alexei said. "Three vehicles, medical supplies, safe house. Everything's set."</p>
+<p>"Kovač confirms evacuation protocols ready," Dr. Tanaka added. "Staff will clear out at 1355. We'll have our window."</p>
+<p>"Sabotage is armed," Nikolai said. "One button press and everything goes dark. Cameras, locks, alarms, communications. Everything."</p>
+<p>"Route is clear," Dmitri said. "I walked it three times. 247 meters. Ninety seconds at run. Four doors, all unlocked. Six turns, all memorized. We can do this."</p>
+<p>"Evidence is secured," Isaiah said, patting his bag. "Three data chips. All documentation. The story is preserved. Whatever happens, the truth survives."</p>
+<p>"Medical supplies ready," Dr. Tanaka said. "I can handle injuries. I can keep us alive."</p>
+<p>"Songs ready," Mikhail said, smiling. "I can keep us sane."</p>
+<p>Everyone looked at Marcus and Kira.</p>
+<p>"We're ready," Marcus said. "For escape. For freedom. For whatever comes next."</p>
+<p>"We're ready," Kira echoed. "All of us. Together."</p>
+<p>They stood in a circle, eight people who'd been strangers, now family. Eight people who'd been broken, now healing. Eight people who'd been prisoners, about to be free.</p>
+<p>"I need to tell you something," Alexei said. "Elena told me. Our uncle—Professor Adrian Volkov—he knows about the escape. He's watching. He's treating it as the final test of his experiment."</p>
+<p>Silence. Then Dmitri spoke: "Good. Let him watch. Let him see us succeed. Let him see his experiment fail."</p>
+<p>"Let him see that we're not variables," Nikolai added. "We're people. We're family. We're human."</p>
+<p>"Let him see that love wins," Marcus said.</p>
+<p>"Let him see that systems can be beaten," Kira added.</p>
+<p>"Let him see that truth endures," Isaiah said.</p>
+<p>"Let him see that healing is possible," Dr. Tanaka said.</p>
+<p>"Let him see that songs remember," Mikhail finished.</p>
+<p>Alexei felt pride surge through him. This was his team. His family. His people.</p>
+<p>"Fifteen minutes," he said. "Fifteen minutes until we prove that humans are more than experiments. That family is stronger than systems. That love endures."</p>
+<p>They joined hands in the circle. Eight hands, eight hearts, eight souls united.</p>
+<p>"Whatever happens," Alexei said, "whatever comes next, remember this: we chose each other. We chose to fight. We chose to be free. That choice—that's what makes us human. That's what makes us unbreakable."</p>
+<p>"We'll never walk alone," Marcus said.</p>
+<p>"We'll never walk alone," they echoed together.</p>
+<p>They held the moment. Then, one by one, they moved to their positions.</p>
+<p>Nikolai to the maintenance room. Dr. Tanaka to the medical wing. The others to their cells or common areas. Waiting. Preparing. Breathing.</p>
+<p>Fifteen minutes.</p>
+<hr />
+<p>At 1350 hours, five minutes before escape, Alexei stood in his cell, the comm device in his hand, waiting for Elena's signal.</p>
+<p>His mind raced through the plan one more time:</p>
+<p><strong>1355:00</strong> - Elena triggers fact storm. Nikolai triggers sabotage. Chaos begins.</p>
+<p><strong>1355:30</strong> - Staff evacuation starts. Kovač clears the path.</p>
+<p><strong>1356:00</strong> - Inmates begin moving. Dmitri leads. Kira coordinates.</p>
+<p><strong>1357:30</strong> - Converge on north garden. All eight together.</p>
+<p><strong>1358:00</strong> - Reach north wall. Dmitri and Kira over first.</p>
+<p><strong>1359:00</strong> - Everyone climbing. Ropes deployed.</p>
+<p><strong>1400:00</strong> - Everyone over. Extraction team receives them.</p>
+<p><strong>1405:00</strong> - Vehicles depart. Safe house bound.</p>
+<p><strong>1410:00</strong> - Fact storm ends. Pursuit begins. They're already gone.</p>
+<p>Simple. Clean. Precise.</p>
+<p>And completely dependent on everything going right.</p>
+<p>Alexei had escaped three times before. Each time, something had gone wrong. Each time, he'd adapted, improvised, survived.</p>
+<p>This time, he had seven other people depending on him. This time, failure meant more than just his own capture. This time, the stakes were infinite.</p>
+<p>No pressure.</p>
+<p>The comm device crackled. Elena's voice: "Two minutes. Fact storm weapon charging. Extraction team confirms ready. Alexei, are you ready?"</p>
+<p>"Ready," Alexei whispered.</p>
+<p>"Good. Remember: stay together. Trust each other. Walk through the storm. And Alexei?"</p>
+<p>"Yes?"</p>
+<p>"This is your fourth escape. Make it your last. Make it the one that sticks. Make it the one where you're finally, truly free."</p>
+<p>"I will. We all will."</p>
+<p>"I believe you. Now go. Be free. Be human. Be family."</p>
+<p>The comm went silent.</p>
+<p>Alexei stood, pocketed the device, and moved to his door. In two minutes, it would unlock. In two minutes, chaos would begin. In two minutes, everything would change.</p>
+<p>He thought about his three previous escapes. About the fear and exhilaration. About the moment of crossing from captivity to freedom. About the feeling of air on his face, sun on his skin, possibility in his heart.</p>
+<p>This time would be different. This time, he wouldn't be alone. This time, he'd have his brothers. His family. His people.</p>
+<p>This time, freedom would taste sweeter. Would feel richer. Would mean more.</p>
+<p>Because freedom shared was freedom multiplied.</p>
+<p>One minute.</p>
+<p>Alexei closed his eyes and thought about his mother. About the last thing she'd said to him before she died: "Take care of your brothers. No matter what. No matter how hard it gets. Stay together."</p>
+<p>He'd failed that promise. For three years, he'd been separated from his brothers. For three years, they'd been enemies.</p>
+<p>But now, they were together again. Now, they were family again. Now, he could keep his promise.</p>
+<p>"I'm keeping my promise, Mama," he whispered. "We're staying together. Forever."</p>
+<p>Thirty seconds.</p>
+<p>Alexei opened his eyes, focused, centered, prepared.</p>
+<p>He'd been an outlaw. A rebel. A resistance fighter. A fugitive.</p>
+<p>Now he was a liberator. A brother. A keeper of promises.</p>
+<p>The transformation was complete. The old Alexei was gone. The new Alexei was ready.</p>
+<p>For escape. For freedom. For family. For whatever came next.</p>
+<p>Ten seconds.</p>
+<p>Alexei counted down in his head: Ten. Nine. Eight. Seven. Six. Five. Four. Three. Two. One.</p>
+<p><strong>1355:00</strong></p>
+<p>The world broke.</p>
+<p>Reality flickered. The walls shimmered. The air tasted like copper and ozone and possibility.</p>
+<p>The fact storm had begun.</p>
+<p>Alexei's door clicked open. All doors clicked open. The facility's systems screamed and died.</p>
+<p>Nikolai's sabotage had worked.</p>
+<p>Alexei stepped into the corridor. Others emerged from their cells. Marcus. Kira. Isaiah. Mikhail.</p>
+<p>Down the hall, his brothers appeared. Dmitri. Nikolai.</p>
+<p>Seven faces. Seven people. Seven parts of one whole.</p>
+<p>"Go!" Dmitri shouted. "Primary route! Follow me!"</p>
+<p>They ran.</p>
+<p>Through the east corridor. Past the library. Through the garden entrance.</p>
+<p>Reality flickered around them. The walls were stone, then brass, then glass, then nothing. The floor was solid, then liquid, then air, then solid again.</p>
+<p>The fact storm was intense. More intense than Alexei had ever experienced.</p>
+<p>But Mikhail was singing. His voice cut through the chaos:</p>
+<p><em>"When you walk through a storm, hold your head up high..."</em></p>
+<p>The others joined in:</p>
+<p><em>"And don't be afraid of the dark..."</em></p>
+<p>The song anchored them. Kept them sane. Kept them together.</p>
+<p>They ran through impossible corridors. Through flickering reality. Through the storm.</p>
+<p>And then: the north garden. The wall. The threshold.</p>
+<p>All eight of them. Together. Alive. Ready.</p>
+<p>"Ropes!" Dmitri shouted.</p>
+<p>He and Kira scaled the wall with practiced efficiency. Ropes dropped down.</p>
+<p>"Climb!" Alexei shouted. "Everyone climb!"</p>
+<p>Dr. Tanaka went first. Then Isaiah. Then Mikhail. Then Nikolai. Then Dmitri from the other side, helping.</p>
+<p>Just Alexei and Marcus left.</p>
+<p>"Go!" Alexei said.</p>
+<p>"Together," Marcus insisted.</p>
+<p>They climbed together, side by side, two men who'd become brothers, two revolutionaries who'd become friends.</p>
+<p>At the top of the wall, Alexei looked back. At the facility. At the prison. At the place that had tried to break them and failed.</p>
+<p>Then he looked forward. At Elena's team. At the vehicles. At freedom.</p>
+<p>"Jump!" Elena shouted.</p>
+<p>They jumped.</p>
+<p>Into arms. Into safety. Into freedom.</p>
+<p>All eight of them. Together. Alive. Free.</p>
+<p>The plan had worked.</p>
+<p>They'd walked through the storm.</p>
+<p>They'd never walked alone.</p>
+<p>And now, they were free.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="17-the-inside-help.html" class="nav-button">← Previous: Chapter 17: The Inside Help</a>
+            <div class="nav-center">Chapter 18: The Plan</div>
+            <a href="19-the-fact-storm.html" class="nav-button">Next: Chapter 19: The Fact Storm →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

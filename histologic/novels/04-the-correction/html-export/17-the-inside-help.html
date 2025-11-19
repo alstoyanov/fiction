@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="16-the-alliance.html" class="nav-button">← Previous: Chapter 16: The Alliance</a>
+            <div class="nav-center">Chapter 17: The Inside Help</div>
+            <a href="18-the-plan.html" class="nav-button">Next: Chapter 18: The Plan →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Dmitri Volkov (third-person limited) | <strong>Timeline:</strong> August 22, 2106 - 0800-1300 hours (6 hours to 1 hour before escape)</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 17: The Inside Help</h1>
+<h2>POV: Dmitri Volkov</h2>
+<p>Six hours until escape. 0800 hours. Breakfast in the dining hall, everyone acting normal, everyone screaming inside.</p>
+<p>Dmitri ate his meal mechanically, his tactical mind running through the plan for the hundredth time. Three possible routes. Four-meter wall. Fifteen-minute window. Eight people to coordinate. Infinite things that could go wrong.</p>
+<p>He'd led operations before. Raids on resistance safe houses. Arrests of high-value targets. Tactical insertions into hostile territory. But he'd always had backup. Always had support. Always had the full weight of the system behind him.</p>
+<p>Now he had seven people, one corrupt director, and hope.</p>
+<p>It would have to be enough.</p>
+<p>Across the dining hall, Director Kovač entered. She looked tired, troubled, like she hadn't slept. She scanned the room, her eyes landing on Dr. Tanaka, then moving to Dmitri.</p>
+<p>A small nod. Almost imperceptible.</p>
+<p>She was in. She was committed.</p>
+<p>Dmitri felt relief and guilt in equal measure. Relief that they had inside help. Guilt that they were asking someone to destroy their life for them.</p>
+<p>After breakfast, during his assigned work time in the garden, Dmitri found himself alone with Dr. Tanaka.</p>
+<p>"She nodded," he said quietly, pretending to prune a brass-reinforced rosebush. "Kovač. She's committed."</p>
+<p>"I know. She told me this morning." Dr. Tanaka's voice was sad. "She's terrified. But she's doing it anyway."</p>
+<p>"Why? Why would she risk everything for us?"</p>
+<p>"Because she can't live with herself if she doesn't. Because guilt without action is just self-indulgence. Because she wants to be able to look at herself in the mirror." Dr. Tanaka paused. "Because she's a good person who made bad choices, and this is her chance to make a good choice."</p>
+<p>"She's going to lose everything."</p>
+<p>"Yes. And she knows it. And she's doing it anyway." Dr. Tanaka looked at him. "That's courage, Dmitri. That's real courage. Not the absence of fear, but action despite fear."</p>
+<p>Dmitri thought about his own courage. About three years of hunting his brother. About the rigid certainty that had guided him. About the moment in the storage room when he'd broken down and cried and been forgiven.</p>
+<p>"I spent three years being certain," he said. "Certain I was right. Certain my brother was wrong. Certain the system was good and the resistance was evil. That certainty made me cruel. Made me hunt my own family. Made me into someone I don't recognize."</p>
+<p>"And now?"</p>
+<p>"Now I'm uncertain about everything. Except one thing: I love my brothers. I love this group. I love the idea that we can fix things. That certainty—the certainty of love—that's enough."</p>
+<p>"That's wisdom, Dmitri. That's growth." Dr. Tanaka smiled. "You're not the rigid enforcer anymore. You're a leader. A protector. A brother."</p>
+<p>"I'm still tactical. Still strategic. Still thinking three steps ahead."</p>
+<p>"Good. We need that. But now you're using those skills to protect instead of hunt. To free instead of capture. To build instead of break."</p>
+<p>They worked in silence for a moment, two people preparing for revolution, preparing for freedom, preparing for whatever came next.</p>
+<p>"Dr. Tanaka," Dmitri said. "After we escape. After we split up. You're going to Chronos. Why?"</p>
+<p>"Because I can help there. Because they need doctors who understand correction trauma. Because I can build support for reform." She paused. "And because I need distance from Veridica. I need to heal from what I've done here. What I've been complicit in."</p>
+<p>"You're a good person."</p>
+<p>"I'm a person who did bad things for good reasons. That doesn't make me good. It makes me human." Dr. Tanaka looked at her hands. "I corrected people, Dmitri. I broke them. I told myself it was healing, but it was just breaking. I have to live with that. And I have to do better."</p>
+<p>"We all have to do better."</p>
+<p>"Yes. That's the work. That's the mission. Not just escaping. Not just surviving. Doing better. Being better. Building better."</p>
+<hr />
+<p>At 1000 hours, Dmitri was called to Director Kovač's office. His heart hammered. Was this it? Had she changed her mind? Had they been discovered?</p>
+<p>He entered to find Kovač sitting at her desk, looking older than her years.</p>
+<p>"Sit, Dmitri," she said.</p>
+<p>He sat, every muscle tense, ready to fight if necessary.</p>
+<p>"I want to go over the plan," Kovač said. "One more time. To make sure I understand my role."</p>
+<p>"You're helping us."</p>
+<p>"I'm looking the other way. There's a difference." Kovač pulled up a screen. "At 1355, when the fact storm hits, I'll initiate emergency evacuation protocols. Staff will evacuate to the east wing, away from the north garden. I'll make sure no guards are stationed near your escape route."</p>
+<p>"What about the inmates who aren't escaping?"</p>
+<p>"They'll be locked in their cells for their safety. Standard protocol during fact storms." Kovač's expression was pained. "I wish I could free everyone. But I can't. Eight is all I can manage. Eight is all I can hide."</p>
+<p>"Eight is enough. Eight is more than enough."</p>
+<p>"Is it?" Kovač looked at him. "There are forty-two inmates in this facility, Dmitri. I'm freeing eight and leaving thirty-four. How is that enough?"</p>
+<p>"Because those eight will fight to free the others. Because those eight will expose the system. Because those eight will make sure no one else ends up here." Dmitri leaned forward. "You can't save everyone, Director. But you can save us. And we'll save the others. That's how it works. That's how change happens. One person helps a few. Those few help more. Eventually, everyone is helped."</p>
+<p>"That's optimistic."</p>
+<p>"That's necessary." Dmitri paused. "Director, why are you really doing this? Dr. Tanaka told me about Sarah, about your guilt. But there's more, isn't there?"</p>
+<p>Kovač was silent for a long moment. Then she pulled up a file. A photo of a young woman, maybe twenty-five, with Kovač's eyes.</p>
+<p>"My daughter," Kovač said. "Mira. She was convicted of ideological contamination two years ago. Sent to a facility like this one. I thought... I thought correction would help her. Would fix her. Would bring her back."</p>
+<p>"What happened?"</p>
+<p>"She came back. Compliant. Obedient. Empty." Kovač's voice broke. "She's not my daughter anymore. She's a shell. A puppet. She says the right things, does the right things, believes the right things. But she's not there. The person I loved is gone."</p>
+<p>"I'm sorry."</p>
+<p>"I did that to her. I approved her correction. I signed the order. I thought I was helping." Kovač closed the file. "I can't undo what was done to Mira. But I can prevent it from happening to eight more people. I can make sure Sarah's sacrifice wasn't for nothing. I can do one good thing before I lose everything."</p>
+<p>Dmitri understood. This wasn't just about guilt. This was about love. About a mother trying to save someone else's children because she couldn't save her own.</p>
+<p>"Thank you," he said. "For helping us. For choosing right over safe. For being brave."</p>
+<p>"I'm not brave. I'm terrified."</p>
+<p>"That's what makes it brave. Courage isn't the absence of fear. It's action despite fear."</p>
+<p>Kovač smiled slightly. "Dr. Tanaka said the same thing."</p>
+<p>"She's wise."</p>
+<p>"So are you. All of you." Kovač stood. "Six hours, Dmitri. Six hours until I commit treason. Six hours until I lose everything. Six hours until I finally do something right."</p>
+<p>"You've done right things before."</p>
+<p>"Not enough. Never enough." Kovač moved to the window, looked out at the garden. "When you're over that wall, when you're free, promise me something."</p>
+<p>"What?"</p>
+<p>"Promise me you'll fight. Not just for yourselves. For everyone. For Mira. For Sarah. For all the people who've been broken by this system. Promise me you'll make it mean something."</p>
+<p>"I promise. We all promise."</p>
+<p>"Good." Kovač turned back. "Now go. Act normal. Don't give anything away. And at 1355, be ready."</p>
+<p>"We'll be ready."</p>
+<p>Dmitri left the office, his mind racing. Kovač's daughter. Broken by the system her mother ran. The guilt. The grief. The desperate need to make amends.</p>
+<p>He understood that need. He'd felt it himself. The need to make right what you'd made wrong. The need to save others because you couldn't save the one you loved.</p>
+<hr />
+<p>At 1200 hours, Dmitri found his brothers in the library. They sat together, three identical faces, three different expressions.</p>
+<p>"Kovač is committed," Dmitri said quietly. "She's in. She'll clear the path."</p>
+<p>"Good," Alexei said. "Elena confirmed extraction team is ready. They'll be at the north wall at 1405. We just have to get there."</p>
+<p>"We'll get there," Nikolai said. "All systems are ready. When I trigger the sabotage, this place will go dark. Fifteen minutes of chaos. Fifteen minutes of freedom."</p>
+<p>They sat in silence, three brothers who'd been enemies, now allies, now preparing to escape together.</p>
+<p>"I'm scared," Nikolai admitted.</p>
+<p>"So am I," Dmitri said.</p>
+<p>"So am I," Alexei agreed.</p>
+<p>"Good," Dmitri said. "Fear keeps us sharp. Fear keeps us alive. Fear keeps us human."</p>
+<p>"You sound like Mikhail," Alexei said, smiling.</p>
+<p>"Mikhail's wisdom is contagious." Dmitri looked at his brothers. "Whatever happens today, whatever comes next, I want you to know: I'm proud to be your brother. I'm proud we found each other again. I'm proud we're doing this together."</p>
+<p>"We're proud of you too," Nikolai said. "You changed, Dmitri. You grew. You chose family over duty. That took courage."</p>
+<p>"It took love," Dmitri corrected. "Love is what makes us brave. Love is what makes us strong. Love is what makes us human."</p>
+<p>"Love and fear," Alexei said. "We're full of contradictions."</p>
+<p>"We contain multitudes," Dmitri agreed. "And that's enough."</p>
+<p>They clasped hands in the center of their circle. Three hands, identical, united.</p>
+<p>"For family," Alexei said.</p>
+<p>"For truth," Dmitri added.</p>
+<p>"For freedom," Nikolai finished.</p>
+<p>They held the moment, three brothers preparing to walk through chaos, preparing to be free, preparing to never be separated again.</p>
+<hr />
+<p>At 1300 hours, one hour before escape, Dmitri walked the primary route one last time. East corridor, past the library, through the garden entrance, to the north wall.</p>
+<p>He memorized every detail. Every door. Every turn. Every potential obstacle. Every possible problem.</p>
+<p>The tactical part of his mind catalogued it all: Distance: 247 meters. Time at normal pace: 3 minutes. Time at run: 90 seconds. Doors: 4. Turns: 6. Potential guard positions: 8 (all should be evacuated). Potential problems: infinite.</p>
+<p>But the human part of his mind thought about other things. About his brothers. About the group. About Kovač's daughter. About all the people who'd been broken by the system.</p>
+<p>About the fact that in one hour, he would lead eight people to freedom or death.</p>
+<p>No pressure.</p>
+<p>He reached the north wall. Four meters high. Brass-reinforced stone. Sensors disabled. Ropes prepared. Extraction team waiting on the other side.</p>
+<p>This was it. This was the threshold. This was where captivity ended and freedom began.</p>
+<p>Or where life ended and death began.</p>
+<p>Either way, they were crossing this wall. Together.</p>
+<p>Dmitri touched the brass-reinforced stone, felt its solidity, its permanence, its promise that some things could contain you.</p>
+<p>But walls could be climbed. Barriers could be crossed. Prisons could be escaped.</p>
+<p>In one hour, he would prove it.</p>
+<p>He returned to his cell and sat on his bed, breathing slowly, centering himself, preparing for what came next.</p>
+<p>He'd been an enforcer. A hunter. A rigid believer in systems and order.</p>
+<p>Now he was a liberator. A protector. A brother.</p>
+<p>The transformation was complete. The old Dmitri was gone. The new Dmitri was ready.</p>
+<p>For escape. For freedom. For whatever came next.</p>
+<p>One hour. Sixty minutes. Three thousand six hundred seconds.</p>
+<p>And then: everything would change.</p>
+<p>The inside help was secured. The tactical plan was solid. The route was memorized.</p>
+<p>Now all they had to do was execute.</p>
+<p>And survive.</p>
+<p>And walk through the storm together.</p>
+<p>Dmitri closed his eyes and thought about his brothers. About the group. About Kovač and her daughter. About all the people who needed them to succeed.</p>
+<p>They wouldn't fail. They couldn't fail.</p>
+<p>Too much was riding on this. Too many people were counting on them.</p>
+<p>One hour.</p>
+<p>He was ready.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="16-the-alliance.html" class="nav-button">← Previous: Chapter 16: The Alliance</a>
+            <div class="nav-center">Chapter 17: The Inside Help</div>
+            <a href="18-the-plan.html" class="nav-button">Next: Chapter 18: The Plan →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

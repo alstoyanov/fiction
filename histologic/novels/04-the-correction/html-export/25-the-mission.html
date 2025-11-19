@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="24-the-love.html" class="nav-button">← Previous: Chapter 24: The Love</a>
+            <div class="nav-center">Chapter 25: The Mission</div>
+            <a href="26-epilogue.html" class="nav-button">Next: Epilogue: Seven Paths →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Marcus Chen (third-person limited) | <strong>Timeline:</strong> November 14, 2106 - Three months after escape</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 25: The Mission</h1>
+<h2>POV: Marcus Chen</h2>
+<p>Three months after escape. November 14, 2106. The mission was clear. The path was set. The future was possible.</p>
+<p>Marcus stood on the rooftop of their current safe house—the seventh in three months—looking out at Veridica. The city had changed. The protests had grown. The government had cracked down, but the resistance had grown faster.</p>
+<p>Change was happening. Slowly. Painfully. But happening.</p>
+<p>Beside him, Kira reviewed intelligence reports on her tablet. They'd built a network of forty-three allies now. Reformist believers scattered throughout the government, the universities, the factorepo systems. People who wanted change. People who were willing to fight for it.</p>
+<p>"Minister Li Chen is introducing a reform bill next week," Kira said. "Demanding independent oversight of The Judge. Demanding transparency in conviction processes. Demanding investigation into Minister Chen Zhao's actions."</p>
+<p>"Will it pass?" Marcus asked.</p>
+<p>"No. Not yet. Chen Zhao still has too much power. Too many allies. Too much control." Kira looked up. "But it's a start. It's a public challenge. It's proof that reform is possible. That's what matters."</p>
+<p>"Progress, not perfection."</p>
+<p>"Exactly." Kira smiled. "You're learning pragmatism."</p>
+<p>"You're teaching me." Marcus wrapped an arm around her. "Three months. We've been doing this for three months. Living in hiding. Building the network. Fighting for reform. And we're still alive. Still together. Still winning."</p>
+<p>"Slowly winning."</p>
+<p>"Winning is winning." Marcus pulled up his own tablet. "Updates from the others?"</p>
+<p>"Dr. Tanaka has built a coalition of three nations supporting Veridica reform. Chronos, two smaller Histonations. They're applying diplomatic pressure. Threatening trade sanctions if Veridica doesn't investigate the corruption."</p>
+<p>"That's significant."</p>
+<p>"Very. International pressure is working. The government can ignore internal dissent, but they can't ignore international consequences."</p>
+<p>"What about Isaiah?"</p>
+<p>"Published his third article yesterday. 'The Resistance: Three Months of Revolution.' Documenting everything. The freed inmates. The growing network. The government's response. The international pressure. It's gone viral again. Fifty million views and climbing."</p>
+<p>Marcus felt pride surge through him. Isaiah was doing what he did best: bearing witness. Documenting. Telling the truth.</p>
+<p>"Dmitri and Alexei?"</p>
+<p>"Freed thirty-seven more inmates in three months. The resistance network is over two hundred people now. They're planning larger operations. Coordinated strikes. Mass protests." Kira paused. "They're also planning something big. Something Elena won't tell us about yet. Something that might change everything."</p>
+<p>"Should we be worried?"</p>
+<p>"Always. But also hopeful. Elena knows what she's doing. She's been doing this for years."</p>
+<p>"What about Nikolai?"</p>
+<p>"Built a completely new factorepo architecture. One that can't be manipulated. One with real transparency. One with distributed verification instead of centralized control." Kira's eyes lit up—she loved good systems. "It's brilliant, Marcus. It's what Histologic should have been from the start. If we can implement it, if we can replace the current system, we actually fix everything."</p>
+<p>"That's ambitious."</p>
+<p>"That's necessary." Kira looked at him. "Marcus, we're not just fighting against the corrupt system. We're building a better one. That's the mission. That's what makes this worth it."</p>
+<p>"Building, not just destroying."</p>
+<p>"Exactly."</p>
+<p>They stood in comfortable silence, two people who'd become partners in every sense, two revolutionaries who'd become builders, two outlaws who'd become architects of a better future.</p>
+<p>"Marcus," Kira said softly. "Do you ever regret it? Staying here? Choosing the most dangerous path? You could have gone to Chronos or SFW. You could have been safe."</p>
+<p>"Never. Not once. Not for a second." Marcus turned to face her. "This is where I belong. This is what I'm meant to do. And I'm doing it with you. That's all I need."</p>
+<p>"Even if we fail? Even if the system doesn't change? Even if we die trying?"</p>
+<p>"Even then. Because we tried. Because we fought. Because we chose right over safe. That's enough." Marcus kissed her. "Besides, we're not going to fail. We're going to win. Slowly. Painfully. But we're going to win."</p>
+<p>"You sound certain."</p>
+<p>"I am certain. Not the old certainty—the rigid, system-based certainty that made me cruel. But a new certainty. A human certainty. The certainty that comes from love and choice and commitment." Marcus smiled. "I'm certain that we're doing the right thing. I'm certain that change is possible. I'm certain that I love you. That's enough certainty for me."</p>
+<p>Kira's eyes were wet. "I love you too. So much. Forever."</p>
+<p>"Forever," Marcus agreed.</p>
+<hr />
+<p>That evening, they hosted a meeting of their network. Forty-three people crammed into a warehouse, all risking everything to be there, all committed to reform.</p>
+<p>Marcus stood at the front, Kira beside him, looking at the faces of their allies. Professors and students. Government officials and factorepo technicians. Enforcers and analysts. Believers who wanted their system to actually work.</p>
+<p>"Thank you for coming," Marcus said. "Thank you for risking everything. Thank you for believing that change is possible."</p>
+<p>He pulled up a presentation—Nikolai's new factorepo architecture.</p>
+<p>"This is what we're building. Not just resistance. Not just protest. But a real alternative. A system that actually works. A Histologic that serves truth instead of power."</p>
+<p>He walked them through it. The distributed verification. The transparency protocols. The safeguards against manipulation. The independence from government control.</p>
+<p>"This is what Histologic should have been from the start. This is what we're fighting for. Not to destroy the system, but to perfect it. To make it actually work the way it was supposed to."</p>
+<p>The room was silent, everyone absorbing the implications.</p>
+<p>Professor Okonkwo spoke first: "This is brilliant. This is exactly what we need. But how do we implement it? The government will never voluntarily adopt this. They'll fight it. They'll suppress it. They'll kill us for even suggesting it."</p>
+<p>"You're right," Kira said, stepping forward. "They will fight it. That's why we don't ask permission. We build it anyway. We implement it in parallel. We prove it works. And then we give people a choice: the corrupt system or the real one."</p>
+<p>"That's revolution," Minister Li Chen said. "That's overthrowing the government."</p>
+<p>"No," Marcus said firmly. "That's reform. Revolution destroys and rebuilds. Reform transforms from within. We're not overthrowing the government. We're giving them a choice: adapt or become irrelevant."</p>
+<p>"And if they choose to become irrelevant?"</p>
+<p>"Then they become irrelevant. Then people choose the system that works. Then change happens naturally, organically, inevitably."</p>
+<p>The room erupted in discussion. Questions. Concerns. Ideas. Hope.</p>
+<p>Marcus watched them debate, watched them engage, watched them believe that change was possible.</p>
+<p>This was the mission. Not just fighting against corruption. But building something better. Giving people a choice. Proving that reform was possible.</p>
+<p>After two hours, they voted. Forty-three people. Forty-three votes.</p>
+<p>Unanimous. They would build Nikolai's system. They would implement it in parallel. They would give people a choice.</p>
+<p>The mission was set. The path was clear. The future was possible.</p>
+<hr />
+<p>Late that night, Marcus and Kira lay in bed, exhausted but hopeful.</p>
+<p>"We're really doing this," Marcus said. "We're really building an alternative system. We're really trying to change everything."</p>
+<p>"We are. And we're going to succeed." Kira's voice was confident. "Not tomorrow. Not next month. Maybe not for years. But we're going to succeed."</p>
+<p>"How can you be so sure?"</p>
+<p>"Because we have something the government doesn't. We have truth. We have integrity. We have people who believe in the mission more than they fear the consequences." Kira turned to face him. "And we have love. Love for each other. Love for the ideal. Love for the people we're fighting for. That's stronger than any system. That's stronger than any government. That's what makes us unstoppable."</p>
+<p>Marcus held her close. "I love you. I love this mission. I love what we're building. I love that we're doing it together."</p>
+<p>"Together," Kira agreed. "Always together."</p>
+<p>They fell asleep holding each other, two people who'd found love in the worst place possible, two revolutionaries who'd become builders, two outlaws who'd become architects of a better future.</p>
+<hr />
+<p>The next morning, Marcus woke to a message from Elena. Encrypted. Urgent.</p>
+<p><strong>MARCUS, KIRA - TOMORROW, NOVEMBER 15, BETWEEN 14:00 AND 15:00, SOMETHING BIG IS HAPPENING. THE RESISTANCE IS PLANNING AN OPERATION. MULTIPLE OPERATIONS. AND SOMEONE IN THE GOVERNMENT IS PLANNING SOMETHING TOO. IT'S GOING TO BE CHAOS. IT'S GOING TO BE DANGEROUS. DOCUMENT EVERYTHING. WHATEVER HAPPENS TOMORROW, MAKE SURE IT'S RECORDED. MAKE SURE IT'S NOT FORGOTTEN. - E</strong></p>
+<p>Marcus showed it to Kira.</p>
+<p>"Tomorrow," she said. "Between 14:00 and 15:00. What's happening?"</p>
+<p>"I don't know. But Elena says to document everything. To make sure it's recorded."</p>
+<p>"Then that's what we do. We document. We record. We bear witness." Kira pulled up her calendar. "November 15, 14:00 to 15:00. We'll be ready. Whatever happens, we'll make sure it's remembered."</p>
+<p>Marcus nodded. Tomorrow. Something big. Something that might change everything.</p>
+<p>But today, they had work to do. A network to build. A system to create. A future to make possible.</p>
+<p>The mission was clear. The path was set. The future was bright.</p>
+<p>And they were ready.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="24-the-love.html" class="nav-button">← Previous: Chapter 24: The Love</a>
+            <div class="nav-center">Chapter 25: The Mission</div>
+            <a href="26-epilogue.html" class="nav-button">Next: Epilogue: Seven Paths →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

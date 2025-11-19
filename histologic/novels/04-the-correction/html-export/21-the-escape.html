@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="20-the-breakout.html" class="nav-button">← Previous: Chapter 20: The Breakout</a>
+            <div class="nav-center">Chapter 21: The Escape</div>
+            <a href="22-the-pursuit.html" class="nav-button">Next: Chapter 22: The Pursuit →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Dmitri Volkov (third-person limited) | <strong>Timeline:</strong> August 23, 2106 - 18 hours after escape, continuing</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 21: The Escape</h1>
+<h2>POV: Dmitri Volkov</h2>
+<p>Mobile operations. Constant movement. Never staying in one place. This was Dmitri's life now.</p>
+<p>He sat in the back of a resistance transport, reviewing maps and intelligence reports. Beside him, Alexei cleaned weapons. Across from them, Mikhail hummed old songs. Elena drove, her eyes on the road, her mind on the mission.</p>
+<p>They'd been moving for eighteen hours straight. Three operations. Two successful extractions. One close call with enforcers.</p>
+<p>And they were just getting started.</p>
+<p>"Next target," Elena said, pulling up a holographic display. "Correction Facility Seven. Smaller than where you were held. Forty inmates. We're extracting three."</p>
+<p>"Why only three?" Dmitri asked.</p>
+<p>"Because three are ready. Three want out. Three have skills we need." Elena highlighted three profiles. "Dr. Marcus Venn, neural specialist. Convicted for questioning correction protocols. We need his expertise."</p>
+<p>"Second?" Alexei asked.</p>
+<p>"Lieutenant Sarah Volkov. Yes, another Volkov. Distant cousin. Tactical specialist. Convicted for refusing to execute an outlaw who turned out to be innocent. We need her skills."</p>
+<p>Dmitri felt a chill. A Volkov who'd been convicted for doing the right thing. Family he didn't know he had.</p>
+<p>"Third?" Mikhail asked.</p>
+<p>"Thomas Chen. Marcus's cousin. Data analyst. Convicted for discovering evidence of fact manipulation. We need his analytical skills."</p>
+<p>"Marcus's cousin," Dmitri said. "Does Marcus know?"</p>
+<p>"Not yet. We'll tell him after the extraction. After Thomas is safe." Elena pulled up the facility schematic. "Facility Seven is smaller but more secure. Newer technology. Better trained guards. This won't be easy."</p>
+<p>"When is it ever easy?" Alexei said, smiling.</p>
+<p>"Never. That's why we're good at it." Elena looked at her nephews. "Dmitri, you'll lead the tactical insertion. Alexei, you'll coordinate with our inside contact. Mikhail, you'll handle the extraction vehicle. I'll provide overwatch and communications."</p>
+<p>"Inside contact?" Dmitri asked.</p>
+<p>"Guard named Peterson. His daughter was corrected. Came back broken. He wants revenge. He's willing to help."</p>
+<p>"Can we trust him?"</p>
+<p>"No. But we can use him. And we'll be ready if he betrays us." Elena's expression was hard. "Trust is a luxury we can't afford. We verify, we prepare contingencies, and we adapt when things go wrong."</p>
+<p>Dmitri nodded. It was the same tactical philosophy he'd used as an enforcer. Except now he was using it to free people instead of capture them.</p>
+<p>"Timeline?" he asked.</p>
+<p>"Tonight. 0200 hours. Fact storm as distraction, same as your escape. But smaller. More controlled. Less collateral damage."</p>
+<p>"Can you control fact storms that precisely?" Alexei asked.</p>
+<p>"I'm learning. Each one teaches me more. Each one gets more precise." Elena's voice was grim. "But yes, there's always collateral damage. Always civilians caught in the chaos. Always people who suffer so others can be free. That's the cost of revolution."</p>
+<p>Dmitri thought about the civilians he'd seen during their escape. The screaming. The confusion. The madness.</p>
+<p>"How do you live with it?" he asked. "The collateral damage. The innocent people who suffer."</p>
+<p>Elena was quiet for a long moment. "I don't live with it. I carry it. Every person who suffers because of my actions—I remember them. I honor them. I promise them that their suffering will mean something. That the world I'm building will be better. That their pain will purchase freedom for others."</p>
+<p>"And if it doesn't? If we fail? If all this suffering is for nothing?"</p>
+<p>"Then I'll have to live with that too. Or die with it." Elena met his eyes in the rearview mirror. "Dmitri, you were an enforcer. You captured people. Imprisoned them. Some of them innocent. How did you live with that?"</p>
+<p>"I told myself I was maintaining order. Serving the greater good. Following the law."</p>
+<p>"And now?"</p>
+<p>"Now I know that order built on injustice is just organized oppression. That the greater good that harms innocents isn't good at all. That following unjust laws makes you complicit in injustice." Dmitri looked at his hands. "I can't undo what I did. But I can do better. I can free people instead of imprison them. I can protect instead of hunt. I can be better than I was."</p>
+<p>"That's all any of us can do," Mikhail said softly. "Be better than we were. Do better than we did. Build better than what we inherited."</p>
+<p>They drove in silence for a while, four people carrying the weight of their choices, four people trying to build something better from the ruins of what they'd helped break.</p>
+<hr />
+<p>At 0130 hours, they were in position outside Facility Seven. Dmitri wore tactical gear—not enforcer gear, but close enough. Alexei had a comm device linked to Peterson, the inside contact. Mikhail waited in the extraction vehicle. Elena monitored from a rooftop half a kilometer away.</p>
+<p>"Peterson confirms ready," Alexei whispered. "He'll unlock the north entrance at 0200. We'll have five minutes before the security system notices."</p>
+<p>"Fact storm?" Dmitri asked.</p>
+<p>"Elena triggers at 0200. Smaller than last time. Radius of two kilometers. Duration of ten minutes. Should be enough."</p>
+<p>"Should be."</p>
+<p>"Nothing's certain, brother. We adapt or we die."</p>
+<p>Dmitri smiled. Kira had said the same thing. Maybe it was the resistance motto.</p>
+<p>At 0200, the world flickered.</p>
+<p>The fact storm hit. Smaller than the one at their facility, but still disorienting. Reality wavered. The walls of Facility Seven shimmered between brass and stone and glass.</p>
+<p>"Go!" Dmitri commanded.</p>
+<p>They moved. Through the north entrance. Peterson was there, as promised, holding the door open.</p>
+<p>"Three inmates," Peterson said. "Cell block C. Cells 12, 15, and 18. I've unlocked them. You have four minutes before the system recovers."</p>
+<p>"Thank you," Dmitri said.</p>
+<p>"Don't thank me. Just get them out. Just make this mean something." Peterson's face was haunted. "My daughter—she's gone. The person she was is gone. But maybe these three can be saved. Maybe their families won't have to suffer like I have."</p>
+<p>"We'll get them out," Alexei promised. "And we'll make it mean something."</p>
+<p>They ran through corridors that flickered and shifted. The fact storm made navigation difficult, but Dmitri's tactical training helped. He'd memorized the schematic. He knew the route.</p>
+<p>Cell block C. Cells 12, 15, 18.</p>
+<p>Dr. Marcus Venn: Older man, maybe sixty, with kind eyes and steady hands.</p>
+<p>Lieutenant Sarah Volkov: Young woman, maybe thirty, with Dmitri's eyes and Alexei's smile. Family.</p>
+<p>Thomas Chen: Young man, maybe twenty-five, with Marcus's analytical intensity.</p>
+<p>"We're resistance," Dmitri said quickly. "We're here to extract you. You have two minutes to decide: stay and be corrected, or come with us and be free. Choose now."</p>
+<p>"Free," Dr. Venn said immediately.</p>
+<p>"Free," Lieutenant Volkov agreed.</p>
+<p>"Free," Thomas Chen confirmed.</p>
+<p>"Then run. Follow me. Don't stop. Don't look back. Don't question. Just run."</p>
+<p>They ran.</p>
+<p>Through flickering corridors. Through impossible architecture. Through reality that wouldn't stay consistent.</p>
+<p>Alarms started blaring. The system was recovering faster than expected.</p>
+<p>"Faster!" Dmitri shouted.</p>
+<p>They burst out the north entrance. Peterson was gone—smart man, covering his tracks. They sprinted toward the extraction point.</p>
+<p>Behind them, guards emerged. Shouting. Weapons drawn.</p>
+<p>"Alexei!" Dmitri shouted. "Suppression!"</p>
+<p>Alexei turned, fired a suppression device. Not lethal—the resistance didn't kill unless absolutely necessary. But enough to create smoke, confusion, cover.</p>
+<p>They reached the extraction vehicle. Mikhail already had it running.</p>
+<p>"In! Now!" Mikhail commanded.</p>
+<p>They piled in. All six of them. Dmitri, Alexei, and three freed inmates.</p>
+<p>Mikhail drove. Fast. Precise. The old man had skills Dmitri hadn't suspected.</p>
+<p>"Where'd you learn to drive like this?" Dmitri asked.</p>
+<p>"I'm old, not useless," Mikhail replied, grinning. "I've been in more escapes than you've had birthdays, young Dmitri."</p>
+<p>They sped through the city. The fact storm was ending. Reality stabilized. Behind them, pursuit vehicles emerged.</p>
+<p>"They're following," Alexei said, checking the rear monitor.</p>
+<p>"I see them," Mikhail said calmly. He turned down an alley, then another, then through a maintenance tunnel. "Hold on."</p>
+<p>He drove like he was conducting a symphony. Every turn precise. Every acceleration calculated. Every maneuver perfect.</p>
+<p>The pursuit vehicles fell behind, unable to match his skill.</p>
+<p>Ten minutes later, they were clear. No pursuit. No tracking. No immediate danger.</p>
+<p>"We made it," Dr. Venn said, his voice wondering.</p>
+<p>"We made it," Lieutenant Volkov agreed.</p>
+<p>"We actually made it," Thomas Chen added.</p>
+<p>Dmitri looked at the three freed inmates. Three more people saved. Three more families who wouldn't suffer. Three more lives given a second chance.</p>
+<p>"Welcome to the resistance," he said. "Welcome to freedom. Welcome to the fight."</p>
+<hr />
+<p>Two hours later, at a resistance safe house, Dmitri sat with Lieutenant Sarah Volkov.</p>
+<p>"You're family," he said. "Distant cousin. I didn't know you existed."</p>
+<p>"I didn't know you existed either. Our branch of the family doesn't talk to your branch. Some old feud. Something about ideology." Sarah smiled. "Ironic, isn't it? Family divided by belief. And now we're united by rebellion."</p>
+<p>"Very ironic." Dmitri studied her face. She had his eyes. Alexei's smile. Nikolai's intensity. "Why were you convicted?"</p>
+<p>"I was ordered to execute an outlaw. A woman who'd been caught helping people escape. I was supposed to shoot her without trial, without judgment, without mercy." Sarah's expression darkened. "I refused. I said she deserved a trial. I said everyone deserves due process. I said following illegal orders makes you complicit in illegality."</p>
+<p>"What happened to her? The outlaw?"</p>
+<p>"They found someone else to shoot her. Someone who didn't refuse. Someone who followed orders." Sarah's voice was bitter. "She died. I was convicted. And the system rolled on."</p>
+<p>"I'm sorry."</p>
+<p>"Don't be sorry. Be better. Be the person who refuses illegal orders. Be the person who protects instead of kills. Be the person who builds a system where orders like that don't exist."</p>
+<p>"I'm trying."</p>
+<p>"I know. I can see it." Sarah touched his shoulder. "Cousin Dmitri. We're family now. Not just by blood, but by choice. By rebellion. By the shared mission to build something better."</p>
+<p>"Family by choice," Dmitri agreed. "The best kind."</p>
+<p>They sat in comfortable silence, two Volkovs who'd been strangers, now family, now allies in revolution.</p>
+<p>Across the room, Dr. Venn was talking with Elena about neural correction techniques. Thomas Chen was analyzing data with Nikolai via secure link. Alexei was coordinating the next operation.</p>
+<p>And Mikhail was singing softly:</p>
+<p><em>"We shall overcome, we shall overcome,</em><br />
+<em>We shall overcome someday..."</em></p>
+<p>Dmitri closed his eyes and thought about the life he'd left behind. The enforcer. The hunter. The rigid believer in systems.</p>
+<p>That Dmitri was gone. Dead. Transformed.</p>
+<p>This Dmitri was a liberator. A protector. A builder of better systems.</p>
+<p>This Dmitri had freed three people tonight. Would free more tomorrow. Would keep freeing people until the system was fixed or he was dead.</p>
+<p>This Dmitri was better than the old one.</p>
+<p>And that was enough.</p>
+<p>"Next operation?" he asked Elena.</p>
+<p>"Tomorrow night. Facility Three. Four inmates. Higher security. More dangerous." Elena smiled. "But we're getting good at this. We're building a network. We're freeing people. We're making a difference."</p>
+<p>"One person at a time," Dmitri said.</p>
+<p>"One person at a time," Elena agreed. "That's how you change the world. Not all at once. Not with grand gestures. But one person, one choice, one act of courage at a time."</p>
+<p>Dmitri stood, stretched, prepared for tomorrow. For the next operation. For the next escape. For the next person saved.</p>
+<p>He was mobile now. Constantly moving. Never staying in one place.</p>
+<p>But he was also grounded. By family. By purpose. By the mission to build something better.</p>
+<p>And that was enough.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="20-the-breakout.html" class="nav-button">← Previous: Chapter 20: The Breakout</a>
+            <div class="nav-center">Chapter 21: The Escape</div>
+            <a href="22-the-pursuit.html" class="nav-button">Next: Chapter 22: The Pursuit →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

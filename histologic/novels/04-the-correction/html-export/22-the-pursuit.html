@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="21-the-escape.html" class="nav-button">← Previous: Chapter 21: The Escape</a>
+            <div class="nav-center">Chapter 22: The Pursuit</div>
+            <a href="23-the-divergence.html" class="nav-button">Next: Chapter 23: The Divergence →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Alexei Volkov (third-person limited) | <strong>Timeline:</strong> August 24, 2106 - 48 hours after escape, evening</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 22: The Pursuit</h1>
+<h2>POV: Alexei Volkov</h2>
+<p>Forty-eight hours after escape. Three operations completed. Eleven people freed. Zero casualties.</p>
+<p>Alexei sat in the resistance command center—a mobile installation that moved every twelve hours—coordinating operations across three nations. Screens surrounded him, showing live feeds, intelligence reports, resistance cell locations, government response patterns.</p>
+<p>This was his element. Not the escaping—though he was good at that. But the coordinating. The connecting. The weaving together of disparate threads into a coherent network.</p>
+<p>"Update from Chronos cell," one of Elena's operatives reported. "Dr. Tanaka arrived safely. Already making contacts with refugee organizations. She's building support fast."</p>
+<p>"Good," Alexei said, marking it on his map. "What about Isaiah in SFW?"</p>
+<p>"Arrived safely. Met with independent media contacts. Article is written. He's waiting for final approval from editorial board. Publication expected in twenty-four hours."</p>
+<p>Twenty-four hours. One day until everything changed. One day until the truth went public. One day until the real fight began.</p>
+<p>"Government response?" Alexei asked.</p>
+<p>"Escalating. Minister Chen Zhao has authorized expanded enforcement powers. Checkpoints at all major intersections. Facial recognition at all public spaces. Mandatory fact verification for all citizens." The operative pulled up a document. "They're scared. They're cracking down. They're trying to find you before Isaiah publishes."</p>
+<p>"They won't find us in time," Alexei said confidently. "We're too mobile. Too distributed. Too careful."</p>
+<p>"What about Marcus and Kira? They're staying in Veridica. They're the most at risk."</p>
+<p>Alexei pulled up their safe house location. "Last check-in was six hours ago. They're secure. They've made contact with one ally—Professor Okonkwo. Building their network. They're careful. They're smart. They'll survive."</p>
+<p>"You hope."</p>
+<p>"I know." Alexei's voice was firm. "Marcus is stubborn. Kira is brilliant. Together, they're unstoppable. They'll build their network. They'll reform from within. They'll succeed."</p>
+<p>"Or they'll die trying."</p>
+<p>"Then they'll die trying. But I don't think they will. I think they'll surprise everyone. Including themselves."</p>
+<p>The operative nodded and returned to monitoring.</p>
+<p>Alexei leaned back, looking at the map. Red dots for government facilities. Blue dots for resistance cells. Green dots for freed inmates. Yellow dots for potential allies.</p>
+<p>The network was growing. Slowly. Carefully. But growing.</p>
+<p>Forty-eight hours ago, they'd been eight prisoners. Now they were the nucleus of a revolution. Eight people who'd scattered, each building their own piece of the puzzle.</p>
+<p>Dr. Tanaka in Chronos, building international support.</p>
+<p>Isaiah in SFW, preparing to publish the truth.</p>
+<p>Dmitri and Elena, freeing inmates and building tactical capabilities.</p>
+<p>Nikolai, maintaining the technical infrastructure that kept them all connected.</p>
+<p>Mikhail, singing hope and reminding everyone why they fought.</p>
+<p>And Marcus and Kira, the crazy ones, staying in Veridica to reform from within.</p>
+<p>Eight people. Eight paths. One mission.</p>
+<p>Alexei's comm device buzzed. Encrypted message from Nikolai:</p>
+<p><strong>GOVERNMENT TRACKING ALGORITHMS UPGRADED. THEY'RE GETTING SMARTER. FACIAL RECOGNITION NOW INCLUDES GAIT ANALYSIS, VOICE PATTERNS, BEHAVIORAL MARKERS. DISGUISES ALONE WON'T BE ENOUGH. RECOMMEND ENHANCED COUNTERMEASURES.</strong></p>
+<p>Alexei swore softly. The government was adapting. Learning. Getting better at hunting them.</p>
+<p>He forwarded the message to all cells with additional instructions:</p>
+<p><strong>NEW PROTOCOLS: Vary gait patterns. Use voice modulators. Change behavioral patterns. Rotate safe houses every 48 hours instead of 72. Increase encryption layers. Assume all communications potentially compromised. Trust no one you haven't personally vetted.</strong></p>
+<p>The resistance had to stay ahead. Had to adapt faster. Had to be smarter.</p>
+<p>Another message, this time from Marcus:</p>
+<p><strong>CONTACT ESTABLISHED WITH PROFESSOR OKONKWO. SHE'S IN. INTRODUCED US TO TWO MORE: DR. VOSS (HISTORIAN) AND MINISTER LI CHEN (GOVERNMENT OFFICIAL). BUILDING NETWORK. SLOW BUT STEADY. WE'RE OKAY. KIRA SENDS LOVE TO EVERYONE. - M</strong></p>
+<p>Alexei smiled. Marcus and Kira were building their network. Three allies in forty-eight hours. Not bad.</p>
+<p>He replied:</p>
+<p><strong>GOOD WORK. BE CAREFUL. GOVERNMENT UPGRADED TRACKING. NEW PROTOCOLS SENT. STAY SAFE. STAY SMART. STAY ALIVE. ISAIAH PUBLISHES TOMORROW. EVERYTHING CHANGES THEN. LOVE TO BOTH OF YOU. - A</strong></p>
+<p>Another message, from Dr. Tanaka in Chronos:</p>
+<p><strong>MET WITH REFUGEE ORGANIZATIONS. THEY'RE INTERESTED IN SUPPORTING REFORM. ALSO MET WITH CHRONOS GOVERNMENT OFFICIALS. THEY'RE CONCERNED ABOUT VERIDICA'S INSTABILITY. MIGHT BE WILLING TO PRESSURE FOR REFORM. BUILDING INTERNATIONAL COALITION. SLOW PROGRESS BUT PROMISING. MISS YOU ALL. - Y</strong></p>
+<p>Alexei marked it on his map. International pressure. That could be useful. That could force Veridica to reform instead of just cracking down.</p>
+<p>And from Isaiah in SFW:</p>
+<p><strong>ARTICLE APPROVED. PUBLISHING TOMORROW AT 0800 SFW TIME (0600 VERIDICA TIME). HEADLINE: "THE CORRECTION: HOW VERIDICA CORRUPTED HISTOLOGIC." FULL EXPOSE. ALL EVIDENCE. ALL NAMES. MINISTER CHEN ZHAO. PROFESSOR ADRIAN VOLKOV. PROJECT CORRECTION. EVERYTHING. IT'S GOING TO BE BIG. IT'S GOING TO CHANGE EVERYTHING. READY? - I</strong></p>
+<p>Alexei's heart raced. Tomorrow. 0600 Veridica time. The truth goes public. Everything changes.</p>
+<p>He replied to all:</p>
+<p><strong>ISAIAH PUBLISHES TOMORROW 0600. BE READY. GOVERNMENT WILL CRACK DOWN HARD. GO DARK IF NECESSARY. PROTECT YOURSELVES. PROTECT YOUR NETWORKS. PROTECT EACH OTHER. THIS IS WHAT WE'VE BEEN BUILDING TOWARD. THIS IS WHEN IT GETS REAL. STAY SAFE. STAY STRONG. STAY TOGETHER. WE'LL NEVER WALK ALONE. - A</strong></p>
+<p>He sat back, looking at the map, thinking about tomorrow, about what came next.</p>
+<p>The pursuit was intensifying. The government was getting smarter. The risks were increasing.</p>
+<p>But so was the resistance. So was the network. So was the hope.</p>
+<hr />
+<p>That evening, Alexei found Mikhail sitting outside the command center, looking at the stars.</p>
+<p>"Can't sleep?" Alexei asked.</p>
+<p>"Old men don't need much sleep. We've slept enough in our lives." Mikhail patted the ground beside him. "Sit. Tell me what's troubling you."</p>
+<p>Alexei sat. "Tomorrow. Isaiah publishes. Everything changes. The government will crack down. People will be arrested. Some might die. And it's because of us. Because of what we started."</p>
+<p>"No. It's because of what the government did. You didn't corrupt the system. You didn't target innocents. You didn't build a machine that breaks people. You just exposed it. You just told the truth."</p>
+<p>"But people will suffer because we told the truth."</p>
+<p>"People were already suffering. You just made it visible." Mikhail looked at the stars. "There's an old saying: 'The truth will set you free, but first it will make you miserable.' That's where we are now. The miserable part. The part where truth causes pain because it exposes lies people were comfortable with."</p>
+<p>"How long until the freedom part?"</p>
+<p>"Years, maybe. Decades. Maybe never, fully. But that doesn't mean it's not worth doing." Mikhail started humming, then sang softly:</p>
+<p><em>"The answer, my friend, is blowin' in the wind,</em><br />
+<em>The answer is blowin' in the wind..."</em></p>
+<p>"Dylan," Alexei said. "You sang that before. In the first group session."</p>
+<p>"I did. Because it's true. Because the answers we seek—how to build a better world, how to create real justice, how to make systems serve people instead of control them—those answers are out there. Blowin' in the wind. Waiting to be found. Waiting to be lived."</p>
+<p>"What if we never find them?"</p>
+<p>"Then we keep looking. Keep trying. Keep building." Mikhail smiled. "Alexei, you've escaped four times. Four times you've been captured, imprisoned, broken. And four times you've escaped. You know why?"</p>
+<p>"Because I'm stubborn?"</p>
+<p>"Because you're hope incarnate. Because you refuse to accept that prisons are permanent. Because you believe that freedom is always possible, no matter how impossible it seems." Mikhail put a hand on Alexei's shoulder. "That's what the resistance needs. That's what the world needs. Not certainty. Not answers. But hope. The stubborn, unreasonable, impossible hope that things can be better."</p>
+<p>"I'm scared, Mikhail. Scared that we'll fail. Scared that people will die for nothing. Scared that the system is too strong, too entrenched, too powerful."</p>
+<p>"Good. Fear keeps you careful. Fear keeps you smart. Fear keeps you alive." Mikhail stood, offered his hand to Alexei. "But don't let fear stop you. Let it propel you. Let it remind you what you're fighting for. Let it make you more determined, not less."</p>
+<p>Alexei took his hand, stood. "Thank you. For the wisdom. For the songs. For reminding us that we're human."</p>
+<p>"Thank you for listening. For fighting. For refusing to accept that prisons are permanent." Mikhail smiled. "Now go. Coordinate your operations. Build your networks. Free your people. And remember: you'll never walk alone."</p>
+<p>"Never alone," Alexei agreed.</p>
+<p>He returned to the command center, to the screens and maps and messages, to the work of revolution.</p>
+<p>Tomorrow, Isaiah would publish. Tomorrow, the truth would go public. Tomorrow, everything would change.</p>
+<p>But tonight, they prepared. They coordinated. They built.</p>
+<p>Eight people, scattered across three nations, each building their piece of the puzzle.</p>
+<p>And Alexei, the coordinator, the connector, the weaver of threads, kept them all together.</p>
+<hr />
+<p>At midnight, Alexei sent one final message to all cells:</p>
+<p><strong>FORTY-EIGHT HOURS AGO, WE WERE PRISONERS. TODAY, WE'RE FREE. TOMORROW, WE BECOME REVOLUTIONARIES.</strong></p>
+<p><strong>ISAIAH PUBLISHES AT 0600. THE TRUTH GOES PUBLIC. THE GOVERNMENT WILL RESPOND WITH FORCE. BE READY.</strong></p>
+<p><strong>BUT ALSO REMEMBER: WE'RE NOT ALONE. WE'RE EIGHT PEOPLE WHO BECAME FAMILY. WE'RE A NETWORK THAT'S GROWING. WE'RE A MOVEMENT THAT'S BUILDING.</strong></p>
+<p><strong>WE'LL NEVER WALK ALONE. NOT THROUGH FACT STORMS. NOT THROUGH PURSUIT. NOT THROUGH WHATEVER COMES NEXT.</strong></p>
+<p><strong>STAY SAFE. STAY STRONG. STAY TOGETHER.</strong></p>
+<p><strong>FOR FAMILY. FOR TRUTH. FOR FREEDOM.</strong></p>
+<p><strong>- ALEXEI</strong></p>
+<p>He sent it, watched it propagate through the network, watched it reach every cell, every operative, every freed inmate.</p>
+<p>Eight people had become dozens. Dozens would become hundreds. Hundreds would become thousands.</p>
+<p>That's how revolutions worked. Not all at once. Not with grand gestures. But one person, one choice, one act of courage at a time.</p>
+<p>Alexei closed his eyes and thought about his mother. About her last words: "Take care of your brothers."</p>
+<p>He was keeping that promise. Not just his biological brothers, but all his brothers and sisters in the resistance. All the people who'd chosen freedom over safety. All the people who'd chosen truth over comfort.</p>
+<p>He was taking care of them. Coordinating them. Connecting them. Keeping them together.</p>
+<p>And tomorrow, when Isaiah published, when the truth went public, when everything changed—they would be ready.</p>
+<p>Because they were family. Because they were united. Because they would never walk alone.</p>
+<p>The pursuit was intensifying. The government was getting smarter. The risks were increasing.</p>
+<p>But so was the resistance. So was the hope. So was the certainty that change was possible.</p>
+<p>Alexei opened his eyes, looked at his screens, and smiled.</p>
+<p>Tomorrow, everything changed.</p>
+<p>And they were ready.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="21-the-escape.html" class="nav-button">← Previous: Chapter 21: The Escape</a>
+            <div class="nav-center">Chapter 22: The Pursuit</div>
+            <a href="23-the-divergence.html" class="nav-button">Next: Chapter 23: The Divergence →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

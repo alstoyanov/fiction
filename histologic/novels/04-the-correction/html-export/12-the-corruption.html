@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="11-the-network.html" class="nav-button">← Previous: Chapter 11: The Network</a>
+            <div class="nav-center">Chapter 12: The Corruption</div>
+            <a href="13-the-conscience.html" class="nav-button">Next: Chapter 13: The Conscience →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Nikolai Volkov (third-person limited) | <strong>Timeline:</strong> August 18, 2106 (Day 18 in facility) - 4 days until escape</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 12: The Corruption</h1>
+<h2>POV: Nikolai Volkov</h2>
+<p>Four days until escape. Ninety-six hours. Five thousand seven hundred sixty minutes. Three hundred forty-five thousand six hundred seconds.</p>
+<p>Nikolai counted time in multiple units because it helped him stay calm. Numbers were reliable. Numbers didn't betray you. Numbers didn't turn out to be Architects who experimented on their own nephews.</p>
+<p>He sat in the maintenance room at 0200, surrounded by servers and screens, preparing the final pieces of his sabotage. Four days wasn't much time, but it was enough. It had to be.</p>
+<p>On his main screen: the facility's complete system architecture. Security cameras, door locks, alarm systems, communication networks, power grid, backup generators. Everything connected, everything networked, everything vulnerable.</p>
+<p>Nikolai had spent two weeks mapping it all, finding the weak points, creating backdoors, planting digital time bombs that would detonate when he triggered them.</p>
+<p>In four days, at precisely 1355 hours, he would press one button. And the entire facility's security infrastructure would collapse.</p>
+<p>It was elegant. It was terrifying. It was necessary.</p>
+<p>He pulled up another screen: his uncle's files. Professor Adrian Volkov. The Architect. The family traitor.</p>
+<p>Nikolai had been digging deeper, trying to understand. Why? Why would their uncle—their father's brother, the man who'd taught them history, who'd encouraged their education—why would he target them?</p>
+<p>The files were clinical, detached:</p>
+<p><strong>PROJECT CORRECTION - SUBJECT GROUP ANALYSIS</strong><br />
+<strong>Volkov Triplets: Ideal test subjects for family bond disruption</strong><br />
+<strong>Hypothesis: Can systematic ideological separation overcome genetic/familial connection?</strong><br />
+<strong>Method: Place triplets on opposing ideological paths. Enforce through conviction and correction. Monitor for bond degradation.</strong><br />
+<strong>Expected Outcome: Complete separation. Proof that system can overcome even strongest familial bonds.</strong><br />
+<strong>Actual Outcome: [PENDING]</strong></p>
+<p>Nikolai felt sick. They weren't nephews to him. They weren't family. They were data points. Variables in an experiment.</p>
+<p>And the experiment had failed. Because instead of breaking apart, they'd come back together. Stronger than before.</p>
+<p>He kept reading:</p>
+<p><strong>PERSONAL NOTE - A. VOLKOV:</strong><br />
+<strong>The triplets represent perfect test case. Identical genetics, shared upbringing, strong bond. If the system can separate them, it can separate anyone. This is necessary science. Personal feelings must be set aside for the greater good. The system must be proven unbreakable.</strong></p>
+<p><strong>ADDENDUM:</strong><br />
+<strong>Dmitri shows promise as enforcer. Rigid, dutiful, follows orders. Will hunt Alexei effectively. Good.</strong></p>
+<p><strong>Alexei shows expected resistance patterns. Charismatic, rebellious, will likely join resistance. Predictable. Good.</strong></p>
+<p><strong>Nikolai is the variable. Mediator personality. Will try to maintain both relationships. This creates internal conflict. Excellent for studying psychological stress under ideological pressure.</strong></p>
+<p>Nikolai's hands shook. His uncle had predicted everything. Had planned it all. Had used their personalities, their love for each other, as weapons against them.</p>
+<p>Except he'd missed one thing: love was stronger than systems. Family was stronger than experiments. And the triplets weren't variables—they were people.</p>
+<p>Nikolai created a new file. Not for the escape. For after. A file containing everything about his uncle. Every experiment. Every note. Every cold, clinical observation about his own nephews.</p>
+<p>This file would go to Aunt Elena. She needed to know what her brother had become. What he'd done to her nephews.</p>
+<p>And then she could decide what justice looked like.</p>
+<p>A sound behind him. Nikolai spun, heart hammering.</p>
+<p>Mikhail stood in the doorway, white hair glowing in the server lights. Again.</p>
+<p>"You really need to stop sneaking up on people," Nikolai said, his voice shaking.</p>
+<p>"And you really need to sleep," Mikhail replied gently. "It's two in the morning, young Nikolai. You've been here for six hours."</p>
+<p>"I have work to do. Four days until—"</p>
+<p>"Until freedom or death. I know." Mikhail settled into a chair. "But you can't work if you collapse from exhaustion. And we need you sharp. You're the key to everything, Nikolai. The technical genius. The one who makes the impossible possible."</p>
+<p>"I'm just a technician."</p>
+<p>"You're the bridge. Between your brothers. Between the past and the future. Between the corrupt system and the one we'll build to replace it." Mikhail's eyes were kind. "You carry a heavy burden, Nikolai Volkov. The burden of being the one who sees all sides. The one who understands everyone. The one who has to choose, even when choosing hurts."</p>
+<p>"I chose my brothers. Finally."</p>
+<p>"You always chose your brothers. You just chose both of them, which looked like choosing neither." Mikhail leaned forward. "Your uncle wrote that you were the variable. The unpredictable one. He was wrong. You were the constant. The one who never wavered in loving both your brothers, even when they were enemies."</p>
+<p>Nikolai felt tears on his face. "He used us. He experimented on us. His own family."</p>
+<p>"Yes. He did." Mikhail's voice was sad. "The old songs knew about this. About people who love power more than family. About those who sacrifice humanity for ideology. There's a song—"</p>
+<p>He sang softly:</p>
+<p><em>"Father and son, both have a gun,</em><br />
+<em>Each believing the other's wrong.</em><br />
+<em>Brother fights brother, mother mourns another,</em><br />
+<em>While the powerful sing their song..."</em></p>
+<p>"What song is that?" Nikolai asked.</p>
+<p>"An old folk song. About civil wars. About families torn apart by ideology. About the powerful who benefit when families fight each other." Mikhail's expression was distant. "Your uncle sang that song, Nikolai. He created the very thing the song warned against. He tore families apart. Including his own."</p>
+<p>"Why are you telling me this?"</p>
+<p>"Because you need to understand: what he did to you wasn't about you. It was about him. About his need to prove his system worked. About his fear that love might be stronger than control." Mikhail smiled gently. "And you proved him wrong. You and your brothers. You proved that love endures. That family matters. That some bonds can't be broken by systems or experiments or ideologies."</p>
+<p>"We almost did break," Nikolai admitted. "Three years of fighting. Three years of pain. If we hadn't been imprisoned together—"</p>
+<p>"But you were. And you reunited. And now you're stronger than ever." Mikhail stood. "That's not luck, Nikolai. That's love. Love is patient. Love endures. Love waits for the right moment and then it heals."</p>
+<p>"You sound like Dr. Tanaka."</p>
+<p>"We old people think alike." Mikhail moved to the door, paused. "Four days, Nikolai. Four days until you trigger your sabotage. Four days until you prove that one brilliant technician can bring down an entire corrupt system. Are you ready?"</p>
+<p>"I have to be."</p>
+<p>"That's not an answer."</p>
+<p>Nikolai looked at his screens. At the architecture he'd mapped. At the backdoors he'd created. At the time bombs he'd planted. At the single button that would trigger it all.</p>
+<p>"Yes," he said finally. "I'm ready. I'm terrified, but I'm ready."</p>
+<p>"Good. Terror keeps you sharp." Mikhail smiled. "Now, get some sleep. You have four more days of preparation. You need to be rested."</p>
+<p>After Mikhail left, Nikolai sat alone with his screens and his fear and his determination.</p>
+<p>Four days. He could do this. He had to do this.</p>
+<p>For his brothers. For the others. For everyone trapped by corrupt systems.</p>
+<p>He pulled up his final checklist:</p>
+<p><strong>SABOTAGE PROTOCOL - AUGUST 22, 1355 HOURS</strong></p>
+<p>✅ Security cameras: Disabled<br />
+✅ Door locks: Override codes planted<br />
+✅ Alarm systems: Delayed activation (15-minute window)<br />
+✅ Communication networks: Jammed<br />
+✅ Power grid: Backup routing prepared<br />
+✅ Guard rotations: Altered schedules uploaded<br />
+✅ Emergency protocols: Corrupted<br />
+✅ Backup systems: Compromised<br />
+✅ Data preservation: Three copies secured<br />
+✅ Evidence distribution: Automated upload to resistance network</p>
+<p>Everything was ready. Every system had a weakness. Every weakness had been exploited. Every exploitation had been tested.</p>
+<p>When the fact storm hit, when reality started breaking down, the facility's systems would break down with it. And in that chaos, eight people would walk out.</p>
+<p>No. Not walk. Run.</p>
+<p>Run toward freedom. Run toward truth. Run toward a future they would build together.</p>
+<p>Nikolai closed his eyes and thought about his brothers. About Dmitri, rigid and dutiful, learning to choose family over duty. About Alexei, rebellious and charismatic, learning to trust again.</p>
+<p>And about himself. The mediator. The bridge. The variable who became the constant.</p>
+<p>He'd spent three years trying to keep his brothers together while they tore each other apart. Now he'd spend four days making sure they stayed together forever.</p>
+<p>He opened a final file. A message, timed to send four days from now, at 1400 hours. After the escape. After they were free.</p>
+<p><strong>TO: Professor Adrian Volkov</strong><br />
+<strong>FROM: Nikolai Volkov</strong><br />
+<strong>SUBJECT: Experiment Results</strong></p>
+<p><strong>Dear Uncle,</strong></p>
+<p><strong>You wanted to know if the system could break family bonds. You wanted to prove that ideology could overcome love. You wanted to show that even the strongest connections could be severed by systematic pressure.</strong></p>
+<p><strong>I'm writing to inform you of the experiment's results: You failed.</strong></p>
+<p><strong>My brothers and I are together. We're free. We're stronger than ever. Your experiment didn't break us. It made us unbreakable.</strong></p>
+<p><strong>You taught us history, Uncle. You taught us about systems that rise and fall. About empires that seem eternal until they crumble. About the powerful who think they're invincible until they're not.</strong></p>
+<p><strong>You forgot to teach us the most important lesson: Love endures. Family matters. And some bonds are stronger than any system you can build.</strong></p>
+<p><strong>We're not your variables anymore. We're not your test subjects. We're not your nephews, because you gave up that right when you experimented on us.</strong></p>
+<p><strong>We're just three brothers who love each other. And that's enough.</strong></p>
+<p><strong>The experiment is over. You lost.</strong></p>
+<p><strong>Goodbye,</strong><br />
+<strong>Nikolai</strong></p>
+<p>He scheduled the message to send automatically. Four days from now, when they were free, his uncle would receive it. Would know that his experiment had failed. Would know that love had won.</p>
+<p>It was petty. It was satisfying. It was necessary.</p>
+<p>Nikolai saved everything, backed up everything, encrypted everything. Then he shut down his systems and returned to his cell.</p>
+<p>Four days. Ninety-six hours. Five thousand seven hundred sixty minutes.</p>
+<p>He could count it in seconds, but he chose to count it in moments instead:</p>
+<p>Four more days of planning.<br />
+Four more days of preparation.<br />
+Four more days of being trapped.</p>
+<p>And then: freedom.</p>
+<p>For him. For his brothers. For all of them.</p>
+<p>The variable was ready. The constant was prepared. The bridge was strong.</p>
+<p>In four days, Nikolai Volkov would prove that one brilliant technician could bring down an entire corrupt system.</p>
+<p>And he would do it for love.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="11-the-network.html" class="nav-button">← Previous: Chapter 11: The Network</a>
+            <div class="nav-center">Chapter 12: The Corruption</div>
+            <a href="13-the-conscience.html" class="nav-button">Next: Chapter 13: The Conscience →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

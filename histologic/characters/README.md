@@ -22,6 +22,7 @@ This directory contains comprehensive character profiles for all characters acro
 - **[elena-volkov.md](main-characters/protagonists/elena-volkov.md)** - Resistance leader, seductress
 - **[volkov-triplets.md](main-characters/protagonists/volkov-triplets.md)** - Dmitri, Alexei, Nikolai (all three)
 - **[isaiah-okonkwo.md](main-characters/protagonists/isaiah-okonkwo.md)** - Journalist, WISE SPEAKER, HUMOROUS
+- **[old-songs-character.md](main-characters/protagonists/old-songs-character.md)** - Mikhail "Old Songs" Petrov, WISE SPEAKER (songs/riddles/quotes)
 - **[the-judge-and-counselor.md](main-characters/protagonists/the-judge-and-counselor.md)** - AI characters, WISE SPEAKER
 
 #### Main Antagonists (Bad Characters)
@@ -38,16 +39,16 @@ This directory contains comprehensive character profiles for all characters acro
 
 ## 📊 Character Statistics
 
-### Total Characters: 42+
-- **Main Protagonists**: 9 (including AI)
+### Total Characters: 43+
+- **Main Protagonists**: 10 (including AI and Mikhail "Old Songs")
 - **Main Antagonists**: 12 (The Architects)
 - **Complex/Ambiguous**: 6
 - **Secondary Allies**: 8+
 - **Secondary Opposition**: 7+
 
 ### Special Categories
-- **Wise Speakers**: 4 (Dr. Tanaka, Isaiah, The Counselor, Prof. Volkov)
-- **Humorous Characters**: 3 (Alexei, Kira, Isaiah)
+- **Wise Speakers**: 5 (Dr. Tanaka, Isaiah, Mikhail "Old Songs", The Counselor, Prof. Volkov)
+- **Humorous Characters**: 4 (Alexei, Kira, Isaiah, Mikhail - gentle humor)
 - **Tragic Characters**: 5 (Alexei, Adrian Kovač, Sarah Chen, The Judge, Minister Kozlov)
 - **Redeemed Characters**: 4 (Sarah Chen, Dr. Wei Zhang, Helena Kovač, Dr. Morrison)
 
@@ -148,13 +149,15 @@ This directory contains comprehensive character profiles for all characters acro
 **Wise Speakers** (provide meaningful truths):
 1. **Dr. Yuki Tanaka**: "A wound must be acknowledged before it can heal"
 2. **Isaiah Okonkwo**: "History doesn't repeat, but it rhymes"
-3. **The Counselor**: "I advise. You decide. That's not weakness. That's design."
-4. **Professor Volkov**: "I taught history. I should have taught them to question it."
+3. **Mikhail "Old Songs" Petrov**: "The old songs knew truths we've forgotten" (speaks through SONGS, RIDDLES, QUOTES)
+4. **The Counselor**: "I advise. You decide. That's not weakness. That's design."
+5. **Professor Volkov**: "I taught history. I should have taught them to question it."
 
 **Humorous Characters** (lighten dark scenes):
 1. **Alexei Volkov**: "If we die, at least the funeral will be well-documented"
 2. **Kira Osman**: "I can hack a factorepo but not human stupidity"
 3. **Isaiah Okonkwo**: "We're fighting over which history is correct. The irony is historical."
+4. **Mikhail "Old Songs"**: Gentle humor through unexpected song choices and absurd timing
 
 **Technical Speakers**:
 - Kira, Nikolai, The Counselor: Precise, efficient, technical metaphors

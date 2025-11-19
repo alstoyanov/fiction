@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="06-the-doctor.html" class="nav-button">← Previous: Chapter 6: The Doctor</a>
+            <div class="nav-center">Chapter 7: The Journalist</div>
+            <a href="08-the-pattern.html" class="nav-button">Next: Chapter 8: The Pattern →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        <div class="chapter-info"><strong>POV:</strong> Isaiah Okonkwo (third-person limited) | <strong>Timeline:</strong> August 14, 2106 (Day 14 in facility)</div>
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 7: The Journalist</h1>
+<h2>POV: Isaiah Okonkwo</h2>
+<p>Isaiah had been a journalist for fifteen years. He'd covered wars, famines, political scandals, and corporate corruption. He'd documented atrocities and celebrated triumphs. He'd written stories that changed laws and exposed criminals.</p>
+<p>But he'd never been the story before.</p>
+<p>Now, sitting in his cell with nothing but his memory and his mind, Isaiah was living the biggest story of his career. And he couldn't write a word of it.</p>
+<p>Not yet.</p>
+<p>But he was documenting everything. Every conversation, every revelation, every piece of evidence. His photographic memory captured it all—dates, times, names, faces, words. When he finally got out, when he finally had access to a keyboard and a network, he would write it all down.</p>
+<p>And the world would know.</p>
+<p>He closed his eyes and reviewed his mental notes:</p>
+<p><strong>August 1, 2106, 14:37:22</strong> - Eight simultaneous convictions. Marcus Chen, Kira Osman, Dmitri Volkov, Alexei Volkov, Nikolai Volkov, Dr. Yuki Tanaka, Isaiah Okonkwo, Mikhail Petrov. All processed in the same second. Impossible without pre-coordination.</p>
+<p><strong>August 4, 2106</strong> - First group session. Director Helena Kovač presiding. Dr. Thomas Reeves observing. Eight inmates, eight stories, one pattern: all asked questions the system couldn't answer.</p>
+<p><strong>August 7, 2106</strong> - First library meeting. Evidence shared. Realization: targeted imprisonment. Specialists with skills to expose corruption.</p>
+<p><strong>August 12, 2106</strong> - Second library meeting. Nikolai presents evidence of live fact manipulation from Minister's office. "Project Correction" discovered. Group commits to escape.</p>
+<p><strong>August 13, 2106</strong> - Dr. Tanaka recruits Director Kovač. Enhanced correction orders revealed. Timeline: two weeks maximum.</p>
+<p>Isaiah opened his eyes. The story was taking shape. But it wasn't complete. He needed more. Context. Background. The bigger picture.</p>
+<p>He needed to understand not just what was happening, but why.</p>
+<p>A knock on his door. Isaiah stood, straightened his facility uniform.</p>
+<p>Dr. Reeves entered. "Isaiah Okonkwo. Your turn for individual session."</p>
+<p>Isaiah followed Reeves through the corridors, noting everything. Guard positions had changed. New cameras installed. Security was tightening. They were running out of time.</p>
+<p>In Reeves's office, Isaiah sat and waited. He'd learned long ago that silence was a powerful interview technique. Let the other person speak first. Let them fill the silence with information.</p>
+<p>Reeves studied him for a long moment. "You're documenting everything, aren't you?"</p>
+<p>Isaiah didn't deny it. "It's what I do."</p>
+<p>"Photographic memory. Eidetic recall. Every word, every image, perfectly preserved." Reeves leaned forward. "What will you do with all that information?"</p>
+<p>"Publish it. When I can."</p>
+<p>"And you think you'll get that chance?"</p>
+<p>"I think truth has a way of emerging. Eventually."</p>
+<p>Reeves smiled slightly. "You sound like Mikhail. The old songs, the old wisdom. Truth endures."</p>
+<p>"It does."</p>
+<p>"Even when it's dangerous?"</p>
+<p>"Especially then." Isaiah met Reeves's eyes. "Truth isn't dangerous to good people, Dr. Reeves. It's only dangerous to those who profit from lies."</p>
+<p>"And which am I? Good person or profiteer?"</p>
+<p>"I'm still deciding."</p>
+<p>Reeves laughed—a genuine sound. "Fair enough. Let me help you decide." He pulled out a brass tablet, but instead of making notes, he pulled up files. "I'm going to show you something. And then you're going to tell me what you see."</p>
+<p>He turned the tablet toward Isaiah. Documents. Communications. Orders.</p>
+<p>Isaiah read quickly, his mind capturing every word:</p>
+<p><strong>CLASSIFIED - MINISTER LEVEL</strong><br />
+<strong>Project Correction - Phase 1</strong><br />
+<strong>Objective</strong>: Identify and contain high-risk individuals with specialized knowledge that could threaten system integrity.<br />
+<strong>Targets</strong>: Eight individuals selected based on skills, knowledge, and potential for coordinated resistance.<br />
+<strong>Method</strong>: Simultaneous conviction, centralized containment, monitored interaction.<br />
+<strong>Expected Outcome</strong>: Either successful correction (preferred) or elimination of threat through enhanced procedures.<br />
+<strong>Timeline</strong>: 90 days maximum before escalation to Phase 2.</p>
+<p>Isaiah's blood ran cold. "Phase 2?"</p>
+<p>Reeves pulled up another document:</p>
+<p><strong>Phase 2 - Enhanced Correction Protocol</strong><br />
+<strong>Method</strong>: Neural manipulation, memory alteration, personality restructuring.<br />
+<strong>Outcome</strong>: Complete compliance or permanent incapacitation.<br />
+<strong>Authorization</strong>: Minister Chen Zhao, signed and approved.</p>
+<p>"Minister Chen Zhao," Isaiah said quietly. "Marcus's distant relative."</p>
+<p>"Yes. The irony isn't lost on me." Reeves closed the files. "So, Isaiah. What do you see?"</p>
+<p>"I see a conspiracy. Systematic targeting of people who could expose corruption. A plan to either break them or eliminate them. And I see it goes all the way to the top."</p>
+<p>"What else?"</p>
+<p>Isaiah thought carefully. "I see that you're showing me this for a reason. Either you're trying to help us, or you're testing us. Or both."</p>
+<p>"Both," Reeves admitted. "I'm trying to help. And I'm testing to see if you're capable of understanding what you're up against."</p>
+<p>"Why help us?"</p>
+<p>"Because I'm tired of being complicit." Reeves's voice was quiet. "I became a correction specialist to help people. But lately, I've been asked to do things that aren't helping. Things that are... monstrous. And I can't do it anymore."</p>
+<p>"What were you asked to do?"</p>
+<p>"To you? Enhanced correction. Memory alteration. Specifically, I was ordered to erase your documentation skills. To make you forget how to organize information, how to see patterns, how to write coherently." Reeves met his eyes. "They wanted to destroy the journalist in you, Isaiah. Leave you functional but unable to tell stories."</p>
+<p>Isaiah felt sick. "And the others?"</p>
+<p>"Marcus: erase his belief in Histologic ideals, make him cynical and broken. Kira: damage her eidetic memory, make her doubt her own recall. Dmitri: remove his tactical thinking, make him passive. Alexei: suppress his resistance connections, make him forget his aunt. Nikolai: destroy his technical skills, make him unable to understand systems. Dr. Tanaka: remove her ethical framework, make her compliant. Mikhail..." Reeves paused. "They wanted me to erase his cultural memory. Make him forget the old songs, the old wisdom. Turn him into just another old man."</p>
+<p>"That's not correction," Isaiah said. "That's murder. Murdering who they are."</p>
+<p>"Yes. That's why I refused. That's why I'm helping you escape." Reeves stood, paced. "But you need to understand: this isn't just about eight people. This is about a system that's fundamentally corrupt. A system that targets anyone who questions it. And when you publish this story, you'll be declaring war on that system."</p>
+<p>"I know."</p>
+<p>"Do you? Do you understand what will happen? Veridica will deny everything. They'll call you a liar, a fabricator, a contaminated outlaw spreading misinformation. They'll try to discredit you, silence you, maybe even kill you."</p>
+<p>"I know," Isaiah repeated. "I've published dangerous stories before. I know the risks."</p>
+<p>"This is different. This isn't corporate corruption or political scandal. This is the foundation of Veridica's society. You'll be telling people that their entire system is built on lies. That The Judge is manipulated. That their history is fabricated. That everything they believe is false."</p>
+<p>"Not everything," Isaiah corrected. "The ideal of Histologic—objective truth, verified facts, shared history—that's sound. It's the implementation that's corrupt. That's an important distinction."</p>
+<p>"Marcus would agree with you."</p>
+<p>"Marcus is right." Isaiah leaned forward. "That's why this story matters. We're not trying to destroy Histologic. We're trying to save it. To show that the corruption isn't in the system itself, but in the people who've hijacked it."</p>
+<p>Reeves studied him. "You really believe that?"</p>
+<p>"I believe in truth, Dr. Reeves. And the truth is complicated. Yes, Veridica is corrupt. Yes, people have been hurt. But the solution isn't to abandon the idea of objective truth. It's to reclaim it from those who've corrupted it."</p>
+<p>"That's a good story."</p>
+<p>"It's the true story." Isaiah smiled slightly. "And truth is always a good story. It's just not always a simple one."</p>
+<p>Reeves returned to his desk, pulled out a data chip. "Then you'll need this. Everything I've collected. Orders, communications, evidence. It's all here. When you escape—and you will escape—take this to your contacts in SFW. Publish it everywhere. Make sure the truth gets out."</p>
+<p>Isaiah took the chip. "Why are you doing this?"</p>
+<p>"Because someone has to. Because I can't live with myself if I don't." Reeves's expression was pained. "I've been complicit for too long. I've followed orders, done my job, told myself I was helping. But I was just part of the machine. And the machine is broken."</p>
+<p>"What will happen to you?"</p>
+<p>"I don't know. Probably nothing good. But that's the cost of doing the right thing." Reeves smiled bitterly. "The old songs knew, didn't they? Truth-tellers always pay a price."</p>
+<p>"They do," Isaiah agreed. "But they also endure. History remembers them."</p>
+<p>"I don't care about history remembering me. I just want to stop being ashamed when I look in the mirror."</p>
+<p>Isaiah stood, extended his hand. "Thank you, Dr. Reeves. For your help. For your courage. For choosing truth over comfort."</p>
+<p>Reeves shook his hand. "Thank you for being willing to tell it. Now go. Plan your escape. And when you're out, write the story that needs to be written."</p>
+<p>"I will. I promise."</p>
+<hr />
+<p>Back in his cell, Isaiah hid the data chip with Alexei's. Two chips. Two sources of evidence. Redundancy was good journalism.</p>
+<p>He lay on his bed and began organizing the story in his mind. Structure. Narrative. Flow.</p>
+<p><strong>Opening</strong>: The conviction. Eight people, eight stories, one second.</p>
+<p><strong>Rising Action</strong>: The discovery. Evidence gathering. Realization of conspiracy.</p>
+<p><strong>Climax</strong>: The escape. The revelation. The publication.</p>
+<p><strong>Resolution</strong>: The aftermath. The consequences. The change.</p>
+<p>But it wasn't just a story about corruption. It was a story about people. About Marcus's journey from true believer to reformer. About Kira's precision and pragmatism. About the Volkov brothers and their different paths to the same truth. About Dr. Tanaka's ethical courage. About Mikhail's wisdom and hope.</p>
+<p>And about himself. The journalist who became the story.</p>
+<p>Isaiah closed his eyes and began composing the opening paragraph in his mind:</p>
+<p><em>"On August 1, 2106, at exactly 14:37:22, eight people were convicted of ideological contamination by The Judge, Veridica's supposedly infallible arbiter of truth. All eight were specialists—an analyst, a technician, an enforcer, an outlaw, another technician, a doctor, a journalist, and a historian. All eight were convicted simultaneously, an impossibility under normal procedures. All eight were sent to the same correction facility, placed in the same group, monitored for signs of resistance. This is their story. This is our story. This is the story of how eight people discovered that the system designed to protect truth had become the greatest threat to it."</em></p>
+<p>Good opening. Strong. Clear. Compelling.</p>
+<p>The rest would follow. The evidence, the escape, the revelation. He had it all in his mind, perfectly preserved, waiting to be written.</p>
+<p>He just needed to survive long enough to write it.</p>
+<p>A soft knock on his door. Isaiah opened it to find Mikhail standing there, smiling gently.</p>
+<p>"May I come in?" the old man asked.</p>
+<p>"Of course."</p>
+<p>Mikhail entered, settled into the chair with a soft sigh. "You're writing it in your mind. The story."</p>
+<p>"How did you know?"</p>
+<p>"I see that look. The look of someone composing. Creating. Documenting." Mikhail's eyes were kind. "The old bards had that look. The storytellers. The ones who preserved history through song and story before there were books, before there were databases."</p>
+<p>"I'm just a journalist."</p>
+<p>"You're a chronicler. A keeper of truth. That's sacred work, Isaiah." Mikhail leaned forward. "When you write this story—and you will write it—remember something."</p>
+<p>"What?"</p>
+<p>"Remember that stories change people. Facts inform, but stories transform. You have the facts. Nikolai's evidence, Reeves's documents, all the data. But data alone won't change hearts. You need to tell the human story. The story of eight people who found each other in darkness and chose to fight for light."</p>
+<p>"I will."</p>
+<p>"And remember," Mikhail continued, "that the best stories don't have simple villains and heroes. They have people. Complicated, flawed, struggling people. Director Kovač isn't evil—she's trapped. Dr. Reeves isn't a hero—he's someone trying to atone. Minister Chen Zhao isn't a monster—he's someone who convinced himself that control equals safety."</p>
+<p>"You're very wise, Mikhail."</p>
+<p>"I'm very old. It's not the same thing." Mikhail smiled. "But I've read a lot of stories. Heard a lot of songs. And the ones that endure are the ones that show truth in all its complexity."</p>
+<p>He stood, moved to the door. Then he turned back and sang softly:</p>
+<p><em>"The answer, my friend, is blowing in the wind,</em><br />
+<em>The answer is blowing in the wind...</em><br />
+<em>How many times must a man look up, before he can see the sky?</em><br />
+<em>How many ears must one man have, before he can hear people cry?"</em></p>
+<p>"Bob Dylan," Isaiah said. "The old protest singer."</p>
+<p>"A prophet," Mikhail corrected. "He knew that the answers we seek are already there, blowing in the wind. We just have to listen. You're listening, Isaiah. Keep listening. Keep documenting. Keep telling the truth."</p>
+<p>After Mikhail left, Isaiah lay in the darkness and thought about stories. About truth. About the power of words to change the world.</p>
+<p>He'd spent fifteen years telling other people's stories. Now he was living his own. And when he got out—when, not if—he would tell it. All of it. The truth, the whole truth, nothing but the truth.</p>
+<p>Not because it was easy. Not because it was safe. But because it was necessary.</p>
+<p>Because someone had to bear witness. Someone had to document. Someone had to tell the story.</p>
+<p>And that someone was him.</p>
+<p>History doesn't repeat, but it rhymes. And Isaiah Okonkwo was going to make sure this particular verse was heard loud and clear.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="06-the-doctor.html" class="nav-button">← Previous: Chapter 6: The Doctor</a>
+            <div class="nav-center">Chapter 7: The Journalist</div>
+            <a href="08-the-pattern.html" class="nav-button">Next: Chapter 8: The Pattern →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
