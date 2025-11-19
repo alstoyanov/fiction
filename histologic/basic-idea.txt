@@ -1,0 +1,36 @@
+Basic Vocabulary
+Histologics is an exact science version of history, which guarantees that any event in history is not contradicting with any other event or any set of other events in that history.
+
+Histofact is an individual fact that describes something that happened. Each fact should contain a minimum set of information - time, location, involved parties
+
+Time is a concrete point in on a time continuum or the period between two concrete points.
+
+Location is either a point and a radius or the space bounded by a list of points.
+
+Involved parties are either individual people, a group of people or inanimate objects
+
+Factrepo is software that stores all historical facts in a datastructure that is fast reliable and scalable
+
+History is list of facts stored in a factrepo
+
+Histonation
+A histonation is a group of people that share the same history. 
+
+In that future society there is only one language which has direct translation to machine understandable language. However there is still many nations and each nation is defined not by language or tradition, but just by in what version of history that group believes. 
+
+All people in a nation do not question the truthfulness of their history. If someone questions the truthfulness of his nation history he is considered an outlow and can ether go to corrective facility to be made to believe in the correctness of the history or he can leave the boundaries of the territory occupied by the nation know as histocircle. 
+
+If a significant part of a histonation do not agree with a certain fact a histobranch can be created. With the new histobranch a new histonation can be formed. This usually does not happen peasfully, as the new histonation should occupy part of the territory of the histonation it split from. This usually leads to the most common military conflicts.
+
+The second part of military conflicts are for resources. They happen less often, as rarely there is a clear winner and casualties are high. Once a war is won the conquered histonation surrenders its facorepo and accepts the facorepo of the conqueror. If people disagree they fall in the above scenario.
+
+A common tactics to conquer a histonation is to first split it with false facts into smaller histonations. This weakens the group because of the internal fighting and also fractures the military force of a larger histonation.
+
+Truth
+The truth is what is written in the factorepo and what can be derived through logical deduction from all the facts. Any new fact that is added to the factorepo is checked for controversy against all other facts in the repository.
+
+Factorepo
+This is a giant data store with all facts that make up the history of a given nation. It includes not just important facts such as political decisions, economic changes or war outcomes. It also contains all the facts for the life of all people in the nation. The important facts that affect the whole world and the communication with other nations are stored in a primary repo, while less globally important facts are stored in smaller repositories which are constantly checked for contradictions. When a nation refers to its factorepo they are referring to the primary repo along with the smaller local repositories.
+
+The Judge
+The Judge is a super computer that has access to all factorepo of a given histonation. When presented with a legal problem or dispute between people or organisations The Judge is responsible to evaluate all facts to determine who is right and who is wrong in the dispute. Each Histonation has its own Judge that has access to its factorepo. There are international Judges who have limited access to just the primary repos of different histonations, however they do not hold as much power and respect as those of a given Histonation, as quite often there are contradictions between the factorepo of different countries and any Judgement proclaimed by the international Judge is not accepted by the people in a Histonation that has a contradicting fact.
