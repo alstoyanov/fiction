@@ -311,3 +311,5 @@ Tomorrow would come soon enough.
 
 **Next Chapter**: Chapter 16 (Kira POV) - Final group meeting, alliance solidifies, technical details
 
+
+

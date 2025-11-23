@@ -40,3 +40,5 @@ Kovač nods confirmation—she's committed. Dmitri talks with Dr. Tanaka about c
 
 Elena confirms extraction ready. Reveals uncle Adrian knows and is watching as final experiment. All eight meet in library one last time. Alexei reviews complete timeline. At 1355:00, **ESCAPE BEGINS**: fact storm hits, reality breaks, doors unlock, all eight run singing "You'll Never Walk Alone," reach wall, climb together, jump to freedom. **ALL EIGHT SUCCESSFUL**. Elena's team catches them. Alexei's fourth escape—this time with family, promise kept.
 
+
+

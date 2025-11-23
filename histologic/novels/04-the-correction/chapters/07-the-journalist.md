@@ -292,3 +292,5 @@ History doesn't repeat, but it rhymes. And Isaiah Okonkwo was going to make sure
 
 **End of Part One: THE GATHERING**
 
+
+

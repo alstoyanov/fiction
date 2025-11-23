@@ -96,3 +96,5 @@ September-November 2108 (2 years after Lost Hour)
 ## Word Count Target
 ~120,000 words (30 chapters + prologue + epilogue)
 
+
+

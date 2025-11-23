@@ -302,3 +302,5 @@ And that was enough.
 
 **Next Chapter**: Chapter 25 (Marcus POV) - Final chapter, mission solidified, looking toward future
 
+
+

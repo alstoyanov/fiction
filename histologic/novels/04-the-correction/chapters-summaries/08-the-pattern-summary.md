@@ -18,3 +18,5 @@ Kira finds him in crisis and they discuss the difference between the ideal and t
 
 Marcus's crisis of faith resolves into pragmatic idealism—he'll fight for the system's ideal while acknowledging its current corruption. His relationship with Kira deepens as she agrees to stay and fight with him.
 
+
+

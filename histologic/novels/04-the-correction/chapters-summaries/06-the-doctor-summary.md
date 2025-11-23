@@ -18,3 +18,5 @@ Yuki realizes that her refusal to correct Sarah—and her continued refusal to c
 
 Dr. Tanaka solidifies her role as the group's ethical conscience, proving that some principles are worth imprisonment—and that integrity can inspire others to question unjust systems.
 
+
+

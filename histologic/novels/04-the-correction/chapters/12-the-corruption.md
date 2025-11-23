@@ -272,3 +272,5 @@ And he would do it for love.
 
 **Next Chapter**: Chapter 13 (Yuki POV) - Final session with Kovač, medical preparations, ethical reflections
 
+
+

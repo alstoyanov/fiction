@@ -262,3 +262,5 @@ And possible was all they needed.
 
 **Next Chapter**: Chapter 6 (Dr. Tanaka POV) - The doctor's perspective, her ethical stance
 
+
+

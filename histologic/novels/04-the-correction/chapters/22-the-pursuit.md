@@ -313,3 +313,5 @@ And they were ready.
 
 **Next Chapter**: Chapter 23 (Isaiah POV) - Part Five begins: Publication day, truth goes public, government response
 
+
+

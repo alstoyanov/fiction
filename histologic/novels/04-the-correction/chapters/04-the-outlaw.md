@@ -213,3 +213,5 @@ Alexei smiled in the darkness. He'd always loved interesting.
 
 **Next Chapter**: Chapter 5 (Nikolai POV) - The technician discovers live fact manipulation
 
+
+

@@ -210,3 +210,5 @@ And that was enough.
 
 **Next Chapter**: Chapter 12 (Nikolai POV) - Final technical preparations, system sabotage ready
 
+
+

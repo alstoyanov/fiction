@@ -285,3 +285,5 @@ Starting with themselves.
 
 **Next Chapter**: Chapter 7 (Isaiah POV) - The journalist documents everything, completes Part One
 
+
+

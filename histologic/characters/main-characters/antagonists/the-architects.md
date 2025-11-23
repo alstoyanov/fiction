@@ -477,3 +477,5 @@ After World War III, brought together by Dr. Helena Voss to "save humanity"
 **Alignment**: Mostly Lawful/Neutral Evil (believe they're saving humanity)
 **Role**: Primary antagonists of Novel 08, puppet masters of entire series
 
+
+

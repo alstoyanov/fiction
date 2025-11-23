@@ -335,3 +335,5 @@ And that was enough.
 
 **Next Chapter**: Chapter 22 (Alexei POV) - Coordination, resistance network, final Part Four chapter
 
+
+

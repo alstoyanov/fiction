@@ -18,3 +18,5 @@ Mikhail finds Isaiah in the library and discusses the power of stories versus fa
 
 Isaiah transforms from passive observer to active participant, understanding that bearing witness is itself an act of resistance—and that his story might change everything.
 
+
+

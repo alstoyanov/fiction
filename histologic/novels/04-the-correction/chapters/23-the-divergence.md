@@ -299,3 +299,5 @@ And Isaiah Okonkwo, chronicler of revolution, documented it all.
 
 **Next Chapter**: Chapter 24 (Kira POV) - Marcus and Kira's life as outlaws, love deepening, network growing
 
+
+

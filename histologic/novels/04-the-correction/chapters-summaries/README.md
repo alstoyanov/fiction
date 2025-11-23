@@ -72,3 +72,5 @@ Setup for "The Lost Hour"
 - **~5,000 words** in summaries (10% of full length)
 - **100% coverage** of all plot points and character arcs
 
+
+

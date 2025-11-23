@@ -250,3 +250,5 @@ And together, they would burn the corrupt system down.
 
 **Next Chapter**: Chapter 11 (Alexei POV) - Communication with Elena, resistance network
 
+
+

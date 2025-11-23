@@ -329,3 +329,5 @@ He was ready.
 
 **Next Chapter**: Chapter 18 (Alexei POV) - Final hour, Elena communication, last preparations
 
+
+

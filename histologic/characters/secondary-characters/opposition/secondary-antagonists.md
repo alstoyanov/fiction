@@ -272,3 +272,5 @@ Even antagonists have:
 **Role**: Provide opposition, show system's reach, create conflict
 **Function**: Make conflict realistic, show various types of opposition
 
+
+

@@ -212,3 +212,5 @@ Questions Marcus, senses something wrong, but follows orders. Later becomes refo
 **Role**: Support protagonists, provide assistance, show humanity in system
 **Function**: Make world feel populated, show not everyone is corrupt
 
+
+

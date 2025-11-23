@@ -16,3 +16,5 @@ Marcus visits her cell, unable to sleep. She shows him the evidence. They discus
 
 Kira completes the evidence collection and her relationship with Marcus deepens significantly. They acknowledge potential for love while maintaining focus on the mission. Marcus learns from his past mistake with Elena.
 
+
+

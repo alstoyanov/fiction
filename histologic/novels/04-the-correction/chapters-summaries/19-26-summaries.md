@@ -50,3 +50,5 @@ Seven sections showing each character's preparation for tomorrow:
 
 Perfect setup for next novel.
 
+
+

@@ -270,3 +270,5 @@ It felt like coming home.
 
 **Next Chapter**: Chapter 4 (Alexei POV) - The outlaw's perspective, his resistance connections
 
+
+
