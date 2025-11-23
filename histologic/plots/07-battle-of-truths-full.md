@@ -40,7 +40,7 @@ Six months after the peaceful distributed truth revolution, the remaining Archit
 - **Previous**: Successfully led peaceful transformation through transparency (Novel 6)
 
 **2. Kira Osman**
-- **Age**: 29
+- **Age**: 30
 - **Status**: Historical Integrity Commission, technical expert
 - **Role**: Technical operator, Marcus's conscience
 - **Internal Conflict**: Supporting Marcus vs. her own ethics

@@ -1,7 +1,7 @@
-# Battle of Blood - Concise Plot (Novel 4)
+# Battle of Blood - Concise Plot (Novel 8)
 
 ## Novel Type
-Fourth Novel - Military Thriller / Philosophical Drama
+Eighth Novel - Military Thriller / Philosophical Drama
 
 ## Core Concept
 SFW invades Veridica to capture The Judge and use it to control all Histologic nations. Veridica, unprepared for physical war, must adapt. The Judge becomes conscious and chooses death over enslavement. Marcus and team destroy The Judge to prevent capture. Veridica wins but loses The Judge. New system built: human-AI partnership.

@@ -1,7 +1,7 @@
-# Battle of Truths - Concise Plot (Novel 3)
+# Battle of Truths - Concise Plot (Novel 7)
 
 ## Novel Type
-Third Novel - Spy Thriller / Moral Drama
+Seventh Novel - Spy Thriller / Moral Drama
 
 ## Core Concept
 Two years after the Lost Hour, Veridica faces fact war with Chronos. Marcus, Elena, and Kira execute audacious plan: Elena seduces Chronos historian Adrian Kovač to gain access, they replace Chronos's factorepo backup with Veridica's database, then force catastrophic failure. When Chronos restores, they unknowingly adopt Veridica's history—war over. But Marcus has become the corruption he fought against. SFW prepares for invasion.

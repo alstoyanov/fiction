@@ -1,4 +1,4 @@
-# Architects of Chaos - Full Plot Outline (Novel 5 - Series Finale)
+# Architects of Chaos - Full Plot Outline (Novel 9 - Series Finale)
 
 ## High Concept
 
@@ -23,9 +23,11 @@ Five years after destroying The Judge, Marcus Chen discovers the ultimate truth:
 
 ## Timeline
 
-**2114**: Five years after "Battle of Blood"
-**Novel Duration**: 8 months (January-August 2114)
-**Ending**: September 2114 - New world order, but CNT remains hostile
+**After "Battle of Blood" (Novel 8)**: 2115
+**2115**: Five years after "Battle of Blood" (2110)
+**Novel Duration**: 8 months (January-August 2115)
+**Ending**: September 2115 - New world order, but CNT remains hostile
+**Note**: Marcus has had five years to notice the patterns and anomalies that reveal The Architects' design
 
 ## The Architects (The Secret Rulers)
 

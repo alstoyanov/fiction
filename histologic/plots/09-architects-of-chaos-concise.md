@@ -1,7 +1,7 @@
-# Architects of Chaos - Concise Plot (Novel 5 - Series Finale)
+# Architects of Chaos - Concise Plot (Novel 9 - Series Finale)
 
 ## Novel Type
-Fifth Novel - Conspiracy Thriller / Philosophical Epic / SERIES FINALE
+Ninth Novel - Conspiracy Thriller / Philosophical Epic / SERIES FINALE
 
 ## Core Concept
 Five years after the war, Marcus discovers the ultimate truth: The Architects—twelve people who created the entire Histologic system as a control mechanism. They deliberately designed it to be corruptible, maintained non-Histologic nations as "enemies," and orchestrated all conflicts. "When people unite, they're ungovernable; when they fight, they're controllable." Marcus must expose them, unite humanity, and break the cycle.

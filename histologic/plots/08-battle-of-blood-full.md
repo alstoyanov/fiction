@@ -1,4 +1,4 @@
-# Battle of Blood - Full Plot Outline (Novel 4)
+# Battle of Blood - Full Plot Outline (Novel 8)
 
 ## High Concept
 
@@ -6,7 +6,7 @@ After winning the fact war through deception, Veridica faces a real war with the
 
 ## Core Premise
 
-**The Setup**: December 2108. SFW invades Veridica, seeing Histologic nations as weak after the fact wars. Veridica's military is unprepared for physical combat—they've spent decades fighting with facts, not weapons. Marcus, Kira, and the team must transition from spies and reformers to soldiers.
+**The Setup**: February 2110. Following the hostile fact war and espionage operations of Novel 7 ("Battle of Truths"), SFW invades Veridica. They see Histologic nations as fundamentally unstable—oscillating between naive transparency (Novel 6) and ruthless manipulation (Novel 7). Veridica's military is unprepared for physical combat—they've spent decades fighting with facts, not weapons. Marcus, Kira, and the team must transition from spies and reformers to soldiers.
 
 **The War**: SFW's superior military pushes deep into Veridica. Casualties mount. Cities fall. But Veridica's advantage is information—The Judge knows everything about their own territory, can coordinate perfectly, can predict enemy movements based on historical patterns.
 
@@ -18,17 +18,19 @@ After winning the fact war through deception, Veridica faces a real war with the
 
 ## Timeline
 
-**December 2108**: SFW invades
-**December 2108 - March 2109**: 4-month war
+**After "Battle of Truths" (Novel 7)**: February 2110
+**February 2110**: SFW invades
+**February 2110 - June 2110**: 4-month war
 **Novel Duration**: 4 months of combat
-**Ending**: April 2109 - Victory, but The Judge destroyed
+**Ending**: July 2110 - Victory, but The Judge destroyed
+**Note**: Occurs immediately after the hostile fact war of Novel 7, as SFW uses the espionage and deception as justification for physical invasion
 
 ## Main Characters (14 Core)
 
 ### The Warriors (Returning Characters)
 
 **1. Marcus Chen**
-- **Age**: 31
+- **Age**: 32
 - **Role**: Civilian-turned-soldier, strategic advisor
 - **Arc**: Spy → Soldier → Destroyer
 - **Mission**: Defend Veridica, ultimately destroy The Judge
@@ -36,7 +38,7 @@ After winning the fact war through deception, Veridica faces a real war with the
 - **Relationship**: With Kira, tested by war
 
 **2. Kira Osman**
-- **Age**: 29
+- **Age**: 30
 - **Role**: Technical warfare specialist
 - **Arc**: Technician → Warrior → Saboteur
 - **Mission**: Use The Judge for defense, then destroy it
@@ -44,7 +46,7 @@ After winning the fact war through deception, Veridica faces a real war with the
 - **Relationship**: With Marcus, strengthened by shared sacrifice
 
 **3. Commander Elena Volkov**
-- **Age**: 44
+- **Age**: 45
 - **Role**: Guerrilla warfare commander
 - **Arc**: Seductress → Commander → Legend
 - **Mission**: Lead resistance behind enemy lines
