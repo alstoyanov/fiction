@@ -77,7 +77,7 @@
 - **Dmitri Volkov** (34) - Security, muscle
 
 ### Antagonists/Victims
-- **Adrian Kovač** (39) - Chronos historian, target, victim
+- **Julian Kovač** (39) - Chronos historian, target, victim
 - **Minister Petra Sokolov** (52) - Chronos defense minister
 - **Director Chen Wei** (45) - Chronos security director
 
@@ -138,7 +138,7 @@
 
 ## Tragic Irony
 
-**The Core Tragedy**: In Novel 6 ("The Distributed Truth"), Marcus REFUSED to execute this exact operation on Adrian Kovač, choosing transparency over corruption. He SAVED Adrian by refusing. Now in Novel 7, Marcus must execute that same operation, DESTROYING the man he saved. Adrian trusted Marcus's lesson about trust—and that trust was weaponized against him.
+**The Core Tragedy**: In Novel 6 ("The Distributed Truth"), Marcus REFUSED to execute this exact operation on Julian Kovač, choosing transparency over corruption. He SAVED Julian by refusing. Now in Novel 7, Marcus must execute that same operation, DESTROYING the man he saved. Julian trusted Marcus's lesson about trust—and that trust was weaponized against him.
 
 ## Word Count Targets
 

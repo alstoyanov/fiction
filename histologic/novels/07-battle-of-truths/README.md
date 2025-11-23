@@ -25,7 +25,7 @@ But this ultimate victory through deception will force Marcus to confront whethe
 Escalation of fact warfare, civilian suffering, Marcus's desperate plan
 
 ### Part 2: The Infiltration (Chapters 9-16)
-Elena's seduction of Adrian Kovač, technical preparation, moral compromises
+Elena's seduction of Julian Kovač, technical preparation, moral compromises
 
 ### Part 3: The Catastrophe (Chapters 17-24)
 Execution of the plan, restoration with corrupted backup, revelations
@@ -50,7 +50,7 @@ Setup for "Battle of Blood" - physical war approaching
 - Isaiah Okonkwo (40) - International journalist
 
 **New Major Characters**:
-- Adrian Kovač (38) - Chronos historian, target of seduction
+- Julian Kovač (38) - Chronos historian, target of seduction
 - Minister Petra Sokolov (52) - Chronos Historical Defense
 - Director Chen Wei (45) - Chronos security chief
 - Chancellor Viktor Petrov (58) - Veridica head of state

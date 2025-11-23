@@ -36,7 +36,7 @@ Six months of fact warfare between Veridica and Chronos has fractured reality fo
 
 ### Chronos
 12. **Minister Petra Sokolov** (52) - Aggressor turned reformer
-13. **Adrian Kovač** (38) - Target of refused seduction, grateful advocate
+13. **Julian Kovač** (38) - Target of refused seduction, grateful advocate
 
 ### Leadership
 14. **Chancellor Viktor Petrov** (58) - Veridica, chooses adaptation
@@ -182,7 +182,7 @@ Marcus refuses both corrupt execution AND passive refusal. Instead: radical tran
 
 **The Riddlers**: Intelligence assets → Truth-tellers → Mission complete → New quests
 
-**Adrian Kovač**: Target → Saved → Grateful → Advocate
+**Julian Kovač**: Target → Saved → Grateful → Advocate
 
 **Governments**: Resisters → Adapters → Better functioning
 
