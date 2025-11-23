@@ -51,7 +51,7 @@ As they move through the city toward the border, Alexei gets word: Chen Wei has 
 They abandon the planned route, take underground passages through the resistance network. It's slower, more dangerous, but less monitored.
 
 **The Confrontation**
-At a resistance waypoint, they encounter Adrian Kovač.
+At a resistance waypoint, they encounter Julian Kovač.
 
 He's there. Waiting. He somehow tracked them—maybe through Elena's communication patterns, maybe through desperation and luck.
 
@@ -109,7 +109,7 @@ Elena: "No. We're not."
 
 The chapter ends with them in Veridica, safe, successful, and completely hollowed out by what they've done.
 
-Behind them, in Chronos, Adrian Kovač returns to his apartment to live with the consequences of trust.
+Behind them, in Chronos, Julian Kovač returns to his apartment to live with the consequences of trust.
 
 ## Key Elements
 

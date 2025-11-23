@@ -11,7 +11,7 @@ Elena arrives in Geneva for the International Historical Verification Conference
 
 The conference brings together historians from all Histologic nations to discuss verification methodologies—ironic, given the ongoing fact war. But diplomatic protocols still hold, and the conference proceeds.
 
-Elena spots Adrian Kovač across the conference hall. He's presenting a paper on "Ethical Constraints in Historical Verification." She attends his presentation, sitting in the front row, taking detailed notes.
+Elena spots Julian Kovač across the conference hall. He's presenting a paper on "Ethical Constraints in Historical Verification." She attends his presentation, sitting in the front row, taking detailed notes.
 
 Adrian's presentation is impressive—he argues that historical verification must serve truth, not national interests. He criticizes fact warfare (carefully, without naming nations) as a corruption of historical methodology. His passion is genuine, his arguments compelling.
 

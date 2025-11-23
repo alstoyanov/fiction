@@ -72,7 +72,7 @@ She thinks: *Tomorrow, I'll break him. And he'll never understand why.*
 **The Eve**
 The chapter ends late at night. The team tries to sleep but mostly lies awake. Marcus thinks about the path that led here—from true believer in the system, to reformer, to revolutionary, to spy. Each step seemed necessary. Each step led further from who he wanted to be.
 
-He thinks about Adrian Kovač, sleeping peacefully, trusting that tomorrow will be good because he's done the right things, trusted the right people, followed the principles Marcus taught him.
+He thinks about Julian Kovač, sleeping peacefully, trusting that tomorrow will be good because he's done the right things, trusted the right people, followed the principles Marcus taught him.
 
 Marcus whispers into the darkness: "I'm sorry, Adrian. I'm so sorry."
 

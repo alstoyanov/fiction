@@ -119,7 +119,7 @@ novels/06-the-distributed-truth/
 ## 🎯 NOVEL CONTENT HIGHLIGHTS
 
 ### The Central Choice
-Marcus Chen is ordered to execute "The Adrian Operation" - seduce and destroy historian Adrian Kovač to win the fact war. **Marcus refuses**, choosing instead to expose the entire Foundation Document publicly.
+Marcus Chen is ordered to execute "The Julian Operation" - seduce and destroy historian Julian Kovač to win the fact war. **Marcus refuses**, choosing instead to expose the entire Foundation Document publicly.
 
 ### The Peaceful Transformation
 - 450,000 distributed verification networks formed
@@ -150,7 +150,7 @@ Marcus Chen is ordered to execute "The Adrian Operation" - seduce and destroy hi
 10. Leaders Serve (Petrov & Sokolov)
 
 ### The Tragic Setup for Novel #7
-By choosing transparency and refusing corruption, Marcus **saves** Adrian Kovač in Book 6. But this creates vulnerability—in Book 7, when hostile actors exploit the openness of distributed truth, Marcus will be forced to **execute** the same operation and **destroy** the same person he saved. The tragedy of necessary evil.
+By choosing transparency and refusing corruption, Marcus **saves** Julian Kovač in Book 6. But this creates vulnerability—in Book 7, when hostile actors exploit the openness of distributed truth, Marcus will be forced to **execute** the same operation and **destroy** the same person he saved. The tragedy of necessary evil.
 
 ---
 

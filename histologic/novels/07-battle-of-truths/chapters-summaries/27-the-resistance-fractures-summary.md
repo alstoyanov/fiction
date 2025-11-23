@@ -59,7 +59,7 @@ Elena speaks: "I seduced a good man. I made him fall in love with me. I used his
 **Dmitri's Response**
 Dmitri responds: "Elena, I love you. You're my sister. But you're wrong. You didn't end a war—you won it through deception. There's a difference."
 
-"And you didn't save lives—you traded one kind of suffering for another. The civilians in the border zones are better. Adrian Kovač is destroyed. Chronos's citizens live a lie. You just chose which suffering to accept."
+"And you didn't save lives—you traded one kind of suffering for another. The civilians in the border zones are better. Julian Kovač is destroyed. Chronos's citizens live a lie. You just chose which suffering to accept."
 
 "That's not heroism. That's just choosing who to harm."
 

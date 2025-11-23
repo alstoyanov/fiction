@@ -60,7 +60,7 @@ Steampunk triptych composition showing three identical men in different settings
 ## Part Two: The Truth Revealed
 
 ### 7. Mother in the Brass Hospital Bed
-**Scene**: Elena Volkov dying in hospital
+**Scene**: Sofya Volkov dying in hospital
 
 ```
 Steampunk hospital room with brass medical equipment, copper monitoring devices with amber displays, steam-powered life support. Elderly woman in white hospital bed, gray hair spread on pillow. Brass bed frame with gear mechanisms. Warm gaslight from copper fixtures. Monitoring equipment with brass gauges showing declining vitals. Peaceful but sad. Victorian medical aesthetic. The mother who holds the family together. 16:9 aspect ratio. --ar 16:9 --style raw --v 6

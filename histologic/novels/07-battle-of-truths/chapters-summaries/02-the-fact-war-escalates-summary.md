@@ -11,7 +11,7 @@ Minister Petra Sokolov coordinates Chronos's fact warfare operations from her of
 
 Petra reviews her strategy: insert contradictory facts about key historical events, particularly border disputes and the Border Wars of 2067. Make Veridica's citizens doubt their own history. Create enough uncertainty that Veridica's government loses credibility.
 
-She meets with her technical team, including Director Chen Wei (Security) and Adrian Kovač (Senior Historian). Adrian expresses discomfort with the operation—he's become a distributed truth advocate after Marcus Chen saved him from a similar operation six months ago. He argues that fact warfare harms civilians and undermines both nations' credibility.
+She meets with her technical team, including Director Chen Wei (Security) and Julian Kovač (Senior Historian). Julian expresses discomfort with the operation—he's become a distributed truth advocate after Marcus Chen saved him from a similar operation six months ago. He argues that fact warfare harms civilians and undermines both nations' credibility.
 
 Petra dismisses his concerns: "Veridica chose this path when they abandoned singular truth. We're defending certainty itself."
 
@@ -19,7 +19,7 @@ She reviews **Foundation Fragment: Principle Two** (discovered in Chronos's arch
 
 Petra plans a major offensive: rewrite the history of the Great Lakes region, claiming Chronos has always controlled the disputed territory. Insert facts about Veridica's historical aggression. Make it look like Veridica has been the aggressor all along.
 
-She assigns Adrian to lead the historical research team, despite his reservations. "You're our best historian. I need you on this."
+She assigns Julian to lead the historical research team, despite his reservations. "You're our best historian. I need you on this."
 
 The chapter ends with Petra looking at a map of the border region, planning her next moves. She doesn't see herself as villain—she's defending her nation's right to historical certainty against Veridica's dangerous relativism.
 
@@ -27,7 +27,7 @@ The chapter ends with Petra looking at a map of the border region, planning her 
 
 - **Foundation Fragment**: Principle Two revealed (from Chronos's archives)
 - **Enemy Perspective**: Petra genuinely believes she's defending truth
-- **Adrian's Discomfort**: Foreshadowing his vulnerability
+- **Julian's Discomfort**: Foreshadowing his vulnerability
 - **Moral Ambiguity**: Both sides think they're right
 - **Strategic Planning**: Showing the mechanics of fact warfare
 - **Old World Reference**: Petra mentions "Cold War" tactics from 20th century
@@ -42,14 +42,14 @@ The chapter ends with Petra looking at a map of the border region, planning her 
 ## Character Development
 
 - Petra as competent, principled antagonist
-- Adrian as conflicted, vulnerable target
+- Julian as conflicted, vulnerable target
 - Chen Wei as paranoid security director
 
 ## Connections
 
-- References Novel 6: Adrian's gratitude to Marcus
+- References Novel 6: Julian's gratitude to Marcus
 - References Novel 6: Distributed truth transformation
-- Sets up Adrian as target for seduction operation
+- Sets up Julian as target for seduction operation
 - Establishes Petra's strategic thinking
 - Shows Chronos's perspective on the conflict
 

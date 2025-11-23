@@ -21,7 +21,7 @@ Silence. Petrov stares at him.
 
 "So is what they're doing to us, Chancellor. So is what they're doing to civilians in the border zones."
 
-Marcus explains the technical feasibility. It's the same operation he refused to execute six months ago—the one that would have targeted Adrian Kovač. He saved Adrian then by choosing transparency over corruption. Now he's proposing to execute that exact operation.
+Marcus explains the technical feasibility. It's the same operation he refused to execute six months ago—the one that would have targeted Julian Kovač. He saved Adrian then by choosing transparency over corruption. Now he's proposing to execute that exact operation.
 
 Petrov asks the key question: "What would this cost us? Morally, I mean."
 
@@ -74,7 +74,7 @@ The chapter ends with Marcus walking through Veridica's streets, looking at ordi
 ## Connections
 
 - References Novel 6: The operation Marcus refused
-- References Novel 6: Adrian Kovač as previous target
+- References Novel 6: Julian Kovač as previous target
 - Sets up team recruitment (next chapters)
 - Establishes official deniability structure
 - Shows Marcus crossing his moral line

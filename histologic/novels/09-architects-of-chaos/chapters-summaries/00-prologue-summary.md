@@ -87,7 +87,7 @@ He begins compiling evidence. The signatures. The patterns. The too-perfect cris
 
 He thinks about who to tell. Kira—his wife, his partner, his co-builder of the new system. She'll understand. Or she'll think he's crazy. Either way, she deserves to know.
 
-The Volkov siblings—Dmitri, Nikolai, Elena. They've fought beside him through everything. They'll fight beside him again. Or they'll tell him to rest. To stop seeing enemies everywhere.
+The Volkov brothers—Dmitri, Nikolai, Alexei. They've fought beside him through everything. They'll fight beside him again. Or they'll tell him to rest. To stop seeing enemies everywhere.
 
 Isaiah—the journalist who's documented everything. He'll investigate. Or he'll publish that Marcus has lost his mind.
 

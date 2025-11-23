@@ -17,9 +17,9 @@ They identify all twelve architects:
 4. **Ambassador Sarah Okonkwo** (55) - The Diplomat, Isaiah's aunt
 5. **Professor Adrian Volkov** (deceased) - The Historian, Volkov uncle
 6. **Director Maya Tanaka** (52) - The Technologist, Dr. Tanaka's sister's superior
-7. **Cardinal Thomas Kovač** (73) - The Ideologue, Adrian Kovač's uncle (Novel 7)
+7. **Cardinal Thomas Kovač** (73) - The Ideologue, Julian Kovač's uncle (Novel 7)
 8. **Colonel James Morrison** (45) - The Operative, covert operations
-9. **Chancellor Elena Sokolov** (60) - The Administrator, General Sokolov's mother
+9. **Chancellor Viktoria Sokolov** (60) - The Administrator, General Sokolov's mother
 10. **Dr. Wei Zhang** (58) - The Psychologist, Thomas Wei's father (Novel 5)
 11. **Minister Chen Zhao** (65) - The Politician, Marcus's distant relative
 12. **DV-12** (identity still unknown) - The 13th Architect

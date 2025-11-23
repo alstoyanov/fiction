@@ -1,6 +1,6 @@
 # Chapter 8: The Chronos Dilemma
 
-## POV: Minister Petra Sokolov (Chronos) / Adrian Kovač
+## POV: Minister Petra Sokolov (Chronos) / Julian Kovač
 
 ## November 2, 2108 - 09:00
 
@@ -105,15 +105,15 @@ And she was doing something the Foundation's Compiler predicted most leaders wou
 
 ---
 
-### Part 2: Adrian Kovač
+### Part 2: Julian Kovač
 
 ## November 2, 2108 - 11:00
 
-Adrian Kovač sat in his office, reading Marcus Chen's publication with growing horror and relief.
+Julian Kovač sat in his office, reading Marcus Chen's publication with growing horror and relief.
 
-Horror because he'd been the target. The operation Marcus planned and refused described seducing "Adrian Kovač, Senior Historian" to obtain backup system access. Described him as "lonely, vulnerable, perfect target for manipulation."
+Horror because he'd been the target. The operation Marcus planned and refused described seducing "Julian Kovač, Senior Historian" to obtain backup system access. Described him as "lonely, vulnerable, perfect target for manipulation."
 
-Relief because it hadn't happened. Because Marcus had chosen exposure over execution. Because Adrian hadn't been seduced, manipulated, and betrayed.
+Relief because it hadn't happened. Because Marcus had chosen exposure over execution. Because Julian hadn't been seduced, manipulated, and betrayed.
 
 But also... disappointment?
 
@@ -127,13 +127,13 @@ His terminal chimed. Message from Director Chen Wei:
 
 **KOVAČ - YOUR NAME IN CHEN'S PUBLICATION. SECURITY REVIEW REQUIRED. MY OFFICE, 13:00. - DIRECTOR CHEN**
 
-Adrian understood. He was the vulnerability that almost got exploited. The weak point in Chronos's security. The lonely historian who would have given access credentials to someone who pretended to care.
+Julian understood. He was the vulnerability that almost got exploited. The weak point in Chronos's security. The lonely historian who would have given access credentials to someone who pretended to care.
 
 He'd be demoted. Possibly fired. Definitely humiliated.
 
 But he'd also been saved. By a reformer who chose principle over pragmatism. Who refused to use emotional manipulation as a weapon. Who exposed his own corrupt plan rather than execute it.
 
-Adrian began composing a message. Not to Chen Wei. To Marcus Chen:
+Julian began composing a message. Not to Chen Wei. To Marcus Chen:
 
 **MR. CHEN - I AM ADRIAN KOVAČ. THE MAN YOU PLANNED TO MANIPULATE AND CHOSE NOT TO. I WANT TO THANK YOU. NOT JUST FOR REFUSING THE OPERATION. BUT FOR EXPOSING WHY IT WAS WRONG. FOR TEACHING ME THAT LONELINESS DOESN'T MAKE ME WEAK. IT MAKES ME HUMAN. AND FOR SHOWING THAT REFUSING CORRUPTION MATTERS MORE THAN WINNING WARS. I'M STARTING A JOURNAL. BUILDING TESTIMONY NETWORKS IN CHRONOS. BECOMING THE DISTRIBUTED TRUTH YOU ADVOCATE. THANK YOU FOR SAVING ME FROM BEING WEAPONIZED. AND FOR SAVING YOURSELF FROM BECOMING THE WEAPON. - ADRIAN KOVAČ**
 
@@ -149,7 +149,7 @@ That mattered. More than winning the fact war. More than defeating Chronos. More
 
 Human dignity mattered. Truth mattered. Refusing to become the corruption mattered.
 
-Adrian pulled out a physical notebook. Started writing. Not verified by The Judge. Not stored in factorepos. Just human testimony. Personal memory. Distributed truth.
+Julian pulled out a physical notebook. Started writing. Not verified by The Judge. Not stored in factorepos. Just human testimony. Personal memory. Distributed truth.
 
 *November 2, 2108. The day I learned I was a target and wasn't targeted. The day Marcus Chen refused to weaponize my loneliness. The day I started keeping a journal because machines aren't trustworthy when humans are corruptible. I was there. I witnessed. I testify.*
 

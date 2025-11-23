@@ -19,7 +19,7 @@ As the restoration progresses, Chen Wei notices small inconsistencies:
 
 None of it is proof. All of it is suspicious.
 
-He pulls Adrian Kovač aside: "Adrian, you're our best historian. Look at these restored records. Do they feel right to you?"
+He pulls Julian Kovač aside: "Adrian, you're our best historian. Look at these restored records. Do they feel right to you?"
 
 Adrian reviews the data. "They match our verification protocols. The Judge confirms them. What's wrong?"
 
@@ -77,7 +77,7 @@ He sits alone in his office, looking at the restored factorepo. He knows somethi
 
 He thinks about the past few weeks: the anomalies he detected, the security scans that found nothing, the perfect restoration that's too perfect.
 
-He thinks about Adrian Kovač, who's been spending time with that researcher from Synthesis. Who gave her facility access. Who vouched for her colleagues.
+He thinks about Julian Kovač, who's been spending time with that researcher from Synthesis. Who gave her facility access. Who vouched for her colleagues.
 
 Chen Wei pulls Adrian's access logs. He sees: three visitors on December 20, cleared by Adrian, accessing the backup systems for six hours.
 

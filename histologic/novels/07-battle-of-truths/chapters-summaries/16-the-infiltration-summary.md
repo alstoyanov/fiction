@@ -127,7 +127,7 @@ Kira: "Like we just committed the perfect crime. And like we'll never forgive ou
 
 The chapter ends with them driving away from the factorepo facility, carrying the weight of what they've done. Behind them, Chronos continues its day, unaware that its history has been replaced.
 
-Unaware that Adrian Kovač's trust has been weaponized against his own nation.
+Unaware that Julian Kovač's trust has been weaponized against his own nation.
 
 Unaware that the fact war is about to end—not through victory, but through corruption.
 

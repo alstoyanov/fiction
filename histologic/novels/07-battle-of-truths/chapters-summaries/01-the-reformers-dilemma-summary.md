@@ -19,7 +19,7 @@ He discovers **Foundation Fragment: Principle One** in archived documents while 
 
 Marcus faces his dilemma: He can continue playing defense and watch Veridica's historical integrity crumble, or he can go on offense. But offensive fact warfare means becoming what he fought against. Chancellor Petrov has hinted that "extraordinary measures" might be necessary. Marcus knows what that means.
 
-The chapter ends with Marcus standing at his window, looking toward the Chronos border, remembering Adrian Kovač—the man he saved six months ago by refusing to execute the seduction operation. He wonders: "What would I sacrifice to end this war? What lines would I cross?"
+The chapter ends with Marcus standing at his window, looking toward the Chronos border, remembering Julian Kovač—the man he saved six months ago by refusing to execute the seduction operation. He wonders: "What would I sacrifice to end this war? What lines would I cross?"
 
 ## Key Elements
 
@@ -27,7 +27,7 @@ The chapter ends with Marcus standing at his window, looking toward the Chronos 
 - **Philosophical Dilemma**: Defend with purity and lose, or attack with corruption and win?
 - **Marcus's Internal Conflict**: Reformer vs. warrior
 - **Relationship**: Marcus and Kira working together, tension building
-- **Foreshadowing**: Adrian Kovač mentioned—the man Marcus saved
+- **Foreshadowing**: Julian Kovač mentioned—the man Marcus saved
 - **Song Reference**: Mikhail singing "The Times They Are A-Changin'" (Dylan) in background scene
 
 ## Themes
@@ -46,7 +46,7 @@ The chapter ends with Marcus standing at his window, looking toward the Chronos 
 ## Connections
 
 - References Novel 6: Marcus's heroic refusal to corrupt
-- References Novel 6: Adrian Kovač as saved ally
+- References Novel 6: Julian Kovač as saved ally
 - Sets up Marcus's eventual decision to execute the operation
 - Introduces Chancellor Petrov as pragmatic leader
 

@@ -18,7 +18,7 @@ She discovers the twelve architects didn't just contribute—they each controlle
 - **Maya Tanaka (MT-06)**: Global infrastructure
 - **Thomas Kovač (TK-07)**: Ideological framework
 - **James Morrison (JM-08)**: Covert operations
-- **Elena Sokolov (ES-09)**: Government administration
+- **Viktoria Sokolov (VS-09)**: Government administration
 - **Wei Zhang (WZ-10)**: Social psychology
 - **Chen Zhao (CZ-11)**: Political maneuvering
 - **DV-12 (corrupted)**: Unknown role

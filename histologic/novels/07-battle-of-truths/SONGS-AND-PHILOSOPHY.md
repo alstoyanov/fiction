@@ -283,7 +283,7 @@ This document tracks the songs, philosophical debates, and thematic elements wov
 **Conflict**: Professional detachment vs. real feelings  
 **Arc**: From operative to conflicted human
 
-### Adrian Kovač
+### Julian Kovač
 **Position**: Principled idealist  
 **Belief**: Trust matters more than protocol  
 **Conflict**: Principles as vulnerability  

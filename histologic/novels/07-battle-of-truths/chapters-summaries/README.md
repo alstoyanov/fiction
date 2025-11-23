@@ -24,17 +24,17 @@
 4. **The Civilian Cost** (Multiple civilians) - Vignettes of suffering
 5. **The Desperate Plan** (Marcus) - Proposing the operation
 6. **Assembling the Team** (Marcus) - Recruiting accomplices
-7. **The Target** (Elena) - Identifying Adrian Kovač
+7. **The Target** (Elena) - Identifying Julian Kovač
 8. **The Journalist's Warning** (Isaiah) - External threats emerging
 
 ### Part Two: The Infiltration (Chapters 9-16)
 **Theme**: Seduction, deception, moral compromise
 
-9. **First Contact** (Elena) - Meeting Adrian
-10. **The Courtship** (Adrian) - Falling in love
+9. **First Contact** (Elena) - Meeting Julian
+10. **The Courtship** (Julian) - Falling in love
 11. **The Approach** (Elena) - Professional operation vs. real feelings
 12. **The Technical Preparation** (Kira) - Building the weapon
-13. **The Access** (Adrian) - Giving credentials
+13. **The Access** (Julian) - Giving credentials
 14. **The Insertion** (Marcus) - Team arrives in Chronos
 15. **The Seduction Complete** (Elena) - The betrayal
 16. **The Infiltration** (Kira) - Executing the operation

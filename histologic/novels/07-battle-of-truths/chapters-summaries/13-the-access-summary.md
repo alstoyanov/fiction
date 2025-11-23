@@ -2,7 +2,7 @@
 
 **Date**: Mid-December 2109  
 **Location**: Chronos, Adrian's home and factorepo facility  
-**POV**: Adrian Kovač  
+**POV**: Julian Kovač  
 **Word Count Target**: ~3,500 words
 
 ## Summary

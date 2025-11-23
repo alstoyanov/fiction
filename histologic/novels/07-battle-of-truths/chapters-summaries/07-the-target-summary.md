@@ -12,7 +12,7 @@ Elena sits in a secure briefing room, reviewing dossiers of potential targets in
 She reviews three candidates:
 1. **Director Chen Wei**: Too paranoid, too security-conscious
 2. **Minister Petra Sokolov**: Too high-profile, too well-protected
-3. **Adrian Kovač**: Senior Historian, factorepo access, recently widowed, idealistic, vulnerable
+3. **Julian Kovač**: Senior Historian, factorepo access, recently widowed, idealistic, vulnerable
 
 Elena studies Adrian's file. Age 39. Wife died two years ago. No children. Devoted to his work. Distributed truth advocate—he was the target of a similar operation six months ago, but Marcus Chen refused to execute it, saving him. Adrian became grateful, even friendly with Marcus through back-channel communications.
 

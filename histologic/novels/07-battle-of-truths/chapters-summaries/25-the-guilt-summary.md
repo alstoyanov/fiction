@@ -71,7 +71,7 @@ Every justification rings hollow. Every argument defeats itself.
 He thinks: *Maybe that's the point. Maybe necessary evils can't be justified. Maybe we just do them and live with the guilt.*
 
 **The Message from Adrian**
-Marcus receives an encrypted message from Adrian Kovač. It's brief:
+Marcus receives an encrypted message from Julian Kovač. It's brief:
 
 "Marcus, I understand now. You saved me six months ago to teach me that trust matters. Then you destroyed me to teach me that trust is vulnerability. Both lessons are true. Both are cruel. I don't know if I hate you or pity you. But I know this: you're living with what you did. That's punishment enough. — Adrian"
 

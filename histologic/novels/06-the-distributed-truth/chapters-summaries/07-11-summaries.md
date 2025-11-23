@@ -26,7 +26,7 @@ Shows government can evolve when citizens choose. Petrov chooses adaptation over
 
 ## Chapter 8 Summary: The Chronos Dilemma
 
-**POV**: Minister Petra Sokolov / Adrian Kovač  
+**POV**: Minister Petra Sokolov / Julian Kovač  
 **Timeline**: November 2, 2108 - 09:00-11:00  
 **Setting**: Chronos government / Adrian's office
 
@@ -48,22 +48,22 @@ Shows government can evolve when citizens choose. Petrov chooses adaptation over
 - Wise leaders choose 3: admit design, transform
 - Most leaders cling until citizens force transformation
 
-### Part 2: Adrian's Gratitude
+### Part 2: Julian's Gratitude
 
 **Key Events**:
-- Adrian reads he was the target of (refused) seduction operation
+- Julian reads he was the target of (refused) seduction operation
 - Horror and relief—wasn't manipulated
 - Honest admission: part of him wished someone had cared (even falsely)
 - Thanks Marcus for refusing to weaponize his loneliness
 - Starts journal, becomes distributed truth advocate
 
-**Adrian's Message to Marcus**:
+**Julian's Message to Marcus**:
 *"Thank you for teaching me that loneliness doesn't make me weak. It makes me human. And for showing that refusing corruption matters more than winning wars."*
 
 ### Significance
 - Both governments choose transformation
-- Adrian (saved by Marcus's refusal) becomes advocate
-- Sets up tragic irony for Novel 7: Marcus will later destroy Adrian
+- Julian (saved by Marcus's refusal) becomes advocate
+- Sets up tragic irony for Novel 7: Marcus will later destroy Julian
 - Shows peaceful transformation through citizen choice
 
 ---

@@ -7,7 +7,7 @@
 
 ## Summary
 
-Sokolov confronts her mother, Chancellor Elena Sokolov of Chronos. One of the architects.
+Sokolov confronts her mother, Chancellor Viktoria Sokolov of Chronos. One of the architects.
 
 "You used me. My entire career—you orchestrated it."
 

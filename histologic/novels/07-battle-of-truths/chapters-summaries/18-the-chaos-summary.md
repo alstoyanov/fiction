@@ -59,7 +59,7 @@ In a quiet moment, Petra thinks about the fact war. She started it to defend Chr
 
 Now their systems are failing. Their history is vulnerable. And she wonders: did we bring this on ourselves?
 
-She thinks about Adrian Kovač, who warned her that fact warfare would have consequences. She dismissed his concerns. Now she wonders if he was right.
+She thinks about Julian Kovač, who warned her that fact warfare would have consequences. She dismissed his concerns. Now she wonders if he was right.
 
 She makes a note to talk to Adrian after this crisis—maybe his distributed truth ideas have merit after all.
 

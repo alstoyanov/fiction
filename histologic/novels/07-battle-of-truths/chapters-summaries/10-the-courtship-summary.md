@@ -2,7 +2,7 @@
 
 **Date**: Late November 2109  
 **Location**: Chronos, various locations  
-**POV**: Adrian Kovač  
+**POV**: Julian Kovač  
 **Word Count Target**: ~4,000 words
 
 ## Summary

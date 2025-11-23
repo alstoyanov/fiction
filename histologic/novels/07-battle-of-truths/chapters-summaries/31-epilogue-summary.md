@@ -55,7 +55,7 @@ He's covering the invasion as a journalist. He'll document what happens. But he 
 
 He thinks: *I told the truth. The truth started a war. Was I right to tell it? I'll never know.*
 
-**Adrian Kovač - Chronos, Watching**
+**Julian Kovač - Chronos, Watching**
 Adrian watches the news from his small apartment in Chronos. Veridica and Chronos are allies now—the nation that destroyed his history is now his nation's partner.
 
 He doesn't know how to feel about that. Betrayed again? Pragmatically accepting? Numbly indifferent?

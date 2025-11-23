@@ -29,12 +29,12 @@ Marcus pulls up The Judge's original code—the archived version from before its
 6. MT-06: Maya Tanaka
 7. TK-07: Thomas Kovač
 8. JM-08: James Morrison
-9. ES-09: Elena Sokolov
+9. VS-09: Viktoria Sokolov
 10. WZ-10: Wei Zhang
 11. CZ-11: Chen Zhao
 12. DV-12: (signature corrupted/unreadable)
 
-Kira's eyes widen. "Adrian Volkov? That's... that's Dmitri, Nikolai, and Elena's uncle. Maya Tanaka is Dr. Tanaka's sister. Elena Sokolov is General Sokolov's mother. Chen Zhao... Marcus, that's your family name."
+Kira's eyes widen. "Adrian Volkov? That's... that's Dmitri, Nikolai, and Alexei's uncle. Maya Tanaka is Dr. Tanaka's sister. Viktoria Sokolov is General Sokolov's mother. Chen Zhao... Marcus, that's your family name."
 
 "I know. Everyone we know is connected to these architects. That can't be coincidence."
 

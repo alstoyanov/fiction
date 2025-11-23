@@ -65,7 +65,7 @@ Reveal a little about the Architects but not much. Most revelations should be ke
 ## Key Considerations
 
 ### Critical Plot Point from Novel 6
-**THE IRONY**: In Novel 6 ("The Distributed Truth"), Marcus REFUSED to execute the seduction operation on Adrian Kovač, choosing transparency instead. He SAVED Adrian by refusing. Now in Novel 7, Marcus must execute that exact operation, DESTROYING the man he saved. This is the core tragedy.
+**THE IRONY**: In Novel 6 ("The Distributed Truth"), Marcus REFUSED to execute the seduction operation on Julian Kovač, choosing transparency instead. He SAVED Julian by refusing. Now in Novel 7, Marcus must execute that exact operation, DESTROYING the man he saved. This is the core tragedy.
 
 ### Foundation Fragments Already Revealed
 **Novel 5 (The Lost Hour)**:
@@ -102,7 +102,7 @@ Reveal a little about the Architects but not much. Most revelations should be ke
 - **Marcus**: Peaceful revolutionary → Reluctant spy → Morally compromised
 - **Kira**: Strategic exposer → Reluctant accomplice → Questioner
 - **Elena**: Confessor of unexecuted plan → Actual executor/seductress
-- **Adrian Kovač**: Saved ally → Betrayed victim → Destroyed
+- **Julian Kovač**: Saved ally → Betrayed victim → Destroyed
 - **The Volkovs**: Distributed truth advocates → Espionage enablers
 - **Mikhail**: Validated philosopher → Disappointed in compromise
 
@@ -120,5 +120,5 @@ Reveal a little about the Architects but not much. Most revelations should be ke
 - [ ] Songs/philosophical elements integrated
 - [ ] Character arcs tracked properly
 - [ ] Sets up Novel 8 properly
-- [ ] Maintains tragic irony of Marcus destroying Adrian
+- [ ] Maintains tragic irony of Marcus destroying Julian
 

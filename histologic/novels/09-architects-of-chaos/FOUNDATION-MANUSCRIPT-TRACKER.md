@@ -94,7 +94,7 @@ The Foundation wasn't just assembled by Dr. Vance—it was designed by twelve ar
    - Covert operations
    - Plants agents, triggers conflicts
 
-9. **Chancellor Elena Sokolov (ES-09)** - The Administrator
+9. **Chancellor Viktoria Sokolov (VS-09)** - The Administrator
    - Government management
    - Manages Histologic nations' governments
 

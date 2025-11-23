@@ -28,7 +28,7 @@ Chen Wei has been waiting for this conversation. "I know."
 
 "What do you know?"
 
-He shows her his evidence: the timestamp discrepancies, the too-perfect verification, the nonexistent Dr. Elena Sokolov, Adrian Kovač's access logs showing three visitors on December 20.
+He shows her his evidence: the timestamp discrepancies, the too-perfect verification, the nonexistent Dr. Elena Sokolov, Julian Kovač's access logs showing three visitors on December 20.
 
 "We were infiltrated. The backup was replaced. Adrian was used as unwitting access point."
 
@@ -89,7 +89,7 @@ Chen Wei asks: "Is that the right choice?"
 "I don't know. But it's the choice that keeps Chronos functioning. Sometimes that's all we have."
 
 **The Personal Cost**
-Before Chen Wei leaves, Petra asks: "Adrian Kovač. He was used. Does he know?"
+Before Chen Wei leaves, Petra asks: "Julian Kovač. He was used. Does he know?"
 
 "Not yet. But he will. Dr. Elena Sokolov disappeared after the infiltration. He'll realize eventually."
 

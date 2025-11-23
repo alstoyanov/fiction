@@ -39,7 +39,7 @@ Three men in the Veridica-Chronos border zone: a dedicated law enforcement offic
 - **Key Trait**: Trying to hold together what cannot be held, ultimately succeeding in unexpected way
 
 ### Supporting Characters
-- **Elena Volkov**: Mother, dying from fact storm exposure, catalyst for brothers' reunion
+- **Sofya Volkov**: Mother, dying from fact storm exposure, catalyst for brothers' reunion
 - **Ivan Volkov**: Father (deceased), killed in fact storm experiment, his death split the brothers
 - **Captain Yevgenia Sokolov**: Dmitri's superior, reveals she's part of the fact storm program
 

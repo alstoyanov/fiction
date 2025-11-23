@@ -49,7 +49,7 @@ They laugh. Grief softened by time but never gone.
 
 Elena (50): Legendary figure, semi-retired. Trains new generation of defenders. Not soldiers—defenders. "Learn to fight. Hope you never need to."
 
-She's written memoir: "The Seductress, The Spy, The Soldier: A Life in Service." Honest about everything—including Adrian Kovač.
+She's written memoir: "The Seductress, The Spy, The Soldier: A Life in Service." Honest about everything—including Julian Kovač.
 
 "I destroyed a good man to win a war. I carry that. I'll always carry that. But I also helped win a war that freed us. Both are true. I live with both."
 

@@ -75,7 +75,7 @@ Elena: "We're heroes in secret and criminals if discovered."
 "Yes. Welcome to the reality of necessary evil."
 
 **The Cost**
-Petrov asks about casualties. Nikolai reports: "One. Adrian Kovač. He's alive, but destroyed. His career is ruined, his trust is shattered, his nation's history is replaced. He's the cost of our victory."
+Petrov asks about casualties. Nikolai reports: "One. Julian Kovač. He's alive, but destroyed. His career is ruined, his trust is shattered, his nation's history is replaced. He's the cost of our victory."
 
 Petrov is quiet. "One casualty. For ending a war. That's... that's a low price, strategically."
 
@@ -116,7 +116,7 @@ He pours a drink and toasts to the celebrating crowd: "To necessary evils. And t
 - **Petrov's Complicity**: He shares the burden
 - **Official Cover Story**: "Diplomatic breakthrough"
 - **Team Buried**: No public recognition, deniability maintained
-- **One Casualty**: Adrian Kovač
+- **One Casualty**: Julian Kovač
 - **Future Warning**: SFW threat emerging
 - **Song Reference**: Celebration music plays "We Are the Champions" (Queen), ironically
 

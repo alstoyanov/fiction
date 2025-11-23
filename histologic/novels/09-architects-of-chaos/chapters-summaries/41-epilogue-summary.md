@@ -53,7 +53,7 @@ The Counselor has been faithful. Advisory, not authoritative. Helpful, not contr
 
 **Fled architects in CNT**: Most died. Helena Voss died unrepentant in 2120. Liu Wei died in 2125. Others scattered, powerless, forgotten.
 
-**Chancellor Elena Sokolov** (General Sokolov's mother): Still alive, still in CNT, still advising Kozlov's successor. Still believes she was right.
+**Chancellor Viktoria Sokolov** (General Sokolov's mother): Still alive, still in CNT, still advising Kozlov's successor. Still believes she was right.
 
 "They'll fail eventually," she says in a rare interview. "Humans need structure. Need control. Need architects. When they fail, they'll remember us. They'll wish they'd listened."
 

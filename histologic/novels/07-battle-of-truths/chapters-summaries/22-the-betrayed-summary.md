@@ -2,7 +2,7 @@
 
 **Date**: December 28, 2109  
 **Location**: Chronos, Adrian's apartment  
-**POV**: Adrian Kovač  
+**POV**: Julian Kovač  
 **Word Count Target**: ~4,500 words
 
 ## Summary

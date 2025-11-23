@@ -6,7 +6,7 @@
 
 ## Key Events
 
-- Marcus offered infiltration plan by Chancellor Petrov: seduce Chronos official (Adrian Kovač), replace their backup, win through deception
+- Marcus offered infiltration plan by Chancellor Petrov: seduce Chronos official (Julian Kovač), replace their backup, win through deception
 - Marcus discovers Foundation Principle Three (Strategic Ambiguity): backup control designed to enable fact warfare
 - Realizes the system was deliberately designed with this vulnerability
 - Internal conflict: Execute corrupt plan and save civilians, or refuse and maintain principles?

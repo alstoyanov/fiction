@@ -166,7 +166,7 @@ He tried not to think about that.
 
 His mother's room was on the third floor, in the cognitive trauma ward. The walls here were painted a soft blue that was supposed to be calming. It did not work. Nothing could calm the screaming in people's minds when their memories and the factorepo could not agree on what was real.
 
-Elena Volkov lay in the bed, her gray hair spread across the pillow, her eyes closed. She looked smaller than Dmitri remembered. Frailer. The machines around her beeped softly, monitoring brain activity, cognitive function, the slow dissolution of a mind that had lived too long in contradictory truth.
+Sofya Volkov lay in the bed, her gray hair spread across the pillow, her eyes closed. She looked smaller than Dmitri remembered. Frailer. The machines around her beeped softly, monitoring brain activity, cognitive function, the slow dissolution of a mind that had lived too long in contradictory truth.
 
 "Mama," Dmitri said softly, taking her hand.
 
@@ -382,7 +382,7 @@ Alexei nodded and moved to the bed. Dmitri followed. Nikolai was already there.
 
 Three brothers, three identical faces, gathered around their dying mother.
 
-Elena Volkov looked up at them, and her smile was radiant. "My beautiful boys. My triplets. I knew you'd come together. I knew—"
+Sofya Volkov looked up at them, and her smile was radiant. "My beautiful boys. My triplets. I knew you'd come together. I knew—"
 
 A fact storm siren wailed.
 
@@ -402,7 +402,7 @@ Nikolai ran for the door, but it wouldn't open. The fact storm had locked down t
 
 Alexei held their mother's hand, his voice urgent: "Mama, stay with us. Stay with us. Don't let them take you. Don't—"
 
-But Elena Volkov's eyes had gone distant, seeing things that weren't there, or were there, or had never been there, or would always be there. The fact storm was showing her every possible history at once, and her mind, already fragile, shattered under the weight.
+But Sofya Volkov's eyes had gone distant, seeing things that weren't there, or were there, or had never been there, or would always be there. The fact storm was showing her every possible history at once, and her mind, already fragile, shattered under the weight.
 
 "Ivan," she whispered. "Ivan, I see you. I see—"
 
@@ -436,7 +436,7 @@ Their father's voice called from below: "Boys! Dinner!"
 
 They raced down the stairs, three identical figures moving in perfect synchronization, and burst into the apartment where their mother was setting the table and their father was pulling something from the oven.
 
-"Wash your hands," Elena said automatically.
+"Wash your hands," Sofya said automatically.
 
 They did, jostling for space at the sink, still laughing.
 
@@ -484,7 +484,7 @@ And none of them could save the others.
 
 The fact storm ended as suddenly as it had begun. The lights stabilized. The building unlocked. The world decided what it was again.
 
-But Elena Volkov was still dead.
+But Sofya Volkov was still dead.
 
 Dmitri stood over her body, his face a mask. Alexei was crying silently. Nikolai had his arms wrapped around himself, rocking slightly.
 

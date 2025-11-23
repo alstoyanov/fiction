@@ -21,7 +21,7 @@ Dr. Wei Zhang stands: "I won't run. I created the psychology of control. I was w
 
 He surrenders to authorities. Will testify against the others.
 
-The remaining architects flee to CNT. Voss, Liu Wei, Okonkwo, Tanaka, Kovač, Morrison, Elena Sokolov, Chen Zhao. Eight architects escaping to CNT.
+The remaining architects flee to CNT. Voss, Liu Wei, Okonkwo, Tanaka, Kovač, Morrison, Viktoria Sokolov, Chen Zhao. Eight architects escaping to CNT.
 
 As they flee, Voss records a final message: "We tried to save humanity from itself. We failed. But mark my words: without us, the chaos returns. The Fracture returns. War returns. You'll beg us to come back. Or you'll find new architects. Because humans need control. That's the truth we learned. That's the truth you'll learn."
 

@@ -208,7 +208,7 @@ Elena looked angry, then thoughtful, then resigned. "You're right. The operation
 
 "Will you support the exposure?"
 
-"I'll testify to my role. I'll admit I was prepared to seduce Adrian Kovač. I'll acknowledge it was ethically wrong even if tactically sound. That's distributed truth too. Honest testimony. Even when it exposes your own corruption."
+"I'll testify to my role. I'll admit I was prepared to seduce Julian Kovač. I'll acknowledge it was ethically wrong even if tactically sound. That's distributed truth too. Honest testimony. Even when it exposes your own corruption."
 
 Marcus felt relief. "Thank you. Two... one... uploading now."
 
@@ -414,5 +414,5 @@ And reality, for the first time, becoming what humans remembered instead of what
 - Distributed networks forming organically
 - Truth becoming distributed again
 
-**Next**: Reactions from both governments, Chronos's response, Adrian Kovač's role, international pressure, and whether distributed truth can actually work
+**Next**: Reactions from both governments, Chronos's response, Julian Kovač's role, international pressure, and whether distributed truth can actually work
 

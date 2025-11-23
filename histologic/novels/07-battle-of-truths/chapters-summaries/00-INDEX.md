@@ -32,7 +32,7 @@ Quick navigation for all 32 chapter summaries.
 *POV: Marcus Chen | Recruiting accomplices*
 
 **[07-the-target-summary.md](07-the-target-summary.md)** - The Target  
-*POV: Elena Volkov | Identifying Adrian Kovač*
+*POV: Elena Volkov | Identifying Julian Kovač*
 
 **[08-the-journalists-warning-summary.md](08-the-journalists-warning-summary.md)** - The Journalist's Warning  
 *POV: Isaiah Okonkwo | SFW threat emerging*
@@ -45,7 +45,7 @@ Quick navigation for all 32 chapter summaries.
 *POV: Elena Volkov | Meeting Adrian at conference*
 
 **[10-the-courtship-summary.md](10-the-courtship-summary.md)** - The Courtship  
-*POV: Adrian Kovač | Falling in love*
+*POV: Julian Kovač | Falling in love*
 
 **[11-the-approach-summary.md](11-the-approach-summary.md)** - The Approach  
 *POV: Elena Volkov | Operation vs. real feelings*
@@ -54,7 +54,7 @@ Quick navigation for all 32 chapter summaries.
 *POV: Kira Osman | Building the weapon*
 
 **[13-the-access-summary.md](13-the-access-summary.md)** - The Access  
-*POV: Adrian Kovač | Giving credentials*
+*POV: Julian Kovač | Giving credentials*
 
 **[14-the-insertion-summary.md](14-the-insertion-summary.md)** - The Insertion  
 *POV: Marcus Chen | Team arrives in Chronos*
@@ -85,7 +85,7 @@ Quick navigation for all 32 chapter summaries.
 *POV: Minister Petra Sokolov | Understanding the conquest*
 
 **[22-the-betrayed-summary.md](22-the-betrayed-summary.md)** - The Betrayed  
-*POV: Adrian Kovač | Discovering the truth*
+*POV: Julian Kovač | Discovering the truth*
 
 **[23-the-extraction-summary.md](23-the-extraction-summary.md)** - The Extraction  
 *POV: Alexei Volkov | Escaping Chronos*
@@ -101,7 +101,7 @@ Quick navigation for all 32 chapter summaries.
 *POV: Marcus Chen | Living with the cost*
 
 **[26-the-aftermath-in-chronos-summary.md](26-the-aftermath-in-chronos-summary.md)** - The Aftermath in Chronos  
-*POV: Adrian Kovač | Destroyed life*
+*POV: Julian Kovač | Destroyed life*
 
 **[27-the-resistance-fractures-summary.md](27-the-resistance-fractures-summary.md)** - The Resistance Fractures  
 *POV: Alexei Volkov | Movement splits*
@@ -131,7 +131,7 @@ Quick navigation for all 32 chapter summaries.
 **Marcus Chen**: 1, 5, 6, 14, 25, 30  
 **Kira Osman**: 3, 12, 16  
 **Elena Volkov**: 7, 9, 11, 15  
-**Adrian Kovač**: 10, 13, 22, 26  
+**Julian Kovač**: 10, 13, 22, 26  
 **Petra Sokolov (Chronos)**: 2, 18, 21  
 **Nikolai Volkov**: 17  
 **Alexei Volkov**: 23, 27  

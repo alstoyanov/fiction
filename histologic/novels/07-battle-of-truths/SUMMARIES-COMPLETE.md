@@ -128,7 +128,7 @@
 
 ## The Core Tragedy
 
-**The Irony**: In Novel 6, Marcus REFUSED to execute this exact operation on Adrian Kovač, choosing transparency over corruption. He SAVED Adrian. Now in Novel 7, Marcus must execute that same operation, DESTROYING the man he saved.
+**The Irony**: In Novel 6, Marcus REFUSED to execute this exact operation on Julian Kovač, choosing transparency over corruption. He SAVED Adrian. Now in Novel 7, Marcus must execute that same operation, DESTROYING the man he saved.
 
 **The Betrayal**: Adrian trusted Marcus's lesson about trust. That trust was weaponized against him.
 
@@ -153,7 +153,7 @@
 - Professional detachment cracking
 - Real feelings emerging through mission
 
-### Adrian Kovač
+### Julian Kovač
 - Idealist → Lover → Betrayed → Destroyed
 - Trust as doom
 - Keeper of unspeakable truth

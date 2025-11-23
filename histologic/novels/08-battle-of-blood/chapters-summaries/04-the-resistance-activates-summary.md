@@ -23,11 +23,11 @@ The Judge's interface displays on her tablet: "SFW supply depot, Grid 23. Guards
 
 Elena plans the operation. Eight fighters. Two hours. In and out. Destroy the supplies, disappear before reinforcements arrive.
 
-She thinks about her life as she prepares. She's been so many people: the seductress who destroyed Adrian Kovač in Novel 7, the spy who infiltrated Chronos, the commander who led the escape in Novel 4. Each role required becoming someone else, hiding who she really was.
+She thinks about her life as she prepares. She's been so many people: the seductress who destroyed Julian Kovač in Novel 7, the spy who infiltrated Chronos, the commander who led the escape in Novel 4. Each role required becoming someone else, hiding who she really was.
 
 But this—resistance—this is real. This is her. Fighting for her homeland, protecting her people, refusing to submit. No seduction, no deception, just direct action.
 
-She thinks about Adrian sometimes. The man she destroyed to win the fact war. Does he know about this invasion? Is he watching Veridica suffer? Does he feel vindicated? She carries that guilt into every operation. Maybe this is penance. Maybe this is redemption. Maybe it's just war.
+She thinks about Julian sometimes. The man she destroyed to win the fact war. Does he know about this invasion? Is he watching Veridica suffer? Does he feel vindicated? She carries that guilt into every operation. Maybe this is penance. Maybe this is redemption. Maybe it's just war.
 
 The operation launches at 0200. Eight fighters, moving through occupied city streets. The Judge guides them: "Patrol approaching Grid 22. Wait 30 seconds. Clear. Proceed."
 
@@ -89,7 +89,7 @@ She smiles. High risk is what she does best.
 - **Phoenix Protocol**: Network activation
 - **First Successful Operation**: Supply depot destroyed
 - **The Judge's Intelligence**: Perfect tactical information
-- **Elena's Reflection**: On Adrian, on her past
+- **Elena's Reflection**: On Julian, on her past
 - **Resistance Philosophy**: Make occupation unbearable
 - **Old World Reference**: French Resistance, Viet Cong, Afghan mujahideen
 - **Song Reference**: "Fortunate Son" (CCR)
@@ -106,13 +106,13 @@ She smiles. High risk is what she does best.
 
 - Elena as resistance commander
 - Her expertise and experience
-- Her guilt over Adrian
+- Her guilt over Julian
 - Her commitment to homeland
 - Her relationship with siblings
 
 ## Connections
 
-- References Novel 7: Adrian Kovač
+- References Novel 7: Julian Kovač
 - References Novel 4: Escape leadership
 - Coordinates with The Judge (Chapter 1)
 - Parallel to Dmitri's front-line fighting (Chapter 2)

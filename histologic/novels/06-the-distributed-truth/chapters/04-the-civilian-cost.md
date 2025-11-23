@@ -92,7 +92,7 @@ Marcus met Kira at the resistance safe house where they'd planned the operation.
 
 And in the corner, the Volkov brothers: Alexei, Dmitri, Nikolai. Plus Elena, calm and calculating as always.
 
-"We're ready," Elena said without preamble. "I've identified the target. Adrian Kovač, Senior Historian. Perfect access, perfect vulnerability, perfect timing. I can make him fall in love in two weeks."
+"We're ready," Elena said without preamble. "I've identified the target. Julian Kovač, Senior Historian. Perfect access, perfect vulnerability, perfect timing. I can make him fall in love in two weeks."
 
 "That's not—" Kira started.
 
@@ -114,7 +114,7 @@ Dmitri spoke up: "I've been thinking about what you said, Marcus. About becoming
 
 Kira had no answer.
 
-Nikolai, who'd been silent, finally spoke: "I've been monitoring Chronos's security. They're paranoid. They're watching for infiltration. They've flagged Adrian Kovač as potentially vulnerable because of his access and personal isolation. If we proceed, we need perfect execution. One mistake, one suspicion, one deviation from pattern, and they'll catch us."
+Nikolai, who'd been silent, finally spoke: "I've been monitoring Chronos's security. They're paranoid. They're watching for infiltration. They've flagged Julian Kovač as potentially vulnerable because of his access and personal isolation. If we proceed, we need perfect execution. One mistake, one suspicion, one deviation from pattern, and they'll catch us."
 
 "Can you counter their monitoring?" Marcus asked.
 
@@ -350,7 +350,7 @@ And somehow, across millennia, it had been enough.
 - Collective trauma from sustained uncertainty
 
 **Elena's Operation Planned**:
-- Target: Adrian Kovač (Senior Historian)
+- Target: Julian Kovač (Senior Historian)
 - Method: Seduction over two weeks
 - Goal: Obtain access credentials
 - Cost: One broken heart vs. many broken minds

@@ -84,7 +84,7 @@ As Nikolai walks out of the operations center, he hears Mikhail's voice in his h
 
 He wonders if there is an answer. Or if there's just wind, and choices, and consequences.
 
-The chapter ends with Nikolai standing outside in the cold December air, watching his breath fog in the darkness. Somewhere in Chronos, systems are failing. Somewhere, Adrian Kovač is probably at work, unaware that his trust is being used to destroy his nation's history.
+The chapter ends with Nikolai standing outside in the cold December air, watching his breath fog in the darkness. Somewhere in Chronos, systems are failing. Somewhere, Julian Kovač is probably at work, unaware that his trust is being used to destroy his nation's history.
 
 Somewhere, the fact war is ending.
 

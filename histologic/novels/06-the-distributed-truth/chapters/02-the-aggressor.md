@@ -139,7 +139,7 @@ Chen Wei wasn't reassured. Physical security was strong, yes. But the Lost Hour 
 
 He pulled up personnel files, looking for vulnerabilities. Who had access to backup systems? Who was lonely enough to be seduced? Who was idealistic enough to be manipulated?
 
-One name stood out: **Adrian Kovač, Senior Historian, Factorepo Oversight.**
+One name stood out: **Julian Kovač, Senior Historian, Factorepo Oversight.**
 
 - Age 38, widower
 - Brilliant, well-respected
@@ -150,7 +150,7 @@ One name stood out: **Adrian Kovač, Senior Historian, Factorepo Oversight.**
 
 Chen Wei flagged Kovač's file for enhanced monitoring. Not because he suspected him specifically, but because anyone with his access profile and personal vulnerability was a potential target.
 
-If Veridica was planning infiltration, they'd target someone exactly like Adrian Kovač.
+If Veridica was planning infiltration, they'd target someone exactly like Julian Kovač.
 
 Chen Wei activated monitoring protocols: discreet surveillance, communication analysis, social network mapping. Nothing invasive enough to alert Kovač or violate privacy laws, but enough to detect unusual patterns.
 
@@ -200,7 +200,7 @@ Or would he spend the rest of his career explaining how he missed the signs?
 **Key Characters Introduced**:
 - **Petra Sokolov**: Aggressive strategist, true believer
 - **Director Chen Wei**: Security chief, paranoid but competent
-- **Adrian Kovač**: Flagged as vulnerable target (setup for Elena's seduction)
+- **Julian Kovač**: Flagged as vulnerable target (setup for Elena's seduction)
 - **Colonel Dimitrov**: Deputy with moral concerns
 
 **Philosophical Depth**:

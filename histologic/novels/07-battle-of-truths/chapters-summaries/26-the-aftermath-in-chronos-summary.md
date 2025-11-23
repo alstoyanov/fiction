@@ -2,12 +2,12 @@
 
 **Date**: February 2110  
 **Location**: Chronos, various locations  
-**POV**: Adrian Kovač  
+**POV**: Julian Kovač  
 **Word Count Target**: ~3,500 words
 
 ## Summary
 
-Adrian Kovač's life has been destroyed. His career is ruined, his trust is shattered, his nation's history has been replaced, and he was the unwitting instrument of it all.
+Julian Kovač's life has been destroyed. His career is ruined, his trust is shattered, his nation's history has been replaced, and he was the unwitting instrument of it all.
 
 **The Investigation**
 Adrian is under investigation by Chronos security. They know his credentials were used for the infiltration. They know he gave access to foreign operatives. They know he compromised national security.
