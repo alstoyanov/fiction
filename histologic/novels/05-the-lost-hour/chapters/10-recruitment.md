@@ -78,7 +78,7 @@ Sokolov reread the fragment. "This is dangerous, Kira. If you're right, this isn
 
 Sokolov sat in silence for a long moment, staring at the old-world map on her wall.
 
-"My grandfather fought in the Border Wars," she said finally. "2087. Right before Histologic unified everything. He told me stories about the chaos—every side claiming truth, no one able to prove it, wars fought over competing facts. He said Histologic saved humanity from self-destruction by establishing objective reality."
+"My grandfather fought in the Border Wars," she said finally. "2067. Right before Histologic unified everything. He told me stories about the chaos-every side claiming truth, no one able to prove it, wars fought over competing facts. He said Histologic saved humanity from self-destruction by establishing objective reality."
 
 "And did it? Or did it just centralize the power to define reality?"
 
@@ -258,7 +258,7 @@ And slowly, fragment by fragment, the foundation began to crack.
 - Philosophy of investigation established
 
 **Old World References**:
-- Border Wars (2087)
+- Border Wars (2067)
 - Pre-Histologic chaos and competing truths
 - Zuboff (surveillance capitalism)
 - Morozov (net delusion)

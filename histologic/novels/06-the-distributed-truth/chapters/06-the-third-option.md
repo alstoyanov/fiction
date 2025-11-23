@@ -20,7 +20,7 @@ They settled on benches around the flickering plaza. Victory Plaza. Peace Square
 
 "You knew their father?" Kira asked.
 
-"I argued with him. In the 2080s. In the journals where the Foundation was developed. He contributed to Principles Two and Six. Brilliant man. Wrong conclusions. But genuine intentions." Mikhail strummed another chord. "He died in 2104, four years ago. Spent his final years trying to warn that the Foundation created traps for reformers. Trying to find the escape he'd failed to build in. His sons continue his work. Speaking in riddles because straight answers are too easily co-opted by the system."
+"I argued with him. In the 2060s. In the journals where the Foundation was developed. He contributed to Principles Two and Six. Brilliant man. Wrong conclusions. But genuine intentions." Mikhail strummed another chord. "He died in 2104, four years ago. Spent his final years trying to warn that the Foundation created traps for reformers. Trying to find the escape he'd failed to build in. His sons continue his work. Speaking in riddles because straight answers are too easily co-opted by the system."
 
 "Mikhail, what's the third option?" Marcus asked. "How do we end the fact war without corruption or defeat?"
 

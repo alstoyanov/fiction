@@ -38,7 +38,7 @@
 
 - References Lost Hour (2 years prior): history can be deleted
 - Fact war is worse: duplication/contradiction, not deletion
-- Foreshadows Fracture Years (2070s-2080s): competing truths tearing societies apart
+- Foreshadows Fracture Years (2050s-2060s): competing truths tearing societies apart
 - Anna's journal methodology will become the model for transformation
 
 ## Quote

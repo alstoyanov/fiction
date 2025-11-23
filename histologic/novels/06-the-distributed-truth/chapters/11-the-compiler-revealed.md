@@ -22,14 +22,14 @@ Balthazar continued: "When is good intention worse than evil design? When is sal
 
 "When the prevention creates different chaos," Isaiah said, understanding. "When salvation requires tyranny. When preventing the Fracture Years created fact warfare."
 
-"Now you're riddling properly!" Caspar pulled out a document. "This is the Compiler's final journal. Written in 2086, two years after assembling the Foundation. Never published. Found in our father's papers after he died. He was going to reveal it. Died before he could. We're fulfilling his mission."
+"Now you're riddling properly!" Caspar pulled out a document. "This is the Compiler's final journal. Written in 2066, two years after assembling the Foundation. Never published. Found in our father's papers after he died. He was going to reveal it. Died before he could. We're fulfilling his mission."
 
 He handed Isaiah the yellowed pages:
 
 ---
 
 **THE COMPILER'S FINAL JOURNAL**  
-**March 2086**
+**March 2066**
 
 *I have made a terrible mistake.*
 
@@ -66,7 +66,7 @@ He handed Isaiah the yellowed pages:
 *If you're reading this, I'm dead. Please expose what I built. Reveal the design. Free humanity from my well-intentioned tyranny.*
 
 *—Dr. Elise Vance*  
-*March 2086*
+*March 2066*
 
 ---
 

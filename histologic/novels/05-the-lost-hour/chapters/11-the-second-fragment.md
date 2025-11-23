@@ -259,7 +259,7 @@ Even when truth was uncomfortable.
 **Old World References**:
 - Interdisciplinary scholarship (2030s-2040s)
 - Behavioral psychology and neuroscience integration
-- Dr. Schmidt implementing Foundation from beginning (2089)
+- Dr. Schmidt implementing Foundation from beginning (2069)
 - Physical typewriters and pre-digital copies
 
 **Philosophical Discussions**:

@@ -12,7 +12,7 @@ Fifteen hands rose. Including Anna's.
 
 "Anna, would you like to share?"
 
-Anna stood. "My daughter Lena asked me yesterday what year Veridica was founded. I said 2089, during the Histologic Implementation. She said her school now teaches it was 2091, after the Border Settlement. I checked The Judge. Both dates are verified. Both are true. Both contradict. I... I couldn't tell her which one to believe. I'm her mother. I'm supposed to know reality. And I don't."
+Anna stood. "My daughter Lena asked me yesterday what year Veridica was founded. I said 2069, during the Histologic Implementation. She said her school now teaches it was 2070, after the Border Settlement. I checked The Judge. Both dates are verified. Both are true. Both contradict. I... I couldn't tell her which one to believe. I'm her mother. I'm supposed to know reality. And I don't."
 
 "That must be very difficult."
 

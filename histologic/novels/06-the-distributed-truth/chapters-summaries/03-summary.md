@@ -25,13 +25,13 @@
 
 ## Foundation Fragments Revealed
 
-**The Compiler's Introduction** (Winter 2084):
+**The Compiler's Introduction** (Winter 2064):
 - Assembled principles from 17 contributors
 - Goal: post-democratic system preventing Fracture Years chaos
 - The Judge appears neutral but serves governmental control
 - Designed to weaponize historical certainty
 
-**The Compiler's Warning** (Note appended March 2086):
+**The Compiler's Warning** (Note appended March 2066):
 - "I assembled these principles because I was terrified... I was wrong."
 - System designed to corrupt reformers
 - Only escape: refuse framework, expose trap, build distributed truth

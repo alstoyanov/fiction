@@ -159,9 +159,9 @@ Dr. Vance reviewed the manuscript she'd been writing. Her complete testimony. He
 It covered everything:
 
 - The Fracture Years and her terror
-- The Foundation's assembly (2084-2086)
-- Her immediate regret (2086)
-- Her failed warnings (2086-2092)
+- The Foundation's assembly (2064-2066)
+- Her immediate regret (2066)
+- Her failed warnings (2066-2072)
 - Her participation in implementation (2092-2104)
 - Her resistance activities (2104-2108)
 - Her confession and transformation (2108-2109)

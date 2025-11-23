@@ -15,8 +15,8 @@ This document tracks the final fragments of The Foundation Document revealed in 
 ### From "The Distributed Truth" (Novel 6):
 - **Principle Three**: Strategic Ambiguity Through Backup Control
 - **Principle Five**: Controlled Conflict / Narrative Shaping
-- **Compiler's Introduction**: 17 contributors, post-democratic design
-- **Compiler's Warning**: Regret, no reform path, distribute truth
+- **Compiler's Introduction**: 17 contributors, post-democratic design (2064)
+- **Compiler's Warning**: Regret, no reform path, distribute truth (2066)
 - **Principle Six** (expanded): The Paradox of Certainty / Designed Authoritarianism
 - **On the End of Designed Conflicts**: Essay on exposure ending designed wars
 - **Compiler Identity**: Dr. Elise Vance (revealed and confessed)
@@ -75,7 +75,7 @@ This document tracks the final fragments of The Foundation Document revealed in 
 > 
 > *If you are reading this because The Judge has been destroyed: good. We built a prison. You escaped it. Now build something better.*
 > 
-> **— The Foundation Contributors, 2085**
+> **- The Foundation Contributors, 2065**
 
 **Implications**:
 - The Architects planned for The Judge's destruction from the beginning
@@ -96,7 +96,7 @@ This document tracks the final fragments of The Foundation Document revealed in 
 **Content**:
 > **TO WHOEVER READS THIS AFTER THE JUDGE IS GONE**
 > 
-> *I am Dr. Elise Vance, the Compiler of the Foundation of Certainty. I assembled these principles from seventeen contributors between 2084 and 2086. I believed we were saving humanity from the chaos of the Fracture Years.*
+> *I am Dr. Elise Vance, the Compiler of the Foundation of Certainty. I assembled these principles from seventeen contributors between 2064 and 2066. I believed we were saving humanity from the chaos of the Fracture Years.*
 > 
 > *I was wrong.*
 > 
@@ -281,10 +281,10 @@ From The Judge's death, humanity learns:
 
 ### The Foundation's Complete Story:
 
-**2084-2086**: Dr. Vance assembles Foundation from 17 contributors  
-**2086**: Vance regrets it immediately, writes Principle 7 as escape clause  
-**2089**: Histologic system activated globally  
-**2089-2106**: System operates as designed (Principles 1-6)  
+**2064-2066**: Dr. Vance assembles Foundation from 17 contributors  
+**2066**: Vance regrets it immediately, writes Principle 7 as escape clause  
+**2069**: Histologic system activated globally  
+**2069-2106**: System operates as designed (Principles 1-6)  
 **2106**: Lost Hour incident (Novel 5), first major crisis  
 **2108**: Distributed truth transformation (Novel 6), system challenged  
 **2109**: Battle of Truths (Novel 7), system corrupted  

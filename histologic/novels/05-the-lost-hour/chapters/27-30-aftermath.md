@@ -33,11 +33,11 @@ Marcus pulled up his other project. "I've identified four more principle fragmen
 
 "So the Foundation is even more comprehensive than we thought."
 
-"It's a complete philosophy of designed authoritarianism. Every aspect thought through. Every objection anticipated. Every implementation strategy detailed." Marcus showed the timeline. "And it was developed over four years—2082 to 2086—through collaborative academic discourse. Dozens of thinkers contributing. Then compiled into a single manuscript in 2085 or early 2086."
+"It's a complete philosophy of designed authoritarianism. Every aspect thought through. Every objection anticipated. Every implementation strategy detailed." Marcus showed the timeline. "And it was developed over four years—2062 to 2066—through collaborative academic discourse. Dozens of thinkers contributing. Then compiled into a single manuscript in 2065 or early 2066."
 
 "Do we know who compiled it? Who turned distributed academic discussion into centralized Foundation?"
 
-"Not yet. Vance contributed but wasn't the compiler. Whoever brought it all together remains anonymous." Marcus highlighted gaps in the research. "But I'm close. There are references to a 'symposium' in late 2085 where contributors met in person. If I can find records of that symposium, I can identify the compiler."
+"Not yet. Vance contributed but wasn't the compiler. Whoever brought it all together remains anonymous." Marcus highlighted gaps in the research. "But I'm close. There are references to a 'symposium' in late 2065 where contributors met in person. If I can find records of that symposium, I can identify the compiler."
 
 "That's next novel's mystery," Kira said with a smile. "We can't solve everything in one book."
 
@@ -269,8 +269,8 @@ No matter the cost.
 **Foundation Research Progress**:
 - Principle Two: "Technological Inevitability"
 - Principle Five: "Preemptive Truth Management"
-- 2082-2086 collaborative academic development
-- Late 2085 symposium where contributors met
+- 2062-2066 collaborative academic development
+- Late 2065 symposium where contributors met
 - Vance writing complete Foundation history
 
 **Character Developments**:

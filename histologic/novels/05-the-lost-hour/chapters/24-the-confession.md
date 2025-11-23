@@ -40,7 +40,7 @@ Wei pulled out a data cylinder. "This contains everything I have. Foundation fra
 
 He uploaded the files to the tribunal's secure system.
 
-"The Foundation of Certainty is a philosophical document written in the mid-2080s, during the Fracture Years. It was authored anonymously by multiple contributors—philosophers, psychologists, political scientists who'd lived through democratic collapse and believed authoritarian certainty was the only solution."
+"The Foundation of Certainty is a philosophical document written in the mid-2060s, during the Fracture Years. It was authored anonymously by multiple contributors-philosophers, psychologists, political scientists who'd lived through democratic collapse and believed authoritarian certainty was the only solution."
 
 "You know the authors?"
 
@@ -104,7 +104,7 @@ But he was also a human being recognizing error and choosing honesty.
 
 "I think we're watching someone realize that the philosophy they dedicated their life to was wrong. That's painful. Humbling. And necessary." Mikhail played a soft melody on his guitar. "Wei is doing what the Foundation authors couldn't: admitting the designed system failed."
 
-"You knew the Foundation authors. Argued against them in the 2080s."
+"You knew the Foundation authors. Argued against them in the 2060s."
 
 "I argued with Elise. With others. We debated in academic journals, at conferences, in late-night conversations fueled by fear of democratic collapse. They won because trauma made their arguments persuasive. People chose certainty because they'd experienced chaos."
 

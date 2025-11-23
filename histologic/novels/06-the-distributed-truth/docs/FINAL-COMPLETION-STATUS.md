@@ -133,7 +133,7 @@ Marcus Chen is ordered to execute "The Adrian Operation" - seduce and destroy hi
 1. **Principle Three**: Strategic Ambiguity (backup control through fact warfare)
 2. **Principle Five**: Controlled Conflict (designed wars for control)
 3. **Introduction**: The Compiler's warning about designed systems
-4. **Principle One**: (From Mikhail's 2084 essays)
+4. **Principle One**: (From Mikhail's 2064 essays)
 5. **Principle Six**: (The Architects' response)
 6. **The Compiler's Identity**: Dr. Elise Vance confesses and apologizes
 

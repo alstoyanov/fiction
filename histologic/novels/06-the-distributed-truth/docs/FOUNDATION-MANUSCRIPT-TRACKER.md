@@ -48,7 +48,7 @@ This document tracks all fragments of The Foundation Document revealed throughou
 
 **Content**:
 > **THE FOUNDATION OF CERTAINTY: An Introduction**  
-> *By Anonymous (The Compiler), Winter 2084*
+> *By Anonymous (The Compiler), Winter 2064*
 > 
 > *This document assembles principles from seventeen contributors across multiple disciplines: political theory, systems architecture, social psychology, historical methodology, and information security.*
 > 
@@ -68,7 +68,7 @@ This document tracks all fragments of The Foundation Document revealed throughou
 **Context**: Note appended to the Introduction in different handwriting
 
 **Content**:
-> *[Note appended in different handwriting, dated March 2086]:*
+> *[Note appended in different handwriting, dated March 2066]:*
 > 
 > *To whoever finds this document in the future:*
 > 
@@ -119,7 +119,7 @@ This document tracks all fragments of The Foundation Document revealed throughou
 
 **Content**:
 > **ON THE END OF DESIGNED CONFLICTS**  
-> *From: Journal of Post-Democratic Governance, Winter 2084*  
+> *From: Journal of Post-Democratic Governance, Winter 2064*  
 > *By: Anonymous (later revealed to be the Compiler)*
 > 
 > *Designed conflicts serve their purpose until citizens see the design. Once exposed, the conflict loses legitimacy. Leaders can continue the war, but citizens stop believing in it. And wars fought without popular belief eventually fail, regardless of tactical success.*
@@ -165,8 +165,8 @@ This document tracks all fragments of The Foundation Document revealed throughou
 
 ### The Compiler's Identity:
 **Dr. Elise Vance** - Revealed in Chapter 11 (The Compiler Revealed)
-- Assembled the Foundation in 2084-2086
-- Regretted it immediately (2086)
+- Assembled the Foundation in 2064-2066
+- Regretted it immediately (2066)
 - Spent years trying to warn and dismantle it
 - Confessed publicly in 2108
 - Now advocates for distributed truth

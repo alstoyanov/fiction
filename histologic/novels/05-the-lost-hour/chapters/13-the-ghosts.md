@@ -36,7 +36,7 @@ Marina stood, pacing. "We have documentation. Eighteen months of internal memos 
 
 Jakob opened his brass cylinder and pulled out the documents. Physical pages. Pre-digital preservation. Everything they'd risked their lives to gather.
 
-"Look at these," he said, laying them across the table. "Directive 47-Alpha: 'Historical revisions must align with Foundation Principle One regarding singular truth.' Memo 89-Beta: 'Implement Principle Four-consistent corrections for ideological deviants.' Report 134-Gamma: 'Narrative guidance follows Foundation framework established 2085.'"
+"Look at these," he said, laying them across the table. "Directive 47-Alpha: 'Historical revisions must align with Foundation Principle One regarding singular truth.' Memo 89-Beta: 'Implement Principle Four-consistent corrections for ideological deviants.' Report 134-Gamma: 'Narrative guidance follows Foundation framework established 2065.'"
 
 He looked at Alexei with desperate intensity. "This proves it. Proves they're implementing something designed decades ago. Proves Histologic was built for this. Proves everything."
 
@@ -182,7 +182,7 @@ Marcus made a note. "I need to find those essays. If Mikhail was critiquing this
 
 "Then he was arguing with the Foundation authors directly. Before they won. Before their vision became reality." Jakob pulled out one more document from his cylinder. "And I have proof he was."
 
-He laid it on the table. An essay response, published in the *Journal of Post-Democratic Governance*, Issue 7, Winter 2084:
+He laid it on the table. An essay response, published in the *Journal of Post-Democratic Governance*, Issue 7, Winter 2064:
 
 **A PHILOSOPHER'S RESPONSE TO ANONYMOUS CERTAINTY**
 *By Mikhail Petrov*
@@ -208,13 +208,13 @@ He laid it on the table. An essay response, published in the *Journal of Post-De
 - Veridica claims they were kidnapped
 - Their documentation has Foundation references throughout
 - Sokolov recruits them to testify using new framework
-- Jakob reveals Mikhail wrote responses to Foundation in 2084
+- Jakob reveals Mikhail wrote responses to Foundation in 2064
 - Decision to testify publicly and permanently
 
 **Marina and Jakob's Evidence**:
 - Directive 47-Alpha: Implement Foundation Principle One
 - Memo 89-Beta: Principle Four corrections
-- Report 134-Gamma: Foundation framework from 2085
+- Report 134-Gamma: Foundation framework from 2065
 - Systematic implementation across Information Ministry
 - Proves government explicitly follows Foundation design
 
@@ -225,7 +225,7 @@ He laid it on the table. An essay response, published in the *Journal of Post-De
 - Human evidence admissible under new framework
 
 **Mikhail's Historical Role**:
-- Wrote critiques of Foundation in real-time (2084)
+- Wrote critiques of Foundation in real-time (2064)
 - Published in *Journal of Post-Democratic Governance*
 - Argued against "Anonymous Certainty" (Foundation authors)
 - Essays later classified and hidden

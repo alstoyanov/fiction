@@ -81,10 +81,10 @@ Nikolai processed that. "So the uncertainty is the strength?"
 Nikolai took the paper. An essay, pre-Histologic, yellowed with age:
 
 **ON DISTRIBUTED VERIFICATION VS. CENTRALIZED CERTAINTY**
-*Journal of Post-Democratic Governance, Issue 9, Summer 2084*
+*Journal of Post-Democratic Governance, Issue 9, Summer 2064*
 *By Mikhail Petrov*
 
-He looked at his uncle in shock. "You wrote about this? In 2084?"
+He looked at his uncle in shock. "You wrote about this? In 2064?"
 
 "I wrote against the Foundation principles before they were implemented. I argued that distributed verification, despite its flaws, was more resilient than centralized certainty. I said that trusting machines over humans would create a single point of failure. I warned that anyone who controlled the central truth-machine would control all truth." Mikhail's expression was sad. "I was ignored. The Foundation authors were more persuasive. And seventeen years later, Wei proved I was right by deleting an hour of centralized truth."
 
@@ -110,7 +110,7 @@ Nikolai read his uncle's essay. The arguments were sophisticated, prescient, rem
 
 Nikolai returned to his displays. "I need to finalize this reconstruction. We're publishing it alongside the Foundation fragments. Showing people how truth can be established through testimony when certainty is deleted. Proving your argument from 1984 was right."
 
-"2084," Mikhail corrected with a smile.
+"2064," Mikhail corrected with a smile.
 
 "Right. Old world dates confuse me."
 
@@ -239,7 +239,7 @@ His comm device buzzed. Message from Captain Sokolov:
 
 "And if it's not?"
 
-"Then we keep arguing. Keep demonstrating. Keep building distributed truth that survives attempts at deletion. Keep proving that the Foundation was wrong about human capacity." Mikhail smiled. "That's what I did in 2084. That's what you're doing now. That's what the next generation will do. Truth is a continuous process, not a final destination."
+"Then we keep arguing. Keep demonstrating. Keep building distributed truth that survives attempts at deletion. Keep proving that the Foundation was wrong about human capacity." Mikhail smiled. "That's what I did in 2064. That's what you're doing now. That's what the next generation will do. Truth is a continuous process, not a final destination."
 
 Nikolai looked at his reconstruction. Imperfect but resilient. Uncertain but honest. Free rather than controlled.
 
@@ -273,7 +273,7 @@ Building the future from lessons the Foundation tried to make them forget.
 **Timeline**: November 18, 14:00-16:00
 **Key Events**:
 - Nikolai compiles complete lost hour reconstruction
-- Mikhail reveals his 2084 essay arguing against Foundation
+- Mikhail reveals his 2064 essay arguing against Foundation
 - Discussion of distributed vs. centralized truth
 - Publication of reconstruction with methodology note
 - Public debate about epistemology and evidence
@@ -284,7 +284,7 @@ Building the future from lessons the Foundation tried to make them forget.
 - Cross-referenced sources establish pattern
 - Imperfect but sufficient for justice
 
-**Mikhail's 2084 Essay**:
+**Mikhail's 2064 Essay**:
 - "On Distributed Verification vs. Centralized Certainty"
 - Predicted centralized systems would be corrupted
 - Argued distributed verification more resilient
@@ -294,9 +294,9 @@ Building the future from lessons the Foundation tried to make them forget.
 **Old World References**:
 - Classical historiography methods
 - Pre-Histologic truth-finding through testimony
-- Fracture Years (2070s-2080s) trauma
+- Fracture Years (2050s-2060s) trauma
 - Democratic collapse through competing facts
-- Journal of Post-Democratic Governance (2084)
+- Journal of Post-Democratic Governance (2064)
 
 **Philosophical Discussions**:
 - **Distributed vs. Centralized**: Imperfect resilience vs. precise vulnerability
@@ -325,7 +325,7 @@ Building the future from lessons the Foundation tried to make them forget.
 - **Both**: Building synthesis of old wisdom and new tools
 
 **Foundation Thread**:
-- Mikhail argued against Foundation in real-time (2084)
+- Mikhail argued against Foundation in real-time (2064)
 - Foundation won through trauma-based persuasion
 - 17 years later, Mikhail's warnings proven correct
 - Distributed truth surviving centralized deletion

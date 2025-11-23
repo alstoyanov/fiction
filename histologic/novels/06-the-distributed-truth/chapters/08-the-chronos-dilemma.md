@@ -32,7 +32,7 @@ Petra felt the trap. Every response proved Marcus's accusations. Every suppressi
 
 She pulled up the Foundation fragments Marcus had published. Read Principle Three about backup control. Principle Five about narrative shaping. The Compiler's warning about weaponized certainty.
 
-And she read something else. A fragment Marcus had found but she'd never seen. From the *Journal of Post-Democratic Governance*, Winter 2084:
+And she read something else. A fragment Marcus had found but she'd never seen. From the *Journal of Post-Democratic Governance*, Winter 2064:
 
 **ON THE END OF DESIGNED CONFLICTS**  
 *By Anonymous (later revealed to be the Compiler)*

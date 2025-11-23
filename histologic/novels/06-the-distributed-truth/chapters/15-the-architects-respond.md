@@ -124,7 +124,7 @@ The remaining five Architects sat in silence.
 
 "Elise would be proud," Thomas said.
 
-"Elise would say we're twenty-two years late," Zhao replied. "She warned us in 2086. We didn't listen. Now we're learning what she learned then: centralized certainty was always doomed to fail."
+"Elise would say we're forty-two years late," Zhao replied. "She warned us in 2066. We didn't listen. Now we're learning what she learned then: centralized certainty was always doomed to fail."
 
 Thomas recorded in his journal—he'd started keeping one after Marcus's publication:
 

@@ -50,7 +50,7 @@ Petra turned back to the displays. She'd been planning this campaign for three y
 
 She'd studied pre-Histologic history extensively. Had learned about propaganda wars, information campaigns, psychological operations. The old world had fought wars with narratives long before they had The Judge to verify them.
 
-And she'd found something interesting: a fragment of an old document, preserved in Chronos's intelligence archives from the 2080s. Part of something called "The Foundation of Certainty."
+And she'd found something interesting: a fragment of an old document, preserved in Chronos's intelligence archives from the 2060s. Part of something called "The Foundation of Certainty."
 
 She pulled it up now, displaying it for Dimitrov:
 
@@ -195,7 +195,7 @@ Or would he spend the rest of his career explaining how he missed the signs?
 - Truth is constructed through interpretive frameworks
 - Frame control, context provision, verification primacy
 - Systematic narrative contestation
-- Found in Chronos intelligence archives (2080s)
+- Found in Chronos intelligence archives (2060s)
 
 **Key Characters Introduced**:
 - **Petra Sokolov**: Aggressive strategist, true believer

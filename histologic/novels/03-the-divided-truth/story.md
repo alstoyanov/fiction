@@ -58,7 +58,7 @@ Alexei leaned forward, his voice gentle. "That's because they are lies. Not your
 
 "But how can that be? The system is supposed to guarantee truth. The Judge—"
 
-"The Judge only knows what it's told." Alexei pulled up a holographic display, showing two different historical records for the same building. "Look. Veridica says this structure was built in 2087 as a fact verification center. Chronos says it was built in 2089 as a neural interface clinic. They can't both be true."
+"The Judge only knows what it's told." Alexei pulled up a holographic display, showing two different historical records for the same building. "Look. Veridica says this structure was built in 2067 as a fact verification center. Chronos says it was built in 2069 as a neural interface clinic. They can't both be true."
 
 The woman stared at the contradictory data, her face pale. "But... which one is right?"
 
@@ -106,11 +106,11 @@ We're not so different, brother, he thought as he vanished into the mist. We're 
 
 In the basement of a factorepo maintenance station, Nikolai Volkov stared at three screens showing three different versions of the same historical event.
 
-According to Veridica: The warehouse district was evacuated in 2088 due to structural concerns. No casualties.
+According to Veridica: The warehouse district was evacuated in 2068 due to structural concerns. No casualties.
 
-According to Chronos: The warehouse district was cleared in 2089 for neural interface expansion. Seventeen residents relocated.
+According to Chronos: The warehouse district was cleared in 2069 for neural interface expansion. Seventeen residents relocated.
 
-According to his father's private notes, which Nikolai had found years after his death: The warehouse district was used for fact storm testing in 2088. Forty-three people died. The test was deemed successful.
+According to his father's private notes, which Nikolai had found years after his death: The warehouse district was used for fact storm testing in 2068. Forty-three people died. The test was deemed successful.
 
 Nikolai's hands trembled as he archived the contradictions, filed them away in the endless database of lies he maintained. His job was to keep the factorepo systems running, to reconcile the irreconcilable, to make sense of the senseless.
 

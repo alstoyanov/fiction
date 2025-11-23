@@ -7,7 +7,7 @@
 
 ## Summary
 
-Elena Vasquez lives in the border zone between Veridica and Chronos, where reality itself has become unstable. Six months after the peaceful distributed truth transformation, hardliners in Chronos have begun inserting contradictory facts into the shared historical record. The street where Elena lives flickers between two names: "Liberation Avenue" (Veridica's version) and "Unity Boulevard" (Chronos's version). Historical monuments appear and disappear. Her children come home from school confused—today they learned that the Border Wars ended in 2087 with Veridica's victory, but yesterday they learned Chronos won.
+Elena Vasquez lives in the border zone between Veridica and Chronos, where reality itself has become unstable. Six months after the peaceful distributed truth transformation, hardliners in Chronos have begun inserting contradictory facts into the shared historical record. The street where Elena lives flickers between two names: "Liberation Avenue" (Veridica's version) and "Unity Boulevard" (Chronos's version). Historical monuments appear and disappear. Her children come home from school confused-today they learned that the Border Wars ended in 2067 with Veridica's victory, but yesterday they learned Chronos won.
 
 Elena experiences cognitive dissonance so severe she can barely function. Which history is real? Both? Neither? The Judge in Veridica confirms one version; The Judge in Chronos confirms another. Her husband, a Chronos citizen, remembers events differently than she does. They argue about what happened at their wedding—even their personal history is fracturing.
 

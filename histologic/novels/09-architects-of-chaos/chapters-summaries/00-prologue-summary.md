@@ -12,7 +12,7 @@ Marcus Chen sits in his office at the Historical Integrity Institute, surrounded
 He's been reviewing historical records for a routine Institute audit when he notices something strange. Patterns. Too many patterns. Wars that served no strategic purpose but created perfect political outcomes. Conflicts that ended exactly when they needed to. The Judge's vulnerabilities that seemed almost... designed.
 
 He pulls up the timeline:
-- 2089: Histologic system activated globally
+- 2069: Histologic system activated globally
 - 2106: Lost Hour incident (Novel 5) - exposed The Judge's vulnerability
 - 2108: Distributed Truth transformation (Novel 6) - reformed the system
 - 2109: Battle of Truths (Novel 7) - corrupted the system

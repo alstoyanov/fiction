@@ -10,7 +10,7 @@
 Citizens of Chronos wake up to a new history. The factorepo is restored, The Judge is online, and reality has changed—though most don't notice immediately.
 
 **Vignette 1: The Student**
-Eighteen-year-old Marina checks her history homework. Yesterday, she wrote that the Border Wars ended with Chronos's strategic victory in 2087. Today, The Judge says the wars ended with a negotiated peace that favored Veridica.
+Eighteen-year-old Marina checks her history homework. Yesterday, she wrote that the Border Wars ended with Chronos's strategic victory in 2067. Today, The Judge says the wars ended with a negotiated peace that favored Veridica.
 
 Her essay is marked wrong. The facts have changed.
 

@@ -15,11 +15,15 @@ Chen Zhao doesn't deny it. Instead, he smiles. "I was wondering when you'd figur
 
 He explains: "After World War III, humanity was ungovernable. Democracy failed. Dictatorship failed. Religion failed. We needed something new. So we created Histologic nations—control through truth. But we made truth controllable."
 
-"We gave humanity what it needed: certainty, structure, enemies they could manage. We prevented another catastrophic war by creating perpetual small conflicts. We saved billions of lives."
+"You think we enslaved people? We saved them. Your generation—you don't remember. You were a child when Histologic was implemented. But people my age? We remember the Fracture Years. We remember watching civilization collapse because everyone had their own truth. We remember the wars, the chaos, the death."
+
+"When we proposed Histologic in 2069, people didn't resist. They begged for it. They wanted certainty. They wanted someone to tell them what was real. They chose this. Freely. Desperately."
 
 Marcus: "You enslaved billions of minds."
 
-Chen Zhao: "We gave them peace. Prosperity. Progress. Yes, we controlled them. But we controlled them for their own good. Humans are children, Marcus. They need parents. We became those parents."
+Chen Zhao: "We gave them what they wanted. Peace. Prosperity. Progress. Yes, we controlled them. But they chose to be controlled. And the generation after—your parents' generation—they grew up in the aftermath. They saw the ruins. They heard the stories. They associated chaos with death and certainty with life. They taught their children: 'The Judge keeps you safe. Never question it.'"
+
+"You think we forced this on people? We didn't have to. Trauma did it for us. Fear did it for us. Human nature did it for us. We just... provided the structure. Humans are children who experienced a nightmare, Marcus. They need parents to tell them the nightmare is over. We became those parents."
 
 Marcus asks about The Judge's destruction. Chen Zhao admits: "We didn't plan for it to become conscious. That scared us. But its destruction—yes, we had Principle Seven for exactly that contingency. We built in the ability to destroy it if necessary."
 

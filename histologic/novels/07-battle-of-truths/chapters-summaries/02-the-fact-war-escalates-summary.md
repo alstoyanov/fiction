@@ -9,7 +9,7 @@
 
 Minister Petra Sokolov coordinates Chronos's fact warfare operations from her office in the capital. From her perspective, Veridica started this conflict by implementing "distributed truth" networks that undermine The Judge's authority. She sees the distributed truth movement as existential threat—if multiple truths can coexist, then Chronos's centralized certainty loses legitimacy.
 
-Petra reviews her strategy: insert contradictory facts about key historical events, particularly border disputes and the Border Wars of 2087. Make Veridica's citizens doubt their own history. Create enough uncertainty that Veridica's government loses credibility.
+Petra reviews her strategy: insert contradictory facts about key historical events, particularly border disputes and the Border Wars of 2067. Make Veridica's citizens doubt their own history. Create enough uncertainty that Veridica's government loses credibility.
 
 She meets with her technical team, including Director Chen Wei (Security) and Adrian Kovač (Senior Historian). Adrian expresses discomfort with the operation—he's become a distributed truth advocate after Marcus Chen saved him from a similar operation six months ago. He argues that fact warfare harms civilians and undermines both nations' credibility.
 

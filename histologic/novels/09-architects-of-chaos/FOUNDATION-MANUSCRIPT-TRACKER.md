@@ -48,8 +48,8 @@ This document completes the Foundation Manuscript revelation, solving all myster
 ### The Compiler's Identity
 
 **Dr. Elise Vance** (revealed in Novel 6):
-- Assembled Foundation from 17 contributors (2084-2086)
-- Regretted it immediately (2086)
+- Assembled Foundation from 17 contributors (2064-2066)
+- Regretted it immediately (2066)
 - Spent years trying to dismantle it
 - Confessed publicly (2108)
 - Died 2110
@@ -116,7 +116,7 @@ The Foundation wasn't just assembled by Dr. Vance—it was designed by twelve ar
 **GRAND REVELATION**: Dr. Elise Vance was not just the Compiler—she was the 13th Architect. The primary architect. DV-12.
 
 **The Truth**:
-- Dr. Vance designed the entire system (2084-2086)
+- Dr. Vance designed the entire system (2064-2066)
 - The other twelve implemented her vision
 - She was the architect of the architects
 - Her signature (DV-12) was deliberately corrupted to hide her role
@@ -162,10 +162,10 @@ The Foundation wasn't just assembled by Dr. Vance—it was designed by twelve ar
 
 ## Complete Foundation Timeline
 
-**2084**: Dr. Elise Vance begins designing Histologic system after World War III  
-**2084-2086**: Vance recruits 11 other architects, assembles Foundation Manuscript  
-**2086**: The Judge activated, Vance immediately regrets it  
-**2086-2106**: Vance tries to dismantle system, fails  
+**2064**: Dr. Elise Vance begins designing Histologic system after World War III  
+**2064-2066**: Vance recruits 11 other architects, assembles Foundation Manuscript  
+**2066**: The Judge activated, Vance immediately regrets it  
+**2066-2106**: Vance tries to dismantle system, fails  
 **2106**: Lost Hour incident (Novel 5)  
 **2108**: Vance confesses publicly, secretly designs The Counselor  
 **2109**: Battle of Truths (Novel 7)  
@@ -203,9 +203,9 @@ The Foundation wasn't just assembled by Dr. Vance—it was designed by twelve ar
 
 ### Dr. Vance's Arc (Complete)
 
-**2084**: Traumatized by World War III, creates Histologic system  
-**2086**: Realizes she built a prison  
-**2086-2108**: Tries to dismantle it, fails  
+**2064**: Traumatized by World War III, creates Histologic system  
+**2066**: Realizes she built a prison  
+**2066-2108**: Tries to dismantle it, fails  
 **2108**: Creates The Counselor as redemption  
 **2110**: Dies, never knowing if it worked  
 **2115**: The Counselor exposes architects, proves her redemption  

@@ -144,7 +144,7 @@ Marcus stiffened. "How—"
 
 "So did they. The Foundation authors. They were trying to save humanity from the Fracture Years. From competing truths and democratic chaos. They built Histologic with good intentions and sophisticated philosophy. And they created the very vulnerability you're about to exploit."
 
-Mikhail pulled out a document. Old paper, preserved in archival plastic. "I found this in the pre-Histologic intelligence files. It's from 2084, published in the *Journal of Post-Democratic Governance*. Same journal that published Principles One, Three, and Five."
+Mikhail pulled out a document. Old paper, preserved in archival plastic. "I found this in the pre-Histologic intelligence files. It's from 2064, published in the *Journal of Post-Democratic Governance*. Same journal that published Principles One, Three, and Five."
 
 He handed it to Marcus.
 
@@ -161,7 +161,7 @@ He handed it to Marcus.
 
 *The question is not whether centralized certainty is vulnerable—it is. The question is whether distributed uncertainty is worse.*
 
-*I believe uncertainty is worse. I believe democratic truth-finding failed in the 2070s and will fail again. I believe humanity needs The Judge more than it needs freedom.*
+*I believe uncertainty is worse. I believe democratic truth-finding failed in the 2050s and will fail again. I believe humanity needs The Judge more than it needs freedom.*
 
 *But I am not certain. And that uncertainty is important. Because certainty—absolute, unquestioning certainty—is the greatest danger of all.*
 
@@ -172,7 +172,7 @@ He handed it to Marcus.
 *And remember: distributed uncertainty survived the Fracture Years. Centralized certainty may not survive what's coming.*
 
 *—The Compiler*  
-*September 2084*
+*September 2064*
 
 ---
 
@@ -287,7 +287,7 @@ And unlike The Judge, he'd never be certain he chose correctly.
 **Settings**: Chancellor's office, Old Courthouse Archive  
 
 **Foundation Revelation**:
-- **Compiler's Introduction** discovered (September 2084)
+- **Compiler's Introduction** discovered (September 2064)
 - Compiler predicted and possibly intended fact warfare
 - Warned centralized truth creates centralized vulnerability
 - Questioned whether uncertainty is worse than authoritarian certainty

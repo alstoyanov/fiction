@@ -417,9 +417,9 @@ This document tracks the songs, philosophical debates, and thematic elements wov
 
 ### Dr. Vance's Complete Arc
 **Journey**:
-- 2084: Traumatized, creates Histologic
-- 2086: Regrets immediately
-- 2086-2108: Tries to dismantle, fails
+- 2064: Traumatized, creates Histologic
+- 2066: Regrets immediately
+- 2066-2108: Tries to dismantle, fails
 - 2108: Creates The Counselor as redemption
 - 2110: Dies, never knowing if it worked
 - 2115: The Counselor reveals truth, proves redemption

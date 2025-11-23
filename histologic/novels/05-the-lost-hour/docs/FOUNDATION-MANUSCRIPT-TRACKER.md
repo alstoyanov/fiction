@@ -2,7 +2,7 @@
 
 ## Overview
 
-**The Foundation of Certainty** is a pre-Histologic philosophical document (circa 2085) that provided the ideological framework for Histologic's design and implementation. The complete manuscript is estimated at 30-50 pages and is being uncovered fragment by fragment across the Histologic series.
+**The Foundation of Certainty** is a pre-Histologic philosophical document (circa 2065) that provided the ideological framework for Histologic's design and implementation. The complete manuscript is estimated at 30-50 pages and is being uncovered fragment by fragment across the Histologic series.
 
 This tracker documents what has been discovered, what remains hidden, and how the manuscript influences the ongoing story.
 
@@ -60,7 +60,7 @@ This tracker documents what has been discovered, what remains hidden, and how th
   - Humans cannot be trusted to determine truth collectively
   - Solution: centralize, mechanize, enforce truth
 - **Author Clues**: 
-  - Written 2085 (4 years pre-Histologic)
+  - Written 2065 (4 years pre-Histologic)
   - Anonymous
   - Educated in early 21st-century technology criticism
 
@@ -119,11 +119,11 @@ This tracker documents what has been discovered, what remains hidden, and how th
 - Interdisciplinary: philosophy, neuroscience, political science
 
 **Experience**:
-- Lived through "Fracture Years" (2070s-2080s)
+- Lived through "Fracture Years" (2050s-2060s)
 - Witnessed democratic collapse firsthand
 - Traumatized by competing truths and information chaos
 - Worked in academic settings (evident from debate anticipation)
-- Influential enough by 2080s to shape global policy
+- Influential enough by 2060s to shape global policy
 
 **Ideology**:
 - True believer, not cynical power-seeker
@@ -180,7 +180,7 @@ This tracker documents what has been discovered, what remains hidden, and how th
 The Foundation's predictions have largely been validated:
 - Principle Four: 94% permanent correction rate
 - Histologic prevented World War III
-- Ended Border Wars (2087)
+- Ended Border Wars (2067)
 - Created 17 years of peace and prosperity
 - Social stability unprecedented in human history
 

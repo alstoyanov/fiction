@@ -9,13 +9,15 @@
 
 The team debates after hearing Voss's message. Are the architects right? Do humans need control?
 
-Elena Volkov: "We've been their puppets. I say we cut the strings."
+Dr. Tanaka: "But what if they're right? What if cutting the strings causes another Fracture? I'm old enough to remember the stories my parents told. The chaos. The fear. They chose Histologic because they were desperate."
 
-Dr. Tanaka: "But what if cutting the strings causes another Fracture? What if they're right that humans need structure?"
+Elena Volkov: "I remember too. I was 15 when Histologic was implemented. I remember the Before Times. And yes, it was chaos. But we've been their puppets for 46 years. That's long enough. I say we cut the strings."
 
-Dmitri: "Then we build our own structure. Not their designed conflicts. Our chosen cooperation."
+Dmitri: "My parents taught me: 'The Judge keeps you safe. Never question it.' I believed them. But they were taught to fear freedom. We don't have to inherit their trauma."
 
-General Sokolov: "My mother is one of them. She thinks she's protecting me. Protecting everyone. But protection without choice is prison."
+General Sokolov: "My mother is one of them. She thinks she's protecting me. Protecting everyone. She genuinely believes humans need parents. But protection without choice is prison. And I'd rather risk chaos than guarantee slavery."
+
+Isaiah: "People in their 60s remember the Fracture Years. They'll resist change. They'll say: 'You want to go back to that?' We need to prove we're not going back. We're going forward. To something new."
 
 Kira: "The Counselor—we built it based on principles they influenced. Does that make it theirs? Or ours?"
 

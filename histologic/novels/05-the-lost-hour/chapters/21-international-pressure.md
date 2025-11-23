@@ -33,7 +33,7 @@ He added a section:
 
 *To understand why the lost hour matters, we must understand what Histologic promised and what it actually delivered.*
 
-*In 2089, in the aftermath of the Border Wars and the chaos of the Fracture Years, global powers implemented a new system for establishing historical truth. Histologic promised perfect certainty: every moment recorded, every fact verified, every event permanently preserved in tamper-proof archives.*
+*In 2069, in the aftermath of the Border Wars and the chaos of the Fracture Years, global powers implemented a new system for establishing historical truth. Histologic promised perfect certainty: every moment recorded, every fact verified, every event permanently preserved in tamper-proof archives.*
 
 *The promise was seductive. After decades of competing truths, after wars fought over facts that couldn't be verified, after democratic collapse driven by epistemic fragmentation, humanity chose certainty over chaos.*
 

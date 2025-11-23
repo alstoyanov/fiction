@@ -15,8 +15,8 @@ This document tracks all fragments of The Foundation Document revealed throughou
 ### From "The Distributed Truth" (Novel 6):
 - **Principle Three**: Strategic Ambiguity Through Backup Control
 - **Principle Five**: Controlled Conflict / Narrative Shaping
-- **Compiler's Introduction**: 17 contributors, post-democratic design
-- **Compiler's Warning**: Regret, no reform path, distribute truth
+- **Compiler's Introduction**: 17 contributors, post-democratic design (2064)
+- **Compiler's Warning**: Regret, no reform path, distribute truth (2066)
 - **Principle Six** (expanded): The Paradox of Certainty / Designed Authoritarianism
 - **On the End of Designed Conflicts**: Essay on exposure ending designed wars
 - **Compiler Identity**: Dr. Elise Vance (revealed and confessed)
@@ -150,8 +150,8 @@ This realization (Chapter 21) is devastating: She thought she was defending her 
 ## The Compiler's Identity and Regret
 
 **Dr. Elise Vance** (revealed in Novel 6):
-- Assembled the Foundation from 17 contributors (2084-2086)
-- Regretted it immediately (2086)
+- Assembled the Foundation from 17 contributors (2064-2066)
+- Regretted it immediately (2066)
 - Spent years trying to warn and dismantle it
 - Confessed publicly (2108, Novel 6)
 - Now advocates for distributed truth

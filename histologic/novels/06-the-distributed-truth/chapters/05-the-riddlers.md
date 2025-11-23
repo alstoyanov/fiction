@@ -78,14 +78,14 @@ Caspar spoke first: "I want you to see the bigger pattern. The Foundation predic
 
 "You're asking me to dismantle Histologic while fighting a fact war?"
 
-"I'm asking you to see that the fact war exists because Histologic exists. That centralized certainty creates centralized warfare. That the Foundation designed this deliberately." Balthazar pulled out a document. "I found this in Chronos intelligence archives. Compiler's notes from 2084. Before the Foundation was complete."
+"I'm asking you to see that the fact war exists because Histologic exists. That centralized certainty creates centralized warfare. That the Foundation designed this deliberately." Balthazar pulled out a document. "I found this in Chronos intelligence archives. Compiler's notes from 2064. Before the Foundation was complete."
 
 He showed Marcus:
 
 ---
 
 **COMPILER'S PRIVATE NOTES**  
-**August 2084**
+**August 2064**
 
 *The seven principles are nearly complete. Multiple contributors, collaborative development, sophisticated philosophy. Everything needed to establish centralized certainty.*
 
@@ -253,7 +253,7 @@ To transcend it.
 - Both executing and refusing operation validates design
 
 **Compiler's Private Notes Fragment**:
-- August 2084, before Foundation complete
+- August 2064, before Foundation complete
 - Questioned Dr. Vance about weaponizing truth
 - Predicted reformers becoming tools
 - Worried system sustains itself through conflict

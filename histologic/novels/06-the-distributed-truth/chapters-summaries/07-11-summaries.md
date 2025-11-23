@@ -41,7 +41,7 @@ Shows government can evolve when citizens choose. Petrov chooses adaptation over
 - Calls cease-fire, begins joint truth reconciliation
 
 **New Foundation Fragment**:
-**"On the End of Designed Conflicts"** (Winter 2084, by Compiler)
+**"On the End of Designed Conflicts"** (Winter 2064, by Compiler)
 - Designed conflicts lose legitimacy when exposed
 - Leaders facing exposure have 3 options
 - Options 1 & 2 both fail
@@ -156,14 +156,14 @@ International validation of transformation. Military implications acknowledged. 
 **Setting**: Old Courthouse Archive, Room 7
 
 ### Key Events
-- Riddlers reveal Compiler's final journal (March 2086)
+- Riddlers reveal Compiler's final journal (March 2066)
 - Identity: **Dr. Elise Vance**
 - She assembled Foundation because she was "terrified" of Fracture Years
 - Immediately regretted it, tried to warn
 - **"I tried to save humanity and built its cage"**
 - Vance publicly confirms: "Yes. I am the Compiler. Yes, I regret it."
 
-### The Compiler's Final Journal (March 2086)
+### The Compiler's Final Journal (March 2066)
 
 **Dr. Elise Vance confesses**:
 - Assembled Foundation from 17 contributors

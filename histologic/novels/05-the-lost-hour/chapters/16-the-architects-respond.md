@@ -186,7 +186,7 @@ She pulled out her personal terminal and opened a file she hadn't accessed in fo
 
 Her own notes. Early drafts. Philosophical arguments she'd contributed. The thinking behind Principle Four and Principle Six.
 
-And a note to herself, written in 2085:
+And a note to herself, written in 2065:
 
 *"We are building something that could save humanity or enslave it. The difference is whether we maintain our own capacity for doubt while imposing certainty on others. The moment we believe our own narrative, the moment we stop questioning our methods, we become tyrants rather than guardians. I must remember to doubt. Always doubt."*
 
@@ -273,9 +273,9 @@ At least she'd remembered how to doubt.
 - **Central tension**: Is trauma sufficient justification for authoritarianism?
 
 **Old World References**:
-- Fracture Years (2070s-2080s) as traumatic origin
+- Fracture Years (2050s-2060s) as traumatic origin
 - Democratic collapse under competing truths
-- Border Wars (2087) ended by Histologic
+- Border Wars (2067) ended by Histologic
 - Foundation born from desperate attempt to save civilization
 - Price: freedom traded for stability
 
@@ -283,7 +283,7 @@ At least she'd remembered how to doubt.
 - Collaborative work (dozens of contributors)
 - Vance contributed Principles Four and Six
 - Anonymous publication to protect authors
-- Designed 2085, implemented 2089
+- Designed 2065, implemented 2069
 - Author identity becoming traceable
 
 **Strategy Conflict**:

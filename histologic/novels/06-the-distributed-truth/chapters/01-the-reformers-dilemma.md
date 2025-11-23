@@ -128,7 +128,7 @@ He pulled up another file. One he'd been compiling for two years. Foundation fra
 
 **Principle Three: Strategic Ambiguity in Truth Management**
 
-He'd found this fragment three months ago, buried in Chronos intelligence documents from the 2080s. Part of the same *Journal of Post-Democratic Governance* that had published Principle One.
+He'd found this fragment three months ago, buried in Chronos intelligence documents from the 2060s. Part of the same *Journal of Post-Democratic Governance* that had published Principle One.
 
 He read it again:
 
@@ -241,7 +241,7 @@ Marcus didn't know which. But he was about to find out.
 
 **Foundation Fragment Introduced**:
 - **Principle Three: Strategic Ambiguity in Truth Management**
-- Found in Chronos intelligence documents from 2080s
+- Found in Chronos intelligence documents from 2060s
 - Explicitly endorses weaponizing truth in conflict
 - Four-point implementation: narrative supremacy, ambiguity exploitation, verification warfare, backup control
 - Marcus's plan directly follows Point 4 (backup control)

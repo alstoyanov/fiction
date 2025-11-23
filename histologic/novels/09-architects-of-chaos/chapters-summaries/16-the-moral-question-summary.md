@@ -19,11 +19,13 @@ Maya doesn't deny it. "I did it to protect people. To prevent chaos. To save liv
 
 "Patients aren't children. Humanity isn't your patient."
 
-"Isn't it? We're all sick, Yuki. Sick with tribalism, nationalism, ideology. We gave humanity the cure: certainty. Structure. Peace."
+"Isn't it? We're all sick, Yuki. Sick with tribalism, nationalism, ideology. I was 22 when World War III ended. I watched my entire family die in the Fracture Years. I watched people kill each other over what was 'true.' We gave humanity the cure: certainty. Structure. Peace."
+
+"And they took it willingly. People in their 60s and 70s—they remember. They chose this. They raised their children to value it. They taught the next generation: 'This keeps you safe.' The system sustained itself through generational transmission. We didn't force it. We just provided it, and trauma did the rest."
 
 "You gave them slavery."
 
-"We gave them survival."
+"We gave them survival. And they were grateful. For 46 years, they've been grateful. You think exposing us changes that? Those who remember the chaos will defend us. Those who grew up hearing horror stories will fear change. Those who only know Histologic can't imagine alternatives. You're not fighting twelve architects, Yuki. You're fighting three generations of trauma."
 
 Tanaka realizes: the architects genuinely believe they're healers. They see humanity as sick and themselves as doctors. That's why they can justify anything.
 

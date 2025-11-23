@@ -8,9 +8,9 @@ Marcus hadn't slept. He'd spent the entire night searching archives, following V
 
 At 06:00, exhausted and caffeinated beyond reason, he found something.
 
-A cataloging anomaly in the National Archives' digital index. A file marked as "Migrated to Factorepo 2089.07.15" but with no corresponding factorepo entry. Just a gap. An absence where something should be.
+A cataloging anomaly in the National Archives' digital index. A file marked as "Migrated to Factorepo 2069.07.15" but with no corresponding factorepo entry. Just a gap. An absence where something should be.
 
-The file description: "Political Philosophy Collection 2080-2085, Box 47, Folder 12: Anonymous Submissions to Journal of Post-Democratic Governance."
+The file description: "Political Philosophy Collection 2060-2065, Box 47, Folder 12: Anonymous Submissions to Journal of Post-Democratic Governance."
 
 Journal of Post-Democratic Governance. Marcus had never heard of it. He searched historical academic databases.
 
@@ -18,7 +18,7 @@ Nothing in official records.
 
 Nothing in factorepo.
 
-But he found a reference in an old pre-Histologic academic directory, archived but not indexed: *Journal of Post-Democratic Governance (2082-2086), published quarterly by the Institute for Civilizational Resilience, ceased publication following institute dissolution and archive classification.*
+But he found a reference in an old pre-Histologic academic directory, archived but not indexed: *Journal of Post-Democratic Governance (2062-2066), published quarterly by the Institute for Civilizational Resilience, ceased publication following institute dissolution and archive classification.*
 
 Following archive classification.
 
@@ -68,20 +68,20 @@ Marcus and Kira found Box 47 wedged between containers of obsolete military corr
 
 Perfect camouflage for something revolutionary.
 
-Marcus opened the box. Inside: physical copies of an academic journal. *Journal of Post-Democratic Governance*, volumes 1-4, years 2082-2086. Quarterly publication. Sixteen issues total.
+Marcus opened the box. Inside: physical copies of an academic journal. *Journal of Post-Democratic Governance*, volumes 1-4, years 2062-2066. Quarterly publication. Sixteen issues total.
 
 "This is it," he breathed. "This is where Viktor found the fragments."
 
 They began searching systematically. Each journal contained academic articles, opinion pieces, book reviews, and anonymous submissions. The anonymous submissions were goldmines—philosophical arguments unattributed, ideas too controversial for public association, thoughts people wanted heard but not traced.
 
-Kira scanned pages rapidly, looking for the Foundation's distinctive style. "Here—Issue 3, Fall 2083. Anonymous submission titled 'On the Necessity of Singular Truth.'"
+Kira scanned pages rapidly, looking for the Foundation's distinctive style. "Here-Issue 3, Fall 2063. Anonymous submission titled 'On the Necessity of Singular Truth.'"
 
 Marcus read over her shoulder:
 
 ---
 
 **ON THE NECESSITY OF SINGULAR TRUTH**
-*Anonymous Submission, Journal of Post-Democratic Governance, Fall 2083*
+*Anonymous Submission, Journal of Post-Democratic Governance, Fall 2063*
 
 *Democratic governance assumes the existence of shared reality upon which citizens can deliberate and decide. When that assumption holds, democracy functions admirably. When it fails—when citizens inhabit incompatible realities with irreconcilable facts—democracy becomes impossible.*
 
@@ -127,7 +127,7 @@ But it was enough. This was Foundation material. The style matched. The philosop
 
 Kira was already photographing the page. "This is more explicit than the other fragments. It's not just asserting that centralized truth is better—it's explaining why distributed truth failed."
 
-"And it makes a decent argument. The three fatal flaws—source independence illusion, theory-laden observation, tribalized trust. Those are real problems. I saw them in the 2080s research when I was studying pre-Histologic history."
+"And it makes a decent argument. The three fatal flaws—source independence illusion, theory-laden observation, tribalized trust. Those are real problems. I saw them in the 2060s research when I was studying pre-Histologic history."
 
 "So the Foundation isn't just authoritarian propaganda. It's sophisticated analysis of real dysfunction."
 
@@ -135,11 +135,11 @@ Kira was already photographing the page. "This is more explicit than the other f
 
 They continued searching. Found references to the same anonymous author in two more issues—one elaborating on "technological solutions to epistemic closure," another discussing "implementation timeline for centralized verification systems."
 
-All written 2083-2084. All advocating for what would become Histologic. All anonymous.
+All written 2063-2064. All advocating for what would become Histologic. All anonymous.
 
 "Viktor copied these," Kira realized. "His fragment of page 3 must be from a later compilation—someone took these journal submissions and assembled them into the complete Foundation document."
 
-"Which means there are two versions. The original journal submissions from 2082-2085, scattered across multiple publications. And a compiled manuscript from 2085 that synthesized them into one coherent document."
+"Which means there are two versions. The original journal submissions from 2062-2065, scattered across multiple publications. And a compiled manuscript from 2065 that synthesized them into one coherent document."
 
 "And Viktor was finding both. Journal submissions and compiled pages. Building a complete picture of how the Foundation evolved from academic theory to implemented policy."
 
@@ -193,7 +193,7 @@ And felt his heart sink.
 
 Because it was right.
 
-Not about the solution—centralized mechanical verification was still authoritarian and dangerous. But about the problem. Distributed verification *had* failed in the 2080s. Source independence *was* illusory. Observation *was* theory-laden. Trust *had* tribalized.
+Not about the solution-centralized mechanical verification was still authoritarian and dangerous. But about the problem. Distributed verification *had* failed in the 2060s. Source independence *was* illusory. Observation *was* theory-laden. Trust *had* tribalized.
 
 The Foundation identified real problems. Just proposed terrible solutions.
 
@@ -264,11 +264,11 @@ They spent the next four hours preparing the second publication:
 
 *Mikhail Petrov, Marcus Chen, Kira Osman*
 
-*We have discovered the Foundation's first principle, written in 2083 as an anonymous journal submission. It presents a sophisticated critique of distributed verification and a seductive argument for centralized mechanical truth.*
+*We have discovered the Foundation's first principle, written in 2063 as an anonymous journal submission. It presents a sophisticated critique of distributed verification and a seductive argument for centralized mechanical truth.*
 
 *We must acknowledge: the critique is largely correct.*
 
-*Distributed verification DID fail in the 2080s. Democratic truth-finding WAS compromised by media consolidation, algorithmic polarization, and tribalized trust. The Foundation authors accurately diagnosed a genuine crisis.*
+*Distributed verification DID fail in the 2060s. Democratic truth-finding WAS compromised by media consolidation, algorithmic polarization, and tribalized trust. The Foundation authors accurately diagnosed a genuine crisis.*
 
 *Where they failed was in the cure.*
 
@@ -312,7 +312,7 @@ And thinking was how democracy survived.
 **Timeline**: November 18, 06:00-12:00
 **Key Events**:
 - Marcus finds Box 47 in National Archives
-- Discovery of *Journal of Post-Democratic Governance* (2082-2086)
+- Discovery of *Journal of Post-Democratic Governance* (2062-2066)
 - Principle One found in journal submissions
 - Close escape from Architects' security
 - Mikhail's honest philosophical response
@@ -331,7 +331,7 @@ And thinking was how democracy survived.
 5. Machine judgment removes human ideological bias
 
 **Journal of Post-Democratic Governance**:
-- Published 2082-2086
+- Published 2062-2066
 - Institute for Civilizational Resilience
 - Classified and hidden after institute dissolution
 - Contains Foundation material as anonymous submissions
@@ -339,7 +339,7 @@ And thinking was how democracy survived.
 
 **Discovery Implications**:
 - Foundation developed over years in academic discourse
-- Later compiled into single manuscript (2085)
+- Later compiled into single manuscript (2065)
 - Multiple authors contributing different pieces
 - Dr. Elise Vance confirmed as one contributor
 - More authors likely still unidentified

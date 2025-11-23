@@ -10,7 +10,7 @@ Except today, they did.
 
 She stood at her window, watching the plaza. Except it wasn't the plaza anymore. Or it was. Or it wasn't. Reality flickered like a broken hologram.
 
-One moment: **Victory Plaza**, commemorating Veridica's triumph in the 2089 Border Settlement. Bronze statue of Chancellor Markovic signing the treaty. Brass plaques listing Veridica's territorial gains.
+One moment: **Victory Plaza**, commemorating Veridica's triumph in the 2069 Border Settlement. Bronze statue of Chancellor Markovic signing the treaty. Brass plaques listing Veridica's territorial gains.
 
 The next moment: **Peace Square**, honoring Chronos's diplomatic victory in the same settlement. Copper statue of Premier Volkov (no relation to the resistance Volkovs) accepting Veridica's concessions. Plaques showing Chronos's expanded borders.
 
@@ -26,7 +26,7 @@ Anna felt her mind splitting.
 
 Anna pulled up her terminal, querying The Judge. The response made her stomach turn:
 
-**QUERY: Border Settlement 2089 outcome**  
+**QUERY: Border Settlement 2069 outcome**  
 **RESPONSE: Conflicting data detected. Multiple verified facts. Truth uncertain. Please consult local authorities.**
 
 Truth uncertain.
@@ -45,7 +45,7 @@ Her comm device buzzed. Emergency broadcast:
 
 **CITIZENS OF BORDER ZONE 7: Due to ongoing factorepo irregularities, please remain calm. Historical discrepancies are being investigated. The Judge is working to resolve contradictions. Normal certainty will be restored shortly.**
 
-But Anna had studied pre-Histologic history. Had read about the Fracture Years in the 2070s-2080s, when competing truths tore societies apart. When no one could agree on basic facts. When reality became tribal.
+But Anna had studied pre-Histologic history. Had read about the Fracture Years in the 2050s-2060s, when competing truths tore societies apart. When no one could agree on basic facts. When reality became tribal.
 
 Histologic was supposed to prevent that. The Judge was supposed to provide singular truth.
 
@@ -93,7 +93,7 @@ A third truth. A compromise. An admission that neither version was certain.
 
 Her terminal updated with new guidance from The Judge:
 
-**BORDER SETTLEMENT 2089: Historical fact in dispute. Multiple verified sources contradict. Recommend accepting uncertainty pending resolution. Default position: Conflict Memorial designation acknowledging contested status.**
+**BORDER SETTLEMENT 2069: Historical fact in dispute. Multiple verified sources contradict. Recommend accepting uncertainty pending resolution. Default position: Conflict Memorial designation acknowledging contested status.**
 
 The Judge was giving up. Admitting it couldn't determine truth when two verification systems contradicted each other.
 
@@ -197,7 +197,7 @@ Someone had to remember.
 
 **Old World References**:
 - "In war, truth is the first casualty" (Aeschylus)
-- Fracture Years (2070s-2080s) competing truths
+- Fracture Years (2050s-2060s) competing truths
 - Pre-digital record-keeping (journals, pen and ink)
 - Collective corroboration methods
 

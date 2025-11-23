@@ -58,7 +58,7 @@ Kira nodded, already running deeper searches. "The problem is, if this Foundatio
 
 "What?"
 
-"Think about it. Histologic was implemented globally in 2089. Seventeen years ago. But the philosophy behind it—perfect certainty, centralized truth, machine judgment—that had to come from somewhere. Someone had to design the system conceptually before it was built technically."
+"Think about it. Histologic was implemented globally in 2069. Thirty-seven years ago. But the philosophy behind it—perfect certainty, centralized truth, machine judgment—that had to come from somewhere. Someone had to design the system conceptually before it was built technically."
 
 "You're saying the Foundation document might be pre-Histologic? From the old world?"
 
@@ -135,7 +135,7 @@ Marcus took the page carefully. At the top, a title:
 **THE FOUNDATION OF CERTAINTY**
 **A Philosophical Framework for Post-Truth Governance**
 **Author: Anonymous**
-**Estimated Date: 2085**
+**Estimated Date: 2065**
 
 He began to read aloud:
 
@@ -260,16 +260,16 @@ And wondered if that world, chaotic and fractured as it had been, might have bee
 - New quest: reconstruct complete Foundation document
 
 **THE FOUNDATION OF CERTAINTY**:
-- Pre-Histologic document (circa 2085)
+- Pre-Histologic document (circa 2065)
 - Anonymous author
 - Philosophical framework for Histologic design
 - Key premise: humans can't be trusted with truth
 - Solution: centralized, mechanized, enforced singular Truth
-- Response to "Fracture Years" (2070s-2080s)
+- Response to "Fracture Years" (2050s-2060s)
 - Fragment is page 3 of longer document
 
 **Old World References**:
-- The Fracture Years (2070s-2080s)
+- The Fracture Years (2050s-2060s)
 - Democratic collapse through competing truths
 - Information age producing chaos instead of enlightenment
 - Failed fact-checking/media literacy initiatives

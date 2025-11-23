@@ -65,7 +65,7 @@
 **Fragment 1: Page 3 - Introduction** (Chapter 9)
 - Crisis of truth in Fracture Years
 - "Truth must be centralized, mechanized, enforced"
-- Anonymous author(s), dated 2085
+- Anonymous author(s), dated 2065
 - Found by Viktor Kozlov, provided by Svetlana
 
 **Fragment 2: Page 11 - Principle Four** (Chapter 11)
@@ -78,7 +78,7 @@
 - Centralized Mechanical Verification
 - Three fatal flaws of distributed verification
 - Found by Marcus in journal archives
-- *Journal of Post-Democratic Governance*, 2083
+- *Journal of Post-Democratic Governance*, 2063
 
 **Principle Six** (Chapter 16)
 - Narrative Preemption
@@ -97,12 +97,12 @@
 
 **Confirmed**:
 - Dr. Elise Vance (age 81) - Contributed Principles Four and Six
-- Multiple anonymous collaborators (2082-2086)
+- Multiple anonymous collaborators (2062-2066)
 
 **Methodology**:
-- Collaborative academic discourse (2082-2086)
+- Collaborative academic discourse (2062-2066)
 - Published in *Journal of Post-Democratic Governance*
-- Compiled into single manuscript (late 2085)
+- Compiled into single manuscript (late 2065)
 - Compiler identity unknown
 
 **Vance's Confession**:
@@ -162,7 +162,7 @@
 **Foundation Research**:
 - Principles Three and Seven undiscovered
 - Compiler identity unknown
-- Late 2085 symposium mystery
+- Late 2065 symposium mystery
 - Complete document reconstruction ongoing
 - Vance writing comprehensive history
 
@@ -300,18 +300,18 @@
 - Democratic truth-finding (collective evaluation)
 - Journalistic standards (acknowledge uncertainty)
 
-**Fracture Years (2070s-2080s)**:
+**Fracture Years (2050s-2060s)**:
 - Democratic collapse through competing truths
 - Information chaos overwhelming signal
 - Media consolidation, algorithmic polarization
-- Border Wars (2087) ending with Histologic
+- Border Wars (2067) ending with Histologic
 - Trauma driving authoritarian solutions
 
 **Academic Discourse**:
-- *Journal of Post-Democratic Governance* (2082-2086)
+- *Journal of Post-Democratic Governance* (2062-2066)
 - Institute for Civilizational Resilience
-- Symposium (late 2085) where authors met
-- Mikhail's 2084 essays arguing against Foundation
+- Symposium (late 2065) where authors met
+- Mikhail's 2064 essays arguing against Foundation
 - Collaborative development of Foundation principles
 
 **Technology Criticism**:
@@ -399,7 +399,7 @@
 - **Anomalous Code**: Detected at 15:02, Nov 15, 2106
 - **Foundation Research**: Principles 3, 5, 7 undiscovered
 - **Compiler Mystery**: Who assembled collaborative work?
-- **2085 Symposium**: Where authors met in person
+- **2065 Symposium**: Where authors met in person
 - **New Threats**: Arms race between resilience and manipulation
 
 ### Series Themes Developed
@@ -459,7 +459,7 @@
 1. Update SERIES-COMPLETE-OVERVIEW.md
 2. Plan Novel 6 based on anomalous code thread
 3. Continue Foundation fragment discoveries
-4. Develop 2085 symposium mystery
+4. Develop 2065 symposium mystery
 5. Plan compiler identity reveal
 
 ---

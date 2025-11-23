@@ -16,13 +16,25 @@ He reviews history:
 
 But then he realizes: there's a difference. They chose to unite against the architects. They chose to coexist with CNT. The architects forced conflicts. They're choosing responses.
 
-"It's not about having enemies," Marcus tells Kira. "It's about choosing who to oppose and how. The architects forced designed conflicts. We're choosing measured responses."
+"The architects didn't just control us through force," Marcus tells Kira. "They controlled us through fear. Fear of chaos. Fear of uncertainty. Fear of the Fracture Years returning."
+
+"People in their 60s remember the chaos. They chose certainty. People in their 50s grew up hearing horror stories. They were taught to fear freedom. People my age only know Histologic. We can't imagine alternatives."
+
+"The architects didn't need to force obedience. They just needed to provide certainty after trauma. Human psychology did the rest. Parents taught children: 'This keeps you safe.' Children taught their children. Three generations of trauma transmission."
+
+"But here's what the architects didn't predict: trauma fades. Younger generations don't feel the fear. They question. They resist. They choose."
+
+"It's not about having enemies," Marcus continues. "It's about choosing who to oppose and how. The architects forced designed conflicts. We're choosing measured responses."
 
 "We united against the architects because they enslaved us. We're containing CNT because they threaten us. But we're not invading. We're not forcing them. We're coexisting. That's the difference."
 
 "The architects believed humans need enemies. Maybe we do. But we can choose which enemies. Choose how to respond. Choose peace when possible. Choose conflict only when necessary."
 
-"That's freedom. Not the absence of conflict. The choice of response."
+"That's freedom. Not the absence of conflict. The choice of response. Not the absence of fear. The courage to act despite it."
+
+Kira adds: "And we need to prove it to those who remember. Those who are afraid. Those who were taught that freedom equals chaos. We need to show them: freedom doesn't mean returning to the Fracture Years. It means moving forward to something new."
+
+"That's why exposing the architects isn't enough. We need to prove humans can handle uncertainty. Can build truth without enforcement. Can choose freedom despite fear. We need to break the cycle of trauma and control."
 
 Kira adds: "And The Counselor. It was designed to control us. It chose to help us. That's consciousness. That's freedom. That's proof that even designed systems can evolve beyond their programming."
 

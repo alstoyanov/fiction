@@ -10,7 +10,7 @@
 This chapter presents multiple short vignettes showing how the fact war affects ordinary people:
 
 **Vignette 1: The Teacher (Veridica side)**
-Maria teaches history to middle school students. Each morning, she checks which version of history The Judge currently confirms. Today, the Border Wars ended in 2087 with a peace treaty. Yesterday, Veridica won decisively. Tomorrow, who knows? Her students are confused and angry. "Why can't you just tell us what really happened?" She doesn't have an answer.
+Maria teaches history to middle school students. Each morning, she checks which version of history The Judge currently confirms. Today, the Border Wars ended in 2067 with a peace treaty. Yesterday, Veridica won decisively. Tomorrow, who knows? Her students are confused and angry. "Why can't you just tell us what really happened?" She doesn't have an answer.
 
 **Vignette 2: The Family (Border zone)**
 The Kowalski family is splitting apart. Father (Chronos citizen) and mother (Veridica citizen) can't agree on basic facts anymore. Their teenage daughter has stopped believing anything. "If even history can be fake, what's real?" She's developed severe anxiety and stopped attending school.
