@@ -10,7 +10,11 @@ Dr. Yuki Tanaka, neural specialist convicted for refusing to perform a correctio
 
 During a private meeting with Director Kovač, Yuki confronts her about the corruption in the system. She convinces Kovač to consider helping Group Seven escape, appealing to her better nature. Kovač is troubled but agrees to think about it.
 
-After dinner, Marcus asks Yuki about his worsening headaches. She explains the neural interface system: the bio-integrated mesh in everyone's hippocampus and prefrontal cortex receives factorepo broadcasts and integrates them into memory formation. Marcus's interface works perfectly, but he can still question what it tells him—that's why he's here. She reveals that removal would cause death, meaning they're all trapped in the system. Enhanced correction will use the interface to override their organic memories and reshape their personalities.
+After dinner, Marcus asks Yuki about his worsening headaches. She explains the neural interface system: the bio-integrated mesh in everyone's hippocampus and prefrontal cortex receives factorepo broadcasts and integrates them into memory formation. Marcus's interface works perfectly, but he can still question what it tells him—that's why he's here. 
+
+Marcus asks if interfaces can be removed. Yuki explains: full removal is fatal, but she can disable receivers and remove tracking components (5-10% mortality, 20% complications). She's helped 53 people; 48 survived. She remembers every one. Refuseniks (<0.1% of population) live in grey zones with no rights, hunted if visible. Non-Histologic nations exist: SFW refuses interfaces, CNT uses different control. "Architects don't want us to know alternatives exist."
+
+Enhanced correction will use the interface to override their organic memories and reshape their personalities.
 
 Mikhail sings "Lean on Me" in the dining hall, reinforcing their solidarity. Yuki realizes that her refusal to compromise her ethics might be inspiring others to question the system.
 

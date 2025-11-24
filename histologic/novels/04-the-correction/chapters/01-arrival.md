@@ -76,6 +76,14 @@ Dr. Reeves's expression didn't change, but his eyes lingered on Mikhail for a lo
 
 "Faith requires evidence," Marcus shot back. "That's the whole point of Histologic. We don't believe blindly. We believe based on facts."
 
+Marcus remembered his installation day. He'd been seven years old, the minimum age. His parents had tried to delay it—"He's too young," his mother had argued—but the school had insisted. "Without the interface, he can't access the curriculum. He'll fall behind. It's required for enrollment."
+
+They'd made it a celebration. "Installation Day" with cake and presents. His parents smiling through their fear. The doctor explaining it would help him learn, help him remember, help him be a good citizen.
+
+He remembered the surgery. The recovery. The strange sensation of suddenly "knowing" things he'd never learned. It had felt like magic.
+
+Now it felt like a chain.
+
 "And when the facts are lies?" Kira asked quietly.
 
 The room went silent.

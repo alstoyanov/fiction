@@ -24,7 +24,13 @@ His neural interface was receiving contradictory broadcasts. Veridica's towers s
 
 The building could not decide what it was, because Veridica and Chronos could not agree on its history. Or rather, his brain could not decide what to believe when the interface fed it two incompatible truths at once.
 
-Dmitri's head throbbed. He had been experiencing the headaches for three months now, ever since he had volunteered for extended border duty. The chronic exposure was taking its toll—his neural interface constantly struggling with overlapping broadcasts, his hippocampus stressed by the endless contradictions. He had not reported them. Reporting meant correction, and correction meant failure. He was so close to catching The Phantom. So close to proving himself.
+Dmitri's head throbbed. He had been experiencing the headaches for three months now, ever since he had volunteered for extended border duty. The chronic exposure was taking its toll—his neural interface constantly struggling with overlapping broadcasts, his hippocampus stressed by the endless contradictions. 
+
+He touched his temple, feeling nothing. The interface had been there since he was eight years old—installed the year after the Mandatory Citizenship Act of 2065. He remembered his mother's tears, his father's grim acceptance. "It's for the best," Papa had said. "Better to be part of the system than outside it."
+
+Papa had been wrong about many things.
+
+He had not reported the headaches. Reporting meant correction, and correction meant failure. He was so close to catching The Phantom. So close to proving himself.
 
 He moved forward, weapon drawn, scanning the shadows. The Phantom had led him here deliberately—another game, another test. The outlaw seemed to know exactly how far to push, how close to let Dmitri get before vanishing like smoke.
 
@@ -70,7 +76,11 @@ The woman stared at the contradictory data, her face pale. "But... which one is 
 
 "How do you know this?"
 
-Alexei's expression darkened. "Because I've seen the evidence. Because my father died in one of their experiments. Because I've been watching them do this for fifteen years."
+Alexei's expression darkened. "Because I've seen the evidence. Because my father died in one of their experiments." He paused. "And because I remember what they promised us. Back in the 2050s, when it was 'voluntary.' Perfect memory, they said. Instant knowledge. Protection from misinformation. My parents believed them. Got their interfaces early. Then it became mandatory for government workers. Then teachers. Then everyone."
+
+"I don't remember a time without it," the woman whispered.
+
+"Most people don't. They installed yours when you were what, seven? Eight? You couldn't consent. None of us could. But by the time we were old enough to question it, removal meant death." His voice was bitter. "The perfect trap. Sold as freedom, implemented as control."
 
 The woman set down her tea, her hands steadier now. "What do I do?"
 
@@ -115,6 +125,10 @@ According to Veridica: The warehouse district was evacuated in 2068 due to struc
 According to Chronos: The warehouse district was cleared in 2069 for neural interface expansion. Seventeen residents relocated.
 
 According to his father's private notes, which Nikolai had found years after his death: The warehouse district was used for fact storm testing in 2068. Forty-three people died. The test was deemed successful.
+
+Papa had been a systems engineer during the transition. He'd helped build the broadcast towers, back when they promised the system would bring peace. "Overlapping coverage ensures no dead zones," the official documentation said. But Papa's private notes told a different story: "Border zone overlap is deliberate. They could prevent it—directional broadcasts, buffer zones, coordinated factorepos. They choose not to. The conflicts serve their purposes."
+
+Papa had discovered too much. And they'd killed him for it.
 
 Nikolai's hands trembled as he archived the contradictions, filed them away in the endless database of lies he maintained. His job was to keep the factorepo systems running, to reconcile the irreconcilable, to make sense of the senseless.
 

@@ -135,14 +135,29 @@ When a fact storm occurs, reality itself appears to break down:
 
 **Neural Interface Technology**:
 
-All citizens in Histologic nations have **mandatory neural interfaces** implanted (typically at age 5-18 depending on nation):
+All citizens in Histologic nations have **mandatory neural interfaces** implanted (typically at age 7-12 depending on nation):
 
 - **Physical Form**: Microscopic bio-integrated mesh embedded in the hippocampus and prefrontal cortex
 - **Function**: Continuously receives factorepo broadcasts and integrates them with organic memory
 - **Reception**: Passive receiver (like a radio), always on, cannot be turned off
 - **Bandwidth**: Low-level constant stream of "ambient facts" about current location and recent history
 - **Power**: Bio-electric, powered by the body's own electrical signals
-- **Removal**: Extremely dangerous; causes severe cognitive damage or death
+- **Removal**: Full removal causes death; partial disabling possible but dangerous (5-10% mortality)
+
+**How It Became Universal**:
+- Introduced 2050s as "voluntary" solution to information warfare crisis
+- Promised perfect memory, instant knowledge, end to propaganda
+- Gradually mandated: government (2061) → education (2062) → healthcare (2063) → employment (2064) → citizenship (2065)
+- Refusal meant loss of all rights and social exile
+- Now 99.9% of Histologic population has interfaces
+
+**Who Lacks Interfaces**:
+- Non-Histologic citizens (SFW, CNT: ~2 billion people)
+- Refuseniks (<0.1%, marginalized and stateless)
+- Medical exemptions (<0.01%, heavily monitored)
+- Resistance post-removal (~500, hunted by authorities)
+
+*For complete details on implementation, social control, and exceptions, see `neural-interface-society.md`*
 
 **Factorepo Broadcast System**:
 
@@ -154,6 +169,17 @@ Facts are transmitted via **quantum-entangled broadcast towers** throughout each
 - **Frequency**: Operates on quantum level, not electromagnetic (can't be blocked by traditional means)
 - **Range**: Typically 10-50km per tower, depending on terrain
 - **Redundancy**: Multiple towers cover same area for reliability
+
+**Why Border Zones Have Overlapping Broadcasts**:
+- Tower ranges extend beyond political borders (physics limitation)
+- Quantum broadcasts cannot be geographically "blocked" at borders
+- Neural interfaces receive ALL broadcasts in range, cannot filter by nation
+- Creating "dead zones" at borders would make those areas uninhabitable
+- **The Architects deliberately maintain this**: Border conflicts are INTENTIONAL features
+- Could be solved with technology or coordination, but serves control purposes
+- Keeps populations divided, fearful, and dependent on government protection
+
+*For complete explanation of border zone politics and deliberate design, see `neural-interface-society.md`*
 
 **How Normal Fact Reception Works**:
 

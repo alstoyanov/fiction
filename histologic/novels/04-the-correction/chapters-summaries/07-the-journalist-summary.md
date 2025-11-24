@@ -10,6 +10,8 @@ Isaiah Okonkwo, investigative journalist with photographic memory, has been docu
 
 During his session, Isaiah realizes he's not just observing—he's part of the story. The eight of them, convicted simultaneously at 14:37:22, represent something larger. He begins to see the pattern: they're not random inmates, they're specialists targeted for elimination.
 
+Isaiah reflects on his research into the transition period. The official history says "voluntary adoption in 2050s, gradual integration, universal by 2065." But he'd found the protests, the families torn apart, the resistance movements. Government jobs first (2061), then education, healthcare, employment, citizenship (2065). By 2065, refusal meant exile. Most chose the interface over losing everything. "The perfect totalitarian tool," he thinks. "And we welcomed it with open arms."
+
 Isaiah discovers Dr. Reeves's hidden files about "Project Correction Phase 2"—a plan to expand correction beyond criminals to anyone who questions official narratives. This is systematic thought control, not rehabilitation.
 
 Mikhail finds Isaiah in the library and discusses the power of stories versus facts. He explains that while The Judge can verify facts, only stories can transform hearts. Isaiah realizes his role: he must document this story and publish it, exposing the corruption to the world.

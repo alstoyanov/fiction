@@ -7,6 +7,7 @@
 - Kira approaches Marcus at breakfast, reveals she's been observing patterns
 - Kira slips Marcus a note: all eight inmates were processed together (same judge signature, date, time)
 - Group session with Dr. Thomas Reeves observing (chief correction specialist)
+- Marcus has flashback to installation day at age 7: parents tried to delay, school insisted, made it a celebration, felt like magic then, feels like a chain now
 - Each inmate shares their story, revealing system inconsistencies
 - Mikhail sings "Blowin' in the Wind" and poses riddle about cages without bars
 - Dr. Reeves leaves abruptly after heated debate

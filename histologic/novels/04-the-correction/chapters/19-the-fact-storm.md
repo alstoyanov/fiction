@@ -119,7 +119,11 @@ Mikhail smiled. "Music activates different neural pathways—auditory cortex, mo
 
 "And pre-Histologic songs?"
 
-"No factorepo conflicts about them. Pure organic memory. No interface involvement. That's why 'You'll Never Walk Alone' works so well—it's from before the system existed. Before we had machines in our heads telling us what to think." Mikhail's eyes twinkled. "The old songs remember freedom, Marcus. They remember a time when people thought for themselves. That's why they're dangerous. That's why they're powerful."
+"No factorepo conflicts about them. Pure organic memory. No interface involvement. That's why 'You'll Never Walk Alone' works so well—it's from before the system existed. Before we had machines in our heads telling us what to think." Mikhail's eyes grew distant. "I'm old enough to remember before. Before the interfaces. Before the factorepos. Before certainty became tyranny. I was twenty-three when they introduced the 'voluntary' program. Twenty-eight when it became mandatory. I refused. Lived as a refusenik for forty years before they finally caught me."
+
+"Forty years?" Marcus asked, amazed.
+
+"Forty years of freedom. Forty years of uncertainty. Forty years of thinking for myself." Mikhail smiled. "Worth every hardship. Every moment of hunger, every night of fear. Because I was free. And the songs remember what that means. The old songs remember freedom, Marcus. They remember a time when people thought for themselves. That's why they're dangerous. That's why they're powerful."
 
 Elena stood apart, watching her team, her family, her revolution. When she caught Marcus's eye, she smiled.
 
@@ -207,7 +211,17 @@ She handed them a data chip. "Contacts. Reformist believers. People inside the g
 
 "We will," Marcus said.
 
-Elena looked at them for a long moment. "You're brave. You're foolish. You're probably going to die. But you might also change everything. You might actually fix the system from within. And if you do..." She smiled. "If you do, you'll be heroes. Real heroes. The kind that songs are written about."
+"How many people live without interfaces?" Kira asked suddenly.
+
+Elena pulled up a global map. "In Histologic nations? Less than point-one percent. Maybe thirty thousand people across all five nations. They live in grey zones, off the grid, constantly moving. No rights, no protections. We help when we can, but it's dangerous for everyone involved."
+
+She zoomed out. "But globally? Two billion people. SFW refuses interfaces entirely—they'd rather live with information chaos than government control. CNT uses a different system, collective-based instead of individual. And there are unaligned territories, failed states, places where neither system reached."
+
+"So it's possible to live without them," Marcus said.
+
+"Possible, yes. Easy, no. In Histologic territory, you're essentially exiled. In SFW, you're free but you have to accept radical uncertainty. In CNT, you trade one control system for another." Elena's expression was grim. "There's no perfect solution. Only different trade-offs. That's what the Architects don't want you to know—that alternatives exist. That their system isn't inevitable."
+
+She looked at them for a long moment. "You're brave. You're foolish. You're probably going to die. But you might also change everything. You might actually fix the system from within. And if you do..." She smiled. "If you do, you'll be heroes. Real heroes. The kind that songs are written about."
 
 "We don't want to be heroes," Kira said. "We just want to build something better."
 

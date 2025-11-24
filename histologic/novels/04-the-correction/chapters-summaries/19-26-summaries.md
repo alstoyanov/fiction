@@ -5,7 +5,11 @@
 
 All eight land outside facility. Fact storm spreading—reality flickering, civilians suffering. Kira helps Marcus through the storm: explains his neural interface is receiving contradictory broadcasts from both towers, his brain can't reconcile them. Her voice and touch bypass the interface—direct sensory input that's more real than the contradictory facts flooding his hippocampus. "Stay anchored to what's physically real."
 
-Marcus feels guilt over collateral damage. Kira: "Can't save everyone, but save some." Drive through chaos to warehouse safe house. Marcus asks Mikhail why singing helps. Mikhail explains: music activates different neural pathways (auditory, motor) separate from hippocampus where interface integrates. Singing occupies cognitive resources, less processing devoted to contradictions = less damage. Pre-Histologic songs have no factorepo conflicts—pure organic memory, no interface involvement. "The old songs remember freedom."
+Marcus feels guilt over collateral damage. Kira: "Can't save everyone, but save some." Drive through chaos to warehouse safe house. Marcus asks Mikhail why singing helps. Mikhail explains: music activates different neural pathways (auditory, motor) separate from hippocampus where interface integrates. Singing occupies cognitive resources, less processing devoted to contradictions = less damage. Pre-Histologic songs have no factorepo conflicts—pure organic memory, no interface involvement. 
+
+Mikhail reveals he's old enough to remember before interfaces. Was 23 when "voluntary" program started, 28 when mandatory. Refused, lived as refusenik for 40 years before caught. "40 years of freedom, uncertainty, thinking for myself. Worth every hardship." The old songs remember freedom.
+
+Kira asks Elena how many live without interfaces. Elena: <0.1% in Histologic nations (~30,000), living in grey zones with no rights. But globally: 2 billion. SFW refuses interfaces (accept chaos over control), CNT uses different system, unaligned territories exist. "Alternatives exist. That's what Architects don't want you to know—their system isn't inevitable."
 
 News: Kovač arrested for complicity. Isaiah will publish in 24 hours. Elena debriefs: 12 hours before organized pursuit. Divergence plans finalized. Final group circle and song. Eight paths separate. Marcus & Kira alone, heading into Veridica shadows to build reform network.
 

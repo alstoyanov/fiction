@@ -91,6 +91,16 @@ Reeves pulled up another document:
 
 "I see a conspiracy. Systematic targeting of people who could expose corruption. A plan to either break them or eliminate them. And I see it goes all the way to the top."
 
+Isaiah had been researching the transition for years. The official history was sanitized: "Voluntary adoption in the 2050s, gradual integration, universal implementation by 2065." But the archived articles told a different story.
+
+He'd found the protests. The resistance movements. The families torn apart when parents refused and children were taken by child services. The "voluntary" phase that became mandatory so gradually that most people didn't notice until it was too late.
+
+Government jobs first. Then education. Then healthcare. Then all employment. Then citizenship itself.
+
+By 2065, refusal meant exile. And most people chose the interface over losing everything.
+
+The perfect totalitarian tool, Isaiah thought. And we welcomed it with open arms.
+
 "What else?"
 
 Isaiah thought carefully. "I see that you're showing me this for a reason. Either you're trying to help us, or you're testing us. Or both."

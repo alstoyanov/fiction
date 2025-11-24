@@ -211,7 +211,17 @@ Marcus touched his temple, feeling nothing. The interface was invisible, undetec
 
 "Can it be removed?" he asked.
 
-Dr. Tanaka's expression darkened. "Removal causes severe cognitive damage or death. The mesh is integrated with your neural tissue. Removing it would be like removing part of your brain." She paused. "You're trapped in the system, Marcus. We all are. The only question is whether we accept it or fight it."
+Dr. Tanaka's expression darkened. "Full removal is fatal. The mesh is integrated with your neural tissue. Removing it would be like removing part of your brain." She paused. "But I can disable the receivers, remove the tracking components. It's dangerous—five to ten percent don't survive the procedure. Twenty percent have severe complications. But for some people, it's worth the risk."
+
+"How many people have you helped?"
+
+"Fifty-three." Her voice was quiet. "Fifty-three people who chose freedom over certainty. Forty-eight survived. Three died on the table. Two died from complications within a week." She met his eyes. "I remember every one of them. Their names. Their faces. Their reasons for choosing."
+
+"And the ones without interfaces? The people who refused from the beginning?"
+
+"Refuseniks. Less than point-one percent of the population. They live in grey zones, outside official society. No legal rights, no legal protections. Hunted if they're too visible. It's not freedom—it's survival." She paused. "And then there's the non-Histologic nations. SFW refuses interfaces entirely. CNT uses a different control system. They're proof that alternatives exist. But the Architects don't want us to know that."
+
+"You're trapped in the system, Marcus. We all are. The only question is whether we accept it or fight it."
 
 "You're fighting it."
 
