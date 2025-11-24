@@ -18,10 +18,12 @@ Kira and Maya present the mechanical badge evidence to Captain Sokolov. The badg
 **POV**: Dr. Yuki Tanaka  
 **Timeline**: November 15, 14:20 (during lost hour)
 
-Flashback to Dr. Tanaka helping the Santos family (Amara, Davi, and Lia) cross from Veridica to Chronos. They meet at a medical clinic near the border. Yuki removes their neural tracking implants—a painful procedure but necessary to prevent Veridican authorities from locating them. The procedure takes 24 minutes. At 14:44, they cross successfully, just as the fact storm chaos peaks. Border guards are overwhelmed and wave them through. The family is grateful, terrified, hopeful. Yuki promises they'll be safe in Chronos.
+Flashback to Dr. Tanaka helping the Santos family (Amara, Davi, and Lia) cross from Veridica to Chronos. They meet at a medical clinic near the border. Yuki explains she'll remove their neural tracking implants—the neural interface is bio-integrated with hippocampus and prefrontal cortex. She can't remove the entire mesh (would kill them), but she can disable the receiver nodes and remove tracking components. Amara asks if she'll still "know things"—Yuki explains organic memory will be fine, but she won't receive factorepo broadcasts anymore. She'll have to learn things the old way. "That's freedom," Yuki says. The painful procedure takes 24 minutes per person. At 14:44, they cross successfully, just as the fact storm chaos peaks. Border guards are overwhelmed and wave them through. The family is grateful, terrified, hopeful. Yuki promises they'll be safe in Chronos. She doesn't mention the risks: without the interface, they're vulnerable to fact storms differently—unable to receive any facts, relying purely on organic perception.
 
 **Key Moments**:
-- Neural implant removal (medical detail)
+- Neural implant removal (detailed medical procedure explained)
+- Explanation of what neural interfaces do and how they work
+- "That's freedom. Welcome to thinking for yourself."
 - Lia (16) asking: "Will they come after us?"
 - Yuki: "Not if we succeed. And we will."
 - Successful crossing at 14:44
@@ -147,4 +149,5 @@ Wei realizes the investigation is closing in. He has maybe 24 hours before arres
 **Running Total**: ~40,000 words
 
 **Next**: Part 3 - The Convergence (Chapters 19-25)
+
 

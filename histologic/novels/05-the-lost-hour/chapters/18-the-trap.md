@@ -273,3 +273,4 @@ That was worth everything.
 
 **Next**: Chapter 23 (Confrontation) where Wei surrenders and The Architects become the true enemy
 
+

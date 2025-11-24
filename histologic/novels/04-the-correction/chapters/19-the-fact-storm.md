@@ -28,9 +28,13 @@ He heard sounds that hadn't happened: Alarms. Explosions. Singing. Silence.
 
 He focused. Her face was real. Her hand in his was real. Her voice was real.
 
+"The neural interface," she said, her words cutting through his confusion. "It's receiving contradictory broadcasts from both Veridica and Chronos towers. Your brain can't reconcile them. But my voice—that's direct sensory input. It bypasses the interface. My hand in yours—that's tactile sensation your interface can't override. Focus on what's real. Focus on what you can touch and hear and see directly."
+
+She squeezed his hand harder. The pressure was undeniable. Physical. Real. More real than the flickering buildings, more real than the contradictory facts flooding his hippocampus.
+
 "I'm here," he managed. "I'm okay."
 
-"You're not okay. None of us are okay. The storm is worse than expected." Kira pulled him toward the nearest vehicle. "We need to get out of range. Now."
+"You're not okay. None of us are okay. But you're anchored. Stay anchored to me. To us. To what's physically real." Kira pulled him toward the nearest vehicle. "We need to get out of broadcast range. Now."
 
 They piled into the transport. All eight of them plus Elena and two of her team. Too many people in too small a space, but it didn't matter. They were together. They were free.
 
@@ -108,6 +112,14 @@ Around them, the others were embracing, crying, laughing. Dmitri and his brother
 
 *"We shall overcome, we shall overcome,*
 *We shall overcome someday..."*
+
+Marcus approached the old man. "Why does singing help?" he asked. "During the storm, when everything was breaking down, your song kept us together. Why?"
+
+Mikhail smiled. "Music activates different neural pathways—auditory cortex, motor cortex for singing. Separate from the hippocampus where your interface integrates facts. When you sing, your brain prioritizes the immediate activity over trying to reconcile impossible contradictions. Less processing power devoted to the contradiction means less neural damage."
+
+"And pre-Histologic songs?"
+
+"No factorepo conflicts about them. Pure organic memory. No interface involvement. That's why 'You'll Never Walk Alone' works so well—it's from before the system existed. Before we had machines in our heads telling us what to think." Mikhail's eyes twinkled. "The old songs remember freedom, Marcus. They remember a time when people thought for themselves. That's why they're dangerous. That's why they're powerful."
 
 Elena stood apart, watching her team, her family, her revolution. When she caught Marcus's eye, she smiled.
 
@@ -332,6 +344,7 @@ Together.
 - Part Four continuing: pursuit and final escape
 
 **Next Chapter**: Chapter 20 (Kira POV) - First night as outlaws, establishing first safe house, close call with pursuit
+
 
 
 

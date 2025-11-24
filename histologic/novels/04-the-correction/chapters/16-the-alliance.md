@@ -177,13 +177,25 @@ Isaiah smiled back. "Good point."
 
 "What about the fact storm itself?" Marcus asked. "What will it feel like?"
 
-Everyone looked at Mikhail. He'd lived through fact storms before. He knew.
+Kira pulled up a diagram. "Elena will inject contradictory facts into both Veridica and Chronos factorepos—facts about this facility's location and status. The broadcast towers will transmit both versions simultaneously. Everyone's neural interface will receive contradictory signals."
+
+"And that causes the flickering?" Marcus asked.
+
+"It's not the building that flickers—it's perception. Your brain receives: eyes say 'brass building,' interface says 'abandoned warehouse,' interface says 'glass facility.' Your visual cortex can't reconcile them, so you perceive the building changing. It's a hallucination, but it feels completely real."
+
+"And the guards?" Dmitri asked.
+
+"Will be just as affected. Disoriented. Confused. Unable to trust their perception. That's when we run." Kira looked at each of them. "But understand—everyone in a five-kilometer radius will experience this. Civilians. Children. People who have nothing to do with us. Some will be permanently damaged. That's the cost of our freedom."
+
+The weight of that settled over them. Collateral damage. Innocent people suffering so they could escape.
+
+"How do we stay sane during it?" Kira asked, turning to Mikhail. He'd lived through fact storms before. He knew.
 
 "Reality will flicker," Mikhail said quietly. "You'll see things that aren't there. Hear things that didn't happen. Remember things that never were. Your senses will lie to you. Your memories will contradict themselves. It's... disorienting. Terrifying. Some people go mad."
 
-"How do we stay sane?" Kira asked.
+"But we won't," Marcus said. "Because we'll have each other."
 
-"You hold onto something real. Something that can't be altered by contradictory facts." Mikhail's eyes were distant. "For me, it's always been songs. Music exists independent of history. A melody doesn't need verification. A rhythm doesn't need The Judge's approval. Songs are real in a way facts can never be."
+"Yes. You hold onto something real. Something that can't be altered by contradictory facts." Mikhail's eyes were distant. "For me, it's always been songs. Music exists independent of history. A melody doesn't need verification. A rhythm doesn't need The Judge's approval. Songs are real in a way facts can never be."
 
 "So we sing," Marcus said.
 
@@ -409,6 +421,7 @@ And walk through the storm together.
 - Part Three progressing
 
 **Next Chapter**: Chapter 17 (Dmitri POV) - Director Kovač's final commitment, tactical preparation
+
 
 
 

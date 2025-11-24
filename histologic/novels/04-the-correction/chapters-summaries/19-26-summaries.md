@@ -3,7 +3,11 @@
 ## Chapter 19: The Fact Storm (Marcus)
 **Timeline**: August 22, 2106, ~1400-1800 (escape to divergence)
 
-All eight land outside facility. Fact storm spreading—reality flickering, civilians suffering. Marcus feels guilt over collateral damage. Kira: "Can't save everyone, but save some." Drive through chaos to warehouse safe house. News: Kovač arrested for complicity. Isaiah will publish in 24 hours. Elena debriefs: 12 hours before organized pursuit. Divergence plans finalized. Final group circle and song. Eight paths separate. Marcus & Kira alone, heading into Veridica shadows to build reform network.
+All eight land outside facility. Fact storm spreading—reality flickering, civilians suffering. Kira helps Marcus through the storm: explains his neural interface is receiving contradictory broadcasts from both towers, his brain can't reconcile them. Her voice and touch bypass the interface—direct sensory input that's more real than the contradictory facts flooding his hippocampus. "Stay anchored to what's physically real."
+
+Marcus feels guilt over collateral damage. Kira: "Can't save everyone, but save some." Drive through chaos to warehouse safe house. Marcus asks Mikhail why singing helps. Mikhail explains: music activates different neural pathways (auditory, motor) separate from hippocampus where interface integrates. Singing occupies cognitive resources, less processing devoted to contradictions = less damage. Pre-Histologic songs have no factorepo conflicts—pure organic memory, no interface involvement. "The old songs remember freedom."
+
+News: Kovač arrested for complicity. Isaiah will publish in 24 hours. Elena debriefs: 12 hours before organized pursuit. Divergence plans finalized. Final group circle and song. Eight paths separate. Marcus & Kira alone, heading into Veridica shadows to build reform network.
 
 ## Chapter 20: The Breakout (Kira)
 **Timeline**: August 22-23, 2106 (night and morning after escape)
@@ -49,6 +53,7 @@ Seven sections showing each character's preparation for tomorrow:
 **Final scene (15:01)**: Government technician discovers factorepo not responding, backup systems failing, Judge offline. **One hour of data (14:00-15:00) GONE**. Completely, irretrievably lost. **THE LOST HOUR HAD BEGUN.**
 
 Perfect setup for next novel.
+
 
 
 

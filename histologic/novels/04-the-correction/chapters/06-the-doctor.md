@@ -183,11 +183,51 @@ The old man's voice was gentle, barely audible, but everyone at the table heard 
 
 Dr. Tanaka smiled. The old songs knew. They always knew.
 
-After dinner, as they filed back to their cells, Isaiah fell into step beside Yuki.
+After dinner, as they filed back to their cells, Marcus approached Yuki.
 
-"Director Kovač?" he asked quietly.
+"Dr. Tanaka, may I ask you something? Medical question."
 
-"Thinking about it."
+"Of course. Walk with me."
+
+They moved down the corridor, keeping their voices low.
+
+"The headaches," Marcus said. "During the sessions with Dr. Reeves. They're getting worse. It feels like... like my brain is fighting itself."
+
+Yuki nodded. "That's exactly what's happening. May I?" She gestured to his temple.
+
+Marcus nodded. She ran her fingers along his skull, feeling for the telltale warmth of neural stress.
+
+"Your interface is working perfectly," she said quietly. "Which is unfortunate."
+
+Marcus frowned. "Unfortunate?"
+
+"A malfunctioning interface might explain your ideological contamination. But yours is functioning exactly as designed." She lowered her hand. "The bio-integrated mesh in your hippocampus and prefrontal cortex—it's receiving factorepo broadcasts, integrating them into your memory formation, making you 'know' things without consciously learning them. The system is working. You're the one who's broken—or rather, you're the one who's still whole."
+
+"I don't understand."
+
+Yuki glanced around, ensuring they were alone. "The neural interface is supposed to make factorepo information feel as real as your own memories. Most people can't distinguish between what they actually remember and what the interface tells them is true. But you can. Somehow, you've maintained the ability to question what the interface feeds you. That's why you're here."
+
+Marcus touched his temple, feeling nothing. The interface was invisible, undetectable, woven into his brain tissue since he was seven years old. He'd never questioned it before. It was just... there. Like breathing.
+
+"Can it be removed?" he asked.
+
+Dr. Tanaka's expression darkened. "Removal causes severe cognitive damage or death. The mesh is integrated with your neural tissue. Removing it would be like removing part of your brain." She paused. "You're trapped in the system, Marcus. We all are. The only question is whether we accept it or fight it."
+
+"You're fighting it."
+
+"Yes. Because I've seen what happens when we accept it. I've seen people like Sarah—curious, questioning, alive—turned into compliant shells. The interface makes it possible. Makes it easy. Feed someone enough contradictory information through their interface, stress their hippocampus enough, and you can reshape their entire personality."
+
+Marcus felt cold. "That's what Dr. Reeves is trying to do to us."
+
+"Yes. Enhanced correction. They'll use the interface against you, flooding it with carefully designed information to override your organic memories, your authentic self. It's torture disguised as therapy."
+
+"How long do we have?"
+
+"Not long. Days, maybe. That's why we need to move soon."
+
+Isaiah fell into step beside them. "Director Kovač?" he asked quietly.
+
+"Thinking about it," Yuki said.
 
 "Will she help?"
 
@@ -284,6 +324,7 @@ Starting with themselves.
 - Timeline: escape must happen soon
 
 **Next Chapter**: Chapter 7 (Isaiah POV) - The journalist documents everything, completes Part One
+
 
 
 

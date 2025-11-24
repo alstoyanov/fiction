@@ -348,3 +348,4 @@ Not because it was certain. Because it was right.
 
 **Next**: Chapter 27+ showing implementation of reforms, scattered heroes, time jump to one year later
 
+

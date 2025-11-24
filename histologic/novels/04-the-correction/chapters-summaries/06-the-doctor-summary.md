@@ -8,15 +8,16 @@
 
 Dr. Yuki Tanaka, neural specialist convicted for refusing to perform a correction procedure, maintains her medical ethics despite imprisonment. She refused to correct Patient 7743 (Sarah), a young woman whose only "crime" was asking questions, because the patient didn't need correction—she needed answers.
 
-During a private meeting with Director Kovač, Yuki is offered early release if she'll perform the correction. She refuses again, citing her oath: "First, do no harm." This refusal plants seeds of doubt in Kovač, who begins questioning whether the correction system is truly therapeutic.
+During a private meeting with Director Kovač, Yuki confronts her about the corruption in the system. She convinces Kovač to consider helping Group Seven escape, appealing to her better nature. Kovač is troubled but agrees to think about it.
 
-Mikhail visits Yuki in the medical wing and sings "Lean on Me" by Bill Withers, recognizing her as the group's moral anchor. He tells her that sometimes the greatest healing comes from refusing to break people, even when ordered to.
+After dinner, Marcus asks Yuki about his worsening headaches. She explains the neural interface system: the bio-integrated mesh in everyone's hippocampus and prefrontal cortex receives factorepo broadcasts and integrates them into memory formation. Marcus's interface works perfectly, but he can still question what it tells him—that's why he's here. She reveals that removal would cause death, meaning they're all trapped in the system. Enhanced correction will use the interface to override their organic memories and reshape their personalities.
 
-Yuki realizes that her refusal to correct Sarah—and her continued refusal to compromise her ethics—might be inspiring others to question the system. She begins to see her role not just as a healer of bodies, but as a protector of humanity itself.
+Mikhail sings "Lean on Me" in the dining hall, reinforcing their solidarity. Yuki realizes that her refusal to compromise her ethics might be inspiring others to question the system.
 
 ## Character Development
 
 Dr. Tanaka solidifies her role as the group's ethical conscience, proving that some principles are worth imprisonment—and that integrity can inspire others to question unjust systems.
+
 
 
 

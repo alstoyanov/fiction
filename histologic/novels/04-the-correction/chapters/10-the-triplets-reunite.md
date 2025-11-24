@@ -72,9 +72,29 @@ Nikolai pulled out a brass tablet. "Then let's talk strategy. Aunt Elena is coor
 
 "I know. But it's the best distraction we have. And Elena knows how to control them. She's done it before."
 
+Alexei leaned forward. "Papa wasn't killed by accident, Dima. He was murdered. He discovered how fact storms actually work—how they're weaponized."
+
+Dmitri's jaw tightened. "What do you mean, 'how they work'?"
+
+"The neural interfaces. The broadcast towers. The whole system." Alexei pulled up a schematic on Nikolai's tablet. "Every citizen has a neural interface embedded in their hippocampus and prefrontal cortex. It receives quantum broadcasts from towers throughout the nation. Normally, those broadcasts integrate seamlessly—you 'know' facts without learning them. But in border zones, where two nations' towers overlap, you receive contradictory broadcasts simultaneously."
+
+He zoomed in on a border zone diagram. "Your brain tries to hold two incompatible memories at once. Your hippocampus can't form coherent memory from contradictory inputs. The neural stress causes physical damage—white matter lesions, neurotransmitter cascade, eventually neural death."
+
+"That's what killed Papa?" Nikolai whispered, though he already knew.
+
+"Not naturally. They deliberately injected contradictory facts into both Veridica and Chronos factorepos. Targeted his location. Synchronized the broadcasts. Created a fact storm that killed him and forty-two others." Alexei's voice was hard. "It wasn't an accident. It was a weapons test. And Papa discovered the evidence right before they killed him with it."
+
+Dmitri's face had gone pale. "I've been experiencing headaches. For months. From border duty."
+
+"Chronic exposure," Alexei said grimly. "It's cumulative. It's killing you slowly, just like it killed Mama. The system is poisoning everyone in the border zones."
+
+"And Elena can control this?" Dmitri asked.
+
+"She learned how. She infiltrates the factorepos, injects contradictory facts, times the broadcasts. She's gotten better at it—smaller radius, shorter duration, fewer casualties. But there's always collateral damage. Always civilians caught in the storm."
+
 "When?"
 
-"Three years ago. When I escaped the first time." Alexei's expression was distant. "She triggered a localized storm, just enough to create confusion. I walked out while everyone was trying to figure out which reality was real."
+"Three years ago. When I escaped the first time." Alexei's expression was distant. "She triggered a localized storm, just enough to create confusion. I walked out while everyone was trying to figure out which reality was real. Or rather, while their brains were trying to reconcile contradictory interface signals."
 
 "And this time?"
 
@@ -249,6 +269,7 @@ And together, they would burn the corrupt system down.
 - Sets up fact storm escape
 
 **Next Chapter**: Chapter 11 (Alexei POV) - Communication with Elena, resistance network
+
 
 
 

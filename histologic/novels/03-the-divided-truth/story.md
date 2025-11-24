@@ -18,9 +18,13 @@ Dmitri touched his throat mic. "Negative. I am close."
 
 "I said negative." He cut the connection.
 
-The first wave hit him like a pressure change, a sudden wrongness in the air. The warehouse ahead flickered—for a moment it was abandoned, rust-red and broken. Then it was new, chrome and glass, a Chronos neural interface facility. Then back to abandoned. The building could not decide what it was, because Veridica and Chronos could not agree on its history.
+The first wave hit him like a pressure change, a sudden wrongness in the air. The warehouse ahead flickered—for a moment it was abandoned, rust-red and broken. Then it was new, chrome and glass, a Chronos neural interface facility. Then back to abandoned.
 
-Dmitri's head throbbed. He had been experiencing the headaches for three months now, ever since he had volunteered for extended border duty. He had not reported them. Reporting meant correction, and correction meant failure. He was so close to catching The Phantom. So close to proving himself.
+His neural interface was receiving contradictory broadcasts. Veridica's towers said the warehouse was abandoned since 2065. Chronos's towers said it was an active facility built in 2069. Both signals hit his hippocampus simultaneously, and his brain couldn't reconcile them. The building flickered because his perception flickered—not reality itself, but his ability to process it.
+
+The building could not decide what it was, because Veridica and Chronos could not agree on its history. Or rather, his brain could not decide what to believe when the interface fed it two incompatible truths at once.
+
+Dmitri's head throbbed. He had been experiencing the headaches for three months now, ever since he had volunteered for extended border duty. The chronic exposure was taking its toll—his neural interface constantly struggling with overlapping broadcasts, his hippocampus stressed by the endless contradictions. He had not reported them. Reporting meant correction, and correction meant failure. He was so close to catching The Phantom. So close to proving himself.
 
 He moved forward, weapon drawn, scanning the shadows. The Phantom had led him here deliberately—another game, another test. The outlaw seemed to know exactly how far to push, how close to let Dmitri get before vanishing like smoke.
 

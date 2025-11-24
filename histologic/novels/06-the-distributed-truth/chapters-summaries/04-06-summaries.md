@@ -139,3 +139,4 @@ The novel's central turning point. Marcus's choice to expose rather than execute
 
 **Next**: Chapters 7-8 - Government reactions from both Veridica and Chronos
 
+

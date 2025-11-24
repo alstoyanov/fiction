@@ -179,3 +179,4 @@ Maria smiled. "The fourth estate strikes back."
 
 **Next Chapter**: Kira investigates from hiding, realizes erasure pattern
 
+

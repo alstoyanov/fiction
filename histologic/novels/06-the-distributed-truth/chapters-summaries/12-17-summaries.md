@@ -244,3 +244,4 @@ Addresses legitimate limitation of distributed truth. Proposes hybrid solution. 
 
 **Next**: Chapters 18-20 - Counter-revolution organized and defeated
 
+

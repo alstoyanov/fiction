@@ -237,3 +237,4 @@ All he could do was wait. And trust that the people fighting for truth would fin
 
 **Next Chapter**: Flashback to Isaiah crossing border
 
+

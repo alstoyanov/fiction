@@ -238,3 +238,4 @@ Wei stood, pocketed his personal weapon, and prepared for the evening ahead.
 
 **Next Chapter**: Flashback to Marcus during lost hour, uploading evidence
 
+

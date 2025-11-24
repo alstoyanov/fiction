@@ -8,7 +8,7 @@
 
 The three Volkov brothers meet privately for the first time in three years. It's an emotional reunion—Dmitri apologizes for hunting Alexei, Alexei forgives him, and Nikolai apologizes for helping both while lying to both. They forgive each other and reconnect as family.
 
-They discuss the escape plan: Elena will trigger a fact storm as distraction, and they'll escape together. Alexei explains how Elena has done this before and knows how to control fact storms.
+They discuss the escape plan: Elena will trigger a fact storm as distraction. Alexei reveals how their father was murdered—he discovered that fact storms are weaponized. He explains the technical mechanism: neural interfaces in everyone's hippocampus receive quantum broadcasts from towers. When two nations' towers overlap in border zones, people receive contradictory broadcasts simultaneously. The brain can't reconcile incompatible memories, causing neural stress, white matter lesions, and eventually death. Their father was killed deliberately when operatives injected contradictory facts into both factorepos and synchronized the broadcasts. Dmitri realizes his chronic headaches from border duty are cumulative damage—the system is slowly killing him like it killed their mother.
 
 Nikolai reveals devastating news: their uncle, Professor Adrian Volkov, is one of the Architects. He deliberately targeted his own nephews as test subjects for an experiment to see if the system could break family bonds. The brothers are furious but choose justice over revenge—they'll expose him rather than kill him.
 
@@ -17,6 +17,7 @@ They vow to never be separated again and clasp hands: "For family, for truth, fo
 ## Character Development
 
 The triplets' emotional reunion and forgiveness heal three years of conflict. They unite against their uncle's betrayal and commit to staying together forever. Dmitri completes his transformation from hunter to protector.
+
 
 
 

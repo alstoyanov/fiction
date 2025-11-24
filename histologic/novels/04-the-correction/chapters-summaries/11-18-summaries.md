@@ -28,7 +28,11 @@ Marcus resolves his final crisis: he's fighting for the ideal, not the corrupt i
 ## Chapter 16: The Alliance (Kira)
 **Timeline**: August 22, 2106, 0200-0400 (12-10 hours before escape)
 
-All eight meet for final planning. Kira details complete timeline (1350-1410, 20 minutes total). Individual roles assigned. Post-escape paths revealed: Dr. Tanaka→Chronos, Isaiah→SFW, Dmitri & Alexei→Resistance, Nikolai→Underground, Mikhail→his choice, Marcus & Kira→stay in Veridica (most dangerous). Mikhail explains fact storm effects. Group sings "You'll Never Walk Alone" together. Marcus and Kira spend final hours together, make pact to keep going if other doesn't make it.
+All eight meet for final planning. Kira details complete timeline (1350-1410, 20 minutes total). Individual roles assigned. Post-escape paths revealed: Dr. Tanaka→Chronos, Isaiah→SFW, Dmitri & Alexei→Resistance, Nikolai→Underground, Mikhail→his choice, Marcus & Kira→stay in Veridica (most dangerous). 
+
+Kira explains how the fact storm will work: Elena will inject contradictory facts into both factorepos, broadcast towers will transmit both simultaneously, everyone's neural interfaces will receive contradictory signals. The buildings won't actually flicker—it's perceptual breakdown. Brain receives "eyes say brass building" + "interface says abandoned warehouse" + "interface says glass facility" and can't reconcile them. Guards will be equally affected. Everyone in 5km radius will experience it, including civilians—some will be permanently damaged. That's the cost of their freedom.
+
+Mikhail explains fact storm effects and how to survive: hold onto something real like songs. Group sings "You'll Never Walk Alone" together. Marcus and Kira spend final hours together, make pact to keep going if other doesn't make it.
 
 ## Chapter 17: The Inside Help (Dmitri)
 **Timeline**: August 22, 2106, 0800-1300 (6-1 hours before escape)
@@ -39,6 +43,7 @@ Kovač nods confirmation—she's committed. Dmitri talks with Dr. Tanaka about c
 **Timeline**: August 22, 2106, 1330-1355+ (30 minutes before to escape begins)
 
 Elena confirms extraction ready. Reveals uncle Adrian knows and is watching as final experiment. All eight meet in library one last time. Alexei reviews complete timeline. At 1355:00, **ESCAPE BEGINS**: fact storm hits, reality breaks, doors unlock, all eight run singing "You'll Never Walk Alone," reach wall, climb together, jump to freedom. **ALL EIGHT SUCCESSFUL**. Elena's team catches them. Alexei's fourth escape—this time with family, promise kept.
+
 
 
 

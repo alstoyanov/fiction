@@ -78,6 +78,24 @@ Then she began writing a second document: her testimony. Everything she'd witnes
 
 She wrote for an hour, documenting every detail, every timestamp, every observation. Creating a record from memory that would survive even if digital evidence disappeared.
 
+Then something else caught her eye. Buried in the system logs: broadcast tower activity during the lost hour.
+
+Kira pulled up the data, pieces clicking into place.
+
+The Lost Hour wasn't just erased from the factorepo. It was weaponized.
+
+She pulled up broadcast tower logs—the ones Wei hadn't thought to erase because most people didn't know they existed. During the hour from 14:00 to 15:00, every broadcast tower in Veridica had transmitted contradictory facts. Thousands of contradictions. Millions of people receiving incompatible signals through their neural interfaces simultaneously.
+
+A nationwide fact storm.
+
+That's why no one could remember clearly. That's why testimony was unreliable. That's why reality felt unstable during that hour. Everyone's neural interfaces had been overwhelmed by contradictory broadcasts, their hippocampuses unable to form coherent memories.
+
+And while everyone was cognitively impaired, while perception itself was compromised, Thomas Wei had walked into the Executive Building and murdered the Minister of Truth.
+
+It was brilliant. It was horrifying. It was the perfect crime.
+
+And now she had proof.
+
 At 21:00, her comm device buzzed. Message from Maya:
 
 **KIRA - RECEIVED YOUR FILE. IT'S EXPLOSIVE. WEI IS DEFINITELY INVOLVED. BUT I NEED MORE. SOMETHING THAT PROVES HE WAS PHYSICALLY AT KOZLOV'S OFFICE DURING THE LOST HOUR. SECURITY BADGE LOGS, PHYSICAL EVIDENCE, WITNESS TESTIMONY. CAN YOU FIND ANYTHING? - M**
@@ -224,4 +242,5 @@ They ran.
 **Part 1 Complete**: All major mysteries introduced, evidence gathering begins
 
 **Next**: Part 2 - The Investigation (Chapters 9-18)
+
 
