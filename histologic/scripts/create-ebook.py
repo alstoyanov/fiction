@@ -235,19 +235,19 @@ p.first {
     # 7. Convert stories
     stories = [
         {
-            'folder': 'novels/the-believers-fall',
+            'folder': 'novels/01-03-stories/01-the-believers-fall',
             'title': 'The Believer\'s Fall',
             'subtitle': 'A Short Story in the Histologic Universe',
             'filename': 'story1.xhtml'
         },
         {
-            'folder': 'novels/the-stolen-fact',
+            'folder': 'novels/01-03-stories/02-the-stolen-fact',
             'title': 'The Stolen Fact',
             'subtitle': 'A Short Story in the Histologic Universe',
             'filename': 'story2.xhtml'
         },
         {
-            'folder': 'novels/the-divided-truth',
+            'folder': 'novels/01-03-stories/03-the-divided-truth',
             'title': 'The Divided Truth',
             'subtitle': 'A Short Story in the Histologic Universe',
             'filename': 'story3.xhtml'
@@ -406,7 +406,7 @@ p.first {
     
     # 11. Create EPUB file
     print("\nCreating EPUB file...")
-    epub_path = Path('histologic-stories.epub')
+    epub_path = Path('novels/01-03-stories/histologic-stories.epub')
     
     with zipfile.ZipFile(epub_path, 'w', zipfile.ZIP_DEFLATED) as epub:
         # Add mimetype first (uncompressed)
