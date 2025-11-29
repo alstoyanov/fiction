@@ -10,7 +10,7 @@
 
 **Arrival at Facility (August 3, 2106)**
 - Facility looks like peaceful campus but is actually prison for the mind
-- Supervisor Kade assigns Marcus to "Group Seven" - special group of 8 inmates (usually 7)
+- Supervisor Hayes assigns Marcus to "Group Seven" - special group of 8 inmates (usually 7)
 - Marcus placed in Cell 7-H
 - Kade hints that correction "has to" work
 

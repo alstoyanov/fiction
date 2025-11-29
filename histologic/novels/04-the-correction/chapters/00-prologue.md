@@ -32,27 +32,27 @@ The facility looked like a university campus from the outside: brick buildings w
 
 Marcus knew better now. This was a prison for the mind.
 
-"Marcus Chen?" A woman in a crisp gray uniform checked her brass tablet. "I'm Supervisor Kade. Follow me, please."
+"Marcus Chen?" A woman in a crisp gray uniform checked her brass tablet. "I'm Supervisor Hayes. Follow me, please."
 
 They walked through corridors lined with motivational posters: *"Truth Sets You Free"* and *"Belief is Strength"* and *"The Judge Knows."* Each one made Marcus's stomach tighten.
 
-"You'll be in Group Seven," Kade said, not unkindly. "Eight inmates total. You're the last to arrive. Group sessions begin tomorrow."
+"You'll be in Group Seven," Hayes said, not unkindly. "Eight inmates total. You're the last to arrive. Group sessions begin tomorrow."
 
 "Eight?" Marcus asked. "I thought correction groups were seven."
 
-"Usually, yes. This is a... special group." Kade's expression flickered—was that pity? "You'll understand soon enough."
+"Usually, yes. This is a... special group." Hayes's expression flickered—was that pity? "You'll understand soon enough."
 
-They stopped at a door marked **CELL 7-H**. Kade pressed her palm to the brass scanner.
+They stopped at a door marked **CELL 7-H**. Hayes pressed her palm to the brass scanner.
 
 "Your belongings have been processed. You'll receive facility clothing, toiletries, and access to the library and gardens during designated hours. Meals are communal. Sessions are mandatory." She paused. "Mr. Chen, I want you to know—most people who come here do get better. The correction process works."
 
 Marcus met her eyes. "And if it doesn't?"
 
-Kade looked away. "It does. It has to."
+Hayes looked away. "It does. It has to."
 
 The door opened. Inside: a narrow bed, a desk, a chair, a small window overlooking the garden. Clean. Sparse. Lonely.
 
-"Welcome to correction," Kade said softly, and left him alone.
+"Welcome to correction," Hayes said softly, and left him alone.
 
 Marcus sat on the bed and stared at his hands. These were the hands that had held Elena. That had typed the report that condemned her. That had reached for her one last time as the enforcers took her away.
 
@@ -60,7 +60,7 @@ She'd looked at him with such sadness. Not anger. Just sadness.
 
 "You still don't understand," she'd said. "But you will."
 
-Marcus lay back on the thin mattress and closed his eyes. Somewhere in this facility were seven other people—eight total, Kade had said. Eight people the system had deemed broken.
+Marcus lay back on the thin mattress and closed his eyes. Somewhere in this facility were seven other people—eight total, Hayes had said. Eight people the system had deemed broken.
 
 He didn't feel broken. He felt like the only sane person in an insane world.
 
