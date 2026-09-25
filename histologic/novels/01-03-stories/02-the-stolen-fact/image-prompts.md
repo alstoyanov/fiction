@@ -100,7 +100,7 @@ Photorealistic interior of a converted industrial warehouse with exposed brick w
 Photorealistic image of a couple at an intimate restaurant table with city lights visible through windows. Middle Eastern woman in elegant dress, man with dark hair in casual button-down. Wine glasses, candlelight, genuine happiness in their expressions. Warm lighting. The calm before the storm. --ar 16:9 --style raw --v 6
 ```
 
-### 13. Kira and Yuki - Colleague Concern
+### 13. Kira and Priya - Colleague Concern
 **Scene**: Friend noticing something wrong
 
 ```

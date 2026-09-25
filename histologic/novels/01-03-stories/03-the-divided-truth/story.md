@@ -746,7 +746,7 @@ They could see each other but couldn't speak. The cells were soundproofed. They 
 
 A guard approached Dmitri's cell, slid a datapad through the slot. Official notification. Dmitri read it once, twice, three times, but the words didn't change.
 
-ELENA VOLKOV. DECEASED. COGNITIVE FAILURE SECONDARY TO PROLONGED FACT STORM EXPOSURE. REMAINS WILL BE PROCESSED ACCORDING TO STANDARD PROTOCOLS. NO FAMILY VIEWING PERMITTED.
+SOFYA VOLKOV. DECEASED. COGNITIVE FAILURE SECONDARY TO PROLONGED FACT STORM EXPOSURE. REMAINS WILL BE PROCESSED ACCORDING TO STANDARD PROTOCOLS. NO FAMILY VIEWING PERMITTED.
 
 Their mother was dead, and they couldn't even attend her funeral.
 

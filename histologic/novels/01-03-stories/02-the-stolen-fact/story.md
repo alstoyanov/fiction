@@ -136,7 +136,7 @@ And slowly, carefully, she was falling for him.
 
 She knew she should be cautious. She barely knew him. But Adrian felt real in a way most people didn't. He listened when she talked about her work. He challenged her assumptions without being confrontational. He looked at her like she was more than just her job, more than just another citizen in the system.
 
-"You're different lately," her colleague Yuki said one afternoon at the Spire. "Distracted. Happy. Who is he?"
+"You're different lately," her colleague Priya said one afternoon at the Spire. "Distracted. Happy. Who is he?"
 
 Kira felt herself blush. "His name is Adrian. I met him a few weeks ago."
 
@@ -144,7 +144,7 @@ Kira felt herself blush. "His name is Adrian. I met him a few weeks ago."
 
 "And I think I'm falling in love with him."
 
-Yuki grinned. "Finally. I was starting to think you'd married the factorepo."
+Priya grinned. "Finally. I was starting to think you'd married the factorepo."
 
 "It's complicated. He asks strange questions sometimes. About the system, about truth, about other histonations."
 
@@ -152,7 +152,7 @@ Yuki grinned. "Finally. I was starting to think you'd married the factorepo."
 
 "Like he's testing my beliefs. Like he wants me to doubt."
 
-Yuki's smile faded. "Kira, be careful. Those are the kinds of questions—"
+Priya's smile faded. "Kira, be careful. Those are the kinds of questions—"
 
 "I know. But he's not an outlaw. He's just curious. Philosophical."
 
@@ -200,9 +200,9 @@ Kira's hands were shaking. This was impossible. Facts didn't just disappear from
 
 She ran a deeper diagnostic. The encryption upgrade she'd designed wasn't in the system. The testing results weren't there. The deployment confirmation wasn't there. Three months of work, vanished as if it had never existed.
 
-"Yuki," she called across the office. "Can you come here?"
+"Priya," she called across the office. "Can you come here?"
 
-Yuki looked at her screen, ran the same searches, got the same results. "Kira, this doesn't make sense. I saw you working on this. I reviewed your designs."
+Priya looked at her screen, ran the same searches, got the same results. "Kira, this doesn't make sense. I saw you working on this. I reviewed your designs."
 
 "But there's no record. No record of the work, no record of the implementation, no record of the fact entry."
 
