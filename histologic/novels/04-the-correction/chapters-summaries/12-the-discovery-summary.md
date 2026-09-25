@@ -19,7 +19,7 @@ Nikolai, the anxious bridge, finds what Continuity is and when it ends. This for
   - The status line on C-1 (Marcus): *"SUCCESS. Stable baseline. Reserved for demonstration."*
   - The status line on the BOND files: *"Primary research interest. Integration method: simultaneous triple cradle (untested)."* They plan to correct all three at once, in one room.
   - The schedule: **FINAL INTEGRATION, ALL SUBJECTS: 10 AUG 2106. MINISTRY DEMONSTRATION: 11 AUG 2106.**
-  - An acquisition note on C-2 (Kira) that he doesn't understand yet: *"Acquired via record anomaly (ref. R.)."*
+  - An acquisition note on C-2 (Kira) that he doesn't understand yet: *"Acquired via record anomaly (ref. R.)."* And under it: *"Placement 7-K per protocol R-2."* The **R-2** file sits in Reeves's personal directory, and Nikolai can't open it.
 - He copies what he can into his own partition, disguised as corrupted memory fragments, and backs out. His hands won't stop shaking.
 
 ## Ending
@@ -27,5 +27,7 @@ Walking back to Wing C under escort, Nikolai reaches for the bond and doesn't ne
 
 ## Continuity Notes
 - The "record anomaly" is explained in Ch 16: Continuity deleted Kira's fact. Nikolai also finds C-1's "index adjustment" here but doesn't grasp it until Ch 16. Keep that line in his copies.
-- Nikolai's partition doubles as the evidence store, which pays off in Ch 23.
+- **Twist 1 clue:** Protocol R-2 ("Seeding") is opened only in Ch 24. Nobody in Part Two treats it as important. The reader might.
+- The access leaves an audit trail. Reeves finds it in Ch 20, which leads to Ch 21.
+- Nikolai's partition doubles as the evidence store, which pays off in Ch 24.
 - Nikolai is quiet and guilty. Give him one moment of dark humour to lighten him.

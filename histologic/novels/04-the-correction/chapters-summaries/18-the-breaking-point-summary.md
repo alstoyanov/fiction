@@ -28,5 +28,7 @@ Back in 7-H, Marcus tries to recall the library, the reference shelves, and her 
 
 ## Continuity Notes
 - Kovač is Adrian's **aunt** (her character file). Adrian stays offstage in this book.
+- **Twist 1, reread:** Reeves isn't trying to delete Kira. He is *measuring how deeply she has taken root*. "You've learned to hide" is delight, not frustration. Marcus believes he won this round, and Reeves lets him. Write the scene so both readings hold.
+- Kovač doesn't know about R-2. Her reading ("nobody erased looks at anyone like that") is sincere, and it is also exactly what Reeves hoped someone would see.
 - A memory that is *permanently* lost here makes the trauma real. He never gets it back.
 - Kovač's cameras-off trick is how the alliance meets in Ch 19.

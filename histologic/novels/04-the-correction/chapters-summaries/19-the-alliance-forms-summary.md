@@ -31,5 +31,5 @@ The outage has four minutes left. As they file out, Kovač stops Kira: "My nephe
 
 ## Continuity Notes
 - This is the only time all nine are together before the storm.
-- Kovač is exposed from here on, so her survival in Ch 26 has to be clever.
+- Kovač is exposed from here on, so her survival in Ch 27 has to be clever.
 - Mention Captain Sokolov only as a risk: "Border Security will pursue."

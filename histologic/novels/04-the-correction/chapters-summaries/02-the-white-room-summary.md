@@ -24,5 +24,5 @@ He tries to picture Elena's face and gets it, but it looks *filed*, like a photo
 
 ## Continuity Notes
 - The phrase "These memories are corrupted. They must be corrected." echoes Story 03 on purpose.
-- Reeves is only a voice for most of the book. His face is first seen clearly in Ch 18 or Ch 23.
+- Reeves is only a voice for most of the book. His face is first seen clearly in Ch 18.
 - Establish the rhythm: intensive sessions every two to three days during Marcus's first two months.

@@ -24,4 +24,4 @@ Marcus lies awake doing the maths: sessions, weeks, months. He was told correcti
 
 ## Continuity Notes
 - Wing C rules to keep consistent: soundproof cells; privileged inmates move under escort; cameras in every cell; no clocks, so time is marked only by meals and lights.
-- Samuel pays off in Ch 23. Old Songs' humming pays off in Ch 11 and Ch 14.
+- Samuel pays off in Ch 23–24. Old Songs' humming pays off in Ch 11 and Ch 14.

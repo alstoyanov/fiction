@@ -18,12 +18,13 @@ The expert's view. Tanaka knows exactly what the machines do because she used to
   - **Kira Osman:** A technical mind, deflecting by instinct. She came back from her first session angry. It is a good sign.
   - **Isaiah Okonkwo:** A compartmentalised mind. He gives the machine surface material.
 - **Her theory:** Every resister she can see has someone. The triplets have each other. Isaiah has his readers (imagined, but real to him). Marcus had no one, and he was the easiest to erase.
+- **One oddity she files and can't explain:** Cell 7-K stayed empty for three weeks while general-population overflow slept in the corridor annex. Then it was filled with a woman who faces Marcus Chen.
 - **The staff are divided:** Moss believes. Hayes is unhappy but obeys. Morrison's hands shake, and Tanaka knows that tremor. Reeves watches everything and is certain of everything.
 
 ## Ending
 At the glass, Tanaka watches Kira in 7-K looking across at Marcus in 7-H for a long, puzzled moment. Tanaka writes her final note of the day in her head: *Technique won't save him. A person might.* Then she realises nobody has noticed the one thing that matters: Kira has been looking at Marcus for three days, and Marcus, for the first time in weeks, has *turned his face toward his own glass*.
 
 ## Continuity Notes
-- Tanaka is 45. Her small scar on the right temple comes from Ch 23.
+- Tanaka is 45. Her small scar on the right temple comes from Ch 24.
 - Her history with Moss matters in Ch 17.
 - She never uses the word "floor" to the others until Ch 11.

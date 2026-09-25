@@ -27,5 +27,5 @@ Late at night, the name comes together in the cellar of his palace: **Volkov**. 
 
 ## Continuity Notes
 - Isaiah is 38 and dignified. His notebook habit has become the memory palace.
-- The Continuity header and "C-7" pay off in Ch 12 and Ch 16. The link to 2471 pays off in Ch 15 and Ch 23.
+- The Continuity header and "C-7" pay off in Ch 12 and Ch 16. The link to 2471 pays off in Ch 15 and Ch 24.
 - Close Part One on this note of mystery and grief.

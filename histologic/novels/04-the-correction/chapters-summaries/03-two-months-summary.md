@@ -19,7 +19,7 @@ Short dated sections that start as Marcus's mental "fact entries" ("Oct 12. Sess
 - **Late October:** A tall man is brought into Wing C: Isaiah, dignified, and already watching everything. Marcus registers him the way you'd register weather.
 - He stops noticing the glass. Samuel in 7-G sits in the same pose as Marcus. Once Marcus looks over and can't tell which of them is the reflection.
 - Moments seen from outside, which Marcus notes and doesn't care about: the small doctor-inmate (Tanaka) watching him with fierce attention. The triplets returning from work details, always glancing at his cell. The old man's humming at the meal slot, which he no longer hears as music.
-- One session in early December is different. Reeves is pleased. "Stable. Beautiful baseline. Reduce to maintenance." Moss squeezes his hand: "You're healing, Marcus." He doesn't know what the words mean, only that they're a good sign.
+- One session in early December is different. Reeves is pleased. "Stable. Beautiful baseline. Reduce to maintenance." Then, to someone off-mic, a line Marcus doesn't take in: *"And keep 7-K open. We'll have our second subject within the week."* Moss squeezes his hand: "You're healing, Marcus." He doesn't know what the words mean, only that they're a good sign.
 - The sessions become weekly. He doesn't notice the difference.
 
 ## Ending
@@ -28,4 +28,5 @@ He sits on the bed, head in hands, the image Kira will see. Down the corridor a 
 ## Continuity Notes
 - This is exactly the image from *The Stolen Fact*: "a young Asian man with glasses, sitting on a bed with his head in his hands."
 - Reeves reduces the sessions *because* Marcus is the showcase stable subject. Continuity needs a stable baseline for the August demonstration. This is why Marcus has room to recover later.
+- **Twist 1 clue:** "Keep 7-K open" should read as routine admin on a first reading. Kira is put in 7-K, directly facing Marcus (Ch 4). Reeves explains in Ch 24.
 - Tanaka and Isaiah are mostly offstage here. The chapter shows how little Marcus notices.

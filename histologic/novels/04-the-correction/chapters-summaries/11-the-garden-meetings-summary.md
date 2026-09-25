@@ -23,5 +23,5 @@ In the blind arc, the gardener kneels to reset a stone border right beside Marcu
 
 ## Continuity Notes
 - Tanaka's "the floor" becomes shared vocabulary from here on.
-- The tune and the lullaby prefigure the Ch 14 technique and are a callback in Ch 27.
+- The tune and the lullaby prefigure the Ch 14 technique and are a callback in Ch 28.
 - Dmitri's four words are a teaser. The full reveal is Ch 13.

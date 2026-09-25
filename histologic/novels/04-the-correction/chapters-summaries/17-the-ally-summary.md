@@ -22,6 +22,6 @@ Turn someone inside the staff. Tanaka fails with the person she trusted, and suc
 Tanaka codes the report that night: *Morrison is ours, or nearly. Moss is not, and never will be. Be kind to her anyway; she'll be the one who raises the alarm.* Then she adds a line only for herself: *I refused once and they made me a subject. He's about to refuse. I owe it to him to make it survivable.*
 
 ## Continuity Notes
-- Moss's arc pays off in Ch 23–24, when she raises the alarm sincerely.
+- Moss's arc pays off in Ch 24–25, when she raises the alarm sincerely.
 - Morrison becomes the "defector" of Book 5.
 - The detail about the triple cradle raises the stakes for the triplets' August "integration".

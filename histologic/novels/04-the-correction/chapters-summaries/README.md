@@ -2,8 +2,8 @@
 
 These summaries replace the earlier set, which followed the abandoned "group therapy" plot. They are based on `plots/04-the-correction-REVISED.md`, with the fixes listed below so that the novel agrees with the three short stories and with Book 5, *The Lost Hour*.
 
-**Structure:** Prologue + 28 chapters + Epilogue, in five parts.
-**Target length:** ~3,000–3,500 words per chapter (~95,000 words total).
+**Structure:** Prologue + 29 chapters + Epilogue, in five parts.
+**Target length:** ~3,000–3,500 words per chapter (~100,000 words total).
 **Tone:** Psychological horror (Part One), mystery (Part Two), conspiracy (Part Three), action (Part Four), aftermath (Part Five).
 
 ---
@@ -25,9 +25,11 @@ The REVISED plot contradicts itself: the triplets have been inside "8 months" in
 | Nov 18, 2105 | Kira enters the fact that is later stolen. |
 | ~Dec 6, 2105 | Kira arrives at Ashford and glimpses the broken Marcus (*The Stolen Fact*). Triplets are at 13 months, which matches the "one year later" epilogue of *The Divided Truth*. |
 | Dec 2105 – Apr 2106 | Recognition, recovery, the triplets reveal themselves, the message system, Continuity discovered. |
-| May – Jul 2106 | Allies recruited, the plan made. |
-| **Night of Aug 9–10, 2106** | Fact storm and escape, one day before the Ministry demonstration of Continuity. |
-| Aug – Sept 2106 | Isaiah's exposé, recovery, the group splits up. |
+| May – mid-Jul 2106 | Allies recruited. An escape is planned for Aug 9–10. |
+| ~Jul 18–20, 2106 | Reeves finds the audit trail, runs a solo session on Nikolai, and moves final integration forward to **Aug 2**. |
+| **Night of Aug 1–2, 2106** | A rushed fact storm and escape, hours before the brought-forward integration. |
+| Aug 5, 2106 | Isaiah's exposé is published. |
+| Aug – Sept 2106 | Recovery, then the group splits up. |
 | Nov 14, 2106 | Epilogue. Leads straight into *The Lost Hour* (Nov 15, 14:00–15:00). |
 
 In total, Marcus spends about 10 months inside: 2 months being broken and 8 months recovering while pretending to still be erased. Kira spends 8 months. The triplets spend 21 months, counting their time at the border facility.
@@ -55,7 +57,9 @@ Project Continuity aims to create *genuine belief* rather than compliance. In Ph
 | C-6 | CLINICIAN | Tanaka | Convicted after she refused to run the Continuity trials. |
 | C-7 | WITNESS | Isaiah | Arrested while investigating the fact-storm test program. He has seen the number 2471. |
 
-**The deadline:** "Final integration" of all seven, followed by a Ministry demonstration on **Aug 11, 2106**. Marcus is being kept as the showcase "stable success". That is why his sessions drop to maintenance level after two months, which gives him room to recover. If anyone detects that he is recovering, he will be erased properly.
+**The deadline:** "Final integration" of all seven, originally set for Aug 10 and moved to **Aug 2** in Ch 21, with the Ministry demonstration on Aug 11. Marcus is being kept as the showcase "stable success". That is why his sessions drop to maintenance level after two months, which gives him room to recover. If anyone detects that he is recovering, he will be erased properly.
+
+**Erase, then seed.** Erasure alone is only Phase One. The real test is protocol **R-2, "Seeding"**: put an attachment figure in front of an emptied mind and see whether genuine belief forms. Kira is Marcus's seed (see Twist 1). At national scale, Phase Two would erase doubt and seed loyalty.
 
 ### 6. How correction works, and its blind spot
 The white-room interface finds memories by **emotional salience** and follows their associations. It largely ignores **rote, rhythmic, procedural material**: songs, multiplication tables, code, prayers, entry formats. So a memory can be hidden by folding it into rote material. Old Songs has protected history in songs for decades. The triplets learned the technique from him and made it stronger with their bond. Kira arrives already doing a version of it ("think technically"). Isaiah uses a memory palace. Marcus hides Kira inside the fact-entry formats he typed a thousand times.
@@ -71,19 +75,36 @@ Mikhail "Old Songs" Petrov has been an inmate at Ashford for years. He is a harm
 
 ---
 
+## The Three Twists
+
+These were added so that the book isn't a straightforward prison-escape plot. Each one's clues are marked **"Twist N clue"** in the chapter notes.
+
+**Twist 1: Reeves arranged the recovery.** *Revealed in Ch 24, answered in Ch 28.*
+Reeves says Continuity never meant simply to erase Marcus. He emptied him, then chose Kira as the "seed": he stole her fact, put her in the cell facing Marcus (7-K), cut Marcus's sessions to give the recovery room, and gave them library privileges in the same week. The R-2 file proves he *arranged the conditions*. Nothing can prove he *caused the feeling*. Reeves may be telling the truth, or trying to break them. Their answer in Ch 28 is that belief planted by someone else is manufactured, but belief you keep choosing is yours.
+- Clues: Ch 3 ("keep 7-K open"), Ch 4 ("Dr. Reeves was specific"), Ch 7 (7-K kept empty), Ch 10 (privileges in the same week), Ch 12 ("Placement 7-K per protocol R-2"), Ch 16 (R-2 misread), and Ch 18 (Reeves is measuring, not deleting).
+- In Ch 27, Isaiah publishes the protocol but leaves out the pairing.
+
+**Twist 2: The storm leaves a false memory.** *Planted in Ch 23, discovered in Ch 28.*
+During the storm Marcus "remembers" lying in the grass with Kira under the stars, in the version of history where Ashford is an empty field. It never happened. The memory sets, and he can't feel that it's false. From then on he has to check his memories against other people's. This seeds Book 5's theme of testimony versus the record.
+
+**Twist 3: The plan fails before it starts.** *Ch 20 ending and Ch 21.*
+Reeves finds the February audit trail. He runs a **single-node session** on Nikolai alone to test the bond. The bond holds, but Nikolai loses the rooftop memory, which means he can no longer answer the family passphrase, "Who was born first?". Reeves moves integration to Aug 2, so the escape is brought forward by a week. The costs follow: the storm is only partly calibrated, Reeves is in the building, only part of the archive can be copied (so Isaiah must stay behind to send the rest), and the improvised third vehicle crashes (three dead).
+
+---
+
 ## Cast: Ashford Staff and Others
 
 | Character | Role | Arc in this book |
 |-----------|------|------------------|
 | **Dr. Reyna Moss** | Assessment and correction physician (from Stories 01–02) | A sincere believer and the gentle face of the system. She raises the alarm during the escape, believing she is saving them. |
-| **Dr. Reeves** | Head of Project Continuity. The calm voice in the white room. | The main antagonist inside the facility. In Ch 23 he reveals that the border fact storms were Continuity field trials. |
+| **Dr. Reeves** | Head of Project Continuity. The calm voice in the white room. | The main antagonist inside the facility. In Ch 24 he reveals that the border fact storms were Continuity field trials, and claims that the Marcus–Kira bond was his design (Twist 1). |
 | **Dr. James Morrison** | Continuity neural-interface engineer. His hands shake. | Tanaka turns him. He releases the lockdown and escapes with the group, becoming the "defector". |
 | **Director Helena Kovač** | Director of Ashford. Aunt of Adrian Kovač, Kira's lover. | Goes from believer to ally (Ch 18). Survives in her post. |
 | **Supervisor Hayes** | Intake and wing supervisor | Sympathetic, but won't answer questions. |
-| **Captain Yevgenia Sokolov** | Border Security. Delivered the triplets, visits "her" file every month. | A wildcard. The storm unit that is stolen belongs to her program. At the checkpoint in Ch 25 she lets them through. |
-| **Elena Volkov** | Resistance, outside the facility | Plans the storm and the extraction. Reunited with her nephews and with Marcus in Ch 24. |
+| **Captain Yevgenia Sokolov** | Border Security. Delivered the triplets, visits "her" file every month. | A wildcard. The storm unit that is stolen belongs to her program. At the checkpoint in Ch 26 she lets them through. |
+| **Elena Volkov** | Resistance, outside the facility | Plans the storm and the extraction. Reunited with her nephews and with Marcus in Ch 25. |
 | **Samuel Ferris** | Inmate in 7-G, next to Marcus | Returns blank on Marcus's first night. Can't understand escape and stays behind. |
-| **Two escapees** (to be named during drafting) | Wing C inmates who join the breakout | Both die during the pursuit. |
+| **Two escapees** (to be named during drafting) | Wing C inmates who join the breakout | Both die in the improvised van during the pursuit, along with one of Elena's drivers. |
 
 ---
 
@@ -116,24 +137,25 @@ Mikhail "Old Songs" Petrov has been an inmate at Ashford for years. He is a harm
 18. The Breaking Point (Marcus)
 19. The Alliance Forms (Kira)
 20. The Impossible Plan (Dmitri)
-21. The Sacrifice (Isaiah)
+21. The Single Node (Nikolai), *new: Twist 3*
+22. The Sacrifice (Isaiah)
 
-**Part Four: The Storm** (Aug 9–10, 2106)
-22. The Fact Storm (Marcus)
-23. The Breakout (Kira)
-24. The Cost of Freedom (Dmitri)
-25. The Pursuit (Alexei)
+**Part Four: The Storm** (Aug 1–2, 2106)
+23. The Fact Storm (Marcus)
+24. The Breakout (Kira), *Twist 1 revealed*
+25. The Cost of Freedom (Dmitri)
+26. The Pursuit (Alexei)
 
 **Part Five: The Aftermath** (Aug – Nov 2106)
-26. The Report (Isaiah, the published article)
-27. The Recovery (Kira)
-28. The Missions (Marcus)
+27. The Report (Isaiah, the published article)
+28. The Recovery (Kira), *Twists 1 and 2 answered*
+29. The Missions (Marcus)
 
 **Epilogue:** Seven Paths, One Truth (Nov 14, 2106)
 
-POV count: Marcus 10 (including the Prologue), Kira 5, Dmitri 4, Alexei 3, Isaiah 3, Nikolai 2, Tanaka 2. The Epilogue rotates.
+POV count: Marcus 10 (including the Prologue), Kira 5, Dmitri 4, Alexei 3, Isaiah 3, Nikolai 3, Tanaka 2. The Epilogue rotates.
 
-There is one file per chapter: `NN-slug-summary.md`, with the Epilogue as `29-epilogue-summary.md`. Two titles differ from the REVISED plot: Ch 10 is "The Whisper" (so it doesn't clash with Ch 6, "The Library"), and Ch 26 is "The Report".
+There is one file per chapter: `NN-slug-summary.md`, with the Epilogue as `30-epilogue-summary.md`. Two titles differ from the REVISED plot: Ch 10 is "The Whisper" (so it doesn't clash with Ch 6, "The Library"), and Ch 26 is "The Report".
 
 ---
 

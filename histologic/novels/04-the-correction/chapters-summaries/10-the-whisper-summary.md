@@ -12,6 +12,7 @@ First contact between Marcus and Kira. They whisper; they can't talk. She become
 - Kira has earned library privileges through careful compliance. She has refined her technique: in sessions she recites protocol specs and leaves the machine only small, dull crumbs of Adrian. Moss praises her "calm". Reeves's voice says "interesting" less often, which frightens her more.
 - The library is escorted and camera-covered, with a few general-population inmates. The quiet librarian is identical to the gardener (Alexei). She assumes he's corrected, and notes that he looks at her one beat too long.
 - **Marcus is there.** Reeves has granted his showcase subject light privileges as proof of "stable reintegration". He sits with an unopened book. He is less gone than in December, and his eyes follow things.
+- Kira registers the coincidence and dismisses it: they were both given library privileges in the same week. She's an architect, and she distrusts coincidence, but she wants this one.
 - **Kira places him at last:** the October news item about a factorepo historian who reported his outlaw lover and was convicted anyway. That was why he looked familiar at intake (*The Stolen Fact*).
 - Kira picks a route to the reference shelves. The librarian "happens" to park a laden cart that blocks the camera arc. (Kira notices, and files it with page 47.)
 - **The exchange,** in whispers with backs turned, pretending to browse:
@@ -30,6 +31,7 @@ First contact between Marcus and Kira. They whisper; they can't talk. She become
 Back in 7-K, Kira realises she's shaking. Not from fear, but from having been *believed*. She takes out the water-systems manual, looks at page 47 again, and connects it to the cart and the librarian's look. **Someone here is awake.** She doesn't yet know whether that's an ally or a trap.
 
 ## Continuity Notes
-- Marcus's "I know you" is never fully explained. It is the face he watched through the glass for weeks, which his damaged mind has filed as something *older*. Leave it ambiguous. It becomes a tender motif in Ch 27.
+- Marcus's "I know you" is never fully explained. It is the face he watched through the glass for weeks, which his damaged mind has filed as something *older*. Leave it ambiguous. It becomes a tender motif in Ch 28.
+- **Twist 1 clue:** The shared privilege timing was arranged. Reeves wants the two of them in the same room.
 - Marcus can't know Kira's case from the news: her fact vanished after he was already inside. She has to tell him.
 - Kira *does* know Marcus's case: it was news in October, while she was still free.
