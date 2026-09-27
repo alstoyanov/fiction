@@ -1,309 +1,156 @@
-# Morally Ambiguous Characters
+# Morally Ambiguous Characters: Provisional Books 6–9
 
-## Characters who blur the lines between good and evil
+**Status:** PROVISIONAL, Sept 2026. **This file covers only complex characters who first matter in Books 6–9** (*The Distributed Truth*, *Battle of Truths*, *Battle of Blood*, *Architects of Chaos*). None of it is canon. It keeps the usable ideas from the pre-rewrite file, adjusted to fit Books 1–5, and will be rewritten with each book's plot.
+**Moved out of this file (now canon profiles):**
+- **Director Helena Kovač** → `helena-kovac.md`
+- **Captain Yevgenia Sokolov** → `yevgenia-sokolov.md`
 
----
+**Related:** `SERIES-OVERVIEW.md` §4, `plots/00-FOUNDATION-MANUSCRIPT.md` §5–6, `worldbuilding/nations.md`, `amara-singh.md`, `elise-vance.md`, `characters/secondary-characters/opposition/secondary-antagonists.md` (the SFW commander, Chronos opposition).
 
-## 1. DIRECTOR HELENA KOVAČ
+**Numbering note:** the old file's "Novel 06 / 07 / 08" are **Books 7 / 8 / 9** here. Book 6, *The Distributed Truth*, did not exist in the old numbering.
 
-### Novel Appearances
-- **Novel 04**: "The Correction" - Major character, facility director
-- **Novel 05**: "The Lost Hour" - Supporting, begins reforms
-
-### Basic Information
-- **Age**: 52
-- **Role**: Correction facility director
-- **Family**: Brother is Cardinal Thomas Kovač (Architect), nephew is Adrian Kovač (victim, Novel 06)
-- **Alignment**: Lawful Good (misguided → enlightened)
-
-### Personality & Traits
-- Caring but misguided
-- True believer in correction (initially)
-- Compassionate beneath professional exterior
-- Evolves significantly
-
-### Character Arc
-**Novel 04**: Believer → Disillusioned → Helper → Redeemer
-- Believes correction helps people
-- Discovers it's torture, not healing
-- Realizes seven inmates are uncorrectable (they've seen truth)
-- Helps them escape
-- "I thought I was helping. I was wrong."
-
-**Novel 05**: Reformer
-- Leads facility reforms
-- Testifies against correction practices
-- Becomes advocate for ethical treatment
-
-### Key Moment
-Unlocking the doors for escape: "Go. I'll say you overpowered me. It's not even a lie."
-
-### Fate
-Leads reformed facility system, advocates for abolition of correction
-
-### Alignment Shift
-Lawful Good (misguided) → Lawful Good (enlightened)
+**Suggested names in this file** (all marked "(suggested)", none settled): First Minister **Oskar Maitland**, **Beatriz Martinez**, **Nora Chen**. Each was checked against the taken first names and weighted surnames in the character brief.
 
 ---
 
-## 2. GENERAL YEVGENIA SOKOLOV
+## 1. Julian Kovač: The Man Marcus Saved, Then Destroyed
 
-### Novel Appearances
-- **Story 03**: "The Divided Truth" - Border guard captain
-- **Novel 06**: "Battle of Truths" - General, military operations
-- **Novel 07**: "Battle of Blood" - Supreme Commander
-- **Novel 08**: "Architects of Chaos" - Discovers mother is Architect
+### At a Glance
+- **Name:** Julian Kovač (settled; replaces the old "Adrian Kovač, Chronos historian", to keep him distinct from Story 02's Adrian).
+- **Family (canon anchors):** Director Helena Kovač's **other nephew**, so Cardinal Tobias Kovač (TK·07) is his **great-uncle**. Adrian Kovač is either his brother or his cousin; **not yet fixed**. Suggested: his cousin, the son of Helena's **older** brother, who moved to Chronos. That keeps Adrian's Story 02 family simple, and a Kovač family split across the Lakes mirrors the two nations.
+- **Age:** the old file said 38 (and 39 a year later). A nephew of a woman born in 2054 is more comfortable at **about 34 in 2108** (suggested, born ~2074).
+- **Occupation:** Senior Historian in **Chronos**, with factorepo access.
+- **Old traits worth keeping:** brilliant, kind, trusting, idealistic; a lonely widower.
 
-### Basic Information
-- **Age**: 35 (Story 03) → 37 (Novel 06) → 42 (Novel 08)
-- **Role**: Border guard → Supreme Military Commander
-- **Family**: Mother is Chancellor Elena Sokolov (Architect)
-- **Alignment**: Lawful Good (conflicted)
+### Why He Matters
+In the provisional plan (SERIES-OVERVIEW §4), Marcus, now a Commissioner, is **ordered to seduce Julian and destroy him** to win the fact war with Chronos. Marcus **refuses in Book 6**, and **does it in Book 7**. Julian is the cost of Marcus's one great compromise. He is **not** seduced by Elena (that was the old plan, now dropped).
 
-### Personality & Traits
-- Competent, loyal, professional
-- Believes in duty and honor
-- Conflicted about orders
-- Loves her country and mother
+### Provisional Arc
+- **Book 6, *The Distributed Truth*:** the target of "the operation" (the old plot's name was "The Adrian Operation"; rename it). Marcus refuses and publishes: the manuscript fragments, the planned operation, and the leaders who benefit. Julian learns he was the target and **thanks Marcus** (old plot: "for not weaponising my loneliness"). He starts a journal and becomes a distributed-truth advocate who trusts Marcus completely.
+- **Book 7, *Battle of Truths*:** with the networks under attack and civilians dying in false-flag operations, Marcus carries out the operation he refused. Julian's trust in Marcus is the access. The plan works; Julian's career, name and life are destroyed, and he knows the truth but can't prove it.
+- **Book 8:** his destruction sits in Marcus. Suggested: Julian's name is one Old Songs will not sing, because Julian is not dead, only ruined.
+- **Book 9:** the Register names his great-uncle Tobias as TK·07. Julian, Helena and (if alive) Adrian are the Kovač family reckoning.
 
-### Character Arc
-**Story 03**: Competent border guard dealing with fact storms
-**Novel 06**: Promoted to General, leads military operations
-**Novel 07**: Supreme Commander, leads defense against SFW
-**Novel 08**: Discovers mother is Architect, devastated
+### Decisions to Make Before Book 6
+- **What "seduce" means.** Marcus is with Kira. A literal romance would be a Marcus–Kira crisis; a seduction of trust and friendship keeps Marcus–Kira intact and is still a betrayal. Either way, the operation is **Protocol R-2 turned outward**: Reeves placed an attachment figure in front of an emptied mind to see what grew (Book 4, Twist 1). Now Marcus is asked to be the attachment figure. Use that.
+- **Chronos life-logging.** Chronos interfaces record and upload constantly (`worldbuilding/nations.md`). Every hour Marcus spends with Julian is in the Chronos record. The betrayal is permanent, timestamped and public, which fits Book 7.
+- **Helena's knowledge.** She should learn that the state is using her family a second time (after Adrian in Book 4 Ch 18).
 
-### Key Moment (Novel 08)
-Confronting her mother: "You gave me my career. But you took my integrity. I would have succeeded without you. Now I'll never know."
+### Voice
+Warm, curious, precise about dates (he is a Chronos historian: nanosecond timestamps). Grateful people are the easiest to betray; let him be generous without being naive.
 
-### Internal Conflict
-- Duty vs. Morality
-- Love for mother vs. betrayal
-- Career success tainted by manipulation
-- "Was any of it real?"
+### Key Lines (old files, usable)
+- Book 6: "Thank you for not weaponising my loneliness."
+- Book 7: "You used me. Everything was a lie." (The old version continued "I loved you. You destroyed me." Keep that only if the seduction is literal.)
+- Book 7: "I helped them erase my own nation."
 
-### Resolution
-Uses her position to implement containment policy. Proves herself through ethical leadership.
-
-### Fate
-Continues as Supreme Commander, leads Veridica's defense ethically
-
-### Alignment
-Lawful Good (always, but tested)
+### Continuity Traps
+- **Julian, never Adrian.** Adrian Kovač is Story 02's outlaw recruiter, Kira's lover, who really loved her.
+- He is Helena's **nephew**, Tobias's **great-nephew**. The old file called him Helena's cousin and Tobias's nephew.
+- He lives in **Chronos**; Helena is Veridican. Explain the split.
 
 ---
 
-## 3. CHANCELLOR VIKTOR PETROV
+## 2. The First Minister (suggested: Oskar Maitland): The Necessary Man
 
-### Novel Appearances
-- **Novel 06**: "Battle of Truths" - Veridica head of state
-- **Novel 07**: "Battle of Blood" - War leader
-- **Novel 08**: "Architects of Chaos" - Reformer
+### At a Glance
+- **Replaces:** the old "Chancellor Viktor Petrov", Veridica's pragmatic head of state.
+- **Suggested name and title:** **First Minister Oskar Maitland** (suggested), head of Veridica's Cabinet. Age about 58 in 2108 (born ~2050, a child of the Fracture Years), as the old file had.
+- **Why not "Chancellor":** the Architect VS·09 is settled as **Chancellor Viktoria Sokolov**. Two Chancellors in Veridica would clash.
+- **Why not "Petrov":** it would imply a link to Dr. Yuri Petrov (YP·02), and the name is already carried by Old Songs. The old file also gave him a father *and* a son called Yuri. All three links are dropped.
 
-### Basic Information
-- **Age**: 58
-- **Role**: Veridica Chancellor (head of state)
-- **Family**: Son is Director Yuri Petrov, father is Dr. Yuri Petrov (Architect)
-- **Alignment**: Lawful Neutral (pragmatic)
+### Which Nation Does Viktoria Sokolov Serve? (Unclear in the Sources)
+- The Manuscript (§6) calls her "Chancellor Viktoria Sokolov", the Administrator, but **does not say of which nation**, or whether she still holds the office.
+- The old Book 9 plot calls her the "Chronos shadow leader". That conflicts with `worldbuilding/nations.md`: Chronos has "algorithmic democracy... no human representatives", so it has no Chancellor. It also sits oddly with her daughter being a Veridican Border Security officer.
+- `worldbuilding/nations.md` gives **Veridica** "a Chancellor and Cabinet". Books 4–5 never name the sitting Chancellor (Kovač mentions "at least one member of the Cabinet"; the Cabinet approved Phase Two "at Ministry level").
+- **So:** the most consistent reading is that she is, or was, **Veridica's Chancellor**, but the sources don't settle it. A clean option is that she is a **former** Chancellor who keeps the title, which is common for heads of state, leaving the sitting office free. Either way, calling him **First Minister** avoids the clash.
 
-### Personality & Traits
-- Pragmatic politician
-- Willing to do what's necessary
-- Not idealistic, but not evil
-- Understands power
+### Provisional Arc
+- **Book 6:** the operation against Julian comes down through him, deniably. When Marcus refuses and publishes, Maitland chooses adaptation over suppression (old plot: "Government divided, chooses adaptation over suppression").
+- **Book 7:** gives Marcus the tacit approval he needs to carry out the operation: "I can't authorise this. But I won't stop you."
+- **Book 8:** war leader during the SFW invasion. The old file had him "authorise the Judge's destruction". Under the new plan The Judge ends through **Principle Seven**, Vance's hidden contingency, whose conditions include "authorities". Suggested: he is one of those authorities without knowing it, and his order (for something else entirely) completes the cascade.
+- **Book 9:** leads the transition; accepts Marcus's containment policy ("If we invade, we prove them right").
 
-### Character Arc
-**Novel 06**: Politician → Pragmatist → Tacit Supporter
-- Officially can't authorize Marcus's plan
-- Unofficially won't stop it
-- "I can't authorize this. But I won't stop you."
-- Wins fact war through deniability
+### Open Question
+Is he an Architect's heir? **Suggested: no.** Thomas Wei already carries the heirs principle. Maitland's value is that he is *not* in the design but is shaped by it, the way most of Veridica is.
 
-**Novel 07**: War Leader
-- Leads Veridica through physical war
-- Makes hard decisions
-- Authorizes Judge's destruction
-
-**Novel 08**: Reformer
-- Leads transition to unified system
-- Implements new government structure
-- Pragmatic approach to peace
-
-### Philosophy
-"Idealism is for philosophers. I deal with reality. Sometimes reality requires compromise."
-
-### Key Quotes
+### Key Lines (old file, usable)
+- "I can't authorise this. But I won't stop you."
+- "Idealism is for philosophers. I deal with reality. Sometimes reality requires compromise."
 - "I'm not a good man. I'm a necessary one."
 - "History will judge me. I'll accept that. But I'll keep us alive first."
 
-### Fate
-Leads Veridica through transition, retires after peace established
+---
 
-### Alignment
-Lawful Neutral (pragmatic good)
+## 3. Martinez (SFW) (suggested first name: Beatriz): The Officer Who Turns
+
+### At a Glance
+- **Replaces:** the old "President Sarah Martinez" (SFW, 48). **"Sarah" clashes with Ambassador Sarah Okonkwo (SO·04)**, so a new first name is needed. Suggested: **Beatriz Martinez** (suggested).
+- **Regional note:** the SFW covers the Middle East, North Africa and parts of South Asia (`worldbuilding/nations.md`). A Spanish-derived name wants a line of explanation (an émigré family, or an SFW citizen from elsewhere). Alternatively, rename her fully to fit the region when Book 8 is plotted.
+- **Role:** an SFW officer before and during the war, then (in the old plan) elected President after the SFW commander's death.
+
+### Canon Anchors (Books 1–5)
+- The SFW is non-Histologic: **no neural interfaces**, human judges, an oral-history tradition. It grants asylum to Histologic outlaws and uses them as propaganda.
+- In Book 5 Isaiah claims asylum at the **SFW mission in Chronos**. His SFW editors spike his Doctrine column; his asylum is conditional on being useful.
+- **Veridica and the SFW share no border.**
+
+### Provisional Arc
+- **Book 7:** a senior SFW officer who takes the fact war as proof that even distributed-truth Veridica spies and deceives. Suggested: she knows Isaiah through the mission, and is one of the few in the SFW who reads his spiked column and understands it.
+- **Book 8:** inside SFW command during the invasion to capture The Judge. She learns that the SFW's enemy status was part of the design (Principle Two, revealed in Book 7: "let there be enemies outside them all"). This is her SFW turn.
+- **Book 9:** after the SFW commander's death (the old "General Marcus Stone", rename pending; see `secondary-antagonists.md`), she leads the SFW and allies with Marcus against the Architects and the CNT.
+
+### Key Lines (old file, usable)
+- "We were manipulated into war. Let's unite against manipulation."
+- "We rejected Histologic because we saw it was corrupt. We were right. But we were also manipulated. Truth is complicated."
+
+### Continuity Traps
+- **No shared border with Veridica.** Any invasion must come by sea (Veridica holds the former East Coast) or through a third nation. Plot the geography before Book 8.
+- **SFW soldiers have no interfaces.** They can't be seeded and they don't experience fact storms. That is a military advantage the Book 8 plot should use.
+- The old file's "elected after General Stone's death (killed by brother)" is unexplained; drop it.
 
 ---
 
-## 4. ADRIAN KOVAČ (Chronos Historian)
+## 4. Marcus's Cousin (suggested: Nora Chen): The Defector
 
-### Novel Appearances
-- **Novel 06**: "Battle of Truths" - Elena's victim, tragic figure
+### At a Glance
+- **Replaces:** the old "Colonel Sarah Chen". "Sarah" clashes with Sarah Okonkwo. Suggested: **Nora Chen** (suggested).
+- **Age:** the old file said 38 in its "Novel 07" (Book 8, 2110), so born about 2072, **about five years older than Marcus**.
+- **Role:** SFW intelligence officer, a defector from Veridica.
+- **Family:** Marcus's cousin. The old file also made her "related to Chen Zhao (Architect)"; reduce that to Chen Zhao's own joke that "the Chen families of the capital are all related somewhere" (Book 5).
 
-### Basic Information
-- **Age**: 38
-- **Role**: Chronos historian, factorepo access
-- **Family**: Nephew of Cardinal Thomas Kovač (Architect), cousin of Helena Kovač
-- **Alignment**: Lawful Good (victim)
+### Canon Anchors (Books 1–5)
+- In Story 01 Marcus's parents are dead and he has "colleagues but few friends". He never mentions a cousin. So she must have **defected long ago**, and Marcus, a believer, must have filed her away as someone who no longer counts. That silence is a character note, not a gap.
+- Veridican citizens who flee lose citizenship.
+- **Removing an interface kills.** A Veridican defector still carries her interface in the SFW, where nobody else has one. She still receives broadcasts in range. The SFW would treat her as a security risk; she can be seeded; she would feel a storm.
 
-### Personality & Traits
-- Brilliant historian
-- Kind, trusting, idealistic
-- Lonely widower
-- Tragic figure
+### Provisional Arc (Book 8, *Battle of Blood*)
+- She helps plan the SFW invasion to capture The Judge, believing she is liberating people.
+- She meets Marcus: cousin against cousin.
+- She learns the SFW's real goal (to capture The Judge and control through it) and, through Marcus, that the SFW itself was cast as an "enemy" in the design.
+- **She no longer destroys The Judge.** The Judge is ended by **Principle Seven**, Vance's hidden contingency, and nobody blows it up. Her redemption has to be something else. Suggestions:
+  - she stops the SFW capture team from interrupting the cascade once it starts;
+  - she supplies the intelligence that capture is imminent, which is one of Seven's "conditions";
+  - she protects the people who find Seven in Vance's copy.
+- She may still die. If she does, it is not in an explosion at The Judge, and Old Songs adds her name to "The Names".
 
-### Character Arc
-**Novel 06**: Idealist → Lover → Betrayed → Broken
-- Meets Elena at academic conference
-- Falls in love (she's on mission)
-- Gives her factorepo access (trusts her)
-- Realizes she used him
-- Career destroyed, life ruined
-- Knows truth but can't prove it
+### Key Lines (old file, usable)
+- Her last words to Marcus: "I was wrong. I'm sorry. Tell my family... tell them I tried to fix it."
+- Marcus: "She was wrong, but she was family. And at the end, she chose right."
 
-### Key Moment
-Realizing Elena's betrayal: "You used me. Everything was a lie. I loved you. You destroyed me."
-
-### Elena's Feelings
-Ambiguous. May have developed real feelings but completed mission anyway. "I'm sorry" might have been genuine.
-
-### Tragedy
-Innocent victim of fact war. Did nothing wrong. Life destroyed for being kind and trusting.
-
-### Fate
-Career ruined, reputation destroyed, knows truth but can't prove it. Lives in obscurity, broken.
-
-### Symbolism
-Cost of war on innocents. Collateral damage of "necessary" actions.
-
-### Alignment
-Lawful Good (pure victim)
+### Continuity Traps
+- She is **not** in Books 1–5. If Book 6 or 7 introduces her early, add a line explaining why Marcus never thought of her.
+- Her defection route can't cross a Veridica–SFW border, because there isn't one.
+- Never have her remove her interface.
 
 ---
 
-## 5. SARAH CHEN (Marcus's Cousin)
-
-### Novel Appearances
-- **Novel 07**: "Battle of Blood" - SFW intelligence officer, redeems herself
-
-### Basic Information
-- **Age**: 38
-- **Role**: SFW intelligence officer, defector from Veridica
-- **Family**: Marcus Chen's cousin, related to Chen Zhao (Architect)
-- **Alignment**: Lawful Evil → Lawful Good (redeemed)
-
-### Personality & Traits
-- Ideological, believes in liberation
-- Genuinely thinks she's helping people
-- Loves Marcus despite opposing him
-- Capable of redemption
-
-### Background
-Defected from Veridica years ago. Believes Histologic system is slavery. Works for SFW intelligence. Thinks she's liberating people.
-
-### Character Arc
-**Novel 07**: Traitor → Conflicted → Redeemed
-- Helps plan SFW invasion
-- Encounters Marcus on battlefield
-- Learns SFW's true goal (capture Judge, control all Histologic nations)
-- Realizes she was manipulated
-- Helps Nikolai destroy The Judge
-- Dies in explosion ensuring destruction
-
-### Key Moment
-Final words to Marcus: "I was wrong. I'm sorry. Tell my family... tell them I tried to fix it."
-
-### Redemption
-Sacrifices herself to destroy The Judge. Prevents SFW from capturing it. Saves Histologic nations from total control.
-
-### Marcus's Response
-Mourns her: "She was wrong, but she was family. And at the end, she chose right."
-
-### Fate
-Dies heroically, redeemed through sacrifice
-
-### Alignment Shift
-Lawful Evil (misguided) → Lawful Good (redeemed through death)
-
----
-
-## 6. PRESIDENT SARAH MARTINEZ (SFW)
-
-### Novel Appearances
-- **Novel 07**: "Battle of Blood" - Mentioned, elected after General Stone's death
-- **Novel 08**: "Architects of Chaos" - Major character, ally
-
-### Basic Information
-- **Age**: 48
-- **Role**: SFW President (elected after war)
-- **Background**: Reformer, truth-seeker
-- **Alignment**: Neutral Good
-
-### Personality & Traits
-- Pragmatic reformer
-- Open-minded, seeks truth
-- Willing to admit mistakes
-- Builds bridges
-
-### Character Arc
-**Novel 07**: Elected after General Stone's death (killed by brother)
-**Novel 08**: Enemy → Ally → Partner
-- Learns SFW was manipulated by Architects
-- Allies with Marcus against Architects
-- Leads SFW into unified system
-- Proves non-Histologic nation can cooperate
-
-### Key Moment
-Alliance with Marcus: "We were manipulated into war. Let's unite against manipulation."
-
-### Philosophy
-"We rejected Histologic because we saw it was corrupt. We were right. But we were also manipulated. Truth is complicated."
-
-### Fate
-Leads SFW through integration, proves cooperation possible
-
-### Alignment
-Neutral Good (always, but tested by circumstances)
-
----
-
-## THEMES
-
-### Redemption
-- Helena Kovač: Realizes mistake, helps
-- Sarah Chen: Dies redeeming herself
-- Dr. Wei Zhang: Defects, seeks redemption
-
-### Tragedy
-- Adrian Kovač: Innocent victim
-- Yevgenia Sokolov: Career tainted by manipulation
-
-### Pragmatism
-- Viktor Petrov: Does what's necessary
-- Sarah Martinez: Practical cooperation
-
-### Complexity
-All these characters show that:
-- Good people can do bad things with good intentions
-- Bad actions can be redeemed
-- Innocents suffer in conflicts
-- Morality is complicated
-- Context matters
-
----
-
-**Status**: ✅ COMPLETE - All 6 complex characters documented
-**Role**: Show moral complexity, cost of conflict, possibility of redemption
-**Function**: Make series morally nuanced, not black and white
-
-
-
-
+## Changes From the Old File
+| Old | New | Reason |
+|-----|-----|--------|
+| Six profiles mixing canon and future | Provisional Books 6–9 characters only; Kovač and Sokolov moved to their own canon files | Reviewer B; canon first |
+| "Adrian Kovač (Chronos Historian)", Elena's victim, Helena's "cousin" | **Julian Kovač**, Helena's nephew; Marcus is ordered to seduce and destroy him, refuses (Book 6), does it (Book 7) | SERIES-OVERVIEW §4 |
+| "Chancellor Viktor Petrov", son and father both Yuri Petrov | **First Minister** (suggested: Oskar Maitland); no Petrov links | Clashes with Chancellor Viktoria Sokolov, YP·02 and the name Viktor/Viktoria |
+| "President Sarah Martinez" | **Martinez** (suggested: Beatriz), SFW officer who turns, later leader | "Sarah" taken; reviewer B |
+| "Sarah Chen" destroys The Judge and dies in the explosion | **Nora Chen** (suggested); The Judge is ended by Principle Seven; her redemption is rebuilt around it | Manuscript §4.12 |
+| "Novel 06/07/08" | Books 7/8/9, with Book 6 added | Correct numbering |
+| Alignment labels and the "COMPLETE" status footer | Dropped | PROJECT-RULES §3.6 |

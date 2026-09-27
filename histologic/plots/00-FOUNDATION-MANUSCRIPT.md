@@ -167,13 +167,13 @@ Seventeen contributed. Twelve signed and became **the Architects**. Five are str
 
 | Mark | Role | Name (provisional) | Principle / section | Link to the heroes | Notes |
 |------|------|--------------------|---------------------|--------------------|-------|
-| HV·01 | The Visionary | Dr. Helena Voss | One | — | Leader. |
+| HV·01 | The Visionary | Dr. Hedda Voss | One | — | Leader. Renamed from "Helena Voss" (Sept 2026) to avoid a clash with Helena Kovač. |
 | YP·02 | The Scientist | Dr. Yuri Petrov | Three, Annex | — | *Not* related to Old Songs (a common surname). Say so on the page, or rename. |
 | LW·03 | The Financier | Chairman Liu Wei | — (funding) | — | |
 | SO·04 | The Diplomat | Ambassador Sarah Okonkwo | Two | Isaiah's aunt | Isaiah's parlour "aunt at the head of the table" (Book 4) stays innocent-seeming until then. |
 | — ·05 | The Historian | *(open)* | Methodology | — | The old roster had "Professor Adrian Volkov, the triplets' uncle". Ivan's correction record (Book 4) lists only a wife and a sister as next of kin. Either make him a cousin, or choose someone else. |
 | MT·06 | The Technologist | Director Maya Tanaka | Annex | Senior to Tanaka's younger sister | Too close to "Maya Reeves" (Book 5); consider renaming. |
-| TK·07 | The Ideologue | Cardinal Thomas Kovač | Moral cover | Helena Kovač's brother, Adrian's uncle | |
+| TK·07 | The Ideologue | Cardinal Tobias Kovač | Moral cover | Helena Kovač's uncle; great-uncle of Adrian and Julian | Renamed from "Thomas Kovač" (Sept 2026) to avoid a clash with Thomas Wei. Made an uncle rather than a brother: a 2064 contributor was born by the mid-2030s, and Helena was born in 2054. |
 | JM·08 | The Operative | *(rename)* | Five | — | The old name "Colonel James Morrison" clashes with Dr. James Morrison. Make him Morrison's father or uncle under a different first name, or unrelated. |
 | VS·09 | The Administrator | Chancellor **Viktoria Sokolov** | Annex | Captain Sokolov's mother | Name settled (Sept 2026): Viktoria, not Elena. |
 | WZ·10 | The Psychologist | Dr. Wei Zhang | Four | Thomas Wei's father | Continuity is his principle. His son ran the Lost Hour. |

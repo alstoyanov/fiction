@@ -26,4 +26,4 @@ Morning news, through the cell's slot: *"THE DEAD MAN WHO KILLED."* Marcus Chen 
 ## Notes
 - **The witnesses' two details:** gray (seeded) and the bandaged left hand (real). Kade reads both aloud. Marcus's hands are unmarked, and Kade notes it without comment.
 - The threat of **Secure Care Unit 3** begins here and pays off in Ch 17–18.
-- Kade appears again, briefly, in Ch 25.
+- Kade appears again in Ch 10 and Ch 19.

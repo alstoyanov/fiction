@@ -100,7 +100,7 @@ Facts are **immutable**. Once entered and verified, a fact is permanent. There a
 It cannot weigh intentions, loyalty or love. *"Your belief isn't measurable, Mr. Chen. Your exposure is."* It cannot resolve contradictions *between* nations. It cannot see what is not in the record.
 
 ### What changes in Book 5
-- **The Lost Hour Doctrine** (Jan 2107): where the record is absent, facts may be established by the concordant testimony of several independent witnesses, weighted for known contamination. This is the first time human testimony can create a fact.
+- **The Lost Hour Doctrine** (ruling of Dec 27, 2106): where the record is absent, facts may be established by the concordant testimony of several independent witnesses, weighted for known contamination. This is the first time human testimony can create a fact.
 - A **Historical Integrity Commission** is created, with Marcus and Kira as members and Thomas Wei as technical director.
 
 ### Designed weaknesses (for later books)

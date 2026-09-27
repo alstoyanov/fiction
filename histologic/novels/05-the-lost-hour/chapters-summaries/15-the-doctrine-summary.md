@@ -19,7 +19,7 @@ The legal battlefield, and the **red herring**: suspicion turns toward Kovač he
   - He mentions, pleasantly, that he has been following "young Chen's case". "The Chen families of the capital are all related somewhere, you know."
   - He agrees to put the hearing before The Judge. **Far too easily.**
 - Kovač's instinct: she shows him nothing about the torn page or the seeding. She doesn't know why.
-- **In the corridor,** Pell stops her. "The Minister likes you. Enjoy it." And then: "Did you know Deputy Minister Singh opened a *second* file in October? On you."
+- **In the corridor,** Pell stops her. "The Minister likes you. Enjoy it." And then: "Did you know Deputy Minister Singh opened a *second* file in October? On you. And on Ashford."
 
 ## Ending
 In her car, a message from Alexei on a resistance channel, blunt as always: *"Your office booked Isaiah's slot. Your building. Your dead. Tell me why I should trust you."* Kovač has no answer she can prove.

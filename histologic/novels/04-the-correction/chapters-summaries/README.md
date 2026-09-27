@@ -11,7 +11,7 @@ These summaries replace the earlier set, which followed the abandoned "group the
 ## Canon Decisions (Where This Departs From or Fixes the REVISED Plot)
 
 ### 1. One consistent timeline
-The REVISED plot contradicts itself: the triplets have been inside "8 months" in one place and "10 months" in another, Isaiah arrives at two different times, and so on. The short stories fix these anchor points: Kira meets Adrian on Nov 19, Enforcer Kade says Marcus sat in the same room "two months earlier", and the triplets' story takes place in November and ends "one year later". Book 5 needs the escape to happen in August 2106.
+The REVISED plot contradicts itself: the triplets have been inside "8 months" in one place and "10 months" in another, Isaiah arrives at two different times, and so on. The short stories fix these anchor points: Kira meets Adrian on Nov 19, Story 02 notes that Kira sits in the same room where Marcus sat "two months earlier", and the triplets' story takes place in November and ends "one year later". Book 5 needs the escape to happen in August 2106.
 
 | Date | Event |
 |------|-------|

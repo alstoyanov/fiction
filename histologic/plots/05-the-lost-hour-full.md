@@ -234,7 +234,7 @@ The Judge rules: *where the record is absent, facts may be established by the co
 **Ch 30: The Dilemma** (Old Songs). **(New POV chapter.)** In a back room of the resistance safe house, all seven are present, Isaiah by link. Old Songs sits by the stove and watches them argue.
 - **What exposing Wei would cost:** they would have to prove that testimony can be seeded. That would void the Doctrine and make them legally dead again. It would free Reeves, who is guilty of so much but not of this, and give the hardliners grounds to abolish testimony entirely.
 - **What they have as proof:** a signature, a memory of a phrase, a torn page, and an old man's song. None of it is verifiable, and all of it could be dismissed.
-- **The argument:** Alexei wants to go public. Dmitri wants to wait. Isaiah says three fragments would make a pattern and they only have two.
+- **The argument:** Alexei wants to go public. Dmitri wants to wait. Isaiah says two fragments are a pattern, but he won't publish without a third.
 - **Old Songs speaks, at last and at length.** He tells them about 2063: the journal on his desk, the week the archive was sealed, the colleagues who asked questions and were corrected, and the songs he made so that *something* would remain. "I kept it for forty years in my head, and it was worth nothing, because a song dies with the singer. Don't be me. Write it down. All of it. Many hands. Many copies. Things that don't need a single record to survive."
 - **The decision:** stay silent *for now*. Keep the proof (Nikolai holds it, as ever). And start building what can't be seeded: written journals, many independent witnesses checking each other, records kept by people rather than by one system. Marcus: "He designed the reformers he wanted. Then we reform something he didn't design."
 - Old Songs dictates the journal passage to Kira, word for word, for the first time in forty-three years. She writes it down. Now it exists in two places.
@@ -310,7 +310,7 @@ These were added while writing the chapter summaries (`novels/05-the-lost-hour/c
 4. **The Unit 3 threat** (Ch 10–18): a tribunal convicts Marcus (Dec 6) and orders re-correction. Wei postpones the transfer (Ch 13) and then pulls Marcus out of the transport with an order from Chen Zhao (Ch 18).
 5. **Wei returns Nikolai's rooftop page** (Ch 20). He knows who "Pieter" is.
 6. **Reeves:** "Someone has been using my cradles at night", and "I've never signed anything in my life" (Ch 21). His confession is seeded in a Ministry medical-wing cradle (Ch 22–24).
-7. **Wei's alibi is seeded as well** (Ch 25). His colleagues are in the district. Maya timed his arrival at 15:32 (Ch 1 and 28).
+7. **Wei's alibi is seeded as well** (Ch 25). His colleagues are in the district. Maya timed his arrival at 15:32, twelve minutes after the call, from an office twenty-five minutes away (Ch 1 and 28).
 8. **Dmitri recognises Wei's walk** at the Commission (Ch 31).
 9. **Officer Kade** makes the arrest (Ch 4). **Undersecretary Iver Pell** is the hardliner. **Lucian Bell** is Singh's aide.
 10. **The Epilogue:** the gray-coat woman wears reading glasses on a cord (Singh, from the Prologue). Nikolai detects a new erasure with **the same signature** in another nation.

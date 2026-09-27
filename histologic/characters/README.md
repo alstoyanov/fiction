@@ -1,286 +1,90 @@
-# Histologic Series - Character Database
+# Characters
 
-## 📚 Complete Character Documentation
-
-This directory contains comprehensive character profiles for all characters across the Histologic Series (3 short stories + 5 novels).
-
----
-
-## 🗂️ Quick Navigation
-
-### Start Here
-- **[CHARACTER-MASTER-INDEX.md](CHARACTER-MASTER-INDEX.md)** - Complete character index with categories
-- **[ALL-CHARACTERS-QUICK-REFERENCE.md](ALL-CHARACTERS-QUICK-REFERENCE.md)** - All 42+ characters, concise profiles
-- **[CHARACTER-FILES-COMPLETE.md](CHARACTER-FILES-COMPLETE.md)** - Complete file listing and statistics
-
-### Detailed Character Files
-
-#### Main Protagonists (Good Characters)
-- **[marcus-chen.md](main-characters/protagonists/marcus-chen.md)** - Main protagonist, the Unifier (10,000+ words)
-- **[kira-osman.md](main-characters/protagonists/kira-osman.md)** - Co-protagonist, technical genius (8,000+ words)
-- **[dr-yuki-tanaka.md](main-characters/protagonists/dr-yuki-tanaka.md)** - Healer, PRIMARY WISE SPEAKER (7,000+ words)
-- **[elena-volkov.md](main-characters/protagonists/elena-volkov.md)** - Resistance leader, seductress
-- **[volkov-triplets.md](main-characters/protagonists/volkov-triplets.md)** - Dmitri, Alexei, Nikolai (all three)
-- **[isaiah-okonkwo.md](main-characters/protagonists/isaiah-okonkwo.md)** - Journalist, WISE SPEAKER, HUMOROUS
-- **[old-songs-character.md](main-characters/protagonists/old-songs-character.md)** - Mikhail "Old Songs" Petrov, WISE SPEAKER (songs/riddles/quotes)
-- **[the-judge-and-counselor.md](main-characters/protagonists/the-judge-and-counselor.md)** - AI characters, WISE SPEAKER
-
-#### Main Antagonists (Bad Characters)
-- **[the-architects.md](main-characters/antagonists/the-architects.md)** - All 12 secret rulers (10,000+ words)
-
-#### Complex Characters (Morally Ambiguous)
-- **[morally-ambiguous-characters.md](main-characters/complex/morally-ambiguous-characters.md)** - 6 complex characters
-
-#### Secondary Characters
-- **[secondary-allies.md](secondary-characters/allies/secondary-allies.md)** - 8+ supporting good characters
-- **[secondary-antagonists.md](secondary-characters/opposition/secondary-antagonists.md)** - 7+ supporting villains
+**Status:** CURRENT, Sept 2026. Every file in this folder was rewritten (or created) to match the short stories, *The Correction* (drafted) and *The Lost Hour* (plot v3.1, chapter summaries). Books 6–9 are **provisional**: each file keeps that material under a "Provisional" heading, and later books will be rewritten to fit the canon sections.
+**Order of authority:** `basic-idea.txt` → the short stories → Book 4 → Book 5 → `plots/00-FOUNDATION-MANUSCRIPT.md` and these files → `worldbuilding/`. If a character file disagrees with a book, the book wins; fix the file.
 
 ---
 
-## 📊 Character Statistics
+## Files
 
-### Total Characters: 43+
-- **Main Protagonists**: 10 (including AI and Mikhail "Old Songs")
-- **Main Antagonists**: 12 (The Architects)
-- **Complex/Ambiguous**: 6
-- **Secondary Allies**: 8+
-- **Secondary Opposition**: 7+
+### Main characters
+| File | Who |
+|------|-----|
+| [marcus-chen.md](main-characters/protagonists/marcus-chen.md) | Marcus Chen, C-1 BELIEVER |
+| [kira-osman.md](main-characters/protagonists/kira-osman.md) | Kira Osman, C-2 ARCHITECT |
+| [volkov-triplets.md](main-characters/protagonists/volkov-triplets.md) | Dmitri, Alexei and Nikolai Volkov, C-3/4/5 BOND |
+| [dr-yuki-tanaka.md](main-characters/protagonists/dr-yuki-tanaka.md) | Dr. Yuki Tanaka, C-6 CLINICIAN |
+| [isaiah-okonkwo.md](main-characters/protagonists/isaiah-okonkwo.md) | Isaiah Okonkwo, C-7 WITNESS |
+| [elena-volkov.md](main-characters/protagonists/elena-volkov.md) | Elena Volkov, the resistance recruiter (Story 01's "Elena Reyes") |
+| [old-songs-character.md](main-characters/protagonists/old-songs-character.md) | Mikhail "Old Songs" Petrov, and the songbook |
+| [thomas-wei.md](main-characters/antagonists/thomas-wei.md) | Thomas Wei, the hidden author of Book 5, with the clue map |
+| [dr-reeves.md](main-characters/antagonists/dr-reeves.md) | Dr. Reeves, head of Project Continuity |
+| [chen-zhao.md](main-characters/antagonists/chen-zhao.md) | Minister Chen Zhao (secretly CZ·11) |
+| [the-architects.md](main-characters/antagonists/the-architects.md) | The twelve signatories of *The Foundation of Certainty*, and their heirs |
+| [helena-kovac.md](main-characters/complex/helena-kovac.md) | Director Helena Kovač of Ashford |
+| [yevgenia-sokolov.md](main-characters/complex/yevgenia-sokolov.md) | Captain Yevgenia Sokolov, Border Security |
+| [amara-singh.md](main-characters/complex/amara-singh.md) | Deputy Minister Amara Singh, the "victim" |
+| [elise-vance.md](main-characters/complex/elise-vance.md) | Dr. Elise Vance, the Compiler |
+| [morally-ambiguous-characters.md](main-characters/complex/morally-ambiguous-characters.md) | Provisional Book 6–9 characters only (Julian Kovač and others) |
+| [the-judge-and-counselor.md](main-characters/system/the-judge-and-counselor.md) | The Judge (canon) and the Counselor (provisional) |
 
-### Special Categories
-- **Wise Speakers**: 5 (Dr. Tanaka, Isaiah, Mikhail "Old Songs", The Counselor, Prof. Volkov)
-- **Humorous Characters**: 4 (Alexei, Kira, Isaiah, Mikhail - gentle humor)
-- **Tragic Characters**: 5 (Alexei, Adrian Kovač, Sarah Chen, The Judge, Minister Kozlov)
-- **Redeemed Characters**: 4 (Sarah Chen, Dr. Wei Zhang, Helena Kovač, Dr. Morrison)
+### Secondary characters
+| File | Who |
+|------|-----|
+| [maya-reeves.md](secondary-characters/allies/maya-reeves.md) | Maya Reeves, Wei's junior technician, Reeves's daughter |
+| [secondary-allies.md](secondary-characters/allies/secondary-allies.md) | Dr. James Morrison, Adrian Kovač, Supervisor Hayes, Lucian Bell, and provisional allies |
+| [secondary-antagonists.md](secondary-characters/opposition/secondary-antagonists.md) | Dr. Reyna Moss, Officer Kade, Undersecretary Pell, Chair Halvorsen, and provisional opposition |
+| [ivan-and-sofya-volkov.md](secondary-characters/family/ivan-and-sofya-volkov.md) | The triplets' parents (Ivan = Test Subject 2471) |
+| [minor-cast.md](secondary-characters/minor-cast.md) | Walk-ons and one-scene characters, plus near-clashes |
 
----
-
-## 🎭 Character Categories
-
-### By Alignment
-
-**GOOD (Protagonists)**
-- Marcus Chen, Kira Osman, Dr. Yuki Tanaka
-- Elena Volkov, Dmitri Volkov, Alexei Volkov (dies), Nikolai Volkov
-- Isaiah Okonkwo
-- The Judge (martyred), The Counselor
-
-**EVIL (Antagonists)**
-- The 12 Architects (most)
-- Thomas Wei, General Marcus Stone, Chairman Kozlov (CNT)
-- Various corrupt officials
-
-**COMPLEX (Morally Ambiguous)**
-- Helena Kovač (redeemer)
-- Yevgenia Sokolov (conflicted)
-- Viktor Petrov (pragmatist)
-- Adrian Kovač (victim)
-- Sarah Chen (redeemed)
-- Sarah Martinez (ally)
-
-### By Role
-
-**LEADERS**
-- Marcus (moral), Elena (military), Petrov (political), Sokolov (military)
-
-**TECHNICAL EXPERTS**
-- Kira (hacker), Nikolai (systems), Maya Reeves (discoverer)
-
-**WARRIORS**
-- Dmitri (tactical), Alexei (sabotage), Elena (guerrilla)
-
-**INTELLECTUALS**
-- Isaiah (journalist), Dr. Tanaka (healer), The Architects (various)
-
-**MANIPULATORS**
-- Elena (seduction), The Architects (control), Adrian Kovač (outlaw in Story 02)
+**Format:** new profiles follow `old-songs-character.md`: At a Glance, Who They Are, Backstory (Canon), Voice Rules, Appearances (by book, with chapters), Relationships, Key Lines, Continuity Traps, Changes From the Old File. Use `templates/character-template.md` for new characters.
 
 ---
 
-## 👥 Family Connections
+## Cast Register (Books 1–5)
 
-### Major Family Groups
-1. **Volkov Family**: Triplets + Elena (aunt) + Professor (uncle/Architect)
-2. **Chen Family**: Marcus + Sarah (cousin) + Chen Zhao (Architect)
-3. **Okonkwo Family**: Isaiah + Ambassador (aunt/Architect)
-4. **Sokolov Family**: Yevgenia + Chancellor Elena (mother/Architect)
-5. **Tanaka Family**: Yuki + Maya (sister's superior/Architect)
-6. **Kovač Family**: Helena + Adrian (victim) + Cardinal Thomas (Architect)
-7. **Morrison Family**: James (defector) + Colonel (Architect)
-8. **Petrov Family**: Viktor + Yuri (son) + Dr. Yuri (father/Architect)
-9. **Wei Family**: Thomas (murderer) + Dr. Wei Zhang (father/Architect, defects)
+Ages are as of Nov 2106 (the start of *The Lost Hour*) unless noted. "Dead" means officially recorded as dead after Book 4; *STATUS: LIVING* (Dec 29, 2106) reverses it for the Continuity subjects.
 
-**Everyone is connected to The Architects somehow.**
+| Character | Age (2106) | Role | First appears | Status after Book 5 |
+|-----------|-----------|------|---------------|---------------------|
+| **Marcus Chen** | 29 | Junior Historian, desk 14-08; C-1 | Story 01 | Living; Commissioner |
+| **Kira Osman** | 27 | Senior Architect at the Spire; C-2 | Story 02 | Living; Commissioner; keeps the first journal |
+| **Dmitri Volkov** | not given | Former enforcer; C-3 | Story 03 | Living |
+| **Alexei Volkov** | not given | "The Phantom", resistance; C-4 | Story 03 | Living |
+| **Nikolai Volkov** | not given | Technician; C-5; alias **Pieter Lang** on Wei's team | Story 03 | Living; cover ended at the hearing |
+| **Dr. Yuki Tanaka** | 46 | Former Ashford correction specialist; C-6 | Book 4 | Living; in Chronos |
+| **Isaiah Okonkwo** | 39 | Journalist; C-7 | Book 4 | Expelled into Chronos; SFW asylum |
+| **Elena Volkov** | 42 | Resistance recruiter, the triplets' aunt | Story 01 | Outlaw (never logged dead) |
+| **Mikhail "Old Songs" Petrov** | 68 | Long-term inmate, archivist, singer | Book 4 | Officially dead, by choice |
+| **Thomas Wei** | 45 | Senior systems architect; lead investigator; desk 14-09 (2102–05) | Story 01 ("Thomas") | Free, trusted; Technical Director of the Commission |
+| **Dr. Reeves** | 54 | Head of Project Continuity | Book 4 | In prison (seeded confession) |
+| **Maya Reeves** | 24 | Junior technician on Wei's team; Reeves's daughter | Book 5 | Commission technician; with Nikolai |
+| **Minister Chen Zhao** | 65 | Minister of Historical Integrity; secretly CZ·11 | Book 5 | In office; unexposed |
+| **Dr. Amara Singh** | 49 | Deputy Minister; "murdered" at ~14:23 | Book 5 (Prologue) | Officially dead; alive in truth (unrevealed) |
+| **Director Helena Kovač** | 52 | Director of Ashford; Adrian's aunt | Book 4 | Admitted falsifying the death certificates; fate open |
+| **Captain Yevgenia Sokolov** | 35–36 | Border Security; runs the storm test programme | Story 03 | In post |
+| **Dr. James Morrison** | ~late 30s | Continuity interface engineer, turned by Tanaka | Book 4 | In Chronos; legal status unstated |
+| **Dr. Reyna Moss** | ~50 | Assessment and correction physician | Story 01 | At Ashford; absent from Book 5 |
+| **Supervisor Hayes** | 40s | Ashford intake and wing supervisor (a woman) | Book 4 | At Ashford |
+| **Officer Kade** | — | Enforcer (Stories 01–02); arrests Marcus in Book 5 | Story 01 | In post |
+| **Adrian Kovač** | ~31 | Sent to recruit Kira; loved her | Story 02 | Offstage |
+| **Undersecretary Iver Pell** | — | Ministry hardliner | Book 5 | In office; lost the Doctrine fight |
+| **Lucian Bell** | — | Singh's aide; finds the body | Book 5 (Prologue) | Allegiance open |
+| **Inquiry Chair Halvorsen** | — | Chairs Kovač's inquiry | Book 5 | — |
+| **Elise Vance** | 70 | The Compiler (2064–66); only a memory in Book 5 | Book 5 (Ch 12, unnamed) | Unknown |
+| **Ivan / Sofya Volkov** | — | The triplets' parents; Ivan = Test Subject 2471 | Story 03 | Both dead |
 
----
-
-## 📖 Novel Participation
-
-### Short Stories
-- **Story 01**: Marcus, Elena, Enforcer Kade
-- **Story 02**: Kira, Adrian Kovač, Supervisor Chen
-- **Story 03**: Volkov Triplets, Captain Sokolov
-
-### Novels
-- **Novel 04**: All 7 protagonists meet, Helena Kovač, Elena
-- **Novel 05**: All 7, Thomas Wei, Maya Reeves, Minister Kozlov (murdered)
-- **Novel 06**: Marcus/Kira/Elena/Nikolai, Adrian Kovač (victim), Petrov
-- **Novel 07**: All, The Judge (dies), Sarah Chen (redeemed), Alexei (dies)
-- **Novel 08**: All survivors, The 12 Architects, The Counselor, Martinez
-
----
-
-## 🎨 Character Diversity
-
-### Backgrounds
-✅ Academic, Medical, Military, Technical, Journalism, Criminal, Political, AI
-
-### Ideologies
-✅ Believers, Skeptics, Pragmatists, Rebels, Healers, Ideologues, Conscious AI
-
-### Ethnicities
-✅ Chinese-American, Turkish-Middle Eastern, Japanese, Slavic/Eastern European, African, Various
+Minor characters (Samuel Ferris, Hanna Marsh, Pavel Ionescu, Teo, Brandt, Priya, Ines, Marina Holt, Jakob Lind, the Santos family, Anselm Kerr, Anya and Katya Petrov) are in [minor-cast.md](secondary-characters/minor-cast.md).
 
 ---
 
-## 💬 Writing Guide
+## Names Already Taken
 
-### For Dialogue
+**Rule:** never reuse a first name across the cast (`PROJECT-RULES.md`). Check this list before naming anyone, and avoid near-clashes.
 
-**Wise Speakers** (provide meaningful truths):
-1. **Dr. Yuki Tanaka**: "A wound must be acknowledged before it can heal"
-2. **Isaiah Okonkwo**: "History doesn't repeat, but it rhymes"
-3. **Mikhail "Old Songs" Petrov**: "The old songs knew truths we've forgotten" (speaks through SONGS, RIDDLES, QUOTES)
-4. **The Counselor**: "I advise. You decide. That's not weakness. That's design."
-5. **Professor Volkov**: "I taught history. I should have taught them to question it."
-
-**Humorous Characters** (lighten dark scenes):
-1. **Alexei Volkov**: "If we die, at least the funeral will be well-documented"
-2. **Kira Osman**: "I can hack a factorepo but not human stupidity"
-3. **Isaiah Okonkwo**: "We're fighting over which history is correct. The irony is historical."
-4. **Mikhail "Old Songs"**: Gentle humor through unexpected song choices and absurd timing
-
-**Technical Speakers**:
-- Kira, Nikolai, The Counselor: Precise, efficient, technical metaphors
-
-**Philosophical Speakers**:
-- Marcus, Dr. Tanaka, The Judge: Analytical, evidence-based, evolving
-
-**Direct Speakers**:
-- Elena, Dmitri, Alexei: Pragmatic, passionate, mission-focused
-
----
-
-## 🔍 How to Use This Database
-
-### For Writing
-1. Check **CHARACTER-MASTER-INDEX.md** for character overview
-2. Read detailed profile for main characters (Marcus, Kira, Dr. Tanaka)
-3. Reference **ALL-CHARACTERS-QUICK-REFERENCE.md** for secondary characters
-4. Track relationships and arcs across novels
-
-### For Consistency
-- Verify ages across novels
-- Check character locations
-- Track what characters know when
-- Confirm relationship status
-- Verify family connections
-
-### For Character Development
-- Review character arcs
-- Check alignment evolution
-- Track skill development
-- Monitor relationship changes
-
----
-
-## ✅ Quality Checklist
-
-✅ All main protagonists documented (9 characters)
-✅ All antagonists documented (19 characters)
-✅ All complex characters documented (6 characters)
-✅ All secondary characters documented (15+ characters)
-✅ Wise speakers identified and developed (4 characters)
-✅ Humorous characters identified and developed (3 characters)
-✅ Different backgrounds represented (8 types)
-✅ Different ideologies represented (7+ types)
-✅ Diverse ethnicities included
-✅ Family connections mapped (9 families)
-✅ Novel participation tracked for all
-✅ Alignment specified for all
-✅ Character arcs documented
-✅ Relationships mapped
-
----
-
-## 📈 Statistics
-
-**Total Files**: 11 character files + 4 reference files
-**Total Word Count**: ~70,000+ words of character documentation
-**Detailed Profiles**: 3 (Marcus, Kira, Dr. Tanaka - 25,000+ words)
-**Comprehensive Profiles**: 8 files covering 39+ characters
-**Reference Files**: 4 (index, quick reference, summary, complete listing)
-
----
-
-## 🎯 Status
-
-### ✅ COMPLETE AND READY FOR SERIES WRITING
-
-**What You Have**:
-- Complete character index
-- All 42+ characters documented
-- 3 detailed profiles for main protagonists
-- Comprehensive profiles for all others
-- Character relationships mapped
-- Family trees documented
-- Alignments specified
-- Novel participation tracked
-- Wise speakers identified
-- Humorous characters identified
-- Different backgrounds and ideologies
-
-**What You Can Do**:
-- Write any novel with confidence
-- Maintain character consistency
-- Track character arcs
-- Reference relationships
-- Use appropriate dialogue styles
-- Deploy wise speakers for meaningful moments
-- Use humor to lighten dark scenes
-- Ensure diversity and complexity
-
----
-
-## 📝 Notes
-
-### Character Organization
-- **Protagonists**: Good characters, heroes
-- **Antagonists**: Bad characters, villains
-- **Complex**: Morally ambiguous, gray area
-- **Secondary**: Supporting characters (allies and opposition)
-
-### Special Traits
-- **Wise Speakers**: Provide meaningful truths constantly
-- **Humorous**: Unique personalities that lighten dark moments
-- **Tragic**: Characters with tragic arcs or fates
-- **Redeemed**: Characters who redeem themselves
-
-### Family Connections
-Every main character is connected to at least one Architect, showing how the conspiracy touched everyone's lives.
-
----
-
-**Created**: November 19, 2025
-**Last Updated**: November 19, 2025
-**Status**: ✅ COMPLETE - Ready for series writing
-**Total Characters**: 42+ fully documented
-**Total Documentation**: ~70,000+ words
-
----
-
-## 🚀 Ready to Write!
-
-This character database provides everything needed to write the complete Histologic Series with consistency, depth, and complexity. All characters are fully developed with clear motivations, relationships, and arcs across all 8 stories.
-
-**Happy Writing!** 📚✨
-
+- **Canon (Books 1–5):** Marcus, Kira, Dmitri, Alexei, Nikolai, Yuki, Isaiah, Elena (Lena), Mikhail (Misha), Ivan, Sofya, Anya, Katya, Anselm, Elise, Helena, Adrian, Thomas, Zhao, Amara, Maya, Reyna, James, Samuel, Hanna, Pavel, Teo, Priya, Ines, Iver, Lucian, Marina, Jakob, Davi, Lucia, Lia, Yevgenia; aliases Pieter (Lang), Reyes, Vasquez.
+- **Settled for later books:** Julian (Kovač), Viktoria (Sokolov), Hedda (Voss), Tobias (Kovač), Yuri (Petrov), Sarah (Okonkwo), Wei Zhang, Liu Wei.
+- **Suggested, not settled:** Michiko Tanaka (MT·06), Jerome Morrison (JM·08), Nora Chen (Marcus's cousin), Tamsin Chen (Marcus's future daughter), Oskar Maitland (First Minister), Beatriz Martinez (SFW), Constance Aubry, Rafael Ostrander, Omid Farahani, Timur Aslanov, Lev Petrov, Oren Falk, Rosa Santos (for Lucia).
+- **Still open:** the Architect marks ·05 and ·12.
+- **Near-clashes to watch:** Iver/Ivan/Ines; Lucia/Lia/Lucian; Reyna/Reyes/Reeves; Lind/Lang; Pell/Pavel; Halvorsen/Holt; Liu Wei vs the surname Wei; Maya Reeves vs "Maya Tanaka" (why MT·06 is being renamed).
+- **Shared surnames that need a line of explanation on the page:** Chen (Marcus, Chen Zhao: "related somewhere"), Petrov (Old Songs is not related to Dr. Yuri Petrov), Tanaka (Yuki and MT·06, kinship open), Kovač (Helena, Adrian, Julian, Tobias: one family).

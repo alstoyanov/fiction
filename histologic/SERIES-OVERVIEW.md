@@ -75,6 +75,7 @@ These are the ideas carried forward from the pre-rewrite plots, adjusted to fit 
 - **Rename:** the Architect called "Colonel James Morrison" (clashes with Dr. James Morrison), and "Director Maya Tanaka" (too close to Maya Reeves).
 - **Resolve:** "Professor Adrian Volkov" (clashes with Ivan's next-of-kin record). Use a cousin or a different person.
 - **Settled:** the Chancellor is **Viktoria Sokolov**, Yevgenia's mother.
+- **Settled (Sept 2026):** the Architect HV·01 is **Dr. Hedda Voss** (not Helena, which clashes with Helena Kovač), and TK·07 is **Cardinal Tobias Kovač** (not Thomas, which clashes with Thomas Wei), Helena Kovač's uncle.
 - **Still missing:** names for the Architect marks ·05 and ·12.
 - **Rule:** avoid reusing first names across the cast. The old drafts had four Elenas and two Adrians.
 

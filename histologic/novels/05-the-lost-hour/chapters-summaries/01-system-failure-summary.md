@@ -12,7 +12,7 @@ The impossible event, seen through the eyes of a young technician. It establishe
 - **15:01:** every alarm on the floor goes off at once. Maya is 24, the most junior person there, and the only one who doesn't freeze. She runs the integrity check herself.
 - **The hole:** from 14:00:00 to 14:59:59 there is *nothing*. The data isn't corrupted or contradictory. It is **absent**, not only in the regional repository but in the primary, in every local repository, and in all three backups. Traffic records, births, transactions, surveillance, the broadcast logs: an hour of Veridica's history is simply not there.
 - Maya's physical reaction: nausea, as if a stair were missing. Her senior colleagues keep repeating that "facts can't be deleted", which is Kira's line from Story 02, now said by strangers.
-- **15:20:** the Ministry appoints **Thomas Wei**, a senior systems architect, to lead the investigation. He arrives in twelve minutes.
+- **15:20:** the Ministry appoints **Thomas Wei**, a senior systems architect, to lead the investigation. He arrives in **twelve minutes (15:32)**. Maya notices, because she times everything: his office is in the Ministry district, twenty-five minutes away at the best of times. She assumes he was already on his way. (Twist 3 clue. It pays off in Ch 28.)
   - He is calm, tall and graying at the temples, with a quiet voice. He knows everyone's name.
   - He treats Maya as an equal: "You found the gap first. Walk me through it." He adds her to his team on the spot.
   - **His left hand is wrapped in a clean white bandage.** "Server rack. My own fault." (Plant this lightly, as one detail among several.)

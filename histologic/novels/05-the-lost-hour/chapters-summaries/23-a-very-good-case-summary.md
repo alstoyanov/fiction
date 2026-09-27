@@ -12,7 +12,7 @@ The case against Reeves is too good. The former enforcer recognises a case built
 - **Wei presents the case** to the Ministry, the investigators and, by link, the resistance witnesses (Kovač's arrangement: "if they're testifying, they should see the case"). It is elegant and complete:
   - **Signal:** the carrier came from Reeves's annex terminal, with his code comment.
   - **Method:** Continuity seeding, his invention.
-  - **Motive:** Singh's inquiry would have destroyed him. There was a second file, on Ashford (Ch 15).
+  - **Motive:** Singh's inquiry would have destroyed him. There was a second file, opened in October on Kovač and Ashford (Ch 15).
   - **Opportunity:** a "man in a dark jacket" at the side entrance. Reeves owns a dark jacket, as does every man in the capital.
   - **The seeded witnesses** are explained: Reeves seeded Marcus's face to frame the escapees he hated.
 - **Everyone is relieved,** Kovač included. It explains everything, and it clears Marcus.

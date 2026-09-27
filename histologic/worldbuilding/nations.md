@@ -108,4 +108,4 @@ Failed states, remote regions and some disputed strips outside every system. The
 
 ## Story Notes
 - Books 1–5 stay inside **Veridica**, apart from the Chronos border and Isaiah's asylum. Other nations are background until Book 6 or 7.
-- **Planned for later books:** the fact war between Veridica and Chronos (Book 7), war with the SFW (Book 8), and the CNT harbouring Architects (Book 9, to be rewritten).
+- **Planned for later books:** the fact war between Veridica and Chronos (Book 6), war with the SFW (Book 8), and the CNT harbouring Architects (Book 9, to be rewritten).

@@ -18,7 +18,7 @@ The courtroom set piece. Testimony against the record, and the "dead" as witness
   - **Reeves's confession**, read into the record.
   - **Old Songs** is called and declines, courteously: "My memory isn't evidence. It's a song." (The chamber laughs. Kovač doesn't.)
 - **The dangerous moment:** Pell raises Kovač's certification of the escapees' deaths. If the witnesses are alive, she falsified the record. Kovač answers from the stand: "Yes. And if the record can be wrong about the dead, it can be wrong about anything. That is the question before you." It's her bravest act, and it may end her career.
-- **Wei's alibi.** Asked, as lead investigator, to state his own movements "for completeness", Wei calmly presents dozens of statements from colleagues in his Systems Architecture office who remember him **at his desk from 13:30 to 15:15**. Nobody questions it. The reader's suspicion wavers.
+- **Wei's alibi.** Asked, as lead investigator, to state his own movements "for completeness", Wei calmly presents dozens of statements from colleagues in his Systems Architecture office who remember him **at his desk from 13:30 until the Ministry's call at 15:20**. Nobody questions it. The reader's suspicion wavers.
 - **Kovač notices, and doesn't know what to make of it:** his office is in the **Ministry district**, inside the seeded node's range. She files it.
 - **Deliberation:** four days over the holidays. The capital waits.
 - **The ruling, Mon Dec 27:** *"Where the record is absent, facts may be established by the concordant testimony of multiple independent witnesses, weighted for exposure to known contamination."* This is the **Lost Hour Doctrine**. For the first time, The Judge will accept what people remember.

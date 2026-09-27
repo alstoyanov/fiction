@@ -18,7 +18,7 @@ Based on `plots/05-the-lost-hour-full.md` (v3.1), with the drafting refinements 
 6. **Reeves's warning** (Ch 21): "Someone has been using my cradles at night." This sets up the seeding of his confession.
 7. **Dmitri recognises a way of walking** (Ch 31): he sees Wei cross the Commission hall and knows how that body moves. It confirms the man at 14:21.
 8. **Officer Kade** (Stories 01–02) makes the arrest in Ch 4: "Mr. Chen. The Registry says you are dead."
-9. **Wei's alibi is seeded as well** (Ch 25 and 28). At the hearing he produces dozens of colleagues who remember him at his desk from 13:30 to 15:15. It kills the suspicion. But his office is inside the seeded district, and Maya timed his *arrival* at the Regional Factorepo at 15:32 (Ch 1). The alibi was written too.
+9. **Wei's alibi is seeded as well** (Ch 25 and 28). At the hearing he produces dozens of colleagues who remember him at his desk in the Ministry district from 13:30 until the Ministry's call at 15:20. It kills the suspicion. But Maya timed his *arrival* at the Regional Factorepo at 15:32 (Ch 1): twelve minutes, from an office twenty-five minutes away. And his colleagues were inside the seeded district. The alibi was written too.
 10. **Wei's scar** (Ch 28): by January the bandage is gone and a thin pink scar remains. The injury was real. How he got it stays open.
 
 ---
