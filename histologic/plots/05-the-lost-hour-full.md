@@ -299,3 +299,18 @@ Marcus 8 · Kira 4 · Nikolai 2 · Kovač 3 · Isaiah 3 · Tanaka 3 · Dmitri 2 
 
 ## Note on the Existing Draft
 The ~75,700-word draft in `novels/05-the-lost-hour/chapters/` follows v2. It will be rewritten against this outline.
+
+---
+
+## v3.2 Drafting Refinements (Sept 2026)
+These were added while writing the chapter summaries (`novels/05-the-lost-hour/chapters-summaries/`). The summaries take precedence over the chapter outline above where they differ.
+1. **The two wrong details differ.** Prison gray is **seeded**. The bandaged left hand is **real**, a peripheral detail seeding didn't overwrite. **Wei's left hand is bandaged** from Ch 1.
+2. **Twist 2 is deeper.** Every steered operation traces back to **Singh's own credentials**, including a confirmation at 14:02, inside the hour (Sokolov's note, Ch 17). Victim or accomplice? This is left open.
+3. **A red herring on Kovač** (Ch 15–16): she requested the slot, she was in the building, and Singh had a file on her.
+4. **The Unit 3 threat** (Ch 10–18): a tribunal convicts Marcus (Dec 6) and orders re-correction. Wei postpones the transfer (Ch 13) and then pulls Marcus out of the transport with an order from Chen Zhao (Ch 18).
+5. **Wei returns Nikolai's rooftop page** (Ch 20). He knows who "Pieter" is.
+6. **Reeves:** "Someone has been using my cradles at night", and "I've never signed anything in my life" (Ch 21). His confession is seeded in a Ministry medical-wing cradle (Ch 22–24).
+7. **Wei's alibi is seeded as well** (Ch 25). His colleagues are in the district. Maya timed his arrival at 15:32 (Ch 1 and 28).
+8. **Dmitri recognises Wei's walk** at the Commission (Ch 31).
+9. **Officer Kade** makes the arrest (Ch 4). **Undersecretary Iver Pell** is the hardliner. **Lucian Bell** is Singh's aide.
+10. **The Epilogue:** the gray-coat woman wears reading glasses on a cord (Singh, from the Prologue). Nikolai detects a new erasure with **the same signature** in another nation.

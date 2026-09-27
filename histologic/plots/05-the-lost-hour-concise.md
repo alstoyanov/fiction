@@ -61,3 +61,11 @@ They share one author's voice. The present is following a design written before 
 - **Singh's death** is staged (hinted only). **Chen Zhao** is warm, and "related somewhere" to Marcus.
 - **Written journals** kept by many witnesses begin here.
 - **Nikolai and Maya** begin a romance. Another erasure is being prepared abroad.
+
+## v3.2 Refinements (from the chapter summaries)
+- The shared gray is seeded. The **bandaged hand is real**, and it is Wei's (a clue from Ch 1).
+- The steered operations trace back to **Singh's own credentials**, one of them confirmed at 14:02, inside the hour.
+- A red herring on **Kovač**. A tribunal and the **Unit 3** re-correction threat, with Wei as the "rescuer".
+- Wei returns Nikolai's rooftop page. Reeves says someone used his cradles at night, and his confession is seeded.
+- Wei's alibi is **seeded as well**. Maya timed his arrival at 15:32. Dmitri recognises his walk.
+- Full details: `novels/05-the-lost-hour/chapters-summaries/README.md`.
