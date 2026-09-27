@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="03-two-months.html" class="nav-button">← Previous: Chapter 3: Two Months</a>
+            <div class="nav-center">Chapter 4: The Arrival</div>
+            <a href="05-the-corrected.html" class="nav-button">Next: Chapter 5: The Corrected →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 4: The Arrival</h1>
+<p><em>December 7–10, 2105. Ashford Correctional Facility</em></p>
+<hr>
+<p>Kira Osman woke in the white room and, for the first three seconds, did not know where she was.</p>
+<p>Then she knew, and the knowing arrived the way a system error arrives, all at once and in full: the missing fact, the enforcer, The Judge's ninety-two percent, the transport, the white corridors. Adrian at his window. Dr. Moss with her gentle smile.</p>
+<p><em>I entered that fact. I know I did.</em></p>
+<p>She lay still and said it to herself again, deliberately, as a checksum. The words came back unchanged. Good. Whatever else this place did to her, she would start every day by running that check.</p>
+<p>The intake chamber was small: a bed, a chair, a camera in the corner. One wall had a narrow observation window at head height, frosted now. Last night, when they walked her in from the transport, it had been clear, and through it she had seen a vast, strange, glowing space full of glass boxes, and in one of the boxes a young man with glasses, sitting on a bed with his head in his hands. She had looked at him for only a moment, but the image had stayed. He had looked so <em>finished</em>. Like a process that had run to completion and was simply waiting to be closed.</p>
+<p>Something about him had been familiar. She couldn't place it. It nagged at her the way an unresolved reference nags at a compiler.</p>
+<p>She got up and washed her face in the small sink and looked at herself in the steel mirror: dark hair coming loose from last night's pins, hazel eyes red-rimmed, a face that looked older than it had two days ago. She rewound her hair into a knot without the pins, because they had taken the pins. She made the bed with square corners, because she had always made her bed with square corners, and because it was the only system in the room she controlled.</p>
+<p>Then she sat on the chair and waited, and while she waited, she counted.</p>
+<p><em>Camera: one. Upper left corner. Fixed, not rotating. Status light green, steady. Door: sliding, magnetic seal, no visible handle. Panel on exterior only. Vent: one, ceiling, approximately twenty by forty centimetres. Air flow constant. Temperature approximately twenty-one degrees.</em></p>
+<p>It helped. She had known it would. She had been counting things since she was a child: tiles on the kitchen floor during her parents' arguments, steps on the staircase at school, the nodes in every system she had ever touched. When the world was too loud, you reduced it to its components, and the components were always quieter than the whole.</p>
+<hr>
+<p>Dr. Moss came at what Kira estimated was eight o'clock.</p>
+<p>"Good morning, Ms. Osman. I hope you slept a little."</p>
+<p>"Some."</p>
+<p>"That's more than most." She set a slim case on the bed and opened it. A curved band of pale material. A tablet. "This is just an assessment. It doesn't hurt. Think of it as taking your temperature."</p>
+<p>Kira let her fit the band. It settled coolly behind her ears, and she felt her interface respond to it with a faint, eager hum, like a device finding a network. She had never before thought of her interface as something that could be <em>eager</em>. She had never thought of it as separate from herself at all.</p>
+<p>"I'm going to show you some words," Dr. Moss said. "You don't need to respond."</p>
+<p><em>SPIRE.</em></p>
+<p>The hum shifted. Kira felt it shift. Not in her head exactly, but in the band, a slight change in its note, the way a fan changes pitch when a processor comes under load.</p>
+<p><em>BRIDGE.</em></p>
+<p><em>ADRIAN.</em></p>
+<p>The note jumped.</p>
+<p>It was small. She almost missed it. But she was an architect, and she had spent her whole working life listening to the hum of server rooms, and she knew the sound of a system responding to input. The word had gone in, and something in her had lit up, and the band had <em>heard it light up</em>.</p>
+<p><em>It's not reading my face,</em> she thought. <em>It's reading my reactions. Directly.</em></p>
+<p><em>FACT.</em></p>
+<p><em>NOVEMBER EIGHTEENTH.</em></p>
+<p>She did the only thing that occurred to her. She took the next word, whatever it was going to be, and before it arrived she began, silently, to count the ceiling vent's grille. <em>One, two, three, four.</em> The slats. <em>Five, six, seven.</em></p>
+<p><em>ADRIAN.</em></p>
+<p><em>Eight, nine, ten, eleven.</em></p>
+<p>The note jumped less.</p>
+<p>Not much less. But less. She kept counting. She counted the slats and then the screws holding the grille and then the squares of the floor tiles she could see without moving her head, and the words kept coming, <em>TRUTH</em> and <em>DOUBT</em> and <em>OUTLAW</em> and <em>KOVAČ</em>, and each time the band's note rose and each time she dragged her attention down into the numbers and held it there, and each time the rise was a little smaller.</p>
+<p>Dr. Moss was looking at her tablet. A small crease appeared between her eyebrows.</p>
+<p>"That's fine," she said after a while. "That's all for now." She took off the band. She looked at Kira for a moment with an expression of mild, puzzled interest. "You're very calm, Ms. Osman."</p>
+<p>"I'm an architect," Kira said. "We're trained to be calm when systems fail."</p>
+<p>"And has something failed?"</p>
+<p>"Yes," Kira said. "Someone deleted a fact."</p>
+<p>Dr. Moss's smile didn't waver. "We'll talk about that," she said, in the tone of a woman agreeing to discuss a patient's imaginary friend. "Supervisor Hayes will move you to your room now."</p>
+<hr>
+<p>The room was in the glass place.</p>
+<p>Supervisor Hayes walked her there herself: a tall, tired woman with reddish-gray hair who spoke politely and answered nothing. They went through a vestibule and a set of sealed doors, and the silence closed around Kira like deep water. Then the atrium opened up in front of her, three storeys of glass cells under a white skylight, and she stopped walking.</p>
+<p>"Keep going, please," Hayes said quietly.</p>
+<p>Kira kept going. And as she walked, she looked.</p>
+<p>A woman sitting on the floor of her cell with her legs straight out in front of her, staring at the wall. A man on the upper level with his palms flat against the glass, looking at nothing. A young man with curly hair sitting on his bed with his hands folded in his lap, perfectly still, his face so calm and so empty that Kira had to look away from it. Others. Too many others. Some of them turned their heads as she passed. Many of them did not.</p>
+<p><em>This is what they do,</em> she thought. <em>This is the healing.</em></p>
+<p>At the junction in the middle of the atrium, where a walkway crossed overhead, Hayes stopped and looked at her tablet. She scrolled. Her thumb paused. She seemed to read something twice.</p>
+<p>"7-K," she said. Then, almost to herself, with a small tightening at the corner of her mouth: "Yes. Dr. Reeves was specific."</p>
+<p>She led Kira across the atrium floor to a cell on the lower level. The glass door slid open. Kira stepped in, and the door slid closed, and the seal hissed, and when Kira turned around, the first thing she saw through her glass wall was the cell directly opposite.</p>
+<p>7-H.</p>
+<p>The young man with the glasses.</p>
+<p>He was sitting exactly as she had seen him through the observation window the night before: on the edge of his bed, bent forward, elbows on his knees, head in his hands. His glasses were pushed up onto his forehead and his fingers covered his eyes. He was thin, dark-haired, in the same gray she was wearing now. He did not look up. He did not seem to know that anything in the world had changed.</p>
+<p>The feeling of familiarity came back, stronger. <em>Where do I know you from?</em></p>
+<p>She stood at her glass and looked at him until Hayes had gone.</p>
+<hr>
+<p><em>Cell 7-K. Glazed on two sides: atrium and neighbour. Neighbour cell 7-L: empty. Opposite: 7-H, occupied. Camera: one, ceiling, fixed. Door: sliding, magnetic seal. Meal slot at waist height, right of door. No clocks. Lighting from skylight, supplemented by cell lighting at dusk. Soundproofing: total.</em></p>
+<p>She tested that by speaking. "Test. One, two, three." Her voice died six inches from her mouth.</p>
+<p>She mapped the atrium. It took most of the first day and it kept her sane. Two levels. She counted forty-one cells visible, twenty-six occupied. She noted which occupants moved and which didn't. She noted that the small woman with silver-streaked hair, two cells along and across from her, moved very little but watched everything, and that her watching had a quality Kira recognised: the quality of someone running diagnostics. She noted the tall man on the upper level who walked the length of his cell, back and forth, precisely twelve times every hour, his lips moving slightly. She noted the three identical men.</p>
+<p>She noted them very carefully.</p>
+<p>They came back in the evening, through the door at the far end, with an orderly behind them. They walked to three cells arranged in a triangle across the atrium, and they entered their cells, and they sat down on their beds at the same instant, in the same posture, hands on knees. Their doors closed within a second of each other.</p>
+<p><em>Too precise,</em> Kira thought.</p>
+<p>She did not know yet why that bothered her. She only knew that she had worked with synchronised systems her whole professional life, and that nothing, ever, was synchronised that well by accident.</p>
+<hr>
+<p>Her first session was on the morning of the second day.</p>
+<p>The white room. The white chair. The hood on its jointed arm. A sandy-haired man at a console who did not meet her eyes, whose name tag said MORRISON. Dr. Moss on a stool beside her, holding her hand. And a voice from behind the mirror, pleasant and patient and in no hurry at all.</p>
+<p>"Good morning, Ms. Osman. My name is Dr. Reeves. We're going to help you see clearly."</p>
+<p>The hood came down. It fitted behind her ears, over the installation scars, and her interface sang to it. The note was much stronger than the band's had been. Much stronger. For a moment she felt dizzy with it.</p>
+<p>"State your name."</p>
+<p>"Kira Osman."</p>
+<p>"State your crime."</p>
+<p>"I reported a missing fact."</p>
+<p>A small pause. "State your crime, please."</p>
+<p>"That is my crime," she said. "I entered a security protocol update on November eighteenth at twenty-two hundred hours. Someone removed it from the factorepo. I reported it. That's what I'm here for."</p>
+<p>"You're here," said the voice, gently, "because you are confused about what is real. Let's see if we can help."</p>
+<p>And it went straight to Adrian.</p>
+<p>She was on the bridge. The Meridian Bridge at sunset, the cables glowing gold, the river moving far below the glass panels under her feet. He was beside her, dark hair, blue eyes, the scar above his eyebrow. <em>I'm falling in love with you,</em> he said, simply and directly, as if it were a fact to be entered into the factorepo. And she felt it, all of it, her heart turning over, the terror and the joy—</p>
+<p>And felt it being <em>read</em>.</p>
+<p>It was the strangest sensation of her life. As if someone had put a hand on the back of her head and was looking out through her eyes. Looking at Adrian. Looking at the feeling. Holding it up and turning it, slowly, examining the joins.</p>
+<p><em>No,</em> she thought.</p>
+<p>Then the warehouse. The brick walls, the big windows, the silence where the sensors should have been. <em>I'm an outlaw, Kira. I was sent to recruit you.</em> Her whole chest going cold. The hand on the back of her head turned that over too, with what felt like interest.</p>
+<p>She did not decide what to do. She simply did what she had done in the intake chamber, with the ceiling vent, and what she had done at nine years old on the kitchen floor while her parents shouted. She reduced the world to components.</p>
+<p><em>Security Protocol Update, version seven-point-three,</em> she recited silently, as fast and as flat as she could. <em>Scope: encryption upgrade for factorepo data transmission, all primary nodes. Layer one: key exchange. Asymmetric, lattice-based, four-thousand-ninety-six-bit equivalent. Layer two: session encryption, rotating keys, interval ninety seconds. Layer three: integrity verification, hash chaining per block, block size—</em></p>
+<p>Adrian's face, on the bridge, in the gold light.</p>
+<p><em>—block size sixty-four kilobytes, chain depth twelve, verification at node and at spire. Node addresses: primary node one, sector four, rack—</em></p>
+<p>The hand on the back of her head faltered.</p>
+<p>She felt it. It was reaching for the bridge and finding the rack numbers. Reaching for the warehouse and finding the hash chain. It went looking for the heat in her, and she kept moving the heat out of its way, down into the cold, dull, orderly specifications she had written line by line over three months of her life, and the hand slid off them. It did not seem to know what to do with them. It turned them over briefly and put them down, the way you put down a manual in a language you don't read.</p>
+<p><em>Rack fourteen. Rack fifteen. Rotation interval ninety seconds. Rotation interval ninety seconds. Rotation interval—</em></p>
+<p>Silence behind the mirror.</p>
+<p>Then the voice. Not displeased. Almost delighted.</p>
+<p>"Interesting."</p>
+<p>Just the one word. And then, after a moment, in the same pleasant tone: "That's enough for today, Ms. Osman. You did very well."</p>
+<hr>
+<p>She was sick in the corridor, the way she suspected everyone was. But she walked back to her cell on her own legs, with the orderly's hand hovering under her elbow and not needed, and when the door sealed behind her she went to the sink and washed her mouth and then held on to the steel edge with both hands and shook.</p>
+<p><em>Intact,</em> she thought.</p>
+<p>She checked. She pulled up the bridge, the sunset, Adrian's voice. It was there. It was hers. It had been handled, and it felt handled, a little bruised at the edges, but it was still hers. She pulled up the warehouse. There.</p>
+<p><em>I entered that fact. I know I did.</em></p>
+<p>Checksum unchanged.</p>
+<p>She sat on the bed and let herself shake until it stopped, and then she began to think, which was what she was for.</p>
+<p><em>It follows feeling,</em> she told herself. <em>Not information. It goes where the heat is. It doesn't care about data. You can hide in data.</em></p>
+<p>It was a hypothesis. It was the first useful thing she'd had since the night her fact disappeared.</p>
+<hr>
+<p>She spent the next three days turning the hypothesis into a model.</p>
+<p>She watched who was taken, and when, and for how long, and who came back changed. She kept a log in her head in the same format she used for incident reports at the Spire. <em>Occupant 7-D (small woman, silver hair): session day two, morning, duration approximately ninety minutes. Returned pale, walking unassisted. Observed afterwards at her glass for three hours, stationary, apparently thinking. Unchanged.</em> <em>Occupant 7-E (tall man, upper level): session day three, afternoon. Returned, resumed walking pattern within the hour. Unchanged.</em> <em>Occupant 7-G (young man, curly hair): no session observed. Stationary. Face to wall. No change possible to detect.</em></p>
+<p><em>Occupant 7-H.</em></p>
+<p>She watched him most of all. She told herself it was because he was directly opposite and she couldn't help it. That was partly true.</p>
+<p>He moved only when they came for him. He was taken on the fourth morning, and he walked between the orderlies with his head down, and he came back ninety minutes later exactly as he had gone, and sat down on the bed, and put his head in his hands. There was nothing different about him when he came back because there was nothing left to be different. He was the most finished thing she had ever seen. She had watched programs run to completion and she had watched servers go dark, and none of them had looked as complete as that man.</p>
+<p><em>What did he do,</em> she wondered, <em>to be here? What did he believe?</em></p>
+<p>And then, more quietly: <em>Is that what I'll look like?</em></p>
+<p><em>No,</em> she answered herself. <em>Not if I can help it.</em></p>
+<p>The three identical men went out in the morning and came back at dusk. Every day. At the same time, within a minute. They sat down in the same instant. They stood up in the same instant. Once, on the second evening, one of them, the one in the cell nearest the centre of the atrium, sat looking across at 7-H for nearly a quarter of an hour, and Kira realised with a small shock that he was not looking at the wall behind it. He was looking at the man.</p>
+<p><em>Corrected people don't do that,</em> she thought. And then: <em>How would I know? I've been here three days.</em></p>
+<p>She logged it anyway.</p>
+<hr>
+<p>At night she thought about Adrian.</p>
+<p>She couldn't help it, and she had stopped trying. He had lied to her. He had followed her for weeks and studied her and used a falling stone as an introduction. That was true. And he had loved her. He had told her so on the bridge before he told her anything else, and he had begged her not to go to the Enforcement Tower, and when she left he had stood at his window, helpless. That was also true.</p>
+<p>Both things. At the same time.</p>
+<p>The factorepo would never have allowed it. A fact was true or it was false. Two contradictory facts could not both be entered. The system would reject one. That was the whole point of the system.</p>
+<p>But she was not the system. She was a person lying in a glass box in the dark, and she could hold both of them at once, and neither of them cancelled the other.</p>
+<p><em>Maybe that's the skill,</em> she thought. <em>Maybe that's the thing it can't read. Not the feeling. The holding.</em></p>
+<p>She fell asleep with the thought still turning in her mind, like a protocol she had not finished writing.</p>
+<hr>
+<p>On the fourth evening the meal trolley came as usual.</p>
+<p>The old man with the white ponytail pushed it slowly along the atrium floor, stopping at each cell. When her slot opened she heard, for two seconds, the humming she had been hearing three times a day since she arrived: a low, wandering tune in a mode she didn't know, rising at the end of each phrase like a question. Then the slot slid shut and the silence came back.</p>
+<p>On the tray, next to the bowl of soup and the bread, was a book.</p>
+<p>She hadn't asked for a book. She didn't know you <em>could</em> ask for a book. It was thick and plain and bound in faded green cloth, and the title on the spine said <em>Municipal Water Systems: Maintenance and Distribution (Pre-Histologic Edition, Revised).</em> It was, she thought, turning it over, possibly the dullest book she had ever held.</p>
+<p>She opened it. It fell open where it had been opened before, the spine cracked at that page. Page forty-seven.</p>
+<p><em>Section 4.3: Pressure Regulation in Secondary Distribution Networks.</em></p>
+<p>Halfway down the page, in a paragraph about valve failures, one word had been underlined. Very faintly, in soft pencil, so lightly that she had to tilt the page under the cell light to be sure it was there at all.</p>
+<p><strong>remember</strong></p>
+<p>Kira looked up.</p>
+<p>The atrium was empty. Across the way, the man in 7-H sat with his head in his hands. The three identical men sat in their triangle, faces to the walls. The small woman in 7-D was lying down. Nobody was looking at her.</p>
+<p>Only the old man with the trolley, far along the curve now, walking slowly away, his white ponytail swinging. His back was to her. She could not hear him.</p>
+<p>But she could see, very slightly, the rise and fall of his shoulders, the way a man's shoulders move when he is humming.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="03-two-months.html" class="nav-button">← Previous: Chapter 3: Two Months</a>
+            <div class="nav-center">Chapter 4: The Arrival</div>
+            <a href="05-the-corrected.html" class="nav-button">Next: Chapter 5: The Corrected →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

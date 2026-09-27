@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="11-the-garden-meetings.html" class="nav-button">← Previous: Chapter 11: The Garden Meetings</a>
+            <div class="nav-center">Chapter 12: The Discovery</div>
+            <a href="13-the-revelation.html" class="nav-button">Next: Chapter 13: The Revelation →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 12: The Discovery</h1>
+<p><em>February 24–25, 2106. Ashford Correctional Facility, Technical Wing</em></p>
+<hr>
+<p>The neural cradle in treatment room C-3 had a faulty pressure sensor in its left temporal pad, and Nikolai Volkov had known about it for three weeks before anyone else noticed.</p>
+<p>He had not reported it. It was not his job to report things. It was his job to fix them when he was told to, efficiently, silently, with the blank face of a corrected man and the hands of the best systems technician in the building. He had known about the sensor because he had heard it: a tiny irregularity in the hum, a flutter at the edge of the pitch, like a violin string slightly out of true. He had heard it every time he walked past C-3 with an orderly at his elbow. He had wondered, each time, which patient it was hurting.</p>
+<p>This morning a work order had come down from the treatment team. <em>C-3: intermittent calibration drift, left temporal. Investigate and resolve.</em> So he had investigated, and he had resolved it, in forty minutes, kneeling on the white floor with the pad in his lap and a precision driver in his fingers. The orderly watching him had yawned twice.</p>
+<p>He fitted the pad back into the cradle and ran the diagnostic. The hum came up clean. Perfectly true.</p>
+<p><em>There,</em> he thought. <em>Now it will take their memories without any discomfort at all.</em></p>
+<p>He did not let anything reach his face.</p>
+<hr>
+<p>The technical wing was the basement of the east building: a long corridor of plant rooms and workshops and humming cabinets, badly lit and always warm. He had been working there since August. The staff called him <em>the Volkov who fixes things</em>, which he supposed was better than <em>the Volkov who didn't correct</em>. They let him work mostly alone, because it was faster, and because an orderly assigned to watch a corrected man solder circuit boards for eight hours a day tended, after the first week, to find reasons to be elsewhere.</p>
+<p>It had been Dr. Morrison who first sent him down here. Morrison, who ran the cradles and did not meet anyone's eyes. He had watched Nikolai repair a console in C-1 in the autumn, under supervision, and had said, very quietly, to no one: <em>He's better than our contractor.</em> A week later there was a work detail on the whiteboard. <em>VOLKOV, N. — TECHNICAL.</em></p>
+<p>Nikolai sometimes wondered whether Morrison knew what he had done. He suspected not. He suspected Morrison had simply wanted the cradles to work properly, because a cradle that worked properly hurt people less.</p>
+<hr>
+<p>Maintenance room B-4 was at the end of the corridor. It held the terminal that connected Ashford's local systems to the national Correction Registry.</p>
+<p>Every correctional facility in Veridica wrote to the Registry. Session logs, salience maps, compliance scores, discharge certificates. The whole slow business of mending minds, recorded and uploaded and kept forever, like everything else. The link needed maintaining. Somebody had to check the buffers, clear the caches, run the integrity sweeps at night when the traffic was low. For six months, that somebody had been Nikolai.</p>
+<p>He went there now, at the end of the shift, as he always did. The orderly on the corridor desk nodded at him without looking up. <em>The Volkov who fixes things.</em> The door closed behind him. The cabinets hummed.</p>
+<p>He sat down at the terminal, logged in with his maintenance certificate, and ran the integrity sweep that the schedule required.</p>
+<p>And while it ran, he went home.</p>
+<hr>
+<p>He had built the partition at the border facility, in the fifth month of correction, in his isolation cell, with his fingers on the wall.</p>
+<p>He had not had a terminal then. He had had an interface cradle bolted to the wall of his cell for nightly "reinforcement", and the cradle had a maintenance port, and the port connected, eventually, several layers down, to the Correction Registry. And he had spent ten years of his life maintaining factorepo systems in the border zone, reconciling the irreconcilable, hiding trails. He knew what the Registry's underlying storage looked like. He knew where the dead space was. He knew that there were blocks allocated to discharged patients whose files had been archived, blocks that nobody would ever read again, and that a determined man with a stolen session and a great deal of patience could write to them.</p>
+<p>So he had written. Night after night. Through the cradle's maintenance port, one fragment at a time, disguised as corrupted session logs. The memories the machine was trying to take from him and his brothers, pulled out of his own head before it could get to them and laid down in the dead space of the system that was trying to erase them.</p>
+<p>It was the most dangerous thing he had ever done. It was also, he thought, the only thing he had ever done that his father would have fully understood.</p>
+<p>When they were transferred to Ashford in June, he had not known whether the partition would survive. He had spent the first two months here sick with not knowing. Then Morrison had sent him down to B-4, and on his third night at the terminal he had reached down through the layers and found it. Still there. Still intact. Because every facility in Veridica wrote to the same Registry, and the Registry, like the factorepo, forgot nothing.</p>
+<p>Since then he had come home to it every night.</p>
+<hr>
+<p>Tonight he restored the roof.</p>
+<p>He had been working on it for a week. He pulled the fragments up, one by one, into a scratch buffer, decoded them, and let them into his head. Carefully. Like a man lowering himself into cold water.</p>
+<p>Fog coming in off the lake. The flat tarred roof of the apartment building, still warm from the day. Three boys, twelve years old, sitting on the parapet with their legs dangling over the edge, which Mama had absolutely forbidden.</p>
+<p><em>I was,</em> Dima said. <em>Mama said I came out first.</em></p>
+<p><em>By thirty seconds,</em> Nikolai said. His own voice, twelve years old, indignant. <em>That doesn't count.</em></p>
+<p><em>It counts for birth order. I'm the oldest.</em></p>
+<p><em>You're the bossiest,</em> Lyosha said, grinning. <em>That's different.</em></p>
+<p>And Dima shoved him, and Lyosha shoved back, and then they were rolling across the warm tar, laughing, and Nikolai sat on the parapet and watched them and shook his head, and said <em>You're both idiots</em>, and was smiling so hard his face hurt.</p>
+<p>Nikolai sat at the terminal in B-4 with his hands flat on the desk and let it run through him. The fog. The tar. The laughter. His brothers' faces, the same as his, young and unguarded. Papa's voice from the stairwell, calling them in for dinner.</p>
+<p>It was whole. It was <em>theirs</em>.</p>
+<p>He wrote it back into the partition, re-encoded, redundant, three copies in three separate blocks. Then he sat for a moment longer with his eyes closed, the way some men sit after prayer.</p>
+<p>The integrity sweep chimed. Complete. No errors.</p>
+<p><em>No errors,</em> he thought. <em>If only you knew.</em></p>
+<hr>
+<p>He had noticed the other directory months ago.</p>
+<p>It was hard not to. It sat right next to his partition in the storage map, a large, restricted, heavily used block with an access pattern so regular it looked like a heartbeat. Reads and writes every few hours, day and night. Session data coming in from treatment rooms C-1 to C-4. Analysis going out. It was labelled, in the Registry's flat administrative way, with a single word.</p>
+<p><em>CONTINUITY.</em></p>
+<p>He had never touched it. He had never dared. It was the one thing in the whole Registry he had been careful not even to look at too long, because a directory that busy would be watched, and anyone who went near it would be noticed.</p>
+<p>But four days ago, walking to the work details in the morning, in the short stretch of corridor between the atrium door and the vestibule where the orderly always fell a few paces behind, Dima had leaned very slightly toward him. His lips had barely moved.</p>
+<p>"Continuity," Dima had said. "C-seven. The journalist has seen it. They have numbers for us."</p>
+<p>That was all. Then the orderly had caught up, and Dima's face had gone blank, and they had walked on.</p>
+<p>Nikolai had carried the word around for four days like a stone in his shoe.</p>
+<hr>
+<p>The certificate was his way in, and it was so stupid that he almost didn't believe it.</p>
+<p>He found it while he was looking for something else. In the terminal's credential store, among the ordinary maintenance keys, there was an old one. It had belonged to the contractor who had serviced Ashford's systems before Morrison sent Nikolai down here. A man called Brandt. Brandt had worked on the Wing C renovation in the spring. Brandt had wired the Continuity cradles into the Registry. And Brandt's certificate, it seemed, had been issued with broad maintenance rights over the whole east-wing storage allocation, including the restricted blocks, so that he could build them.</p>
+<p>Nobody had revoked it when Brandt's contract ended.</p>
+<p>Nikolai looked at it for a long time.</p>
+<p><em>Every access is logged,</em> he told himself. <em>You know this. You know it better than anyone. Every single access, somewhere.</em></p>
+<p>He thought about his brothers. About Dima, who had made the rule, leaning toward him in the corridor to whisper the one word that broke it. About Lyosha, who had broken it already. About the man in 7-H who sat with his head in his hands and was, according to Dima, <em>coming back</em>. About the woman in 7-K. About the tall journalist who had seen a number.</p>
+<p><em>They have numbers for us.</em></p>
+<p>He had spent his whole life standing in the middle, holding things together, afraid of both sides. He was so tired of being afraid.</p>
+<p>He loaded Brandt's certificate.</p>
+<p>"Well," he murmured to the empty room, "if they shoot me, at least it will be for something more interesting than a pressure sensor."</p>
+<hr>
+<p>The directory opened.</p>
+<p>He read fast. He had always read fast; it was one of the things that had made him good at his job. He read the way you read when you are standing in a burning building looking for the one document you came for.</p>
+<p><em>PROJECT CONTINUITY. PHASE ONE: HUMAN SERIES.</em></p>
+<p><em>Programme aim: to produce stable, genuine belief, as distinct from compliance, across all tested cognitive profiles. Success criterion: subject not merely behaves as a believer but experiences belief as authentic and self-originated.</em></p>
+<p><em>Series composition: seven subjects, selected to represent the principal cognitive profiles resistant to standard correction.</em></p>
+<p>And then the list.</p>
+<p><em>C-1 — BELIEVER — CHEN, M.</em></p>
+<p><em>C-2 — ARCHITECT — OSMAN, K.</em></p>
+<p><em>C-3 — BOND — VOLKOV, D.</em></p>
+<p><em>C-4 — BOND — VOLKOV, A.</em></p>
+<p><em>C-5 — BOND — VOLKOV, N.</em></p>
+<p><em>C-6 — CLINICIAN — TANAKA, Y.</em></p>
+<p><em>C-7 — WITNESS — OKONKWO, I.</em></p>
+<p>He sat very still and looked at his own name.</p>
+<p><em>BOND.</em></p>
+<hr>
+<p>He opened the files one by one. He did not have time to read them properly. He skimmed, the way the machine skimmed, looking for heat.</p>
+<p><em>C-1. Status: SUCCESS. Reduction to baseline achieved 04 Dec 2105. Stable. Reserved for demonstration. Maintenance protocol only; no further intervention without authorisation (R.).</em></p>
+<p>Beneath that, in a separate field, a line of figures he did not understand:</p>
+<p><em>Acquisition: contamination index 0.58 → 0.73 (adjusted; threshold compliance).</em></p>
+<p>He copied it anyway. He did not know what it meant. He copied everything.</p>
+<p><em>C-2. Status: in progress. Resistant (technical deflection; see session notes). Acquired via record anomaly (ref. R.). Placement 7-K per protocol R-2.</em></p>
+<p>He tried to open <em>R-2</em>. The directory refused him. Not Brandt's certificate: the file itself. It sat inside a personal sub-directory with its own key, labelled with a single initial. <em>R.</em> Even Brandt, who had built the whole system, had not been trusted with that.</p>
+<p>He moved on. He did not have time to wonder.</p>
+<p><em>C-3 / C-4 / C-5. Status: primary research interest. Prior correction failure (border facility, Nov 2104 – May 2105). Hypothesis: distributed resistance via shared salience architecture. Current method: passive observation; salience mapping under maintenance load. Proposed integration method: SIMULTANEOUS TRIPLE CRADLE (untested). Expected outcomes: (a) bond disruption and sequential integration, or (b) catastrophic failure of all three nodes. Both outcomes informative.</em></p>
+<p>Nikolai read the last line three times.</p>
+<p><em>Both outcomes informative.</em></p>
+<p>He realised he had stopped breathing, and made himself start again.</p>
+<hr>
+<p>The schedule was in a file of its own. It was the shortest file in the directory, and the only one he read twice.</p>
+<p><em>PHASE ONE TIMETABLE.</em></p>
+<p><em>C-1: stable baseline maintained through demonstration.</em></p>
+<p><em>C-2, C-6, C-7: continue reduction. Target baseline: July 2106.</em></p>
+<p><em>C-3/4/5: triple cradle installation, C-1 treatment room, June 2106. Commissioning July.</em></p>
+<p><em>FINAL INTEGRATION, ALL SUBJECTS: 10 AUG 2106.</em></p>
+<p><em>MINISTRY DEMONSTRATION: 11 AUG 2106.</em></p>
+<hr>
+<p>He copied it. He copied all of it: the aims, the list, the status lines, the schedule, the strange numbers under C-1, the locked reference under C-2. He did it the way he had done everything at the border facility, fragment by fragment, into his own partition, disguised as corrupted session logs from archived patients whose files nobody would ever read. He broke it into forty pieces and scattered them through the dead space and wrote each one three times.</p>
+<p>Then he backed out of the directory. He unloaded Brandt's certificate. He cleared the scratch buffer. He ran a second integrity sweep, for no reason except that it would bury the timestamp of the first under a layer of perfectly legitimate activity. He logged out.</p>
+<p>And he sat at the terminal with his hands in his lap and could not make them stop shaking.</p>
+<p><em>Every access is logged somewhere.</em></p>
+<p>He knew where, roughly. A security audit table in the Registry's own administration layer, updated every hour. Brandt's certificate, opening CONTINUITY, at twenty-one-forty on a Wednesday night. Anyone who looked would see it. The only question was whether anyone would look. The table was enormous. It recorded millions of accesses. It was read, as far as he knew, only when something went wrong.</p>
+<p><em>Then nothing can go wrong,</em> he told himself. <em>Nothing at all. For six months.</em></p>
+<p>He had never been good at believing things he told himself.</p>
+<hr>
+<p>The orderly walked him back through the east corridor to Wing C at ten o'clock. It was late for a work detail. The orderly didn't care; he was thinking about his supper.</p>
+<p>Nikolai walked with his face blank and his eyes on the floor and his hands, finally, still. And as he walked he reached for the bond.</p>
+<p>He did not need words. He never had. He only let what he was carrying come up to the surface, all of it at once. The seven names. <em>Both outcomes informative.</em> The date. The weight of it. And he pressed it outward, the way you press your palm against a door.</p>
+<p>He knew exactly where his brothers were. Dima was already back in his cell; the garden detail finished at dusk. Lyosha had been kept late in the library for an inventory.</p>
+<p>Across the facility, in 7-A, Dmitri Volkov stopped halfway through the act of sitting down on his bed.</p>
+<p>In the library, at the far end of the stacks, Alexei Volkov stopped with a book in each hand.</p>
+<p>At the same instant. To the second. As if a single hand had closed around both of them.</p>
+<hr>
+<p>That night the atrium lights dimmed at eleven, as they always did.</p>
+<p>For nine months, since the first night at Ashford, the three of them had kept the rule absolutely. Faces to the walls. Eyes on nothing. No signals, no looks, no sign to the cameras that three corrected men in a triangle of glass cells had any interest at all in each other's existence.</p>
+<p>At eleven-fifteen, all three of them turned their heads.</p>
+<p>Not quickly. Slowly, the way a man turns in his sleep. Dmitri in 7-A, Alexei in 7-B, Nikolai in 7-C. They turned until they were facing inward, across the triangle, and they looked at each other directly through the glass for the first time since June.</p>
+<p>Three identical faces in the low blue light.</p>
+<p>Nikolai saw his brothers look at him and understood that they knew. Not the details. The weight. He saw Lyosha's face tighten with something that was almost triumph and was mostly fear. He saw Dima's face do nothing at all, the way it did when Dima was feeling the most.</p>
+<p>Then Dima looked at him for a long moment. And very slightly, so slightly that no camera in the world would have registered it as anything but a man adjusting his neck on a thin pillow, he nodded.</p>
+<p><em>Now.</em></p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="11-the-garden-meetings.html" class="nav-button">← Previous: Chapter 11: The Garden Meetings</a>
+            <div class="nav-center">Chapter 12: The Discovery</div>
+            <a href="13-the-revelation.html" class="nav-button">Next: Chapter 13: The Revelation →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

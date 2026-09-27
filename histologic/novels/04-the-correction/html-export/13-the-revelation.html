@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="12-the-discovery.html" class="nav-button">← Previous: Chapter 12: The Discovery</a>
+            <div class="nav-center">Chapter 13: The Revelation</div>
+            <a href="14-the-message-system.html" class="nav-button">Next: Chapter 14: The Message System →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 13: The Revelation</h1>
+<p><em>March 2–4, 2106. Ashford Correctional Facility, the Garden</em></p>
+<hr>
+<p>The decision had taken them one night and no words at all.</p>
+<p>After the nod, the three of them had lain in their triangle with their faces turned back to the walls, and talked the only way they could. Not in thoughts. In weight. Dmitri had felt his brothers' positions settle, the way you feel two people shift their grip on a heavy thing you are all carrying together. Alexei: <em>yes, finally, yes</em>, a pressure like a hand pushing him forward. Nikolai: <em>yes</em>, too, but frightened, cold-fingered, the fear braided through the yes so tightly that it could not be pulled out.</p>
+<p>And Dmitri: <em>me</em>.</p>
+<p>He had pushed that as hard as he could. Not Alexei, who was The Phantom, who was already reckless, who had already broken the rule twice. Not Nikolai, who had the partition and the certificate and the only way into the Registry, and could not be spared. <em>Me.</em> The one who had made the rule. The one who had argued hardest for silence. If it went wrong, if Chen flinched or cried out or turned his head at the wrong moment, if the camera caught it, if an orderly saw, then let it be the enforcer who was found talking to him. Let it be the brother whose whole training was in taking the consequences.</p>
+<p><em>It is the only use left for what I was,</em> he had thought, into the dark, and felt both his brothers go still.</p>
+<p>In the morning, walking out of Wing C behind the orderly, Alexei's hand had brushed his, once, as if by accident.</p>
+<hr>
+<p>He watched Marcus Chen for three garden sessions before he did it.</p>
+<p>He had to. He had not survived sixteen months in two correctional facilities by acting on instinct. He knelt at the beds and raked and cleared and watched the benches out of the edge of his eye, and he saw what the orderly at the gate did not see and what the cameras could not.</p>
+<p>Chen was better.</p>
+<p>Better was dangerous.</p>
+<p>On good days his posture was too upright. He sat on his bench with his back straight and his hands in his lap, and his face was blank, but it was the wrong blank: it was the blank of a man trying to be blank, not the blank of a man who had nothing behind his face. His eyes followed things. The sparrows. The girl walking in circles. When the old woman dropped her crumbs he glanced at them, quick and bright, the way a person does.</p>
+<p>And his eyes followed the woman from 7-K.</p>
+<p>All the time. Openly. Not in the blind arc, not when it was safe. Whenever she moved. When she sat down at the end of his bench his whole body changed: his shoulders loosened, his head turned toward her a few degrees, something came into his face like light coming into a window. It was the most beautiful thing Dmitri had seen in a very long time. It was also going to get him killed.</p>
+<p>On the second afternoon, the orderly by the gate glanced up from his tablet at the benches, and looked at Chen for a moment, and made a note.</p>
+<p>Dmitri saw it. He kept raking.</p>
+<p>That night he pressed it into the bond as hard as he could. <em>Tomorrow.</em></p>
+<hr>
+<p>The east camera began its sweep toward the north gate at fourteen thirty-one.</p>
+<p>Dmitri was already at the bed by the third bench. He had been working his way along the row of roses for twenty minutes, stroke by stroke, so that his arrival there would look like nothing at all. He knelt on the frozen gravel a metre from Marcus Chen's feet and began to clear the dead leaves from around the stems.</p>
+<p>Kira Osman was at the other end of the bench. Tanaka and Okonkwo two benches along. The general-ward patients at the far end, by the pebble game. The orderly at the gate, reading.</p>
+<p>The camera finished its turn. Four minutes.</p>
+<p>He did not look up. He kept his hands moving. He let his lips move as little as a man's lips can move and still make words.</p>
+<p>"Do not turn your head."</p>
+<p>On the bench above him, Chen went rigid.</p>
+<p>"We are not corrected," Dmitri said. "None of us. My brothers and I. We have been awake the whole time."</p>
+<p>He heard, very faintly, a breath go into Chen, sharp and sudden, the beginning of a sound. He felt the bench creak as Chen's weight started to shift toward him—</p>
+<p>"<em>Do not move.</em>" It came out harder than he meant, the voice he used to use on suspects in the border zone. "Look at the bench. At your hands. Good." Chen's weight settled back. Dmitri kept clearing leaves. "Good. Breathe. You are a man sitting in the cold. That is all you are."</p>
+<p>A long moment. He could hear Chen breathing, fast and shallow, and then, with an effort that Dmitri could almost feel, slower.</p>
+<p>"The correction failed on us," Dmitri said. "At the border. Six months. It could not break us. There were three of us, and what three minds hold together, it could not get through." He cleared another leaf. "Sixteen months since they took us. Nine of them here, pretending. Watching."</p>
+<p>"Why?" It was the faintest whisper from the bench.</p>
+<p>"Because we are being studied. And if we let them see that we are awake, they will stop studying and start taking apart." He moved along the stems. "You know what that is. You have been taken apart."</p>
+<p>Silence from the bench.</p>
+<p>"You were almost erased," Dmitri said. "I watched it. I watched all of it. But you are coming back. I can see it." He paused. "Everyone can see it. That is the problem. You must stop looking at her like that."</p>
+<p>Beside him, at the other end of the bench, he felt rather than saw Kira Osman go very still.</p>
+<p>"You look at her the way a man looks at a fire in winter," Dmitri said. "Every time she moves. The orderly by the gate made a note yesterday. They are writing it down. If you want to live, you will stop."</p>
+<p>He heard Chen swallow.</p>
+<p>"My brother Nikolai reaches the systems," Dmitri said. "My brother Alexei moves books through the whole building. I work outside. We can carry messages, if you let us. We can help you. But you must trust us." He cleared the last leaf from the stem and moved to the next. "That is the difficult part. I know. I would not trust me either."</p>
+<hr>
+<p>The camera had perhaps a minute and a half left in its arc. He could feel it, the way he could feel his brothers: a steady count at the back of his mind.</p>
+<p>"Why now?" Chen whispered.</p>
+<p>Dmitri had known he would ask. It was, he thought, the right question. It was the question a historian would ask.</p>
+<p>"Because my brother has found their calendar," Dmitri said. "They have a programme. A list. Seven names. You are the first." He let his fingers find a leaf and close around it. "August the tenth. On August the tenth they mean to finish all of us. You first."</p>
+<p>He felt the words go into Chen. He did not need to look up to know what they did.</p>
+<p>"How many others?" Chen said, and his whisper had changed. It had something in it now that Dmitri recognised. Not fear. Or not only fear. Something harder. The beginning of a man who had decided to fight.</p>
+<p>"Seven of us," Dmitri said. "All chosen. You will see."</p>
+<hr>
+<p>Thirty seconds.</p>
+<p>He had planned what he would say in the last thirty seconds, lying awake in his cell. He had planned something useful. A signal. An instruction. The shape of what would come next.</p>
+<p>He said something else.</p>
+<p>"I hunted my brother for three years," he said, "and did not know him. He left messages on walls for me. I did not understand one of them." He kept his eyes on the roses. "I watched you for five months and did not help you. I watched them take you apart, piece by piece, and I sat in my cell and kept my face to the wall because I had a rule." A breath. "I am sorry."</p>
+<p>He did not wait for an answer. The count at the back of his mind reached its end, and the east camera began its long, slow swing back toward the benches, and Dmitri Volkov's face went blank.</p>
+<p>His hands went on clearing leaves, slowly, mechanically, one at a time. After a minute he stood and moved along the bed to the next rose, as if nothing had happened, as if he had never stopped.</p>
+<p>He did not look back. But he knew, the way he knew the camera's arc, that on the bench behind him Marcus Chen was sitting perfectly still, with his head bowed over his hands in the shape of a broken man, and that behind the shape there was someone.</p>
+<hr>
+<p>That evening, in his cell, Dmitri sat with his face to the wall and his hands on his knees and felt his brothers.</p>
+<p>He had expected to feel afraid. He had been afraid for sixteen months. He had kept the rule because he was afraid. He had made himself into a wall because he was afraid.</p>
+<p>He did not feel afraid.</p>
+<p>Across the triangle, from Alexei, came something hot and bright and <em>delighted</em>: triumph, a boy's triumph, <em>I told you, I told you</em>, so strong it was almost a laugh. Dmitri let it wash over him and did not push it away.</p>
+<p>From Nikolai came fear, of course. Cold hands, a knot in the stomach. <em>What if the camera. What if the orderly. What if.</em> Always <em>what if</em>. Nikolai had lived his whole life inside <em>what if</em>.</p>
+<p>And from himself?</p>
+<p>He sat with it and tried to name it, and could not, for a long time. It was not relief, though it was something like relief. It was not happiness. It was lighter than either. It was the feeling, he realised at last, of setting down something very heavy that he had been carrying for so long he had forgotten it was not a part of his body.</p>
+<p>He had spent his whole life holding things. Order. Rules. The line. His father's death, and his mother's, and his brothers at arm's length. He had held on to the system until the system put him in a glass box, and then he had held on to silence.</p>
+<p>And today he had knelt in the frozen dirt beside a stranger and let go of it.</p>
+<p>In 7-B, Alexei's hand moved on the mattress. Forefinger over middle finger. Hooked. Held.</p>
+<p><em>Promise.</em></p>
+<p>For the first time since the night of the book, Dmitri answered it.</p>
+<hr>
+<p>The meal trolley came round at seven, as it always did.</p>
+<p>Old Songs pushed it slowly along the curve of the atrium, stopping at each cell. The slot of 7-H opened. A tray went in: soup, bread, a cup of something warm. And beside the bowl, a thin, cheap, battered book with a paper cover.</p>
+<p>Dmitri watched it from the corner of his eye, his face to the wall.</p>
+<p>In 7-H, Marcus Chen picked it up.</p>
+<p>It was a school primer. Dmitri knew it because Alexei had chosen it with enormous care that afternoon, in the library, and had described it into the bond with such satisfaction that Dmitri had almost been able to see the cover. <em>Arithmetic for Young Citizens, Book Two.</em> Times tables and simple word problems, the sort of book a child in the border zone would have been given at seven. The sort of book that no orderly in the world would ever look at twice.</p>
+<p>Chen opened it.</p>
+<p>Dmitri could not see the page. He did not need to. Alexei had done it with a pin from the library's notice board, pricking tiny holes, barely visible, under single letters in the word problems. Nothing clever. Not yet. That would come. For tonight, only this: seven letters in seven problems, on page one, spelling a single word that could be read by anyone who thought to hold the page up to the light.</p>
+<p>Chen held the page up to the light.</p>
+<p>Dmitri saw him go still.</p>
+<p><em>W. E. L. C. O. M. E.</em></p>
+<hr>
+<p>Across the atrium, in 7-K, Kira Osman stood up.</p>
+<p>She walked to her glass, slowly, as if she had just thought of something. In her hands she held the thick, faded green book she had kept by her bed since December: <em>Municipal Water Systems</em>. She did not look at the triangle. She did not look at 7-H. She simply stood at her glass in the light of her cell, and opened the book, and held one of its pages up against the glass, the way you might hold a page up to a window to read it more easily.</p>
+<p>It was not page forty-seven. It was a different page. And Dmitri, looking at it from the corner of his eye across twenty metres of atrium, could see, where the cell light shone through the paper, a scatter of tiny bright points. Pinpricks. A dozen of them, under a dozen letters.</p>
+<p>He did not know what they said. Alexei had not told him about that one.</p>
+<p>But Kira Osman was holding them up, very deliberately, to the only cell in Wing C where someone would understand what she was showing him.</p>
+<p>In 7-H, Marcus Chen lowered the arithmetic primer, and looked across at her, and, very slowly, for three seconds, lifted his head.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="12-the-discovery.html" class="nav-button">← Previous: Chapter 12: The Discovery</a>
+            <div class="nav-center">Chapter 13: The Revelation</div>
+            <a href="14-the-message-system.html" class="nav-button">Next: Chapter 14: The Message System →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

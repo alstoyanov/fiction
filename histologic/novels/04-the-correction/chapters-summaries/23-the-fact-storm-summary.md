@@ -10,12 +10,13 @@ The horror set piece. The first fact storm ever to hit the interior of Veridica,
 
 ## Beats
 - **23:40:** Waiting in 7-H. Marcus runs the escape as a list of fact entries. Everyone knows the plan is cut down, the storm unit only partly calibrated, and Reeves somewhere in the building preparing for tomorrow's integration. Old Songs' humming comes through the slot: the signal. Across the atrium, Kira puts her palm to the glass. He does too, the way he did with Samuel on the first night.
-- **23:47: The storm hits.** It is harder and less even than planned, because the calibration was rushed. A pressure change and a sudden wrongness (Story 03's language). Then every interface in Ashford receives contradictory histories of *this building*:
+- **23:47: The storm hits.** It is harder and less even than planned, because the calibration was rushed. It arrives the way Story 03 describes it, as a sensation *like* a pressure change, a sudden wrongness. It is not weather. It's every interface in the building receiving at once. Then every interface in Ashford receives contradictory histories of *this building*:
   - *Ashford: a hospital, founded 2081.*
   - *Ashford: a prison, founded 2079.*
   - *Ashford: a field. Nothing was ever built here.*
 - The walls flicker. For whole seconds, Marcus's cell *isn't there*: he's standing in wet grass under stars. Then the white is back.
 - **The staff panic:** An orderly screams that he's never worked here. Hayes sits down in the corridor and weeps, because the storm has handed her a version of her life in which she was a nurse, and she wants it.
+- **The shielding:** Ashford's broadcast isolation tries to come up the instant the storm is detected. In B-4, alone, **Director Kovač** keeps it down by hand, following Nikolai's written instructions while her own interface tells her the building is a field (set up in Ch 21–22). Show one short cut to her.
 - **Morrison triggers the lockdown release.** The glass doors hiss open along the whole wing.
 - **Marcus's particular horror:** His gaps are where the storm gets in. It *fills the blanks* with false memories, and they're warm. A version where Elena really loved him. A version where his mother is alive. A version where he never reported anyone, and the café at 17:43 went on for years.
 - **The one that stays (Twist 2 seed):** In the "field" history there is no building, only grass and stars. For a stretch that feels like hours, he is *lying in that grass with Kira*, talking quietly, in no hurry, free. It's the most peaceful memory he has ever had. In reality it lasts a few seconds, while Kira is dragging him down a corridor. Write it so that the reader, too, half-believes it happened.

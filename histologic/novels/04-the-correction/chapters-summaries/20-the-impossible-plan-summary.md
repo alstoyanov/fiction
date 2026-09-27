@@ -12,7 +12,7 @@ Engineer an escape from a maximum-security neural-correction facility. Dmitri is
 - Dmitri plans the escape the way he once planned to catch The Phantom, and says so to Alexei, who grins.
 - **What they need:**
   1. **A distraction that is massive and undeniable:** a fact storm. Elena's network has stolen a portable storm unit from a Border Security test depot, the kind used in the fact-storm program. *Captain Sokolov's program.* Nikolai supplies the frequencies of Ashford's local broadcast node. The storm will flood every interface on site with contradictory histories of Ashford itself.
-  2. **Inside help:** Kovač (orders and duty rosters), Morrison (lockdown release and cradle shutdown), Nikolai (systems), and Old Songs (sound signals).
+  2. **Inside help:** Kovač (orders and duty rosters), Morrison (lockdown release and cradle shutdown), Nikolai (systems), and Old Songs (sound signals). Nikolai must also disable Ashford's **broadcast isolation**, the shielding that correctional facilities use to cut inmates off from outside broadcasts during storms. Without that, the storm would never reach anyone inside.
   3. **The evidence:** Nikolai's partition, plus the raw Continuity archive in the data centre, which must be physically copied.
   4. **An exit:** the service road, then Elena's vehicles, then east toward the border zone's safe houses.
   5. **Outside support:** Elena.
@@ -25,7 +25,7 @@ Engineer an escape from a maximum-security neural-correction facility. Dmitri is
 - **The date:** The night of **Aug 9–10**. Reeves will be at the Ministry for the pre-demonstration briefing, and the triple cradle is scheduled for Aug 10 at 08:00. It is a good plan with three weeks of margin, and for a few days they let themselves believe in it.
 
 ## Ending (the reversal)
-Mid-July. Nikolai is on a routine maintenance shift when two orderlies he has never seen come for him with Supervisor Hayes, who won't meet his eyes. Reeves's team has found the audit trail from February: *someone opened CONTINUITY with an old maintenance certificate.* They don't know what was taken. They know whose certificate it was. From the garden, Dmitri watches his brother being walked across the yard toward Wing C's treatment rooms. The bond fills with Nikolai's fear like cold water. Everything Dmitri planned assumed they would choose the hour. **Reeves has just chosen it for them.**
+Friday, July 16. Nikolai is on a routine maintenance shift when two orderlies he has never seen come for him with Supervisor Hayes, who won't meet his eyes. Reeves's team has found the audit trail from February: *someone opened CONTINUITY with an old maintenance certificate.* They don't know what was taken. They know whose certificate it was. From the garden, Dmitri watches his brother being walked across the yard toward Wing C's treatment rooms. The bond fills with Nikolai's fear like cold water. Everything Dmitri planned assumed they would choose the hour. **Reeves has just chosen it for them.**
 
 ## Continuity Notes
 - This is Twist 3. The plan fails before it starts, and Part Three gets its setback. It continues in Ch 21.

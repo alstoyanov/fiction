@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="29-the-missions.html" class="nav-button">← Previous: Chapter 29: The Missions</a>
+            <div class="nav-center">Epilogue: Seven Paths, One Truth</div>
+            <span class="nav-button disabled">Next →</span>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Epilogue: Seven Paths, One Truth</h1>
+<p><em>November 14, 2106</em></p>
+<hr>
+<h2>Secure Care Unit 3</h2>
+<p>The notice came through the hatch at six in the evening, on a white card, the way everything in the Department of Correction came.</p>
+<p><em>OKONKWO, ISAIAH. ORDER OF EXPULSION FROM THE TERRITORY OF VERIDICA. EFFECTIVE: 15 NOVEMBER 2106, 14:30. BORDER TRANSFER UNDER ESCORT. PERSONAL EFFECTS: PERMITTED (ONE BAG).</em></p>
+<p>He read it three times, sitting on the concrete bed.</p>
+<p>No one would tell him which border. No one would tell him why. The guard who had brought the card, the young one who had once asked him whether it was in all of them, only shook his head and said, "It came from the top. Signed by some Director. Not ours." A pause. "Good luck, Mr. Okonkwo."</p>
+<p><em>Some Director</em>, Isaiah thought. <em>Yes.</em></p>
+<p>He had been given his coat back that afternoon, as an unexplained courtesy, in a paper bag. It was the coat he had been arrested in, thirteen months ago. With it had come a needle and a reel of thread, in a small envelope, with no note. He sat on the bed with the coat across his knees and began, very carefully, to unpick the lining along the hem.</p>
+<p>He had notes. Not on paper. They had never let him have paper. But in three months in Unit 3 he had been given, for no reason anyone explained, a daily newspaper, and he had learned to tear the margins into strips and write on them with the end of a burned match. The article, all of it, as he remembered it. The names. The dates. The storm onset times. Page thirty-one. Everything in the cellar that he could get onto strips of newsprint the width of his thumb.</p>
+<p>He sewed them into the lining of his coat, one by one, in the dark.</p>
+<p><em>Tomorrow</em>, he thought, <em>I will cross a border with documents I cannot prove I was allowed to carry.</em></p>
+<p>He found that he did not mind at all.</p>
+<hr>
+<h2>Chronos</h2>
+<p>In a teaching hospital on the Chronos side of the lake, in a small office with a window onto a car park, Dr. Yuki Tanaka sat with a cup of tea going cold at her elbow and read the minutes of a committee meeting she had not been invited to.</p>
+<p><em>Proposal: evaluation of Veridican salience-reduction methodology for application in the treatment of chronic storm trauma.</em></p>
+<p>She read it twice. Then she put it down, and picked up her pen, and began, in her small precise hand, to write a memorandum.</p>
+<p>It would be the eleventh she had written in eight weeks. The committee had not yet read any of them. They would.</p>
+<p>At fourteen hundred tomorrow, a family of five would come across the border through a gap in the fence on the contested strip, with papers that Elena's people had made, and Yuki would meet them on the other side with a car and a doctor's pass. It would be her fourth family. She had made the arrangements that afternoon. She had checked every one of them twice.</p>
+<p>At the next desk, Dr. James Morrison was working on something he would not show her. His hands, on the keyboard, were steady.</p>
+<hr>
+<h2>The Resistance</h2>
+<p>In the back of a truck parked in a barn somewhere in the border zone, with a map spread across a crate and a single lamp swinging overhead, Alexei and Dmitri Volkov were arguing about who went first.</p>
+<p>"I go first," said Dmitri. "I always go first."</p>
+<p>"You go first because you're bossy," said Alexei. "That's different."</p>
+<p>"It's tactically sound."</p>
+<p>"It's thirty seconds."</p>
+<p>"Thirty seconds," said Dmitri, "counts."</p>
+<p>Elena Volkov sat on an upturned crate by the tailgate, with her boots on the edge of the map, and let them argue. She had been planning tomorrow's operation for three weeks. An extraction. Four resistance operatives who had been picked up in a sweep in the lakeshore districts and were being held in a regional enforcement station, pending transfer. The transfer was scheduled for tomorrow afternoon. The extraction window was sixty minutes wide.</p>
+<p><em>Fourteen hundred to fifteen hundred.</em></p>
+<p>She did not know yet why her source had been so insistent about the hour. Only that he had been.</p>
+<p>In the corner of the truck, on a blanket, an old man with a white ponytail sat with his eyes closed, humming.</p>
+<hr>
+<h2>Veridica</h2>
+<p>In a rented room on the fourth floor of a building in the capital's western districts, a mid-level factorepo systems contractor named Pieter Lang sat at his personal terminal at eleven at night, eating noodles out of a carton, and read tomorrow's maintenance schedule for the Regional Factorepo.</p>
+<p>He read it every night. It was, as far as anyone at the Regional Factorepo knew, the dullest thing about a very dull man.</p>
+<p>Pieter Lang had a beard, and short hair, and a pair of glasses he did not need, and a way of hunching his shoulders that made him look shorter and older than he was. He had a new citizen number, laid carefully over the number of a man who had died in a storm in August. He had a new interface signature that Elena's technician at the regional node had spent six weeks building. And he had, in his wallet, folded very small, a single page torn from a child's arithmetic book, covered in pinpricks, which he never took out in public and never let himself need.</p>
+<p>He stopped eating.</p>
+<p><em>Scheduled activity: primary repository, core synchronisation. Window: 15 NOV 2106, 14:00–15:00. Owner:</em></p>
+<p>The field was blank.</p>
+<p>He looked at it for a long time. Every maintenance window on the schedule had an owner. It was a rule. It was the first rule. You did not touch the factorepo's core without your name in the record, because the record was sacred, and because, as the Spire had been at such pains to say in August, it <em>could not be altered</em>.</p>
+<p>Somebody had booked an hour on the factorepo's core tomorrow afternoon and left their name off it.</p>
+<p>He put the carton down. He opened a second window, and a third, and began, very quietly, to write a message in the old border-zone smuggler's shift, the one his father had taught all three of them in the study under the green lamp.</p>
+<p><em>TO E. SOMETHING IS BOOKED ON THE CORE TOMORROW. 14:00 TO 15:00. NO OWNER. I DON'T LIKE IT.</em></p>
+<p>He sent it. Then he sat back in the dark and looked at the blank field on the screen, and for the first time in two months, he was afraid.</p>
+<hr>
+<h2>Ashford</h2>
+<p>Director Helena Kovač walked the length of Wing C at a quarter to midnight, alone.</p>
+<p>The atrium was very quiet. It had always been quiet, of course; it had been built to be. But it had been a different kind of quiet, before. A quiet with people in it. Now most of the cells were dark. Continuity was suspended. The Wing C programme had been referred to the inquiry. The overflow had been moved back to the general wards. The triangle of cells at the centre of the atrium, 7-A, 7-B, 7-C, was empty and unlit, and so was 7-D, and 7-E, and 7-H, and 7-K.</p>
+<p>Only one cell on the lower level still glowed.</p>
+<p>She stopped outside it.</p>
+<p>Samuel Ferris was sitting on the edge of his bed with his hands folded in his lap, facing the white wall. His hair had grown longer. Someone, an orderly, Hayes perhaps, had begun to cut it for him once a month. He did not look round.</p>
+<p>Helena Kovač stood outside the glass for a while. Then she pulled over a chair from the atrium desk, and sat down in it, facing his cell, in the blue light, with her coat still on and her hands in her pockets.</p>
+<p>She did not say anything. He could not have heard her if she had.</p>
+<p>She sat there anyway, for a long time. It was the only thing she knew how to do for him. She thought that someone ought to.</p>
+<hr>
+<h2>The Border Zone</h2>
+<p>In a cottage on the contested strip, with a stove and two rooms and a window onto the lake, Marcus Chen woke in the dark with his heart hammering and a hood coming down over his head.</p>
+<p>It was not there. He knew it was not there. He knew it the way he knew the date of the Founding. And it was there, cool against the skin behind his ears, the hum beginning, the interface under his skull saying <em>yes</em>, and a voice, pleasant and unhurried, just behind his head: <em>There's someone new in here, isn't there, Marcus? Let's see her.</em></p>
+<p>"Marcus."</p>
+<p>A hand on his chest.</p>
+<p>"Marcus. It's the flashback. It's not real. Listen to me." Kira's voice, in the dark. Not pleading. Flat, and dull, and procedural. "Date: November fourteenth, 2106. Time: twenty-three fifty hours. Location: the cottage. Involved parties: two. Status." A breath. "With you."</p>
+<p>The hood went.</p>
+<p>He lay on his back in the dark and breathed, and after a while the hammering slowed, and there was only the stove ticking, and the lake outside, and her hand on his chest.</p>
+<p>"Thank you," he said.</p>
+<p>"Mm."</p>
+<p>It happened two or three times a week. They had stopped counting.</p>
+<hr>
+<p>The cottage was full of paper.</p>
+<p>Three months of it. Testimony. Signed statements from people all along the border who had lived through the storms and remembered things the factorepo said had never happened. A woman whose street had been evacuated in 2091 in a storm that Veridica said had never occurred. A man who had watched a Border Security vehicle park at the end of his road an hour before a storm and drive away an hour after. Two hundred and fourteen statements. Each one checked against the others, the way Marcus had learned to check his own memories: <em>who else was there? What did they see? Where do they disagree?</em></p>
+<p><em>Many witnesses. Not one record.</em></p>
+<p>And, in a steel box under the floorboards, Elena's drive. Six terabytes. The core of Project Continuity. Waiting.</p>
+<hr>
+<p>The message came at midnight, on the small encrypted receiver that Elena's people had left them. Kira decoded it at the table by the light of the stove, her lips moving silently over the shift. She did not say the words aloud. That was new. She had been practising.</p>
+<p><em>TOMORROW. 14:00 TO 15:00. EVERYTHING HAPPENS IN THAT HOUR. MULTIPLE OPERATIONS. MARCUS: THE UPLOAD. THE SECURE SERVERS ARE READY. BE AT THE POINT BY 13:45. BE READY. — E.</em></p>
+<p>Kira put the receiver down.</p>
+<p>Marcus had got up. He was standing by the window, looking out at the lake, at the lights on the far shore where Chronos was.</p>
+<p>"The upload," he said.</p>
+<p>It was the plan. It had been the plan since September. When the moment came, they would take the drive from under the floorboards and upload the whole of it to secure servers where no one could delete it. The Continuity archive, and the two hundred and fourteen statements, and Isaiah's article. Put it in the record. Somewhere it could not be adjusted. So that it happened.</p>
+<p>Tomorrow. Fourteen hundred.</p>
+<p>"What if I do it," Marcus said, "and then I can't remember?"</p>
+<p>Kira looked up.</p>
+<p>"What if I upload it," he said, "and document it, and something happens, and afterwards I can't remember doing it? What if correction took that from me too? The holding on. The keeping." He was very still at the window. "Or worse. What if I remember it <em>wrong</em>? What if something happens tomorrow, and I remember it, and I'm certain, and I'd swear to it in front of The Judge, and it never happened at all?" His voice was quiet. "I've got a field in my head, Kira. I'll never be able to tell."</p>
+<p>She got up from the table and came to the window and stood beside him.</p>
+<p>"Then I'll remember," she said. "And you'll remember. And we'll check. And Nikolai will remember, and Tanaka, and Alexei, and Dmitri, and Elena, and Isaiah, wherever he is tomorrow. We'll all remember, and we'll put it side by side, and where we disagree we'll write that down too." She took his hand. "We'll remember together."</p>
+<p>He looked at her.</p>
+<p>"That's what we are now," said Kira. "That's what they made us, without meaning to. Not one record. Many witnesses."</p>
+<hr>
+<p>They stood at the window for a long time, looking at the lake.</p>
+<p>It was very dark. There was no storm tonight. Only the fog beginning to come in, gray and thick, off the water, the way it had come in on the night three brothers were arrested at a checkpoint two years ago, the way it came in every night in the border zone, real fog, ordinary weather, the only thing in this whole contested strip of the world that both nations agreed on.</p>
+<p>Somewhere across the water, a man called Pieter Lang was staring at a blank field on a screen.</p>
+<p>Somewhere, in a barn, two brothers had stopped arguing and were asleep on a blanket, one on each side of an old man who was still humming.</p>
+<p>Somewhere, Yuki Tanaka was finishing her eleventh memorandum.</p>
+<p>Somewhere, in a concrete cell two hours north of the capital, Isaiah Okonkwo was sewing the last strip of newsprint into the lining of his coat.</p>
+<p>Somewhere, in a silent glass atrium, Helena Kovač sat on a chair facing a young man who did not know she was there.</p>
+<p>And somewhere, in the primary repository of the Veridican factorepo, in a core that everyone in the country had been taught since childhood could never be altered, an hour was waiting. An hour booked by no one. Fourteen hundred to fifteen hundred, on the fifteenth of November, 2106.</p>
+<p>Marcus Chen stood at the window with Kira Osman's hand in his and looked out at the fog.</p>
+<p>"Tomorrow," he said.</p>
+<p>He said it the way he had once said <em>the facts are the facts</em>: as something certain. And then, because it was true, and because he was the only one who could say it for himself, he said the rest.</p>
+<p>"Tomorrow, history will be made. And even if they erase it, even if they try to correct it, we'll remember." He held her hand. "We survived erasure once."</p>
+<p>"We'll survive it again," said Kira.</p>
+<p>Outside, the fog came in off the lake, and covered everything.</p>
+<hr>
+<p><strong>THE END</strong></p>
+<p><em>The Histologic series continues in</em> The Lost Hour.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="29-the-missions.html" class="nav-button">← Previous: Chapter 29: The Missions</a>
+            <div class="nav-center">Epilogue: Seven Paths, One Truth</div>
+            <span class="nav-button disabled">Next →</span>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

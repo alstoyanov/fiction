@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="01-cell-7h.html" class="nav-button">← Previous: Chapter 1: Cell 7-H</a>
+            <div class="nav-center">Chapter 2: The White Room</div>
+            <a href="03-two-months.html" class="nav-button">Next: Chapter 3: Two Months →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 2: The White Room</h1>
+<p><em>October 9, 2105. Wing C, Treatment Room C-2</em></p>
+<hr>
+<p>They came for him after breakfast, as promised.</p>
+<p>Two orderlies, the same two who had taken Samuel. One was a broad young man with a shaved head and very clean fingernails. The other was an older woman with a braid. They were courteous. The young man said "Good morning, Mr. Chen," through the speaker grille before he opened the door, as if knocking. The woman asked if he had slept.</p>
+<p>"No," Marcus said.</p>
+<p>"That's normal the first night," she said kindly. "It gets easier."</p>
+<p>He looked past her at 7-G. Samuel was sitting exactly where he had sat all night, hands folded, face turned to the wall. His breakfast tray was untouched in the slot.</p>
+<p>"Does it?" Marcus said.</p>
+<p>The woman didn't answer. She touched his elbow, lightly, to guide him out.</p>
+<hr>
+<p>The door at the end of the atrium led to a short white corridor with four doors on each side. Each door had a number and a small panel of lights: green, amber, red. Most of the panels were dark. One, halfway down, glowed amber. As they passed it Marcus heard nothing, but he felt, or imagined he felt, a faint vibration in the floor, like distant machinery.</p>
+<p>C-2 was at the end.</p>
+<p>The room was white. Not the clean, bright white of the cells, but a softer, deeper white that seemed to absorb light rather than reflect it, so that there were no shadows anywhere and the corners were hard to find. In the middle was a reclining chair, also white, padded, with armrests and a footrest, like a very expensive dentist's chair. Above the head of it hung a curved hood of pale material on a jointed arm.</p>
+<p>To one side, a console with three screens. To the other, a small table with a jug of water and a single glass.</p>
+<p>The wall opposite the chair was a mirror.</p>
+<p>"Please sit," said the orderly with the braid, and Marcus sat, because Hayes had told him to do what they asked.</p>
+<p>The chair was comfortable. That was almost the worst part. It adjusted itself under him with a soft hydraulic sigh, lifting his feet, tilting his back, until he was half lying, looking up at the hood. The orderlies fastened a padded strap across his forearms. Not tight.</p>
+<p>"It's so you don't hurt yourself," the young man explained. "People move sometimes. Without meaning to."</p>
+<p>"Thank you," Marcus said, and could not believe he had said it.</p>
+<p>The orderlies left. The door sealed.</p>
+<p>For a minute he was alone with the mirror and the hood and the silence. He looked at his own reflection: a thin man in gray, dark hair uncombed, glasses slightly crooked, lying in a white chair in a white room. He looked, he thought, like a patient. He looked like someone who needed help.</p>
+<p>Then the door opened again and two people came in.</p>
+<p>The first was Dr. Moss. She smiled at him with such warmth, such plain human gladness, that for one moment he was simply glad to see her.</p>
+<p>"Good morning, Marcus," she said. "May I call you Marcus? I feel we know each other a little now."</p>
+<p>"Yes."</p>
+<p>"This is Dr. Morrison." She gestured to the man behind her. "He looks after the equipment. He's very good."</p>
+<p>Dr. Morrison was younger, late thirties perhaps, with sandy hair that needed cutting and pale eyes that went to the console, and stayed on the console, and did not come to Marcus at all. He nodded in Marcus's direction without looking at him. He sat down at the screens and began to work.</p>
+<p>Dr. Moss pulled a stool up beside the chair and sat, close enough to touch. She took his hand, the one nearest her, beneath the strap. Her fingers were warm and dry.</p>
+<p>"I'm going to stay here the whole time," she said. "I'll be right beside you. You won't be alone."</p>
+<p>He wanted, absurdly, to thank her again.</p>
+<hr>
+<p>"Good morning, Mr. Chen."</p>
+<p>The voice came from nowhere. From the mirror, he realised. From behind it. It was a man's voice, pleasant and unhurried and perfectly calm, the voice of someone reading aloud to a child or explaining a procedure to a nervous client. It did not sound like a speaker. It sounded as though the man were in the room, just behind Marcus's head, speaking softly into his ear.</p>
+<p>"My name is Dr. Reeves. I'm going to be guiding your treatment. I won't be in the room today, but I'll be with you. You'll hear me."</p>
+<p>"Why can't I see you?"</p>
+<p>"Because I'm not important," the voice said, with gentle amusement. "You are. Let's keep our attention on you."</p>
+<p>The hood above him moved. Dr. Morrison touched something, and the jointed arm lowered it, slowly, until it settled over the top and sides of Marcus's head like a cupped hand. It was cool. It fitted snugly against the skin behind his ears, over the old installation scars, and he felt the same faint hum he had felt from Dr. Moss's band in the Enforcement Center. Stronger, now. Much stronger.</p>
+<p>Somewhere under his skull, the interface he had carried since he was eight years old woke up and said <em>yes</em>.</p>
+<p>"We're going to help you see clearly," Dr. Reeves said. "That's all this is. You're going to see your memories as we see them. You don't need to do anything. You don't need to try. And please don't try to hide anything." A pause, kind. "There is nowhere to hide."</p>
+<p>Dr. Moss squeezed his hand.</p>
+<p>"State your name," said the voice.</p>
+<p>"Marcus Chen."</p>
+<p>"State your crime."</p>
+<p>He had rehearsed it. He said it the way Kade had said it. "Prolonged exposure to a known outlaw recruiter. Contamination probability seventy-three percent."</p>
+<p>"Good. Do you accept your guilt?"</p>
+<p>"I accept the facts."</p>
+<p>The voice seemed pleased. "That's a very precise answer."</p>
+<p>"I'm a historian."</p>
+<p>"I know." A pause. "Do you believe, Mr. Chen?"</p>
+<p>It was not a question he had been expecting. It was not in any procedure he had ever read. He looked at the mirror, at his own face, and past it, at wherever the voice was.</p>
+<p>"Yes," he said. "I believe in Veridica. I believe in the factorepo. I believe in The Judge. I never stopped."</p>
+<p>"I know," said Dr. Reeves. "That's why you're here."</p>
+<hr>
+<p>It began with the café.</p>
+<p>He did not decide to remember it. It was simply there, all at once, not like a memory but like a place he had been lifted into and set down: the small round table, the heat lamp overhead, the evening crowd moving past on the plaza. Elena across from him, dark hair catching the golden light, her hands wrapped around a cup of something with milk and cinnamon. He could smell the cinnamon. He could hear, faintly, the scrape of a chair on the paving stones behind him.</p>
+<p><em>Seventeen forty-three hours.</em> The timestamp arrived with it, the way it always did. <em>Marcus Chen and Elena Reyes, meeting at café.</em></p>
+<p>"Tell me about being a historian," she said. "Is it as exciting as it sounds?"</p>
+<p>It was so real that he felt his mouth begin to move to answer her.</p>
+<p>Then something <em>touched</em> it.</p>
+<p>He had no other word for it, then or later. The memory did not change, not yet. It simply stopped being his. He felt it lifted, the way you might lift a photograph from a table to look at it more closely. Turned over. Held up to a light that was not his light. He was still inside it, still at the table with the cinnamon and the heat lamp and Elena's warm, amused voice, but now there was someone else there with him, someone standing just behind his shoulder, looking at everything he was looking at. Looking at <em>him</em> looking at it.</p>
+<p>He felt his own feeling from outside. The rush of warmth when she smiled. The heat in his face. The loneliness underneath it all, the years of it, suddenly and terribly visible, like a stain on a white cloth.</p>
+<p><em>Interesting,</em> said the someone. Not in words. In attention.</p>
+<p>It moved on.</p>
+<p>The dinner by the river. The green dress. His parents, his father's uniform, his mother's history lessons, <em>they'd be proud of you</em>. The walk in the park: <em>So The Judge can access any fact in the system?</em> The couch in her apartment, her hair soft against his cheek. <em>Do you ever wonder if there's more to truth than what's in the factorepo?</em></p>
+<p>Each one was lifted and turned and examined. Each one lay open under that light, and he felt the someone read it the way a clerk reads a form, looking for errors.</p>
+<p>It was not pain. He had braced for pain, and pain would have been simpler. This was worse than pain. This was being read. It was his diary being opened by a stranger and read aloud in a pleasant voice to a room full of people he could not see.</p>
+<p>He realised he was breathing very fast.</p>
+<p>"You're doing very well," Dr. Moss said, somewhere far away. Her hand was still in his. "Just breathe, Marcus."</p>
+<hr>
+<p>It was strange, what the someone ignored.</p>
+<p>He noticed it only faintly, the way you notice a sound in another room. The machine, or the attention behind the machine, seemed to move toward heat. It went where he had <em>felt</em> something. The café, the river, the couch, the drawer with the communication device, the cold new stranger's face that Elena had turned toward him in the kitchen doorway. His father's funeral. His mother's hands.</p>
+<p>But there were other things in his head, too, thousands of them, and those it passed over entirely. Three years of workdays. The traffic incident at Fifth and Main. The property dispute between neighbours. The morning coffee, black, no sugar. The endless, orderly procession of facts he had entered, verified, filed. It skimmed across all of that like a hand across the surface of water, not stopping, not interested.</p>
+<p>He did not think about what that meant. There wasn't room to think. He only noticed, and forgot that he had noticed, the way you forget a dream.</p>
+<hr>
+<p>"These memories are corrupted," said Dr. Reeves.</p>
+<p>His voice was gentle. It was, Marcus thought, a voice of enormous patience.</p>
+<p>"They contain contamination. You formed an attachment to an outlaw, Mr. Chen. You allowed her to become the most important fact in your life. That attachment is where the doubt lives. You don't feel it as doubt, I know. You feel it as love. That's what makes it dangerous." A pause. "They must be corrected."</p>
+<p>"No," Marcus said. His own voice sounded thick and far away. "I reported her. I <em>reported</em> her."</p>
+<p>"You did. And that was the right thing to do. We're very proud of you for it." It sounded sincere. "But the attachment remains. Let's look at it together."</p>
+<p>And the apartment came.</p>
+<p>The kitchen doorway. The two glasses of wine in her hands. Her face changing, the warmth draining out of it, the cold calculation underneath. <em>You weren't supposed to find that.</em> The argument. The comm call. The enforcers at the door.</p>
+<p>And her last words, before they took her. He had played them over to himself every night since. He had played them over to himself at the Enforcement Center, and on the transport, and last night in his cell.</p>
+<p><em>When they come for you too, remember this conversation.</em></p>
+<p>The memory held there, and replayed.</p>
+<p><em>When they come for you too, remember this conversation.</em></p>
+<p>And replayed.</p>
+<p><em>When they come for you, too. Remember this conversation.</em></p>
+<p>The inflection was different. He was almost sure the inflection was different. The pause had moved. In the first version, the one he knew, she had sounded tired and sad. In this one she sounded almost mocking.</p>
+<p><em>When they come for you… remember…</em></p>
+<p>Words missing. Just gone, as if cut out with a blade. Her mouth moved and the sound skipped over the gap.</p>
+<p><em>When they come. Remember.</em></p>
+<p>"Stop," Marcus said. "Stop, that isn't—that isn't what she said—"</p>
+<p>"What did she say?" the voice asked, curious.</p>
+<p>And he opened his mouth to tell it, and found that he did not know.</p>
+<p>He had three versions in his head now, overlapping, and he could not tell which one had been first. He reached for the true one, the one he had lived, and each time he reached he touched a different one. They were all equally clear. They were all equally real. He had carried those words for two days as the one solid, irreplaceable fact of his ruin, and now he did not know what they were.</p>
+<p>"It's all right," said Dr. Moss, very close. "It's all right. You're safe."</p>
+<p>He tried to fight.</p>
+<p>He did not know how. That was the thing he would remember afterwards, with a kind of wonder: he had spent his whole life believing, and belief turned out to be useless. He tensed his whole body against the strap and it did nothing. He thought, as clearly and deliberately as he could, <em>I remember what she said,</em> and the thought slid off the machine like rain off glass. He argued. <em>The facts are the facts. I was there. I heard her.</em> But the machine wasn't arguing with him. It was not interested in his facts. It was simply, patiently, turning his memories over in its hands, rubbing at them until they blurred.</p>
+<p>At the console, Dr. Morrison's hand jerked.</p>
+<p>It was a small movement, a twitch of the fingers above the controls, as if he had touched something hot. Marcus saw it at the edge of his vision. He saw Dr. Moss see it too, and frown, very slightly, and glance at Morrison with a question in her face. Morrison did not look up. His hand steadied. He went on working.</p>
+<p>"That's enough for today," said Dr. Reeves. He sounded satisfied. "You've done beautifully, Mr. Chen. Truly. We'll continue in a few days."</p>
+<p>The hood lifted.</p>
+<hr>
+<p>He was sick in the corridor, and again in his cell.</p>
+<p>The orderlies were kind about it. The woman with the braid wiped his mouth with a cloth and gave him water and told him it was very common the first time, and that it would pass. The young man walked him back along the atrium with a hand under his arm, because his legs weren't working quite right. The honeycomb of cells swung past him in a blur of light. He was aware of faces turning.</p>
+<p>Samuel, in 7-G, did not turn.</p>
+<p>They put him on his bed. The door sealed. He lay for a while and then got up, suddenly, and made it to the steel sink just in time, and vomited again, until there was nothing left and he was simply retching, his hands braced on the cold edge of the sink.</p>
+<p>When it passed he sat down on the floor with his back against the bed, the way the woman four cells down sat, and then that frightened him and he got up again and sat on the bed properly, and bent forward, and put his head in his hands.</p>
+<p>He stayed like that for a long time.</p>
+<p>He tried to think about what had happened and could only feel it. The lifting. The turning. The pleasant voice. The warm, dry hand of Dr. Moss, who had held his the entire time and meant every moment of it. That was what he could not get past. She had meant it. She had sat beside him while it happened, and held his hand, and told him he was safe, and she had <em>meant</em> it.</p>
+<p>He tried to picture Elena's face.</p>
+<p>It came. He was almost weak with relief when it came. Dark hair, dark eyes, the small, amused curve of her mouth. It was still there.</p>
+<p>But it came the way a photograph comes up on a screen: flat, and labelled, and slightly too still. It had the look of something that had been filed. He could see her face, but he could not quite feel that he had ever sat across a table from it. It was like looking at her record in the factorepo. <em>Elena Vasquez, alias Reyes. Recruiter. Known associate.</em></p>
+<p>He lowered his hands and looked at them.</p>
+<p>This was the first session. <em>We'll continue in a few days.</em> And then again, and again, for weeks, for months, for <em>up to one year</em>. And each time they would lift another memory and turn it and rub at it, until it blurred, until it was filed, until there was nothing left to file. And then he would sit on his bed with his hands in his lap and turn his face to the white wall, and a new inmate would press a palm against the glass, and he would not know what a hand was for.</p>
+<p>He was going to be erased.</p>
+<p>He understood it now, with total clarity, the way you understand a fact. Not corrected. Not taught. Not healed. <em>Erased</em>.</p>
+<p>He looked up, because he could not look at his own hands any longer.</p>
+<p>Across the atrium, the three identical men had come back from their work detail. He had not seen them come in. They were sitting on their beds in their triangle, in their overalls, in their identical posture. But they were not looking at the walls.</p>
+<p>All three of them were awake. All three of them were sitting very still.</p>
+<p>And all three of them, in perfect, silent unison, were facing the same direction.</p>
+<p>Toward him.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="01-cell-7h.html" class="nav-button">← Previous: Chapter 1: Cell 7-H</a>
+            <div class="nav-center">Chapter 2: The White Room</div>
+            <a href="03-two-months.html" class="nav-button">Next: Chapter 3: Two Months →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

@@ -21,7 +21,7 @@ Action with moral cost, and **the book's central twist (Twist 1)**. Reeves claim
 - **The ambiguity is the point.** The file proves Reeves *arranged the conditions*. Nothing can prove he *caused the feeling*. Reeves may be telling the truth, or he may be trying to break his escaping subjects with the one weapon he has left. Kira can't tell. Neither can the reader.
 - **Marcus**, shaking, with no counter-argument: "You took my memories. You don't get this too." It sounds like a hope, not a certainty, and he knows it.
 - **Dmitri subdues Reeves.** It's controlled, not cruel. A blow and restraints. Tanaka is hurt in the struggle, cut on the right temple by a falling rack: the **scar** from her character file.
-- **The copies:** a partial set to Nikolai's partition, the physical drive to Elena (it holds only part of the archive, but it includes R-2), and the rest left for Isaiah to send through Kovač's director channel over the coming days.
+- **The copies:** Elena's six-terabyte drive gets only the core (aims, subject files, protocols, the seven's session data, and R-2). From the data-centre console, which links to the Registry, Nikolai pushes a few fragments into his old partition for safety. The other ~34 terabytes stay on the arrays for Isaiah to send out through Kovač's director channel over the coming days.
 - **Isaiah and Kovač stay** in the data centre as the others go. Isaiah: "Go. I'll send everything from here." Kovač begins typing the official record: *cognitive failures*.
 - **Moss appears** in the tunnel mouth, dazed, storm-lit and sincere. She sees them and understands. She says, "I'm sorry. I have to save you," and hits the manual alarm. She isn't a villain. She's a believer.
 

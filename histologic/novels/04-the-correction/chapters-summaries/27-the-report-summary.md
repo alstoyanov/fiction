@@ -23,9 +23,11 @@ The article is presented in full, a long-form piece titled something like **"Con
 - The closing paragraph: the witness remains inside so that the record cannot say he fled.
 
 ## Fragment Beats
-- The piece goes out through Kovač's director channel, routed via Synthesis relays (Isaiah's international contacts). It is picked up by Synthesis and Chronos media within hours. It's an international scandal.
+- **Mechanics (as drafted):** During the storm, Isaiah types the article at the data-centre console, with Reeves tied up on the floor watching. He attaches it to a 34 TB transfer disguised as Kovač's routine "Q3 archive backup" to the Synthesis Institute, set to publish after 72 hours. Then he walks back to 7-E and waits. He is taken at 04:10 on Aug 2, because Reeves saw him at the console.
+- The piece goes out on Aug 5 and is picked up by Synthesis and Chronos media within hours. It's an international scandal.
+- In Veridica the Registry's "deceased" entries are treated as fact, so Reeves's word that the subjects escaped carries no weight. The most rigid principle in the system is protecting the people it was built to crush.
 - Veridica calls it fabrication. The Ministry demonstration is "postponed". Reeves is not seen publicly.
-- Isaiah is moved to **maximum security** the same day. His fate is unknown to the outside world.
+- Isaiah has been in **maximum security** (Secure Care Unit 3) since Aug 2. His fate is unknown to the outside world.
 - The single-node session on Nikolai is reported as an example of what the triple cradle does to a bond.
 - Kovač is under internal inquiry. She survives for now, because anyone who wants her gone would have to explain in public what she knows.
 - In the new cradle, Isaiah goes down into his cellar and finds everything still there.

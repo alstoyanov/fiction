@@ -1,7 +1,7 @@
 # Chapter 21: The Single Node
 
 **POV:** Nikolai Volkov
-**Date:** ~Jul 18–20, 2106
+**Date:** Jul 16–21, 2106
 **Setting:** Treatment room C-1, fitted with the new triple cradle, of which only one seat is used
 **Length:** ~3,400 words
 
@@ -17,7 +17,7 @@ Twist 3: the bond gets its real test, and it costs something. This is the book's
 - **The bond holds, just.** Nikolai comes back as Nikolai.
 - **The cost:** Back in his cell he reaches for the memory he restored so lovingly in Ch 12, the **rooftop**: fog off the lake, the argument about who was born first. **It's gone.** He knows it existed and what it was about, but the memory itself is missing. The Volkov passphrase, *"Who was born first?"*, is now a question he can't answer.
 - **Reeves's conclusion,** overheard by Morrison and passed on through Tanaka: the bond *resisted*, so the full simultaneous session must come earlier, while he knows how to break it. **Final integration for all subjects is moved to Aug 2.** Reeves will not be leaving for the Ministry. He'll be in the building.
-- The escape they had planned for Aug 9–10 now has to happen on the **night of Aug 1–2**. Elena gets ten days' notice instead of three weeks.
+- The escape they had planned for Aug 9–10 now has to happen on the **night of Aug 1–2**. Elena gets about two weeks' notice instead of three and a half.
 
 ## Ending
 That night Dmitri sends a coded page to Nikolai's cell. It isn't the plan. It's the rooftop, written out in full, every word they said as twelve-year-olds, pricked into a school primer. Nikolai reads it three times. It's a story now, not a memory. He accepts it anyway, because his brothers remembered it for him, the same thing Kira did for Marcus in Ch 18.

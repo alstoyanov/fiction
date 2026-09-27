@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="18-the-breaking-point.html" class="nav-button">← Previous: Chapter 18: The Breaking Point</a>
+            <div class="nav-center">Chapter 19: The Alliance Forms</div>
+            <a href="20-the-impossible-plan.html" class="nav-button">Next: Chapter 20: The Impossible Plan →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 19: The Alliance Forms</h1>
+<p><em>June 17, 2106, 02:00. Maintenance Room B-4</em></p>
+<hr>
+<p>The work order said <em>SCHEDULED MAINTENANCE: EAST WING MONITORING SUBSYSTEM, 01:45–02:30. CAMERAS AND AUDIO OFFLINE IN AFFECTED AREAS. AUTHORISED: H. KOVAČ.</em></p>
+<p>It had taken them twelve days to arrange, and it had been built, Kira thought, the way every good system is built: out of ordinary parts that nobody would ever think to put together.</p>
+<p>Nikolai had written the work order. It was a real one. The east wing's monitoring subsystem really did need its firmware updated, and the update really did require the cameras and audio in Wing C, the treatment corridor and the technical basement to go offline for forty-five minutes. He had simply chosen when.</p>
+<p>The Director had signed it. She signed forty work orders a week. Nobody would look at this one twice.</p>
+<p>And Dr. Morrison had filed a request for an <em>overnight sleep-architecture study</em> on seven Wing C subjects, as part of the Continuity salience mapping. Subjects to be escorted from their cells at 01:50 to the technical wing, where portable monitoring equipment would be set up, and returned by 02:40. Supervised by Dr. Morrison personally. Also signed by the Director.</p>
+<p>It was the most boring piece of paperwork Kira had ever seen. She had admired it for a week.</p>
+<hr>
+<p>Morrison came for her at ten to two.</p>
+<p>He came alone, with a tablet, and opened her door from the atrium panel, and said, "Ms. Osman. Sleep study. Please come with me," in a voice so flat and professional that for a moment, half asleep, she thought it was real. Then she saw his face. It was gray and wet with sweat and he was holding the tablet in both hands.</p>
+<p>She got up and followed him.</p>
+<p>Wing C at night was a different place. The skylight was black. The cells glowed low and blue, like an aquarium with the lamps turned down. In most of them, shapes lay under blankets. In 7-G, Samuel sat upright on his bed with his hands in his lap, facing the wall, as he always did. Kira did not look at him for long.</p>
+<p>Morrison opened the other doors one by one. 7-H. 7-D. 7-E. 7-A, 7-B, 7-C. Each time, a figure in gray came out and fell into step, silently, behind them. Nobody spoke. Nobody looked at anyone. They walked out of the atrium in a line, like patients, like the shapes they had spent months pretending to be, and the door at the end sealed behind them.</p>
+<p>In the treatment corridor, at the junction, an old man was standing by the wall with a mop and a bucket.</p>
+<p>He did not look up as they passed. He was humming. Bright, rising, the phrase that meant <em>yes</em>.</p>
+<p><em>All clear.</em></p>
+<hr>
+<p>B-4 was at the end of the technical basement. A long, warm, low room full of humming cabinets and badly lit, with a terminal on a desk in one corner and a workbench along the wall. Nikolai had cleared the bench. There were no chairs. They stood.</p>
+<p>Kira had been in Wing C for six months. She had seen every one of these people every day, through glass, across an atrium, on garden benches a metre apart with their faces turned away. She had written to them and read their writing in pinpricks under times tables. She knew their handwriting, if you could call it that. She knew their filing prefixes.</p>
+<p>She had never been in a room with them.</p>
+<p>It was strange, how different they were. Isaiah was taller than she had thought, much taller; he had to duck under a cable run near the door, and stood with his head slightly bowed, like a man in a church. Tanaka was smaller. She came up barely to Kira's shoulder, and she stood very straight with her hands folded, the silver in her hair catching the cabinet lights.</p>
+<p>And the brothers.</p>
+<p>Through the glass they had been one man in three mirrors. Here, three feet away, they were identical until they moved, and then they were nothing alike. Dmitri stood by the door with his back to the wall and his eyes on the corridor, very still, the way a guard stands. Alexei came in last and, the moment the door closed, looked round the room and <em>grinned</em>, a sudden wide boyish grin that changed his whole face, and said aloud, in a normal voice, the first words she had ever heard any of them speak above a whisper: "Well. Isn't this nice."</p>
+<p>"Lyosha," said Dmitri.</p>
+<p>"What? It is nice." Alexei looked at Kira. "You're the one who fixed my key."</p>
+<p>"It was a bad key," Kira said.</p>
+<p>"It was a <em>terrible</em> key," Alexei agreed happily.</p>
+<p>Nikolai, at the terminal, made a small sound that might have been a laugh.</p>
+<p>And beside her, not touching, Marcus stood with his hands at his sides and his face doing something she had never seen it do in the garden. It was open. It was just open, the way a face is open when it does not have to be anything. He was looking round the room at all of them, slowly, one after another, as if trying to learn them by heart.</p>
+<p>His hand found hers. Neither of them looked down.</p>
+<hr>
+<p>Director Kovač came at two exactly. She came down the service stairs from the main building in a dark coat over her suit, alone, and stood inside the door with her hands in her pockets and looked at the seven of them.</p>
+<p>Nobody said anything for a moment.</p>
+<p>"Well," she said at last. "You're all taller than your files."</p>
+<p>"Director," said Isaiah, and inclined his head, as if at a press conference.</p>
+<p>"Mr. Okonkwo. I've read your work." A pause. "The harbour contracts piece was very good. It cost my brother-in-law his job."</p>
+<p>"I'm sorry to hear that."</p>
+<p>"Don't be. He deserved it."</p>
+<p>Tanaka had gone very still. Kovač looked at her. "Yuki," she said, more quietly.</p>
+<p>"Helena."</p>
+<p>"I'm sorry," the Director said. "I signed your transfer. In August. I told myself it was out of my hands."</p>
+<p>"It was," Tanaka said. "Mostly." And after a moment, in a slightly different voice: "Thank you for the work order."</p>
+<hr>
+<p>They had forty minutes. Nikolai had put a small clock on the terminal screen, counting down, and Kira found that she could not stop looking at it.</p>
+<p>They did it the way Isaiah had proposed in the primers: each person, in turn, saying what they knew. No speeches. Just facts. Isaiah stood by the workbench and kept a count of who had spoken, and Kira had the strange, dizzy sense of being in a meeting. An actual meeting, in an actual room, with an agenda.</p>
+<p>Nikolai went first. He brought up the Continuity files on the terminal, the ones he had copied in February, now assembled and decoded in his partition. The list. <em>C-1 through C-7.</em> The aims. <em>Genuine belief.</em> The schedule. <em>FINAL INTEGRATION, ALL SUBJECTS: 10 AUG 2106. MINISTRY DEMONSTRATION: 11 AUG 2106.</em> The Director read it over his shoulder and her face did not change at all.</p>
+<p>Isaiah went second. He did not need a terminal. He told them about the storms: the two hundred and six deaths, the onset times, the storms that followed a schedule instead of the fact logs. The procurement leak. 2471. He did not look at the brothers while he said the number. He did not need to. All three of them had gone quiet in the same way, at the same instant.</p>
+<p>Tanaka and Morrison went third, together. They explained the cradle. Morrison did most of the talking, in a low, rapid voice, looking at the floor. The new gains he had built, and what they did. What the triple cradle would do: <em>break the bond, or kill all three.</em> How Reeves had described it to him, over coffee, in April, as the most interesting experiment in the history of the discipline.</p>
+<p>"Why are you here?" Dmitri asked him. It was the first thing he had said since <em>Lyosha</em>.</p>
+<p>Morrison looked at him. His hands were shaking so badly he had put them in his pockets.</p>
+<p>"Because Dr. Tanaka noticed," he said. "And because when Reeves started asking questions about my calibration faults, the Director told him the cradles were due for recertification and it was her decision, not mine." He glanced at Kovač. "I went to thank her. We talked for three hours."</p>
+<p>"He cried," said the Director. "I cried too. It was very unprofessional."</p>
+<hr>
+<p>Then Kovač.</p>
+<p>She did not use the terminal either. She stood by the door with her coat still on and her hands in her pockets and spoke in the flat, dry voice of a woman briefing a committee.</p>
+<p>"The Ministry demonstration on August eleventh is real," she said. "Reeves has been preparing it for a year. There will be observers from the Ministry of Historical Integrity and, I believe, at least one member of the Cabinet. I don't know who, exactly. Reeves has backing much higher than me. I don't know how much higher. That frightens me."</p>
+<p>She looked round at them.</p>
+<p>"You've read <em>Phase Two</em>. I'll tell you what it means in plain language, because I've sat in the meetings. The government wants a weapon. Belief on demand. Not compliance. Not fear. <em>Belief</em>. The ability to reach into every head in the country through the broadcast network and make people <em>mean</em> it. They've been looking for that weapon for thirty years, in one form or another. Continuity is the closest anyone has ever come." She paused. "And you are the proof of concept. If it works on you, on the seven hardest minds Reeves could find, it works on anyone."</p>
+<p>"And if it doesn't?" said Alexei.</p>
+<p>"Then he'll say it needs more funding," said the Director, "and they'll give it to him."</p>
+<hr>
+<p>Kira went last. She had not planned to say much. She had thought she would talk about the Spire.</p>
+<p>She found herself looking at the terminal instead, at the Continuity files on the screen, and at the line under <em>Phase Two</em>: <em>adaptation for population-scale delivery via the national neural-interface broadcast network.</em></p>
+<p>"I know that network," she said.</p>
+<p>They all looked at her.</p>
+<p>"The broadcast network and the factorepo share infrastructure," she said. "Transmission layers. Node architecture. Encryption. I know, because I designed parts of it. The protocol they deleted from the factorepo, 7.3, was an encryption upgrade for the primary transmission nodes." She heard her own voice go strange. "If they want to push Continuity through the broadcast network, they'll push it through the transmission layer. My layer. I helped build the road they're planning to drive it down."</p>
+<p>Nobody said anything.</p>
+<p>"So I think I owe it to someone," Kira said, "to help close it."</p>
+<hr>
+<p>"There's one more thing," Nikolai said. "Before we decide anything."</p>
+<p>He turned to the terminal and brought up a block from his partition. A short one.</p>
+<p>"My aunt," he said. "Elena. She's been in contact since April, as you know. Through the partition. I've been asking her how. Tonight she told me." He tapped the screen. "The Registry's outbound link. Every facility's data goes up to the regional Registry node, and from there to the national archive. Her people have someone at the regional node. A technician. Someone who knows the dead-space structure as well as I do." He hesitated. "She wouldn't give me a name. She said he's very good, and he's very angry, and he's been looking for a way into Ashford since December."</p>
+<p>Kira felt something go through her. She did not let it reach her face.</p>
+<p><em>Since December.</em></p>
+<p>"She's offering an extraction," Nikolai said. "Vehicles. A safe house in the border zone. Medical care." He took a breath. "And a way to crack the building open. She says she can give us a storm."</p>
+<p>The room went very quiet.</p>
+<p>"A fact storm," said Morrison. "Here? In the capital? There's never been one in the interior. The broadcast overlap isn't—"</p>
+<p>"She doesn't mean a natural one," said Alexei softly. "Do you, Kolya."</p>
+<p>"No," said Nikolai. "She means a made one." He looked at his brothers. "She says her people have acquired a unit. From a Border Security test depot. The kind they use for the programme." He didn't need to say whose programme. "She says if we can give her the frequencies of Ashford's local broadcast node, she can put a storm on top of this building on any night we choose. She suggests the night of August ninth. The night before integration."</p>
+<hr>
+<p>Then the arguing started, and it was the best argument Kira had ever heard, because it was an argument between people who were all, completely, on the same side.</p>
+<p>"We escape," said Alexei at once. "That's all. We go. If we could go tonight I'd go tonight. We get out, we get to the border, we disappear. I've done it for a hundred people. I can do it for seven."</p>
+<p>"No," said Marcus.</p>
+<p>Everyone turned. Kira felt his hand tighten on hers.</p>
+<p>He was not looking at any of them. He was looking at the terminal, at the list of names. His face was very pale.</p>
+<p>"If we just run," Marcus said, "they'll do it to the next seven. Reeves will say it needs more funding, the Director's right, and they'll give it to him, and they'll pick seven more people. Another believer. Another architect." He swallowed. "Another Samuel. Another me. And nobody will ever know, because it's not in the record." He looked up. "We have to <em>expose</em> it. Put it in the record. So that it happened."</p>
+<p>"Exposure without escape is suicide," said Dmitri. His voice was flat and hard. "You publish from a glass box and they erase you on August tenth and say the documents are forged. There will be no one left to say otherwise."</p>
+<p>"Evidence needs a witness who survives," said Isaiah quietly. "Both of you are right. That's the problem."</p>
+<p>They all looked at the Director.</p>
+<p>She had been standing by the door the whole time with her hands in her pockets. Now she took one out and pushed her glasses up her nose.</p>
+<p>"You do both," she said. "Obviously. You escape. And you take the evidence with you."</p>
+<hr>
+<p>The clock on the terminal said nine minutes.</p>
+<p>They did not have time to plan. Dmitri said they would plan later, in the primers, and in another meeting if they could manage it, and nobody argued with Dmitri about planning. What they had tonight was a decision.</p>
+<p>"The night of August ninth," said Nikolai. "I'll tell her."</p>
+<p>"Tell her yes," said Alexei.</p>
+<p>"Tell her yes," said Dmitri, after a moment.</p>
+<p>One by one they said it. Tanaka. Isaiah. Morrison, very quietly, looking at the floor. The Director, with a small nod. Marcus.</p>
+<p>Kira said it last. And then, because she could not help it, because the words were in her and had been since December, she said something else.</p>
+<p>"They taught me the system could be wrong," she said. "That's what they did, when they took my fact. I'd spent my whole life believing it couldn't be. They taught me it could." She looked at the list of names on the screen. "I want to prove it can be <em>corrected</em>. Not by them. By us."</p>
+<p>Alexei grinned at her again, the wide boyish grin. "I'll put that on a wall for you," he said.</p>
+<hr>
+<p>Four minutes.</p>
+<p>They went out the way they had come in, in a line, behind Morrison with his tablet. At the junction in the treatment corridor Old Songs was still mopping the same square metre of floor, humming.</p>
+<p>As Kira passed the door, the Director put out a hand. Not quite touching her arm.</p>
+<p>"Ms. Osman," she said quietly. "A moment."</p>
+<p>Kira stopped. The others went on down the corridor.</p>
+<p>Kovač looked at her. Up close, in the bad light of the basement, her face was older than it had seemed across the room. The lines at the corners of her mouth were very deep.</p>
+<p>"My nephew," she said. "Adrian. Is he..." She stopped. She seemed not to know how to finish it. "He was a sweet boy," she said instead. "He used to take apart my kitchen clock."</p>
+<p>Kira thought about a man with blue eyes and a scar over one eyebrow, grinning at her in the dust on Historian's Lane. About the bridge at sunset. About the warehouse, and the silence where the sensors should have been, and his voice saying <em>I'm an outlaw, Kira. I was sent to recruit you.</em></p>
+<p>About the regional Registry node, and someone very good, and very angry, who had been looking for a way into Ashford since December.</p>
+<p>"He lied to me," Kira said. "And he loved me. Both."</p>
+<p>The Director was quiet for a long moment. Then she nodded, slowly, the way you nod at something that is exactly the answer you needed and not at all the answer you wanted.</p>
+<p>"Yes," she said. "That sounds like him."</p>
+<p>She stepped back.</p>
+<p>Kira walked on down the corridor after the others, past the old man and his mop, back toward the glass box and the blue light and the camera that would come back on in two minutes. And as she walked she understood something about Helena Kovač that she had not understood before.</p>
+<p>The Director was not their rescuer. She was not their jailer, either. She was a woman who had spent eleven years in charge of a building that had quietly become a prison around her, and she was as trapped in it as any of them.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="18-the-breaking-point.html" class="nav-button">← Previous: Chapter 18: The Breaking Point</a>
+            <div class="nav-center">Chapter 19: The Alliance Forms</div>
+            <a href="20-the-impossible-plan.html" class="nav-button">Next: Chapter 20: The Impossible Plan →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

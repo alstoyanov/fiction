@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="24-the-breakout.html" class="nav-button">← Previous: Chapter 24: The Breakout</a>
+            <div class="nav-center">Chapter 25: The Cost of Freedom</div>
+            <a href="26-the-pursuit.html" class="nav-button">Next: Chapter 26: The Pursuit →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 25: The Cost of Freedom</h1>
+<p><em>August 2, 2106, 01:20 – 02:00. The Service Road and the Perimeter</em></p>
+<hr>
+<p>The service road ran round the back of the east building for two hundred metres to the delivery gate, and Dmitri had walked it a thousand times in his head, and it was nothing like his head.</p>
+<p>In his head it had been dark and quiet. In the world it was lit from behind by every window of Ashford and loud with the alarm, a deep electronic wail that rose and fell and rose, and filled the night the way the fog used to fill the border zone. In his head it had been a road. In the world it was a road, and a hospital car park with ambulances drawn up in a row, and a field of wet grass that went all the way to the trees. Each time the storm came in again, the ground under his boots changed its mind.</p>
+<p>He walked it anyway. He walked it the way he had walked the border in the fog with a weapon in his hand: steady, eyes forward, counting.</p>
+<p><em>Two hundred metres. Delivery gate at the end. Lock on the gate: magnetic, Director's override, released at 23:50. Beyond the gate: lane, field, road. Vehicles on the road.</em></p>
+<p>He had Nikolai's arm. Alexei had Nikolai's other arm. They walked in the middle of the group, the three of them, and behind them came everyone else, close, the way people walk behind someone holding the only lamp.</p>
+<p>"<em>Dima,</em>" said Nikolai, very low. His voice was steadier than it had been in the tunnel. "<em>Lyosha.</em>"</p>
+<p>"<em>Kolya,</em>" Dmitri said. "<em>Kolya. Here.</em>"</p>
+<hr>
+<p>The storm was thinning at the edges.</p>
+<p>He felt it the way you feel a tide going out. The waves came less often, and each one was a little less. Behind them, in the building, it was still raging; he could see the outline of the east wing shimmer against the sky. But out here, at the edge of the local node's range, the three histories were fading, and the ground stayed a road for longer each time.</p>
+<p>That was good for their minds. It was bad for everything else. The storm was their cover. The storm was the reason the alarm, so far, had brought nobody out onto the service road. The storm was why every system in Ashford was still, for the moment, blind.</p>
+<p>When it went, they would be people on a road in the open.</p>
+<p>"Faster," he said. "Everyone. Faster now."</p>
+<hr>
+<p>The delivery gate was open. The Director's override had held. It stood a metre ajar in the fence line, a gap of dark between the slender pale posts, and beyond it the lane ran away between two hedges toward a field.</p>
+<p>They stopped at it. Morrison came up beside Dmitri with the tablet he had taken from C-1 clutched to his chest.</p>
+<p>"Here," Morrison said. "It has to be here. Before we cross. If we cross first, the telemetry will log us outside the perimeter while we're still alive. It has to be here, at the fence, in the storm."</p>
+<p>"Do it," said Dmitri.</p>
+<p>Morrison's hands were shaking so badly he could hardly hold the tablet. Nikolai took it from him, gently, and held it, and Morrison put his fingers on the screen.</p>
+<p>"I need your citizen numbers," he said. "All of you. I have most of them. I need to be sure."</p>
+<p>They gave them. One by one, in the dark, at the gate. Dmitri had never said his own number aloud in his life; nobody did. It was simply <em>there</em>, in the interface, the way your name is there. He said it now, into the warm night, and Morrison typed it in.</p>
+<p>"The signature's from the long-term care files," Morrison said, not looking up. "A real flatline. A patient who died in the spring. I'm going to push it through the telemetry relay for each of you. It'll look like cognitive failure at the storm's peak. Then the relay will go on reporting zero. For as long as—" He stopped. "For as long as it runs."</p>
+<p>"For as long as we're alive," said Nikolai, as he had said in B-4.</p>
+<p>"Yes."</p>
+<p>Morrison touched the screen.</p>
+<hr>
+<p>Dmitri felt it happen.</p>
+<p>That was the strange thing, afterwards. He had expected to feel nothing. It was only telemetry: a thin constant stream of data going out of the mesh in his head to the Registry, a stream he had never once in his life been aware of, the way you are not aware of your own blood. Morrison was only changing what the stream said.</p>
+<p>But he felt it.</p>
+<p>It was not pain. It was not anything as definite as a sensation. It was a kind of <em>quiet</em>. As if a sound he had been hearing all his life, so faint he had never known it was there, had stopped. The mesh was still there. The broadcasts were still coming in; the storm was still flickering at the edges of the road. But the thing going <em>out</em>, the small constant voice that had been saying <em>here I am, here I am, Dmitri Ivanovich Volkov, here I am</em> into the Registry since he was eight years old, had fallen silent.</p>
+<p>Somewhere in a database in the capital, a line had just changed.</p>
+<p><em>VOLKOV, DMITRI IVANOVICH. STATUS: DECEASED. COGNITIVE FAILURE DURING FACT STORM. ASHFORD CORRECTIONAL FACILITY, 01:31.</em></p>
+<p>It felt like nothing. That was what frightened him. It felt like nothing at all.</p>
+<p>He looked at his brothers. Alexei was standing very still with his hand over his heart, as if checking it was still beating. Nikolai was holding the tablet out at arm's length, looking at the screen, his face lit blue.</p>
+<p>"There," he whispered. "There. Look. We're dead."</p>
+<hr>
+<p>They went through the gate one at a time.</p>
+<p>Dmitri stood beside it and counted them through. Kira and Marcus. Tanaka, with Morrison's jacket pressed to her temple. Old Songs, humming, slow, on Alexei's arm. Hanna Marsh. Pavel Ionescu, with his gray top still on inside out.</p>
+<p>And then a man he did not know.</p>
+<p>He was old: seventy, perhaps, bald, stooped, in general-ward gray. Dmitri had not seen him in the tunnel. He must have come down the tunnel after them, in the dark, at the back, following the light the way the others had followed it in the atrium, and none of them had noticed. He came up to the gate and stood there, at the gap in the fence, looking through it at the lane and the hedges and the dark field beyond.</p>
+<p>He did not go through.</p>
+<p>"Come on," said Dmitri. "Quickly. Through."</p>
+<p>The old man looked at the field.</p>
+<p>As Dmitri watched, the storm came in again, a last thin wave, and the lane flickered, and for a moment it was not a lane. It was a hospital car park. It was pasture. It was nothing at all, the edge of the world. And the old man's face, lit by the windows of Ashford behind him, filled with a terror so pure and so childlike that Dmitri took a step toward him without thinking.</p>
+<p>"No," the old man said. "No. No. It's not there. It's not <em>there</em>."</p>
+<p>He sat down.</p>
+<p>He sat down on the road, on the inside of the fence, with his back to one of the pale posts and his knees drawn up, and put his arms over his head.</p>
+<p>"Please," said Dmitri. "Please. It's only the storm. It's there. The road is there. I promise you."</p>
+<p>"It isn't," said the old man, into his knees. "It isn't. I know what's in here. I don't know what's out there. I don't <em>know</em>."</p>
+<hr>
+<p>Dmitri stood at the gate.</p>
+<p>He had been an enforcer. He had made this calculation a hundred times in the border zone, with suspects and with his own men, in the fog, at checkpoints. It was not a hard calculation. It was only a cold one.</p>
+<p><em>One man. Seventy. Terrified. Will not walk. Would have to be carried, two hundred metres, down a lane, into a vehicle, and through a pursuit. The alarm has been going for eleven minutes. The storm is ending. There is no room.</em></p>
+<p>And the man had not been flatlined. Morrison had not known he was there. If he came, he would come with his telemetry live, saying <em>here I am</em> into the Registry every second, all the way to the border.</p>
+<p>He would bring them all down.</p>
+<p>Dmitri knelt beside him on the road. He put his hand on the old man's shoulder.</p>
+<p>"They will find you here," he said quietly. "Soon. When the storm ends. They will take you back inside. You will be safe."</p>
+<p>The old man nodded into his knees.</p>
+<p>Dmitri stood up. He went through the gate. He did not look back.</p>
+<p>He would remember it for the rest of his life. He knew it as he walked. He knew that he had done the right thing, and that it was the same kind of right thing Sokolov had done a hundred times at the border. And he knew that somewhere behind him, in 7-G, a young man with curly hair was sitting on a bed with his hands folded, facing a wall, and that Marcus Chen had counted to five before he left him, and had hated every number.</p>
+<p>He understood Marcus better, walking down the lane in the dark, than he had ever understood anyone who was not his brother.</p>
+<hr>
+<p>The lane ran between two hedges for a hundred metres and then opened onto a road.</p>
+<p>Three vehicles were waiting on it with their lights off.</p>
+<p>Two were long, low, dark cars, the kind the resistance used in the border zone because they looked like everything and nothing. The third was a delivery van. It was battered, white, with a faded logo on the side for a laundry service that had gone out of business years ago, and one of its rear doors was tied shut with wire.</p>
+<p><em>Rushed</em>, Dmitri thought. <em>All of it. There it is.</em> Two weeks instead of three and a half, and what could be found in two weeks.</p>
+<p>A figure stepped out of the front car.</p>
+<hr>
+<p>She was tall. She wore dark tactical clothing and a heavy jacket, and her dark hair was pulled back hard from a face that was all bones and angles, older than he remembered, lined at the eyes. She came round the front of the car in three long strides and stopped in the road and looked at them.</p>
+<p>She did not run to them. She did not cry out. She stood with her feet apart and her hands at her sides, and her eyes went over the group, left to right, fast, the way a soldier's eyes go over a patrol coming in.</p>
+<p>Counting.</p>
+<p>Dmitri knew the look. He had used it himself, a thousand times. He felt his throat go tight.</p>
+<p><em>Commander Elena Volkov.</em></p>
+<p>"Eleven," she said. "I was told eight." Her voice was low and hoarse and very controlled. "Who are the two?"</p>
+<p>"Patients from Wing C," said Dmitri. "Marsh and Ionescu. They asked."</p>
+<p>Elena looked at Hanna and Pavel for one second. Then she nodded. "The van," she said. "Teo will take them." A young man with a shaved head had climbed down from the van's cab and was holding the passenger door. "Go. Now. Get in and get down on the floor and don't get up until he tells you."</p>
+<p>They went. Dmitri watched them go. He did not know that it was a choice. He would know later. He would remember making it for the rest of his life, too: the van, because it was the only room left.</p>
+<hr>
+<p>Then Elena looked at her nephews.</p>
+<p>At the three of them, standing together in the road, in their overalls, with Nikolai between the other two. Dmitri saw her eyes go from one face to the next. The same face, three times, fifteen years older than the last time she had seen it, in the hallway of the apartment on the lakeshore, when she had knelt and held each of them in turn.</p>
+<p>For a long moment she did not say anything at all.</p>
+<p>Then, very quietly, by habit, the way she would have tested any operative coming in out of the dark from a place where people were made to forget things, she said:</p>
+<p>"Who was born first?"</p>
+<hr>
+<p>Nikolai opened his mouth.</p>
+<p>Dmitri felt it through the bond before he heard it. The reach. The groping, in the dark, for a step that was not there. He felt his brother go toward the answer, the answer that every one of them had shouted on a tarred roof a thousand times, the answer Aunt Elena had heard them fight about in the kitchen, and find the smooth blank place where it had been, and stop.</p>
+<p>Nikolai stood in the road with his mouth open and nothing in it.</p>
+<p>One second.</p>
+<p>It was the longest second of Dmitri's life. Longer than the checkpoint in the fog. Longer than the moment their mother's eyes went still. He watched his aunt's face as Nikolai failed to answer, and saw her understand. Not all of it. Enough. <em>He doesn't know. They took it.</em></p>
+<p>"I was," said Dmitri. His voice came out rough. "By thirty seconds."</p>
+<p>"That doesn't count," said Alexei immediately. His voice was shaking.</p>
+<p>And Elena Volkov broke.</p>
+<p>She did not make a sound. Her face simply came apart, all at once, the way a wall comes down: the soldier's face gone, and underneath it a woman of forty-two who had not seen her brother's sons for fifteen years, who had watched them from a distance through files and rumours and informants, who had sat in her own correction cell and faked her way out of it and gone underground and spent eight months planning how to get into a building to bring them out.</p>
+<p>She crossed the road in two strides and put her arms around all three of them at once.</p>
+<p>It should not have been possible. She was not a big woman. But they stood as they had always stood, shoulder to shoulder, like one person, and she held the one person, and the one person held her back.</p>
+<p>"I'm sorry," she said into Alexei's shoulder. "I'm so sorry. I'm so sorry."</p>
+<p>"Aunt Lena," said Nikolai. His voice cracked. It was the name they had called her as boys. He had not lost that one.</p>
+<p>She held them for a long time. Then she stepped back, and wiped her face with the back of her hand, and looked at each of them in turn.</p>
+<p>"Your father didn't change," she said. "You thought he changed. He didn't. They <em>changed</em> him." Her voice was very steady now. "I should have told you. When I came that last time. I should have told you what it was. I thought you were too young. I thought if you knew, you would go looking, and they would take you too." She laughed once, terribly. "And they took you anyway."</p>
+<p>"We know," said Dmitri. "Now. We know."</p>
+<hr>
+<p>She turned, then, and saw Marcus.</p>
+<p>He was standing a little apart, with Kira. He had not come forward. He was standing in the road in his gray clothes with his glasses crooked and his face very pale, looking at her.</p>
+<p>Dmitri watched them look at each other.</p>
+<p>He did not know everything that was between them. He knew only what Marcus had written in the primers, and what Elena had written to Nikolai, and what the enforcers' records said. A café. A river. Eight weeks. A drawer, a device, a phone call, an arrest. A woman on a couch saying <em>when they come for you too, remember this conversation</em>.</p>
+<p>"Is he…?" said Elena. She said it to Kira. She did not seem able to say it to him.</p>
+<p>"He's recovering," Kira said. Her voice was very even. "But they almost got him."</p>
+<p>Elena looked at Marcus for a long moment.</p>
+<p>"I told you," she said at last, quietly. "To remember that conversation."</p>
+<p>"I didn't," said Marcus. "They took it." A pause. "Some of it came back. On its own. About your brother." He glanced at Kira. "The rest, I had help with."</p>
+<p>Elena opened her mouth, and closed it.</p>
+<p>Neither of them said anything else. Dmitri did not think either of them knew how. There was too much, and all of it was the wrong shape for a road at two in the morning with an alarm going behind them. It would have to wait. Some of it, he thought, would have to wait a very long time.</p>
+<hr>
+<p>Old Songs was already in the second car. Alexei had helped him in. He was sitting in the back seat with his hands in his lap, looking out of the window at the lit building beyond the hedges, humming.</p>
+<p>"Assignments," said Dmitri.</p>
+<p>He gave them fast. He had planned them in the garden, in stones. <em>Lead car</em>: Alexei driving, because Alexei knew every road from here to the border and three ways around each of them; Elena beside him; Marcus and Kira in the back. <em>Second car</em>: Dmitri driving; Nikolai; Tanaka, who needed to lie down; Morrison; Old Songs. <em>Van</em>: Teo driving; Hanna Marsh and Pavel Ionescu on the floor in the back.</p>
+<p>It was the only way it fitted. Eleven people, three vehicles, and one of them a laundry van with its door wired shut.</p>
+<hr>
+<p>Tanaka stopped him at the door of the second car.</p>
+<p>"The alarm," she said. "Listen."</p>
+<p>He listened. It had changed. The rising, falling wail from the building had been joined by something else, further off, from the direction of the main road into the capital: a different siren, higher, two-toned. And then another. And then, on the horizon to the west, where the ring road ran, a line of lights. Blue and white. Moving fast.</p>
+<p>"Border Security," said Elena. "Moss's alarm went to the district command. They'll have dispatched the moment it came in." She looked at the building. "The flatlines will confuse them. Officially you're all dying in there. But somebody will have seen something. Somebody always does." She pulled open the door of the lead car. "They're coming anyway."</p>
+<p>"How far?" said Dmitri.</p>
+<p>"Ten minutes. Less." She got in. "East. Into the zone. It's still storming out there. The natural ones." She said <em>natural</em> with a small, bitter twist. "They won't follow us far into a storm."</p>
+<p>Dmitri looked at the line of lights on the ring road.</p>
+<p>"They will," he said. "I would have."</p>
+<hr>
+<p>The engines started.</p>
+<p>Dmitri got in behind the wheel of the second car. Nikolai slid in beside him. In the back, Tanaka lay down across the seat with her head on Old Songs' lap and Morrison's jacket pressed to her temple, and Morrison sat on the floor by her feet, and Old Songs put one thin old hand on her hair and went on humming.</p>
+<p>The lead car pulled out onto the road without lights. Dmitri followed. In the mirror he saw the van lurch after them, its wired door rattling.</p>
+<p>He took one last look at Ashford through the rear window.</p>
+<p>It was blazing with light. Every window. Alarms sounding, figures moving behind the glass, the outline of the east wing still shimmering faintly against the sky where the last of the storm clung to it. Somewhere in there, in a cold room of blue lights, Isaiah Okonkwo was sitting at a console typing. Somewhere, in a basement, the Director was letting the shielding come back up and beginning, very carefully, to write a report. Somewhere, in 7-G, Samuel. Somewhere, on the road inside the fence, an old man with his arms over his head.</p>
+<p>Somewhere, Reeves, on the floor between the racks, smiling.</p>
+<p>It was emptying. It was burning with light and emptying.</p>
+<p>He turned his eyes back to the road.</p>
+<p>He thought about the unit that had made the storm. A vehicle-mounted transmitter, stolen from a Border Security test depot. The kind they used for the programme. The kind that had been used, fifteen years ago, on a street in the border zone, on a systems engineer called Ivan Volkov, who had been corrected and sent home and was quiet, and no longer asked questions.</p>
+<p>Sokolov's programme. Sokolov's unit. Used tonight, for the first time in history, inside the capital itself.</p>
+<p>He knew, as surely as he knew the road under his wheels, exactly who would be sent after them.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="24-the-breakout.html" class="nav-button">← Previous: Chapter 24: The Breakout</a>
+            <div class="nav-center">Chapter 25: The Cost of Freedom</div>
+            <a href="26-the-pursuit.html" class="nav-button">Next: Chapter 26: The Pursuit →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

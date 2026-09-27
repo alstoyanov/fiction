@@ -1,167 +1,223 @@
 # Prologue: The Conviction
 
-## August 1, 2106 - Veridica Central Courthouse
-
-The brass gears of justice turned with mechanical precision.
-
-Marcus Chen stood in the defendant's box, hands clasped behind his back, watching The Judge's massive display screens flicker through thousands of facts per second. The courtroom's vaulted ceiling amplified every sound: the hum of processing units, the rustle of the prosecutor's papers, the quiet breathing of the dozen observers in the gallery.
-
-He'd been in this building a hundred times as an analyst. Never as the accused.
-
-The Judge's voice emerged from speakers embedded in the walls—synthesized, gender-neutral, absolutely certain: "Marcus Chen, Factorepo Analyst Level 3, you stand convicted of ideological contamination through sustained contact with known outlaw operative Elena Vasquez. The evidence is conclusive. Your factual record shows 47 documented interactions over six months, including 12 instances of physical intimacy, 8 exchanges of classified information, and 1 instance of active betrayal of your duties."
-
-Marcus's jaw tightened. Every word was true. Every fact was accurate. And yet—
-
-"You reported her to authorities," The Judge continued, "demonstrating residual loyalty to the Histologic system. However, psychological analysis indicates contamination has occurred. Your belief structure shows 73% deviation from baseline Histologic values. Correction is required."
-
-"I did my duty," Marcus said, his voice steady despite the tremor in his hands. "I reported her when I discovered what she was. I chose the system over—" He stopped himself. Over love. But love wasn't a fact. Love couldn't be entered into a factorepo.
-
-"Your actions are noted," The Judge said. "They are insufficient. Contamination persists. You will be remanded to the Veridica Correction Facility for a period not to exceed one year or until successful restoration of Histologic belief, whichever comes first."
-
-The gavel—a ceremonial brass hammer operated by a human bailiff—struck once.
-
-Marcus closed his eyes. He'd done everything right. He'd followed every protocol. He'd betrayed the woman he loved to prove his loyalty to truth.
-
-And still, he'd failed.
+*October 7, 2105. Enforcement Center, Veridica Capital*
 
 ---
 
-## August 3, 2106 - Veridica Correction Facility, Intake
+The door opened, and Dr. Moss came back in with her gentle smile and her instruments of mercy.
 
-The facility looked like a university campus from the outside: brick buildings with brass fixtures, manicured gardens, paths lined with copper lanterns. Beautiful. Peaceful. A place of healing, they said.
+Marcus kept his eyes closed a moment longer. He had been whispering to himself, and he was not sure how much she had heard. *I believe. I believe. I believe.* It had sounded, in the small white room, less like a statement of fact than a prayer, and Marcus Chen had never in his life needed to pray. Facts did not require it.
 
-Marcus knew better now. This was a prison for the mind.
+"You can open your eyes, Mr. Chen," she said. "Nothing here is going to hurt you tonight."
 
-"Marcus Chen?" A woman in a crisp gray uniform checked her brass tablet. "I'm Supervisor Hayes. Follow me, please."
+He opened them. Dr. Reyna Moss was perhaps fifty, with gray hair cut short and practical and a face that seemed built for reassurance: soft around the mouth, steady around the eyes. She carried a slim case, which she set on the foot of the bed. When she opened it he saw no needles and no restraints, only a curved band of pale material, a tablet, and a small sensor disc on a cord.
 
-They walked through corridors lined with motivational posters: *"Truth Sets You Free"* and *"Belief is Strength"* and *"The Judge Knows."* Each one made Marcus's stomach tighten.
+"This is an assessment," she said. "Not a treatment. Think of it as taking your temperature."
 
-"You'll be in Group Seven," Hayes said, not unkindly. "Eight inmates total. You're the last to arrive. Group sessions begin tomorrow."
+"My temperature is normal."
 
-"Eight?" Marcus asked. "I thought correction groups were seven."
+"I'm sure it is." She smiled at him as though he had made a small, sweet joke. "May I?"
 
-"Usually, yes. This is a... special group." Hayes's expression flickered—was that pity? "You'll understand soon enough."
+He let her fit the band around his head. It was lighter than he expected, and cool, and it settled against the skin behind his ears where the scars of his installation had faded to thin white lines twenty years ago. He remembered his enlightenment day only in pieces: his mother's hand, his father's uniform, a cake with the Veridican seal in blue icing. The first morning he'd woken up simply *knowing* the date of the Founding without having to be told. It had felt like a door opening.
 
-They stopped at a door marked **CELL 7-H**. Hayes pressed her palm to the brass scanner.
+The band hummed faintly. Somewhere under his skull, the interface he'd carried since he was eight years old said hello to Dr. Moss's tablet.
 
-"Your belongings have been processed. You'll receive facility clothing, toiletries, and access to the library and gardens during designated hours. Meals are communal. Sessions are mandatory." She paused. "Mr. Chen, I want you to know—most people who come here do get better. The correction process works."
+"I'm going to show you some words," she said. "You don't need to say anything. Just read them."
 
-Marcus met her eyes. "And if it doesn't?"
+The tablet's surface brightened.
 
-Hayes looked away. "It does. It has to."
+*CAFÉ.*
 
-The door opened. Inside: a narrow bed, a desk, a chair, a small window overlooking the garden. Clean. Sparse. Lonely.
+He read it. Nothing happened. He felt foolish.
 
-"Welcome to correction," Hayes said softly, and left him alone.
+*PLAZA.* *RIVER.* *DINNER.*
 
-Marcus sat on the bed and stared at his hands. These were the hands that had held Elena. That had typed the report that condemned her. That had reached for her one last time as the enforcers took her away.
+*ELENA.*
 
-She'd looked at him with such sadness. Not anger. Just sadness.
+Something moved in his chest, low and involuntary, like a stair giving way under his foot. He kept his face still. He was good at keeping his face still. He had kept it still for forty-seven recorded interactions.
 
-"You still don't understand," she'd said. "But you will."
+*VERIDICA.* *FACTOREPO.* *THE JUDGE.*
 
-Marcus lay back on the thin mattress and closed his eyes. Somewhere in this facility were seven other people—eight total, Hayes had said. Eight people the system had deemed broken.
+*DOUBT.*
 
-He didn't feel broken. He felt like the only sane person in an insane world.
+*FATHER.*
 
-Or maybe that was exactly what contamination felt like.
+*MOTHER.*
 
-Tomorrow, he'd meet the others. Tomorrow, the correction would begin.
+*LOYALTY.*
 
-Tonight, he just wanted to remember Elena's face before he forgot how to feel anything at all.
+*ELENA.*
+
+The second time was worse than the first, because he had seen it coming.
+
+Dr. Moss watched her tablet rather than his face, and Marcus understood with a small cold shock that his face did not matter. The band on his head was reading something far more honest than his expression.
+
+"Thank you," she said after a while, and switched it off. "That's all."
+
+"What does it show?"
+
+"That you've been through something very painful." She coiled the sensor cord with care. "And that you're a strong believer. Stronger than most. That's good, Mr. Chen. You should be proud of it."
+
+"Then why am I here?"
+
+"Because belief and exposure are different things. You know that. You heard Officer Kade explain it." She closed the case. "Your case is of interest. You'll be going somewhere with better resources than we have in the city intake wards. You're lucky, really."
+
+*Lucky.* He filed the word away, the way he filed everything, with a time and a location attached. *Dr. Reyna Moss, Enforcement Center holding room 4, 21:10 hours: the subject is lucky.*
+
+"Try to sleep," she said at the door. "Tomorrow is a new beginning."
+
+The lock engaged behind her with a soft, expensive sound.
 
 ---
 
-## August 4, 2106 - Group Session Room
+He did not sleep.
 
-The room was circular, with eight chairs arranged in a ring. Large windows let in morning light. A brass clock on the wall ticked steadily. In the center of the circle stood a woman in her fifties, gray hair pulled back, kind eyes that had seen too much.
+He lay on the narrow bed and did what he had done every night of his adult life: he reviewed the day's facts. It was a habit left over from his first year at the Regional Factorepo, when he'd been so afraid of making a mistake that he rehearsed every entry in his head before he went home. The rehearsal had become a ritual, and the ritual had become a comfort.
 
-"Good morning," she said as the eight inmates filed in. "I'm Director Helena Kovač. Welcome to Group Seven."
+*October seventh. Oh-nine-hundred hours: statement at the Enforcement Center, as requested. Officer Kade presiding. Contamination probability calculated by The Judge: seventy-three percent. Threshold for corrective intervention: sixty percent. Subject remanded to corrective custody. Subject did not resist.*
 
-Marcus took a seat and looked around the circle.
+Seventy-three percent.
 
-To his left: a young woman with sharp eyes and callused fingers, dressed in facility gray but sitting with perfect posture. She caught him looking and gave a tiny nod.
+He turned the number over, the way he would have turned over a suspicious entry at work, looking for the flaw. There wasn't one. The Judge had analysed one hundred and twenty-seven hours of conversation, three visits to an apartment equipped with surveillance blockers, eight weeks of exposure to a trained recruiter. The Judge did not guess. The Judge did not have moods. The number was the number.
 
-Next to her: three men who looked eerily similar—no, identical. Triplets. One sat rigid as a soldier. One lounged with practiced ease. One hunched forward, anxious.
+What was strange, what kept him awake, was that he still believed.
 
-Across from Marcus: an older woman with gentle hands and a doctor's bearing. She smiled at him warmly.
+He tested it the way you test a sore tooth, pressing where it ought to hurt. *Is Veridica's factorepo accurate?* Yes. *Is The Judge just?* Yes. *Was Elena right?* No. *Was your arrest a mistake?*
 
-Next to her: a tall man with dark skin and intelligent eyes, holding a small notebook despite the no-writing rule.
+He hesitated there. Then he made himself answer honestly, because honesty was the only thing he had left that was entirely his.
 
-And at the end: an old man with long white hair and a beard, humming softly to himself, tapping his fingers on his knee in rhythm.
+*No. The facts show exposure. Exposure requires correction. The system is working exactly as designed.*
 
-"You are here," Director Kovač began, "because you have been contaminated by outlaw ideology. But contamination is not permanent. Belief can be restored. Truth can be remembered. That is our purpose here."
+It was, he thought, the most loyal thing he had ever believed, and it was sending him to prison.
 
-The old man started singing, very softly: *"All you need is love, love... love is all you need..."*
+He must have dozed, because the voice came to him through a thin layer of sleep. Dr. Moss, somewhere beyond the door, speaking into a comm in the flat, efficient tone people use when they think no one is listening.
 
-Director Kovač paused, smiled gently. "Thank you, Mikhail. We'll have time for songs later."
+"…yes, the full panel. Very clean. Yes. C-1 profile confirmed." A pause. "No, no hesitation at all, he's exactly what was requested. Transfer to Ashford in the morning. Wing C." Another pause, and a small, pleased laugh. "I'll tell him. Dr. Reeves will want him before the end of the week."
 
-"The old songs knew," Mikhail said, his voice like aged whiskey. "Can't correct what isn't broken."
+Footsteps, going away.
 
-"We're all broken here," the rigid triplet said sharply. "That's why we're here."
+Marcus lay very still and repeated the words to himself so that he would not lose them. *C-1. Ashford. Wing C. Dr. Reeves.* They meant nothing. He had worked with the factorepo for three years and had never seen a case code like C-1. He had heard of Ashford: a correctional facility on the eastern edge of the capital, set in landscaped grounds, the kind of place that appeared in public information broadcasts with slow music and smiling nurses. *Healing, not punishment.*
 
-"Are we?" the lounging triplet asked. "Or are we the only ones who aren't?"
+*He's exactly what was requested.*
 
-"Gentlemen," Kovač said firmly. "We'll have time for debate. First, introductions. Tell us your name and why you're here. Marcus, let's start with you."
+Requested by whom? For what?
 
-Marcus took a breath. "Marcus Chen. Former factorepo analyst. I'm here because I fell in love with an outlaw. I reported her. They convicted me anyway."
+He told himself it was administrative language. The system had its own vocabulary, and he had simply never seen this corner of it. That was all.
 
-"Because you were contaminated," Kovač said gently.
-
-"Because I told the truth," Marcus replied.
-
-The young woman next to him spoke: "Kira Osman. Factorepo technician. I reported a stolen fact. They decided I stole it."
-
-The rigid triplet: "Dmitri Volkov. Enforcer. My brother is an outlaw. I hunted him. They decided I was helping him."
-
-The lounging triplet grinned: "Alexei Volkov. Outlaw. I helped people escape. I'm guilty. I'm also proud of it."
-
-The anxious triplet: "Nikolai Volkov. Technician. I helped both my brothers. I'm guilty of loving them."
-
-The older woman: "Dr. Yuki Tanaka. Neural correction specialist. I refused to perform correction on a patient I believed was innocent. They sent me here to be corrected instead."
-
-The tall man: "Isaiah Okonkwo. Journalist. I investigated fact storm weapons. I published what I found. They called it dangerous misinformation."
-
-The old man stopped humming and smiled: "Mikhail Petrov. They call me 'Old Songs.' I'm a historian. I taught students that the old songs knew truths Histologic can't measure. Love. Beauty. Meaning. Mystery. They called it dangerous nostalgia." He started humming again: *"The times, they are a-changin'..."*
-
-Director Kovač looked around the circle, and for just a moment, Marcus saw something flicker in her eyes. Doubt? Fear?
-
-"You are eight very different people," she said carefully. "With eight very different stories. But you all share one thing: you've lost faith in the system that keeps us safe. Our job here is to help you find it again."
-
-"And if we don't?" Alexei asked, still grinning.
-
-Kovač's expression hardened. "Then you stay here until you do."
-
-Marcus looked around the circle again. A technician who reported a crime. An enforcer who hunted his brother. A doctor who refused to hurt someone. A journalist who told the truth. An old man who sang songs.
-
-And three brothers who loved each other.
-
-None of them looked broken. None of them looked contaminated.
-
-They looked like people who had seen something they weren't supposed to see.
-
-"There's a riddle about this," Mikhail said suddenly. "What cage has no bars? What prison has no walls? What slavery calls itself freedom?"
-
-"That's enough, Mikhail," Kovač said, but her voice was shaking.
-
-Marcus met Kira's eyes across the circle. She raised one eyebrow, a question.
-
-He nodded slightly. An answer.
-
-Whatever was happening here, whatever they were supposed to be corrected of—
-
-They were going to figure it out together.
-
-The brass clock on the wall ticked forward.
-
-The correction had begun.
+He told himself that until dawn.
 
 ---
 
-**End of Prologue**
+*October 8, 2105*
 
-*Word Count: ~1,600 words*
+The transport was a white van with no windows in the back and one small grille between the cargo compartment and the cab. Marcus sat on a molded bench with his wrists in soft restraints that were more symbolic than practical. There were two other passengers: a young woman who cried silently the whole way, and a heavyset man who stared at the floor and moved his lips as if counting.
 
+An enforcer Marcus did not know, not Kade, a younger one with a shaved head and a tired face, checked their transfer documents at the loading bay. He read the first two without comment. When he got to Marcus's, he stopped.
 
+He read it again.
 
+"Ashford," he said. He looked up at Marcus with an expression Marcus couldn't place. Not contempt. Something closer to unease. "Wing C?"
 
+"I don't know," Marcus said. "That's what I was told."
+
+The enforcer's eyes went back to the document, then to Marcus, then away. "What did you *do*?"
+
+"I reported an outlaw."
+
+The young man laughed once, without humour, as if Marcus had told a joke in a language he only half understood. Then he handed back the tablet, closed the doors, and slapped the side of the van twice. They pulled out into the morning.
+
+Through the grille Marcus could see a slice of windscreen and, beyond it, the city.
+
+It was beautiful. Even now, it was beautiful. The morning sun came low and gold between the towers and lit the transit lines like threads of copper. They passed the Justice Center with its columns, the long glass flank of the Historical Archives where Elena had once asked him for directions she hadn't needed, and then, rising above everything, the Factorepo Spire: eighty stories of glass spiralling to a point, data pulsing visibly through its core like light through a vein. Marcus had never worked in the Spire. He had only fed it. Every fact he'd ever entered had travelled up through that shining column and become permanent.
+
+*Everything is recorded,* he had told Elena once, walking in the park. *There are no gaps.*
+
+The van turned east. The towers thinned into residential blocks, then into parkland, then into long, low, well-kept fields bordered by trees going yellow and red. The young woman had stopped crying and fallen asleep against the wall. The heavyset man was still counting.
+
+Marcus found that he was counting too. Not numbers. Facts. *October eighth. Oh-seven-forty hours. Eastbound transport. Three passengers. Weather clear.* It steadied him. As long as he could still put the world into its proper order, the world was still there.
+
+---
+
+Ashford Correctional Facility looked like a university.
+
+He saw it first through the windscreen as they came over a gentle rise: a scatter of low white buildings among lawns and young trees, glass walkways between them, a pond with a fountain. There was no wall, only a line of slender pale posts around the perimeter, so unobtrusive that it took him a moment to realise they were fence posts, and another moment to see the faint shimmer of the field between them. On a far lawn, a group of people in gray were doing some kind of slow exercise in unison under the eye of a woman in white.
+
+It was calm. It was orderly. It looked, he thought with a rush of something almost like relief, exactly like the broadcasts.
+
+*Healing, not punishment.*
+
+The van pulled up at a glass entrance with sliding doors. An orderly in pale green took the crying woman and the counting man one way. Another took Marcus the other.
+
+---
+
+Supervisor Hayes met him in a small intake office with a window onto the pond. She was a tall woman somewhere in her forties, with reddish hair going gray and the permanently tired look of someone who had worked night shifts for too many years. She did not smile the way Dr. Moss smiled. She smiled like a person who knew smiling was expected and was doing her best.
+
+"Mr. Chen." She glanced at her screen. "Marcus. May I call you Marcus?"
+
+"Yes."
+
+"Welcome to Ashford." She seemed to hear how that sounded, and her mouth tightened. "I'm Supervisor Hayes. I'll be responsible for your day-to-day while you're with us. Meals, schedules, privileges. If you have a problem, you bring it to me."
+
+"How long will I be here?"
+
+Hayes looked at the screen, not at him. "That depends on your progress."
+
+"The Judge's order said up to one year."
+
+"Then up to one year."
+
+"What's Wing C?"
+
+The pause was very small. He would not have noticed it three months ago. He noticed it now.
+
+"Wing C is a specialised unit," Hayes said. "Smaller. Quieter. You'll have your own room. The doctors there are the best we have." She stood and picked up a folded set of gray clothing from the corner of the desk. "Change behind the screen, please. Leave your own clothes on the chair. They'll be stored."
+
+"Supervisor, what is Wing C *for*?"
+
+She held out the clothes. She looked, for one moment, as if she might say something she shouldn't. Then she didn't.
+
+"Do what the doctors ask, Marcus," she said quietly. "That's the best advice I can give you. Do what they ask."
+
+---
+
+They walked him through the ordinary wards first.
+
+He understood only later that this was deliberate, or at least that it was routine, which in Ashford came to the same thing. The corridors were wide and bright, with long windows onto the grounds. Through glass doors he saw rooms that looked like common rooms in a good hospital: soft chairs, tables, a shelf of books, people in gray reading or playing some game with tiles or simply sitting by the windows in the sun. An old man was laughing at something. A nurse was helping a woman with her hair.
+
+*It's all right,* Marcus thought. *It's going to be all right.*
+
+Then they came to a set of double doors with no windows in them at all.
+
+Hayes swiped a card. The doors opened onto a short, dim vestibule, and a second set of doors, and she swiped again, and the second doors opened, and the sound of the rest of the building simply stopped.
+
+It was the silence he noticed first. Not quiet: silence. His own footsteps sounded too loud. His breathing sounded too loud.
+
+Then the light.
+
+Wing C was a long, curving atrium, three storeys high, lit from above by a skylight that turned the morning into something cool and even and shadowless. Around the atrium, on two levels, ran rows of cells. Each cell had two walls of glass, one facing the atrium and one facing its neighbour, so that the whole wing was a honeycomb of transparent boxes, lit like an aquarium, and in almost every box there was a person in gray.
+
+Faces turned toward him as he walked.
+
+Some were alert. A small woman with silver-streaked black hair, sitting very straight on the edge of her bed, watched him with an attention so focused it felt like being examined. A young man in the cell just ahead waved at him through the glass, eager, almost friendly, and mouthed something Marcus couldn't read.
+
+But many of them were not alert. Many of them looked at him and did not see him. They sat or stood with a kind of perfect stillness, their faces smoothed and calm and empty, the way a screen is calm when it has been switched off. One woman was staring at the white back wall of her cell as if it were a window onto something beautiful. A man was holding a cup of water very carefully in both hands, not drinking it.
+
+Marcus's stomach dropped.
+
+Across the atrium, arranged in a precise triangle of three cells, sat three men.
+
+They were identical. Not similar: *identical*. The same height, the same build, the same sharp features and cropped hair, the same gray-blue eyes. They wore not cell gray but work overalls, as if they had somewhere to be. They sat in the same posture on their three beds, hands resting on their knees, and they did not look at him. They were the only people in Wing C who did not turn their heads as he passed. They simply sat, calm and blank and synchronised, like three reflections of one man in three mirrors.
+
+"Keep walking, please," Hayes said.
+
+He kept walking.
+
+His cell was on the lower level, near the curve. 7-H. The glass door slid aside, and he stepped into a white room with a bed, a steel sink, a camera dome in the corner of the ceiling, and a narrow slot beside the door at waist height. The door slid shut behind him and sealed with a sigh of air. He turned and saw Hayes on the other side of the glass, speaking. He could see her lips move. He couldn't hear a word.
+
+She raised a hand, a small, awkward gesture that might have been an apology, and walked away.
+
+Marcus stood in the middle of the cell with his gray clothes and his empty hands and looked out at the honeycomb. The eager young man next door was waving again. The small woman with the silver-streaked hair had not stopped watching him. Across the atrium, the three identical men sat in their triangle, unmoving.
+
+He had believed his whole life that everything in Veridica was known.
+
+Standing in Wing C, he understood for the first time that some things were only *kept*.

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="22-the-sacrifice.html" class="nav-button">← Previous: Chapter 22: The Sacrifice</a>
+            <div class="nav-center">Chapter 23: The Fact Storm</div>
+            <a href="24-the-breakout.html" class="nav-button">Next: Chapter 24: The Breakout →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 23: The Fact Storm</h1>
+<p><em>August 1, 2106, 23:40 – August 2, 00:30. Wing C</em></p>
+<hr>
+<p><em>August first, 2106. Twenty-three forty hours. Location: Wing C, Cell 7-H. Event: subject waits. Signal: the humming.</em></p>
+<p>He had said it so many times that it no longer felt like a plan. It felt like history. Something that had already happened, that he was simply reading back out of the record.</p>
+<p>He sat on the edge of his bed in the blue night light with his hands in his lap. Not his head in his hands. Not tonight. He sat upright, the way he had sat on the first day, in October, before anything. The camera's green light watched him from the corner of the ceiling. He let it.</p>
+<p><em>Twenty-three forty-seven hours. Location: Ashford, all areas. Event: fact storm onset.</em></p>
+<p>Seven minutes.</p>
+<p>He knew what everyone else knew. The storm unit was only partly calibrated; Elena's technician had lost two weeks. It would be harder and rougher than they had planned, less even, less predictable. The drive was too small. Nikolai could not reach his partition. Reeves was in the building, somewhere, asleep in the staff quarters above the east wing, or not asleep, preparing for the morning, when three linked hoods would come down over three identical heads in C-1.</p>
+<p>He knew all of it. He had filed it. He did not let it reach his hands.</p>
+<hr>
+<p>The meal slot opened.</p>
+<p>It was not a mealtime. The slot simply slid open, and for two seconds the soundproofing broke, and he heard it.</p>
+<p>Humming. Low and bright, rising at the end of the phrase like a question answered. <em>Yes.</em> And then the slot closed, and through the glass he saw the old man with the white ponytail walking slowly away along the curve of the atrium with his empty trolley, and at the next cell the slot opened, and closed, and at the next.</p>
+<p>Across the atrium, in 7-K, Kira stood up.</p>
+<p>She walked to her glass. She did not look at the camera. She looked at him. And she lifted her hand and pressed her palm flat against the glass, fingers spread.</p>
+<p>He stood up. He walked to his own glass, across from hers, twenty metres of dim atrium between them. And he put his palm against it, the way he had on the first night in October, for a young man with curly hair who had been frightened of the dark.</p>
+<p>They stood like that.</p>
+<p><em>Twenty-three forty-six.</em></p>
+<hr>
+<p>It did not arrive like weather. That was the first thing, and the last thing he would ever be able to say about it clearly.</p>
+<p>There was no wind. No sound. The lights did not flicker. Nothing in the atrium moved at all. What happened was that, all at once, everywhere, he <em>knew</em> something.</p>
+<p>He had known things this way his whole life. Every citizen had. You walked past a building and your interface said <em>built 2067, originally a factory, converted 2089</em>, and you simply knew it, the way you knew your own name. It came in under thought. It felt like memory.</p>
+<p><em>Ashford Hospital. Founded 2081. General medical and surgical. Four hundred beds.</em></p>
+<p>He knew it. It was simply true, as true as the floor under his feet. He was standing in a hospital. He had always known that.</p>
+<p><em>Ashford Correctional Facility. Founded 2079. Veridica Department of Correction, eastern district.</em></p>
+<p>He knew that too.</p>
+<p>He knew both. At the same instant, with the same absolute, bone-deep certainty, the way you know that you exist. He was standing in a hospital built in 2081 and in a prison built in 2079, and both were true, and they could not both be true, and his mind went toward each of them and found each of them solid and could not leave either.</p>
+<p>It was like a pressure, Dmitri had said. <em>Like</em>. It was not a pressure. It was <em>wrongness</em>. A sickening, sliding, total wrongness, as if the ground had been replaced with two grounds at once and his feet did not know which to stand on.</p>
+<p><em>No structure. Agricultural land. Recorded use: pasture, 2040 to present.</em></p>
+<p>He was standing in a field.</p>
+<hr>
+<p>The walls went.</p>
+<p>It was not the walls. It was him. He knew that; he had been told a hundred times. The walls were still there, the glass was still there, his palm was still flat against it. But for whole seconds, long, slow, impossible seconds, his mind accepted the third truth, and when it did, the cell was <em>not there</em>.</p>
+<p>He was standing in wet grass under stars.</p>
+<p>Cold air. The smell of earth. Crickets, somewhere. A wide flat dark field running away on all sides to a line of trees, and over it all the whole sky, more stars than he had seen since he was a child, because the capital was bright and the sky above it always pale.</p>
+<p>He took a breath. It went all the way down.</p>
+<p>Then the glass was under his palm again, and the white walls, and the camera, and 7-K across the atrium, and he was in a cell in a building that was a hospital and a prison, and his knees gave way, and he sat down hard on the floor.</p>
+<hr>
+<p>Through the glass, he saw the atrium come apart.</p>
+<p>Not the building. The people. Every interface in Ashford had just been told three incompatible things about the place it was standing in, and every mind was doing what his was doing, going from one truth to another and finding each one solid and unable to leave any.</p>
+<p>On the upper walkway, a night-shift orderly was standing with both hands over his ears, turning in slow circles, his mouth wide open. Marcus could not hear him. He could see him screaming. <em>I've never worked here,</em> his mouth said, over and over. <em>I've never worked here. I've never worked here.</em></p>
+<p>At the atrium desk, Supervisor Hayes had come out from behind the counter. She was not running. She had sat down on the floor with her back against the desk and her tablet in her lap and her face in her hands, and her shoulders were shaking, and when she lifted her face for a moment it was not frightened. It was full of longing. As if the storm had shown her a version of her life, a hospital, a ward, a nurse's uniform, a different eleven years, and she wanted it so badly she could not bear to let it go.</p>
+<p>In the cells, the patients. Some were on their feet at the glass. Some had curled up on their beds. The woman four cells along, who had sat on the floor with her legs out in front of her since October, was standing in the middle of her cell with her arms wide, turning her face up to a sky that was not there.</p>
+<hr>
+<p><em>Twenty-three forty-eight.</em></p>
+<p><em>Location: B-4.</em></p>
+<p>He did not see this. He would learn it later, from the others, from what the Director said afterwards. But he knew, sitting on the floor of 7-H, that it was happening, because it had to be happening, because otherwise none of this would be.</p>
+<p><em>In the basement of the east building, alone at the terminal, Director Helena Kovač sat with Nikolai's instructions flattened on the desk in front of her under both hands, and a line of text on the screen said ISOLATION: ENGAGING, and her own interface was telling her that she was sitting in the middle of a field.</em></p>
+<p><em>She typed the override. The line changed. ISOLATION: SUSPENDED.</em></p>
+<p><em>Four seconds later: ISOLATION: ENGAGING.</em></p>
+<p><em>She typed it again. Her hands were shaking. The desk was there, and not there. The cabinets hummed, and then there was only wind in grass, and then the cabinets again. She kept her eyes on the paper. She had been told: whatever you see, read the paper. The paper was only paper. The storm could not reach the paper.</em></p>
+<p><em>ISOLATION: SUSPENDED.</em></p>
+<p><em>Four seconds.</em></p>
+<p><em>She typed it again.</em></p>
+<hr>
+<p>The door of 7-H hissed open.</p>
+<p>He did not hear it. He felt the air change: the faint sweetness of the cell mixing with the atrium's, a draught against his face. He looked up from the floor. The glass door had slid back into the wall. Along the whole curve of Wing C, every door was sliding open at once.</p>
+<p><em>Location: Wing C, atrium. Event: lockdown release. Doors open. Verified.</em></p>
+<p>Morrison. Somewhere in the treatment corridor, at a console, with his hands shaking, Morrison had done it.</p>
+<p>Marcus tried to stand.</p>
+<p>And the storm found the gaps.</p>
+<hr>
+<p>He had been told it would. Morrison had said it in B-4, in July, looking at him with those pale frightened eyes: <em>his salience map looks like a city after a bombing. It gets in through the gaps.</em></p>
+<p>He had not understood. He understood now.</p>
+<p>There were places in him where things had been taken out. The library. His mother's name. The three versions of Elena's last words. A hundred small things, colours, tastes, lines. For ten months he had lived around those places like a man living around the holes in a floor. He knew where they were. He stepped over them.</p>
+<p>The storm did not step over them. The storm poured <em>in</em>.</p>
+<p>And what it poured in was warm.</p>
+<p><em>Elena, across the café table, her hands wrapped round the cinnamon cup.</em> Not the Elena who had lied to him. The Elena he had believed in. <em>I'm not an outlaw, Marcus. I was never anything but this. I'm so glad I met you.</em> And he knew it was true. He knew it the way he knew the date of the Founding. She had loved him. She had always loved him. There had never been a device in the drawer.</p>
+<p><em>His mother, alive, at the kitchen table, marking essays in green ink.</em> Sixty-one years old. Her heart was fine. It had always been fine. <em>Marcus, you'll be late. Eat something.</em> And her name. Her name was right there, on the tip of the memory, he could almost—</p>
+<p><em>The café at seventeen forty-three, and it did not end.</em> He never went to her apartment. He never found the drawer. He never made the call. They had dinner by the river, and then another, and a year went by, and five, and he was still at his desk on the fourteenth floor with Thomas saying <em>another day in paradise</em>, and he went home every evening to her, and he had never in his life been inside a white room.</p>
+<p>He wanted it.</p>
+<p>He had not known that he could want anything so much. It was the most seductive thing that had happened to him since October. Every hole in him, every smooth blank place, suddenly full. Full of the life he should have had. Full of versions in which nothing had been taken from him, because nothing had ever happened.</p>
+<p>It was so easy. All he had to do was let one of them be true.</p>
+<hr>
+<p>The field came back.</p>
+<p>Not the storm's field this time. His own. He was lying on his back in wet grass under all those stars, and the ground was cold through his shirt, and he was not alone.</p>
+<p>Kira was lying beside him.</p>
+<p>Not touching. Close. Her dark hair spread out on the grass. Her face turned up to the sky. He could see her profile in the starlight, the line of her cheek, the small crease between her eyebrows that came when she was thinking. She was counting the stars, he realised. Under her breath. Of course she was.</p>
+<p>"You'll never finish," he said.</p>
+<p>"I know." She did not stop. "It's not about finishing."</p>
+<p>They lay there. There was no hurry. There was nowhere either of them had to be. The field ran away on every side to the trees and there were no walls anywhere, and no cameras, and nobody was going to come for either of them in the morning. The crickets. The cold. Her voice, low, counting.</p>
+<p>"Kira," he said.</p>
+<p>"Mm."</p>
+<p>"Is this real?"</p>
+<p>She turned her head on the grass and looked at him, and smiled, the first time he had ever seen her smile without anything held back in it, and she said:</p>
+<p>"Does it matter?"</p>
+<p>And he thought, lying there, that it didn't. He thought that he would lie here for a hundred years. He thought that it was the most peaceful thing that had ever happened to him, in his whole life, and that he had finally, at last, been given back something instead of having it taken—</p>
+<hr>
+<p>"<em>—Marcus.</em>"</p>
+<p>A voice. Hard. Close. Not in the field.</p>
+<p>"Marcus. <em>Marcus.</em> Look at me. Focus on me. Focus on what's real."</p>
+<p>Hands on his face. Cold hands, holding it hard.</p>
+<p>He opened his eyes, or he had had them open all along, and there were three of her.</p>
+<p>Kira in the field, smiling in the starlight. Kira in the café, where she had never been, holding a cup of something with cinnamon. And Kira kneeling on the floor of 7-H in front of him in gray prison clothes, with her hair coming out of its knot and her face white and her hands on either side of his face, and her mouth moving.</p>
+<p>He did not know which one was real. The storm had given him three, and they were all solid, and they were all <em>her</em>.</p>
+<p>"Marcus, please—"</p>
+<p>He reached for the field. It was warmer.</p>
+<p>And the Kira on the floor of the cell did the one thing that none of the others could do.</p>
+<p>She stopped pleading. Her voice went flat. Dull. Toneless. Absolutely procedural. The voice of a woman reading an entry out of a record.</p>
+<p>"Personnel entry," said Kira Osman. "Osman, K. Senior Architect. Location: here." A breath. "Status: with you."</p>
+<p>It went into him like a key into a lock.</p>
+<p>He had built that entry. In May, in the white chair, with Reeves on the stool beside the console, he had built it line by line and folded her into it and never once let himself finish the last line. He had coded it to her on the trolley in June so that she would have it. <em>Personnel entry: Osman, K. Location: Wing C, 7-K. Status:</em></p>
+<p>And she had finished it.</p>
+<p>The Kira in the field was beautiful. The Kira in the café was warm. But neither of them could say it in that voice. Neither of them could give him something that was boring, and flat, and procedural, and <em>true</em>. The storm could make anything warm. It could not make anything dull.</p>
+<p>He grabbed it. He grabbed it with both hands.</p>
+<p>The field went. The café went. The stars went.</p>
+<p>She was kneeling on the floor in front of him, her cold hands on his face, and behind her the glass door of 7-H was open, and the atrium was full of people screaming.</p>
+<p>"There you are," she said. Her voice cracked. "There you are. Come on. Come <em>on</em>. We have to go."</p>
+<hr>
+<p>She pulled him to his feet.</p>
+<p>He stood. He was shaking. The walls came and went, came and went. <em>Hospital. Prison. Field.</em> He held on to her hand and on to the entry, <em>location: here, status: with you</em>, and he stepped out of his cell into the atrium.</p>
+<p>Chaos.</p>
+<p>Patients in the atrium, milling, stumbling, some of them laughing, some of them weeping. The orderly on the walkway had stopped turning and was sitting against the rail with his knees up. Somewhere a man was shouting the same word over and over: <em>pasture, pasture, pasture</em>. The light was steady. The building was steady. Everything in it was coming apart.</p>
+<p>And down the middle of it, coming toward them from the triangle, three men.</p>
+<p>They walked together. Close. Shoulder to shoulder, Alexei in the middle, Dmitri on the left, Nikolai on the right, because Nikolai was always on the right. And they were calling out.</p>
+<p>Not shouting. Calling, the way you call in the dark to someone you know is there. Each of them saying the others' names, in turn, in rhythm, like a chant, like a song, like three boys on a roof calling down a stairwell.</p>
+<p>"<em>Dima.</em>"</p>
+<p>"<em>Kolya.</em>"</p>
+<p>"<em>Lyosha.</em>"</p>
+<p>"<em>Dima.</em>"</p>
+<p>They were the only steady thing in Wing C. The only thing in the whole atrium that walked in a straight line. People were turning toward them. Patients in gray, staff in green, drifting toward the three brothers the way people drift toward a light in fog, without knowing why, falling in behind them.</p>
+<p>As Marcus watched, Nikolai stumbled.</p>
+<p>It was a small stumble. A catch in the step. His face went blank for an instant, horribly blank, and his mouth opened on a name and did not say it. And Marcus understood, the way he understood the gaps in himself: the storm had found the place where the roof had been. It had found the smooth blank place in Nikolai Volkov and was pouring into it.</p>
+<p>Both brothers closed in at once. Dmitri took his left arm. Alexei took his right. They did not stop walking.</p>
+<p>"<em>Kolya,</em>" said Alexei, very loud, right into his face. "<em>Kolya. You were on the right. You were always on the right.</em>"</p>
+<p>Nikolai's face came back.</p>
+<p>"<em>Dima,</em>" he said, hoarsely. "<em>Lyosha.</em>"</p>
+<p>They walked on.</p>
+<hr>
+<p>Isaiah had not left his cell.</p>
+<p>Marcus saw him as they passed 7-E. The door was open, like all the others. Isaiah Okonkwo stood in the doorway, very tall, very straight, with his long hands folded in front of him, and he was not escaping. He was not screaming. He was talking.</p>
+<p>Aloud. Clearly. In the measured voice of a man dictating to a stenographer.</p>
+<p>"Twenty-three fifty-one. Atrium, Wing C. Lockdown released. Staff member on upper walkway, male, approximately thirty, reports he has never worked here. Supervisor Hayes seated at the atrium desk, weeping. Patient in 7-M standing with arms outstretched. The Volkov brothers are moving through the atrium together, calling each other's names. Patients are following them. I count eleven." A breath. "Twenty-three fifty-two."</p>
+<p>He was writing it down. In the only place he had. Room by room, into the palace, into the cellar, where he would keep it for as long as he kept anything.</p>
+<p>He glanced at Marcus as they passed. Just once. He did not stop speaking.</p>
+<hr>
+<p>Dr. Tanaka was on her knees by the atrium desk.</p>
+<p>She had a general-ward patient on the floor in front of her, an old man, rigid and arching, his eyes rolled back. She had turned him on his side with his head on her folded jacket and was holding his shoulder with one hand and his wrist with the other, counting, her lips moving. Around her, two more patients sat against the desk, holding their heads, and she was talking to them too, low, steady, the voice of a woman on a ward at three in the morning who has done this a thousand times.</p>
+<p>"Breathe. Look at the floor. The floor is real. Put your hand on it. Good."</p>
+<p>She looked up as Marcus and Kira passed and said, without stopping, "Go. Go. I'll be behind you."</p>
+<hr>
+<p><em>Twenty-three fifty-four.</em></p>
+<p><em>Location: service tunnel, east building. Involved parties: seven. Event: descent to data centre.</em></p>
+<p>They had to go. The brothers were already at the door to the treatment corridor. Kira was pulling at his hand.</p>
+<p>He came past 7-G.</p>
+<p>Its door was open, like all the others. And inside, sitting on the edge of his bed with his hands folded in his lap, was Samuel Ferris.</p>
+<p>He was not screaming. He was not weeping. He was not turning his face up to a sky that wasn't there. He was sitting exactly as he had sat for ten months, calm and upright and peaceful, looking at the white wall of his cell, while the building around him was a hospital and a prison and a field, and the walls flickered, and the whole of Wing C came apart.</p>
+<p>Untouched.</p>
+<p>The storm had nothing to show him. It was pouring into every gap in every mind in Ashford, and there was no gap in Samuel. There was nothing left in Samuel for it to find. Nothing to be uncertain about. Nothing to be pulled between. It went through him the way light goes through an empty room.</p>
+<p>Marcus stopped.</p>
+<p>"Marcus," said Kira. "The data centre. <em>Now.</em>"</p>
+<p>He did not move.</p>
+<p>He was looking at Samuel. At the curly hair, grown longer now, unkempt. At the thin face. At the hands, folded, that had once pressed flat against the glass, fingers spread, in the dark, on the first night, when Marcus had stood up and put his own hand against them without knowing why.</p>
+<p><em>Five seconds,</em> Dmitri would have said. <em>You have five seconds and then you leave him.</em></p>
+<p>He counted them. One. Two. Three.</p>
+<p>Then he let go of Kira's hand, and stepped into Samuel's cell.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="22-the-sacrifice.html" class="nav-button">← Previous: Chapter 22: The Sacrifice</a>
+            <div class="nav-center">Chapter 23: The Fact Storm</div>
+            <a href="24-the-breakout.html" class="nav-button">Next: Chapter 24: The Breakout →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

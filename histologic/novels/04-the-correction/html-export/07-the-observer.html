@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="06-the-library.html" class="nav-button">← Previous: Chapter 6: The Library</a>
+            <div class="nav-center">Chapter 7: The Observer</div>
+            <a href="08-the-pattern.html" class="nav-button">Next: Chapter 8: The Pattern →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 7: The Observer</h1>
+<p><em>December 13–14, 2105. Wing C, Cell 7-D</em></p>
+<hr>
+<p><em>Patient: Chen, Marcus. Wing C, 7-H. Admitted October 8. Presenting profile: high-conviction believer, single dominant attachment (romantic, recently severed), strong occupational identity. Course: rapid.</em></p>
+<p>Dr. Yuki Tanaka composed the note in her head, the way she had composed ten thousand notes in eleven years, and filed it carefully in the place she kept such things. Then she looked across the atrium at the patient, and let herself feel, for one moment, what she had not been allowed to feel for him as his doctor, because she was not his doctor, because she was a prisoner in the building where she had once been a doctor, and none of it mattered.</p>
+<p>He was sitting on the edge of his bed with his head in his hands. He had been sitting like that, with small interruptions, for nine days.</p>
+<p><em>Prognosis,</em> she wrote, and stopped, and did not finish the line.</p>
+<hr>
+<p>She had worked at Ashford for eleven years.</p>
+<p>Not in Wing C. Wing C had not existed, in its present form, until the spring. She had worked in the ordinary wards, the bright ones with the long windows and the soft chairs, where the patients were petty doubters and chronic fact-storm cases from the border and occasional young people who had said something foolish at a party and been reported by a friend. She had been a correction specialist. It was a respected title. She had trained for it for seven years, and she had believed, completely, that it was a healing profession.</p>
+<p>In a way, it had been. The ordinary protocols were gentle. They found the knot of doubt in a person and loosened it, and the person went home a little calmer and a little less curious, and their families thanked her. She had held a great many hands. She had been good at it. She had been proud of it.</p>
+<p>She had shared an office with Reyna Moss for six of those years. Reyna, who brought in homemade biscuits on Fridays and cried at patients' discharge ceremonies and meant every word she ever said. Yuki had liked her enormously. She still did, which was one of the more complicated facts of her present life.</p>
+<p>And then, in the summer, Dr. Reeves had come to see her.</p>
+<p>He had been perfectly pleasant. He was always perfectly pleasant. He had sat in the chair on the other side of her desk and told her about a new programme in the renovated east wing, very promising, very important, with a new cradle calibration developed with Dr. Morrison and a new protocol, and he would like her to lead the clinical side of the first human series. He had heard she was the best. He had handed her the protocol on a tablet.</p>
+<p>She had read it that night, at her kitchen table, twice.</p>
+<p>She remembered the exact moment she understood what it was. She had been drinking tea. She had put the cup down on the table, carefully, the way you put down something you are afraid you might drop, and she had sat for a very long time looking at the words <em>to baseline</em>.</p>
+<p>The ordinary protocols loosened a knot. This one took out the thread.</p>
+<p>The next morning she had gone to Reeves's office and told him she could not do it. She had said it politely. She had said that in her clinical opinion the protocol was not correction but destruction of identity, and that she would not administer it, and that she would put her objections in writing. Reeves had listened with every sign of interest and thanked her for her honesty.</p>
+<p>Three weeks later two enforcers had come to her apartment. <em>Ideological deviation, expressed in a professional context. Refusal to administer lawful treatment. Contamination probability: seventy-eight percent.</em> She had not even been angry, at first. She had been clinically astonished. She had not known the system could move that fast.</p>
+<p>By August she was in gray.</p>
+<p><em>C-6</em>, the orderlies' tablets said, when she could see them. She did not know what it meant. She knew only that she was the sixth of something.</p>
+<hr>
+<p>Supervisor Hayes signed her meal chart every morning. Six months ago, Hayes had brought Yuki coffee in the staff room and asked her advice about her daughter's school. Now she stood on the other side of the glass and ticked a box and did not meet her eyes.</p>
+<p>Yuki did not blame her. She had learned, in four months, that almost no one in Ashford was cruel. That was the most frightening discovery of all. Hayes was not cruel. Moss was not cruel. Even Reeves was not cruel, not in any way she could have named in a report. They were kind people doing a kind thing to her, sincerely, and it was taking her apart.</p>
+<p>Her own sessions were the worst part, and not for the reason anyone would have guessed.</p>
+<p>She knew every step. That was the problem. She lay in the white chair and felt the hood come down and knew the exact calibration from the pitch of the hum. She felt the machine find the first high-salience cluster and knew what it was doing and why, and what it would do next. She knew what Morrison was adjusting at the console by the change in the pressure behind her eyes. She could have written the session notes herself.</p>
+<p>There was no mercy in knowing. It did not make it hurt less. But it gave her one small thing, which she had come to hold on to as tightly as she held on to anything: she could <em>narrate</em>.</p>
+<p>While it happened, she described it to herself. Coldly. Precisely. In the voice she used to dictate case notes. <em>Probe has located the attachment cluster associated with the patient's late husband. Salience high. Probe is now testing associative links: the house in the hills, the cello, the hospital. Patient reports acute distress. Patient notes that distress is expected at this stage.</em> And the part of her that was narrating was not quite inside the chair. It was standing, very slightly, to one side, with a clipboard. The machine could reach everything in the chair. It had more trouble reaching the woman with the clipboard.</p>
+<p>It was not enough to save her. She knew that. But it had kept her more or less herself for four months, and she had used the four months to watch.</p>
+<hr>
+<p><em>Patient: Chen, Marcus. Course: rapid.</em></p>
+<p>She went back to the note and made herself finish it.</p>
+<p>He had been, when he arrived, one of the strongest believers she had ever seen. She had seen it in the way he walked into the atrium, braced and upright, frightened but intact. And she had known at once, with a sick professional certainty, that it would make him easier to break, not harder.</p>
+<p>People thought belief was armour. It wasn't. In the white chair, belief was a <em>target</em>. A man like Marcus Chen kept his whole self in one place: his faith, his work, his dead parents' approval, and the woman who had betrayed all of it. Everything that mattered to him sat in one tight, hot, high-salience cluster, and the machine could find it in minutes. There was no redundancy in him. There were no other rooms to retreat into. When they went for the centre, there was nothing else to hold.</p>
+<p>She had watched it happen in nine weeks. She had watched him go from frightened to quiet to slow to empty. She had watched the particular gray stillness settle over him, the one she knew from the charts of patients who had gone too far, the ones they transferred to long-term care and did not discuss at staff meetings.</p>
+<p>She had a private word for what lay at the bottom of that stillness. She had never written it in any report. <em>The floor.</em> The point beyond which there was no one left to bring back. Every patient she had ever lost had gone through the floor quietly, on an ordinary day, and no one had noticed until later.</p>
+<p>Marcus Chen was very close to it.</p>
+<p><em>Weeks,</em> she thought. <em>Not months.</em></p>
+<p>In November she had stood at her glass and pressed her hands against it and mouthed a single word at him, over and over, until an orderly noticed and she had to stop. <em>Stay.</em> He had looked at her for a moment, and she had seen him try to make sense of the shape of it, and fail, and turn back to the wall.</p>
+<hr>
+<p><em>Patients: Volkov, Dmitri; Volkov, Alexei; Volkov, Nikolai. Wing C, 7-A, 7-B, 7-C. Admitted June 2105, by transfer from the border facility. Presenting profile: prior correction failure. Current status: apparently compliant. Privileged.</em></p>
+<p><em>Apparently.</em></p>
+<p>She looked at them now, in their triangle, in their overalls, faces to the walls.</p>
+<p>She was, she was fairly sure, the only person in Wing C who could tell. The orderlies could not; they saw calm faces and quiet bodies and ticked boxes. The doctors saw the Volkovs only in the white chair, where, from what she overheard, they were studied with enormous care and had yielded nothing. Even Reeves, she thought, took their compliance at face value, because it was precisely the compliance he had expected to see.</p>
+<p>But she had spent eleven years with the truly flattened. She knew what it looked like from the inside of a ward. Flattened patients drifted. They forgot what they had started. A flattened man would lift a cup of water halfway to his mouth and stop, and stay stopped, until someone touched his hand. They stalled. They left food. They lost the thread of a movement and simply let it go.</p>
+<p>The Volkovs stalled too. Sometimes.</p>
+<p>That was what gave them away. They stalled <em>correctly</em>. Just often enough, just long enough, and always, she noticed, at moments when someone was watching. Real flattening was random. Theirs had a rhythm to it. It was a very good performance, the best she had ever seen. But it was a performance.</p>
+<p><em>They're awake,</em> she thought. She had thought it first in September, and had turned it over for three months, looking for the flaw, the way she would have looked for a flaw in a diagnosis. There wasn't one. <em>All three of them. They've been awake the whole time.</em></p>
+<p>She did not know how. She did not know what they wanted. She did not know whether it was safe to let them know that she knew. So she had done nothing, and written it down in the place where she wrote things down, and watched.</p>
+<hr>
+<p><em>Patient: Osman, Kira. Wing C, 7-K. Admitted December 6.</em></p>
+<p>A technical mind. Yuki could see it in her from the first hour, standing at her glass, counting the room. She had come back from her first session shaking and pale and absolutely furious. She had gone to her sink and washed her face and then stood at her glass for the rest of the day with her arms folded, glaring at the treatment corridor door as if it owed her money.</p>
+<p><em>Good,</em> Yuki had thought. <em>Oh, good.</em></p>
+<p>Anger was a wonderful sign. Anger meant the probe had gone looking for something and had not been allowed to take it. From the way Osman moved her lips in her sessions afterwards, silently, fast, like someone reciting, Yuki suspected the woman had found something close to a defence on her own. Deflecting. Pushing the probe into material it didn't want. It was clumsy and instinctive, and it would not hold forever. But it was a start.</p>
+<p><em>Patient: Okonkwo, Isaiah. Wing C, 7-E. Admitted October 27.</em> A journalist, she thought. Something like that. Composed, observant, dignified. He came back from the white room tired but tidy, like a man who had been through a long interview and given nothing away. She suspected he was keeping his mind in compartments. Giving them the front rooms. Keeping the back rooms locked.</p>
+<hr>
+<p>She had a theory. It was not a finished theory. It was the kind of theory she would once have brought to a staff meeting as a question.</p>
+<p>Every patient she had seen resist the new protocol had <em>someone</em>.</p>
+<p>The Volkovs had each other: that was obvious, even if she could not explain its mechanism. Okonkwo had, she guessed, his readers. People he was writing for, even here. Imaginary, perhaps, but real to him. A mind that is keeping something <em>for someone else</em> has a reason to keep it that the machine can't easily reach.</p>
+<p>Kira Osman had something too, though Yuki didn't know yet what it was.</p>
+<p>And Marcus Chen had had no one at all. His parents dead. His colleague, a friend of sorts, left behind at a workstation. His lover an outlaw who had lied to him and been taken away. He had come in alone, and they had kept him alone, in the glass box, in the silence, with no one to hold on to and nothing to hold on for. And he had gone faster than anyone she had ever seen.</p>
+<p><em>Isolation accelerates,</em> she wrote, in the place in her head. <em>Connection resists.</em></p>
+<p><em>Technique helps. Technique will not be enough.</em></p>
+<hr>
+<p>There was one more note, and it did not belong in any case file, and she had been carrying it for a week without knowing where to put it.</p>
+<p>Cell 7-K had been empty for three weeks before Osman arrived.</p>
+<p>That in itself was not remarkable. But in the last week of November the general wards had been overfull after a sweep in the southern districts, and Yuki had watched, through the vestibule doors, as orderlies set up temporary beds in the corridor annex and moved overflow patients into Wing C's empty cells to sleep. Every empty cell on the lower level had been filled for a few nights. Every one except 7-K. It had stayed empty. Lit, clean, ready, and empty. And then, on December seventh, it had been filled with Kira Osman.</p>
+<p>Directly opposite Marcus Chen.</p>
+<p><em>Probably nothing,</em> Yuki thought. <em>Probably an administrative reservation. Probably a maintenance flag.</em></p>
+<p>She filed it anyway, under a heading she could not name.</p>
+<hr>
+<p><em>The staff.</em></p>
+<p>That note she kept last, and it was the one she had most carefully concealed from herself until now, because it was the most dangerous.</p>
+<p><em>Moss believes.</em> Moss believed so completely that it came off her like warmth. She sat by the patients in the white chair and held their hands and wept with joy when they flattened, because she had been told that flattening was healing, and she had believed it, and she was good. She was the kindest person Yuki had ever worked with, and there was nothing, nothing at all, that could reach her.</p>
+<p><em>Hayes obeys.</em> Hayes was unhappy. You could see it in the set of her shoulders and in the way she never met a patient's eyes. But Hayes had a daughter at school and a mortgage and eleven years of service, and she would sign every chart they put in front of her.</p>
+<p><em>Morrison.</em></p>
+<p>Morrison's hands shook.</p>
+<p>Yuki had noticed it in her very first session, in August, when she was still too frightened to notice much. A small, involuntary tremor in the fingers of his right hand, above the console, at the moment the probe engaged. She had seen it again in every session since. She had seen it get worse. She had watched him, at the start of Chen's worst weeks in November, sit at the console with his jaw set so hard she could see the muscle jump.</p>
+<p>She knew that tremor. She had had it herself, once, at her kitchen table, reading the words <em>to baseline</em>.</p>
+<p><em>Reeves.</em> She had nothing to write about Reeves except that he was certain. He was the most certain man she had ever met. And the one thing she could not work out, turning it over in the dark, was what exactly he was certain <em>of</em>. Not Veridica, she thought. Not the factorepo. Not even correction. Something else. Something he was building.</p>
+<hr>
+<p>It was late on the second evening. The skylight had gone black and the cells glowed. Yuki sat on the edge of her bed with her hands folded, doing what she did every evening, which was look.</p>
+<p>And she saw the woman in 7-K looking at the man in 7-H.</p>
+<p>Not glancing. Looking. Osman was sitting at the end of her bed nearest the glass, with her knees drawn up and her arms around them, and her eyes were fixed on the cell across the atrium, on the thin man with his head in his hands. She had a slight frown, the frown of someone trying to place a face. She had been doing it, Yuki realised, reviewing the last few evenings in her mind, for three days. On and off. Every evening. Looking across at him as if he were a problem she had not finished solving.</p>
+<p><em>Technique won't save him,</em> Yuki wrote, very slowly, in the place in her head. <em>A person might.</em></p>
+<p>She looked at Chen.</p>
+<p>She looked for a long time, and then she sat forward, very slightly, and held her breath.</p>
+<p>He had not moved. His head was in his hands. He was bent over, as he always was, elbows on knees, shoulders rounded, the glasses pushed up on his forehead. But nine days ago, when he began sitting like that, he had been turned toward the white wall at the back of his cell. Every day since, she had watched him, and every day he had been turned toward the wall.</p>
+<p>Tonight he was not.</p>
+<p>At some point in the last three days, without anyone noticing, without, she was almost sure, noticing himself, Marcus Chen had turned on his bed. Just slightly. Just a few degrees. His hands still covered his face. His eyes, if they were open, could see nothing but his own palms.</p>
+<p>But his face was turned toward his glass.</p>
+<p>Toward the atrium.</p>
+<p>Toward 7-K.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="06-the-library.html" class="nav-button">← Previous: Chapter 6: The Library</a>
+            <div class="nav-center">Chapter 7: The Observer</div>
+            <a href="08-the-pattern.html" class="nav-button">Next: Chapter 8: The Pattern →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

@@ -26,7 +26,7 @@ The REVISED plot contradicts itself: the triplets have been inside "8 months" in
 | ~Dec 6, 2105 | Kira arrives at Ashford and glimpses the broken Marcus (*The Stolen Fact*). Triplets are at 13 months, which matches the "one year later" epilogue of *The Divided Truth*. |
 | Dec 2105 – Apr 2106 | Recognition, recovery, the triplets reveal themselves, the message system, Continuity discovered. |
 | May – mid-Jul 2106 | Allies recruited. An escape is planned for Aug 9–10. |
-| ~Jul 18–20, 2106 | Reeves finds the audit trail, runs a solo session on Nikolai, and moves final integration forward to **Aug 2**. |
+| Jul 16–21, 2106 | Reeves finds the audit trail, runs a solo session on Nikolai, and moves final integration forward to **Aug 2**. |
 | **Night of Aug 1–2, 2106** | A rushed fact storm and escape, hours before the brought-forward integration. |
 | Aug 5, 2106 | Isaiah's exposé is published. |
 | Aug – Sept 2106 | Recovery, then the group splits up. |
@@ -73,6 +73,14 @@ During the storm, the interface telemetry of every escapee flatlines: the six su
 ### 9. Old Songs is inside, but not one of the seven
 Mikhail "Old Songs" Petrov has been an inmate at Ashford for years. He is a harmless, "corrected" old man who pushes the meal trolley and hums. He is the source of the hiding technique, he escapes with the group, and he is alive for Book 6.
 
+### 10. Fact storms are not weather
+A fact storm happens when an interface receives two contradictory broadcasts about the same place. What people experience (flickering buildings, roads that aren't there, false memories) is their **perception** breaking down, not the physical world changing. Rules for drafting:
+- Describe the onset as sensation: headache, wrongness, the feeling of two truths at once. Never use meteorological words like pressure fronts, seasons or wind. Story 03's "like a pressure change" is a simile, and should stay one.
+- Accidents happen because people act on what they *see*: a driver swerves around a building that isn't there.
+- Official line: storms are a natural side effect of conflicting border broadcasts, and they follow the fact logs. The truth is that they are manufactured, and they follow a schedule (Isaiah, Ch 8).
+- Correctional facilities can shield inmates from outside broadcasts. The escape plan has to disable Ashford's shielding (Ch 20).
+- The Lake Erie fog is real weather. Storms happen *in* it.
+
 ---
 
 ## The Three Twists
@@ -104,7 +112,8 @@ Reeves finds the February audit trail. He runs a **single-node session** on Niko
 | **Captain Yevgenia Sokolov** | Border Security. Delivered the triplets, visits "her" file every month. | A wildcard. The storm unit that is stolen belongs to her program. At the checkpoint in Ch 26 she lets them through. |
 | **Elena Volkov** | Resistance, outside the facility | Plans the storm and the extraction. Reunited with her nephews and with Marcus in Ch 25. |
 | **Samuel Ferris** | Inmate in 7-G, next to Marcus | Returns blank on Marcus's first night. Can't understand escape and stays behind. |
-| **Two escapees** (to be named during drafting) | Wing C inmates who join the breakout | Both die in the improvised van during the pursuit, along with one of Elena's drivers. |
+| **Hanna Marsh** and **Pavel Ionescu** | Wing C overflow inmates (7-R, 7-N) who ask to join the breakout | Both die when the improvised laundry van goes off the lakeshore embankment, along with Elena's driver **Teo**. |
+| **Brandt** (offstage) | Former contractor who built the Wing C systems | His unrevoked certificate is Nikolai's way into CONTINUITY (Ch 12) and the audit trail that exposes him (Ch 20–21). |
 
 ---
 

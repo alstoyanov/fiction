@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="26-the-pursuit.html" class="nav-button">← Previous: Chapter 26: The Pursuit</a>
+            <div class="nav-center">Chapter 27: The Report</div>
+            <a href="28-the-recovery.html" class="nav-button">Next: Chapter 28: The Recovery →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 27: The Report</h1>
+<p><em>August 2–12, 2106. The Data Centre, and Secure Care Unit 3</em></p>
+<hr>
+<p><em>August 2. 01:14.</em></p>
+<p>The console in the data centre had three screens, and Isaiah used all of them.</p>
+<p>On the left, the archive: thirty-four terabytes of Project Continuity, row after row of directories he had not had time to read. On the right, the Director's channel, a secure outbound link to the archive exchange at the Synthesis Institute for Historical Methods, the kind that every correctional facility in Veridica used, once a quarter, to send anonymised research data to its international partners. Routine. Scheduled. Unremarkable. The Director had opened it from B-4 an hour ago and labelled the job, in her dry administrative hand, <em>Q3 ARCHIVE BACKUP (EAST WING)</em>.</p>
+<p>And in the middle, a blank document.</p>
+<p>He began to type.</p>
+<p>He did not need to compose it. He had composed it in the cellar, on the bottom step, over six nights. He typed it the way a man types a letter he has already written in his head a hundred times, steadily, without stopping, and the words came up the screen in the blue light between the cabinets while the storm came and went and came, and on the floor at the end of row six Dr. Reeves lay on his side with his wrists tied behind him and watched him do it.</p>
+<p>"You know they'll find you here," Reeves said, after a while. Pleasantly.</p>
+<p>"Yes," said Isaiah, typing.</p>
+<p>"You know I'll tell them."</p>
+<p>"Yes."</p>
+<p>"They'll take you somewhere much less comfortable than Wing C."</p>
+<p>"I know."</p>
+<p>Reeves was quiet for a moment. "I'd have liked to have you for longer," he said. "The Witness profile. You were going to be very interesting."</p>
+<p>Isaiah did not answer. He finished the last paragraph. He attached the document to the transfer job, under a release condition that said <em>hold 72 hours; then publish to all registered partners</em>, and he set the whole thing running: thirty-four terabytes, spread across three days, trickling out through the Director's routine quarterly channel to Synthesis, at a rate so low and so ordinary that nothing in Ashford would ever notice it.</p>
+<p>Then he stood up, and nodded to the man on the floor, and walked back up the tunnel to Wing C, through the atrium where the storm was fading and patients were sitting on the floor weeping, and went into his cell, 7-E, and sat down on the bed with his hands folded on his knee.</p>
+<p>The door was still open. He left it open.</p>
+<p>They came for him at 04:10.</p>
+<hr>
+<p><em>CONTINUITY: A WITNESS ACCOUNT FROM WING C</em></p>
+<p><em>By Isaiah Okonkwo. Released August 5, 2106, via the Synthesis Institute for Historical Methods.</em></p>
+<p><em>Last October, in a white building on the eastern edge of our capital, seven people were chosen to prove that a human being can be made to believe anything, and to mean it.</em></p>
+<p><em>I was the seventh.</em></p>
+<p><em>This is an account of what was done to us, in the order it happened, with the evidence attached. The evidence is not mine. It is theirs. It was taken on the night of August first from the data centre of Ashford Correctional Facility, and it is appended in full to this article. Anyone may read it. I would ask you to.</em></p>
+<hr>
+<p><em>August 2. 06:00.</em></p>
+<p>Secure Care Unit 3 was two hours north of the capital and had no garden.</p>
+<p>It had cells, and they were not glass. They were concrete. They were small and warm and windowless, and they had no book slots and no meal trolley and no old man humming. They had a hatch at floor level for trays and a cradle bolted to the wall above the bed, and the cradle was newer than anything in Ashford, and there was no one at its console who shook.</p>
+<p>Isaiah sat on the bed and walked through the house.</p>
+<p>The parlour was there. His aunt was at the head of the table. The smell of pepper soup. He did not go into the kitchen. He did not look at the door he had painted the dull cream of the wall.</p>
+<p>He knew what was behind it. That was enough.</p>
+<hr>
+<p><em>I. THE PROGRAMME</em></p>
+<p><em>Project Continuity was established in the east wing of Ashford Correctional Facility in the spring of 2105 under the direction of a senior government scientist whose name appears throughout the appended files. Its stated aim, in its own documents, was "to produce stable, genuine belief, as distinct from compliance, across all tested cognitive profiles."</em></p>
+<p><em>Its success criterion, also in its own words, was that the subject should "not merely behave as a believer but experience belief as authentic and self-originated."</em></p>
+<p><em>I want to be precise about what that means, because the precision is the point. Continuity was not designed to make prisoners obey. Veridica has had methods for that for sixty years. It was designed to make people</em> mean <em>it. To reach into a human mind, remove whatever that mind believed, and put something else in its place. And to do it so completely that the person would never know anyone had been there.</em></p>
+<p><em>Its planners called the method, in their internal correspondence, "erase, then seed."</em></p>
+<p><em>And they did not intend to use it only in prisons. The appended forward-planning documents describe a second phase: "adaptation of the Continuity method for population-scale delivery via the national neural-interface broadcast network." That network is the one every reader of this article receives, every hour of every day, through the interface in their own head. According to Continuity's director, speaking to one of the subjects in the early hours of August second, test signals are already running in three districts.</em></p>
+<p><em>I do not know which districts. I would like someone to find out.</em></p>
+<hr>
+<p><em>August 3.</em></p>
+<p>The first session in Unit 3 was worse than anything in Ashford.</p>
+<p>It was not pleasant. There was no Moss on a stool. There was a technician who did not speak and a voice from a speaker in the ceiling that was not Reeves, that had none of his curiosity, only procedure. It went through the house like a flood.</p>
+<p>It took the parlour. He let it. He had furnished the parlour for exactly this. It took his aunt's dinners, his bylines, the harbour contracts, the smell of pepper soup. It took them hard and fast and deep, and he lay under the hood and felt them go, one after another, and wept, and the weeping was real.</p>
+<p>It found the empty rooms upstairs, and passed through them, and found nothing.</p>
+<p>It did not find the kitchen door.</p>
+<p>Afterwards, back on the concrete bed in the dark, he went down the narrow stairs, in his head, and turned on the light.</p>
+<p>Everything was on the shelves. Page thirty-one. The Continuity header. The storm onset times. The faces of six people round a workbench in a warm basement. The first sentence.</p>
+<p>He sat on the bottom step for a long time.</p>
+<hr>
+<p><em>II. THE SEVEN</em></p>
+<p><em>The appended files list seven subjects, each chosen to represent what the programme called a "cognitive profile resistant to standard correction."</em></p>
+<p><em>C-1, BELIEVER: Marcus Chen, a Junior Historian at the Regional Factorepo, convicted in October 2105 of contamination by exposure to an outlaw recruiter whom he had himself reported to the enforcers.</em></p>
+<p><em>C-2, ARCHITECT: Kira Osman, a senior systems architect at the Factorepo Spire, convicted in December 2105 of falsifying her work after reporting that a verified fact had disappeared from the factorepo.</em></p>
+<p><em>C-3, C-4, C-5, BOND: Dmitri, Alexei and Nikolai Volkov, identical triplets, convicted in November 2104 and transferred to Ashford after six months of failed correction at the border facility.</em></p>
+<p><em>C-6, CLINICIAN: Dr. Yuki Tanaka, for eleven years a correction specialist at Ashford itself, convicted in August 2105 after refusing to administer the Continuity protocol to its first human subjects.</em></p>
+<p><em>C-7, WITNESS: myself. A journalist, convicted in October 2105 of "unauthorized historical inquiry" three days before I was due to publish evidence about the fact storms of the border zone.</em></p>
+<p><em>None of us, I want to state clearly, was chosen because of what we had done. We were chosen because of what we were. And in at least two cases, the appended files show, we were not merely chosen. We were manufactured.</em></p>
+<hr>
+<p><em>III. HOW THEY GOT US</em></p>
+<p><em>The Judge calculated Marcus Chen's contamination index at 0.58: fifty-eight percent. The threshold for corrective intervention in Veridica is sixty. The Judge's honest determination, in other words, was that Mr. Chen should go home.</em></p>
+<p><em>The appended acquisition file for Subject C-1 contains the following line: "Contamination index 0.58 → 0.73 (adjusted; threshold compliance)."</em></p>
+<p><em>Someone typed a seventy-three.</em></p>
+<p><em>Kira Osman's file reads: "Acquired via record anomaly." The anomaly was the fact she reported missing: a security protocol she entered into the factorepo on November eighteenth, spoke aloud and watched verify. It did not disappear. It was removed, so that she would report its absence and be convicted for doing so. The factorepo, which every citizen of Veridica is taught from childhood cannot be altered, was altered, by the people responsible for guarding it, to acquire a subject.</em></p>
+<p><em>I do not yet know who in the factorepo has the ability to do this. I believe it is the most important question raised by this article. I would ask the reader to hold on to it.</em></p>
+<hr>
+<p><em>August 4.</em></p>
+<p>A second session. Deeper.</p>
+<p>He lost something in it that he had not meant to lose: a small thing, from the cellar steps, not from the shelves. The colour of the paint on the kitchen door. He had painted it a dull cream so that it would look like the wall. Now, when he went down in his head, the door was simply there, a door, with no colour at all.</p>
+<p>He stood in front of it for a long time before he opened it. He was afraid, for a moment, that it would open onto nothing.</p>
+<p>It opened onto the stairs.</p>
+<hr>
+<p><em>IV. THE BOND</em></p>
+<p><em>The Volkov brothers resisted correction at the border facility for six months. The technicians there recorded that they "responded identically"; when one was corrected, the others' neural patterns moved in sympathy. The Continuity files call this "distributed resistance via shared salience architecture." The brothers themselves describe it more simply. They say they know where the others are, the way you know where your own hand is in the dark.</em></p>
+<p><em>Continuity's plan for them, in the appended file, was a "simultaneous triple cradle": all three brothers corrected at once, in one room. The file lists the expected outcomes as "(a) bond disruption and sequential integration, or (b) catastrophic failure of all three nodes."</em></p>
+<p><em>It adds: "Both outcomes informative."</em></p>
+<p><em>On July sixteenth, as a preliminary test, one brother was placed in the triple cradle alone. The bond held. He came back as himself. He lost, in the process, a single memory from his childhood, which his brothers have since given back to him as a story. The session was scheduled, in the file, as "single-node test (exploratory)."</em></p>
+<p><em>The brothers' father was a systems engineer named Ivan Volkov. In the spring when his sons were fourteen, he was referred for correction for "unauthorised inquiry into broadcast discrepancy," and discharged after twelve weeks with "full compliance." A year later, he died in a fact storm in the border zone.</em></p>
+<p><em>In a Border Security procurement log that came into my possession before my arrest, he is listed as Subject 2471. The outcome column reads: "lethal threshold confirmed."</em></p>
+<p><em>According to Continuity's own director, the fact storms of the border zone have been, for fifteen years, a laboratory for this programme. "You can't build a thing like Continuity," he told us, "without knowing, precisely, how a mind behaves when it's given two truths at once."</em></p>
+<hr>
+<p><em>August 5. 01:14.</em></p>
+<p>He did not know when it went out. He had no clock in Unit 3. He had no way of knowing whether the Director's channel had held, whether the job had run, whether the Synthesis Institute's exchange had received thirty-four terabytes of files from a Veridican correctional facility's quarterly backup and opened them and read the first sentence.</p>
+<p>He sat on the concrete bed in the dark and imagined it. The release condition ticking over. The article going out to every registered partner at once. Some night-shift archivist in Synthesis opening it at their desk with a cup of something warm, reading the first line, putting the cup down.</p>
+<p>Seventy-two hours. It should be now. About now.</p>
+<p>He found he was holding his breath.</p>
+<hr>
+<p><em>V. THE SEEDING PROTOCOL</em></p>
+<p><em>Among the appended files is a document headed "Protocol R-2: Seeding." I publish it in full, because I believe the citizens of Veridica need to understand exactly what "seeding" means.</em></p>
+<p><em>The protocol describes a method for introducing a new, "genuine" belief into a mind that has first been reduced to baseline: emptied, in plain language. The method is to place an attachment figure before the emptied subject under controlled conditions, and to measure whether the subject comes to love that figure, and to experience that love as entirely his own.</em></p>
+<p><em>The protocol refers to two of the seven subjects by their file codes. At the witness's discretion, and for the only time in this account, I have withheld their identities from the published annex. I have done so because what the protocol describes happened to two people I know, and because nothing in any file can tell us whether its author caused what he claims to have caused or merely watched it happen. That is not a question for a newspaper. It is theirs.</em></p>
+<p><em>I will say only this. Continuity's director described the result of Protocol R-2 to us, on the night of August first, as "the most genuine belief I have ever seen a human being hold." He intended this as a boast.</em></p>
+<p><em>I would ask the reader to consider what it means that he is right.</em></p>
+<hr>
+<p><em>August 6.</em></p>
+<p>The session that day was cut short. He did not know why. The voice in the ceiling said something to someone else, off-mic, sharp, and the hood lifted early, and the technician unstrapped him and walked him back to his cell with an urgency he had not shown before.</p>
+<p>Something had happened. Outside. Something that had made the people who ran Unit 3 look up from their procedures.</p>
+<p>Isaiah lay on the concrete bed and did not let anything reach his face.</p>
+<hr>
+<p><em>VI. THE STORM</em></p>
+<p><em>At 23:47 on the night of August first, a fact storm broke over Ashford Correctional Facility.</em></p>
+<p><em>It was the first fact storm in recorded history to occur in the interior of Veridica. Every interface in the facility, staff and patients alike, received at once three incompatible histories of the building. For approximately ninety minutes, Ashford was a hospital founded in 2081, a prison founded in 2079, and a field on which nothing had ever been built.</em></p>
+<p><em>The Ministry of Historical Integrity has described the event as "an infrastructure malfunction in the eastern district broadcast node."</em></p>
+<p><em>I was there. I made notes. I have appended them.</em></p>
+<p><em>I will note only that storms of this kind do not happen by malfunction. They happen when someone broadcasts a contradiction. The equipment capable of doing this is held, in Veridica, by one agency. It is the agency whose procurement logs list Subject 2471.</em></p>
+<hr>
+<p><em>VII. THE OFFICIAL RECORD</em></p>
+<p><em>The Correction Registry records the following outcomes for the night of August first, as certified by the Director of Ashford Correctional Facility:</em></p>
+<p><em>CHEN, MARCUS. DECEASED. COGNITIVE FAILURE DURING FACT STORM.</em></p>
+<p><em>OSMAN, KIRA. DECEASED. COGNITIVE FAILURE DURING FACT STORM.</em></p>
+<p><em>VOLKOV, DMITRI IVANOVICH. DECEASED. COGNITIVE FAILURE DURING FACT STORM.</em></p>
+<p><em>VOLKOV, ALEXEI IVANOVICH. DECEASED. COGNITIVE FAILURE DURING FACT STORM.</em></p>
+<p><em>VOLKOV, NIKOLAI IVANOVICH. DECEASED. COGNITIVE FAILURE DURING FACT STORM.</em></p>
+<p><em>TANAKA, YUKI. DECEASED. COGNITIVE FAILURE DURING FACT STORM.</em></p>
+<p><em>The Registry records the same outcome for a long-term patient of the facility, Mikhail Petrov; for a member of the Continuity technical staff, Dr. James Morrison; and for two further patients of Wing C, Hanna Marsh and Pavel Ionescu.</em></p>
+<p><em>Remains have been processed according to standard protocols. No family viewing is permitted.</em></p>
+<p><em>One subject is recorded as having survived. He has been transferred to secure care.</em></p>
+<p><em>I report these outcomes exactly as the Registry states them. In Veridica, what the Registry states is fact.</em></p>
+<hr>
+<p><em>August 7.</em></p>
+<p>He had begun, on the concrete bed, to count the subjects again. He did not know why. It was only arithmetic.</p>
+<p>Seven. And one survived. And six died.</p>
+<p>He thought about the Registry, and about the Director's dry voice: <em>if I'm the one saying it, it will be believed</em>. He thought about Reeves on the floor between the cabinets, watching him type. Reeves, who had seen them go. Who knew.</p>
+<p>And he thought about what the Ministry would do with a man who said that six dead subjects were alive. With a senior scientist whose word contradicted a certified entry in the Correction Registry, and the Director's signature, and ten flatlines logged at the peak of a storm.</p>
+<p>In any other country, a witness would be believed over a record.</p>
+<p>In Veridica, the record <em>was</em> the truth. It always had been. It was the thing Marcus Chen had believed with his whole heart, the thing Kira Osman had helped to build. And tonight, for once, the most rigid principle in the whole system was protecting the people it had been built to crush.</p>
+<p>He found that he was smiling in the dark.</p>
+<hr>
+<p><em>VIII.</em></p>
+<p><em>I have been asked, by the few people who knew what I intended, why I did not leave Ashford when I could.</em></p>
+<p><em>I stayed because a witness who flees is a fugitive, and the word of a fugitive can be dismissed. I stayed because the evidence needed someone to send it after the others had gone. And I stayed because I am a journalist, and the first rule of the work is that you stay where the story is.</em></p>
+<p><em>This account is being released from the custody of the Veridican Department of Correction. By the time you read it, I will have been moved. I do not know where. I do not know what will be done to me there, or how much of what I have written here I will still remember.</em></p>
+<p><em>It does not matter. I have written it down. It is in the record now.</em></p>
+<p><em>It happened.</em></p>
+<hr>
+<p><em>August 9.</em></p>
+<p>They told him in the corridor, on the way to his session. Not the technician. One of the guards, a young one, who did not seem to know that he was not supposed to talk.</p>
+<p>"You're famous," the guard said. "Did you know? You're all over Synthesis. Chronos. Memoria. Some magazine in Axiom put your face on the cover." He glanced sideways at Isaiah. "The Ministry says it's a forgery."</p>
+<p>"Of course they do," said Isaiah.</p>
+<p>"They've postponed some big demonstration. Nobody'll say what it was." The guard lowered his voice. "And there's a doctor they can't find. The one in your article. The scientist. He hasn't been seen since the storm. There's an inquiry at Ashford. The Director's been in front of it every day." He shook his head. "My mother read your article out loud at dinner. The part about the network. She wanted to know if it was in her."</p>
+<p>Isaiah looked at him.</p>
+<p>"Is it?" said the guard. "In us?"</p>
+<p>"I don't know," said Isaiah. "Somebody should find out."</p>
+<p>The guard didn't say anything else. At the door of the treatment room he hesitated, as if he wanted to, and then he opened it, and went away down the corridor fast.</p>
+<hr>
+<p><em>August 12.</em></p>
+<p>The tray came through the hatch at the usual time, in the usual way: slid across the concrete floor by a hand he never saw.</p>
+<p>Bread. Soup. Water.</p>
+<p>He took the bread, and turned it over, and saw that underneath it, pressed flat against the tray, there was a scrap of paper.</p>
+<p>It was the torn corner of a page from a book. A schoolbook. He could see the edge of a printed number, <em>7</em>, and part of a line of a times table.</p>
+<p>He held it up to the light of the cell.</p>
+<p>Pinpricks.</p>
+<p>Small and even and very careful, in a key that only seven people in the world knew, shifted by the page number plus the day of the month. He had to do the arithmetic twice, because his hands were shaking.</p>
+<p><em>WE READ IT. WE'RE ALIVE.</em></p>
+<p><em>— K.</em></p>
+<p>He sat on the concrete bed with the scrap of paper in his fingers.</p>
+<p>He did not know how it had got here. Through Unit 3, through its guards and its hatches and its technicians who did not speak. Someone had brought it. Someone had carried a corner of a child's arithmetic book two hours north of the capital and put it under a piece of bread. The Director. Nikolai, from wherever he was now. Someone he would never know. It did not matter.</p>
+<p>He read it again. He put it in his mouth and ate it, slowly, the way you eat the last of something good, so that there would be nothing for anyone to find.</p>
+<p>Then Isaiah Okonkwo lay back on the concrete bed in the dark, in Secure Care Unit 3, with the cradle on the wall above his head and the whole of the cellar intact beneath his feet, and for the first time in ten months, he laughed.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="26-the-pursuit.html" class="nav-button">← Previous: Chapter 26: The Pursuit</a>
+            <div class="nav-center">Chapter 27: The Report</div>
+            <a href="28-the-recovery.html" class="nav-button">Next: Chapter 28: The Recovery →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

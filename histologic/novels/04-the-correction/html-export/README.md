@@ -5,7 +5,7 @@ This directory contains the complete novel "The Correction" exported to HTML for
 ## Files
 
 - **index.html** - Table of contents with all chapters organized by parts
-- **00-prologue.html** through **26-epilogue.html** - Individual chapter pages
+- **00-prologue.html** through **30-epilogue.html** - Individual chapter pages
 
 ## Features
 
@@ -16,7 +16,7 @@ This directory contains the complete novel "The Correction" exported to HTML for
 - **Responsive design** works on desktop, tablet, and mobile
 
 ### Styling
-- **Steampunk/brass theme** matching the Histologic aesthetic
+- **Brass theme** matching the Histologic aesthetic
 - **Dark background** for comfortable reading
 - **Print-friendly** CSS for printing chapters
 - **Smooth transitions** and hover effects
@@ -40,30 +40,33 @@ This directory contains the complete novel "The Correction" exported to HTML for
 
 ## Structure
 
-### Part One: The Gathering (8 chapters)
-Prologue + Chapters 1-7 - All eight inmates introduced
+### Prologue
+The Conviction: Marcus is transferred to Ashford's Wing C
 
-### Part Two: The Cracks (7 chapters)
-Chapters 8-14 - Evidence gathered, relationships deepened
+### Part One: The Erasure (Chapters 1–8)
+Marcus is erased in two months; Kira arrives; the triplets, Tanaka and Isaiah are introduced
 
-### Part Three: The Plan (4 chapters)
-Chapters 15-18 - Final preparations and successful escape
+### Part Two: The Connection (Chapters 9–17)
+Recognition, recovery, the secret message system, Project Continuity uncovered
 
-### Part Four: The Storm (4 chapters)
-Chapters 19-22 - Aftermath, pursuit, network building
+### Part Three: The Plan (Chapters 18–22)
+Allies inside the staff, the escape plan, Nikolai's solo session, Isaiah's choice to stay
 
-### Part Five: The Divergence (3 chapters)
-Chapters 23-25 - Publication, love, mission established
+### Part Four: The Storm (Chapters 23–26)
+The fact storm, the breakout, the reunion with Elena, the pursuit
+
+### Part Five: The Aftermath (Chapters 27–29)
+Isaiah's article, recovery, the group splits up
 
 ### Epilogue
-Chapter 26 - Seven paths, setup for "The Lost Hour"
+Seven Paths, One Truth: November 14, 2106, leading into "The Lost Hour"
 
 ## Statistics
 
-- **Total Chapters**: 27 (Prologue + 25 chapters + Epilogue)
-- **Total Word Count**: ~49,500 words
-- **POV Characters**: 8 (rotating perspectives)
-- **Timeline**: August 1 - November 15, 2106
+- **Total Chapters**: 31 (Prologue + 29 chapters + Epilogue)
+- **Total Word Count**: ~95,500 words
+- **POV Characters**: 7 (Marcus, Kira, Dmitri, Alexei, Nikolai, Tanaka, Isaiah)
+- **Timeline**: October 2105 – November 14, 2106
 
 ## Technical Details
 

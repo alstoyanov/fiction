@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="02-the-white-room.html" class="nav-button">← Previous: Chapter 2: The White Room</a>
+            <div class="nav-center">Chapter 3: Two Months</div>
+            <a href="04-the-arrival.html" class="nav-button">Next: Chapter 4: The Arrival →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 3: Two Months</h1>
+<p><em>October 10 – December 6, 2105. Wing C</em></p>
+<hr>
+<p><em>October tenth, 2105. Cell 7-H. No session. Subject slept approximately three hours. Breakfast: rice porridge, tea. The elderly inmate was humming again. Same tune. Samuel in 7-G has not moved from his bed except to use the sink. He does not look at the glass.</em></p>
+<p><em>Subject can still recall Elena's last words. Subject has three versions. Subject is attempting to determine which is correct by comparing them for internal consistency. Result: inconclusive.</em></p>
+<hr>
+<p><em>October twelfth. Session two.</em></p>
+<p><em>The café again. The dinner. The river. The green dress.</em></p>
+<p><em>The voice says the attachment is "very deep". The voice says this with what sounds like admiration.</em></p>
+<p><em>Dr. Moss held subject's hand throughout. Subject was sick afterwards, once. Less than the first time.</em></p>
+<p><em>Subject would like to record that the green dress was green. Subject is recording it here so that it is recorded.</em></p>
+<hr>
+<p><em>October fourteenth. Session three.</em></p>
+<p><em>My parents.</em></p>
+<p><em>They went to my father's funeral. The uniform folded on the coffin, the flag, the enforcers standing in a line. My mother's hand in mine, very tight. She did not cry. She said, afterwards, in the car: "He served the truth his whole life, Marcus. That's what matters." They lifted that and turned it over and the voice said: "Grief is a doorway. Doubt comes in through grief." And I said, he died in an accident, there's no doubt, it's in the factorepo, and the voice said, "Yes. And yet you've wondered."</em></p>
+<p><em>I have not wondered.</em></p>
+<p><em>I don't think I have wondered.</em></p>
+<p><em>Correction: the entry above is not in the proper format. Subject will attempt to maintain the proper format.</em></p>
+<hr>
+<p><em>October seventeenth. Session four.</em></p>
+<p><em>Subject cannot recall whether Elena wore blue or green at the first meeting in the plaza. Subject is certain the dinner dress was green. Subject has recorded this. Subject is certain the plaza dress was</em></p>
+<p><em>Subject will return to this entry.</em></p>
+<hr>
+<p><em>October twentieth.</em></p>
+<p><em>I have noticed that I have started to wait for the humming.</em></p>
+<p><em>The meal trolley comes three times a day. When the slot opens I hear two seconds of the old man's tune. It is the same tune every time, or it is several tunes that sound the same to me, I can't tell. I stand by the slot before he arrives so that I don't miss it.</em></p>
+<p><em>It is the only sound.</em></p>
+<hr>
+<p><em>October twenty-first. Session five.</em></p>
+<p><em>The voice: "Let's look at why you reported her."</em></p>
+<p><em>I reported her because she was an outlaw. I reported her because it was my duty. I reported her because</em></p>
+<p><em>They held it up to the light and I watched it and it was like watching another man. A thin man in her apartment with a device in his hand. He looked frightened. He looked as if he loved her. He made the call. I watched him make it. I know that he was me. I know it the way I know the date of the Founding. It is a fact. I cannot feel it.</em></p>
+<p><em>Why did he report her?</em></p>
+<hr>
+<p><em>October twenty-fourth. Session six.</em></p>
+<p><em>The woman in 7-D, the small one with the silver in her hair, watches me when they bring me back. Every time. She sits on the edge of her bed with her hands folded and she watches me walk along the atrium, and her face does something I do not have a word for.</em></p>
+<p><em>Correction. I have a word for it. I cannot find the word.</em></p>
+<hr>
+<p><em>October twenty-seventh.</em></p>
+<p><em>New inmate. Upper level, 7-E. Tall. Dark skin, graying at the temples. He walked in with the orderlies as though he were visiting. He looked at everything. He looked at the triangle for a long time and then at me.</em></p>
+<p><em>Weather: overcast.</em></p>
+<hr>
+<p><em>October thirtieth. Session seven.</em></p>
+<p><em>My mother taught history.</em></p>
+<p><em>I know this. I know that she taught history at the secondary school on Linden Avenue for twenty-two years and that she used to bring home the essays in a canvas bag and mark them at the kitchen table in green ink. I know that she died when I was twenty-four, of a heart condition that is recorded in the factorepo under her citizen number.</em></p>
+<p><em>I know these things.</em></p>
+<p><em>They are like reading about a stranger.</em></p>
+<hr>
+<p><em>November.</em></p>
+<p><em>Session eight. Session nine.</em></p>
+<p><em>The dress was green.</em></p>
+<hr>
+<p><em>The voice says I am "making excellent progress." Dr. Moss says I am "healing." I asked her from what. She smiled and squeezed my hand. I don't remember what she said.</em></p>
+<p><em>I don't remember if I asked her, or if I only meant to.</em></p>
+<hr>
+<p><em>Subject has attempted to recall the three versions of Elena's last words. Subject was able to recall two. Subject does not know which one is missing.</em></p>
+<hr>
+<p><em>Session ten.</em></p>
+<p><em>The voice asked me today: "Do you believe, Mr. Chen?"</em></p>
+<p><em>I opened my mouth to say yes.</em></p>
+<p><em>I believe in Veridica. I believe in the factorepo. I believe in The Judge. I said it on the first day and I meant it. I have said it every day of my life.</em></p>
+<p><em>I opened my mouth, and I looked for it, and I could not find the place where the believing was. The words were there. Veridica. Factorepo. Judge. They were in their proper order. But when I reached for the thing underneath the words, the part that had always pushed back, warm and solid, when I pressed on it—there was nothing there. Not doubt. I want to be clear about that, for the record. It was not doubt. Doubt would have been something.</em></p>
+<p><em>I said "Yes," because it was the correct answer.</em></p>
+<p><em>The voice said: "Good."</em></p>
+<hr>
+<p><em>There is a man in 7-G who sits the way I sit.</em></p>
+<p><em>Hands in lap. Face to the wall. I looked over today and for a moment I could not tell which of us was the reflection.</em></p>
+<p><em>His name was Samuel. His name is Samuel. I recorded it. It is recorded.</em></p>
+<hr>
+<p><em>the trolley</em></p>
+<p><em>the old man</em></p>
+<p><em>humming</em></p>
+<p><em>I stood by the slot and when it opened I heard it and it was just a sound. I stood there afterwards trying to remember why I had been waiting.</em></p>
+<hr>
+<p><em>Session.</em></p>
+<p><em>The café. It is very hard to find now. When they lift it there's less and less underneath. The voice does not seem disappointed. The voice seems pleased.</em></p>
+<p><em>Once the voice said, to someone else, not to me: "Look at that. Look how clean."</em></p>
+<hr>
+<p><em>The three men. They go out in the morning. They come back at dusk. They look at the walls.</em></p>
+<p><em>Once, one of them looked at me. He had gray-blue eyes. He looked at me for a long time. I think I looked back. I think I was supposed to feel something.</em></p>
+<p><em>I made a note that I was supposed to feel something.</em></p>
+<hr>
+<p><em>The small woman in 7-D stood at her glass today with both her hands pressed against it and looked at me and her mouth moved. The same word, over and over. She is a doctor, I think. I heard an orderly call her Doctor once, before, when I still listened to orderlies.</em></p>
+<p><em>I couldn't read the word.</em></p>
+<p><em>I went back to looking at the wall.</em></p>
+<hr>
+<p><em>Weather:</em></p>
+<hr>
+<p><em>Session.</em></p>
+<hr>
+<p><em>Session.</em></p>
+<hr>
+<p><em>Dr. Moss's hand was warm.</em></p>
+<hr>
+<hr>
+<p><em>Early December.</em></p>
+<p>The session was different. He knew it was different because he noticed it, and he had not noticed anything in a long time.</p>
+<p>He was in the white chair. The hood was on. The voice was there, just behind his head, where it always was. Dr. Moss's hand was in his. Dr. Morrison was at the console, not looking. Everything was as it always was. And the machine was moving through him, lifting, turning, putting down, and there was hardly anything left to lift.</p>
+<p>It went looking for the café and found a table and a cup and a timestamp. It went looking for his mother and found a canvas bag and a citizen number. It went looking for his father and found a folded flag. It went looking for Elena and found a record, filed, correct, complete.</p>
+<p>It went looking for <em>belief</em> and found a set of words in the proper order.</p>
+<p>And then it stopped.</p>
+<p>For a long moment there was nothing. Just the hum, and the white, and the warm hand.</p>
+<p>"Stable," said the voice.</p>
+<p>It said it softly, the way a man might say the name of something he loved.</p>
+<p>"Look at that baseline. Beautiful. Completely stable." A pause. He heard, faintly, the tapping of keys. "Reduce to maintenance. Weekly. We'll want to hold him exactly here."</p>
+<p>Someone else said something. Marcus did not hear the words. He heard the voice answer them, turning slightly away, the way a man turns from a patient to speak to a colleague.</p>
+<p>"And keep 7-K open," said Dr. Reeves. "We'll have our second subject within the week."</p>
+<p>The words went past Marcus like the humming did now. Sound, with nothing in it.</p>
+<p>The hood lifted.</p>
+<p>Dr. Moss leaned over him. Her face was shining. There were tears in her eyes, and she was smiling, and she squeezed his hand very hard.</p>
+<p>"You're healing, Marcus," she said. "You're really healing. I'm so proud of you."</p>
+<p>He looked up at her. He did not know what the words meant. He knew only, the way a dog knows from the tone of a voice, that they were good words. That he had done something right.</p>
+<p>He tried to smile back. He was not sure if he did.</p>
+<hr>
+<p><em>Session: weekly.</em></p>
+<p><em>Subject did not notice the difference.</em></p>
+<hr>
+<p>He sat on the edge of his bed, bent forward, his elbows on his knees, his head in his hands.</p>
+<p>He sat like that most of the time now. It was not a decision. It was simply the shape his body took when no one was asking it to do anything, the way water takes the shape of the cup. His glasses were pushed up on his forehead. His hands covered his eyes. The white of the cell came through between his fingers.</p>
+<p>He did not think. There was very little to think about.</p>
+<p>At some point, far away, at the other end of the atrium, a door opened. Not the treatment corridor. The other door, the one to the rest of the building, the one he had come through himself, a very long time ago, with Supervisor Hayes. He knew it had opened because for one second the silence of Wing C broke, and sound came through: footsteps, a trolley wheel, and a voice.</p>
+<p>A woman's voice. Raised. Angry. Arguing.</p>
+<p>"—never been properly investigated, you can't just—if someone took it from the system then someone <em>took</em> it, that's not a delusion, that's a <em>fact</em>—"</p>
+<p>It was a voice with something in it. It was alive, and furious, and asking questions, and it would not stop.</p>
+<p>Then the inner doors sealed and the silence closed over it again like water.</p>
+<p>Somewhere down the corridor, a new inmate was being processed.</p>
+<p>Marcus Chen did not look up.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="02-the-white-room.html" class="nav-button">← Previous: Chapter 2: The White Room</a>
+            <div class="nav-center">Chapter 3: Two Months</div>
+            <a href="04-the-arrival.html" class="nav-button">Next: Chapter 4: The Arrival →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

@@ -6,7 +6,32 @@ Export novel chapters to HTML with navigation.
 import os
 import re
 from pathlib import Path
-import markdown
+try:
+    import markdown
+except ImportError:  # fall back to a minimal converter for the chapter markdown subset
+    import html as _html
+
+    class markdown:  # noqa: N801 - mimics the markdown module's API
+        @staticmethod
+        def markdown(text, extensions=None):
+            def inline(t):
+                t = _html.escape(t, quote=False)
+                t = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', t)
+                return re.sub(r'\*(.+?)\*', r'<em>\1</em>', t)
+            out = []
+            for block in re.split(r'\n\s*\n', text):
+                block = block.strip()
+                if not block:
+                    continue
+                if block == '---':
+                    out.append('<hr>')
+                elif block.startswith('## '):
+                    out.append(f'<h2>{inline(block[3:])}</h2>')
+                elif block.startswith('# '):
+                    out.append(f'<h1>{inline(block[2:])}</h1>')
+                else:
+                    out.append(f'<p>{inline(" ".join(block.splitlines()))}</p>')
+            return "\n".join(out)
 
 # Configuration
 NOVEL_DIR = Path("novels/04-the-correction")
@@ -18,36 +43,55 @@ TEMPLATE_FILE = Path("templates/novel-export-template.html")
 NOVEL_TITLE = "The Correction"
 NOVEL_SUBTITLE = "Novel 04 of the Histologic Series"
 
-# Chapter order
-CHAPTERS = [
-    ("00-prologue.md", "Prologue", "The Conviction"),
-    ("01-arrival.md", "Chapter 1", "Arrival"),
-    ("02-the-sessions.md", "Chapter 2", "The Sessions"),
-    ("03-the-enforcer.md", "Chapter 3", "The Enforcer"),
-    ("04-the-outlaw.md", "Chapter 4", "The Outlaw"),
-    ("05-the-technician.md", "Chapter 5", "The Technician"),
-    ("06-the-doctor.md", "Chapter 6", "The Doctor"),
-    ("07-the-journalist.md", "Chapter 7", "The Journalist"),
-    ("08-the-pattern.md", "Chapter 8", "The Pattern"),
-    ("09-the-evidence.md", "Chapter 9", "The Evidence"),
-    ("10-the-triplets-reunite.md", "Chapter 10", "The Triplets Reunite"),
-    ("11-the-network.md", "Chapter 11", "The Network"),
-    ("12-the-corruption.md", "Chapter 12", "The Corruption"),
-    ("13-the-conscience.md", "Chapter 13", "The Conscience"),
-    ("14-the-story.md", "Chapter 14", "The Story"),
-    ("15-the-believers-doubt.md", "Chapter 15", "The Believer's Doubt"),
-    ("16-the-alliance.md", "Chapter 16", "The Alliance"),
-    ("17-the-inside-help.md", "Chapter 17", "The Inside Help"),
-    ("18-the-plan.md", "Chapter 18", "The Plan"),
-    ("19-the-fact-storm.md", "Chapter 19", "The Fact Storm"),
-    ("20-the-breakout.md", "Chapter 20", "The Breakout"),
-    ("21-the-escape.md", "Chapter 21", "The Escape"),
-    ("22-the-pursuit.md", "Chapter 22", "The Pursuit"),
-    ("23-the-divergence.md", "Chapter 23", "The Divergence"),
-    ("24-the-love.md", "Chapter 24", "The Love"),
-    ("25-the-mission.md", "Chapter 25", "The Mission"),
-    ("26-epilogue.md", "Epilogue", "Seven Paths"),
+# Chapter order, grouped by part: (file, number, title, POV)
+PARTS = [
+    ('Prologue', [
+        ('00-prologue.md', 'Prologue', 'The Conviction', 'Marcus'),
+    ]),
+    ('Part One: The Erasure', [
+        ('01-cell-7h.md', 'Chapter 1', 'Cell 7-H', 'Marcus'),
+        ('02-the-white-room.md', 'Chapter 2', 'The White Room', 'Marcus'),
+        ('03-two-months.md', 'Chapter 3', 'Two Months', 'Marcus'),
+        ('04-the-arrival.md', 'Chapter 4', 'The Arrival', 'Kira'),
+        ('05-the-corrected.md', 'Chapter 5', 'The Corrected', 'Dmitri'),
+        ('06-the-library.md', 'Chapter 6', 'The Library', 'Alexei'),
+        ('07-the-observer.md', 'Chapter 7', 'The Observer', 'Tanaka'),
+        ('08-the-pattern.md', 'Chapter 8', 'The Pattern', 'Isaiah'),
+    ]),
+    ('Part Two: The Connection', [
+        ('09-the-recognition.md', 'Chapter 9', 'The Recognition', 'Marcus'),
+        ('10-the-whisper.md', 'Chapter 10', 'The Whisper', 'Kira'),
+        ('11-the-garden-meetings.md', 'Chapter 11', 'The Garden Meetings', 'Marcus'),
+        ('12-the-discovery.md', 'Chapter 12', 'The Discovery', 'Nikolai'),
+        ('13-the-revelation.md', 'Chapter 13', 'The Revelation', 'Dmitri'),
+        ('14-the-message-system.md', 'Chapter 14', 'The Message System', 'Alexei'),
+        ('15-the-triplet-story.md', 'Chapter 15', 'The Triplet Story', 'Nikolai'),
+        ('16-the-conspiracy.md', 'Chapter 16', 'The Conspiracy', 'Marcus'),
+        ('17-the-ally.md', 'Chapter 17', 'The Ally', 'Tanaka'),
+    ]),
+    ('Part Three: The Plan', [
+        ('18-the-breaking-point.md', 'Chapter 18', 'The Breaking Point', 'Marcus'),
+        ('19-the-alliance-forms.md', 'Chapter 19', 'The Alliance Forms', 'Kira'),
+        ('20-the-impossible-plan.md', 'Chapter 20', 'The Impossible Plan', 'Dmitri'),
+        ('21-the-single-node.md', 'Chapter 21', 'The Single Node', 'Nikolai'),
+        ('22-the-sacrifice.md', 'Chapter 22', 'The Sacrifice', 'Isaiah'),
+    ]),
+    ('Part Four: The Storm', [
+        ('23-the-fact-storm.md', 'Chapter 23', 'The Fact Storm', 'Marcus'),
+        ('24-the-breakout.md', 'Chapter 24', 'The Breakout', 'Kira'),
+        ('25-the-cost-of-freedom.md', 'Chapter 25', 'The Cost of Freedom', 'Dmitri'),
+        ('26-the-pursuit.md', 'Chapter 26', 'The Pursuit', 'Alexei'),
+    ]),
+    ('Part Five: The Aftermath', [
+        ('27-the-report.md', 'Chapter 27', 'The Report', 'Isaiah'),
+        ('28-the-recovery.md', 'Chapter 28', 'The Recovery', 'Kira'),
+        ('29-the-missions.md', 'Chapter 29', 'The Missions', 'Marcus'),
+    ]),
+    ('Epilogue', [
+        ('30-epilogue.md', 'Epilogue', 'Seven Paths, One Truth', None),
+    ]),
 ]
+CHAPTERS = [(f, n, t) for _, chs in PARTS for (f, n, t, _pov) in chs]
 
 def extract_chapter_info(content):
     """Extract POV, timeline, and word count from chapter notes."""
@@ -158,6 +202,18 @@ def convert_chapter(chapter_file, chapter_num, chapter_title, prev_chapter, next
 
 def create_index():
     """Create an index page with all chapters."""
+    toc_parts = []
+    for part_title, chapters in PARTS:
+        items = []
+        for f, num, title, pov in chapters:
+            pov_html = f' <span class="chapter-title">({pov})</span>' if pov else ''
+            items.append(f'                    <li><a href="{f.replace(".md", ".html")}"><span class="chapter-number">{num}:</span> {title}{pov_html}</a></li>')
+        toc_parts.append('            <div class="part">\n'
+                         f'                <div class="part-title">{part_title}</div>\n'
+                         '                <ul class="chapter-list">\n' + '\n'.join(items) + '\n'
+                         '                </ul>\n            </div>')
+    toc_html = '\n\n'.join(toc_parts)
+    total_words = sum(len((CHAPTERS_DIR / f).read_text(encoding='utf-8').split()) for f, _, _ in CHAPTERS)
     
     index_html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -307,75 +363,14 @@ def create_index():
 
         <div class="toc">
             <h2>Table of Contents</h2>
-            
-            <div class="part">
-                <div class="part-title">Part One: The Gathering</div>
-                <ul class="chapter-list">
-                    <li><a href="00-prologue.html"><span class="chapter-number">Prologue:</span> The Conviction</a></li>
-                    <li><a href="01-arrival.html"><span class="chapter-number">Chapter 1:</span> Arrival <span class="chapter-title">(Marcus)</span></a></li>
-                    <li><a href="02-the-sessions.html"><span class="chapter-number">Chapter 2:</span> The Sessions <span class="chapter-title">(Kira)</span></a></li>
-                    <li><a href="03-the-enforcer.html"><span class="chapter-number">Chapter 3:</span> The Enforcer <span class="chapter-title">(Dmitri)</span></a></li>
-                    <li><a href="04-the-outlaw.html"><span class="chapter-number">Chapter 4:</span> The Outlaw <span class="chapter-title">(Alexei)</span></a></li>
-                    <li><a href="05-the-technician.html"><span class="chapter-number">Chapter 5:</span> The Technician <span class="chapter-title">(Nikolai)</span></a></li>
-                    <li><a href="06-the-doctor.html"><span class="chapter-number">Chapter 6:</span> The Doctor <span class="chapter-title">(Yuki)</span></a></li>
-                    <li><a href="07-the-journalist.html"><span class="chapter-number">Chapter 7:</span> The Journalist <span class="chapter-title">(Isaiah)</span></a></li>
-                </ul>
-            </div>
-
-            <div class="part">
-                <div class="part-title">Part Two: The Cracks</div>
-                <ul class="chapter-list">
-                    <li><a href="08-the-pattern.html"><span class="chapter-number">Chapter 8:</span> The Pattern <span class="chapter-title">(Marcus)</span></a></li>
-                    <li><a href="09-the-evidence.html"><span class="chapter-number">Chapter 9:</span> The Evidence <span class="chapter-title">(Kira)</span></a></li>
-                    <li><a href="10-the-triplets-reunite.html"><span class="chapter-number">Chapter 10:</span> The Triplets Reunite <span class="chapter-title">(Dmitri)</span></a></li>
-                    <li><a href="11-the-network.html"><span class="chapter-number">Chapter 11:</span> The Network <span class="chapter-title">(Alexei)</span></a></li>
-                    <li><a href="12-the-corruption.html"><span class="chapter-number">Chapter 12:</span> The Corruption <span class="chapter-title">(Nikolai)</span></a></li>
-                    <li><a href="13-the-conscience.html"><span class="chapter-number">Chapter 13:</span> The Conscience <span class="chapter-title">(Yuki)</span></a></li>
-                    <li><a href="14-the-story.html"><span class="chapter-number">Chapter 14:</span> The Story <span class="chapter-title">(Isaiah)</span></a></li>
-                </ul>
-            </div>
-
-            <div class="part">
-                <div class="part-title">Part Three: The Plan</div>
-                <ul class="chapter-list">
-                    <li><a href="15-the-believers-doubt.html"><span class="chapter-number">Chapter 15:</span> The Believer's Doubt <span class="chapter-title">(Marcus)</span></a></li>
-                    <li><a href="16-the-alliance.html"><span class="chapter-number">Chapter 16:</span> The Alliance <span class="chapter-title">(Kira)</span></a></li>
-                    <li><a href="17-the-inside-help.html"><span class="chapter-number">Chapter 17:</span> The Inside Help <span class="chapter-title">(Dmitri)</span></a></li>
-                    <li><a href="18-the-plan.html"><span class="chapter-number">Chapter 18:</span> The Plan <span class="chapter-title">(Alexei)</span></a></li>
-                </ul>
-            </div>
-
-            <div class="part">
-                <div class="part-title">Part Four: The Storm</div>
-                <ul class="chapter-list">
-                    <li><a href="19-the-fact-storm.html"><span class="chapter-number">Chapter 19:</span> The Fact Storm <span class="chapter-title">(Marcus)</span></a></li>
-                    <li><a href="20-the-breakout.html"><span class="chapter-number">Chapter 20:</span> The Breakout <span class="chapter-title">(Kira)</span></a></li>
-                    <li><a href="21-the-escape.html"><span class="chapter-number">Chapter 21:</span> The Escape <span class="chapter-title">(Dmitri)</span></a></li>
-                    <li><a href="22-the-pursuit.html"><span class="chapter-number">Chapter 22:</span> The Pursuit <span class="chapter-title">(Alexei)</span></a></li>
-                </ul>
-            </div>
-
-            <div class="part">
-                <div class="part-title">Part Five: The Divergence</div>
-                <ul class="chapter-list">
-                    <li><a href="23-the-divergence.html"><span class="chapter-number">Chapter 23:</span> The Divergence <span class="chapter-title">(Isaiah)</span></a></li>
-                    <li><a href="24-the-love.html"><span class="chapter-number">Chapter 24:</span> The Love <span class="chapter-title">(Kira)</span></a></li>
-                    <li><a href="25-the-mission.html"><span class="chapter-number">Chapter 25:</span> The Mission <span class="chapter-title">(Marcus)</span></a></li>
-                </ul>
-            </div>
-
-            <div class="part">
-                <ul class="chapter-list">
-                    <li><a href="26-epilogue.html"><span class="chapter-number">Epilogue:</span> Seven Paths</a></li>
-                </ul>
-            </div>
+{toc_html}
         </div>
 
         <footer>
             <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
-            <p>© 2025 - All Rights Reserved</p>
+            <p>© 2026 - All Rights Reserved</p>
             <p style="margin-top: 1rem; font-size: 0.8rem;">
-                27 chapters | ~49,500 words | Complete novel
+                Prologue, 29 chapters and Epilogue | ~{total_words:,} words
             </p>
         </footer>
     </div>

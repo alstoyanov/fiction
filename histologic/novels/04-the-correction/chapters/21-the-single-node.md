@@ -1,0 +1,261 @@
+# Chapter 21: The Single Node
+
+*July 16–21, 2106. Treatment Room C-1*
+
+---
+
+They did not take him to the white chair first. They took him to a small office off the treatment corridor that he had never been inside, with a table and two chairs and no mirror, and they sat him down in one of the chairs, and went out, and left him there for three hours.
+
+Nikolai knew what that was for. He had been an interrogator's subject before, at the border facility, and he had watched Dmitri interrogate people, once, years ago, through a window, before they stopped speaking to each other. You leave a man alone long enough and he starts the interrogation himself. He goes over and over what he did. He builds his own case.
+
+He sat with his hands on the table and built it.
+
+*Brandt's certificate. February twenty-fourth. Twenty-one-forty. The security audit table. Updated hourly. Read only when something goes wrong.*
+
+Something had gone wrong. Or someone had simply looked. It did not matter which.
+
+*They know it was me. They don't know what I took.*
+
+He held on to that. It was the only thing he had.
+
+And he held on, too, to the pressure at the edges of his mind that he had felt all his life and had never needed so badly: Dima, out in the garden, still and cold and focused like a man with his hand on a weapon. Lyosha, in the library, with his heart going so hard that Nikolai could almost feel it in his own chest.
+
+*I'm here,* he pushed toward them. *I'm all right. I'm still here.*
+
+---
+
+Reeves came in at a quarter past eleven.
+
+He was alone. He sat down across the table and crossed his legs and folded his clean hands on his knee, and he looked at Nikolai with his light brown eyes, and his eyes were as interested as Nikolai had heard they were.
+
+"Nikolai," he said. "May I call you Nikolai? We've never actually spoken. That's my fault. I've been watching you for a year and never once said hello."
+
+Nikolai let the lag come. He let his eyes drift. "Hello," he said.
+
+Reeves smiled.
+
+"You can stop that," he said, not unkindly. "I'm not a guard. I don't need you to perform for me." He tilted his head. "On February the twenty-fourth, somebody opened the Continuity directory using a maintenance certificate that belonged to a contractor called Brandt. It was a very neat piece of work. They were in for eleven minutes. They backed out cleanly, cleared their buffer, and ran an integrity sweep afterwards to bury the timestamp. I didn't notice for five months. Nobody reads the audit table." He paused. "I only looked because the Director suddenly developed an interest in cradle recertification schedules, and I wondered why."
+
+Nikolai said nothing. His hands were flat on the table.
+
+"The only person in this building who had both the skill to do that and physical access to B-4 on that night," said Reeves, "is you. So. What did you open, Nikolai? What did you take?"
+
+"I was running an integrity sweep," Nikolai said. "The schedule requires it. Sometimes the old certificates are cached. The system loads them automatically. I didn't notice."
+
+It was the best lie he had. He had built it in the three hours alone. It was plausible and dull and technical, and it was exactly the kind of thing a corrected man who did not understand what he was doing might say.
+
+Reeves listened to it with every sign of attention. Then he laughed. Softly. A pleasant, delighted laugh.
+
+"No," he said. "No, you didn't. But it's a good answer. It's a very *you* answer. You've spent your whole life in the middle of things, haven't you? Explaining them away."
+
+He uncrossed his legs and leaned forward.
+
+"Here's the thing, Nikolai," he said. "It doesn't matter what you took. Truly. Whatever it was, you're a patient in a correctional facility and you have nowhere to put it. And in a very short time, you won't remember that you took it at all." He smiled. "What matters is what you *are*. And I've waited a year to find out."
+
+---
+
+"I had planned to do this properly," Reeves said, walking beside him down the treatment corridor between the two men in gray. He spoke conversationally, like a colleague showing a visitor round. "All three of you at once. The triple cradle. It's very beautiful, you know. You helped commission it. I thought that was fitting."
+
+Nikolai had. Three weeks ago. He had knelt on the floor of C-1 and calibrated its three linked hoods, not knowing whose heads they were meant for, because the work order had said *equipment* and nothing else.
+
+"But this has made me curious about something," Reeves said. "Your bond. I've spent a year watching it. At the border they found it by accident: correct one of you and the other two push back. They thought it was a kind of shared resistance. A wall." He opened the door of C-1. "I don't think it's a wall. I think it's a network. And the thing about networks is that you learn the most about them when one node goes down."
+
+The room was white. Larger than C-2. In the middle, three chairs in a triangle, facing inward, each with its own hood on its own jointed arm, the three arms joined above at a single mounting like the petals of a flower.
+
+Two of the chairs were empty.
+
+"So we'll start with one," said Reeves. "Just you. Your brothers will stay where they are. The garden. The library. And we'll see what the bond does when only one of you is in the chair. Whether it carries the correction out to them." He gestured to the nearest chair. "Or whether they carry you."
+
+---
+
+Morrison was at the console.
+
+He did not look at Nikolai. His face was gray and his jaw was set so hard that Nikolai could see the muscle jump, and his right hand lay flat on the console beside the controls, pressed down, perfectly still.
+
+Dr. Moss was on her stool. She took Nikolai's hand in both of hers when the orderlies had fastened the strap. Her eyes were full of tears.
+
+"It's all right," she said. "It's going to be all right, Nikolai. You'll feel so much better afterwards."
+
+She meant it. He could see that she meant it. He almost wished he could hate her.
+
+The hood came down.
+
+---
+
+He had never felt the Ashford cradle at full gain.
+
+At the border it had been a hammer. Here, for a year, in the listening sessions, it had been a hand resting lightly on the lid of a box. What came now was neither. It was a tide. It came in under him, all at once, from every direction, the way water comes into a room when a door gives way, and it lifted everything.
+
+It went for the guilt first.
+
+He had known it would. It had gone for the guilt at the border. *I tried to save everyone. I tried to hold us together. I tried to find a middle way.* Fifteen years of standing between two brothers, delivering messages, covering trails, lying at dinner, holding things together that would not hold. He felt it lifted up into the white light and turned over and examined, all of it, every lie and every silence. It was the heaviest thing in him. It was the most *his*.
+
+*Step: integrity sweep,* he recited, down into the vault. *Buffer clear. Cache flush. Log rotation interval, six hours. Log rotation interval, six hours.*
+
+He had put things in code. He had put things in maintenance logs and in the rotation schedules of every system he had ever touched. He had put things in Old Songs' tunes, the way Lyosha had taught him. He ran all of it at once. He poured it into the front of his mind, the dullest, densest, most orderly material he owned, and let the tide wash over it.
+
+It was not enough.
+
+He felt it the way you feel your footing go on a riverbed. The guilt went. The tide took it: not all of it, but the heat in it, the links, the fifteen years. He felt it go out of him and could not stop it.
+
+And then the tide went for his brothers.
+
+---
+
+He had never felt anything like the fear.
+
+The tide found Dima. The whole of Dima: the boy on the roof, bossy, first by thirty seconds; the man in the uniform at dinner, talking about the Phantom case; the enforcer at the checkpoint, dropping his weapon in the fog. It found Lyosha. The grin. The messages on walls. The tea in the safe house. It lifted them up into the white light together and began, slowly, patiently, to feel along the edges of them, the way a hand feels along the edge of something it means to pull loose.
+
+*No,* Nikolai thought. *No, not them, you can have anything but—*
+
+He had nothing left to put in front of them. The vault was running. The tide was going round it.
+
+And then, from outside, something *pulled*.
+
+---
+
+In the garden, among the roses, Dmitri Volkov put down his rake.
+
+He did not look up. He did not change his face. He sat back on his heels on the gravel, very slowly, like a man who has felt faint in the heat, and put both his hands flat on the ground, and closed his eyes. The orderly at the gate glanced at him and went back to his tablet. It was a warm day. Corrected men sometimes sat down.
+
+In the library, at the far end of the stacks, Alexei Volkov stopped pushing the returns cart and gripped its handle with both hands, so hard that the knuckles went white.
+
+It was a Friday. Kira Osman was in the library for her hour, at the reference shelves, with a book about reservoirs open in her hands. She looked up, because she had been watching the librarian for six months and knew every movement he made. She saw his hands on the cart. She saw his face, which was blank, and his eyes, which were closed, and his shoulders, which were shaking.
+
+She did not need a primer. She put the book back on the shelf and stood very still and did not look away from him, as if by looking she could lend him something.
+
+---
+
+Nikolai felt them.
+
+Not as thought. As weight. As two hands closing round his wrists from outside, one on each side, the way they had closed at the border, the way they had closed on the roof when Lyosha nearly went over the parapet and Dima caught his collar and Nikolai caught Dima's belt.
+
+They held on.
+
+The tide was pulling at the memory of them, and from outside, somehow, from the garden and the library, they were holding on to it too. Holding on to *themselves*, in him. It was not a wall. Reeves was right about that. It was nothing so simple. It was three people refusing to let go of one thing from three directions at once, and the thing, caught between the tide and the three of them, stretched, and groaned, and *held*.
+
+At the console, Morrison's screen showed three peaks.
+
+Nikolai could not see it. But he heard Reeves, somewhere behind him, draw in a breath. A small, soft, delighted sound. The sound of a man watching a result he had waited a year for.
+
+"Look at that," Reeves murmured. "Look. Three nodes. With only one in the chair." He leaned closer to the screen. "They're *pulling*. Morrison, are you getting this? They're pulling from the garden."
+
+"I'm getting it," said Morrison. His voice was hoarse. And under his hand, very slightly, Nikolai felt the tide ease. Not much. A few percent off the deepest channels. Enough.
+
+---
+
+He came back as himself.
+
+He came up out of it slowly, the way you come up from the bottom of a lake, and the white room swam into focus above him, and the hood lifted, and Dr. Moss was crying and squeezing his hand and saying *you did so well*, and he was Nikolai. He knew his name. He knew his brothers. He knew where he was and why and what he had done.
+
+The bond was there. Raw and aching and exhausted, like a muscle after too much weight, but there. He could feel Dima in the garden, lying flat on his back on the gravel now with the orderly bending over him. He could feel Lyosha in the library, sitting on the floor between two stacks with his head against the shelves.
+
+*I'm here,* he pushed, as hard as he could, which was not very hard. *I'm still here.*
+
+And felt them feel it.
+
+---
+
+He did not find out what it had cost until that night.
+
+He was lying on his bed in 7-C with his face to the wall. His whole body ached. The atrium lights had dimmed. And he did what he had done every night for a year, the thing that kept him steady: he reached for the roof.
+
+The one he had restored in February, in B-4, fragment by fragment. The fog off the lake. The warm tar. Three boys on the parapet.
+
+He reached for it, and there was nothing there.
+
+He lay still.
+
+He tried again. Carefully. Like a man feeling in the dark for a step he knows is there.
+
+He knew *that* there had been a roof. He knew it the way he knew the date of the Founding. He knew that it had been the flat tarred roof of their apartment building on the lakeshore, and that they had sat there as boys, and that they had argued about something. He knew that it mattered more than almost anything in his life.
+
+But the thing itself, the fog and the tar and the laughter and Dima's voice and Lyosha's grin, was gone. Not blurred. Not filed. A smooth blank place, like a hand passed over wet paint.
+
+He tried to remember what they had argued about.
+
+*Who was born first?*
+
+He knew the question. He knew it was the family's question. He knew Aunt Elena had signed her message with it. He knew there was an answer.
+
+He did not know what the answer was.
+
+He lay on his bed in the blue light and pressed his face into the thin pillow so that the camera would not see, and for a long time he did not move at all.
+
+---
+
+Morrison told Tanaka. Tanaka told the primers. The primers told everyone. It went round the wing in a single evening, from cell to cell, and by midnight all seven of them knew.
+
+Morrison had stayed in C-1 after the session, packing up the console, while Reeves stood at the screen going back through the data, and he had heard Reeves talking to someone on his comm. Someone at the Ministry. Cheerful. Almost excited.
+
+*The bond resisted. Remarkably. It's a genuine distributed architecture, I'm certain of it now. But it's straining. I can see exactly where. If I leave them three weeks to recover, they'll recover, and they'll learn from it. I want to do the full simultaneous integration while I still know how to break it.*
+
+A pause, while the other person spoke.
+
+*No, the demonstration stays on the eleventh. I'm only moving integration. All subjects. The second of August.*
+
+Another pause.
+
+*No, I'll cancel the briefing trip. I'll be here. I wouldn't miss this for anything.*
+
+---
+
+*MR/TY-1,* Tanaka wrote, in a primer, under the times tables, with her hand very steady. *FOR ALL SEVEN. INTEGRATION MOVED. ALL SUBJECTS. AUGUST 2. REEVES WILL NOT TRAVEL. HE WILL BE IN THE BUILDING.*
+
+And below it, in Dmitri's hand, the next morning, the only primer he had ever sent with only one line in it:
+
+*THEN WE GO ON THE NIGHT OF THE FIRST.*
+
+Fifteen days. Not three and a half weeks. Fifteen.
+
+Aunt Elena would get the message through Morrison, who had Registry access as a Continuity engineer and could reach the partition that Nikolai could not reach anymore. Reeves had revoked Nikolai's technical privileges that same afternoon, with a courteous note: *pending integration*. Nikolai would not see B-4 again. He would not be able to take down the shielding. Someone else would have to do it. Someone would have to learn in fifteen days what he had learned in ten years.
+
+Everything that had had margin had none now.
+
+---
+
+The primer came through the slot of 7-C on the evening of July twenty-first.
+
+It was *Arithmetic for Young Citizens, Book Two*. The first one. The one that had said *WELCOME* to Marcus Chen, and had gone round all seven cells, and had seven sets of hands on it.
+
+He opened it. There was no message on the first page. Nothing under the times tables. Nothing under the word problems.
+
+He held the second page up to the light.
+
+Pinpricks. Hundreds of them. Small and even and very careful, the pricks of a man who had spent a whole night on them with a library pin, holding his hand steady by force. They went on for page after page, under numbers and questions and long division, all the way to the back cover.
+
+It was the roof.
+
+*Fog off the lake. The tar still warm. Three of us on the parapet, legs over the edge, which Mama had absolutely forbidden. Me on the left, Lyosha in the middle, you on the right, because you were always on the right.*
+
+*I said: I was. Mama said I came out first.*
+
+*You said: By thirty seconds. That doesn't count.*
+
+*I said: It counts for birth order. I'm the oldest.*
+
+*Lyosha said: You're the bossiest. That's different.*
+
+*And I pushed him and he pushed me back and we rolled across the roof, and you sat on the parapet and said: You're both idiots. And you were smiling so hard your face must have hurt. I remember that. I looked up from the tar and saw you smiling.*
+
+*Then Papa called us down to dinner.*
+
+*— D.*
+
+Nikolai sat on the edge of his bed with the primer on his knees and read it three times.
+
+It did not come back. He had hoped, a little, that it would: that reading it would find the blank place in him and fill it, the way Old Songs' humming had filled Marcus Chen's with a lullaby. It did not. The blank place stayed blank. What he held in his hands was not a memory. It was a story. A story about three boys on a roof, told very carefully by someone who had been there, about someone who had been there, who no longer knew that he had.
+
+*You were always on the right.*
+
+He had not known that. He knew it now. Dima had told him.
+
+He thought about Marcus Chen in 7-H, who had lost a day in a library, and had asked for it back, and been given it in pinpricks by a woman who remembered it for him. He had read that primer in June, when it went round. He had thought it was the saddest thing he had ever read.
+
+It was not sad, he thought now. Or it was not only sad.
+
+He closed the book. He looked up across the triangle. In 7-A, Dmitri was sitting on his bed with his face to the wall, perfectly still. In 7-B, Alexei was looking at him openly, against every rule, his gray-blue eyes wet in the blue light.
+
+Nikolai lifted his right hand from the mattress, where the camera could see it and would see nothing. Forefinger over middle finger. Hooked. Held.
+
+And across the triangle, in the same instant, two other hands did the same.

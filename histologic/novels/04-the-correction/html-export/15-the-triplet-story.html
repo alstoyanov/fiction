@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Correction - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brass: #b8860b;
+            --dark-brass: #8b6914;
+            --light-brass: #daa520;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--brass);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--brass);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--light-brass);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--brass);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--brass);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--brass);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--light-brass);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(42, 42, 42, 0.6);
+            border-left: 4px solid var(--brass);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--brass);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-brass);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--light-brass);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--brass);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--light-brass);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--brass);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--brass);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--brass);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--brass);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--brass);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Correction</h1>
+            <div class="novel-meta">Novel 04 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="14-the-message-system.html" class="nav-button">← Previous: Chapter 14: The Message System</a>
+            <div class="nav-center">Chapter 15: The Triplet Story</div>
+            <a href="16-the-conspiracy.html" class="nav-button">Next: Chapter 16: The Conspiracy →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 15: The Triplet Story</h1>
+<p><em>March 22 – April 16, 2106. Wing C, Cell 7-C, and the Registry</em></p>
+<hr>
+<p>He wrote it at night, in pinpricks, by the light of the cell.</p>
+<p>The book was a schoolbook of multiplication tables, <em>Arithmetic for Young Citizens, Book Three</em>, which Alexei had sent him with a spare pin in the spine and nothing else, not even a message, because nothing else was needed. Nikolai sat on the edge of his bed with his back to the camera and the book open on his knee, as if he were doing sums, the way a corrected man might do sums to pass the time. And under the numbers, one prick at a time, with the new key Kira Osman had given them, he wrote down where the three of them had come from.</p>
+<p>He could not write it all at once. There was no room, and it was too much, and he did not trust himself. So he wrote it in pieces. One piece a night, sometimes two. He sent each one out on the morning trolley and it went round the wing, through six sets of hands, and came back to the library, and Alexei sent him another empty book.</p>
+<p>And each night, before he wrote, he went home to get it.</p>
+<hr>
+<p>That was the part none of them had expected, least of all Nikolai. That the telling would also be a restoring.</p>
+<p>He could not simply write from memory, because his memory was not simple. It had been rubbed at for fifteen months, first at the border and then here. There were things he knew only because they were in the partition, laid down fragment by fragment in the dead space of the Registry before the machine could get to them. So each evening, at the terminal in B-4, while the integrity sweep ran, he reached down through the layers and brought up what he needed. Decoded it. Let it back into his head, carefully, like a man lowering himself into cold water.</p>
+<p>And the next night he wrote it into a schoolbook for six strangers, and in the writing it became more his than it had been since the arrest.</p>
+<p><em>Hide what you love in what you've memorised,</em> the old man had said. Nikolai thought now that there was a second half to it that the old man had not said, perhaps because he had never had anyone to say it to. <em>And then give it to someone else to keep.</em></p>
+<hr>
+<p><em>NV-1. 22 MARCH. FOR ALL SEVEN.</em></p>
+<p><em>We were arrested together, at a checkpoint in the fog, in November, a year and four months ago. Our mother had died two hours before. There was a fact storm in the hospital; she was already very ill, and the storm was too much. She said to us at the end: save each other. Promise me. We promised. Then we ran, and they caught us, and we put down our weapons together, because it was the only thing we had left that we could still do together.</em></p>
+<hr>
+<p><em>NV-2. 24 MARCH.</em></p>
+<p><em>The border facility is in the neutral zone. It was built there because it is the only place both nations agree on anything. They put us in three glass cells in a triangle, the way we are now, so we could see each other and not speak. They wanted us to watch each other break. We did watch. We could not help it. I saw my brother Alexei's face when they gave us the notice about our mother. I could not go to him. I have never been so far from anyone in my life as I was from him that night, and he was six metres away.</em></p>
+<hr>
+<p><em>NV-3. 27 MARCH.</em></p>
+<p><em>The white rooms were not like the white rooms here. They were louder. They did not listen. They pushed. State your name. State your crime. Do you wish to be corrected? And then they went into us like hands into a drawer.</em></p>
+<p><em>But when they pushed on Dmitri, Alexei and I felt it. Not as thought. As weight. When they pushed on the memory of our father in Dmitri, we held on to it from outside, and it would not come loose. When Alexei fought, our patterns on their screens moved with his. The technicians saw it before we understood it. The three subjects are responding identically. That was the first thing I ever heard them say about us.</em></p>
+<p><em>We are not telepaths. I want to say that clearly, because Dr. Tanaka will want to know. We have never heard each other's thoughts. We only know where the others are. The way you know where your own hand is in the dark.</em></p>
+<p><em>You cannot correct one part of a thing without correcting the rest. And they could not correct all three at once.</em></p>
+<hr>
+<p>He sent that one out and lay awake, wondering what they would make of it. The next evening a book came back from 7-D with a reply pricked under a table of weights and measures.</p>
+<p><em>TY-4, 28 MARCH. THANK YOU. NOTED. "SHARED SALIENCE ARCHITECTURE" IS THEIR PHRASE, NOT MINE; I HAVE SEEN IT ON A SCREEN. YOUR DESCRIPTION IS BETTER. PLEASE CONTINUE.</em></p>
+<p>He read it three times. Then he put the book under his pillow, which was a foolish thing to do and entirely against Dmitri's rules, and slept better than he had in weeks.</p>
+<hr>
+<p><em>NV-4. 30 MARCH.</em></p>
+<p><em>They tried everything. More intensity. Longer sessions. They took us out of the triangle and put us in isolation cells, deep in the building, with no line of sight. They thought it was the seeing that held us together. It was not. We had been one person in three bodies for twelve years before we were three people. Some part of us never finished coming apart. You cannot build a wall between things that were never separate.</em></p>
+<p><em>I began to hide things then. There was a cradle bolted to the wall of my isolation cell for night reinforcement, and it had a maintenance port. I spent ten years maintaining factorepo systems in the border zone. I know where the dead space is. I began to take our memories out of our heads before they could get to them, and put them in the Registry, in blocks allocated to patients who had been discharged and archived. Disguised as corrupted logs. Three copies of everything. Distributed. Redundant. That is where they still are. Every night I go and visit them. I am visiting them now, to write this.</em></p>
+<hr>
+<p><em>NV-5. 2 APRIL.</em></p>
+<p><em>After six months the director gave up. I heard him through a ventilation duct. We can suppress, but we cannot erase. We can force compliance, but we cannot create belief. Permanent detention. Log them as correction failures.</em></p>
+<p><em>The officer who arrested us was there. Captain Sokolov. She asked him: they really loved each other, didn't they, the brothers? He said yes, that was the problem. And she said, so quietly that Dmitri and I have argued for fifteen months about whether we heard it: or the solution.</em></p>
+<p><em>I do not know what she meant. I think about it often.</em></p>
+<hr>
+<p><em>NV-6. 4 APRIL.</em></p>
+<p><em>In June they woke us at four in the morning and brought us here. They had rebuilt the triangle. Measured it and reproduced it. They did not bring us here to correct us. The border facility had already failed. They brought us here to find out WHY it failed.</em></p>
+<p><em>I know now what they call us. You know it too. BOND. C-3, C-4, C-5. Primary research interest. They plan to put the three of us in one room, in one cradle, at the same time, in August. The file says the outcome will be either bond disruption or catastrophic failure of all three nodes. The file says both outcomes are informative.</em></p>
+<p><em>We have kept our faces to the walls for ten months so that they would have nothing to study. It did not matter. They were never studying our faces.</em></p>
+<hr>
+<p>It was the next reply that changed everything.</p>
+<p>It came back from 7-E on the morning of April sixth, in a primer that had been round the wing twice. It was longer than anything Isaiah had sent before. It carried his usual prefix and sequence number, and it was pricked so carefully and so evenly that Nikolai could see the effort in it, the steadiness of a hand that had decided not to shake.</p>
+<p><em>IO-19. 5 APRIL. FOR NV. AND FOR DV AND AV. I HAVE WAITED TO SEND THIS UNTIL I WAS SURE YOU WANTED TO KNOW YOUR STORY WHOLE. I THINK NOW THAT YOU DO.</em></p>
+<p><em>BEFORE MY ARREST I HAD A LEAK FROM BORDER SECURITY PROCUREMENT. TEST LOGS FROM A SERIES FIFTEEN YEARS AGO. NUMBERED SUBJECTS. ONE LINE READS: SUBJECT 2471 — VOLKOV, I. — LETHAL THRESHOLD CONFIRMED.</em></p>
+<p><em>I BELIEVE THIS IS YOUR FATHER. I AM SORRY. I HAVE KEPT IT SAFE FOR YOU SINCE OCTOBER. IT IS YOURS.</em></p>
+<p>Nikolai sat on the edge of his bed with the primer on his knees for a long time.</p>
+<p>He had known. Of course he had known. Alexei had carried the proof in a data chip into Mama's hospital room the day she died. <em>Test Subject 2471. Cause of death: cerebral hemorrhage induced by controlled fact storm exposure. Result: successful demonstration of lethal threshold.</em> They had all three read it in Alexei's safe house an hour before Sokolov came through the door.</p>
+<p>But he had not known that anyone else knew. He had not known that a stranger in a glass box had carried it for six months through the white chair, and kept it safe, and chosen when to hand it over.</p>
+<p>He felt, across the triangle, Alexei's grief come up through the bond, and Dmitri's, and his own. Old and heavy and familiar. And under it, something he did not expect. Something almost like gratitude.</p>
+<p><em>It is yours.</em></p>
+<hr>
+<p>That night, in B-4, he went looking for his father.</p>
+<p>He had never done it before. He had been afraid to. The Registry held every correction record in Veridica going back to its founding, but he had never searched it for the name <em>Volkov</em>, because he was afraid of what else he might find, and afraid of the audit table, and afraid in the plain, cowardly way of a man who has already lost enough.</p>
+<p>He did it now. With his own maintenance certificate, not Brandt's, through the ordinary archive index that any technician was entitled to query. He typed his father's name and his date of birth and waited.</p>
+<p>One result.</p>
+<p>It was not a death record. The death was in the factorepo, where they had seen it a hundred times: <em>Volkov, Ivan. Fact storm, border zone. Accidental.</em> This was something else. It was a correction record, closed and archived. It was dated the spring before their father died. The spring the three of them had turned fourteen.</p>
+<p><em>VOLKOV, IVAN SERGEYEVICH. SYSTEMS ENGINEER, BORDER BROADCAST DIVISION. REFERRED: UNAUTHORISED INQUIRY INTO BROADCAST DISCREPANCY. CORRECTION: STANDARD, TWELVE WEEKS. OUTCOME: FULL COMPLIANCE. DISCHARGED.</em></p>
+<p>Nikolai read it and did not understand it, and then understood it, and sat very still with his hands flat on the desk.</p>
+<p>The spring they turned fourteen, Papa had gone away. A work course, Mama said. Three months in the interior, for the division. Very important. And when he came back...</p>
+<p>He remembered it now. It had been in him the whole time, filed under something ordinary. Papa at the dinner table, eating, not talking. Papa in the study with the green lamp and the door open, which he had never left open before, sitting with his hands in his lap. Papa not laughing when Lyosha did the impression of the tram conductor, the one that had always made him laugh until he cried. Papa looking at the three of them sometimes, across the table, as if he were trying to remember who they were.</p>
+<p>They had thought he was tired. They had thought it was the work. Mama had told them it was the work. Nobody, not once, in the year between his coming home and the storm that killed him, had used the word <em>correction</em> in their apartment.</p>
+<p><em>Full compliance.</em></p>
+<p>They had taken him apart, and sent him home, and he had sat at his own table with his three sons for a year as the thing Marcus Chen had been in December. And then, when he was quiet and compliant and asked no more questions, they had used him to measure how much a human mind could bear.</p>
+<p>Nikolai had spent ten months in a glass box keeping his face to the wall so that they would not do to him what they had done to his father.</p>
+<p>And he had not known, until tonight, that they already had.</p>
+<hr>
+<p>There was one more field in the record, near the bottom. <em>NEXT OF KIN.</em></p>
+<p><em>VOLKOV, SOFYA (WIFE).</em></p>
+<p><em>VOLKOV, ELENA SERGEYEVNA (SISTER).</em></p>
+<p>He looked at the second name for a long time.</p>
+<p>Aunt Elena. Papa's younger sister. She had come to the apartment sometimes when they were small, a tall, quick, laughing woman with dark hair and a way of looking at people as if she were memorising them, who brought them sweets from the interior and told them stories that made Mama purse her lips. And then, the year after Papa came home from his <em>course</em>, she had come one last time, and sat with Papa in the study with the door closed for a whole evening. When she came out her face had been white. She had knelt in front of the three of them in the hallway and held their faces in her hands, one after another, and said, <em>Your father has changed. You must look after each other. Promise me.</em> And then she had gone, and never come back, and Mama would not say her name.</p>
+<p>They had thought for fifteen years that she had abandoned them.</p>
+<p>Nikolai sat at the terminal with the record open in front of him and realised that she had come to tell them. She had known what had been done to her brother, and she had tried, in the only words she was allowed, to warn his sons. And then she had gone somewhere where she could fight it.</p>
+<p><em>Your father has changed.</em></p>
+<p><em>Save each other.</em></p>
+<p><em>Promise me.</em></p>
+<hr>
+<p>He wrote it out that night. It was the longest piece he had sent.</p>
+<p><em>NV-7. 8 APRIL. FOR ALL SEVEN.</em></p>
+<p><em>My father was corrected. The spring we were fourteen. Twelve weeks. Full compliance. We did not know. We thought he was tired. They took him apart and sent him home to us, and a year later they used him to find out how much a mind can bear. 2471. Isaiah has kept that number for us since October. I cannot thank him enough.</em></p>
+<p><em>My brothers and I have been living our father's fate for fifteen months. Resisting it where he could not. I did not know that until tonight. I think it is the reason we held.</em></p>
+<p><em>His next of kin were our mother, and his sister. Our aunt, Elena. She came to us once, afterwards, and told us to look after each other. Then she went away. I think now that she went to fight.</em></p>
+<hr>
+<p>The message came eight days later.</p>
+<p>He was in B-4, at the terminal, at twenty-two hundred, in the middle of the integrity sweep. He had gone home to the partition, as he did every night, to bring up tomorrow's fragment for the schoolbook. He reached down through the layers into the dead space, into the blocks where for sixteen months only he had ever written anything.</p>
+<p>And there was something there that he had not put there.</p>
+<p>It was one block. Newly written. Disguised, like his own, as a corrupted session log from an archived patient. It sat between two of his fragments of the roof, so neatly placed that whoever had written it must have been able to read his whole partition, must have mapped every block, must have known exactly where he would look.</p>
+<p>For a long moment he could not breathe. He sat with his hand over his mouth and the cabinets humming and the certainty going through him like cold water that they had found him. That this was Reeves. That the calm voice had known all along and had waited until now to let him know it.</p>
+<p>Then he decoded it.</p>
+<p>It was short. It was in the old border-zone smuggler's shift, the one The Phantom had used on cigarette packets, the one their father had taught all three of them in the study, under the green lamp, when they were nine.</p>
+<p><em>I KNOW WHERE YOU ARE. I KNOW WHAT THEY ARE DOING. I AM OUT AND I AM COMING. HOLD ON. TELL YOUR BROTHERS.</em></p>
+<p>And under it, where a signature would go, instead of a name, a question.</p>
+<p><em>WHO WAS BORN FIRST?</em></p>
+<p>Nikolai sat in front of the terminal and put both his hands over his face.</p>
+<p>It was the roof. It was the argument. It was the thing the three of them had said to each other a thousand times as boys, the question nobody in the world would ever think to ask except someone who had sat in the Volkov kitchen and heard them shout it, and laughed, and told them they were all three impossible.</p>
+<p>Aunt Elena had heard it. She had been there.</p>
+<p><em>I am out and I am coming.</em></p>
+<hr>
+<p>He did not trust himself to write it well. So he wrote it plainly, the next morning, and sent it round on the trolley, and felt it go from cell to cell like a current through a wire.</p>
+<p><em>NV-8. 16 APRIL. FOR ALL SEVEN.</em></p>
+<p><em>Our aunt Elena is alive and she is outside. She has found my partition, God knows how. She says she is coming. She signed it with a question only our family knows.</em></p>
+<p><em>She was the one who warned us, fifteen years ago, that Papa had changed. She never told us why. I think she is going to tell us now.</em></p>
+<hr>
+<p>He did not see it arrive in 7-H. He saw it only afterwards, when Dmitri pressed it into the bond from across the triangle that evening, sharp and startled, and made him lift his head.</p>
+<p>Marcus Chen was standing in the middle of his cell with the primer open in his hands.</p>
+<p>He was not sitting with his head in his hands. He was not keeping the shape of a broken man. He had forgotten. He stood there under the camera's green light with his face turned toward the triangle, and the look on it was one that Nikolai had never seen on a face in Wing C.</p>
+<p>It was the look of a man who has just remembered a sentence.</p>
+<p>In his head, Nikolai would learn later, it had come back whole. Not filed. Not flat. The way the lullaby had come. An apartment in the capital, quiet, too quiet, with no hum of sensors. A woman on a couch, with her dark eyes suddenly bright and hard, speaking in a voice that shook. A voice he had loved, and been betrayed by, and reported, and lost.</p>
+<p><em>He questioned a minor discrepancy in the factorepo. Nothing major, just a small contradiction he noticed. They detected his doubt, arrested him, sent him to correction. When he came back, he wasn't my brother anymore. He was empty. Broken. They didn't correct his thinking. They destroyed his mind.</em></p>
+<p>Marcus Chen lowered the book and looked across the atrium at the three identical men in the triangle, at their gray-blue eyes and their sharp features, and Nikolai, watching, understood that he was seeing the resemblance for the first time.</p>
+<p><em>Elena,</em> Marcus's lips said, silently, through the glass.</p>
+<p>And then, slowly, as if the word were very heavy: <em>Your aunt.</em></p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="14-the-message-system.html" class="nav-button">← Previous: Chapter 14: The Message System</a>
+            <div class="nav-center">Chapter 15: The Triplet Story</div>
+            <a href="16-the-conspiracy.html" class="nav-button">Next: Chapter 16: The Conspiracy →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+
