@@ -182,7 +182,7 @@ Not a session day. Not the usual pair. A young woman he had never seen, with a t
 
 He had not known there was a Director. He had never thought about it. Ashford had Hayes, and Moss, and Morrison, and the voice. Ashford did not, as far as he had ever been able to see, have anyone above them.
 
-He walked with her through the atrium, and past the treatment corridor, and through the vestibule, and out into the main building, with its long bright windows and its soft chairs and its ordinary patients reading in the sun. Up a flight of stairs. Along a carpeted corridor. To a door with a small brass plate on it.
+He walked with her through the atrium, and past the treatment corridor, and through the vestibule, and out into the main building, with its long bright windows and its soft chairs and its ordinary patients reading in the sun. Up a flight of stairs. Along a carpeted corridor. To a door with a small steel plate on it.
 
 *H. KOVAČ. DIRECTOR.*
 

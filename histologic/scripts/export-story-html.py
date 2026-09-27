@@ -6,9 +6,10 @@ Usage:
     python export-story-html.py <story-folder>
     
 Example:
-    python export-story-html.py novels/the-believers-fall
-    python export-story-html.py novels/the-stolen-fact
-    python export-story-html.py novels/the-divided-truth
+    python3 scripts/export-story-html.py novels/01-03-stories/01-the-believers-fall
+    python3 scripts/export-story-html.py novels/01-03-stories/02-the-stolen-fact
+    python3 scripts/export-story-html.py novels/01-03-stories/03-the-divided-truth
+    python3 scripts/export-story-html.py --all
 """
 
 import os
@@ -210,7 +211,7 @@ def create_html_export(story_folder):
     html = html.replace('{{STORY_CONNECTIONS}}', connections)
     
     # Write output
-    output_path = story_path / f'{story_path.name}.html'
+    output_path = story_path / (re.sub(r'^\d+-', '', story_path.name) + '.html')  # 01-the-believers-fall -> the-believers-fall.html
     write_file(output_path, html)
     
     print(f"[OK] Created: {output_path}")
@@ -221,21 +222,25 @@ def create_html_export(story_folder):
 
 def main():
     """Main entry point."""
+    base_path = Path(__file__).parent.parent
+    stories = sorted(p.parent for p in (base_path / 'novels').glob('**/story.md'))
     if len(sys.argv) < 2:
-        print("Usage: python export-story-html.py <story-folder>")
+        print("Usage: python3 scripts/export-story-html.py <story-folder> | --all")
         print("\nAvailable stories:")
-        novels_path = Path(__file__).parent.parent / 'novels'
-        if novels_path.exists():
-            for folder in sorted(novels_path.iterdir()):
-                if folder.is_dir() and (folder / 'story.md').exists():
-                    print(f"  - {folder}")
+        for folder in stories:
+            print(f"  - {folder.relative_to(base_path)}")
         sys.exit(1)
-    
+
+    if sys.argv[1] == '--all':
+        for folder in stories:
+            create_html_export(folder)
+        print("\n[OK] Export complete!")
+        return
+
     story_folder = sys.argv[1]
     
     # If relative path, make it absolute
     if not os.path.isabs(story_folder):
-        base_path = Path(__file__).parent.parent
         story_folder = base_path / story_folder
     
     create_html_export(story_folder)

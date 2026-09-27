@@ -12,14 +12,14 @@
         }
 
         :root {
-            --brass: #b8860b;
-            --dark-brass: #8b6914;
-            --light-brass: #daa520;
-            --bg-dark: #1a1a1a;
-            --bg-medium: #2a2a2a;
-            --bg-light: #3a3a3a;
-            --text-primary: #e0e0e0;
-            --text-secondary: #b0b0b0;
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
             --accent: #4a9eff;
         }
 
@@ -41,13 +41,13 @@
         header {
             text-align: center;
             padding: 3rem 0;
-            border-bottom: 3px solid var(--brass);
+            border-bottom: 3px solid var(--line);
             margin-bottom: 3rem;
         }
 
         .series-title {
             font-size: 0.9rem;
-            color: var(--brass);
+            color: var(--line);
             text-transform: uppercase;
             letter-spacing: 3px;
             margin-bottom: 0.5rem;
@@ -55,9 +55,9 @@
 
         h1 {
             font-size: 3rem;
-            color: var(--light-brass);
+            color: var(--heading);
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: none;
         }
 
         .novel-meta {
@@ -69,7 +69,7 @@
         /* Navigation */
         .chapter-nav {
             background: var(--bg-light);
-            border: 2px solid var(--brass);
+            border: 2px solid var(--line);
             border-radius: 8px;
             padding: 1.5rem;
             margin: 2rem 0;
@@ -83,14 +83,14 @@
         .chapter-nav-title {
             flex: 1 1 100%;
             text-align: center;
-            color: var(--brass);
+            color: var(--line);
             font-size: 1.2rem;
             font-weight: bold;
             margin-bottom: 1rem;
         }
 
         .nav-button {
-            background: var(--brass);
+            background: var(--line);
             color: var(--bg-dark);
             padding: 0.75rem 1.5rem;
             text-decoration: none;
@@ -101,9 +101,9 @@
         }
 
         .nav-button:hover {
-            background: var(--light-brass);
+            background: var(--heading);
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(184, 134, 11, 0.3);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
         }
 
         .nav-button:disabled,
@@ -129,29 +129,29 @@
 
         /* Chapter Content */
         .chapter-content {
-            background: rgba(42, 42, 42, 0.6);
-            border-left: 4px solid var(--brass);
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
             padding: 2rem;
             margin: 2rem 0;
             border-radius: 4px;
         }
 
         .chapter-content h1 {
-            color: var(--brass);
+            color: var(--line);
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
-            border-bottom: 2px solid var(--dark-brass);
+            border-bottom: 2px solid var(--line-dark);
             padding-bottom: 0.5rem;
         }
 
         .chapter-content h2 {
-            color: var(--light-brass);
+            color: var(--heading);
             font-size: 1.8rem;
             margin: 2rem 0 1rem 0;
         }
 
         .chapter-content h3 {
-            color: var(--brass);
+            color: var(--line);
             font-size: 1.3rem;
             margin: 1.5rem 0 0.75rem 0;
         }
@@ -167,18 +167,18 @@
         }
 
         .chapter-content strong {
-            color: var(--light-brass);
+            color: var(--heading);
         }
 
         .chapter-content hr {
             border: none;
-            border-top: 2px solid var(--brass);
+            border-top: 2px solid var(--line);
             margin: 2rem 0;
             opacity: 0.5;
         }
 
         .chapter-content blockquote {
-            border-left: 4px solid var(--brass);
+            border-left: 4px solid var(--line);
             padding-left: 1.5rem;
             margin: 1.5rem 0;
             font-style: italic;
@@ -188,7 +188,7 @@
         /* Chapter Info */
         .chapter-info {
             background: var(--bg-light);
-            border: 1px solid var(--brass);
+            border: 1px solid var(--line);
             border-radius: 4px;
             padding: 1rem;
             margin: 1rem 0 2rem 0;
@@ -197,7 +197,7 @@
         }
 
         .chapter-info strong {
-            color: var(--brass);
+            color: var(--line);
         }
 
         /* Footer */
@@ -205,7 +205,7 @@
             text-align: center;
             padding: 3rem 0;
             margin-top: 4rem;
-            border-top: 2px solid var(--brass);
+            border-top: 2px solid var(--line);
             color: var(--text-secondary);
             font-size: 0.9rem;
         }
@@ -293,7 +293,7 @@
 <p><em>Proposal: evaluation of Veridican salience-reduction methodology for application in the treatment of chronic storm trauma.</em></p>
 <p>She read it twice. Then she put it down, and picked up her pen, and began, in her small precise hand, to write a memorandum.</p>
 <p>It would be the eleventh she had written in eight weeks. The committee had not yet read any of them. They would.</p>
-<p>At fourteen hundred tomorrow, a family of five would come across the border through a gap in the fence on the contested strip, with papers that Elena's people had made, and Yuki would meet them on the other side with a car and a doctor's pass. It would be her fourth family. She had made the arrangements that afternoon. She had checked every one of them twice.</p>
+<p>At fourteen hundred tomorrow, a family of three, a mother and father and their sixteen-year-old daughter, would come across the border through a gap in the fence on the contested strip, with papers that Elena's people had made, and Yuki would meet them on the other side with a car and a doctor's pass. It would be her fourth family. She had made the arrangements that afternoon. She had checked every one of them twice.</p>
 <p>At the next desk, Dr. James Morrison was working on something he would not show her. His hands, on the keyboard, were steady.</p>
 <hr>
 <h2>The Resistance</h2>
@@ -303,7 +303,7 @@
 <p>"It's tactically sound."</p>
 <p>"It's thirty seconds."</p>
 <p>"Thirty seconds," said Dmitri, "counts."</p>
-<p>Elena Volkov sat on an upturned crate by the tailgate, with her boots on the edge of the map, and let them argue. She had been planning tomorrow's operation for three weeks. An extraction. Four resistance operatives who had been picked up in a sweep in the lakeshore districts and were being held in a regional enforcement station, pending transfer. The transfer was scheduled for tomorrow afternoon. The extraction window was sixty minutes wide.</p>
+<p>Elena Volkov sat on an upturned crate by the tailgate, with her boots on the edge of the map, and let them argue. She had been planning tomorrow's operation for three weeks. An extraction. Two of her people who had spent four years in deep cover inside the Ministry district, and whose covers, her source said, would not survive the week. They had to come out tomorrow afternoon. The extraction window was sixty minutes wide.</p>
 <p><em>Fourteen hundred to fifteen hundred.</em></p>
 <p>She did not know yet why her source had been so insistent about the hour. Only that he had been.</p>
 <p>In the corner of the truck, on a blanket, an old man with a white ponytail sat with his eyes closed, humming.</p>
@@ -349,11 +349,11 @@
 <p>And, in a steel box under the floorboards, Elena's drive. Six terabytes. The core of Project Continuity. Waiting.</p>
 <hr>
 <p>The message came at midnight, on the small encrypted receiver that Elena's people had left them. Kira decoded it at the table by the light of the stove, her lips moving silently over the shift. She did not say the words aloud. That was new. She had been practising.</p>
-<p><em>TOMORROW. 14:00 TO 15:00. EVERYTHING HAPPENS IN THAT HOUR. MULTIPLE OPERATIONS. MARCUS: THE UPLOAD. THE SECURE SERVERS ARE READY. BE AT THE POINT BY 13:45. BE READY. — E.</em></p>
+<p><em>TOMORROW. 14:00 TO 15:00. EVERYTHING HAPPENS IN THAT HOUR. MULTIPLE OPERATIONS. MARCUS: THE UPLOAD. THE DEPUTY MINISTER HAS OPENED THE DOOR. BE AT THE ANNEX BY 13:45. BE READY. — E.</em></p>
 <p>Kira put the receiver down.</p>
 <p>Marcus had got up. He was standing by the window, looking out at the lake, at the lights on the far shore where Chronos was.</p>
 <p>"The upload," he said.</p>
-<p>It was the plan. It had been the plan since September. When the moment came, they would take the drive from under the floorboards and upload the whole of it to secure servers where no one could delete it. The Continuity archive, and the two hundred and fourteen statements, and Isaiah's article. Put it in the record. Somewhere it could not be adjusted. So that it happened.</p>
+<p>It was the plan. It had been the plan since September. When the moment came, they would take the drive from under the floorboards to the capital, to a public archive annex in the Ministry of Historical Integrity, where a Deputy Minister who had read Isaiah's article had quietly arranged a visitor's pass in a false name. And they would upload the whole of it into Veridica's own factorepo. The Continuity archive, and the two hundred and fourteen statements, and Isaiah's article. Not abroad, where the Ministry could call it forgery. Here. Into the record The Judge itself would have to read. So that it happened.</p>
 <p>Tomorrow. Fourteen hundred.</p>
 <p>"What if I do it," Marcus said, "and then I can't remember?"</p>
 <p>Kira looked up.</p>

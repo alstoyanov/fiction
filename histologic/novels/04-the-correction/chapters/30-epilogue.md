@@ -38,7 +38,7 @@ She read it twice. Then she put it down, and picked up her pen, and began, in he
 
 It would be the eleventh she had written in eight weeks. The committee had not yet read any of them. They would.
 
-At fourteen hundred tomorrow, a family of five would come across the border through a gap in the fence on the contested strip, with papers that Elena's people had made, and Yuki would meet them on the other side with a car and a doctor's pass. It would be her fourth family. She had made the arrangements that afternoon. She had checked every one of them twice.
+At fourteen hundred tomorrow, a family of three, a mother and father and their sixteen-year-old daughter, would come across the border through a gap in the fence on the contested strip, with papers that Elena's people had made, and Yuki would meet them on the other side with a car and a doctor's pass. It would be her fourth family. She had made the arrangements that afternoon. She had checked every one of them twice.
 
 At the next desk, Dr. James Morrison was working on something he would not show her. His hands, on the keyboard, were steady.
 
@@ -58,7 +58,7 @@ In the back of a truck parked in a barn somewhere in the border zone, with a map
 
 "Thirty seconds," said Dmitri, "counts."
 
-Elena Volkov sat on an upturned crate by the tailgate, with her boots on the edge of the map, and let them argue. She had been planning tomorrow's operation for three weeks. An extraction. Four resistance operatives who had been picked up in a sweep in the lakeshore districts and were being held in a regional enforcement station, pending transfer. The transfer was scheduled for tomorrow afternoon. The extraction window was sixty minutes wide.
+Elena Volkov sat on an upturned crate by the tailgate, with her boots on the edge of the map, and let them argue. She had been planning tomorrow's operation for three weeks. An extraction. Two of her people who had spent four years in deep cover inside the Ministry district, and whose covers, her source said, would not survive the week. They had to come out tomorrow afternoon. The extraction window was sixty minutes wide.
 
 *Fourteen hundred to fifteen hundred.*
 
@@ -150,7 +150,7 @@ And, in a steel box under the floorboards, Elena's drive. Six terabytes. The cor
 
 The message came at midnight, on the small encrypted receiver that Elena's people had left them. Kira decoded it at the table by the light of the stove, her lips moving silently over the shift. She did not say the words aloud. That was new. She had been practising.
 
-*TOMORROW. 14:00 TO 15:00. EVERYTHING HAPPENS IN THAT HOUR. MULTIPLE OPERATIONS. MARCUS: THE UPLOAD. THE SECURE SERVERS ARE READY. BE AT THE POINT BY 13:45. BE READY. — E.*
+*TOMORROW. 14:00 TO 15:00. EVERYTHING HAPPENS IN THAT HOUR. MULTIPLE OPERATIONS. MARCUS: THE UPLOAD. THE DEPUTY MINISTER HAS OPENED THE DOOR. BE AT THE ANNEX BY 13:45. BE READY. — E.*
 
 Kira put the receiver down.
 
@@ -158,7 +158,7 @@ Marcus had got up. He was standing by the window, looking out at the lake, at th
 
 "The upload," he said.
 
-It was the plan. It had been the plan since September. When the moment came, they would take the drive from under the floorboards and upload the whole of it to secure servers where no one could delete it. The Continuity archive, and the two hundred and fourteen statements, and Isaiah's article. Put it in the record. Somewhere it could not be adjusted. So that it happened.
+It was the plan. It had been the plan since September. When the moment came, they would take the drive from under the floorboards to the capital, to a public archive annex in the Ministry of Historical Integrity, where a Deputy Minister who had read Isaiah's article had quietly arranged a visitor's pass in a false name. And they would upload the whole of it into Veridica's own factorepo. The Continuity archive, and the two hundred and fourteen statements, and Isaiah's article. Not abroad, where the Ministry could call it forgery. Here. Into the record The Judge itself would have to read. So that it happened.
 
 Tomorrow. Fourteen hundred.
 

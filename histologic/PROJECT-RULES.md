@@ -1,186 +1,94 @@
-# Histologic Novel Project - Rules and Guidelines
+# Histologic: Project Rules
 
-## Project Structure
-
-### Folder Organization
-
-```
-histologic/
-├── worldbuilding/          # Core world concepts and systems
-├── characters/             # Character profiles and development
-├── plots/                  # Story arcs and plot outlines
-├── novels/                 # Individual novel manuscripts
-├── technology/             # Technical specifications and systems
-├── society/                # Social structures, laws, customs
-├── reference/              # Quick reference materials
-├── templates/              # Document templates
-└── basic-idea.txt          # Original concept document
-```
-
-## Document Versioning System
-
-### Dual-Version Approach
-Every major document MUST have two versions:
-
-1. **Full Version** (`filename-full.md`)
-   - Complete, detailed information
-   - All nuances, examples, and explanations
-   - Used for deep dives and detailed writing
-
-2. **Concise Version** (`filename-concise.md`)
-   - Maximum 500 words or 1-2 pages
-   - Key points only
-   - Used for context building and consistency checks
-   - Updated whenever full version changes significantly
-
-### Naming Conventions
-
-- Full documents: `topic-full.md`
-- Concise documents: `topic-concise.md`
-- Character files: `character-name-full.md` / `character-name-concise.md`
-- Plot files: `plot-title-full.md` / `plot-title-concise.md`
-- Novel chapters: `novel-name/chapter-XX.md`
-
-## Content Rules
-
-### Consistency Requirements
-
-1. **Always check concise versions first** when building context for new content
-2. **Cross-reference** all new facts against existing worldbuilding documents
-3. **Update both versions** when making significant changes
-4. **Maintain a changelog** in each full document
-5. **Use consistent terminology** as defined in the reference glossary
-
-### Worldbuilding Principles
-
-1. **Logical Consistency**: All facts must be internally consistent
-2. **Scientific Plausibility**: Technology and systems should be theoretically possible
-3. **Social Realism**: Human behavior and society should feel authentic
-4. **Conflict Potential**: Every system should have inherent tensions for storytelling
-5. **Scalability**: Concepts should work at personal, local, and global levels
-
-### Writing Process
-
-1. **Start with concise versions** to outline ideas
-2. **Expand to full versions** with details and examples
-3. **Review for contradictions** against existing material
-4. **Update reference materials** with new terminology or concepts
-5. **Create plot hooks** from worldbuilding elements
-
-## Document Templates
-
-### Required Sections for Worldbuilding Documents
-
-- **Overview** (1-2 paragraphs)
-- **Key Concepts** (bullet points)
-- **Detailed Explanation** (full version only)
-- **Implications** (how it affects the world)
-- **Story Potential** (conflict, drama, character challenges)
-- **Related Concepts** (links to other documents)
-- **Changelog** (track major updates)
-
-### Required Sections for Character Documents
-
-- **Basic Info** (name, age, histonation, role)
-- **Background** (concise history)
-- **Beliefs** (relationship to their histonation's truth)
-- **Conflicts** (internal and external)
-- **Arc** (character development path)
-- **Relationships** (connections to other characters)
-
-### Required Sections for Plot Documents
-
-- **Premise** (one-sentence hook)
-- **Setting** (time, location, histonation)
-- **Main Characters** (protagonist, antagonist, supporting)
-- **Conflict** (core tension)
-- **Structure** (act breakdown)
-- **Themes** (what the story explores)
-- **Resolution** (how it ends)
-
-## Context Management Strategy
-
-### For AI Assistance Sessions
-
-1. **Always load concise versions** of all relevant worldbuilding docs
-2. **Load full versions** only for the specific area being worked on
-3. **Use reference glossary** for quick terminology checks
-4. **Maintain session notes** for continuity between sessions
-
-### Priority Loading Order
-
-1. Core concepts (histologic, factorepo, histonation)
-2. Relevant society/technology docs
-3. Character concise versions
-4. Plot outline for current work
-5. Full versions as needed
-
-## Quality Control
-
-### Before Adding New Content
-
-- [ ] Does it contradict existing facts?
-- [ ] Is it consistent with the technology level?
-- [ ] Does it fit the social structure?
-- [ ] Does it create interesting story potential?
-- [ ] Have both versions been updated?
-- [ ] Has the glossary been updated with new terms?
-
-### Regular Maintenance
-
-- Review and update concise versions monthly
-- Check for contradictions between documents quarterly
-- Consolidate related concepts when they become too fragmented
-- Archive outdated versions rather than deleting them
-
-## Special Rules
-
-### Histologic-Specific Considerations
-
-1. **Factorepo Consistency**: Any fact mentioned must be traceable and non-contradictory
-2. **Multiple Truths**: Different histonations can have different "truths" - track these carefully
-3. **Temporal Precision**: Be specific about when events occur
-4. **Geographic Clarity**: Define territories and histocircles clearly
-5. **Technology Limits**: The Judge and factorepo systems have limits - define them
-
-### Conflict Generation
-
-Every worldbuilding element should answer:
-- How can this go wrong?
-- Who benefits from this?
-- Who is harmed by this?
-- What happens at the edges/extremes?
-- What do people fight about regarding this?
-
-## File Management
-
-### When to Create New Documents
-
-- New major worldbuilding concept
-- New character with significant role
-- New plot arc or novel outline
-- New technology or social system
-- New histonation or faction
-
-### When to Update Existing Documents
-
-- Clarifying existing concepts
-- Adding examples or details
-- Fixing contradictions
-- Expanding on established ideas
-- Adding cross-references
-
-## Collaboration Notes
-
-When working with AI assistance:
-1. Specify which documents to load for context
-2. Request concise versions for broad context
-3. Request full versions for detailed work
-4. Ask for contradiction checks before finalizing
-5. Request updates to both versions when making changes
+**Version 2.0, Sept 2026.** It replaces the Nov 2025 rules, which were built around full/concise document pairs.
 
 ---
 
-**Last Updated**: November 18, 2025
-**Version**: 1.0
+## 1. Folder Structure
+```
+histologic/
+├── README.md                 # Front page: concept, books, where things are
+├── PROJECT-RULES.md          # This file
+├── SERIES-OVERVIEW.md        # All nine books: canon (1–5) and provisional (6–9)
+├── basic-idea.txt            # The founding concept (never edited)
+├── worldbuilding/            # Canon world reference: core-system, nations, society, fact-storms, interfaces-and-correction
+├── characters/               # Character files (the Sept 2026 rewrites are current; the rest are pre-rewrite)
+├── plots/                    # Plot outlines, one full + one concise per book; 00-FOUNDATION-MANUSCRIPT.md
+├── novels/
+│   ├── 01-03-stories/        # The three short stories (+ collection EPUB)
+│   ├── 04-the-correction/    # chapters/, chapters-summaries/, html-export/, the-correction.epub
+│   └── 05-…09-…/             # Pre-rewrite drafts (to be replaced book by book)
+├── templates/                # Character, plot and export templates
+├── scripts/                  # HTML/EPUB builders (see scripts/README.md)
+└── docs/                     # Publishing guide
+```
 
+## 2. Order of Authority (Canon)
+When sources disagree, **the earlier one wins**:
+1. `basic-idea.txt`
+2. The short stories (`novels/01-03-stories/*/story.md`)
+3. *The Correction*: the chapters, plus `chapters-summaries/README.md` for its canon decisions
+4. *The Lost Hour*: `plots/05-the-lost-hour-full.md`, later the book itself
+5. `plots/00-FOUNDATION-MANUSCRIPT.md` and the character files rewritten since Sept 2026
+6. `worldbuilding/`, a summary of all of the above. If it disagrees with them, fix the summary.
+
+**The series is being rewritten in order.** A newer book must fit the older ones, never the other way round. Plots and drafts for books not yet rewritten (6–9) are **not binding**. Use them as sources of ideas.
+
+## 3. Rewrite Workflow (per book)
+1. **Plot:** revise the full and concise outlines. Check them against every earlier book and the manuscript plan. Give the book **two or three real twists** with fair clues (a clue map), not a predictable arc.
+2. **Summaries:** one file per chapter, plus a `chapters-summaries/README.md` covering canon decisions, timeline, cast, twists and rules.
+3. **Chapters:** draft **one part at a time**, then pause for review.
+4. **Check:** weekdays against the calendar, ages against the character files, headcounts, and cross-references.
+5. **Build:** HTML and EPUB (`scripts/README.md`).
+6. **Clean up:** delete status and progress logs for the book once it's done. Git keeps the history. No `*-COMPLETE.md` files.
+
+## 4. Canon Rules That Are Easy to Break
+- **Fact storms are neural and perceptual.** The physical world never changes. No meteorological language. The Lake Erie fog is real weather.
+- **Removing an interface kills.** Spoofing telemetry is the only way out of tracking. A spoofed person still receives broadcasts.
+- **The Judge works in probabilities** about people (over 60% means corrective custody). There is no appeal, until the Lost Hour Doctrine (Book 5).
+- **Citizens believe facts are immutable,** but insiders can delete or adjust them through the hidden "true source" (Principle Three).
+- **Neutral zones are claimed by both nations,** not lawless.
+- **Correction is sincere** below the very top. It is done by kind people who believe it heals.
+- **The nations were designed:** in the official story they are histobranches, and in truth they are engineered rivals. Nobody knows this before the manuscript reveals it.
+- **The manuscript reveal schedule** (`00-FOUNDATION-MANUSCRIPT.md` §5) is binding. Characters may guess ahead of it, but not know.
+
+## 5. Style
+- **Aesthetic:** clean, clinical, ordered, the way the short stories are written. **Not steampunk**: no brass, gears, steam or gaslight.
+- **POV:** close third person, one POV character per chapter. The voices are distinct: Dmitri is formal and avoids contractions, Alexei is warm, Tanaka writes clinical case notes, Isaiah has his memory palace, Marcus thinks in fact entries.
+- **Songs:** only original lyrics written for the series, or public-domain pieces. **No real-world copyrighted songs**, not even named. See `characters/main-characters/protagonists/old-songs-character.md`.
+- **Dates in chapter headers:** an italic dateline under each chapter title.
+- **Section breaks:** `---`.
+
+## 6. Naming
+- **Never reuse a first name** within the cast. The old drafts had four Elenas and two Adrians. Check the character files and `SERIES-OVERVIEW.md` §4 before naming anyone.
+- Surnames may repeat only when it is deliberate (a family) or explained ("Petrov is a common name").
+
+## 7. Worldbuilding Principles
+1. Logical consistency: no fact may contradict another.
+2. Plausibility: technology is theoretically possible, and people behave like people.
+3. Conflict potential: every system has built-in tensions.
+4. Scale: concepts work at personal, national and world level.
+5. Every element answers these questions: *How can this go wrong? Who benefits? Who is harmed? What happens at the edges? What do people fight about?*
+
+## 8. Craft Reminders
+- **Surveillance is central.** Show how it shapes every choice, and justify any moment of privacy (a blind spot, an unmonitored space and its cost).
+- **Show The Judge's limits.** It can't see intention, love or what isn't recorded.
+- **Correction is complex and costly,** for the corrected and the correctors alike.
+- **The wider world** (other nations and borders) should be felt even in Veridica-bound books.
+
+## 9. Before Adding or Changing Canon
+- [ ] Does it contradict an earlier source (section 2)?
+- [ ] Does it fit the world's technology and its social structure?
+- [ ] Are the dates, ages and weekdays checked?
+- [ ] Is the name unique?
+- [ ] Are the relevant `worldbuilding/`, character and plot files updated?
+- [ ] Does it create story potential?
+
+## 10. Working With AI Assistance
+- **Load order for a session:**
+  1. `README.md` and this file.
+  2. `worldbuilding/README.md` (it indexes the rest).
+  3. The current book's `chapters-summaries/README.md` and plot.
+  4. The relevant character files.
+- Ask for a contradiction check against the order of authority before finalising anything.
+- Nothing is committed unless the author asks.

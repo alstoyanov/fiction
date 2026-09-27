@@ -16,8 +16,7 @@ This directory contains the complete novel "The Correction" exported to HTML for
 - **Responsive design** works on desktop, tablet, and mobile
 
 ### Styling
-- **Brass theme** matching the Histologic aesthetic
-- **Dark background** for comfortable reading
+- **Clean, clinical theme** (white, grey and cold blue) matching the books
 - **Print-friendly** CSS for printing chapters
 - **Smooth transitions** and hover effects
 

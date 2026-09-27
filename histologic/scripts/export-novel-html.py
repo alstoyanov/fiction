@@ -229,14 +229,14 @@ def create_index():
         }}
 
         :root {{
-            --brass: #b8860b;
-            --dark-brass: #8b6914;
-            --light-brass: #daa520;
-            --bg-dark: #1a1a1a;
-            --bg-medium: #2a2a2a;
-            --bg-light: #3a3a3a;
-            --text-primary: #e0e0e0;
-            --text-secondary: #b0b0b0;
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
         }}
 
         body {{
@@ -256,13 +256,13 @@ def create_index():
         header {{
             text-align: center;
             padding: 3rem 0;
-            border-bottom: 3px solid var(--brass);
+            border-bottom: 3px solid var(--line);
             margin-bottom: 3rem;
         }}
 
         .series-title {{
             font-size: 0.9rem;
-            color: var(--brass);
+            color: var(--line);
             text-transform: uppercase;
             letter-spacing: 3px;
             margin-bottom: 0.5rem;
@@ -270,9 +270,9 @@ def create_index():
 
         h1 {{
             font-size: 3rem;
-            color: var(--light-brass);
+            color: var(--heading);
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: none;
         }}
 
         .novel-meta {{
@@ -282,15 +282,15 @@ def create_index():
         }}
 
         .toc {{
-            background: rgba(42, 42, 42, 0.6);
-            border-left: 4px solid var(--brass);
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
             padding: 2rem;
             margin: 2rem 0;
             border-radius: 4px;
         }}
 
         .toc h2 {{
-            color: var(--brass);
+            color: var(--line);
             margin-bottom: 1.5rem;
             font-size: 2rem;
         }}
@@ -300,7 +300,7 @@ def create_index():
         }}
 
         .part-title {{
-            color: var(--light-brass);
+            color: var(--heading);
             font-size: 1.3rem;
             margin-bottom: 1rem;
             text-transform: uppercase;
@@ -321,18 +321,18 @@ def create_index():
             padding: 0.5rem 1rem;
             display: block;
             background: var(--bg-light);
-            border-left: 3px solid var(--brass);
+            border-left: 3px solid var(--line);
             transition: all 0.3s ease;
         }}
 
         .chapter-list a:hover {{
             background: var(--bg-medium);
-            border-left-color: var(--light-brass);
+            border-left-color: var(--heading);
             transform: translateX(5px);
         }}
 
         .chapter-number {{
-            color: var(--brass);
+            color: var(--line);
             font-weight: bold;
             margin-right: 0.5rem;
         }}
@@ -347,7 +347,7 @@ def create_index():
             text-align: center;
             padding: 3rem 0;
             margin-top: 4rem;
-            border-top: 2px solid var(--brass);
+            border-top: 2px solid var(--line);
             color: var(--text-secondary);
             font-size: 0.9rem;
         }}

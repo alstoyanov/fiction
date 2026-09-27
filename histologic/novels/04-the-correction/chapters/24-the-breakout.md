@@ -282,7 +282,7 @@ She was already sitting up when Kira reached her, one hand pressed to the side o
 
 The copies went three ways.
 
-Elena's drive, six terabytes, took the core, and Kira watched the bar fill with her heart in her throat. The aims. The subject files. The protocols, R-1 and R-2. The session data for the seven of them. At the last moment, without asking anyone, she added the Ministry correspondence folder, which was small, and which she had just seen for the first time, and which had a name on it she did not recognise and did not have time to read.
+Elena's drive, six terabytes, took the core, and Kira watched the bar fill with her heart in her throat. The aims. The subject files. The protocols, R-1 and R-2. The session data for the seven of them. At the last moment, without asking anyone, she added the Ministry correspondence folder, which was small, and which she had just seen for the first time, and which was labelled with a word and a numeral she did not understand and did not have time to think about: *RESTORATION / XI*.
 
 From the console, which connected to the Registry, Nikolai pushed a handful of fragments down through the layers into his old partition. Not much. The subject list. The schedule. The C-1 index line. Enough that if the drive was lost, something would remain.
 
