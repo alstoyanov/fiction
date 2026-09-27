@@ -16,7 +16,7 @@
 - **Status after Book 4:** in post. Nobody knows she let the escapees through the lakeshore checkpoint, except the people in the cars and her own people at the barrier.
 - **Status after Book 5:** in post. She has contradicted her own Ministry twice in public (Ch 17 and 25). Still a captain.
 - **Appearance:** tall. Gray uniform with a captain's insignia, a long dark coat over it. "The hard, fine-boned face of someone who had been promoted young and had never once been allowed to look it" (Book 4 Ch 5 and 26). Stands with her hands in her coat pockets. Carries a radio.
-- **Mother:** **Chancellor Viktoria Sokolov**, the Architect **VS·09** (the Administrator; the Implementation Annex). Nobody in Books 1–5 knows this.
+- **Mother:** **Chancellor Viktoria Sokolov**, the Architect **VS·09** (the Administrator; the Implementation Annex), and a **former Chancellor of Veridica** (c. 2085–2098), retired with the title. Nobody in Books 1–5 knows she is an Architect, and Books 4–5 never mention her.
 
 ## Who She Is
 In Story 03 she is a believer who knows the storms are manufactured and says so without embarrassment: "I'm a patriot. I serve Veridica." Over two books she watches the three brothers she arrested refuse to be erased, and something in her moves that she never names. Her mercy, when it comes, is always procedural and deniable: a radio call, a lawful escort, a paper log, a sealed note. She is the series' clearest case of a person who changes without confessing it, and the writing must never explain her from inside.

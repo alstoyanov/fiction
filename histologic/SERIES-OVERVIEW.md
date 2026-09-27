@@ -21,7 +21,7 @@
 
 Story 03 happens *before* Stories 01–02 in-world, but it is read third. The triplets are already at Ashford when Marcus arrives.
 
-**Key ages in 2106:** Marcus 29 (27 in Story 01). Kira 27. Isaiah 38–39. Tanaka 45–46. Old Songs 68. Kovač 52. Sokolov 35–36. Elena 42. Thomas Wei 45. Chen Zhao 65. Elise Vance 70.
+**Key ages in 2106:** Marcus 29 (27 in Story 01). The triplets 31 (born 2075; 29 in Story 03). Kira 27. Isaiah 38–39. Tanaka 45–46. Old Songs 68. Kovač 52. Sokolov 35–36. Elena 42. Thomas Wei 45. Chen Zhao 65. Elise Vance 70.
 
 ---
 

@@ -10,7 +10,7 @@
 - **Born:** about 2041. He is **65** in *The Lost Hour* (2106), and was **22** when he wrote the journal essay (about 2063). The youngest of the seventeen contributors.
 - **Occupation:** **Minister of Historical Integrity**, Veridica. The Ministry sponsored Project Continuity. His Deputy is Dr. Amara Singh.
 - **Status after Book 5:** in office, publicly the patron of the Lost Hour Doctrine and the Historical Integrity Commission. **Unexposed, and unsuspected by anyone** except, faintly, Kovač.
-- **Secretly:** **CZ·11**, the Politician among the twelve Architects, and the author of **Principle Six, Narrative Preemption, or The Restorer's Authority**. The torn page 31 of Book 5 came from **his copy, numbered XI**. Nobody in Book 5 can read any of this.
+- **Secretly:** **CZ·11**, the Politician among the twelve Architects, and the author of **Principle Six, Narrative Preemption, or The Restorer's Authority**. The torn page 30 of Book 5 came from **his copy, numbered XI**. Nobody in Book 5 can read any of this.
 - **Appearance:** silver-haired, courteous, drinks his tea from a glass (Book 5, Ch 15). Warm, fatherly in public (Ch 28).
 - **Family:** a **distant relative of Marcus Chen**. In Book 5 this is only a pleasantry: "The Chen families of the capital are all related somewhere, you know."
 
@@ -28,7 +28,7 @@ Chen Zhao is the pleasant old minister who says yes. He listens to Kovač's prop
 | 2064–2066 | Contributes **Principle Six** (pp. 29–32) to *The Foundation of Certainty*. Signs the Register as **CZ·11**. Receives **copy XI**. The Annex requires him to "prepare an heir". |
 | 2066–2067 | The journal is classified and erased. |
 | 2067 onward | A political career inside Veridica, running the design "from inside governments" with the other Architects (Foundation §3). |
-| By 2105 | Minister of Historical Integrity. Pages from copy XI are in Continuity's Ministry correspondence: the folder Kira grabs in Ashford's data centre is labelled ***RESTORATION / XI*** (Book 4, Ch 24), and Singh finds page 31 in the same papers. |
+| By 2105 | Minister of Historical Integrity. Pages from copy XI are in Continuity's Ministry correspondence: the folder Kira grabs in Ashford's data centre is labelled ***RESTORATION / XI*** (Book 4, Ch 24), and Singh finds page 30 in the same papers. |
 | Nov 2106 – Jan 2107 | Book 5: the Doctrine, the Commission. |
 
 **What Book 5 does not say:** how long he has been Minister; whether he approved Phase Two ("Someone approved it at Ministry level… and that someone is still there", Elena, Book 4, Ch 29); how pages of his own copy reached Continuity's correspondence; what exactly he and Thomas Wei say to each other; who his heir is. Keep all of these open.
@@ -37,13 +37,13 @@ Chen Zhao is the pleasant old minister who says yes. He listens to Kovač's prop
 
 ## Principle Six (his text)
 From Foundation Manuscript §4.8, canonical wording:
-> **Page 31 (the torn page):** *"When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it."*
+> **Page 30 (the torn page):** *"When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it."*
 >
 > *"When a truth cannot be hidden, disclose it first, in your own words, with your own remedy attached. The public forgives a system that confesses and repairs; it never forgives one that is caught."*
 
-- **The physical page** (Book 5 Prologue): heading torn across, *PRINCIPLE —*, number missing. It keeps its page number **31**, the copy numeral ***XI*** in the lower right corner, and at the foot a typed mark nobody can read, ***CZ·11***. Singh's margin note: *"Who restores it? Watch who restores it."*
+- **The physical page** (Book 5 Prologue): heading torn across, *PRINCIPLE —*, number missing. It keeps its page number **30**, the copy numeral ***XI*** in the lower right corner, and at the foot a typed mark nobody can read, ***CZ·11***. Singh's margin note: *"Who restores it? Watch who restores it."*
 - **What it explains:** *The Lost Hour* completely. Erase the hour, then let trusted reformers restore it through a doctrine of testimony that the designers can seed.
-- **Reveal schedule (binding):** Book 5, the torn page and the sung essay, number unknown. Book 6, identified as Principle Six by matching page 31 to the table of contents. **Book 9, the mark CZ·11 is decoded.** Characters may guess ahead of this, but not know.
+- **Reveal schedule (binding):** Book 5, the torn page and the sung essay, number unknown. Book 6, identified as Principle Six by matching page 30 to the table of contents. **Book 9, the mark CZ·11 is decoded.** Characters may guess ahead of this, but not know.
 
 ---
 
@@ -68,7 +68,7 @@ He does not appear. Traces:
 ### Book 5: *The Lost Hour* (summaries done)
 | Ch | What he does |
 |----|--------------|
-| Prologue | Offstage. His Deputy, Singh, holds page 31 of his copy and "has begun to suspect who in this building believes that sentence". |
+| Prologue | Offstage. His Deputy, Singh, holds page 30 of his copy and "has begun to suspect who in this building believes that sentence". |
 | **15** | **Kovač's proposal.** 65, silver-haired, tea in a glass. "A doctrine of testimony. How very humane. How very *restorative*." He has been following "young Chen's case": "The Chen families of the capital are all related somewhere, you know." Agrees to put the hearing before The Judge, far too easily. Kovač shows him nothing about the torn page, on instinct. Pell afterwards: "The Minister likes you. Enjoy it." |
 | **18** | **Signs the order** that transfers Marcus from the Unit 3 transport into Wei's protective custody as "the only material witness to the lost hour". |
 | 19–25 | Public pressure after "the dead are testifying" is what finally makes him schedule the hearing. |
@@ -81,7 +81,7 @@ He does not appear. Traces:
 The plot's clue map lists him under "later book": **Ch 15** ("all related somewhere") and **Ch 28** (he appoints the reformers). Hints only. Don't overplay them.
 
 ### Books 6–9 (provisional; to be rewritten)
-- **Book 6, *The Distributed Truth* (~2108, he is ~67):** page 31 is identified as Principle Six. The reader, and perhaps Marcus, can now see that the Minister's Commission is Principle Six in person. Nobody can yet say who wrote it. As Minister he would be the one to order Marcus to seduce and destroy Julian Kovač; decide whether the order comes from him directly or through the Commission.
+- **Book 6, *The Distributed Truth* (~2108, he is ~67):** page 30 is identified as Principle Six. The reader, and perhaps Marcus, can now see that the Minister's Commission is Principle Six in person. Nobody can yet say who wrote it. As Minister he would be the one to order Marcus to seduce and destroy Julian Kovač; decide whether the order comes from him directly or through the Commission.
 - **Book 7, *Battle of Truths* (~2109):** the table of contents shows the Register exists. If anyone starts looking for twelve names, he is in the room when they do.
 - **Book 9, *Architects of Chaos* (~2115, he is ~74):** the Register and his mark **CZ·11** are decoded, and he is **exposed** (SERIES-OVERVIEW §4). *How* is open. Suggestions:
   - Marcus's side has copy XI's torn page, with Singh's margin note, since Book 5 Ch 29. The decoded mark lands on the man who appointed them.
@@ -99,7 +99,7 @@ The plot's clue map lists him under "later book": **Ch 15** ("all related somewh
 | **Marcus Chen** | "Young Chen", "cousin". A distant relative. He appoints him to carry out the principle he wrote. |
 | **Kira Osman** | Appointed commissioner. The folder she took was labelled with his copy number. |
 | **Thomas Wei** | The heir of WZ·10, who performs Principle Six. Chen Zhao signs the custody order that makes Wei the rescuer, and appoints him Technical Director. Their private relationship is not shown in Book 5. |
-| **Dr. Amara Singh** | His Deputy. She kept page 31 of his copy in her safe and wrote "Watch who restores it" in its margin. |
+| **Dr. Amara Singh** | His Deputy. She kept page 30 of his copy in her safe and wrote "Watch who restores it" in its margin. |
 | **Director Helena Kovač** | Brings him the Doctrine. He accepts it too easily. Her instinct keeps the torn page from him. |
 | **Undersecretary Iver Pell** | The hardliner. Pell is overruled by the Minister's order in Ch 18. |
 | **Old Songs** | Has carried Chen Zhao's 2063 essay in a song for forty-three years without knowing whose it is. |
@@ -124,7 +124,7 @@ Old file, usable (Book 9 only): *"We made you a hero, Marcus. We needed you."*
 ## Continuity Traps
 - **65 in 2106; 22 when he wrote the essay.** He is the youngest contributor and the only one likely to have been born after 2040. See the ages check in `the-architects.md`.
 - **He did not ensure Marcus's conviction.** Thomas Wei typed the 73. The old file had this wrong.
-- **Mark CZ·11, copy XI, page 31, Principle Six.** Keep all four consistent. The copy numeral matches the mark number.
+- **Mark CZ·11, copy XI, page 30, Principle Six.** Keep all four consistent. The copy numeral matches the mark number.
 - **Nobody decodes CZ·11 before Book 9.** In Book 5 no one connects the "restorative" pleasantry to the page, except as Kovač's unease. Book 6 may identify the page as Principle Six, still without an author.
 - **"Chen knows"** in Wei's journal means Marcus. Don't turn it into a slip about Chen Zhao.
 - **Not a POV character** in Book 5, and nothing he says on the page is openly sinister.

@@ -37,7 +37,7 @@ They are not villains in their own minds and must never be written that way. The
 ### The Register of Contributors (p. 39, signed 2066)
 - **Seventeen marks, each beside a name.** Twelve are signed: the Architects. Five are **struck through**, unsigned and without copy numerals.
 - **Marks** are a two-letter cipher and a number (*CZ·11*). Every principle ends with its author's mark. The Register is the only key to the marks.
-- **Copy numerals** run I–XII for the signatories; the copy numeral matches the mark number (page 31 carries *CZ·11* and is from copy *XI*, Chen Zhao's). The Compiler's copy has none.
+- **Copy numerals** run I–XII for the signatories; the copy numeral matches the mark number (page 30 carries *CZ·11* and is from copy *XI*, Chen Zhao's). The Compiler's copy has none.
 - **Anselm Kerr**, the senior archivist who mentored Mikhail Petrov, holds one struck-through mark. The other four are unnamed.
 - **Revealed:** Book 9. It is "the single most dangerous page in the world."
 
@@ -149,6 +149,7 @@ Each entry: mark, role, principle, link to the heroes, and philosophy and voice 
 - **Section:** co-author of the **Annex**: the Correction Registry, the placement of capitals and borders, and the succession clause.
 - **Link to the heroes:** **Captain Yevgenia Sokolov's mother.**
 - **Name:** settled (Sept 2026) as **Viktoria**, not Elena.
+- **Nation (settled, Sept 2026):** a **former Chancellor of Veridica** (c. 2085–2098), about 70 in 2106, who keeps the title in retirement. Not a "Chronos shadow leader": Chronos has no human representatives.
 - **Open:** *which* nation she was Chancellor of, and when. The old file made her "Chronos shadow leader", which sits badly with a daughter in Veridican Border Security. If she is Veridican, her term would have to be long past or recent; decide in Book 6–9.
 - **Philosophy and voice (old file, usable):** cold, efficient, a mother who believes guidance is love. *"I didn't control you. I guided you. There's a difference."* *"Every promotion, every assignment. I made sure you succeeded. That's love."* The provisional plan has Yevgenia confront her.
 - **Revealed:** Book 9.
@@ -162,7 +163,7 @@ Each entry: mark, role, principle, link to the heroes, and philosophy and voice 
 - **Revealed:** Principle Four in Book 8; name in Book 9.
 
 ### CZ·11 — The Politician: Minister Chen Zhao
-- **Principle:** **Six, Narrative Preemption, or The Restorer's Authority** (pp. 29–32). Page 31: *"When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it."*
+- **Principle:** **Six, Narrative Preemption, or The Restorer's Authority** (pp. 29–32). Page 30: *"When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it."*
 - **Link to the heroes:** **Marcus Chen's distant relative.** On the page in Book 5 as Minister of Historical Integrity; appoints the Commission.
 - **The youngest contributor:** 22 when he wrote the journal essay (~2063), 65 in 2106.
 - **Full profile:** `chen-zhao.md`.
@@ -206,7 +207,7 @@ Seeds only (Foundation §5):
 - Helena Kovač's family; her uncle is never mentioned.
 
 ### Book 5: *The Lost Hour* (summaries done)
-- **The torn page** (Prologue, Ch 3, 12, 18, 29): page 31, copy XI, mark CZ·11, number torn off.
+- **The torn page** (Prologue, Ch 3, 12, 18, 29): page 30, copy XI, mark CZ·11, number torn off.
 - **The sung essay** (Ch 12, 30, Epilogue): Chen Zhao's 2063 essay in Old Songs' "Given Gently".
 - **Reeves:** "You've found the sermon. I only ever had the one page too. They quote it at you in meetings." (Ch 21)
 - **Chen Zhao** on the page as Minister (Ch 15, 18, 25, 28, 31).
@@ -215,7 +216,7 @@ Seeds only (Foundation §5):
 - **Nobody learns who the authors were.**
 
 ### Books 6–9 (provisional; to be rewritten)
-- **Book 6:** the Introduction, Principles Three (YP·02) and Five (JM·08), the Warning. Page 31 identified as Principle Six. Vance confesses as the Compiler.
+- **Book 6:** the Introduction, Principles Three (YP·02) and Five (JM·08), the Warning. Page 30 identified as Principle Six. Vance confesses as the Compiler.
 - **Book 7:** the table of contents (the Register and Annex exist), Principles One (HV·01) and Two (SO·04). The rivalries between nations are staged.
 - **Book 8:** Principle Four (WZ·10) and Principle Seven (Vance's, unknown to all twelve).
 - **Book 9, *Architects of Chaos* (~2115):** the Annex and the Register from Vance's copy. All marks decoded. The names, the heirs, and the families connected to the heroes. Singh returns. Chen Zhao is exposed.

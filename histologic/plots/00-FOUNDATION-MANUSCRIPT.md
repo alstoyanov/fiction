@@ -33,7 +33,7 @@ These rules let fragments be found, dated and matched believably across five boo
 - **The typewriter:** one machine, with a chipped lowercase *e*. Later investigators use it to authenticate fragments.
 - **The Compiler's hand:** the 2066 Warning and Principle Seven are **handwritten** additions in Vance's copy only.
 
-*How this pays off:* the torn page in Book 5 has lost its heading, but it keeps its **page number (31)**, its **copy numeral (XI)** and its **mark (CZ·11)**. Book 5 can't read any of them; later books can.
+*How this pays off:* the torn page in Book 5 has lost its heading, but it keeps its **page number (30)**, its **copy numeral (XI)** and its **mark (CZ·11)**. Book 5 can't read any of them; later books can.
 
 ---
 
@@ -51,7 +51,7 @@ These rules let fragments be found, dated and matched believably across five boo
 | March 2066 | Vance adds the handwritten **Compiler's Warning** and **Principle Seven** to her own copy, then goes quiet. |
 | 2066–2067 | The journal is classified and erased. Some of the people who remember it are corrected. Mikhail's mentor, Anselm Kerr, is one of them, and Mikhail begins hiding his memory in songs (see `characters/main-characters/protagonists/old-songs-character.md`). |
 | 2067 onward | The twelve signatories, **the Architects**, and in time their heirs, run the design from inside governments. |
-| ~2090 | Ivan Volkov, a broadcast engineer, questions a "discrepancy" in the border overlap. The Annex had planned that overlap. He is corrected and later becomes Test Subject 2471 (Book 4). |
+| 2089 | Ivan Volkov, a broadcast engineer, questions a "discrepancy" in the border overlap. The Annex had planned that overlap. He is corrected and later becomes Test Subject 2471 (Book 4). |
 | 2105–2106 | Continuity (Book 4) is Principle Four, modernised. The Lost Hour (Book 5) is Principle Six, performed. |
 | 2106–2115 | The manuscript surfaces fragment by fragment (section 5). |
 
@@ -105,7 +105,7 @@ The contents list the Introduction, Principles One to Six (the handwritten Seven
 - **Revealed:** Book 6. For the Volkovs it is their father's death, planned on paper.
 
 ### 4.8 Principle Six: Narrative Preemption, or The Restorer's Authority (pp. 29–32). Mark: *CZ·11*.
-> **Page 31 (the torn page):** *"When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it."*
+> **Page 30 (the torn page):** *"When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it."*
 >
 > **Also from this principle:** *"When a truth cannot be hidden, disclose it first, in your own words, with your own remedy attached. The public forgives a system that confesses and repairs; it never forgives one that is caught."*
 
@@ -113,7 +113,7 @@ The contents list the Introduction, Principles One to Six (the handwritten Seven
 - **Explains:** *The Lost Hour* completely. Erase the hour, then let trusted reformers restore it through a doctrine of testimony that the designers can seed. The author is **Chen Zhao**, the youngest contributor, 22 when he wrote the essay. As Minister in 2106 he appoints the heroes to the Commission, which carries out his own principle in person.
 - **Revealed in stages:**
   - Book 5: the torn page, with its number unknown, and the sung essay.
-  - Book 6: identified as Principle Six by matching page 31 to the table of contents, which is shown in part.
+  - Book 6: identified as Principle Six by matching page 30 to the table of contents, which is shown in part.
   - Book 9: the mark CZ·11 is decoded.
 
 ### 4.9 The Implementation Annex (pp. 33–38). Marks: *MT·06, YP·02, VS·09*.
@@ -151,8 +151,8 @@ Seventeen marks, each beside a name. Twelve have signatures: they are the Archit
 | Book | New material | Who finds it, and how | What the characters learn |
 |------|-------------|-----------------------|---------------------------|
 | **4: The Correction** | None openly. *Seeded:* Continuity's aim echoes Principle Four. Reeves hears the manuscript "quoted in meetings". Kira takes a Ministry correspondence folder (Ch 24) labelled **RESTORATION / XI**. | — | Nothing yet. Readers will recognise it in hindsight. |
-| **5: The Lost Hour** | **Page 31**, torn, with its number unknown (Principle Six). **The sung essay.** **The journal exists and was erased.** | Singh, from Continuity's Ministry correspondence. Old Songs recognises the voice. Kira links the page's numeral **XI** to her Book 4 folder. | The manuscript exists, it is older than the nation, and the present is following it. |
-| **6: The Distributed Truth** | **Compiler's Introduction**, **Principle Three**, **Principle Five**, **Compiler's Warning**. Page 31 identified as **Principle Six**. **Vance** revealed as the Compiler. | Old Songs, through his memory of Vance. Kira, through the mechanism of her stolen fact. Vance confesses. | It is a design. The storms and deletions were planned. Reform will be absorbed, so replace the system, "by many hands". |
+| **5: The Lost Hour** | **Page 30**, torn, with its number unknown (Principle Six). **The sung essay.** **The journal exists and was erased.** | Singh, from Continuity's Ministry correspondence. Old Songs recognises the voice. Kira links the page's numeral **XI** to her Book 4 folder. | The manuscript exists, it is older than the nation, and the present is following it. |
+| **6: The Distributed Truth** | **Compiler's Introduction**, **Principle Three**, **Principle Five**, **Compiler's Warning**. Page 30 identified as **Principle Six**. **Vance** revealed as the Compiler. | Old Songs, through his memory of Vance. Kira, through the mechanism of her stolen fact. Vance confesses. | It is a design. The storms and deletions were planned. Reform will be absorbed, so replace the system, "by many hands". |
 | **7: Battle of Truths** | **Title page and table of contents**, **Principle One**, **Principle Two**. | During the fact war. The table of contents shows that a Register and an Annex exist. | The rivalries between nations are staged. The whole map is one design. |
 | **8: Battle of Blood** | **Principle Four**. **Principle Seven**, hidden in Vance's copy. | The Continuity subjects, and Vance's legacy. Seven is used when The Judge faces capture. | Their torture was a principle. The Judge was built to be able to die. |
 | **9: Architects of Chaos** | **Implementation Annex**, **Register of Contributors**, the complete copy. All marks decoded. | Vance's own copy (location to be decided). | The names. The heirs. Phase Two's origin. The full circle. |
@@ -175,7 +175,7 @@ Seventeen contributed. Twelve signed and became **the Architects**. Five are str
 | MT·06 | The Technologist | Director Maya Tanaka | Annex | Senior to Tanaka's younger sister | Too close to "Maya Reeves" (Book 5); consider renaming. |
 | TK·07 | The Ideologue | Cardinal Tobias Kovač | Moral cover | Helena Kovač's uncle; great-uncle of Adrian and Julian | Renamed from "Thomas Kovač" (Sept 2026) to avoid a clash with Thomas Wei. Made an uncle rather than a brother: a 2064 contributor was born by the mid-2030s, and Helena was born in 2054. |
 | JM·08 | The Operative | *(rename)* | Five | — | The old name "Colonel James Morrison" clashes with Dr. James Morrison. Make him Morrison's father or uncle under a different first name, or unrelated. |
-| VS·09 | The Administrator | Chancellor **Viktoria Sokolov** | Annex | Captain Sokolov's mother | Name settled (Sept 2026): Viktoria, not Elena. |
+| VS·09 | The Administrator | Chancellor **Viktoria Sokolov** | Annex | Captain Sokolov's mother | Name settled (Sept 2026): Viktoria, not Elena. **Former Chancellor of Veridica** (c. 2085–2098), about 70 in 2106, keeps the title in retirement. |
 | WZ·10 | The Psychologist | Dr. Wei Zhang | Four | Thomas Wei's father | Continuity is his principle. His son ran the Lost Hour. |
 | CZ·11 | The Politician | Minister Chen Zhao | Six | Marcus's distant relative | Appears in Book 5, and appoints the Commission. |
 | — ·12 | *(open)* | *(open)* | — | — | The old files had "DV-12, the thirteenth architect". This plan retires that: Vance is the **Compiler**, not a signatory. A twelfth signatory is still needed. |
@@ -216,7 +216,7 @@ Seventeen contributed. Twelve signed and became **the Architects**. Five are str
 | Old trackers | This plan | Reason |
 |--------------|-----------|--------|
 | Five overlapping trackers, one per book | One master file | They contradicted each other |
-| Book 5 revealed "Page 3" and Principle Four through Kozlov and Tanaka | Book 5 reveals the torn page 31 (Principle Six, number unknown) and the sung journal essay | Fits the Book 5 v3.1 plot. Principle Four is saved for the Continuity subjects in Book 8 |
+| Book 5 revealed "Page 3" and Principle Four through Kozlov and Tanaka | Book 5 reveals the torn page 30 (Principle Six, number unknown) and the sung journal essay | Fits the Book 5 v3.1 plot. Principle Four is saved for the Continuity subjects in Book 8 |
 | Principle Six was "Narrative Preemption / Paradox of Certainty" | Kept as Narrative Preemption, sharpened into "The Restorer's Authority" | It now drives Book 5 |
 | 17 contributors, 12 Architects and a "13th Architect DV-12" | 17 contributed, 12 signed (the Architects), Vance compiled and did not sign | Removes the numbering muddle. Vance stays central without the extra twist |
 | Vance aged 62 (Book 6) or 81 (Book 5) | Born 2036: 28 when compiling, 70 in 2106 | Consistent with a Compiler in 2064 and with Mikhail's generation |

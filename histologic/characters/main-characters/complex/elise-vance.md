@@ -66,7 +66,7 @@ None. She is never named, and nothing points to her. (Continuity's aim in Book 4
 - **Book 6, *The Distributed Truth* (~Nov 2108 – Feb 2109; she is 72):**
   - Old Songs finds the **Compiler's Introduction** and recognises the voice of the young woman from the Archive. He names her, forty-five years late.
   - **Vance is revealed as the Compiler** and confesses. The old plot's framing ("I tried to save humanity and built its cage"; a long written confession) can stay, but the old "final journal (March 2086)" date is wrong: her handwritten pages are **March 2066**.
-  - The **Warning** is revealed, and it catalyses Marcus's choice of transparency. Principles Three and Five are revealed in the same book; Page 31 is identified as Principle Six.
+  - The **Warning** is revealed, and it catalyses Marcus's choice of transparency. Principles Three and Five are revealed in the same book; Page 30 is identified as Principle Six.
   - **The reunion with Old Songs** is the emotional core of both arcs: "two old people, one of whom built the prison and one who survived it." Suggested shape: he doesn't forgive her and doesn't condemn her; he asks her to write it down. She is the first person he teaches his own lesson to.
   - She should **not** mention Principle Seven. It stays hidden until Book 8.
 - **Book 7, *Battle of Truths* (2109):** the old plot has failed assassination attempts on Marcus, Mikhail and Vance. Usable. The title page and table of contents are revealed; the contents do **not** list Seven, and she says nothing when people notice there are only six.
@@ -83,7 +83,7 @@ None. She is never named, and nothing points to her. (Continuity's aim in Book 4
 4. Linked open names: the marks ·05 and ·12 are still unnamed.
 
 **Drafting questions this file raises:**
-5. **Did she write any of the Journal essays,** or only compile them? The Manuscript says the essays were by "the future contributors", and she is not a contributor; Old Songs' file says "He never suspects she is writing any of it." Settle this before Book 6; the simplest fix is that she wrote none, edited none, and simply read them at the Archive as they came out.
+5. **Settled (Sept 2026): she wrote none of the Journal essays.** The Manuscript is authoritative: the essays were by "the future contributors", and she is not one. She read them at the Archive as they came out, and from winter 2064 compiled them into a design. Her own words appear only in the Introduction, the Warning and Principle Seven. `old-songs-character.md` has been corrected to match.
 6. **Did she know Mikhail was keeping the essays in songs?** If she did, and let him, that is a kind of Warning too.
 7. **How did she build Seven into The Judge** when its architecture was Dr. Yuri Petrov's (YP·02, Principle Three and the Annex)? She must have had access during activation in early 2066. Decide what "conditions, authorities and a cascade" means technically.
 8. **Why didn't she sign?** Fear, disgust, or a deliberate decision to stay outside the Register so that one copy would be unaccounted for.

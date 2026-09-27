@@ -7,7 +7,7 @@
 
 ## At a Glance
 - **Names:** Dmitri Ivanovich Volkov ("Dima"), Alexei Ivanovich Volkov ("Lyosha"), Nikolai Ivanovich Volkov ("Kolya"). Identical triplets. Dmitri was born first, "by thirty seconds" (Story 03). Their aunt is "Aunt Lena".
-- **Age:** never printed. Do not give birth years (see Continuity Traps).
+- **Age:** born **2075** (settled, Sept 2026). They are **29** in Story 03 (Nov 2104), **30–31** in Books 4–5. Interfaces fitted at eight (2083); the rooftop at twelve (2087); Ivan corrected the spring they turned fourteen (2089); Ivan dies when they are fifteen (2090). Keep dates off the page where you can; ages are fine.
 - **Parents:** Ivan Sergeyevich Volkov (corrected the spring the boys turned fourteen; died about a year later as Test Subject 2471) and Sofya Volkov (died in the hospital storm, Nov 2104, Story 03).
 - **File codes:** C-3 BOND (Dmitri, cell 7-A), C-4 BOND (Alexei, 7-B), C-5 BOND (Nikolai, 7-C).
 - **Appearance:** the same height, the same build, "the same sharp features and cropped hair, the same gray-blue eyes" (Book 4, Prologue). They have their aunt's sharp cheekbones and "the same way of going still when they were listening" (Ch 16). At Ashford they wear work overalls, not cell gray. Identical until they move, "and then they were nothing alike" (Ch 19). In Story 03 Alexei's hair is "longer than regulation".
@@ -184,7 +184,7 @@ POV chapters: **Alexei 7, 19**; **Nikolai 9, 20**; **Dmitri 13, 23** (details in
 ## Continuity Traps
 - **Dmitri first, by thirty seconds.** Nobody is "the middle child" by birth. On the parapet Alexei sits in the middle and Nikolai "always on the right".
 - **Gray-blue eyes.** Cropped hair at Ashford.
-- **No birth years, no printed ages.** Story 03 has interfaces installed at eight in 2066, which makes them about 46 in 2104. Book 4 makes Sokolov (35) "only a few years older" than Dmitri, and has Ivan corrected c. 2089 when they were fourteen, which makes them about 30. Stay vague ("in their thirties" at most) until this is settled.
+- **Born 2075 (settled, Sept 2026).** Story 03 was corrected to match: the interface is fitted at eight, "the age the Mandatory Citizenship Act of 2065 set for every child" (not in 2066), and the rooftop is "seventeen years earlier". Sokolov (born 2070) is five years older than them. "Twelve years as one person" means until the rooftop; they drifted from twelve to fifteen and split after Ivan's death. "Fifteen years" apart and since Papa died is a round number (about fourteen and a half in Nov 2104).
 - **The rooftop memory is gone from Nikolai permanently.** He answers the passphrase from testimony, never from memory. He keeps the primer page in his wallet; Wei has handled it.
 - **The bond is not telepathy.** No heard thoughts.
 - **They never knew their father was corrected** until Book 4 Ch 15. Alexei knew about 2471 in Story 03; the correction record was news to all three.
@@ -197,7 +197,7 @@ POV chapters: **Alexei 7, 19**; **Nikolai 9, 20**; **Dmitri 13, 23** (details in
 ## Changes From the Old File
 | Old | New | Reason |
 |-----|-----|--------|
-| Ages 30 → 39 | No ages or birth years printed | Story 03 and Book 4 disagree (README "Issues") |
+| Ages 30 → 39 | Born 2075: 29 in Story 03, 30–31 in Books 4–5 | Story 03 fixed to agree with Book 4 (Sept 2026) |
 | "Uncle Professor Adrian Volkov (Architect)" | Retired. Suggested cousin if needed | Ivan's next-of-kin record; "Adrian" is taken |
 | Father "died in fact storm" | Corrected at 14, then Test Subject 2471 | Book 4 Ch 15, Ch 24, Ch 27 |
 | "Youngest by minutes", "middle child" | Dmitri first, by thirty seconds | Story 03 |

@@ -26,7 +26,7 @@ The building could not decide what it was, because Veridica and Chronos could no
 
 Dmitri's head throbbed. He had been experiencing the headaches for three months now, ever since he had volunteered for extended border duty. The chronic exposure was taking its toll—his neural interface constantly struggling with overlapping broadcasts, his hippocampus stressed by the endless contradictions. 
 
-He touched his temple, feeling nothing. The interface had been there since he was eight years old—installed the year after the Mandatory Citizenship Act of 2065. He remembered his mother's tears, his father's grim acceptance. "It's for the best," Papa had said. "Better to be part of the system than outside it."
+He touched his temple, feeling nothing. The interface had been there since he was eight years old—the age the Mandatory Citizenship Act of 2065 set for every child. He remembered his mother's tears, his father's grim acceptance. "It's for the best," Papa had said. "Better to be part of the system than outside it."
 
 Papa had been wrong about many things.
 
@@ -434,7 +434,7 @@ The machines flatlined. The fact storm raged. Three brothers stood around their 
 
 ---
 
-*Fifteen years earlier*
+*Seventeen years earlier*
 
 Three boys sat on the roof of their apartment building, watching the fog roll in from the lake. They were twelve years old, identical in every way, and they were arguing about which of them had been born first.
 
@@ -484,7 +484,7 @@ Ivan smiled, but it didn't reach his eyes. "I'm sorry. I just—I want you to be
 
 Three years later, Ivan Volkov died in a fact storm.
 
-Three years after that, the boys stopped being one person in three bodies.
+By then, the boys had already stopped being one person in three bodies.
 
 They became three separate people, each carrying a different piece of what they'd been.
 

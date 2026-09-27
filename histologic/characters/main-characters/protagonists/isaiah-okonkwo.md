@@ -124,7 +124,7 @@ Nine rooms. The **parlour** holds harmless, true, warm things (his aunt's table,
 - **He found R-2 himself** while sending the archive, and withheld the names. It is the only time he edits the truth.
 - **Notes in the coat** are newsprint margins written with a burned match. He never had paper in Unit 3.
 - **Contamination 81%.** Arrived Oct 27, 2105.
-- **Page thirty-one.** His procurement leak's key page is page 31, and so is Singh's torn page in Book 5. Either make the echo deliberate, and let him notice it, or renumber one.
+- **Page thirty-one is his.** His procurement leak's key page is page 31 (Book 4, canon). Singh's torn manuscript page in Book 5 was renumbered to **page 30** (Sept 2026) so the two never look connected.
 - **The rule of three (settled, Sept 2026):** "One fragment is a curiosity. Two is a pattern. I'll wait for three." Two is already a pattern; he won't publish without a third. The plot file now matches.
 - **No notebook in Books 4–5.** The palace replaced it. In Book 5 Ch 5 he is still writing in newspaper margins with the burned match he kept from Unit 3.
 - **No real awards.**

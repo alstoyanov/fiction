@@ -10,7 +10,7 @@
 - **Sofya Volkov.** Ivan's wife, mother of Dmitri, Alexei and Nikolai. Died in **Nov 2104**, in a fact storm, in the cognitive trauma ward of the neutral hospital in the border zone (Story 03). Gray hair; her mind was worn down by decades of storm exposure.
 - **Elena Sergeyevna Volkov** is Ivan's **younger sister**, and the triplets' "Aunt Lena".
 - **Home:** a flat on the lakeshore in the border zone, with a flat tarred roof. Ivan's study had a green lamp and smelled of solder.
-- **Ages and birth years:** not given. Keep them unstated.
+- **Ages and birth years:** not given for the parents; keep them unstated. The boys were born in **2075**, so Ivan was corrected in spring **2089** and died in **2090**.
 
 ## Who They Were
 An ordinary border-zone couple who believed the interface promises of the 2050s ("My parents believed them. Got their interfaces early," Alexei, Story 03). Ivan worked on the broadcast system and noticed that the border overlap was not an accident. For that he was corrected, sent home empty, and then used to measure how much a mind can bear. Sofya kept the household together through it and never told her sons the word *correction*. Both died of the storms. Between them they gave the boys the three things that saved them: Ivan's *question things*, Sofya's *save each other*, and the promise that they would stay together.
@@ -76,6 +76,6 @@ This is canon. It rules out the old "Professor Adrian Volkov, the triplets' uncl
 ## Continuity Traps
 - **Ivan's job.** Story 03 says both "systems engineer during the transition… helped build the broadcast towers" and "worked for the factorepo maintenance division". The record says Border Broadcast Division. Use the record. The boys' version was the family's understanding.
 - **Timing.** Corrected the spring the boys turned fourteen; died about a year later, when they were fifteen. Book 4 Ch 15's *summary* says "two years before his death", but the drafted chapter and Ch 27 say a year. Use a year.
-- **"Fifteen years."** Book 4 dates his death to "fifteen years ago" (c. 2090). Story 03 says both that and that the rooftop (age 12) was fifteen years earlier and he died three years after it. Don't print the arithmetic.
+- **"Fifteen years" (settled, Sept 2026).** He died in 2090, when the boys were fifteen. "Fifteen years" in Story 03 (2104) and Book 4 (2106) is a round number. Story 03's rooftop (age 12) now reads "seventeen years earlier", and he dies three years after it.
 - **The mother's name is Sofya.** An old draft of Story 03's notice said "ELENA VOLKOV"; that is fixed.
 - **Elena is younger than Ivan.** She is 42 in 2106.

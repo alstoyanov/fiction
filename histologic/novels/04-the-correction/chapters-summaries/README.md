@@ -172,12 +172,12 @@ There is one file per chapter: `NN-slug-summary.md`, with the Epilogue as `30-ep
 These are planted in this book and read only later.
 - **Continuity's aim** ("genuine belief… authentic and self-originated") paraphrases **Principle Four**, whose author is Thomas Wei's father.
 - **Reeves** (Ch 24): "where do you think we learned what a mind can bear" points to **Principle Five**, the border storms as "calibration grounds".
-- **Ch 24:** Kira grabs a Ministry correspondence folder labelled ***RESTORATION / XI***. The numeral XI is Chen Zhao's copy number, and it links to the torn page 31 in Book 5.
+- **Ch 24:** Kira grabs a Ministry correspondence folder labelled ***RESTORATION / XI***. The numeral XI is Chen Zhao's copy number, and it links to the torn page 30 in Book 5.
 - **Kira's stolen fact and the 0.58→0.73:** **Principle Three**, "restore from the true source".
 
 ## Issues Outside This Book
 - ~~*The Divided Truth*: the death notice said "ELENA VOLKOV".~~ **Fixed:** it now reads "SOFYA VOLKOV".
 - ~~*The Stolen Fact*: Kira's Spire colleague was named "Yuki", which clashed with Dr. Tanaka.~~ **Fixed:** she is now **Priya**.
-- *The Divided Truth*: the triplets' ages (8 in 2066, "fifteen years" of flashback) point to the 2080s, not 2104. The novel avoids giving birth years.
+- ~~*The Divided Truth*: the triplets' ages (8 in 2066, "fifteen years" of flashback) point to the 2080s, not 2104.~~ **Fixed:** the triplets are born in 2075. Story 03 now has the interface fitted at eight (no year) and the rooftop "seventeen years earlier". Ivan was corrected in 2089 and died in 2090.
 - ~~`plots/00-SERIES-ORDER.md` put Story 03 in 2106.~~ **Fixed:** that file is replaced by the root `SERIES-OVERVIEW.md`, which dates Story 03 to Nov 2104.
 - The old `chapters/` drafts follow the abandoned plot and need to be rewritten from these summaries.

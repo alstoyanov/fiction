@@ -14,7 +14,7 @@ This file uses a short format. Allies with full profiles of their own (Kovač, S
 - **Age:** "late thirties, perhaps" in Oct 2105 (Book 4, Ch 2).
 - **Occupation:** Project Continuity's neural-interface engineer at Ashford. He runs the cradles, and he designed their gain calibration.
 - **Status after Book 4:** officially **deceased** ("a member of the Continuity technical staff", Ch 27). Living in Chronos, working beside Tanaka.
-- **Status after Book 5:** still in Chronos. Book 5 never says whether the Doctrine brings him back to life (see Traps).
+- **Status after Book 5:** still in Chronos, and still **officially dead** in Veridica (settled, Sept 2026). *STATUS: LIVING* (Ch 26) covers the Continuity subjects who testified. Morrison was staff, not a subject, and legal life would bring charges for his Continuity work. Like Old Songs, he lets the record keep him dead. He lives on Chronos papers.
 - **Appearance:** sandy hair that needs cutting, pale eyes that stay on the console. A tremor in the fingers of his **right** hand whenever the probe engages.
 
 ### Who He Is
@@ -36,7 +36,7 @@ Low, rapid and technical, eyes on the floor. He apologises too much. He comes al
 - **His hands shake until the escape, then stop.** They still shake at the fence (Ch 25). From Ch 29 on they are steady, and Book 5 keeps them steady. If they shake again, it must mean something.
 - He **spoofs** telemetry and never removes an interface. Removal is fatal.
 - He has **no brother** in canon. "Colonel James Morrison" (JM·08) is an unrelated Architect, rename pending.
-- He escaped with the group, but he is **not** one of the seven Continuity subjects.
+- He escaped with the group, but he is **not** one of the seven Continuity subjects. The Doctrine does not revive him, and he doesn't ask it to.
 
 ### Provisional (Books 6–9)
 - He is the one person outside Veridica who can recognise Continuity hardware and seeding on sight. Use him for the Chronos "salience therapy" proposals (Book 5 Epilogue) and for the "erasure in a different nation".

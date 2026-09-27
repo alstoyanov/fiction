@@ -23,7 +23,7 @@ Running under the investigation is an older erasure. A torn page from a manuscri
 
 ## The Manuscript Thread
 In 2063 a young archivist called Mikhail Petrov catalogued three issues of the *Journal of Post-Democratic Governance*. It published anonymous essays arguing that humanity can be governed through its record. After the Founding the journal was classified and erased, so it is not in the factorepo. He kept passages of it in songs. In this book two fragments surface:
-1. **Singh's torn page.** Its heading is torn across, "PRINCIPLE —", with the number missing. It keeps a page number (31), a copy numeral (XI) that matches the folder Kira grabbed in Book 4, and an unreadable mark (CZ·11): *"When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it."*
+1. **Singh's torn page.** Its heading is torn across, "PRINCIPLE —", with the number missing. It keeps a page number (30), a copy numeral (XI) that matches the folder Kira grabbed in Book 4, and an unreadable mark (CZ·11): *"When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it."*
 2. **Old Songs' sung passage:** *"A people that has lost part of its past will accept any past it is given, provided it is given gently, and by someone it trusts."*
 
 They share one author's voice. The present is following a design written before the Founding. Nobody in this book learns who wrote it. The whole manuscript is planned in `00-FOUNDATION-MANUSCRIPT.md`.

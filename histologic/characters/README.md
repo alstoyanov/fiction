@@ -49,9 +49,9 @@ Ages are as of Nov 2106 (the start of *The Lost Hour*) unless noted. "Dead" mean
 |-----------|-----------|------|---------------|---------------------|
 | **Marcus Chen** | 29 | Junior Historian, desk 14-08; C-1 | Story 01 | Living; Commissioner |
 | **Kira Osman** | 27 | Senior Architect at the Spire; C-2 | Story 02 | Living; Commissioner; keeps the first journal |
-| **Dmitri Volkov** | not given | Former enforcer; C-3 | Story 03 | Living |
-| **Alexei Volkov** | not given | "The Phantom", resistance; C-4 | Story 03 | Living |
-| **Nikolai Volkov** | not given | Technician; C-5; alias **Pieter Lang** on Wei's team | Story 03 | Living; cover ended at the hearing |
+| **Dmitri Volkov** | 31 (b. 2075) | Former enforcer; C-3 | Story 03 | Living |
+| **Alexei Volkov** | 31 (b. 2075) | "The Phantom", resistance; C-4 | Story 03 | Living |
+| **Nikolai Volkov** | 31 (b. 2075) | Technician; C-5; alias **Pieter Lang** on Wei's team | Story 03 | Living; cover ended at the hearing |
 | **Dr. Yuki Tanaka** | 46 | Former Ashford correction specialist; C-6 | Book 4 | Living; in Chronos |
 | **Isaiah Okonkwo** | 39 | Journalist; C-7 | Book 4 | Expelled into Chronos; SFW asylum |
 | **Elena Volkov** | 42 | Resistance recruiter, the triplets' aunt | Story 01 | Outlaw (never logged dead) |
@@ -63,7 +63,7 @@ Ages are as of Nov 2106 (the start of *The Lost Hour*) unless noted. "Dead" mean
 | **Dr. Amara Singh** | 49 | Deputy Minister; "murdered" at ~14:23 | Book 5 (Prologue) | Officially dead; alive in truth (unrevealed) |
 | **Director Helena Kovač** | 52 | Director of Ashford; Adrian's aunt | Book 4 | Admitted falsifying the death certificates; fate open |
 | **Captain Yevgenia Sokolov** | 35–36 | Border Security; runs the storm test programme | Story 03 | In post |
-| **Dr. James Morrison** | ~late 30s | Continuity interface engineer, turned by Tanaka | Book 4 | In Chronos; legal status unstated |
+| **Dr. James Morrison** | ~late 30s | Continuity interface engineer, turned by Tanaka | Book 4 | In Chronos; officially dead in Veridica (by choice) |
 | **Dr. Reyna Moss** | ~50 | Assessment and correction physician | Story 01 | At Ashford; absent from Book 5 |
 | **Supervisor Hayes** | 40s | Ashford intake and wing supervisor (a woman) | Book 4 | At Ashford |
 | **Officer Kade** | — | Enforcer (Stories 01–02); arrests Marcus in Book 5 | Story 01 | In post |

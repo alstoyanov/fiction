@@ -1,7 +1,7 @@
 # Dr. Amara Singh: The Woman Who Scheduled the Hour
 
 **Status:** CURRENT, Sept 2026. Rewritten to match the *The Lost Hour* chapter summaries (v3.1 plus v3.2 refinements) and the Book 4 Epilogue. Later books will be rewritten to fit this file.
-**Related:** `novels/05-the-lost-hour/chapters-summaries/00-prologue-summary.md` (her POV), Ch 3, 7, 15, 16, 17, 22, 24, 29 and 32; `plots/05-the-lost-hour-full.md` (clue map, "Singh's staged death"); `plots/00-FOUNDATION-MANUSCRIPT.md` §4.8 (page 31); `helena-kovac.md`; `yevgenia-sokolov.md`.
+**Related:** `novels/05-the-lost-hour/chapters-summaries/00-prologue-summary.md` (her POV), Ch 3, 7, 15, 16, 17, 22, 24, 29 and 32; `plots/05-the-lost-hour-full.md` (clue map, "Singh's staged death"); `plots/00-FOUNDATION-MANUSCRIPT.md` §4.8 (page 30); `helena-kovac.md`; `yevgenia-sokolov.md`.
 
 ---
 
@@ -22,7 +22,7 @@ On the page for one chapter only, she has to be liked at once and understood nev
 | Date | Event |
 |------|-------|
 | Aug 5, 2106 | Isaiah's exposé is published. She reads it three times and opens an internal inquiry into Continuity the next morning. |
-| Aug–Oct 2106 | Her inquiry works through Continuity's Ministry correspondence. **Weeks before Nov 15** she finds one typed page in it: heading torn across (*PRINCIPLE —*), page number *31*, copy numeral *XI* in the corner, an unreadable typed mark at the foot (*CZ·11*). Its sentence: *"When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it."* She keeps it in her safe. |
+| Aug–Oct 2106 | Her inquiry works through Continuity's Ministry correspondence. **Weeks before Nov 15** she finds one typed page in it: heading torn across (*PRINCIPLE —*), page number *30*, copy numeral *XI* in the corner, an unreadable typed mark at the foot (*CZ·11*). Its sentence: *"When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it."* She keeps it in her safe. |
 | Oct 2106 | Opens a **second file, on Director Kovač** (Pell tells Kovač this in Ch 15; Wei's case in Ch 23 cites a second file "on Ashford"). |
 | Autumn 2106 | Agrees to take Marcus's evidence into the official record. Arranges a **visitor's pass** in the name of an archive researcher, for a man the Registry says is dead, for an upload at 14:10 and a meeting at 14:30 on Nov 15. Book 4 Epilogue, Elena's message: *"THE DEPUTY MINISTER HAS OPENED THE DOOR."* |
 | Nov 11, 09:12 | Her scheduling system offers Kovač's office the 14:30 border slot for Isaiah as "the only one available" (Ch 16). |
@@ -89,7 +89,7 @@ Not on the page and not named. The Epilogue's "a Deputy Minister who had read Is
 
 **May learn (and should):**
 - That she was sympathetic, capable and brave in what she did openly: the inquiry, the pass, the upload.
-- That she found page 31 in Continuity's Ministry correspondence and wrote *"Who restores it? Watch who restores it."* in its margin. (Ch 29 reads this as "she suspected", which leaves both readings open.)
+- That she found page 30 in Continuity's Ministry correspondence and wrote *"Who restores it? Watch who restores it."* in its margin. (Ch 29 reads this as "she suspected", which leaves both readings open.)
 - That **every** operation in the hour was steered by her credentials, including a confirmation at 14:02, inside the hour.
 - That she had three calendar entries she didn't remember adding, and that her aide can't recall who proposed the 14:30.
 - That the identification of her body is weak: cremation within 24 hours, a family no one can find, no face photographs, identification only by seeded witnesses.
@@ -102,7 +102,7 @@ Not on the page and not named. The Epilogue's "a Deputy Minister who had read Is
 - What happened in her office between 14:00 and 15:00, beyond the reconstruction that Wei went in "whatever happened in there".
 - Whether anyone died there, and whose body was cremated.
 - Her relationship, if any, to Thomas Wei or Chen Zhao.
-- Who wrote page 31, or what *CZ·11* means (Book 9).
+- Who wrote page 30, or what *CZ·11* means (Book 9).
 - Why she opened a file on Kovač.
 
 ---
@@ -142,7 +142,7 @@ Not on the page and not named. The Epilogue's "a Deputy Minister who had read Is
 - **Never show who knocks.** Never show her body, or her face in the file.
 - **The gray-coat woman** (Epilogue) is Singh. The **gray-coat man** who counts to three at the Justice Center steps (Ch 19) and stands across the street from Nikolai (Ch 20) is Wei's watcher, or Wei. Keep them visibly distinct: the woman is identified only by her reading glasses on a cord.
 - She found the page **in Continuity's Ministry correspondence**, weeks before Nov 15. She sent Marcus a **photograph**. The **original** stayed in her sealed safe until Kovač brings it out in Ch 29, and the margin note exists only on the original.
-- The page's number (31), numeral (XI) and mark (CZ·11) are visible but unreadable in Book 5. Nobody identifies it as Principle Six until Book 6, or decodes the mark before Book 9.
+- The page's number (30), numeral (XI) and mark (CZ·11) are visible but unreadable in Book 5. Nobody identifies it as Principle Six until Book 6, or decodes the mark before Book 9.
 - The 14:02 confirmation comes from **her credentials**, which is not the same as from her.
 - Reeves's confession (letter opener, cut flowers) is **seeded**. Don't treat its details as evidence of what happened.
 

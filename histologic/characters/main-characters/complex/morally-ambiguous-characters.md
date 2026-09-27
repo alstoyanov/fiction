@@ -59,11 +59,11 @@ Warm, curious, precise about dates (he is a Chronos historian: nanosecond timest
 - **Why not "Chancellor":** the Architect VS·09 is settled as **Chancellor Viktoria Sokolov**. Two Chancellors in Veridica would clash.
 - **Why not "Petrov":** it would imply a link to Dr. Yuri Petrov (YP·02), and the name is already carried by Old Songs. The old file also gave him a father *and* a son called Yuri. All three links are dropped.
 
-### Which Nation Does Viktoria Sokolov Serve? (Unclear in the Sources)
+### Which Nation Does Viktoria Sokolov Serve? (Settled, Sept 2026: Veridica, former Chancellor)
 - The Manuscript (§6) calls her "Chancellor Viktoria Sokolov", the Administrator, but **does not say of which nation**, or whether she still holds the office.
 - The old Book 9 plot calls her the "Chronos shadow leader". That conflicts with `worldbuilding/nations.md`: Chronos has "algorithmic democracy... no human representatives", so it has no Chancellor. It also sits oddly with her daughter being a Veridican Border Security officer.
 - `worldbuilding/nations.md` gives **Veridica** "a Chancellor and Cabinet". Books 4–5 never name the sitting Chancellor (Kovač mentions "at least one member of the Cabinet"; the Cabinet approved Phase Two "at Ministry level").
-- **So:** the most consistent reading is that she is, or was, **Veridica's Chancellor**, but the sources don't settle it. A clean option is that she is a **former** Chancellor who keeps the title, which is common for heads of state, leaving the sitting office free. Either way, calling him **First Minister** avoids the clash.
+- **Decision:** she is a **former Chancellor of Veridica** (in office c. 2085–2098; about 70 in 2106), who keeps the title in retirement. That leaves the sitting office free, fits her daughter's Veridican career, and explains why Books 4–5 never name her. The head of government in Books 6–9 is the **First Minister** (suggested: Oskar Maitland), which avoids any clash with the title.
 
 ### Provisional Arc
 - **Book 6:** the operation against Julian comes down through him, deniably. When Marcus refuses and publishes, Maitland chooses adaptation over suppression (old plot: "Government divided, chooses adaptation over suppression").
