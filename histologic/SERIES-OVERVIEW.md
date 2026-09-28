@@ -15,7 +15,7 @@
 | 4 | *The Correction* | Novel, ~95,500 words | Oct 2105 – Aug 2106 (epilogue Nov 14, 2106) | **Canon.** Rewritten Sept 2026, first draft complete |
 | 5 | *The Lost Hour* | Novel, ~113,000 words | Nov 15, 2106 – Jan 2107 (epilogue Nov 2107) | **Canon.** Rewritten Sept 2026 from plot v3.1, first draft complete |
 | 6 | *The Distributed Truth* | Novel, ~110,000 words planned | Oct 30, 2108 – Feb 14, 2109 (epilogue Mar 15, 2109) | **Plot v2 (Sept 2026)** in `plots/06-the-distributed-truth-full.md`. Chapter summaries and chapters to do (old draft to be replaced) |
-| 7 | *Battle of Truths* | Novel | ~2109 | Provisional |
+| 7 | *Battle of Truths* | Novel, ~110,000 words planned | Aug 14 – Dec 23, 2109 (epilogue Jan 10, 2110) | **Plot v3 (Sept 2026)** in `plots/07-battle-of-truths-full.md`. Chapter summaries and chapters to do (old draft to be replaced) |
 | 8 | *Battle of Blood* | Novel | ~2110 | Provisional |
 | 9 | *Architects of Chaos* | Novel, finale | ~2115 (epilogue ~2135) | Provisional |
 
@@ -56,9 +56,14 @@ These are the ideas carried forward from the pre-rewrite plots, adjusted to fit 
 - **The trap:** the government confesses first and offers the **Concordance**, an index of every journal. The copy-X fragments were fed from inside, and the remedy was drafted in advance. Vance is found as "Mrs. Kerr" on Tanaka's sealed ward. The heroes refuse to give the networks a center. The **New Foundation** mirrors the manuscript, leaving blanks for the unseen principles.
 - **Ending:** Julian's key countersigned the Chronos Gap ("two hands"), which sets up Book 7.
 
-### Book 7: *Battle of Truths*
-- **Premise:** a hostile response to the transformation. Marcus now **carries out** the operation he once refused, and destroys the man he once saved.
-- **Consequences:** Principles One and Two are revealed. The SFW prepares to invade. Old Songs learns that his family's 2074 storm was manufactured. Alexei's death is a candidate for this book or Book 8.
+### Book 7: *Battle of Truths* (plot v3 written; see `plots/07-battle-of-truths-full.md`)
+- **Premise:** **the Rewriting** (Aug 14, 2109). Two million Concordance journals are altered overnight, the countersignature is Julian's Archive key, and the war of facts resumes. Marcus checks the record and asks for the operation he refused: **RESTORATION**, run on Julian through trust.
+- **Twists:**
+  - The two nations' true sources are **one system**, so the narrow operation rewrites Chronos's history.
+  - **Julian was innocent.** He received the key only in Jan 2108, as a letter in Kovač's folder proves. His predecessor **Mera** "died" in Feb 2108.
+  - Someone in Veridica fed the SFW the whole operation **in advance** (Principle Two: "enemies outside them all").
+- **Manuscript:** the title page, the table of contents, and Principles One and Two, all from **copy VII**, which Julian found in the Chronos Archive. Old Songs learns that the **2074 storm** was a scheduled calibration run ("The Two Maps").
+- **Ending:** Julian publishes his own log. Marcus confesses without a remedy. An SFW fleet assembles.
 
 ### Book 8: *Battle of Blood*
 - **Premise:** the SFW invades to capture The Judge. Veridica mass-corrects "sympathisers" (Principle Four is revealed to the Continuity survivors).

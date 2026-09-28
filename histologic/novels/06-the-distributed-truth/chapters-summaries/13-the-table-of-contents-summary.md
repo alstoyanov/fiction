@@ -33,7 +33,7 @@ Late, at the table, Marcus: "We were always going to be the restorers." Old Song
 ## Notes
 - **(Twist 3, red herring dismissed)** Park is ruled out by her voice, not by any fact.
 - **(Twist 3 clue)** The songbooks still come from Tanaka's unnamed "patient".
-- **TOC strip format (binding):** three lines, IV–VI, numerals and page numbers only, **no headings**. Four's title is kept for Book 8. No Annex or Register line (Book 7). No copy numeral, and don't draw attention to its absence.
+- **TOC strip format (binding):** three lines, IV–VI, numerals and page numbers only, **no headings**. The titles appear only with Book 7's full table of contents. No Annex or Register line (Book 7). No copy numeral, and don't draw attention to its absence.
 - **Manuscript rules:** no decoding of CZ·11 and no author named. Marcus may note that XI came through the Ministry (README 8). Don't say the manuscript's title.
 - **Old Songs' voice:** very few sentences; humming is his language; tunes lift like a question. No speech (that is Ch 22). The round is the unnamed start of "Many Hands", with words in Ch 27.
 - **The handover** follows Ch 5: Tanaka to Alexei at the lakeshore checkpoint.

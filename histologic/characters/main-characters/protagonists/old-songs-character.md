@@ -150,7 +150,7 @@ All lyrics here are **original to the series** unless marked as public domain. W
 - **Hidden link (Book 4 Twist 2):** in Marcus's false "field" memory, Kira is *counting the stars*. Verse 3 may have been buried in him since childhood, and the storm may have built the memory from it. Never state this outright. Tanaka's "remembering or making it up" (Ch 28) covers it.
 
 ### 3. The Names
-*A lament from the Fracture Years, when too many died for the records to keep. The singer adds the names of the dead to the second line. It has no fixed length. It is as long as the dead.*
+*A lament from the Fracture Years, when too many died for the records to keep. The singer puts the names of the dead into the third line, one verse per name. It has no fixed length. It is as long as the dead.*
 - **Where:** Book 4, Ch 26 (Teo, Hanna Marsh, Pavel Ionescu, Samuel, the old man at the fence). Book 8, where it grows through the war. He also sings it silently every night for Anya, Katya and Kerr.
   > *Who went down to the water?*
   > *Name them, and they stay.*
@@ -190,7 +190,21 @@ All lyrics here are **original to the series** unless marked as public domain. W
   > *and many make it right.*
 
 ### 7. The Two Maps (planned, Book 7)
-*A song about two nations drawing the same river in different places. He writes it during the fact war.* Lyrics to be written with Book 7.
+*A song about two nations drawing the same river in different places. He writes it in October 2109, after learning that the 2074 storm was scheduled (Book 7, Ch 13), and sings it whole for the first time to Marcus (Book 7, Ch 26). The last verse lifts like a question.*
+  > *Two maps of the one river,*
+  > *one for either shore;*
+  > *one puts the ford by the willows,*
+  > *one by the mill-house door.*
+  >
+  > *They fought for the ford forty winters,*
+  > *and neither would give an inch;*
+  > *the river ran on between them*
+  > *and never once asked which.*
+  >
+  > *But who drew the maps for the fighting,*
+  > *and sold them the ink and the quill —*
+  > *and why is the hand in the corner*
+  > *the same on both maps still?*
 
 ### 8. The Lakeshore Air, complete (planned, Book 9)
 Its old verses and his hidden verses sung together, once, at the end.

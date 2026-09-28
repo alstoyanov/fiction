@@ -1,100 +1,101 @@
-# Battle of Truths - Concise Plot (Novel 7)
+# Battle of Truths: Concise Plot (v3)
 
-## Novel Type
-Seventh Novel - Spy Thriller / Moral Drama
+**Status:** CURRENT, Sept 2026. This is the short version of `07-battle-of-truths-full.md` (v3), which is authoritative.
+**Type:** Book 7. Spy thriller and moral tragedy.
+**Length:** Prologue + 30 chapters + Epilogue, about 110,000 words.
+**Timeline:** Aug 14 – Dec 23, 2109. The epilogue is on Jan 10, 2110.
 
 ## Core Concept
-Two years after the Lost Hour, Veridica faces fact war with Chronos. Marcus, Elena, and Kira execute audacious plan: Elena seduces Chronos historian Adrian Kovač to gain access, they replace Chronos's factorepo backup with Veridica's database, then force catastrophic failure. When Chronos restores, they unknowingly adopt Veridica's history—war over. But Marcus has become the corruption he fought against. SFW prepares for invasion.
+At 03:12 on Aug 14, 2109, two million journals registered in Veridica's **Concordance**, together with the witness books of Julian Kovač's networks in Chronos, are quietly **rewritten**. A man dies because his own journal says he informed on his street, and Chronos resumes the war of facts. The countersignature on the Rewriting is the key of the Chronos Temporal Archive, which is Julian's. Marcus checks the Chronos record, which says Julian has held the key since 2104. He asks for the operation he refused in Book 6: **RESTORATION**. He will use Julian's trust to cut the Chronos hand out of the true source. It works far beyond its purpose, because the two nations' true sources are **one system**. In a single night the heroes write Veridica's history into 150 million minds. After that, the truth arrives piece by piece.
 
-## Main Characters
-**Returning**: Marcus, Kira, Elena, Nikolai, Alexei, Dmitri, Isaiah
-**New**: 
-- **Adrian Kovač** (38): Chronos historian, Elena's target, tragic victim
-- **Minister Petra Sokolov** (52): Chronos war leader
-- **Chancellor Viktor Petrov** (58): Veridica head of state
-- **General Yevgenia Sokolov** (37): Veridica military intelligence
+## Main Characters (ages in 2109)
+- **Returning:**
+  - Marcus (32) and Kira (30).
+  - The triplets (34).
+  - Elena (45), Marcus's teacher, and "Some of it was real."
+  - Tanaka (49), inside Chronos.
+  - Isaiah (42), in the SFW.
+  - Old Songs (71) and Vance (73).
+  - Kovač (55).
+  - Maya (27).
+  - Sokolov (38–39), promoted again.
+  - Thomas Wei (48), who has no POV.
+  - Chen Zhao (68).
+  - First Minister Maitland.
+  - Administrator Aubry.
+  - Pell.
+  - Ruth (47) and Wren (15).
+- **Julian Kovač** (35): innocent and destroyed. He has POV chapters.
+- **New or first seen:**
+  - **Adrian Kovač**, Julian's brother and Kira's former lover.
+  - **Dr. Augustin Mera**, Julian's predecessor, who "died" in Feb 2108.
+  - **Colonel Beatriz Martinez**, SFW intelligence.
+  - **Viktoria Sokolov**, retired Chancellor and Yevgenia's mother.
+
+## The Twists
+1. **One source (Ch 16).** Kira's narrow image goes into Chronos's backup, and the backup accepts the Veridican master as its own. The two true sources were always one. The image spreads, and Chronos wakes up believing Veridica's history. They meant to cut out one hand. Instead they rewrote a nation.
+2. **The key wasn't his (Ch 24).** Kovač finds Julian's paper letter from Jan 2108 in her folders: "They've given me the old man's keys." In Dec 2107 the key belonged to his predecessor, **Mera**, who then "died". The Chronos register had been edited. Marcus checked the record and never asked the witness.
+3. **Enemies outside them all (Ch 28).** SFW Colonel Martinez shows Isaiah a full account of RESTORATION that reached the SFW **eleven days before it happened**, through Veridican channels, marked with a familiar seam. Principle Two is in action: "Someone in Veridica wants to be invaded."
+- **Turns:**
+  - **The 2074 storm (Ch 13).** Julian's gift shows that the storm that killed Old Songs' family was a scheduled "calibration run". This is the only time we see him angry. He writes "The Two Maps".
+  - **Self-disclosure (Ch 21).** Julian publishes every hour he spent with Marcus, timestamped, on the Day of Testimony.
 
 ## Plot Structure
+**Prologue: The Rewriting.** Kestrel Point at 03:12. Registered journals now say things nobody wrote, while the paper Kestrel Book agrees with itself.
 
-**Part 1: The War of Facts** (Chapters 1-8)
-- Fact war devastating border civilians (reality flickering)
-- Marcus proposes radical plan to Chancellor Petrov
-- "Replace their backup, force failure, they restore our history"
-- Assembles team: Elena, Kira, Nikolai
-- Elena researches target: Adrian Kovač (widower, lonely, vulnerable)
+**Part One: The Rewriting (Ch 1–8).**
+- The Concordance was edited "from the master". The countersignature carries the Archive key's habits.
+- Julian starts to say "I've only had it since—" and is cut off. The register says 2104.
+- A ferryman dies at Gullhaven.
+- Chronos resumes the war.
+- The SFW attaché knows the death toll early.
+- A child dies, and Marcus asks Maitland for the operation: "I can't authorise this. But I won't stop you." Wei names it RESTORATION.
+- At the farmhouse Old Songs hums the **falling "no" phrase** from Wing C.
+- Kira joins "to hold the knife".
 
-**Part 2: The Infiltration** (Chapters 9-16)
-- Elena "accidentally" meets Adrian at conference
-- Courtship: he falls genuinely in love
-- She respects him but continues mission
-- Adrian gives her his access credentials (trusts her completely)
-- Night operation: infiltrate factorepo, replace backup
-- "Upload complete. The backup is ours."
+**Part Two: RESTORATION (Ch 9–16).**
+- Elena teaches R-2 ("Some of it was real").
+- The cover is a joint inquiry inside the Temporal Archive.
+- Julian reconciles with Adrian and finds **copy VII**: the title page (*The Foundation of Certainty*), the table of contents (the Register and Annex exist), and Principles One and Two. Vance: "That copy should not be in Chronos."
+- Isaiah receives One and Two, and the SFW asks him to authenticate pages he hasn't published.
+- The 2074 log, and "The Two Maps".
+- Wei's tools are "too clean", and Adrian warns Kira.
+- Julian gives Marcus access. Marcus lets him hope. His CHECKED entry: "I used him."
+- The operation (**Twist 1**).
 
-**Part 3: The Catastrophe** (Chapters 17-24)
-- Nikolai triggers factorepo failure in Chronos
-- Chronos restores from compromised backup
-- Citizens wake to new history (Veridica's version)
-- Most accept it—The Judge confirms
-- Minister Petra realizes what happened but can't prove it
-- Adrian confronts Elena: "Everything was a lie."
-- Extraction: team escapes, Adrian destroyed
+**Part Three: The Awakening (Ch 17–24).**
+- The escape over the Drowned Causeway, and Julian's arrest.
+- Chronos believes its new history. Only the 9S patients and the six paper keepers remember.
+- Aubry: "They didn't defeat us. They wrote us."
+- Maitland calls it "a diplomatic breakthrough", and Chen Zhao toasts "our restorers".
+- Julian is recorded at maximum: "I helped them erase my own nation." He discloses everything himself.
+- Isaiah's "The Restorer" is printed uncut and ends up in the SFW war brief.
+- Elena's POV: the circle fractures.
+- Kovač's folder (**Twist 2**).
 
-**Part 4: The Price** (Chapters 25-30)
-- Veridica celebrates victory
-- Marcus grapples with guilt: "I became what I fought against"
-- Resistance fractures: pragmatists vs. idealists
-- Isaiah publishes exposé condemning the deception
-- Intelligence reports: SFW mobilizing military
-- "They think we're weak. They think facts make us vulnerable."
-- Chancellor summons Marcus: "SFW is preparing to invade"
+**Part Four: The Price (Ch 25–30).**
+- Marcus confesses **without a remedy**, which is the one confession Principle Six can't absorb. Chen Zhao offers to help him "find this Register".
+- Old Songs' **one speech**: "It works on the best of us first." Then "The Two Maps".
+- Restoration by many hands in Chronos: paper keepers, 9S testimony and Julian's log. 11,000 signatures, a "minority pattern" at 0.07.
+- Martinez's folder (**Twist 3**).
+- Sokolov becomes Colonel, too fast. Dinner with her mother. An SFW fleet, whose soldiers have no interfaces.
+- Maitland summons Marcus. "One more time. But this time, we do it right."
 
-**Epilogue: The Border** (December 2108)
-- SFW troops massing at border
-- Marcus and team preparing for real war
-- "We won the Battle of Truths. Now comes the Battle of Blood."
+**Epilogue: The Coast (Jan 10, 2110).**
+- Julian's journal: "I am seen every second and nobody sees me."
+- Vance rereads the page she won't give anyone.
+- Kovač's folder, labelled *ANSWERED*.
+- Isaiah's asylum review is brought forward.
+- The Atlantic headland, and a fleet beyond the horizon.
+- Final line: *"We won the Battle of Truths. Now comes the Battle of Blood."*
 
-## Key Themes
-- Corruption of the righteous
-- Truth vs. Victory
-- Love as weapon
-- Moral compromise in war
-- Does the end justify the means?
+## Manuscript Revealed in This Book
+The title page · the table of contents (so the Register and the Annex are known to exist) · Principle One · Principle Two. All come from copy VII, found in the Chronos Temporal Archive.
+**Not revealed:** the text of Principle Four (only its title), the Annex text, the Register's names, any decoded mark, and Principle Seven.
 
-## Marcus's Arc
-Reformer → Spy → Compromised Hero
-- Uses corrupt methods to save country
-- Wins but loses moral certainty
-- "I saved Veridica. But at what cost?"
-
-## Elena's Role
-- Executes seduction perfectly
-- May have developed real feelings for Adrian
-- No moral qualms about mission
-- "War requires compromise"
-
-## Adrian's Tragedy
-- Falls genuinely in love with Elena
-- Used and destroyed
-- His credentials enable the infiltration
-- Career ruined, nation's history erased
-- Knows truth but can't prove it
-
-## Ending
-Veridica wins fact war through deception. Adrian destroyed. Marcus morally compromised. SFW sees weakness and prepares for invasion. "The age of fact wars is over. The age of blood wars has begun."
-
-## Connection to Series
-- Marcus learns that winning through corruption is hollow
-- SFW invasion directly caused by this victory
-- Moral compromise prepares Marcus for harder choices in Book 4
-- Government structure detailed
-- International tensions escalate
-
-## Timeline
-September-November 2108 (2 years after Lost Hour)
-
-## Word Count Target
-~120,000 words (30 chapters + prologue + epilogue)
-
-
-
+## Leads To
+**Book 8, *Battle of Blood*.**
+- The SFW invades by sea to capture The Judge. Its soldiers can't be storm-turned or seeded.
+- Someone in Veridica wanted the invasion, because war justifies mass correction. Principle Four is revealed.
+- Principle Seven.
+- Alexei's death.
