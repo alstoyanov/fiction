@@ -14,7 +14,7 @@
 | 3 | *The Divided Truth* | Short story (the Volkov triplets) | Nov 2104 (epilogue Nov 2105) | **Canon** |
 | 4 | *The Correction* | Novel, ~95,500 words | Oct 2105 – Aug 2106 (epilogue Nov 14, 2106) | **Canon.** Rewritten Sept 2026, first draft complete |
 | 5 | *The Lost Hour* | Novel, ~113,000 words | Nov 15, 2106 – Jan 2107 (epilogue Nov 2107) | **Canon.** Rewritten Sept 2026 from plot v3.1, first draft complete |
-| 6 | *The Distributed Truth* | Novel | ~Nov 2108 – Feb 2109 | Provisional |
+| 6 | *The Distributed Truth* | Novel, ~110,000 words planned | Oct 30, 2108 – Feb 14, 2109 (epilogue Mar 15, 2109) | **Plot v2 (Sept 2026)** in `plots/06-the-distributed-truth-full.md`. Chapter summaries and chapters to do (old draft to be replaced) |
 | 7 | *Battle of Truths* | Novel | ~2109 | Provisional |
 | 8 | *Battle of Blood* | Novel | ~2110 | Provisional |
 | 9 | *Architects of Chaos* | Novel, finale | ~2115 (epilogue ~2135) | Provisional |
@@ -50,10 +50,11 @@ Canon detail: `novels/04-the-correction/`, `plots/04-the-correction-REVISED.md`,
 ## 4. Provisional Arc, Books 6–9 (Not Binding)
 These are the ideas carried forward from the pre-rewrite plots, adjusted to fit Books 1–5. Each book gets a full plot revision before it is written.
 
-### Book 6: *The Distributed Truth*
-- **Premise:** a fact war with Chronos. Marcus, now on the Commission, is ordered to carry out a corrupt operation against a Chronos historian: seduce him and destroy him. The historian must be **renamed Julian Kovač** (Kovač's other nephew), to keep him distinct from Adrian of Story 02.
-- **Turn:** Marcus **refuses**. He publishes the manuscript fragments, in line with the Compiler's Warning. Citizens build **distributed truth networks** (journals, cross-checked testimony), which is the "many hands" of Book 5 grown to scale.
-- **Characters:** Vance (the Compiler) confesses, and has a reunion with her old friend Old Songs. Old Songs' round "Many Hands" becomes the networks' anthem. Wei's journal ("I find I want to see what they build") comes out. A **New Foundation** of ten principles is written as a deliberate answer to the old one.
+### Book 6: *The Distributed Truth* (plot v2 written; see `plots/06-the-distributed-truth-full.md`)
+- **Premise:** the **Chronos Gap** (seventeen minutes erased from Chronos's life-logs on Dec 13, 2107, with the Lost Hour's seam) starts a **war of facts** with Chronos. Marcus is offered **Operation KINDRED**: befriend and use the Chronos historian **Julian Kovač** (Adrian's elder brother) to take Chronos's reconciliation key.
+- **Turn:** Julian was sent to do the same to him (**MERIDIAN**). Marcus refuses and publishes by many hands, in three nations: the orders, the Introduction, Principles Three and Five, and the Warning. The war stops.
+- **The trap:** the government confesses first and offers the **Concordance**, an index of every journal. The copy-X fragments were fed from inside, and the remedy was drafted in advance. Vance is found as "Mrs. Kerr" on Tanaka's sealed ward. The heroes refuse to give the networks a center. The **New Foundation** mirrors the manuscript, leaving blanks for the unseen principles.
+- **Ending:** Julian's key countersigned the Chronos Gap ("two hands"), which sets up Book 7.
 
 ### Book 7: *Battle of Truths*
 - **Premise:** a hostile response to the transformation. Marcus now **carries out** the operation he once refused, and destroys the man he once saved.

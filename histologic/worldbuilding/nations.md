@@ -17,7 +17,7 @@ Write every nation sincerely from inside. The design shows only in patterns.
 - **Territory:** the former North American East Coast, extending to the **Great Lakes**. The capital is unnamed so far: an ordered city of transit lines, the **Factorepo Spire**, the Justice Center, the Historical Archives, the Meridian Bridge, and the Archive District of preserved pre-Histologic buildings. Ashford Correctional Facility is on its eastern edge.
 - **Population:** about 180 million.
 - **Factorepo:** the oldest and densest, with the strictest input protocols. Historians verify facts at regional factorepos, and systems architects maintain the Spire. Surveillance is everywhere and is **accepted as comforting**: "In a world where everything was known, nothing could be hidden."
-- **Government:** a Chancellor and Cabinet, with ministries (Historical Integrity, Correction, Border Security and others). All of it is subordinate to **The Judge**, whose determinations are final.
+- **Government:** a Chancellor (ceremonial head of state) and a **First Minister** who leads the Cabinet (Oskar Maitland from Book 6), with ministries (Historical Integrity, Correction, Border Security and others). All of it is subordinate to **The Judge**, whose determinations are final.
 - **Interfaces:** mandatory since the **2065 Act**, installed at about age 8, with a family "enlightenment day" celebration.
 - **Justice:** contamination above 60% means corrective custody. Reporting an outlaw doesn't protect you; exposure is what counts (Story 01).
 - **Outlaws:** corrected. Those who flee or are expelled lose citizenship. Expulsion by order exists (Isaiah, Book 5).

@@ -166,3 +166,8 @@ She is a **POV character** (Ch 2, 15, 25).
 | Arc: believer, disillusioned, helper, redeemer | Believer who kept a folder; turns in Ch 18; stays to write the lie | Drafted Book 4 |
 | Book 5: "leads facility reforms", "testifies against correction" | Under inquiry (Halvorsen); POV of Ch 2, 15, 25; red herring; proposes the hearing and carries the Doctrine; admits the false certification; brings Singh's page | Book 5 summaries |
 | "Lawful Good" alignment labels | Dropped | Not useful for drafting |
+
+## Update: Book 6 Plot v2 (Sept 2026)
+From `plots/06-the-distributed-truth-full.md`:
+- **Status after Book 5, settled:** dismissed as Director of Ashford in Feb 2107 without charge. Under the Doctrine her certificates were amended as "corrected entries". From mid-2107 she is the Commission's **Registrar of Testimony**, running the public intake.
+- **Book 6:** she tells Marcus that Julian is her nephew (Ch 7) and gives him Adrian's one-line letter. Her intake receives the copy-X deposits and logs no visitor (Ch 9).

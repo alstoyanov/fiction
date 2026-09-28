@@ -17,10 +17,10 @@
 
 ### At a Glance
 - **Name:** Julian Kovač (settled; replaces the old "Adrian Kovač, Chronos historian", to keep him distinct from Story 02's Adrian).
-- **Family (canon anchors):** Director Helena Kovač's **other nephew**, so Cardinal Tobias Kovač (TK·07) is his **great-uncle**. Adrian Kovač is either his brother or his cousin; **not yet fixed**. Suggested: his cousin, the son of Helena's **older** brother, who moved to Chronos. That keeps Adrian's Story 02 family simple, and a Kovač family split across the Lakes mirrors the two nations.
+- **Family (canon anchors):** Director Helena Kovač's **other nephew**, so Cardinal Tobias Kovač (TK·07) is his **great-uncle**. **Adrian Kovač is his younger brother** (settled by the Book 6 plot v2): both are sons of Helena's younger brother. Julian left for Chronos at nineteen.
 - **Age:** the old file said 38 (and 39 a year later). A nephew of a woman born in 2054 is more comfortable at **about 34 in 2108** (suggested, born ~2074).
 - **Occupation:** Senior Historian in **Chronos**, with factorepo access.
-- **Old traits worth keeping:** brilliant, kind, trusting, idealistic; a lonely widower.
+- **Old traits worth keeping:** brilliant, kind, trusting, idealistic, and lonely. (The old "widower" is dropped: he has never married. His loneliness is Chronos's, a country that forgets nothing.)
 
 ### Why He Matters
 In the provisional plan (SERIES-OVERVIEW §4), Marcus, now a Commissioner, is **ordered to seduce Julian and destroy him** to win the fact war with Chronos. Marcus **refuses in Book 6**, and **does it in Book 7**. Julian is the cost of Marcus's one great compromise. He is **not** seduced by Elena (that was the old plan, now dropped).
@@ -154,3 +154,9 @@ Is he an Architect's heir? **Suggested: no.** Thomas Wei already carries the hei
 | "Sarah Chen" destroys The Judge and dies in the explosion | **Nora Chen** (suggested); The Judge is ended by Principle Seven; her redemption is rebuilt around it | Manuscript §4.12 |
 | "Novel 06/07/08" | Books 7/8/9, with Book 6 added | Correct numbering |
 | Alignment labels and the "COMPLETE" status footer | Dropped | PROJECT-RULES §3.6 |
+
+## Update: Book 6 Plot v2 (Sept 2026)
+From `plots/06-the-distributed-truth-full.md`:
+- **Julian Kovač, settled:** Adrian's **elder** brother (born about 2074), son of Helena's younger brother. He emigrated to Chronos at nineteen. Senior Historian of the Chronos Temporal Archive, and holder of its senior reconciliation key.
+- **Book 6:** the target of **KINDRED**, and secretly sent to turn Marcus (**MERIDIAN**, Twist 1). One POV chapter (Ch 11). His key countersigned the Chronos Gap (Twist 4, unresolved).
+- **The head of government is settled as First Minister Oskar Maitland.**

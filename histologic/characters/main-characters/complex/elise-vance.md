@@ -140,3 +140,7 @@ None. She is never named, and nothing points to her. (Continuity's aim in Book 4
 | "Final journal (March 2086)" | Handwritten Warning, March 2066 | Manuscript §3 |
 | No link to Old Songs | His friend at the Archive in the 2060s | Manuscript §3; Book 5 Ch 12 |
 | The Counselor as her redemption | Not decided | Manuscript §9 |
+
+## Update: Book 6 Plot v2 (Sept 2026)
+From `plots/06-the-distributed-truth-full.md`:
+- **Book 6, settled:** she has lived since about 2098 as **"Mrs. Margit Kerr"**, a long-term patient in the sealed cognitive ward of Tanaka's Chronos teaching hospital, the one unlogged room in Chronos. The alias honours Anselm Kerr. The hospital director, **Dr. Soren Vale**, is her son. She sends the Introduction, a table-of-contents strip and the Warning to Old Songs inside songbooks, carried by Tanaka. She did **not** send Principles Three and Five (copy X). She is found in Ch 21, gives her confession by dictation to twelve keepers (Ch 26), has one POV chapter (Ch 27), withholds Principle Seven, and lives at the farmhouse afterwards.
