@@ -138,7 +138,7 @@ Old material is kept only where it fits Books 1–5. The old file's "Novel 06/07
 - In Book 5 she is **outside the seeded district** at 14:30. Her memory of the hour is clean, and her paper log is real.
 - **Isaiah crosses into Chronos.** Veridica and the SFW share no border.
 - She never mentions August in Book 5, not even obliquely.
-- Keep her unreadable. No POV chapters through Book 5. If she ever gets one in a later book, it should be one only.
+- Keep her unreadable from outside. No POV chapters through Book 6. Book 7 gives her one (Ch 29) and Book 8 two (Prologue, Ch 9), all written formally, with the real sentence last.
 
 ---
 

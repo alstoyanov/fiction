@@ -147,4 +147,4 @@ From `plots/06-the-distributed-truth-full.md`:
 
 ## Update: Book 8 Plot v2 (Sept 2026)
 From `plots/08-battle-of-blood-full.md`:
-- **Book 8, settled:** she gives Kira the page (Principle Seven, with its mechanics on the back) on Sat May 17, 2110, when Maitland moves to surrender the core. She hears the cascade on Wed May 21 and dies at the farmhouse on Sat May 24, 2110, aged 74. Before dying she gives Old Songs a rhymed riddle about where the rest of her copy is (Book 9). He sings "Elise Vance" into "The Names".
+- **Book 8, settled:** she gives Kira the page (Principle Seven, with its mechanics on the back) on Sat May 17, 2110, when Maitland moves to surrender the core. She hears the cascade on Wed May 21 and dies at the farmhouse on Sat May 24, 2110, aged 74. On Wed Apr 9, 2110 she gives Old Songs a rhymed riddle about where the rest of her copy is (Book 9). He sings "Elise Vance" into "The Names".
