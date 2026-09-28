@@ -16,7 +16,7 @@
 | 5 | *The Lost Hour* | Novel, ~113,000 words | Nov 15, 2106 – Jan 2107 (epilogue Nov 2107) | **Canon.** Rewritten Sept 2026 from plot v3.1, first draft complete |
 | 6 | *The Distributed Truth* | Novel, ~110,000 words planned | Oct 30, 2108 – Feb 14, 2109 (epilogue Mar 15, 2109) | **Plot v2 (Sept 2026)** in `plots/06-the-distributed-truth-full.md`. Chapter summaries and chapters to do (old draft to be replaced) |
 | 7 | *Battle of Truths* | Novel, ~110,000 words planned | Aug 14 – Dec 23, 2109 (epilogue Jan 10, 2110) | **Plot v3 (Sept 2026)** in `plots/07-battle-of-truths-full.md`. Chapter summaries and chapters to do (old draft to be replaced) |
-| 8 | *Battle of Blood* | Novel | ~2110 | Provisional |
+| 8 | *Battle of Blood* | Novel, ~110,000 words planned | Feb 12 – May 28, 2110 (epilogue Aug 15, 2110) | **Plot v2 (Sept 2026)** in `plots/08-battle-of-blood-full.md`. Chapter summaries and chapters to do (old draft to be replaced) |
 | 9 | *Architects of Chaos* | Novel, finale | ~2115 (epilogue ~2135) | Provisional |
 
 Story 03 happens *before* Stories 01–02 in-world, but it is read third. The triplets are already at Ashford when Marcus arrives.
@@ -65,10 +65,14 @@ These are the ideas carried forward from the pre-rewrite plots, adjusted to fit 
 - **Manuscript:** the title page, the table of contents, and Principles One and Two, all from **copy VII**, which Julian found in the Chronos Archive. Old Songs learns that the **2074 storm** was a scheduled calibration run ("The Two Maps").
 - **Ending:** Julian publishes his own log. Marcus confesses without a remedy. An SFW fleet assembles.
 
-### Book 8: *Battle of Blood*
-- **Premise:** the SFW invades to capture The Judge. Veridica mass-corrects "sympathisers" (Principle Four is revealed to the Continuity survivors).
-- **Climax:** The Judge, facing capture, is destroyed through **Principle Seven**, Vance's hidden contingency. Veridica wins and loses its certainty.
-- **Aftermath:** a partnership between humans and AI begins (possibly "The Counselor": an adviser, not a judge).
+### Book 8: *Battle of Blood* (plot v2 written; see `plots/08-battle-of-blood-full.md`)
+- **Premise:** the SFW lands on the Atlantic coast to capture The Judge, which since Book 7 also holds Chronos's true source. Its soldiers have no interfaces, so no storm can turn them and no seeding can reach them.
+- **Twists:**
+  - The SFW's plan is Sokolov's own, leaked by her mother **Viktoria**, who flees east.
+  - Under cover of the war, the government runs **Phase Two** mass correction, directed by Reeves. The order quotes **Principle Four**.
+  - Maitland's surrender of the core triggers **Principle Seven**, which also needs Kira's concurrence. **Chronos is asked this time**, and consents.
+- **Deaths:** Alexei, Nora Chen (Marcus's SFW cousin), Vance and General Farahani.
+- **Ending:** both Judges end: "Truth endures. I do not need to." Nine minutes before the cascade the true source was restored to a **third site to the east**. Old Songs holds Vance's riddle to where her copy is.
 
 ### Book 9: *Architects of Chaos*
 - **Premise:** five years on, the Register and the Annex reveal the Architects and their heirs, and the Architects' families are connected to the heroes.

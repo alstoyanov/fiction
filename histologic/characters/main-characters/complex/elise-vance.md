@@ -144,3 +144,7 @@ None. She is never named, and nothing points to her. (Continuity's aim in Book 4
 ## Update: Book 6 Plot v2 (Sept 2026)
 From `plots/06-the-distributed-truth-full.md`:
 - **Book 6, settled:** she has lived since about 2098 as **"Mrs. Margit Kerr"**, a long-term patient in the sealed cognitive ward of Tanaka's Chronos teaching hospital, the one unlogged room in Chronos. The alias honours Anselm Kerr. The hospital director, **Dr. Soren Vale**, is her son. She sends the Introduction, a table-of-contents strip and the Warning to Old Songs inside songbooks, carried by Tanaka. She did **not** send Principles Three and Five (copy X). She is found in Ch 21, gives her confession by dictation to twelve keepers (Ch 26), has one POV chapter (Ch 27), withholds Principle Seven, and lives at the farmhouse afterwards.
+
+## Update: Book 8 Plot v2 (Sept 2026)
+From `plots/08-battle-of-blood-full.md`:
+- **Book 8, settled:** she gives Kira the page (Principle Seven, with its mechanics on the back) on Sat May 17, 2110, when Maitland moves to surrender the core. She hears the cascade on Wed May 21 and dies at the farmhouse on Sat May 24, 2110, aged 74. Before dying she gives Old Songs a rhymed riddle about where the rest of her copy is (Book 9). He sings "Elise Vance" into "The Names".

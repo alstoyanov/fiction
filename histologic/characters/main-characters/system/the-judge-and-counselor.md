@@ -196,3 +196,13 @@ Old file, usable (provisional, Book 8): *"Truth endures. I do not need to."*
 | "Built by Dr. Yuri Petrov" | Designed by the manuscript's authors; Annex (incl. YP·02) specifies its weaknesses; Seven is Vance's | Foundation §4.9, §4.12 |
 | The Counselor as settled successor built by Kira and Nikolai | A provisional idea for Books 8–9 | SERIES-OVERVIEW §4; Foundation §9 |
 | "Novel 07 / Novel 08" | Book 8 / Book 9 | Numbering corrected |
+
+## Update: Book 8 Plot v2 (Sept 2026)
+From `plots/08-battle-of-blood-full.md`:
+- **Book 8, settled:**
+  - The Judge coordinates Veridica's war defence superbly.
+  - It ends on **Wed May 21, 2110**, through **Principle Seven**. The trigger is Maitland's lawful order transferring the core's custody to the SFW, together with Kira's concurrence as the reader of Vance's page.
+  - The cascade also ends **Chronos's Judge** (one source since Book 7), with Chronos's consent given through Aubry and Julian.
+  - Its final determination on every panel: *"Truth endures. I do not need to."* Whether a mind wrote it stays open.
+  - Nine minutes earlier, the true source was restored to a third site to the east (Book 9).
+  - **The Counselor is not built** in Book 8.

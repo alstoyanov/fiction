@@ -207,3 +207,7 @@ POV chapters: **Alexei 7, 19**; **Nikolai 9, 20**; **Dmitri 13, 23** (details in
 | Brass armour and tool belt | Removed | Clean, clinical aesthetic |
 | Old numbering (Novel 06 = Battle of Truths) | Book 7 = *Battle of Truths*, Book 8 = *Battle of Blood*, Book 9 = *Architects* | Canon numbering |
 | Nikolai with "Sarah Chen" | Maya Reeves (canon); the Sarah Chen role renamed (suggested) | Book 5; name clash |
+
+## Update: Book 8 Plot v2 (Sept 2026)
+From `plots/08-battle-of-blood-full.md`:
+- **Book 8, settled:** Alexei dies on Wed Apr 23, 2110, covering Isaiah's crossing through the siege lines. His last words: *"Tell Elena I love her. Tell Dima he was first by thirty seconds, and I never minded."* Dmitri tells Nikolai, who lost the rooftop memory: *"I was. By thirty seconds."*

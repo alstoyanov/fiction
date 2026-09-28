@@ -152,3 +152,7 @@ Old material is kept only where it fits Books 1–5. The old file's "Novel 06/07
 | No Book 5 role | Isaiah's 14:30 escort; unseeded witness at the asylum hearing and the Lost Hour Hearing; the 14:02 note | Book 5 summaries |
 | "Novel 06/07/08" arc | Books 7/8/9, provisional; Book 6 gains Principle Five | Correct numbering; manuscript schedule |
 | "Lawful Good (always, but tested)" | Dropped. She begins as a believer who accepts casualties | Story 03 |
+
+## Update: Book 8 Plot v2 (Sept 2026)
+From `plots/08-battle-of-blood-full.md`:
+- **Book 8, settled:** her mother Viktoria leaked her coastal plan to the SFW (Twist 1, Ch 9), and has fled east. Yevgenia reports it in full and refuses the rank of General in August 2110. VS·09 is still undecoded (Book 9).

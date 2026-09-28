@@ -243,3 +243,10 @@ Use these rarely: one per book at most.
 | Age 84 in Book 6 | 68 in 2106, so 70 in 2108 | Consistent with Books 4–5 |
 | No link to the manuscript | The only living reader of the erased Journal. Vance's old friend. Kerr's student | The manuscript plan |
 | Harmonica and brass pocket watch | Dropped for Books 4–5 (he's a prisoner, then a fugitive). The resistance may give him a harmonica later | Plausibility |
+
+## Update: Book 8 Plot v2 (Sept 2026)
+From `plots/08-battle-of-blood-full.md`:
+- **Book 8, settled:**
+  - "The Names" grows every night with the war's dead from every side, including Alexei (Ch 20, where his voice breaks for the first time), Nora Chen and **Elise Vance**.
+  - **His one speech** is at Vance's burial in the farmhouse orchard (Ch 29).
+  - She leaves him a rhymed riddle about where her copy is. He sets it to the Lakeshore Air, and solves it in Book 9.

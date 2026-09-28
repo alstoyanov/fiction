@@ -160,3 +160,7 @@ From `plots/06-the-distributed-truth-full.md`:
 - **Julian Kovač, settled:** Adrian's **elder** brother (born about 2074), son of Helena's younger brother. He emigrated to Chronos at nineteen. Senior Historian of the Chronos Temporal Archive, and holder of its senior reconciliation key.
 - **Book 6:** the target of **KINDRED**, and secretly sent to turn Marcus (**MERIDIAN**, Twist 1). One POV chapter (Ch 11). His key countersigned the Chronos Gap (Twist 4, unresolved).
 - **The head of government is settled as First Minister Oskar Maitland.**
+
+## Update: Book 8 Plot v2 (Sept 2026)
+From `plots/08-battle-of-blood-full.md`:
+- **Marcus's cousin, settled as Colonel Nora Chen** (SFW intelligence, born about 2072, defected in 2095 after her father's correction). In Book 8 she handles the Veridican leak, turns in the Spire, and dies in the core fire on Wed May 21, 2110. **Martinez** negotiates the SFW withdrawal after **General Omid Farahani** is killed.
