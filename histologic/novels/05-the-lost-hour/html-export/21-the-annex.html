@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="20-confessions.html" class="nav-button">← Previous: Chapter 20: Confessions</a>
+            <div class="nav-center">Chapter 21: The Annex</div>
+            <a href="22-the-body.html" class="nav-button">Next: Chapter 22: The Body →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 21: The Annex</h1>
+<p><em>Monday, December 13, 2106. The Ministry research annex, north district, Veridica Capital</em></p>
+<hr>
+<p>The form said <em>neurological assessment</em>.</p>
+<p>Kira had read it twice, in the hall of the safe flat, while the guard on the landing read it over her shoulder. <em>Osman, K. (witness, status under review). Escorted by: Director H. Kovač, Department of Correction. Destination: Ministry clinic, north district. Purpose: neurological assessment of material witness, in connection with the unrecorded interval. Departure 19:40. Return by 02:00.</em> It was signed by the Director and countersigned by someone in the lead investigator's office whose name she did not recognise, and it was stamped, and it was perfectly in order, and the guard had handed it back to her and stood aside.</p>
+<p>Marcus had stayed at the table. He had to. He was the material witness; if he left the flat, someone would notice. He had not argued. He had looked at her across the lamp and said, "Two o'clock," and she had said, "Two o'clock," and he had written it down, in pencil, at the bottom of his HOPES column, where she could see him do it.</p>
+<p>They had lost the weekend to it. Nikolai had watched the annex from a roof on Saturday and Sunday and found a guard on its door from Friday evening until Monday morning, and none on weeknights; and Kovač could only sign out a witness for a clinic on a working day. So it had to be Monday. And it had to be tonight, because the query audit ran on Mondays, and by tomorrow someone would have read Maya's routing search.</p>
+<p>Kovač drove.</p>
+<p>She drove the way she did everything, precisely and without comment, both hands on the wheel, her glasses pushed up on her nose. For the first ten minutes she said nothing at all. Then, at a red light on the ring road, looking straight ahead:</p>
+<p>"I do not want to know where you are going, Ms. Osman."</p>
+<p>"I know."</p>
+<p>"I know anyway." The light changed. "There is a clinic at the address on the form. I will sit in its car park until two. If you are not back by two, I will have to report the witness missing, and then I will have to explain why I signed a form for a dead woman to see a doctor at eight in the evening, and I would very much prefer not to." A pause. "I have explained a great many things this year. I am running out of ways to do it."</p>
+<p>"You don't have to do this," said Kira.</p>
+<p>Kovač looked at her over her glasses, briefly, and back at the road.</p>
+<p>"No," she said. "That is rather the point."</p>
+<p>She stopped two streets from the clinic, on a corner by a water authority depot with a chain-link fence and a row of dark vans behind it. She did not turn off the engine.</p>
+<p>"Two o'clock," she said.</p>
+<hr>
+<p>Dmitri was waiting in the shadow of the depot fence, exactly where Nikolai's message had said he would be. He did not step out until Kovač's car had gone. Then he was simply there, beside her, in a dark jacket, as if he had been part of the fence.</p>
+<p>"Kira."</p>
+<p>"Dmitri."</p>
+<p>He looked at her once, up and down, the way he checked everyone: <em>uninjured, alert, ready</em>. Then he nodded towards the end of the street, where a figure was coming along the pavement with its hands in its pockets and its shoulders up against the cold.</p>
+<p>Maya Reeves was smaller than Kira had expected from Nikolai's photographs, and younger, and very pale. She stopped a metre away and looked at Kira, and then at Dmitri, and then at Dmitri's face for a long moment, and Kira saw her do the arithmetic.</p>
+<p>"Three," Maya said, under her breath. "God."</p>
+<p>"Two, tonight," said Dmitri. "The third is on a roof."</p>
+<p>In Kira's left ear, the small receiver Nikolai had given them crackled softly. "<em>The third is on a roof,</em>" said Nikolai's voice, very quiet, "<em>and it's cold, and he'd like it noted.</em>" A pause. "<em>Street's clear. One camera on the annex frontage, fixed, north-facing. One on the school, sweeping, forty seconds. Nothing else. Go when you're ready.</em>"</p>
+<p>The annex was four storeys of pale concrete between the depot and a primary school, with a row of small high windows and no sign on it anywhere. It looked like what it was listed as: a building where the Ministry kept something it did not want to talk about. There was no public entrance. There was a staff door at the side, under a fixed light, with a card reader.</p>
+<p>"My badge will log it," said Maya. She had it in her hand already. Her voice was steady and her hand was not. "Investigation clearance. It opens anything the Ministry leases. It'll show <em>Reeves, M.</em>, 20:41, north annex, side door."</p>
+<p>"Yes," said Kira.</p>
+<p>"I know," said Maya. "I just wanted it said. So I remember that I knew."</p>
+<p>She put the badge to the reader. The light went green. The door opened on a white corridor and a smell that Kira's body knew before her mind did.</p>
+<hr>
+<p>It was clean.</p>
+<p>That was the first thing. Not tidy: <em>clean</em>, in the specific, almost medical way that meant somebody cleaned it every day whether anyone had been there or not. Pale floor, white walls, soft even light from panels in the ceiling. A faint hum from somewhere below, the hum of equipment that was never switched off. And under the cleanness, faint, the smell. Disinfectant, and warm electronics, and something else, something like the inside of a hood on a jointed arm, which she had not smelled since the second of August and had smelled every morning for eight months before that.</p>
+<p>Her legs stopped working.</p>
+<p>Not for long. A second, perhaps two. She stood in the doorway of a building she had never been in and her body was in Wing C, in 7-K, at six in the morning, hearing the orderlies' shoes on the walkway, and every muscle she had was waiting for the door to open and a voice to say <em>Kira, it's time.</em></p>
+<p><em>Layer one. Key exchange. Asymmetric, lattice-based. Rotation interval ninety seconds.</em></p>
+<p>She was saying it. She heard herself, a whisper, the words coming out without her. She had not done that, unbidden, since the night she walked out of the capital. She closed her mouth on it and made herself count instead: the ceiling panels, eleven to the first junction. The floor tiles, forty centimetres square. Doors on the left, three. Doors on the right, two.</p>
+<p>"Kira," said Dmitri, very low, beside her. Not a question.</p>
+<p>"I'm here," she said. "I'm here. Go on."</p>
+<p>He went on. She followed. Maya came last, her badge still in her hand.</p>
+<p>The second door on the right was open, and the room beyond it was dark, and Kira looked in as she passed and stopped again.</p>
+<p>Cradles.</p>
+<p>Six of them, in a row, down the middle of a long white room. Six reclining chairs, each with its hood folded back on its jointed arm, each under a dust cover of pale, heavy plastic that left only the shape of it showing, the way furniture looks in a house where someone has died. A console at the far end, dark. No glass anywhere. No cells. No atrium. Just the chairs and the covers and the smell and the hum. It was Wing C with the walls taken away: a smaller Wing C, stripped down to the only part that had ever mattered.</p>
+<p>"<em>Kira?</em>" said Nikolai in her ear. "<em>You've stopped. What is it?</em>"</p>
+<p>"It's the treatment room," she said. "Six cradles. Covered."</p>
+<p>A silence on the line. Then, quietly: "<em>Covered is good. Covered is better than not.</em>"</p>
+<p>At the end of the corridor, under a door marked with nothing at all, there was a line of light.</p>
+<hr>
+<p>He was sitting at a terminal with his back to the door.</p>
+<p>He had heard them. He must have heard them; the corridor floor was hard and Maya's shoes were not quiet. He did not turn round at once. He finished typing something, three lines, four, and saved it, and only then turned his chair, slowly, the way a man turns to greet visitors he has been expecting for some time.</p>
+<p>Dr. Reeves was thinner. That was the first thing Kira saw. The gray suit was the same suit, or one like it, but it hung on him now, and there were four or five days of stubble on the pleasant, forgettable face, and his hair, which had always been cut so neatly, had grown over his collar. The room behind him was an office with a cot in the corner, a kettle, a stack of printouts, a coat on a hook. A man living in a building.</p>
+<p>His eyes were the same. Light brown, and interested, the way a man's eyes are interested in a book he has been looking forward to.</p>
+<p>They went to Kira, and to Dmitri, and rested on each of them with pleasure, as if they were old colleagues who had dropped by. Then they went past Kira's shoulder, to Maya, and stopped.</p>
+<p>He looked at her for a long time.</p>
+<p>Kira did not know how long. Long enough for the terminal behind him to dim its screen. Long enough for her to hear, very faintly, Nikolai breathing in her ear. Maya stood in the doorway with her badge in her hand and her face white and absolutely still, and her father looked at her the way he had once looked at Marcus in the data centre at Ashford: with a tenderness so complete that it was almost impossible to watch.</p>
+<p>"You've cut your hair," he said.</p>
+<p>Maya opened her mouth. Nothing came out of it. She closed it again.</p>
+<p>Reeves nodded, gently, as if she had answered, and turned back to the others.</p>
+<p>"Ms. Osman," he said. "And Mr. Volkov. Which one?"</p>
+<p>"Dmitri," said Dmitri.</p>
+<p>"The one who hit me." Reeves smiled. "Very efficient. I had a headache for two days, you know. I thought about you quite fondly the whole time." He looked at Dmitri's face with real interest. "And your brother? The one on the right? I've wondered about him."</p>
+<p>"You will not ask about my brother," said Dmitri.</p>
+<p>"No," said Reeves, after a moment. "No, I suppose I won't." He folded his hands on his knee. They were very clean, as they had always been. Kira noticed them without meaning to, because she noticed everything: clean, pale, steady, unmarked. "Well. You've found me. I'd wondered who would. I thought it might be the Ministry, or the lead investigator's people. I'm glad it's you." His eyes went back to Maya, briefly, and away. "I'm glad it's you."</p>
+<hr>
+<p>"You put a carrier on the Ministry district node," said Kira. "On the fifteenth. At 14:18."</p>
+<p>"No," said Reeves.</p>
+<p>He said it pleasantly, the way he said everything, but without hesitation, and something in the way he said it made Kira stop.</p>
+<p>"It came from here," she said. "Terminal RA-N-0412. It's on the wall behind you."</p>
+<p>"Yes, I expect it did. I expect that's exactly where it came from." He glanced at the terminal as if it were a colleague who had disappointed him. "I didn't run it, Ms. Osman. I would never waste seeding on forty clerks. Think about it. The most delicate instrument ever made, the thing I spent fifteen years building, and someone used it to put a <em>face</em> on forty filing clerks and a gray shirt on a man in a corridor. It's crude. It's a vandal's use of my work." For the first time something moved in his voice that might have been anger. "Forty identical memories. Identical. Anyone who knew what they were doing would have varied them. I'd have varied them."</p>
+<p>"Your code is in the header," said Maya.</p>
+<p>It came out of her very quietly. It was the first thing she had said. Reeves turned his head and looked at her, and his face changed, and for a moment he did not look interested at all. He only looked tired.</p>
+<p>"I know it is," he said. "You told me. In a message. At twelve minutes past nine on the twenty-ninth of November." A pause. "I'd been waiting four years for you to write. I answered as fast as I could type."</p>
+<p>"<em>I know who writes like me now,</em>" said Maya. Her voice cracked on it. "Who?"</p>
+<p>"Someone," said Reeves, "who has read a great deal more of me than you have, my dear." He smiled at her, very gently. "Which isn't hard. You never read any."</p>
+<p>Maya made a small sound and turned her face away.</p>
+<hr>
+<p>He gave them the rest the way he had given it in the data centre at Ashford, conversationally, a colleague showing visitors round, as if the worst things he had ever done were items of mild professional interest.</p>
+<p>"The factorepo work was never mine," he said. "I'm a neurologist, Ms. Osman. I don't write factorepo code. I couldn't delete a fact if you gave me a week and a manual. When I needed your fact gone, in November last year, I asked for it. I asked someone at the factorepo to delete it. And Mr. Chen's index: I asked for that to be adjusted, on the file they sent me. I never met him. The requests went through the Ministry, and the work came back done, and it came back with a <em>signature</em>." He tilted his head at her. "A way of arranging things. You'd know it. You've been looking at it for a month."</p>
+<p>Kira stood very still.</p>
+<p>She had been looking at it for a month. She had found it in Nikolai's feed on the sixteenth of November, in the architecture of the hole: the chain re-sealed backwards, from the far edge of the gap towards it, like a seam sewn from the inside, and the tombstones laid down in the order the references had been removed. A habit, not a technique. She had seen it once before in her life, around the place where her own fact had been.</p>
+<p><em>The same hand.</em></p>
+<p>"The erasure," she said. "The fifteenth. It has the same signature."</p>
+<p>"Then you already know it wasn't me." Reeves spread his clean hands. "Whoever deleted your fact erased the hour. And whoever erased the hour put my little Latin tag in the header of a carrier I'd never have written." He looked at her with something like sympathy. "I didn't erase anything, Ms. Osman. I only ever asked."</p>
+<p>"Why?" said Dmitri. "If not to hide a murder. Why erase the hour at all?"</p>
+<p>Reeves looked at him for a moment as if he were a student who had asked a surprisingly good question.</p>
+<p>"Oh, Mr. Volkov," he said. "They didn't erase the hour to hide a murder. Nobody needs to erase an hour to hide a murder; there are much cheaper ways. They erased it to see who you'd <em>believe</em>." He let that sit. "Take away a country's record for an hour and put forty memories in its place, and then watch. Who does the country trust? The forty? The Judge? The dead men on the steps? You?" He smiled faintly. "It's the most interesting experiment anyone has run in this city in forty years. I rather wish it had been mine."</p>
+<hr>
+<p>Kira took the photograph out of her coat.</p>
+<p>She had not planned to. She had meant to keep it back, the way Kovač kept things back from the Minister, without quite knowing why. But she had it in her hand before she had decided, and she held it out, and Reeves leaned forward and looked at it, and then, slowly, he smiled. It was the most genuine smile she had seen on his face.</p>
+<p>"Ah," he said softly. "You've found the sermon."</p>
+<p>"What is it?"</p>
+<p>"I don't know what it is. I don't think anyone below a certain floor knows what it is." He took the photograph from her, gently, and looked at the torn heading, the numeral, the blurred mark at the foot. "I only ever had the one page too. It came with the funding, the way a hymn sheet comes with a pew." He handed it back. "They quote it at you in meetings. Nobody says where it's from. You're just expected to know the words."</p>
+<p>"Who quotes it?"</p>
+<p>"People on the floors above mine," said Reeves. "Pleasant people. Very courteous."</p>
+<hr>
+<p>There was one more thing. He said it almost as an afterthought, as they stood in his doorway, as if it were something he had been meaning to mention to a colleague and had nearly forgotten.</p>
+<p>"Someone has been using my cradles at night."</p>
+<p>Kira turned.</p>
+<p>"Since September. Not every night. Perhaps once a week." He gestured at the terminal. "The session logs show sessions I didn't run. I sleep here, most nights, on that." He nodded at the cot. "Through the wall from the treatment room. I sleep very lightly. And in the morning there's a session in the log, between one and four, with the subject field left blank and a calibration profile I didn't load. Eleven of them now." He laughed softly, the pleasant, delighted laugh she remembered from the data centre. "At first I thought it was my imagination." A pause. "I don't have an imagination."</p>
+<p>"Show me," said Kira.</p>
+<p>He turned the screen. She read it the way she read everything, fast, for pattern. <em>Session 0917-N. 01:12–03:48. Operator: [system]. Subject: —. Profile: external.</em> And ten more like it, spaced through the autumn like stitches.</p>
+<p><em>On whom?</em> she thought. <em>For what?</em></p>
+<p>"Come with us," said Maya suddenly, from the doorway. "Now. Tonight. Whoever it is—"</p>
+<p>"Where would I go?" said Reeves. He sounded genuinely curious. "I'm the most hated man in Veridica. There's a very good article about it." He looked round the small office, the cot, the kettle, the humming terminal, with something like affection. "Here, at least, the equipment is good."</p>
+<hr>
+<p>"<em>Kira.</em>"</p>
+<p>Nikolai's voice, in her ear, suddenly not quiet at all.</p>
+<p>"<em>Cars. Three of them, coming from the north, no lights. Four. They're stopping. Kira, they're stopping at the—</em>"</p>
+<p>The lights came on.</p>
+<p>Not the soft panels in the ceiling. Hard white work lights, all of them at once, the whole length of the corridor, so bright that Kira threw up a hand. There was the sound of the side door, and the front door she had not known was a door, and boots on the hard floor, a great many of them, and a voice, loud and flat and formal, the voice of every procedure she had ever been read:</p>
+<p>"<em>Lead investigator! Nobody move!</em>"</p>
+<p>Dmitri moved. Only once, and only to put himself between Kira and the corridor, and then he stood absolutely still with his hands open at his sides, and two enforcers took him by the arms and turned him round and put him against the wall, face first, and he let them.</p>
+<p>They came into the office past him. Six, eight, in the dark uniform of the Fact Enforcement Division, and two in plain clothes with investigation badges on their coats, and they filled the small room, and one of them said, "Dr. Reeves," almost politely, and Reeves stood up.</p>
+<p>He went calmly. He did not argue. He held out his clean hands for the restraints the way another man might hold them out for a coat, and looked at the enforcer who fastened them with polite interest, and said, "Thank you."</p>
+<p>Maya was crying. She was standing against the doorframe with both hands over her face.</p>
+<p>And behind the enforcers, in the corridor, in his good dark coat, came Thomas Wei.</p>
+<p>He did not hurry. He stopped in the doorway of the office and looked round it, at Reeves in his restraints, at the cot and the kettle, at the terminal, at Kira, and at Maya, and his face was grave and tired and, Kira thought, genuinely sorry.</p>
+<p>"Maya," he said gently. "I'm sorry. I had you followed. For your safety." He looked at her with real concern. "You should have come to me. I'd have brought you here myself."</p>
+<p>Maya did not answer. She did not take her hands from her face.</p>
+<p>He turned to the wall. "Mr. Volkov. You may let him go, I think," he said to the enforcers. "I'm told nobody has a warrant for him. It's been in all the papers." They let go. Dmitri turned round, slowly, and looked at Wei, and Wei inclined his head to him with perfect courtesy, and one of the plain-clothes investigators walked Dmitri out towards the side door, and Dmitri went without looking back.</p>
+<p>Then Wei looked at Kira.</p>
+<p>"Ms. Osman." He smiled. It was a warm smile, a relieved one, the smile of a man at the end of a long search. "Thank you. Truly. We'd been looking for him for weeks. I don't think we'd have found him without your lead."</p>
+<p>"I didn't give you a lead," said Kira.</p>
+<p>"No," Wei agreed. "But you followed one, and that's the same thing." He stepped back into the corridor and held the office door open for her, the way a courteous man holds a door, so that she could pass out of the small room ahead of the prisoner. "Director Kovač will be relieved. I'll see you're taken back."</p>
+<p>He held it with his left hand. The bandaged one.</p>
+<p>Kira looked at the hand. Then she looked at his face. Tall, graying at the temples, courteous, kind. The face of the only official in the capital who had stood in the rain for Marcus.</p>
+<p>The floor tilted.</p>
+<p>It was not a storm. It was nothing like a storm. The building did not change and the light did not flicker. It was only that, for one long second, everything she knew was exactly where it had been, and at a slightly different angle, the way a room looks when you have been standing in it all evening and then sit down.</p>
+<p><em>Lots of people cut their hands.</em></p>
+<p>She walked through the door. She did not touch him. She did not let her face do anything at all. She had learned how, once, in a glass cell, with a camera on her.</p>
+<p>Behind her the enforcers brought Reeves out of the office, one on each side, his clean hands fastened in front of him. They came past her in the corridor, close, because the corridor was narrow. And as he passed her Reeves turned his head, just slightly, towards her, and said, so quietly that she barely heard it and no one else could have, in the same pleasant, interested voice he had used about his daughter's hair and his headache and the most interesting experiment in forty years:</p>
+<p>"Ask yourself why he needed my code comment, Ms. Osman." The faintest smile. "I've never signed anything in my life."</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="20-confessions.html" class="nav-button">← Previous: Chapter 20: Confessions</a>
+            <div class="nav-center">Chapter 21: The Annex</div>
+            <a href="22-the-body.html" class="nav-button">Next: Chapter 22: The Body →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

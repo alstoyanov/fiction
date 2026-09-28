@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="04-the-dead-man.html" class="nav-button">← Previous: Chapter 4: The Dead Man</a>
+            <div class="nav-center">Chapter 5: The Coat</div>
+            <a href="06-the-crossing.html" class="nav-button">Next: Chapter 6: The Crossing →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 5: The Coat</h1>
+<p><em>Monday, November 15 – Wednesday, November 17, 2106. The lakeshore checkpoint, and Chronos</em></p>
+<hr>
+<p>The van had no windows in the back, so Isaiah Okonkwo counted the road instead.</p>
+<p>He had been counting since the gate of Secure Care Unit 3, a little after noon. Two hours of straight, fast road south. Then the slowing, and the turns, the tyres changing their note on older asphalt. Then the smell, which came in through the ventilation grille at eleven minutes past two by the small clock on the partition. Wet stone. Weed. Cold water. He had spent a week in the border zone once, reporting on a schoolteacher's death, and his body had filed the smell without asking him.</p>
+<p><em>The lakeshore</em>, he thought. <em>So it is Chronos.</em></p>
+<p>No one had told him. The white card had said <em>border transfer under escort</em> and nothing else, and he had spent the night working through the possibilities in the study of his head. Veridica did not border the Sovereignty of Free Will at all. Of the doors open to a man the Ministry wanted to be rid of, the lake was the nearest and the least ceremonial. He had guessed Chronos at about three in the morning. He was glad to be right, which was a small, vain, reporter's pleasure, and he let himself have it.</p>
+<p>He was wearing the coat.</p>
+<p>It was the coat he had been arrested in, thirteen months ago. Dark wool, gone shiny at the cuffs. They had given it back to him yesterday with a needle and thread and no note, and he had spent the evening sewing into the lining, strip by strip, everything he had written in three months on the margins of Unit 3's newspapers. The storm onset times. The names of the seven. The dates. Page thirty-one. The first sentence. Every strip was the width of his thumb, and every one was written with the end of a burned match.</p>
+<p>The match itself was in the inside pocket, wrapped in a strip of its own. He had not been able to leave it.</p>
+<hr>
+<p>The escort sat opposite him on the bench.</p>
+<p>That was the first thing he had not expected. A prisoner transfer meant two guards in the cab and a locked partition, and a man alone in the back with his bag. Instead, at the gate, a woman in a long dark coat over a Border Security uniform had got out of the passenger seat, looked at him once, and climbed into the back after him.</p>
+<p>"Captain Sokolov," she had said. "Border Security. I will be escorting you." And then nothing else, for two hours.</p>
+<p>He knew the name. He had known it before she said it.</p>
+<p>It was in the kitchen, among the things he had read in Wing C in pinpricks: the eldest brother's plan, in its flat, exact voice. <em>No part of this plan relies on Captain Sokolov. She arrested us once. She will do it again.</em> And it was in the cellar, one shelf along from page thirty-one. The programme that had bought the equipment on that page had a captain in the lakeshore districts.</p>
+<p>He had kept the number 2471 in that cellar for her prisoners' sake. He did not look at her while he thought it.</p>
+<p>He looked at her now, in the gray light from the grille. Mid-thirties. Tall even sitting down. A hard, fine-boned face, as if someone had promoted it early and never let it look young. Hands in her coat pockets. A radio on her belt. She had not looked at him since the gate, except once, when the van went over a rail crossing and his head struck the partition, and she had glanced across as if checking that a piece of cargo had not shifted.</p>
+<p>He tried, out of habit, to find her a place in his taxonomy. She was not a believer. A believer would have talked to him, or prayed for him. She was not a jobholder; jobholders did not ride in the back. She was not disturbed. Morrison had never once sat so still.</p>
+<p>He had met only one other person he could not classify, and that had been Reeves.</p>
+<p><em>Unreadable</em>, he filed, <em>which is information.</em></p>
+<hr>
+<p>The van stopped at twenty-four minutes past two.</p>
+<p>Someone in the cab spoke into a radio, and a voice outside answered. Then the engine cut off, and there was only the ticking of the metal cooling and, very faintly, water moving against stone.</p>
+<p>Sokolov did not get up.</p>
+<p>They sat. Isaiah folded his hands on his knee and waited, because most of the things worth knowing arrived if you did not ask for them. The clock on the partition turned over. Twenty-five. The grille let in a breath of cold, and it was white. Fog. He could see it in the slot, drifting, thick enough to take the light.</p>
+<p><em>It comes in off the lake every night</em>, someone in Wing C had told him once. <em>Real fog. The only thing both sides agree on.</em></p>
+<p>At twenty-six minutes past, without taking her hands out of her pockets, Sokolov spoke.</p>
+<p>"The order says fourteen thirty."</p>
+<p>He waited.</p>
+<p>"The Director's office requested this slot." Her voice was level, the voice of a report being read into a record. "It was the only one available."</p>
+<p>She said it the way people say the name of a street they have been told to drive down and have already decided not to trust. There was a particular flatness that came into a voice when it repeated an official sentence it did not believe. He heard it now. He did not know what it meant.</p>
+<p>"Available," he said.</p>
+<p>She did not answer. She looked at the clock.</p>
+<p><em>The only one</em>, he thought. There were forty-eight half-hours in a day, and the lakeshore checkpoint did not process so many expulsions that it ran short of them. A clerk would say <em>only one available</em> to end a conversation. A captain would not repeat it to a prisoner unless she wanted him to hear it. Or unless it had simply come out. He could not tell. That was the trouble with her.</p>
+<hr>
+<p>At twenty-nine minutes past two she stood, stooping under the roof, and opened the rear doors.</p>
+<p>The fog came in like cold breath. Beyond the van was a road, gray and wet, running between the black lake on one side and a dark embankment on the other, and fifty metres ahead a booth, two barriers, and a string of floodlights turned on in the middle of the afternoon and making the fog glow. Figures stood at the barrier in dark uniforms. None of them moved when he climbed down.</p>
+<p>He stood up straight. It took a moment. He had not stood under an open sky in thirteen months, and the sky was the colour of wet paper and very close.</p>
+<p>Sokolov handed him the order. The white card, in a clear sleeve. <em>OKONKWO, ISAIAH. ORDER OF EXPULSION FROM THE TERRITORY OF VERIDICA. EFFECTIVE: 15 NOVEMBER 2106, 14:30.</em> Below it, a signature he could not read and a Director's seal.</p>
+<p>"Hold it where they can see it," she said. "The Chronos post is four hundred metres beyond the second barrier. Walk on the road. Do not leave it. They have been notified."</p>
+<p>"Thank you, Captain."</p>
+<p>She looked at him then, for the first time properly, and he saw nothing in her face at all. Then she lifted the radio.</p>
+<p>"Sokolov. Lakeshore. Transfer at the line."</p>
+<p>The first barrier went up. The clock in his head said fourteen thirty, and when he glanced at the booth, the clock on its wall agreed.</p>
+<p>He walked.</p>
+<p>The fog closed round the floodlights, so that for a moment he was walking in a lit white room with no walls. He held the card in front of him like a man carrying a candle. The second barrier went up as he came to it. He passed a painted line on the asphalt, faded almost to nothing, and felt a second broadcast arrive in his head, faint and foreign, telling him that the road beneath him had been resurfaced in a year he knew it had not been. His interface held both, like two clocks ticking almost together.</p>
+<p>Behind him, low, so that he was never afterwards sure whether he had heard it or constructed it from the fog, a woman's voice said:</p>
+<p>"Write carefully, Mr. Okonkwo."</p>
+<p>He did not turn round. He had understood, somewhere in the last two hours, that turning round would cost her something.</p>
+<p>He heard the van's engine start. He heard it reverse, and turn, and go away up the lakeshore road, until there was only the water.</p>
+<hr>
+<p>The Chronos post was a low gray building with a bright door. The officers there were polite, precise and entirely baffled.</p>
+<p>He gave them the card. A young officer with very neat hair ran its seal through a reader and frowned. A supervisor came out of a back room and asked him when exactly he had crossed the line.</p>
+<p>"Fourteen thirty," he said. "By the booth clock."</p>
+<p>She looked at her screen. "We have you at fourteen thirty-four and nine seconds, at our perimeter." The numbers ran on beyond the seconds, to the nanosecond, and she did not bother to read them out. "But we have no transfer notice. Veridica sends a notice before every expulsion. Identity, reason, escort, time. There is nothing."</p>
+<p>"Perhaps it is delayed."</p>
+<p>"Perhaps." She looked at the card as if it had wandered in off the road. "Mr. Okonkwo, you understand that this is a piece of paper."</p>
+<p>"Yes," said Isaiah. "I have come to value them."</p>
+<p>At ten minutes to three they put him in a room with a bench and a frosted window, and fitted a temporary monitoring band that settled cool behind his ears. At a minute past three he heard the officers' voices change all at once, the way voices change in a newsroom when something very large comes over the wire. Nobody came to tell him.</p>
+<p>He sat on the bench with his hands folded and did not know yet that the half-hour he had just walked through no longer existed.</p>
+<hr>
+<p>He learned it on Tuesday morning, from the supervisor, who had not slept.</p>
+<p>"Your country," she said, "has lost an hour."</p>
+<p>She said it the way a surgeon might describe a colleague's error. From fourteen hundred to fifteen hundred on the fifteenth of November, Veridica's factorepo held nothing, in any repository or any backup. Chronos commentators were being tactful in public and delighted in private. <em>Temporal gaps</em>, they said. <em>We have always said so.</em></p>
+<p>"Your expulsion order," the supervisor said, "was to be executed at fourteen thirty."</p>
+<p>"Yes."</p>
+<p>"Veridica says it was not." She turned her screen towards him. It was a formal reply from the Veridican Ministry of Historical Integrity to a Chronos border inquiry, sent at 06:12 that morning. <em>OKONKWO, ISAIAH. Subject absconded from secure care on 15 November. No expulsion has been carried out. Veridica requests the subject's immediate return.</em></p>
+<p>Isaiah read it twice, and then a third time, for the verb. <em>Absconded.</em> A good, clean, official word. It put the whole weight of the action on him.</p>
+<p>"The order is signed," he said.</p>
+<p>"The order exists," the supervisor agreed. "Whether it was carried out is a fact, and the fact would be in your record, and your record for that hour is not there. Veridica says you walked out of your facility. We say you walked out of the fog. Neither of us has a record of your entry." She paused. "In Chronos, Mr. Okonkwo, we have a record of everything. We have your arrival at our perimeter to the nanosecond. What we do not have is any lawful reason for it. You are, at this moment, a man who arrived from nowhere."</p>
+<p>"Stateless," said Isaiah.</p>
+<p>"Detained," she said, not unkindly, "pending."</p>
+<hr>
+<p>They moved him that afternoon to a holding facility in the lakeside city, a clean building of pale stone with a barred window high in each room and a camera in every corner. Chronos did not trouble to hide its cameras. It regarded them as a courtesy extended to the truth.</p>
+<p>When the door had closed, Isaiah took off his coat and laid it across his knees.</p>
+<p>He did it the way his aunt used to touch the silver before a dinner, one piece at a time. He ran his fingers along the hem. The strips were there. He could feel them through the lining, each one a slight ridge under the cloth, like the ribs of a very thin animal. He counted them. He had sewn in a hundred and twelve, and there were a hundred and twelve.</p>
+<p>He did not take them out. There was a camera in the corner.</p>
+<p>He walked the cellar instead.</p>
+<p>He went down the narrow stairs from the kitchen, past the door that had once been the dull cream of the kitchen wall and now had no colour at all, and he walked the shelves. The storm onset times. Two hundred and six deaths. Page thirty-one. The seven, in the order they had arrived. Everything was where he had left it.</p>
+<p>Veridica had erased an hour of its own history, including the half-hour in which it had put him out of the country. And it had not reached a hundred and twelve strips of newspaper in the lining of a coat, or a cellar under a house that had been demolished twenty years ago.</p>
+<p><em>The one thing nobody erased</em>, he thought, <em>is the thing nobody thought to record.</em></p>
+<p>He filed that. He was not sure yet whether it was a comfort.</p>
+<hr>
+<p>The envoy came on Wednesday.</p>
+<p>Chronos took him there under escort, in a car with no handles on the rear doors. The Sovereignty of Free Will kept its mission in the quarantine district by the harbour, where Chronos housed the people without interfaces whom its officials called, in their politer documents, <em>temporal black holes</em>. The mission was a tall old house behind a wall. There were no cameras he could see, and he found, after thirteen months, that he did not quite know where to put his face.</p>
+<p>The envoy was a silver-bearded man of about sixty with a handshake that lasted exactly as long as courtesy required. He had no interface. Isaiah could tell by the way he looked at the room, as though he were having to remember it rather than being told. He served the tea himself and apologised for the biscuits.</p>
+<p>"We read your article, Mr. Okonkwo," he said. "<em>Continuity: A Witness Account.</em> Everyone in the Sovereignty has read it. It is taught."</p>
+<p>"I'm glad it was useful."</p>
+<p>"It was more than useful. It was <em>true</em>, which in our part of the world is rarer than you might think, and in yours, as you have shown, impossible to be sure of." He smiled. "You are a remarkable witness."</p>
+<p>Isaiah drank his tea and waited for the rest.</p>
+<p>It came, gracefully, over twenty minutes. The Sovereignty would offer him asylum. It would press his case with Chronos and, the envoy was confident, win it. It would give him papers of a kind, a salary, and <em>a platform</em>: the envoy used the phrase twice, the second time with a small movement of his hand, as if placing something on the table between them. Veridica had just lost an hour of its own truth. The world would want to hear, from the man who had exposed Ashford, what it meant.</p>
+<p>"And what would I tell it?" Isaiah said.</p>
+<p>"What you saw. What you know." The envoy spread his hands. "That a system which claims perfect truth cannot keep an hour. That a nation which calls its record sacred deletes what embarrasses it. You would be free to write whatever you wished, of course. We would simply hope that you would wish to write that."</p>
+<p>Isaiah heard how he said <em>truth</em>. He said it the way people say the name of their own side in a game they are winning.</p>
+<p>He did not dislike the man. He had sat across tables from men like him for twenty years: sincere, decent men who needed a story to come out a certain shape and had found a person who might carry it. The envoy was offering him a coat with the lining already sewn.</p>
+<p>He also knew exactly what his position was. Veridica wanted him back, and he had seen the inside of what it would send him back to. Chronos wanted him gone and did not much mind where. He had no nation, no record, no lawful reason to exist anywhere on the earth's surface. He had a hundred and twelve strips of newspaper.</p>
+<p>It was, in the end, arithmetic. Most hard things are.</p>
+<p>"I'll need to think," he said.</p>
+<p>"Of course." The envoy rose and shook his hand again. "Take all the time you need, Mr. Okonkwo. Within reason." He paused at the door. "Chronos is not patient with men who have no record. They find them untidy."</p>
+<hr>
+<p>In the car going back, Isaiah did what he always did when he had been handed a story too neatly. He went looking for the question nobody had asked.</p>
+<p>The hour was the story. The whole world thought so. But inside the hour there was a smaller thing, and it was his.</p>
+<p><em>The order says fourteen thirty. The Director's office requested this slot. It was the only one available.</em></p>
+<p><em>Some Director</em>, he thought, as he had in Unit 3. But a Director did not choose a slot. A Director asked for a transfer and a clerk found a time. And someone had put a lawful act of state, the removal of the only Continuity subject still recorded as alive, into the one hour of that day which Veridica would afterwards be unable to prove had happened.</p>
+<p>Either it was the most remarkable accident he had ever encountered, or someone had known. He did not yet know which. He would like someone to find out.</p>
+<p>They had kept the white card at the post, as evidence of something. But the envoy's secretary had tucked a printed summary of the offer into his coat pocket, beside the match. In the back of the car, with the driver's eyes in the mirror, Isaiah unfolded it against his knee and wrote on the back, in the soft black line the match left, very small:</p>
+<p><em>Who chose 14:30?</em></p>
+<p>He looked at it for a long time. Then he folded it back into his pocket, next to the match.</p>
+<hr>
+<p>On Wednesday evening a Chronos guard came along the corridor of the holding facility with a trolley of newspapers.</p>
+<p>Chronos printed very few; its citizens knew what happened as it happened. But the facility kept them for detainees whose interfaces could not take the Chronos news, and the guard, a heavy young man with a patient face, slid one through the bars without comment. The trolley squeaked away down the corridor.</p>
+<p>Isaiah turned the paper over.</p>
+<p>The whole top half of the front page was a face.</p>
+<p>He knew it. He had seen it across the atrium from 7-E every day for nine months, and before that, once, below the fold on page nine of the <em>Capital Review</em>, over a cup of coffee. The photograph was the one from his own article, taken from the Continuity file: a thin young man in cell gray, looking into the camera with nothing at all behind his eyes. Below it, a single word.</p>
+<p><em>MURDERER.</em></p>
+<p>Isaiah read the article twice, as he read everything that mattered. Forty witnesses at the Ministry of Historical Integrity. The Deputy Minister, Dr. Amara Singh, dead in her office. A man seen walking in at twenty past two. The man's name was Marcus Chen, and the Registry said he had died in August at Ashford, and he had been arrested on Monday night in a rented room in the capital, alive.</p>
+<p><em>Twenty past two</em>, he thought. <em>In the hour.</em></p>
+<p>He sat with the paper across his knees. He thought about the young man in 7-H, who had reported his lover to the enforcers because he believed in the record, and who had come back up from the white room one fact at a time. He thought about a pinprick note under a piece of bread: <em>WE'RE ALIVE.</em> He thought about two of Ashford's seven inside the same hour of the same afternoon, and a record that could now say nothing about either of them.</p>
+<p>Then he reached into his inside pocket and took out the burned match, and unwrapped it, and turned the newspaper to its widest margin, beside Marcus Chen's face.</p>
+<p>He wrote the date first, as he always had. <em>IO-1. 17 NOVEMBER. CHRONOS.</em></p>
+<p>And then, in a small, steady hand, he began.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="04-the-dead-man.html" class="nav-button">← Previous: Chapter 4: The Dead Man</a>
+            <div class="nav-center">Chapter 5: The Coat</div>
+            <a href="06-the-crossing.html" class="nav-button">Next: Chapter 6: The Crossing →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

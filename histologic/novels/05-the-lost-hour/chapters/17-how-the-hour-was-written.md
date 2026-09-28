@@ -1,0 +1,217 @@
+# Chapter 17: How the Hour Was Written
+
+*Friday, December 3, 2106. The Sovereignty of Free Will mission, Chronos*
+
+---
+
+The mission had given him a room with a window, a desk, a bed, a terminal he was permitted to use under supervision, and a wardrobe with a single hanger on it, on which he kept the coat.
+
+Isaiah had been in the room for fifteen days. Before that he had been in a Chronos holding cell for two nights, and before that in a concrete room two hours north of the capital for three and a half months, and before that in a glass box in Wing C. He had become, he thought, something of a connoisseur of rooms. This one was the best of them. It had a door that opened from the inside. He had noticed, with a certain professional detachment, that he had not yet opened it at night.
+
+He was dressed by seven. He sat on the edge of the bed with his hands folded on one knee and walked through the house.
+
+The parlour, bare since August; he had given it away and not refurnished it. The kitchen. The narrow stairs his aunt had always told him not to use. The cellar door, at the bottom of them, which was a door and had a handle and hinges and a colour he could no longer name. Behind it, on the shelves, everything: page thirty-one, the storm onset times, the seven faces, the first sentence of an article written on a data-centre floor. And a new shelf, three weeks old, on which he had put the things that had happened since the fifteenth.
+
+On the front of it, where he would see it first, was the question he had written with a burned match on the back of the envoy's offer, in a Chronos car with no handles on the rear doors, on his way back to the holding cell.
+
+*Who chose 14:30?*
+
+He had not answered it. He had written it down so that he would not be able to pretend he had forgotten to ask.
+
+At half past nine a mission clerk knocked, and he put on his jacket, not the coat, and went down to be granted or refused a country.
+
+---
+
+The hearing room had been a reception room once. It still had the cornicing and the long windows, through which the gray Chronos morning came in over a quiet street, but someone had taken out the furniture and put in three tables in a horseshoe, like a committee that expected to be photographed. Every clock in the room agreed with every other clock to the second. It was Chronos. They always did.
+
+The panel sat at the head of the horseshoe: three members of the SFW's asylum service, two women and a man, in the unadorned dark clothes the Sovereignty preferred for its officials, as if to say that there was nothing on them a machine could read. The chair was the older woman, with a soft, unhurried accent from the far south of the Sovereignty's territory and a habit of letting silences run until someone filled them. Isaiah recognised the technique. He had used it on harbour officials for fifteen years.
+
+On the left sat the Chronos observer, a young man with a recording device on the table in front of him that logged the room continuously, with timestamps, as Chronos logged everything. He had introduced himself with his name and his arrival time.
+
+On the right sat the Veridican representative: a second secretary from the liaison office, courteous, well briefed, not much older than the observer, who had shaken Isaiah's hand at the door with the careful friendliness of a man greeting someone he intended to have returned.
+
+Isaiah sat at the foot of the horseshoe, alone, with his hands folded.
+
+"Mr. Okonkwo," said the chair, "you have applied for asylum with the Sovereignty of Free Will, on the ground that you have no state. Veridica does not recognise you as expelled. Chronos has no record of your lawful entry. Is that a fair summary?"
+
+"It is exact," said Isaiah.
+
+"The Veridican representative has a statement."
+
+The second secretary had a statement. He read it well. The subject Isaiah Okonkwo had been held in secure care under a lawful determination of eighty-one percent. On November fifteenth, during an interval in which the national record was unavailable owing to an infrastructure failure, the subject had absconded from secure care. There was no record of any order of expulsion having been executed. Veridica regretted the inconvenience to its neighbours and requested the subject's return, for his own stability, under the ordinary protocols.
+
+He said *Veridica*, Isaiah noticed, the way people say *the building I work in*. Not the way they say *home*. Isaiah had spent a great deal of his career listening to how people said the names of things, and he filed it, and found he was sorry for the young man.
+
+"Absconded," said the chair.
+
+"From secure care, Madam Chair."
+
+"Across a border checkpoint. Under fog. At half past two in the afternoon." She let the silence run. "Unaided."
+
+"The record for that interval is unavailable," said the second secretary. "Veridica cannot confirm or deny the manner of his departure."
+
+"But it denies the expulsion."
+
+"There is no record of an expulsion."
+
+"No," the chair agreed. "There is no record of anything." She turned her head. "We have a witness. Captain?"
+
+---
+
+The screen on the wall woke.
+
+Captain Yevgenia Sokolov stood at the lakeshore checkpoint in her long dark coat, with the barrier behind her and the fog lying on the water beyond it, white and thick and entirely ordinary, the same fog Isaiah had walked out of three weeks ago with an order in his hand. She was tall and very straight, and her face was the one he remembered from the back of the van, giving nothing to anyone. Her hands were in her coat pockets. She did not look at the camera. She looked slightly past it, as though the panel were standing a little to its left.
+
+"State your name and post, please."
+
+"Sokolov, Yevgenia. Captain, Border Security. Lakeshore sector."
+
+"Captain, where were you at 14:30 on November fifteenth?"
+
+"At this checkpoint." Her voice was flat, formal, the voice of an officer reading out a report she had written herself. "I escorted the prisoner Okonkwo, Isaiah, from Secure Care Unit 3 to this checkpoint, under an order of expulsion from the territory of Veridica, effective 14:30 that day. I escorted him personally. At 14:30 the barrier was raised. The prisoner walked across the line into the territory of Chronos with the order in his hand. At 14:31 I logged the transfer as complete. The transport left at 14:34."
+
+"You escorted him personally," said the chair. "Is that usual?"
+
+"No."
+
+The chair waited. Sokolov did not fill the silence. After a while the chair seemed to accept that she would not.
+
+The second secretary cleared his throat. "Madam Chair, with respect. The Captain's account concerns an interval for which the national record is unavailable. There is no means of verifying it. In the present circumstances, the Ministry has reason to regard all recollections of that interval with caution." He paused, carefully. "There have been reports of irregularities."
+
+"What kind of irregularities?" asked the chair.
+
+He had not expected the question. Isaiah watched him decide not to answer it.
+
+"Captain," said the chair, "were you inside the capital's Ministry district at any time between 14:00 and 15:00 on the fifteenth?"
+
+"No. I was on the lakeshore road and at this checkpoint for the whole of that hour. It is a long way outside the Ministry district." A pause of exactly one second. "I also keep a paper log, as all officers in this sector are required to. My entries for November fifteenth were made by hand at the time. They are at the disposal of the panel."
+
+"Paper," said the Chronos observer, with the faint astonishment of a man from a country that had not written anything by hand in a generation.
+
+"Paper," said Sokolov.
+
+"Mr. Okonkwo." The chair turned to him. "You may put a question to the witness, if you wish. One."
+
+He had known he would be allowed one. He had spent the night deciding what it would be, and in the end there had only ever been one.
+
+"Captain," he said. "Who chose 14:30?"
+
+The second secretary began to object. The chair raised a hand without looking at him, and he stopped.
+
+On the screen, Sokolov was quiet for a moment. The fog moved behind her.
+
+"The order specified the time," she said. "I carried out the order."
+
+It was a complete answer. It was the kind of answer he had heard a hundred times from officials who were telling the precise truth and nothing adjacent to it. He inclined his head.
+
+"Thank you, Captain."
+
+"Is there anything further you wish to tell the panel?" the chair asked her.
+
+"No."
+
+A long pause. The barrier behind her, the fog on the water. For a moment Isaiah thought she was going to look straight into the camera, and she did not.
+
+"Nothing," said Captain Sokolov, "that is relevant to Mr. Okonkwo."
+
+The screen went dark.
+
+---
+
+The panel withdrew for forty minutes, by the room's agreeing clocks. When they came back, the chair read the decision without preamble. The applicant's account was corroborated by a witness who had been outside the affected district and who had contemporaneous written records. The applicant had been lawfully expelled by Veridica and had lawfully entered no other state. He was therefore stateless, and the Sovereignty of Free Will, in accordance with its founding charter, granted him asylum and its protection, on the usual terms.
+
+She did not say what the usual terms were. She did not need to. Isaiah had understood them on the seventeenth, when Chronos drove him to this house under escort and the envoy poured him tea and offered him a platform. The Sovereignty took in the Histologic world's outlaws, and it took them in as evidence. He had been granted a country, and in exchange he had become an exhibit.
+
+The second secretary shook his hand again at the door, with the same careful friendliness, and said he hoped Mr. Okonkwo would be comfortable. Isaiah thanked him, and meant it, and watched him go.
+
+Then he went back upstairs to the room with the door that opened from the inside, sat down at the supervised terminal, and published.
+
+---
+
+He had written it over nine days, in the room, at night, from what Kira had sent him through the resistance: the forty statements, a clinician's diagnosis, the architecture of a hole. He had written it the way he had written the Continuity piece, in his head first, on the cellar stairs, and then all at once. The mission's press office had read it. They had asked him to wait until the asylum was decided, so that it would appear as the testimony of a protected witness rather than the claim of a stateless man, and he had agreed, because they were right.
+
+It went out at 13:06 Chronos time through the Synthesis Institute's open channel and every outlet the Sovereignty could reach.
+
+*HOW THE HOUR WAS WRITTEN*
+
+*By Isaiah Okonkwo. The SFW Mission, Chronos. December 3, 2106.*
+
+*On November fifteenth, between two and three in the afternoon, one hour of Veridica's history ceased to exist. You will have read that. The Ministry calls it an infrastructure failure. It has not explained how a failure could remove the same hour, cleanly, from every repository in the country and from all three of its backups, and leave not one contradiction behind.*
+
+*You will also have read that forty employees of the Ministry of Historical Integrity saw a man walk into the office of Deputy Minister Amara Singh at twenty past two, shortly before she was killed. They have all named the same man. He is a historian called Marcus Chen, whom the Correction Registry records as dead.*
+
+*I want to tell you something about those forty statements that the Ministry has not.*
+
+*They are identical.*
+
+*Not similar. Identical, in their details, down to the clothes. Forty honest people, questioned separately, describe the same man in the same clothing, and the clothing is wrong. It is the gray of a Wing C inmate at Ashford. Mr. Chen had not worn that gray for three and a half months. There is at least one other detail, common to every statement, that I have been asked not to print, and have not.*
+
+*I showed the statements to a clinician with long experience of how human memory fails. I will not name her. Her diagnosis was this. When people misremember, they misremember differently; every mind fills its own gaps in its own way. Forty minds do not make the same mistake. Mass panic produces vagueness, not precision. What produces identical memories in many heads at once is a broadcast.*
+
+*In August I published, from inside Ashford, the planning documents of Project Continuity. They described a method its designers called "erase, then seed", and a second phase, for "population-scale delivery via the national neural-interface broadcast network". I wrote then that test signals were already running in three districts, and that I did not know which. I still do not know which three. I know that on November fifteenth there was a fourth.*
+
+*For one hour, the broadcast node that serves Veridica's Ministry district carried something other than facts. The record of that hour was removed. The memory of it was written. The people inside that district's range were not lying when they described what they had seen. They were describing what they had been given.*
+
+*In Veridica, for one hour, memory itself was issued by the state.*
+
+He had struck out everything else he could. He had struck out the resistance, and Kira's name, and Tanaka's, and the Volkov brothers, and the calibration, and the man at the side entrance. He had struck out Morrison's gains and Marina Holt's box of files. He had kept only what could be said by a witness who was now, since eleven o'clock that morning, legally someone.
+
+And he had struck out two sentences that were not his to strike.
+
+Kira had sent them eight days ago, with a care he recognised: the sentence from a torn page the Deputy Minister had photographed and sent to Marcus, *When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it.* And a passage an old man had sung to her in a kitchen, to the tune he had hummed through every meal slot in Wing C. She had heard it once, and sent what she could hold of it, with a note that the words were near but not exact: *A people that has lost part of its past … will accept any past … given gently … by someone it trusts.*
+
+He had read them, and gone down the cellar stairs, and put them on the new shelf side by side, and sat on the bottom step looking at them for most of a night.
+
+They were the same voice. He had been a reporter for twenty years, and he knew a voice the way other people knew a face: the rhythm, the reach, the cold patience of someone explaining a thing to people who would not be allowed to read it. And one had been found among a Deputy Minister's papers in 2106, and the other had been sung into an old man's memory in 2063.
+
+He could have published them. They would have made a better article. They would have made the article *frightening*, rather than only terrible.
+
+*One fragment is a curiosity,* he had written to Kira, in the resistance's cipher. *Two is a pattern. I'll wait for three.*
+
+He meant it exactly. One fragment, anyone could dismiss. Two made a pattern, and a pattern was something a reader could see; and anything a reader could see, a Ministry could call forgery, and coincidence, and the fantasy of an outlaw with a grudge. He had lived through that once already, with two hundred and six deaths. A third fragment would be something else. A third would be a document. He would wait for a document.
+
+The article's last paragraph was the only one he had rewritten more than twice.
+
+*I will end with a question, because it is the only honest way I know to end this. The Ministry will deny what I have written. It will say that memory cannot be written, and it will be lying. But I have found myself asking, over these last nine days, what it will mean for the rest of us once it has been established, beyond any denial, that it can. Who benefits from the world believing that memory can be written?*
+
+*I do not know. I would like someone to find out.*
+
+---
+
+By five o'clock the Chronos evening news had it. By seven, Synthesis had it in eleven languages. The mission's press office brought him printouts every hour, like a nurse bringing charts. *Veridican broadcast "seeded" capital witnesses, exile claims.* *Memory weapon used on Ministry staff.* A statement from the Synthesis Institute requesting "immediate and independent access to the Ministry district broadcast node". A statement from the Memorian foreign office that it had "long warned" of this. A statement from the Sovereignty's own spokesman, which quoted him three times and managed to misunderstand him twice.
+
+At 19:40 the Ministry of Historical Integrity issued a single paragraph. It described the article as *outlaw fabrication, published by a subject of correction under foreign protection*. It noted that the tribunal into the death of Deputy Minister Singh would sit, as scheduled, on Monday, December sixth. It added that the Undersecretary for Historical Integrity was *not aware of any procedural reason for delay*.
+
+Isaiah read that twice. It was the voice of a man who had been asked about delay by someone he could not afford to ignore. That was something. It was not enough. The tribunal would sit on Monday. Marcus would still be in the room.
+
+He put the printouts in a neat stack on the desk, squared to the edge, and sat on the bed with his hands folded, and did not walk through the house. He found that he was very tired.
+
+---
+
+At a quarter past ten a mission clerk knocked.
+
+She was the same young woman who had brought him down to the hearing that morning. She held out a small envelope, sealed, with his name written on it in capitals and nothing else.
+
+"This came across this evening," she said. "From the Veridican side. A courier left it at the gate. He wouldn't say who from."
+
+He thanked her. He waited until the door had closed. Then he sat down at the desk under the lamp and opened it, with the care he would once have given a leaked page from a source in procurement.
+
+One sheet, folded twice. Plain paper, the kind Border Security issued for field logs. The handwriting was square and even and had never, he thought, been hurried by anyone.
+
+*You asked who chose 14:30. At 09:00 on the 15th I called the Deputy Minister's office to confirm the slot. Her aide said she had never requested it. At 14:02 it was confirmed anyway, from her own credentials.*
+
+There was no signature. There did not need to be.
+
+Isaiah read it three times. Then he sat back in the lamplight and did the arithmetic, which was easy, because most hard things were.
+
+At 14:02 on November fifteenth, the hour had already begun. The record had already gone. And inside that hour, with no one to see it but a captain at a lakeshore checkpoint with a pencil and a paper log, someone had reached into the Ministry's system and confirmed his expulsion with the credentials of a woman who, twenty minutes later, would be dead.
+
+Or who would be said to be.
+
+He folded the sheet along its creases, went to the wardrobe, and took down the coat. He unpicked two stitches of the lining along the hem, slid the note in among the strips of newsprint, and sewed it shut again by lamplight, very carefully, the way he had done the first time, in the dark, in Unit 3.
+
+Then he went down the cellar stairs in his head, and took the question off the front of the new shelf, and put it back, with a second line written under it.
+
+*Who chose 14:30?*
+
+*Someone who could still use her name at 14:02.*

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="03-the-upload.html" class="nav-button">← Previous: Chapter 3: The Upload</a>
+            <div class="nav-center">Chapter 4: The Dead Man</div>
+            <a href="05-the-coat.html" class="nav-button">Next: Chapter 5: The Coat →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 4: The Dead Man</h1>
+<p><em>Monday, November 15 – Tuesday, November 16, 2106. A room above a laundry, and the Enforcement Center, Veridica Capital</em></p>
+<hr>
+<p>The room above the laundry was warm all the time, because of the machines below, and it smelled of soap and hot cotton, and the window over the bed looked onto a flat tar roof and a row of steaming vents. Elena's people had rented it for them for three nights under a name Marcus had already forgotten. It had a bed, a table, one chair, and a small screen on a bracket by the door that they had not turned on until ten past five.</p>
+<p>It had not been off since.</p>
+<p>At 18:40 Kira was on her knees by the bed, packing. She did it the way she did everything that mattered, fast and precisely and in silence: the gray case wrapped in a shirt, the cable coiled beside it, the satchel buckled. Marcus sat at the table with his back to the screen and wrote.</p>
+<p>He wrote the hour down. All of it, in pencil, on the folded sheets of paper he carried in the inside pocket of his coat, the ones with the three columns ruled down them in his small, careful hand. He had to write it while it was fresh. That was the rule. Tanaka's rule, and then his own: a memory is most itself in the first hours, and after that it begins to be something else, and you cannot feel the moment when it changes. So he wrote. <em>13:45. Side door. Guard, gray moustache, cup.</em> He wrote it as fast as he could make the pencil go.</p>
+<p>Behind him the screen said his name again.</p>
+<p>He did not need to turn round. He had seen it at ten past five and a dozen times since: the photograph from Isaiah's article, from the Continuity file, a thin man in Wing C gray with his glasses on crooked and nothing at all in his face. And under it, in the Registry's plain letters, <em>STATUS: DECEASED</em>. And the newsreader, calm, reading from a sheet. Forty witnesses. Forty Ministry employees who had seen him walk into the Deputy Minister's office at twenty past two, and named him.</p>
+<p>At twenty past two he had been typing statement fifty. He could see the screen of terminal nine. He could see the green line under it.</p>
+<p>"Marcus." Kira had stood up. "We should go now."</p>
+<p>"Five minutes."</p>
+<p>"The stations will be watched. The roads out will be watched." She said it flatly, an engineer listing failure points. "Every hour we wait they add a camera."</p>
+<p>"I know. Five minutes." He did not look up. "I have to get it down. Before—" He stopped, because he did not know how to end the sentence. <em>Before it changes. Before I can't tell.</em> "Kira. At fourteen twenty-one. In the annex. Did you feel anything?"</p>
+<p>She was quiet for a moment.</p>
+<p>"I don't know," she said. "I was watching the numbers."</p>
+<p>He wrote that down too, under UNCHECKED, beside the other entry: <em>14:21. Brightness. K. doesn't know.</em></p>
+<p>At 18:52 there were footsteps on the stairs.</p>
+<hr>
+<p>They were not the footsteps of the laundry owner, who was old and came up one stair at a time, or of the other tenant, a young man who worked nights and ran. They were several, and heavy, and together, and they were not trying to be quiet.</p>
+<p>Kira was at the window before Marcus had finished standing up.</p>
+<p>It was an old sash window, and she had oiled it on their first night without saying why. It went up now without a sound. Cold air came in over the bed, and the steam from the vents. She had the satchel on her shoulder. She turned back to him with one knee already on the sill.</p>
+<p>"Marcus."</p>
+<p>"Go."</p>
+<p>"<em>Marcus</em>—"</p>
+<p>"Go. I'll hold the door." He had his hand in his coat pocket. He pulled out the photograph, the Deputy Minister's print, and put it into her hand. "Take this. It's evidence. Go."</p>
+<p>She looked at him for perhaps half a second, and in her face he saw her do the arithmetic, all of it, the way she always did: the stairs, the window, the roof, the distance to the next roof, two people against one. He saw her arrive at the answer, and hate it.</p>
+<p>Then she was gone. Over the sill, onto the tar, low and quick between the vents, a shape and then not a shape.</p>
+<p>The footsteps reached the landing.</p>
+<p>Marcus put his back against the door.</p>
+<p>It was a thin door, and it would not have held long against anyone who wanted it open. He did not need it to hold long. The first blow came through it into his spine and nearly put him on his knees, and he braced his feet on the bare boards and pushed back, and counted. <em>One.</em> A voice outside, calling his name, his real name. <em>Two.</em> The second blow, harder, the frame splitting by the hinge. <em>Three.</em> He thought of Samuel, for no reason, with his palm on the glass. <em>Four.</em></p>
+<p>He stepped away from the door.</p>
+<p>It came open so hard it hit the wall, and the room was full of dark uniforms, and someone had his arms, and someone was at the window shouting down to someone on the street. He did not struggle. He did not run. He had learned that from the beginning, from the Enforcement Center, from the very first time: running proves the charge. Everything else could be argued about. Running could not.</p>
+<p>He stood very still between two enforcers in the warm, soap-smelling room with his hands held behind him, and waited.</p>
+<p>A man came in last, through the broken door, not hurrying.</p>
+<p>He was older than Marcus remembered, and grayer, the hair gone almost white at the sides, the face more lined, but Marcus knew him at once. He knew him the way he knew the date of the Founding. The same square, tired, attentive face. The same datapad in the same hand. The same way of standing, a little apart from the others, as if he were only there to take a statement.</p>
+<p>Officer Kade looked at him for a long moment.</p>
+<p>"Mr. Chen," he said.</p>
+<p>A pause.</p>
+<p>"The Registry says you are dead."</p>
+<hr>
+<p>It was the same room.</p>
+<p>Marcus had not expected that, and it undid him more than anything else had. Not a room like it. The room. White walls, a table, two chairs, a camera in the corner of the ceiling with its small steady light. The table had a display in its surface, the same one, with a faint scratch across the lower left corner that he remembered from a morning in October of the year before, when he had sat in this chair and looked at that scratch rather than at Kade's face while Kade told him seventy-three percent.</p>
+<p>He sat in the same chair. Kade sat across from him. They had given him back his own glasses, and taken the borrowed frames away in a bag.</p>
+<p>"Thank you for not running," said Kade. "It saved everyone a certain amount of trouble."</p>
+<p>"Where is she?"</p>
+<p>"We'll come to that." Kade touched the display, and a list came up on it, a long column of names. "Let me tell you what we have first, Mr. Chen, and then you can tell me what you'd like. That seems fair."</p>
+<p>He was not unkind. He had never been unkind. That was the thing Marcus had never been able to explain to anyone about Kade: that there had been no cruelty in him at all, only procedure, and that the procedure had been worse.</p>
+<p>"At thirteen forty-six this afternoon," said Kade, "a visitor's pass in the name of an archive researcher named Harrow was used at the door of the Ministry's public annex. There is no researcher named Harrow. The annex camera shows a man in heavy spectacles and a woman with a satchel. After that, nothing. The record from two o'clock to three is gone, as I expect you know." He looked up. "At fifteen oh one, a camera on the boulevard shows the same man and woman coming round the north corner of the Ministry on foot. After fifteen oh one there are a great many cameras. It took us a little under four hours to follow you home."</p>
+<p>Marcus said nothing.</p>
+<p>"And in between," said Kade, "we have these." He turned the display a little toward Marcus. "Forty statements. Ministry staff. Taken separately, this afternoon, by six different officers. None of these people were permitted to speak to each other before they gave them."</p>
+<p>He began to read. He read the way he had read Marcus's interactions a year ago, evenly, without emphasis, giving each item exactly the same weight.</p>
+<p>"<em>At about twenty past two I saw a man walk down the corridor toward the Deputy Minister's office. He was in gray. Gray clothes, like a patient's.</em> That's the first. <em>He went into her office. I recognised him afterwards from the pictures in August.</em> The second: <em>He was dressed in gray, the gray they wore in those photos from Ashford. He was holding his left hand against him. It was bandaged.</em> The third—"</p>
+<p>"I wasn't wearing gray," said Marcus.</p>
+<p>Kade looked at him.</p>
+<p>"I was wearing this." Marcus moved his shoulders in the dark coat. "I haven't worn gray since August."</p>
+<p>"Noted." Kade went on. "The seventh. <em>His left hand was wrapped up. A white bandage, round the palm.</em> The twelfth. <em>He had his hand held out from his side a bit, like it hurt him.</em> The nineteenth—" He read on. Not all forty. Perhaps fifteen. Gray, every time. The left hand, every time. The wording changed. The man did not.</p>
+<p>When he had finished, he glanced down at the table.</p>
+<p>Marcus's hands were resting on it, one on each side of the display, where he had put them when he sat down. His own hands, thin, pale in the white light, with the ink stain on the side of the right middle finger where his pencil sat. Both of them. Unmarked.</p>
+<p>Kade's eyes rested on them for a moment. Then they came back up to Marcus's face, and Kade said nothing about it at all, and made a small note on his datapad, and moved on.</p>
+<hr>
+<p>"I was in the annex," said Marcus. "The whole hour. From thirteen forty-five to fourteen fifty-five. I was at terminal nine, entering statements. Then we went up to the twelfth floor for an appointment with the Deputy Minister and her door was locked and nobody was there. I never went into her office. I never saw her." He heard his own voice, precise and level, a historian giving an account. "I have a witness."</p>
+<p>"The woman who went out of the window."</p>
+<p>"Yes."</p>
+<p>"Kira Osman, I expect." Kade said it quite gently. "I arrested Ms. Osman too, a few weeks after you. I remember her." He paused. "Your witness is also dead, Mr. Chen."</p>
+<p>Marcus opened his mouth, and shut it.</p>
+<p>"The Registry has you both," said Kade. "Second of August. Cognitive failure during fact storm. Remains processed. No family viewing." He did not say it unkindly. He did not say it kindly either. "So here is where we are. Forty living citizens, employees of the Ministry, of good standing, none of them with any reason in the world to lie about you, say that they saw you go into the Deputy Minister's office twenty minutes before she was found dead in it. And against them I have a man the Registry says is dead, and a woman the Registry says is dead, and an hour in which there is no record of anything at all." He folded his hands on the table. "Forty living witnesses against two dead ones."</p>
+<p>"There was a record," said Marcus. "We made one. Everything we did in that hour was entered. Six million entries. It was accepted. And then it was gone with the rest."</p>
+<p>"Then there's no record," said Kade.</p>
+<p>Marcus looked at him.</p>
+<p>"I don't say that to be clever," said Kade. "I say it because it's the only thing I can say. If it's not in the factorepo, Mr. Chen, then for my purposes it did not happen. That was true a year ago in this room and it's true now." He was quiet for a moment. Then he leaned forward a little, and for the first time his voice changed, only slightly, the way a man's voice changes when he is asking something he actually wants to know.</p>
+<p>"Tell me, then. Honestly. I'd like to understand it." He touched the display. "How do you explain forty people?"</p>
+<p>Marcus looked at the list of names.</p>
+<p>He did not have an answer. He looked for one, and there was nothing there. Not a gap, exactly. A smooth, blank place, where an answer should have been, like the place where his mother's first name used to be.</p>
+<p>"I can't," he said.</p>
+<p>Kade nodded slowly, as if that were the most honest thing anyone had said to him all day, and perhaps it was.</p>
+<p>"No," he said. "Neither can I."</p>
+<hr>
+<p>They put him in a holding cell at 23:10.</p>
+<p>It was small and clean and warm, with a bench and a toilet and a steel door with a slot at eye height, and a light in the ceiling that did not go off. They took his belt and his shoelaces and his coat. They let him keep his glasses. And they let him keep the folded sheets from the inside pocket, and the stub of pencil clipped to them, after the desk officer had turned the pages over twice and held them up to the light.</p>
+<p>"Lists," the desk officer had said, bored.</p>
+<p>"Yes."</p>
+<p>"It's only paper." He had handed them back. "Go on."</p>
+<p>So Marcus sat on the bench with his back against the wall and unfolded them on his knee.</p>
+<p>Three columns. He had ruled them himself, at the cottage, in September, and copied them over every week since, because paper wore out at the folds. <em>CHECKED. UNCHECKED. HOPES.</em> Things he remembered that someone else had confirmed. Things he remembered that no one yet had. And the things he had decided to keep anyway.</p>
+<p>At the bottom of the HOPES column, in the same small hand as everything else, was the entry he always read first and never read for long.</p>
+<p><em>1–2 August. A field. Wet grass. Stars. K. beside me. — Not a fact. A hope.</em></p>
+<p>He looked at it.</p>
+<p>He remembered the field. He remembered it now, sitting in the cell, as clearly as he remembered anything in his life: the cold of the grass through his shirt, the smell of it, the stars so thick over the border that they seemed to have texture, Kira's shoulder against his. He could feel it. He had always been able to feel it. He would have sworn to it in front of The Judge.</p>
+<p>It had never happened. Kira had been with him every second of that night, and there had been no field. Tanaka had given it a name. Storm-induced confabulation. The storm had poured into the places Continuity had emptied in him, and something warm had grown there, and set, and become a memory, indistinguishable from the inside from any other memory he had. It had taken another person, sitting across a table from him, to tell him it was false. He had not been able to tell himself. He still could not. He knew it the way he knew a fact in a file. He did not know it anywhere else.</p>
+<p>He looked down at the sheet in his other hand. At the hour he had written at the laundry table, in pencil, as fast as he could make it go. <em>13:45. Side door. 14:10, statement 1. 14:21, brightness. 14:33, the boy. 14:52, complete. 14:55, level twelve. Door locked.</em></p>
+<p>He felt, very slowly, the floor go out from under him.</p>
+<p><em>What if it's a field?</em></p>
+<p>He had been so certain on the stairs. He had been certain in the interview room, telling Kade. He was certain now: the annex, the terminal, the green line under each statement, the boy's serious face. He could see it all. But he had been able to see the field too. He could see it still. That was the whole horror of the field, the thing Tanaka had been so careful to explain to him and that he had understood only with his head: that a false memory did not feel false. It did not feel like anything but a memory.</p>
+<p>Forty people had seen him walk into a Deputy Minister's office at twenty past two.</p>
+<p>What if they had?</p>
+<p>What if he had gone up to the twelfth floor at twenty past two, and not at five to three, and something had happened there that his mind could not hold, and the storm-damaged, Continuity-emptied, patched-together thing that was his memory had done what it had done before, and poured something warm into the hole? A basement. A terminal. Useful work. A boy asking <em>is it true</em>. What could be more like the thing he wanted than that?</p>
+<p><em>He had a false memory that felt exactly like a true one. How would he know?</em></p>
+<p>He sat on the bench under the light that did not go off and made himself breathe.</p>
+<hr>
+<p>He did what a historian does. He went through it.</p>
+<p>Not as memory. As a source. He took the hour from the beginning and went through it the way he had once gone through a disputed entry at desk 14-08, one item at a time, asking of each thing not <em>do I remember this</em> but <em>what else would have to be true if this were true</em>.</p>
+<p><em>13:45. The guard. The pass.</em> Kade had the pass at 13:46. That was in the record. It held.</p>
+<p><em>14:10 to 14:52. Terminal nine.</em> The accepted entries were gone. There was nothing to check them against. But Kira had been beside him. Kira had counted with him on the stairs, every time, every place, and her count had matched his. Kira did not have gaps. Kira had no field.</p>
+<p>It held. It held.</p>
+<p><em>Kira was checking me against my own account,</em> said something colder in him. <em>I said it, and she said yes. What if I said it wrong, and she said yes because she loved me, or because she was frightened, or because she had been in the same room with the same brightness at fourteen twenty-one and whatever it was had got into her too?</em></p>
+<p>He went back to the beginning and did it again.</p>
+<p>It held. Every item. Every time.</p>
+<p><em>That is exactly what the field did too.</em></p>
+<p>The field had held. There had been no flaw in it, because there is no flaw in a thing that is whole. It had held perfectly, all the way down, right up to the moment somebody who had been there told him it was not true.</p>
+<p>And the only people who had been there today were Kira, who might be wrong, and forty strangers, who said he did it.</p>
+<p>He did it a third time. He did it until the light in the ceiling seemed to have a sound.</p>
+<hr>
+<p>At 04:00 he took the stub of pencil and unfolded the sheet with the three columns on it.</p>
+<p>At the bottom of the CHECKED column, under the last entry, which was from the week before and concerned the date of the lake freezing in 2104 and had been confirmed by a fisherman named Oduya, he wrote one new line, very small and very neat.</p>
+<p><em>15 November 2106. 13:45–14:59. Ministry annex, terminal 9; level 12. The upload. Witness: Osman, K.</em></p>
+<p>He looked at it for a long time.</p>
+<p>Then he moved the pencil up to the top of the column, to the word he had ruled there in September, in capitals, and pressed down hard, and drew a single straight line through it.</p>
+<p>He sat and looked at the crossed-out word until the pencil stopped shaking in his hand.</p>
+<hr>
+<p>In the morning the corridor outside the cells was loud.</p>
+<p>There was a screen on the wall opposite his door, and at seven o'clock someone turned the sound up on it, and through the slot at eye height he could see a narrow strip of it, and hear all of it. The Ministry at dawn. Enforcement vehicles. A photograph of the Deputy Minister, a composed woman in reading glasses. And then his own face, the Wing C photograph, crooked glasses, gray clothes, looking out of the screen at the corridor with nothing in it at all.</p>
+<p>The words went across the bottom in white capitals.</p>
+<p><em>THE DEAD MAN WHO KILLED.</em></p>
+<p>Other voices, after that. A commentator, very reasonable, saying that the Continuity programme had clearly failed in this case, that what had been sent into the world was not cured but damaged, and that the question now was not guilt, which was beyond doubt, but safety. A man in the street saying, <em>they should do it properly this time.</em> The same phrase, from someone else, a minute later. <em>Properly, this time.</em></p>
+<p>Marcus sat on the bench with the folded sheets in his hands and listened to the capital deciding what should be done with him. He was, he understood, the most famous corpse in Veridica.</p>
+<p>At 07:40 the slot in the door slid all the way open, and Kade's face appeared in it. He looked as though he had not slept either.</p>
+<p>"Mr. Chen."</p>
+<p>Marcus looked up.</p>
+<p>"I thought you should hear it from me," said Kade. "Undersecretary Pell has asked for you to be moved to secure care." He paused, and his face did not change, but something in his voice was very careful, as if he were handling the words by their edges. "For your own stability."</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="03-the-upload.html" class="nav-button">← Previous: Chapter 3: The Upload</a>
+            <div class="nav-center">Chapter 4: The Dead Man</div>
+            <a href="05-the-coat.html" class="nav-button">Next: Chapter 5: The Coat →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

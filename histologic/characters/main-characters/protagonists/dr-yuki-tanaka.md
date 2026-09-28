@@ -68,7 +68,7 @@ A doctor imprisoned in the building where she practised. She knows exactly what 
 | 29 | Chooses Chronos: "If there's a Chronos Continuity waiting to be born, I want to be in the room." Parting words to Marcus: "Check your memories. Every one. Promise me." |
 | Epilogue | A Chronos office overlooking a car park. Writing her eleventh memorandum against "salience-reduction methodology". Tomorrow, her fourth family. Morrison's hands are steady. |
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 | Ch | What she does |
 |----|---------------|
 | **6** | **POV: "The Crossing".** The Santos family (Davi, Lucia, Lia, 16) cross at ~14:20 and Morrison spoofs their telemetry. In the present she is charged with **trafficking**. Lia's anger reminds her of Kira's. Morrison's 14:21 carrier: "James. Say that again." |

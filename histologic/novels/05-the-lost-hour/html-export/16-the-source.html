@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="15-the-doctrine.html" class="nav-button">← Previous: Chapter 15: The Doctrine</a>
+            <div class="nav-center">Chapter 16: The Source</div>
+            <a href="17-how-the-hour-was-written.html" class="nav-button">Next: Chapter 17: How the Hour Was Written →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 16: The Source</h1>
+<p><em>Thursday, December 2, 2106. A resistance safe room, the border zone</em></p>
+<hr>
+<p><em>Room: three metres by four. No window. One door, steel, bolted from inside. One lamp. One terminal on a spoofed line, routed through two farms and a grain co-operative. Table: one. Chairs: four, one broken. Occupants: two.</em></p>
+<p>Kira had logged the room the first time Elena brought her to it, a week ago, and she logged it again every morning when she came down the ladder from the barn's tack room, because it was the only way she had found to start a day without looking at the empty chair in her head.</p>
+<p>Marcus had been in a cell at the Enforcement Center for seventeen days. On Monday a tribunal would sit.</p>
+<p>Alexei was at the table, turning a cold mug of tea round and round by its handle. He had driven through the night from somewhere he hadn't named and had not slept, and he had the particular brightness he got when he had not slept, which Kira had learned to distrust.</p>
+<p>"She'll lie," he said.</p>
+<p>"She hasn't yet."</p>
+<p>"She's never had to." He put the mug down. "Her office booked Isaiah's slot. The inquiry has it in writing. Her building, Kira. Her <em>dead</em>. She signed every one of us into the ground in August. If anyone in the whole Ministry knew exactly where we'd all be at 14:30 on the fifteenth, it was Helena Kovač."</p>
+<p>"Yes," said Kira. "That's why I want to see her face when she answers."</p>
+<p>The link opened at 09:00 exactly.</p>
+<p>Kovač was in her office at Ashford. Kira had never been in it, but Tanaka had described it once, and there it all was behind the Director's shoulder: the gray pond, the dead fountain, one slightly overwatered plant. The Director looked as she always looked: thin, precise, rimless glasses, dark suit, a face that had not slept properly for a very long time and had stopped expecting to. She had a sheet of paper on the desk in front of her, squared to the edge.</p>
+<p>"Ms. Osman." A small inclination of the head. "Mr. Volkov. I received your message."</p>
+<p>"Good," said Alexei.</p>
+<p>"You asked me why you should trust me." Kovač did not look at him as she said it. She looked at Kira, which Kira noted. "I don't think you should. I think you should look at this."</p>
+<p>She held the page up to the camera. Kira leaned in.</p>
+<p><em>BORDER SECURITY TRANSFER SCHEDULING. OFFER.</em> <em>REQUESTING OFFICE: DIRECTOR, ASHFORD CORRECTIONAL FACILITY.</em> <em>SUBJECT: OKONKWO, I. ORDER OF EXPULSION.</em> <em>SLOT OFFERED: 15 NOV 2106, 14:30. LAKESHORE CHECKPOINT.</em> <em>AVAILABILITY: SOLE.</em> <em>ISSUED: 11 NOV 2106, 09:12.</em> <em>ISSUING SYSTEM: CALENDAR AND SCHEDULING, OFFICE OF THE DEPUTY MINISTER OF HISTORICAL INTEGRITY.</em></p>
+<p>Below that, in the small dense type the system printed only when asked, was a block of characters twelve lines deep.</p>
+<p>"My clerk pulled the original yesterday afternoon," said Kovač. "My office asked for a slot. We didn't ask for that one. We were <em>offered</em> that one, as the only slot available, by the Deputy Minister's scheduling system. At 09:12 on the eleventh. I took it, because it suited me. I did not ask why it was the only one." She lowered the page. "I should have."</p>
+<p>"That proves your clerk printed a piece of paper," said Alexei.</p>
+<p>"Yes," Kovač agreed. "It does."</p>
+<p>"Hold it up again," Kira said. "The bottom. Closer."</p>
+<p>Kovač held it to the lens. Kira read the twelve lines with her lips moving, and felt the old compulsion rise in her, the reciting, the specifications coming up out of the place in her chest where Ashford had put them. She let it come. It was useful today.</p>
+<p><em>Integrity verification. Hash chaining per block. Chain depth twelve.</em></p>
+<p>"That's an authorisation block," she said. "Every entry in a Ministry scheduling system carries one. It says who issued the entry, and it's chained: every system the entry passes through signs on top of the last one, so you can peel it back layer by layer to whoever wrote it first." She sat back. "I wrote the standard for how those chains are built. In 2103. It was a very boring year."</p>
+<p>Alexei looked at her. "And?"</p>
+<p>"And the first signature, at the bottom of the chain, isn't a clerk's, and it isn't a scheduling system's. It's a personal credential. Office of the Deputy Minister, holder's own key." She said it flatly, the way she had once said <em>rotation interval ninety seconds</em>. "The slot was offered to Director Kovač's office from Amara Singh's own credentials."</p>
+<p>Nobody spoke.</p>
+<p>"Mr. Volkov," Kovač said at last, very dryly, "may have a point about the piece of paper. I would, in his position."</p>
+<p>"Send me a scan," said Kira. "Full resolution. Then stay on the line."</p>
+<hr>
+<p>She cleared the table.</p>
+<p>Elena came down the ladder at a quarter to ten with a box of printouts under one arm and her notebook in her other hand, the notebook she carried everywhere and had never been seen to write in. She took in the room, the screen, Kovač's face on it and Alexei's face across from it, and said only, "Here's what I've got," and put the box down.</p>
+<p>Kira laid it out the way she laid out logs: in a row, left to right, in order of time, each item with its source written on a card beside it. Five items. She counted them twice.</p>
+<p><em>Item one. The Deputy Minister's printed schedule for November 15. Source: carried out of the Ministry at 14:25 by Marina Holt, in a box of files, and found by her on November 17.</em></p>
+<p>It was the page Kira had looked at a dozen times since Alexei brought it to the safe house: a single sheet, printed at 07:40 on the morning of the fifteenth. Between 14:00 and 15:00 it listed four entries where there should have been one. <em>14:00 — Medical crossing waiver, eastern strip. 14:15 — Deep-cover review. 14:30 — Border transfer sign-off. Lakeshore. 14:30 — Meeting. Archive researcher. Public annex visitor pass.</em></p>
+<p>"All of us," Alexei said, as he had said the first time. "In one hour, on one page."</p>
+<p><em>Item two. The Deputy Minister's calendar metadata for the 14:30 meeting, and a statement by her aide. Source: the investigation's case file, via Nikolai.</em></p>
+<p>Nikolai's feed had brought the extract three days ago, lifted from the team room one field at a time. Lucian Bell's statement, taken on November sixteenth and again on the thirtieth: <em>I make all the Deputy Minister's calendar entries. I do not recall making the entry for the 14:30 meeting. I do not recall making any of the entries between 14:00 and 15:00.</em> And below it, the entry's own metadata, which nobody in the investigation seemed to have read closely, because nobody in the investigation had ever had to build one.</p>
+<p>Kira had. She peeled the chain back. At the bottom of it, under the calendar server and the office relay, was the same personal credential as on Kovač's page.</p>
+<p>"He didn't make it," she said. "He's telling the truth. His key isn't on it. Hers is."</p>
+<p><em>Item three. The Santos family's medical crossing waiver. Source: Dr. Tanaka, from the paper original in the family's possession.</em></p>
+<p>Tanaka had scanned it at the hospital on the twenty-second, both sides, and sent it with a note in her small precise hand: <em>Lia wants it back. She says it's the only thing she owns with her name on it that nobody in Veridica can delete.</em> The waiver bore an approval stamp from the Office of the Deputy Minister, and a printed authorisation block in the same dense type. Kira read it. She did not need to read it twice.</p>
+<p><em>Item four. The warning to Marina Holt and Jakob Lind. Source: Elena's message log.</em></p>
+<p>"My source brought it to me on the ninth," Elena said. She had not sat down. She stood by the ladder with her notebook against her chest, and her eyes went left to right along the row on the table like a quartermaster counting stores. "A Ministry deep-cover review had been scheduled for the fifteenth at fourteen fifteen. It listed eleven cover identities in the Ministry district for examination. Two of them were ours. He said their covers wouldn't survive the week."</p>
+<p>"Did he see the review himself?"</p>
+<p>"He saw the notice. It came round the archive floor on the eighth." Elena opened the box and took out a folded sheet. "Marina kept a copy. She always keeps copies."</p>
+<p>The notice had been issued <em>in the name of the Deputy Minister</em>. Its authorisation block was eleven lines deep. At the bottom was the same key.</p>
+<p><em>Item five. The tip. "Everything between 14:00 and 15:00." Source: Elena's message log.</em></p>
+<p>"That one's different," said Elena. "That didn't come from a notice. That came to me."</p>
+<p>"From your source."</p>
+<p>"Through him. He's a courier. He's carried for me for six years. He doesn't write things. He gets them and he brings them." She was quiet for a moment. "He was very insistent about the hour. I thought at the time it was because he was frightened. I didn't ask him who'd given it to him. You don't ask a courier that. That's the whole point of a courier."</p>
+<p>"Who told your source," said Alexei, not loudly. "That's what the old man asked. At the table. Two days after." He was looking at the row of paper. "I thought he was just being Misha."</p>
+<p>The message had come to Elena over the regional node, wrapped four times, the way the resistance wrapped everything. Kira unwrapped it on the terminal, layer by layer, the old smuggler's shift and then the relay headers and then the routing, and underneath all of it, under the courier's handling and the node's handling and two relays that should not have been able to sign anything at all, was a message that had been signed once, at the very start, before any of them had touched it.</p>
+<p>She looked at the credential for a long time.</p>
+<p>Then she turned the terminal round so that Alexei could see it, and angled the camera so that Kovač could, and said, in the voice she used for incident reports:</p>
+<p>"Five operations in one hour. The upload. The expulsion. The crossing. The extraction. And the tip that told us to put everything in that hour in the first place." She touched each item on the table, left to right. "Every one of them was steered into it. And every steer carries the same credential. Deputy Minister Amara Singh's."</p>
+<hr>
+<p>The lamp hummed. Somewhere above them in the barn a horse shifted its weight.</p>
+<p>"She scheduled us," said Alexei. He said it slowly, as if the words were in a language he had learned late. "The dead woman scheduled all of us."</p>
+<p>"Her credentials did," said Kira.</p>
+<p>"Is there a difference?"</p>
+<p>"Yes. Credentials can be taken." She made herself say both halves of it, evenly, the way she would have written up a fault with two possible causes. "Either someone had her key, and used it to put every one of us in the same hour, in the same building, and then killed her so that she couldn't say she hadn't. Or nobody took anything. And she drew us in herself."</p>
+<p>"Who could take a Deputy Minister's key?" Alexei asked.</p>
+<p>"Not a clerk." Kira had been thinking about it for twenty minutes, in the part of her head that went on working whatever the rest of her was doing. "Personal credentials don't sit in a drawer. They're held in the Ministry's own key store, behind the same verification layer I helped build. To use one without its holder, you'd have to be inside that layer, and senior, and very patient. You'd have to know how the chains are built well enough to make a forged entry close perfectly." She paused. "There aren't many people like that. But there are more than one."</p>
+<p>"And if she drew us in herself?" said Elena. "Then what?"</p>
+<p>"I don't know <em>then what</em>." Kira looked at the printed schedule, at the four entries. She thought of the woman who had written <em>Have you seen this before? A.S.</em> and sent it to a dead man with a visitor's pass. She had liked that woman, without ever meeting her. She found that she still did, and that it made no difference to the arithmetic. "She opened a door for Marcus. She also opened a door for all of us. It's the same door."</p>
+<p>"If she was in it," Elena said, "why send you the page?"</p>
+<p>It was the right question. Kira had been turning it over since she first saw the credential. A torn page from Continuity's own correspondence, photographed and tucked in with the pass. <em>Have you seen this before?</em> A woman asking for help, or a woman setting a hook.</p>
+<p>"I don't know," she said. "To warn us. Or to see what we'd do with it." She looked at the four entries on the printed schedule again. "It works either way. That's what I don't like about it."</p>
+<p>On the screen, Kovač had taken off her glasses. She was rubbing her eyes with finger and thumb.</p>
+<p>"If she was part of it," the Director said, "then I have a question." She put her glasses back on. "Then who died in her office?"</p>
+<p>Kira had been waiting for someone to ask it. She had been asking it herself since half past nine.</p>
+<p>"Someone," she said, "we were meant to be accused of killing."</p>
+<p>Kovač looked at her through the screen for a long moment. Kira could not read her expression. She suspected that nobody ever could.</p>
+<p>"Think about what it looks like from outside," Kira said. "Not from our side. From the side of whoever wrote the schedule." She stood up, because she could not do this sitting down. "Seven people escape a correction facility. The Registry says they're dead. Nobody knows where they are. So you choose an hour. You give each of them a reason to be in it: a door for the historian, a slot for the journalist, a family for the doctor, two agents for the brothers. You don't force anyone. You just make the hour the obvious one. The <em>only</em> one available." She heard her own voice go level, and then colder, and let it. "Then you erase the hour. And you write forty witnesses. And you watch what we do."</p>
+<p>"Like Wing C," said Alexei quietly.</p>
+<p>"Exactly like Wing C. Chosen. Placed. Observed. <em>Placement per protocol.</em>" Kira put her hands flat on the table, on either side of the row of paper, and found that they were quite steady. "We thought we were using the hour. We thought it was ours. We sat in the cottage and planned it for three weeks." She looked down at the five items. "We didn't use the hour. The hour used us."</p>
+<p>Nobody said anything for some time.</p>
+<p>Then Alexei got up. He went round the table, which took three steps, and stood in front of the screen with his hands in his pockets and his shoulders up, like a boy sent to the front of a class. Kira had never seen him look like that. She had not known he could.</p>
+<p>"Director," he said. "I sent you a message yesterday."</p>
+<p>"You did."</p>
+<p>"It was—" He stopped. He tried again. "I was wrong. About the slot. You didn't book it. It was booked for you. I should have asked before I—" He made a small, angry gesture at himself. "I don't do this. Apologising. I'm not good at it. Dmitri says I've never done it in my life, and he's usually right about things like that, which is very annoying." He took a breath. "I'm sorry."</p>
+<p>Kovač regarded him over her glasses. For a moment Kira thought she was going to say nothing at all.</p>
+<p>"Thank you, Mr. Volkov," the Director said. "For what it's worth, I'd have sent the same message. And the inquiry will go on believing it, whatever that page says. The Undersecretary finds me very useful as I am." She squared the paper on her desk again. "I would ask you to keep the original somewhere safe, Ms. Osman. There are not many things left in this country that were printed before the fifteenth."</p>
+<p>"I'll keep it," said Kira.</p>
+<p>The link closed.</p>
+<p>Alexei stood where he was, looking at the dark screen. Then he laughed, once, not very steadily, and rubbed the back of his neck.</p>
+<p>"Well," he said. "That's one."</p>
+<hr>
+<p>They went up at noon. Kira stayed.</p>
+<p>She told Elena she wanted to go through the chains again, which was true. She did go through them again. Five items, five chains, one credential at the bottom of every one. It did not change. It was not going to change. She sat with the lamp humming and the paper in its row and let herself stop working, which she did not often do, and the moment she stopped, the thing she had been keeping out of the room came into it.</p>
+<p>A bandaged left hand.</p>
+<p>Forty statements. Forty seeded memories, and in each of them, painted over with Marcus's face and Wing C gray, one small true thing that the seeding hadn't bothered to change. <em>White bandage. Wrapped hand. Holding it like it hurt.</em> Tanaka had circled it on her office floor. <em>That one isn't a seed. It's what they actually saw.</em></p>
+<p>And Nikolai's photographs from the team room. She had been looking at them for a fortnight: the screens, the desks, the backs of heads, the lead investigator at the end of the room in half the frames, tall and graying, leaning over someone's shoulder. In one of them he was laughing at something. In another he was holding a cup of tea in his right hand, and his left hand, at his side, was wrapped in a clean white dressing.</p>
+<p>She did not look at the photograph for long. She never did. She had noticed that about herself last week and filed it, and had not yet decided what the file meant.</p>
+<p>She opened a note on the terminal. She typed his name.</p>
+<p>She looked at it. Two words on a screen, in a room three metres by four, with no window.</p>
+<p>He was the man who had postponed Marcus's transfer. <em>The subject is my only material witness.</em> He was, as far as Kira could tell from a fortnight of Nikolai's feed, the only official in the whole investigation who had said out loud that he didn't think Marcus did it. He was the reason Marcus was in a cell in the capital and not in a cradle two hours north. People cut their hands. Architects cut their hands on server racks all the time; she had done it herself, twice, in her first year at the Spire, on the same badly finished rail. It was one of the most ordinary injuries in her profession.</p>
+<p><em>He's protecting Marcus,</em> she thought. <em>Lots of people cut their hands.</em></p>
+<p>She deleted the name, character by character, until the note was empty. Then she closed it without saving, and sat for a moment with her hands in her lap, and was aware that she had done something she would have logged, in anyone else, as <em>subject declines to pursue anomaly</em>.</p>
+<hr>
+<p>The terminal chimed at 16:52.</p>
+<p>It was Nikolai's feed: a single line, stripped of everything but the words, the way he sent things when he was frightened of being seen sending them.</p>
+<p><em>TRIBUNAL CONFIRMED MON 6 DEC 10:00. PELL'S ORDER ATTACHED. TRANSFER TO SECURE CARE UNIT 3 AUTHORISED SAME EVENING, "PENDING VERDICT, FOR THE SUBJECT'S STABILITY."</em></p>
+<p>Kira read it twice. Then she read the attachment, all of it, every field, looking for the fault in it, the missing signature, the chain that didn't close. There wasn't one. It was a perfectly ordinary order, properly issued, and it would verify green.</p>
+<p>Four days. On Monday evening Marcus would be back in a white room, with a hood coming down and a voice behind the mirror, and this time there would be nobody across the atrium to remember him until he could.</p>
+<p>She sat in the lamplight, very still, and counted the rivets on the steel door. There were thirty-two. She counted them again.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="15-the-doctrine.html" class="nav-button">← Previous: Chapter 15: The Doctrine</a>
+            <div class="nav-center">Chapter 16: The Source</div>
+            <a href="17-how-the-hour-was-written.html" class="nav-button">Next: Chapter 17: How the Hour Was Written →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

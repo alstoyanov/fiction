@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="30-the-dilemma.html" class="nav-button">← Previous: Chapter 30: The Dilemma</a>
+            <div class="nav-center">Chapter 31: The Commission</div>
+            <a href="32-epilogue.html" class="nav-button">Next: Epilogue: One Year Later →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 31: The Commission</h1>
+<p><em>Friday, January 14, 2107. The Justice Center, Veridica Capital</em></p>
+<hr>
+<p><em>January fourteenth, 2107. Oh-nine-forty hours. Justice Center, main steps. Involved parties: Chen, M.; Osman, K. Weather: clear, minus four. Purpose of visit: inaugural session, Historical Integrity Commission. Status of subject: commissioner.</em></p>
+<p>Marcus stood at the bottom of the steps and let the entry settle.</p>
+<p>It was a habit he had stopped apologising for. Kira no longer asked what he was doing when he went still like this. She stood beside him with her hands in her coat pockets and her breath going up white, and waited, and when he started up the steps she started with him.</p>
+<p>There were cameras at the top. There had been cameras at the top on the eighth of December, when two dead men had stood here and one of them had told the capital what he had seen at 14:21, and the crowd had shouted that the dead were testifying. Now the same cameras were waiting for the living. A woman with a press badge called his name, and then, uncertainly, "Commissioner," as if trying out the word, and he nodded to her and went on, because he did not know what his face would do if he stopped.</p>
+<p>In his inside pocket, folded in three, was Isaiah's column. He had not taken it out since Monday. He did not need to. He could feel the fold against his chest, and the last line of the note clipped to it: <em>Then decide who you are.</em></p>
+<p>Kira's bag was on her shoulder. In it, wrapped in a scarf, was the plain dark account book from the border zone. He had watched her write in it at the kitchen table last night until nearly one.</p>
+<p>At the doors she stopped, briefly, and looked up at the building. She was counting something. Windows, perhaps, or cameras. He waited for her to finish.</p>
+<p>"Eleven," she said, and went in.</p>
+<hr>
+<p>The Commission had been given the great hall on the ground floor, below The Judge's chamber, and someone had spent the week making it look as if it had always been there. There was a long curved table for the commissioners, with names on small white cards. There was a raised podium in the centre, two low steps up, with the Ministry's seal on the front. There was a second, smaller table to one side marked TECHNICAL, with two chairs and a bank of screens. And there were the public benches, rising in tiers towards the back, already nearly full.</p>
+<p>Marcus found his card. <em>COMMISSIONER M. CHEN.</em> Kira's was two places along. Between them sat a retired magistrate he had met at the reception and whose name, when he reached for it now, was not there. There was only a smooth place where it should have been, like a step that had been taken away. He smiled at the man and said good morning and did not use a name, and filed it: <em>Commissioner, left. Name: lost. Check card.</em></p>
+<p>He checked the card. It was a perfectly ordinary name. He would probably lose it again.</p>
+<p>At the back of the hall, on the highest public bench, in a dark jacket, sat Dmitri Volkov.</p>
+<p>He had come as a member of the public. He had said so in the car that morning, in the tone of a man stating a jurisdiction. "I have no card. I have a seat. It is a good seat. It has a view of every door." He sat now with his hands on his knees and his back straight, and if anyone in the hall recognised him from the news, or from the hearing, or from the steps, they had decided not to say.</p>
+<p>The broadcast light above the doors turned red.</p>
+<p>Minister Chen Zhao came in from the side and took the presiding chair, and the hall stood, and sat again. He was silver-haired and courteous and smiling, and someone had put a glass of tea at his elbow, and he let it steam. He thanked the commissioners one by one, by name, without notes. When he came to Marcus he paused, and his eyes creased, and he said, "And Commissioner Chen, who needs no introduction from me, though the Chen families of the capital would never forgive me if I didn't make one," and the hall laughed warmly, and Marcus smiled, because it was expected, and because he did not know what else a face was for at such moments.</p>
+<p>"A nation that can listen," said the Minister, "is a nation that can heal. This Commission exists so that Veridica will never again have to choose between its record and its people." He lifted his glass slightly, as if in a toast. "Let us begin."</p>
+<p>At the technical table, Thomas Wei was writing something on a tablet with his right hand.</p>
+<p>He wore a dark suit and no tie. Maya Reeves sat beside him, very upright, with her hair tucked behind her ears and her eyes on her screens. Wei's left hand lay on the table beside the tablet, open, relaxed. The lights over the technical table were bright, for the cameras, and across the back of the hand, where the bandage had been, a thin pink line caught them.</p>
+<p>Marcus looked at it for exactly as long as he would have looked at anyone's hand. Then he looked at the agenda.</p>
+<hr>
+<p>The first item was the technical report.</p>
+<p>"Director Wei," said the Minister, "if you would."</p>
+<p>Wei put down his tablet, and rose, and crossed the floor.</p>
+<p>He did it without hurry. He was tall, and he moved the way some tall men learn to move, lightly, without the stoop, as if his body had never once been in his way. The podium was twenty metres from the technical table. He crossed them in what seemed like no time at all, and at the podium he did not pause at the foot of the steps. He took them both at once, in a single easy stride, and was at the lectern, and turning, and smiling at the room.</p>
+<p>It was nothing. It was a man going up two steps.</p>
+<p>Marcus looked at the back of the hall.</p>
+<p>Dmitri had stopped breathing.</p>
+<p>There was no other way to describe it. Nothing in his face had changed. His hands were still on his knees. But the stillness that had been a posture a moment ago had become something else: absolute, the stillness of a man on a rooftop with a radio in his hand, watching a side entrance across the street. His eyes were on the podium. They did not move from it.</p>
+<p><em>He walks well.</em></p>
+<p>Marcus had not been there. He had been in the annex basement, entering statement after statement, feeling the room go faintly too bright at 14:21. He had heard the words later, from Kira, in the safe flat, and then at the hearing in Dmitri's own: a man in a dark jacket, a staff card, a hand held slightly away from the body. <em>A younger man than the one you are hunting.</em> Light. Athletic. Taking the side steps two at a time.</p>
+<p>At the back of the hall, Dmitri turned his head, very slightly, and found Marcus's eyes across the whole width of the room.</p>
+<p>He nodded. Once. A movement so small that nobody watching the podium, which was everybody, could have seen it.</p>
+<p>Marcus looked back at the podium.</p>
+<p>Wei was talking. He was talking about the archive: the ingestion of the Lost Hour case files, the testimony, the cross-references, the Commission's new systems. He was clear and unhurried and generous with credit, as he always was. He thanked his team. He thanked Maya Reeves by name, and she coloured slightly and did not look up. He thanked Commissioner Osman.</p>
+<p>"Commissioner Osman," he said, "took personal charge of ingesting the case files on the night of the founding reception, while the rest of us were drinking the Minister's wine. She has done in six days what I had allowed six weeks for." He smiled along the curved table at Kira. "Every file is where it should be."</p>
+<p>Kira inclined her head. "Thank you, Director."</p>
+<p>Her hands were folded on the table in front of her. They did not move. Marcus did not look at them for long.</p>
+<hr>
+<p>The oath came next.</p>
+<p>Each commissioner rose in turn and read it from a card. It was short. It had been drafted by a committee of the Ministry's lawyers, and it had the flatness of things drafted by committees, and nobody in the hall was listening very closely by the fourth reading. The retired magistrate read it in a firm courtroom voice. A woman from the Registry read it quickly, as if she were late for something.</p>
+<p>Then it was Marcus.</p>
+<p>He stood. He did not take the card. He had read it once, on Monday night, and filed it, and that had been enough.</p>
+<p>"I, Marcus Chen," he said, "undertake before this Commission and before the people of Veridica to keep the record honestly, to hear every witness, and to trust no single account, however trusted."</p>
+<p>It was word for word. He had not added anything or left anything out. He had checked.</p>
+<p>It was, he thought, the first oath he had ever taken in which every word was true.</p>
+<p>The hall applauded. It was warmer applause than the magistrate had had, because the capital knew his face now, and knew what he had been, and liked the story of the dead historian keeping the record. He could hear what the chamber heard: a reformer's pledge. The Believer, believing again. Someone on the public benches said <em>well said</em>, not quite under their breath.</p>
+<p>At the technical table, Wei was not applauding.</p>
+<p>He was listening. He sat very slightly forward, with his head inclined a degree to one side, the way a man listens to a piece of music he knows well and has just heard played in an unexpected key. His face was pleasant and attentive. Then, a beat after everyone else, he lifted his hands and applauded too, three or four times, without hurry, and smiled.</p>
+<p>Marcus sat down. The column in his pocket crackled faintly against his chest.</p>
+<hr>
+<p>"The chair will take proposals," said the Minister, "for the Commission's first act."</p>
+<p>Marcus raised his hand.</p>
+<p>He had discussed it with nobody except Kira and, by a long, delayed, crackling link on Wednesday morning, Isaiah. He had written it out in pencil on the back of UNCHECKED and then again on a clean sheet, and he did not look at either now.</p>
+<p>"I propose," he said, "that every testimony given in the matter of the Lost Hour, every statement, every account, from every witness, be published in full. With the name of the witness. With every point on which it agrees with other testimony, and every point on which it disagrees. Openly, and permanently, so that the record can be checked by many hands."</p>
+<p>There was a small silence. Somebody on the curved table made a note.</p>
+<p>"Including the forty?" said the woman from the Registry.</p>
+<p>"Including the forty," said Marcus. "Including the three men nobody could seed. Including the confession. Including the Technical Director's own statement." He did not look at the technical table. "Every one. Side by side."</p>
+<p>The Minister's eyes creased. He looked, Marcus thought, genuinely delighted, the way he had looked at the reception when the photographs were being taken. "How very thorough," he said. "How very like a historian." He looked along the table. "Is there any objection?"</p>
+<p>There was none. He called for a show of hands.</p>
+<p>Marcus watched them go up along the curve of the table: the magistrate, the Registry woman, the others, Kira. And at the technical table, Thomas Wei raised his right hand, easily, without being asked twice, and held it up, and looked across the floor at Marcus, and smiled.</p>
+<p>It was a warm smile. It was the smile of a colleague who approves of a good proposal.</p>
+<p>Marcus looked back at him. He could not tell whether he had just made a move, or been allowed to make one.</p>
+<p>"Carried," said the Minister. "Unanimously. A fine beginning."</p>
+<hr>
+<p>The session adjourned at noon.</p>
+<p>The corridor behind the great hall ran the length of the building, with tall windows on one side looking out over the plaza, and doors on the other into small committee rooms that still smelled of new carpet. It was very quiet after the hall. The winter light came in low and white through the windows and lay across the floor in long panels, bright and dark and bright.</p>
+<p>Marcus walked along it alone. Kira had gone ahead to collect her coat. Somewhere far down the corridor, in one of the window bays, Dmitri was standing with his back to the glass, looking at nothing.</p>
+<p>A door opened on the left, ahead of him, and Thomas Wei came out.</p>
+<p>He had his coat over his arm and a folder under it. He was alone, which was rare. He saw Marcus and slowed, as a colleague does, and stopped, and they stood a metre apart in a panel of white light.</p>
+<p>Marcus looked at his face.</p>
+<p>It was a perfectly good face. Tall, graying at the temples. Calm. He had looked at it across a cell, and in a car in the rain, and at the far end of a medical wing, and across a reception room holding two glasses. He looked at it now for a long time, as long as he could decently look, the way he had once looked at the three identical men across Wing C, searching for a thing he knew must be there.</p>
+<p>There was nothing. There was no desk in it, no fourteenth floor, no stretch of arms above a workstation on a slow afternoon. Continuity had taken it cleanly. There was no hole.</p>
+<p>"Another day in paradise, Thomas," said Marcus.</p>
+<p>Wei's face changed.</p>
+<p>It was not alarm. It was the opposite of alarm. Something opened in it, briefly and entirely, a pleasure so plain and so unguarded that for a moment he looked years younger. If Marcus had seen it on anyone else, he would have called it the face of a man who has set a very hard puzzle and just watched someone solve it.</p>
+<p>"You remember," he said.</p>
+<p>"No," said Marcus. "I checked."</p>
+<p>Wei's smile stayed where it was.</p>
+<p>It stayed a beat too long. Not long; a second, perhaps less. Long enough for Marcus to see it hold, and to see that it was being held. Outside the tall window a flock of birds went up off the plaza all at once and wheeled and came down again.</p>
+<p>Neither of them said anything else.</p>
+<p>Then Wei inclined his head, very slightly, the way a man acknowledges a good move across a board, and shifted his coat on his arm, and walked on past him down the corridor, unhurried, light on his feet, through the panels of white and shadow, until he turned the corner at the end and was gone.</p>
+<p>Marcus stood where he was.</p>
+<p>His hands were steady. He noted that. He noted, too, that his heart was going very fast, and that he did not mind. Twenty metres along, in the window bay, Dmitri Volkov had not moved, and his eyes were on the corner where Wei had gone, and then they came back to Marcus, and stayed.</p>
+<hr>
+<p>Kira was waiting at the end of the corridor, by the doors, with her coat on and her bag on her shoulder and the book in her arms.</p>
+<p>She had taken it out of the scarf. She was holding it against her chest the way she had once held a tablet under her arm on a staircase with the proof inside it, and smiled for a camera. She was not smiling now. She looked at his face as he came up, and read it, and did not ask.</p>
+<p>"He came out of the committee room," she said. "I saw."</p>
+<p>"Yes."</p>
+<p>"Dmitri saw."</p>
+<p>"Yes."</p>
+<p>She opened the book and turned it towards him.</p>
+<p>The first page was the passage, in her small square hand: <em>A people that has lost part of its past will accept any past it is given — provided it is given gently, and by someone it trusts.</em> Under it, in the same hand: <em>Dictated from memory, 11–12 January 2107. Border zone. Witnesses present: nine.</em> She turned the page. The second was the ferry verse. <em>Down by the water the ferry is late.</em> Below it she had drawn, carefully, four short lines rising, and a fifth that lifted at the end, like a question.</p>
+<p>"It isn't notation," she said. "I don't know notation. It's just so that whoever reads it knows it goes up."</p>
+<p>"It goes up," said Marcus.</p>
+<p>Dmitri came along the corridor behind him, and the three of them went out through the doors together into the cold.</p>
+<hr>
+<p>The plaza was bright and bitter, with a skin of frost on the paving where the sun had not reached it. Across the square, the Spire's light pulsed in its core the way it had pulsed every day of his life. Someone near the steps recognised him and lifted a hand, and he lifted his back.</p>
+<p>They walked. Nobody said anything for a while. Dmitri kept half a pace behind and to the left, where he could see all three approaches, and Kira walked beside Marcus with the book held against her coat.</p>
+<p>At the corner of the plaza Marcus stopped, and took out his lists, and a pencil.</p>
+<p>He unfolded them against the cold stone of a pillar. CHECKED. UNCHECKED. HOPES. The paper was soft with handling. At the bottom of the middle column was the thin place where he had rubbed something out on the twenty-ninth of December because he had wanted, very much, to be wrong.</p>
+<p>He did not write anything there.</p>
+<p>He went to the bottom of CHECKED instead, and wrote, in his small precise historian's hand, in the format he had used every working day of his life at desk 14-08:</p>
+<p><em>Jan 14, 2107. Justice Center. Involved parties: Chen, M.; Wei, T. Event: he knows that I know. Verification: witnesses — Osman, K.; Volkov, D.</em></p>
+<p>He looked at it.</p>
+<p>It was not proof. The Judge would not have entered it. Pell would have laughed. It was a line in pencil on a piece of paper in the pocket of a man who had been dead until the twenty-ninth of December.</p>
+<p>But there were two names under it, and both of them were standing beside him in the cold, and both of them had seen.</p>
+<p>He folded the lists and put them away, next to the column.</p>
+<p>Two witnesses. For now, it was enough.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="30-the-dilemma.html" class="nav-button">← Previous: Chapter 30: The Dilemma</a>
+            <div class="nav-center">Chapter 31: The Commission</div>
+            <a href="32-epilogue.html" class="nav-button">Next: Epilogue: One Year Later →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

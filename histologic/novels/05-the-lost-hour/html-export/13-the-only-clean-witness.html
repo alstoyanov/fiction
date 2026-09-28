@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="12-the-singer.html" class="nav-button">← Previous: Chapter 12: The Singer</a>
+            <div class="nav-center">Chapter 13: The Only Clean Witness</div>
+            <a href="14-the-carrier.html" class="nav-button">Next: Chapter 14: The Carrier →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 13: The Only Clean Witness</h1>
+<p><em>Friday, November 26, 2106. The resistance barn, the border zone</em></p>
+<hr>
+<p><em>Subject: male. Time: 14:21, by my watch, which I had set by the truck's radio clock at 13:40, before I went up. Location: Ministry of Historical Integrity, side entrance B, observed from the roof across the side street. Distance: forty-odd metres. Elevation: five storeys above the subject. Light: overcast, flat, no shadows.</em></p>
+<p>Dmitri Volkov sat on an upturned crate at the back of the barn, with his elbows on his knees and his hands loose between them, and ran it again.</p>
+<p>He had run it perhaps a hundred times in eleven days, the way he had once run surveillance footage in the Border Security office at night when a case would not close: from the beginning at normal speed, then slower, one thing at a time, then the whole of it again, to see whether anything had shifted.</p>
+<p>Nothing ever had. That was what he kept coming back to.</p>
+<hr>
+<p><em>Approach: from the north, along the side street, on foot. Alone. Not hurried. Not slow. A man who knows where he is going and does not wish to be seen hurrying there.</em></p>
+<p><em>Clothing: dark jacket, hip length, plain. Dark trousers. Shoes I could not see well. No hat. No bag.</em></p>
+<p><em>Hair: short. Colour: dark, or darker than the jacket's collar. The light would not say more than that.</em></p>
+<p><em>Face: not observed. His head was down and turned toward the door. From above, at that angle, a face is a forehead and the bridge of a nose. I would not know it again. I will not say that I would.</em></p>
+<p><em>Height: tall. At the door his head came to within a hand of the transom. Taller than I am, perhaps by a few centimetres.</em></p>
+<p><em>Card: presented with the right hand, at the reader, without searching for it. He had it ready. A staff card, Ministry pattern, white with a dark band. The reader accepted it at once.</em></p>
+<p>That had been confirmed. It was the only part of the minute that anyone else could confirm. Nikolai's door log, from the controller's queue, which Kira had shown him on Wednesday on a borrowed screen in the farmhouse kitchen: <em>SIDE ENTRANCE B. 14:21:07. CARD PRESENTED. ACCESS GRANTED. CLASS: SYSTEMS ARCHITECTURE, SENIOR.</em> His watch had said 14:21. The controller had said seven seconds past. He had felt, reading it, something he had not felt since the Border Security office: the small, cold satisfaction of an observation corroborated by an instrument.</p>
+<p>Forty-one people had cards of that class. One of them had used his at 14:21:07. Dmitri had watched him do it.</p>
+<p><em>The left hand.</em></p>
+<p>He slowed there, every time.</p>
+<p><em>Left arm held slightly away from the body. Elbow out a little. Forearm angled forward and down. The hand itself below the line of the rail, in the shadow of the porch. Not swinging with the walk. Held.</em></p>
+<p>He had noticed it at the time, the way an enforcer notices anything a body does that it would not do without a reason. <em>Carrying something</em>, he had thought. Then <em>no, nothing in it</em>. Then the man was on the steps, and the thought was gone.</p>
+<p>Since Wednesday he had known what Tanaka had found in forty statements under forty coats of paint. <em>The killer was real, and he had a bandaged left hand.</em> Kira had told them all at the farmhouse, in her level voice, and then had said nothing more, and had looked at nobody, and Dmitri had filed that too.</p>
+<p>He could not say that he had seen a bandage. He had seen a man hold his left hand the way a man holds a hand that has been hurt, and nothing of the hand itself. He had spent four years reading reports that said more than their authors had seen, and he would not write one now.</p>
+<p><em>Steps: three, stone, to the door. He took them two and then one, without using the rail.</em></p>
+<p><em>Gait: economical. Balanced. Light on the feet for a man of his height. No stiffness in the back or the knees. Athletic.</em></p>
+<p><em>He walks well.</em></p>
+<p>He had said it over the radio at the time. He had not known why. Alexei had told him to ignore it, and he had, for eleven days, and he could not.</p>
+<p><em>Not old</em>, he added to the log, every time now. <em>Not a young man, perhaps. But not old.</em></p>
+<hr>
+<p>The barn was cold. Elena kept the trucks at the front and the planning at the back, where a stove in an oil drum gave out a little heat and a great deal of smoke. It was mid-morning. Alexei was asleep on a pallet by the stove, on his back, with one arm over his face, having been up half the night arguing with Elena about something. Old Songs was in the farmhouse. Elena was out.</p>
+<p>On a board by the stove was a copy of the forty statements. Kira had gone through it in red, and in every statement a phrase had been circled. Dmitri did not need to read the phrases.</p>
+<p>He looked instead at the other thing the forty statements agreed on. <em>Twenty past two. At the Deputy Minister's door.</em> Twelfth floor.</p>
+<p>At 14:21 the man he had watched was at the side entrance, on the ground.</p>
+<p>A minute's difference, and eleven floors. The forty had him at her door before Dmitri had him at the building. Time was a small thing, Tanaka said; it smeared. But Dmitri had a watch and a controller's log, and the forty had a memory that someone had written, and he did not know what to do with the difference, except write it down.</p>
+<p>He wrote it down.</p>
+<hr>
+<p>Tanaka called at noon.</p>
+<p>She called on the secure line in the barn, the one Elena's technician had built, which came through the speaker of an old field radio on a shelf above the stove. Her voice was small and very precise, with its slight roughness, like an instrument that has been used a great deal. Alexei woke at the sound of it and sat up and rubbed his face.</p>
+<p>"Mr. Volkov," she said. "Dmitri. Kira says you have a question for me."</p>
+<p>"I have one question," said Dmitri. "I was inside the node's range. By your own map, I was well inside it. Forty people in the same district were given a memory of that minute. I was not given it. I would like to know why."</p>
+<p>A short silence on the line. He had learned in Wing C what Tanaka's silences were. They were not hesitation. They were a woman choosing which of several true things to say first.</p>
+<p>"You already know why," she said. "You would simply like someone else to say it, so that it is not only your opinion. That's reasonable. I'd want the same."</p>
+<p>"Then say it, please."</p>
+<p>"The bond," said Tanaka.</p>
+<p>She explained it slowly, in plain words with the clinical ones beside them like labels. A seed went where the heat was, she said: the face, the figure, the thing the mind put its weight on. It wrote there, and it settled, because in an ordinary mind the memory was held by one person, and nothing pushed back.</p>
+<p>"In the three of you," she said, "nothing is held by one person. That's what the technicians at the border never understood, and what Reeves spent a year trying to measure. When the cradle tried to take something out of one of you, the other two held it from outside. We think a seed meets the same thing, in reverse. It tries to settle, and there's something already holding the shape, from outside, and it can't. Not fully." A pause. "You felt it at 14:38. The three of you. Kira told me."</p>
+<p>"We felt something," said Dmitri. "Faintly. Alexei more than I did. Nikolai also, at the factorepo."</p>
+<p>"You felt it least."</p>
+<p>"Yes."</p>
+<p>"I would expect that," said Tanaka. "You're the one who holds on hardest." It was not a compliment. It was a clinical observation, and she said it as one. "The bond resisted Continuity once. It seems to have blunted this too. I'd like to be more certain than <em>seems</em>. I can't be, from here, without a cradle and a chart, and I'm not going to put any of you in a cradle to find out." Another pause. "But I'll say this, and you can quote me. Your memory of that minute is the only account from inside the district that I have any clinical reason to trust."</p>
+<p>Alexei was sitting on the edge of the pallet now, very still, looking at his brother.</p>
+<p>"And outside the district?" said Dmitri.</p>
+<p>"Outside the district, the family I brought across. The guards at the lakeshore. Anyone the seed couldn't reach." Tanaka's voice did not change. "None of them saw what you saw."</p>
+<hr>
+<p>Old Songs came across the yard after lunch with a pot of tea and his coat over his shoulders like a cape, and sat down on the other crate by the stove, and looked at Dmitri for a long time without saying anything.</p>
+<p>Dmitri waited. You waited for Old Songs the way you waited for a camera's arc to come round.</p>
+<p>"Sing it to me," said Old Songs.</p>
+<p>Dmitri looked at him.</p>
+<p>"Your minute," said the old man. "The man at the door. Sing it."</p>
+<p>"I do not sing."</p>
+<p>"Then say it. In time. Like a verse." He tapped the rim of his cup, slowly, four beats, and then four again. "The same way every time. Same words, same order, same beat."</p>
+<p>Alexei had started to grin. Dmitri looked at him, and he stopped, mostly.</p>
+<p>"Why?" said Dmitri.</p>
+<p>"Because a thing you say in rhythm, you say the same way or you notice," said the old man. "If it's been written into you, it'll drift. It won't know its own words. It'll want to be told." He tapped the cup again. "And because I want to hear it."</p>
+<p>Dmitri sat for a moment with his hands between his knees. His ears had gone hot. He had dropped his weapon in the fog in front of Captain Sokolov, and knelt at her feet in a frozen garden with a slack face and a rake. None of it had been as embarrassing as this.</p>
+<p>He said it anyway. He said it to the beat of the old man's finger on the cup, in his flat enforcer's voice, looking at the stove.</p>
+<p>"<em>North along the side street, walking, one.</em> <em>Dark jacket to the hip. No hat. No bag.</em> <em>Card in the right hand, ready. Door at twenty-one.</em> <em>Left arm held out. The hand held low. Not swinging.</em> <em>Three steps. Two, then one. No rail.</em> <em>He walks well.</em>"</p>
+<p>The finger stopped.</p>
+<p>Nobody said anything. Alexei was not grinning any more.</p>
+<p>"Again," said Old Songs.</p>
+<p>Dmitri said it again. Then the old man drank his tea and talked to Alexei for a quarter of an hour about the smoke from the oil drum and the damper on the farmhouse stove, and about nothing, and then turned without warning and tapped the cup, and said, "Again," and Dmitri said it a third time, and it was the same. Every word. Every beat. <em>Two, then one.</em></p>
+<p>Old Songs put his cup down on the floor.</p>
+<p>"That one's yours," he said. "Nobody wrote it."</p>
+<hr>
+<p>It was Alexei, of course, who said what it meant.</p>
+<p>"So that's it." He was on his feet, the way he always ended up on his feet, as if sitting down were a position you could only hold for so long. "That's the whole case. Forty people who were painted, and one who wasn't. Dima's the only clean account of the minute that matters in the entire capital." He spread his hands. "And he's dead."</p>
+<p>"Legally," said Dmitri.</p>
+<p>"Legally. Registry says so. Cognitive failure during fact storm, the second of August, one thirty-one in the morning. A corpse can't testify, Dima." Alexei's grin had come back, but it was the wrong kind now, too wide. "So to be a witness, first you've got to be alive. And to be alive, you've got to walk into a Ministry building and say <em>here I am</em>. And the minute you do that—"</p>
+<p>He did not need to finish. Dmitri had laid it out himself, at three in the morning, on this crate.</p>
+<p>If Dmitri Volkov was alive, then the escape was real, and not a storm and a list of the dead. If he was alive, then the Director of Ashford had certified a death she knew was false, and the inquiry that had been circling Helena Kovač since August would have the thing it was looking for. And if he was alive, then so were the others. His brothers. Marcus, who was already known to be alive, and whom the Ministry wished very much to prove a murderer. Kira. Tanaka. Old Songs. Every one of them a dead person who had crossed the line back, and every one of them findable, once the Registry knew to look.</p>
+<p>One witness, and the whole net came up with him.</p>
+<p>"Then we all come back," said Alexei. "All of us. Together. On the steps of the Justice Center, with every camera in the capital pointing at us." His eyes had gone bright. "Let them choke on it."</p>
+<hr>
+<p>Nikolai's message came at four, through the receiver on the shelf, in the smuggler's shift. Alexei decoded it aloud, standing by the stove, his lips moving over it the way their father's had once moved over the cipher under the green lamp.</p>
+<p><em>TO D. AND A. KIRA HAS TOLD ME. NOT YET. I'M THE ONLY ONE INSIDE. IF YOU COME BACK, THEY'LL LOOK AT EVERYONE WHO SHARES YOUR FACE. — N.</em></p>
+<p>Alexei read it twice. Then he put the receiver down on the shelf very gently, which was worse than if he had thrown it.</p>
+<p>"He's right," said Dmitri.</p>
+<p>"He's frightened."</p>
+<p>"He is right <em>and</em> he is frightened. The two are not exclusive." Dmitri looked at the board, at the red circles. "He is inside Wei's investigation, under a dead man's number, with a beard and a pair of glasses. If two men with his face walk up the steps of the Justice Center, every person in that building who has ever looked twice at Pieter Lang will look three times."</p>
+<p>"So we leave Marcus in a cell?"</p>
+<p>"I did not say that."</p>
+<p>"Then what <em>are</em> you saying? Because it sounds like <em>wait</em>. It always sounds like <em>wait</em> with you." Alexei's voice had risen. "We waited in Wing C. We waited five months while they took him apart in front of us, and we had a <em>rule</em>, Dima, you made it, <em>survive, wait, trust no one</em>, and it nearly—"</p>
+<p>"Lyosha."</p>
+<p>It stopped him. It always had.</p>
+<p>They stood on either side of the oil drum and looked at each other, the same face twice in the smoke.</p>
+<p>Dmitri felt it then, as he had felt it all his life, in the bond: Alexei's urgency, pressure behind his own eyes, and far off across the city, faint and cold, the thing that was Nikolai's fear, like a pair of hands that would not get warm. And himself, between them. Pulled both ways at once.</p>
+<p>It was, he realised, the place where Nikolai had always stood. In the middle. Holding the two of them together while they pulled. He had never once, in thirty-one years, stood there himself. He had always been the one pulling.</p>
+<p>He did not like it. He understood, suddenly, a great deal about his youngest brother.</p>
+<hr>
+<p>Old Songs sang after supper.</p>
+<p>He sang in the farmhouse kitchen every evening now, with words, since the dawn in the safe house in August when he had sung the names of the dead. Tonight Alexei asked him for something to take the edge off, and the old man looked round the table at all of them and chose, with a very small smile, a comic, bitter ballad about a town that lost an hour.</p>
+<p>&gt; <em>and every one of them was sure,</em> &gt; <em>and every one was sworn;</em> &gt; <em>and nobody could tell the hour</em> &gt; <em>the day the clocks were gone.</em></p>
+<p>Alexei laughed, in spite of himself, until he coughed. Kira did not laugh. Neither did Dmitri.</p>
+<p>He sat at the end of the table afterwards with his hands round a cup and thought about what he was afraid of.</p>
+<p>It was not arrest. He had been arrested before, and put in a glass cell and a white chair and a garden. He was not afraid of Unit 3. He was not, he found, very much afraid of being killed.</p>
+<p>He was afraid of <em>mattering</em>.</p>
+<p>For four years he had written reports. Observations, times, distances, descriptions: the log of a trained man who saw clearly and wrote exactly what he saw. And none of it had ever needed to be believed. It had gone into the record, and the record had gone to The Judge, and The Judge had turned it into a probability, and the probability had decided. The enforcer's truth had always been the system's truth. He had been an instrument. An instrument does not need to be believed. It needs only to be calibrated.</p>
+<p>A witness was different. A witness stood up in a room, alone, with his own face, and said <em>I saw this</em>, and then the room had to decide whether to believe him. And if it did not, there was nothing behind him. No record. No Judge. Only a dead man who said he had watched another man walk well up three steps.</p>
+<p>He had never in his life been believed. He had never had to be.</p>
+<p><em>That one's yours</em>, the old man had said. <em>Nobody wrote it.</em></p>
+<p>He looked down the table. At Alexei, who wanted to walk up the steps tonight. At Kira, who had not laughed, and who knew something about the hand that she was not saying. At the old man, humming now, low, the Lakeshore Air, the phrase lifting at the end like a question.</p>
+<p>"When the time comes," Dmitri said, "I will testify."</p>
+<p>Alexei looked up.</p>
+<p>"Not tonight," said Dmitri. "Not on the steps. Not until Kolya is ready, and we know what it costs him. But when there is a room that will hear it, I will stand up in it and say what I saw." He put the cup down. "With my own face."</p>
+<p>Alexei did not grin. He put his hand on the table, below the edge of the lamp's light, where only his brother could see it, and hooked his forefinger over his middle finger, and held it.</p>
+<p>Dmitri, after a moment, did the same.</p>
+<hr>
+<p>The news came at nine, on the farmhouse's old receiver, which picked up the capital's evening bulletin if you held the aerial at the right angle against the window.</p>
+<p>They had known since Monday about the transfer. Nikolai had sent it the same afternoon: Marcus's move to Secure Care Unit 3, approved for Monday morning, had been postponed at the last hour at the request of the lead investigator. Wei's words, in the order, were short. <em>The subject is my only material witness.</em> It had been the one good thing in the week. Kira had brought a copy with her on Wednesday, and read it three times at the kitchen table, and then gone out into the yard alone.</p>
+<p>The bulletin read it again now, as background. The postponement. The lead investigator's request. And then the thing that it was really reporting.</p>
+<p><em>Undersecretary Iver Pell of the Ministry of Historical Integrity has announced that the deceased subject Chen, Marcus, will be brought before a tribunal for the murder of Deputy Minister Amara Singh on Monday, December sixth. The Undersecretary stated that the tribunal would proceed "without delay for procedural novelties." Transfer of the subject to secure care for stabilisation will follow the verdict.</em></p>
+<p>Elena reached over and turned it off.</p>
+<p>Nobody spoke.</p>
+<p>Dmitri looked at the calendar on the kitchen wall, a paper one, from a feed merchant in a village that no longer had a name on any map. He did not need to count. He counted anyway, because he always did.</p>
+<p>Friday. The twenty-sixth. Monday, the sixth.</p>
+<p>Ten days.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="12-the-singer.html" class="nav-button">← Previous: Chapter 12: The Singer</a>
+            <div class="nav-center">Chapter 13: The Only Clean Witness</div>
+            <a href="14-the-carrier.html" class="nav-button">Next: Chapter 14: The Carrier →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

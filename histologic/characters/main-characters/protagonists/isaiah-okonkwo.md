@@ -67,7 +67,7 @@ Nine rooms. The **parlour** holds harmless, true, warm things (his aunt's table,
 | 29 | An empty chair at the table for him. |
 | Epilogue | The expulsion order through the hatch: *"EFFECTIVE: 15 NOVEMBER 2106, 14:30."* "Signed by some Director." He sews newsprint strips, written with a burned match, into the coat lining. |
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 | Ch | What he does |
 |----|--------------|
 | **5** | **POV: "The Coat".** Sokolov escorts him to the lakeshore checkpoint in the fog: "The Director's office requested this slot. It was the only one available." At 14:30 he walks into **Chronos**. "Write carefully, Mr. Okonkwo." Next day Veridica denies expelling him ("absconded from secure care"), and Chronos has no record of his entry. He is stateless and detained. The SFW mission offers asylum at the price of becoming its witness. He writes: *Who chose 14:30?* |

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="09-recruitment.html" class="nav-button">← Previous: Chapter 9: Recruitment</a>
+            <div class="nav-center">Chapter 10: Another Day in Paradise</div>
+            <a href="11-erase-then-seed.html" class="nav-button">Next: Chapter 11: Erase, Then Seed →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 10: Another Day in Paradise</h1>
+<p><em>Friday, November 19, 2106. Enforcement Center, Veridica Capital</em></p>
+<hr>
+<p><em>Date: November 19, 2106. Time: 06:10, approximately. Location: Enforcement Center, detention level, cell 11. Involved parties: one. Status: awake.</em></p>
+<p>He composed it before he opened his eyes, the way he did every morning now, and then he opened them and checked it against the room. White ceiling. White walls. A steel bunk, a steel basin, a steel toilet without a seat. The door with its slot at waist height. The camera dome in the corner, which had a small red light that never went out.</p>
+<p><em>Status: awake. CHECKED.</em></p>
+<p>There was no clock. There had been no clock in Wing C either. He had learned there to count meals, and he counted them here: breakfast was a tray of bread and something yellow, and it came at about six. Lunch came when the questioners had finished with him for the morning. Dinner came when they had finished with him for the day. He had had four breakfasts. It was Friday.</p>
+<p>He sat up and put his feet on the floor and looked at the wall.</p>
+<hr>
+<p>They had given him a pencil on Tuesday, after the desk officer who moved him down to the detention level had taken the stub.</p>
+<p>It had not been a kindness. It had been a procedure. A detainee was entitled to writing materials for his defence, and a detainee who was legally deceased was in a category the procedure had not anticipated, so they had given him the pencil and not the paper, and seemed to feel that this split the difference. His lists they had let him keep, because they were only paper. But the lists were small, and he was running out of room, and on Tuesday night he had stood in front of the wall opposite the bunk, where the camera could see every stroke, and drawn three columns.</p>
+<p><em>CHECKED. UNCHECKED. HOPES.</em></p>
+<p>The lines leaned; he had no straight edge. And then, under CHECKED, in his small precise historian's hand, he had written out the hour.</p>
+<p><em>13:45. Annex, side door. With K.O. Visitor's pass, name of</em> — he had not written the false name. The camera could read. <em>Borrowed frames.</em></p>
+<p><em>13:52. Terminal 9. Pass accepted.</em></p>
+<p><em>14:10. Upload begins. Statement 1 of 214. Border district 7.</em></p>
+<p><em>14:21. Room too bright. No flicker. UNEXPLAINED.</em></p>
+<p><em>14:33. A boy, school party. "Is it true?" "Yes."</em></p>
+<p><em>14:52. Upload complete.</em></p>
+<p><em>14:55. Twelfth floor. Door locked. Aide's desk empty. Cut flowers. Waited four minutes.</em></p>
+<p><em>14:59. Stairs. Checked every step with K.O. Accounts match.</em></p>
+<p><em>15:01. Street. Alert on every screen.</em></p>
+<p>Nine lines. He had looked at them on Tuesday night for a long time, and they had held. Every one of them was his. He could feel the chair in the annex, the slight give of the terminal keys, Kira's jaw set beside him, the child who had asked what he was typing. <em>History</em>, he had told him. He could smell the flowers.</p>
+<p><em>That is exactly,</em> a voice in him had said, very quietly, <em>what the field felt like too.</em></p>
+<hr>
+<p>The questioners came at eight.</p>
+<p>There were two of them, and they were not Kade. Kade had been courteous and tired and had asked his questions as if the answers might matter. These two were from the Ministry, not the Enforcement Division, and they had the manner of people who had been sent to finish something. A man and a woman, both in dark suits, neither of whom had ever told him their names. The man did most of the talking. The woman had a tablet and read from it.</p>
+<p>"Statement fourteen," she read. It was the fourth day, and they had reached fourteen for the third time. "Records officer, twelfth floor. 'I was at the water cooler by the lift. He came past me toward the Deputy Minister's door. He was in gray, like a patient's clothes. He was holding his left hand like it hurt. There was a white bandage on it.'"</p>
+<p>"I was in the basement," said Marcus.</p>
+<p>"Statement fifteen. 'Gray clothes. Gray, like they wear in the correction wards. His left hand was wrapped.'"</p>
+<p>"I was wearing a dark coat. It's in your evidence room. You took it from me on Monday night."</p>
+<p>"Statement sixteen," said the woman.</p>
+<p>He held his hands up. He had done it on Tuesday and on Wednesday and on Thursday, and he did it again, both of them, palms out and then turned over, in the flat white light, for the camera. Thin hands, a historian's hands, a little ink on the right middle finger from the pencil. No bandage. No cut. No mark of any kind.</p>
+<p>The man looked at them without interest.</p>
+<p>"You took the bandage off," he said.</p>
+<p>"There was never a bandage."</p>
+<p>"Forty people saw a bandage, Mr. Chen."</p>
+<p>"Then forty people saw someone who wasn't me."</p>
+<p>"Forty people," the man said, "saw <em>you</em>. Your face. They picked it out of an array of thirty. Not one of them hesitated." He leaned back. "You understand our position. We have forty honest citizens, in their own building, with no reason to lie and no way to coordinate, who all describe the same man. And we have you. A man who is legally dead, who escaped from corrective custody, who by his own account was in the building at the time under a false name, and whose memory, by his own account, has been interfered with before." He let that sit. "Which of those would you believe?"</p>
+<p>Marcus did not answer.</p>
+<p>"Statement sixteen," said the woman.</p>
+<hr>
+<p>They kept him until the lunch tray. Then they left, and the door sealed behind them, and he sat on the bunk and did not touch the tray, and looked at the wall.</p>
+<p><em>Forty people saw you.</em></p>
+<p>It was the third night that he had moved it.</p>
+<p>He had woken at what he thought was about three, from a dream of the white room, and he had not been able to find the ceiling. For a moment he had not known which room he was in. The hood had been coming down, and the hum, and the calm pleasant voice just behind his head, <em>there's someone new in here, isn't there</em>, and he had lain with his heart going and recited until the room came back. <em>Traffic incident, corner of Fifth and Main, fourteen-oh-two. Involved parties: two. Status: resolved.</em> The dull words. The formats. They had got him through Wing C and they got him through the dream, and afterwards he had lain in the dark and thought about the field.</p>
+<p>He had been certain about the field. He had lain in wet grass under the stars with Kira and felt the cold of the ground through his shirt, and he would have sworn to it before The Judge. And there had been no field. Tanaka had sat with him in a broken factory in the border zone and told him so, gently, and he had not been able to feel that she was right. He still could not.</p>
+<p><em>How would I know?</em></p>
+<p>So at three in the morning he had got up in the dark and stood in front of the wall and, very carefully, by feel, written the nine lines again under UNCHECKED. Then he had drawn a single line through the ones under CHECKED. Not an erasure. A historian does not erase. A line, so that anyone could still read what he had once been sure of.</p>
+<p>It was the hardest thing he had ever written. It was also, he thought, the only honest thing he could do. He could not bear to be as certain about the annex as he had been about the stars.</p>
+<p>In the morning the wall had looked exactly as it did now. Nine lines struck through under CHECKED. The same nine lines, whole, under UNCHECKED. And under HOPES, from the first night, a single word he had not moved and did not intend to: <em>K.</em></p>
+<hr>
+<p>In the afternoon the duty officer came to the slot with a form.</p>
+<p>"Undersecretary Pell's request," she said, not unkindly. She was young, with a tired face; she did the afternoon shifts. "For your transfer to Secure Care Unit 3. For re-baselining. It's under review. You're entitled to be informed." She held the form to the slot so that he could read it, and did not seem to expect him to.</p>
+<p>He read it anyway. <em>Subject exhibits persistent fixed beliefs inconsistent with witness evidence. Prior Continuity history. Recommend transfer for stabilisation and re-baselining at the earliest opportunity.</em></p>
+<p>"Re-baselining," he said.</p>
+<p>"It's the standard term," said the officer. "It means—"</p>
+<p>"I know what it means."</p>
+<p>She looked at him for a moment. Then she took the form away and the slot closed.</p>
+<p>He sat on the bunk with his hands on his knees. He knew what it meant. It meant a white chair. It meant a hood on a jointed arm, and a calm voice, and the hum, and the slow patient search for whatever was hottest in him, and then the rubbing, and the draining, and the filing, until he was flat and calm and empty and believed whatever he was told. It meant Unit 3, two hours north, where there were no windows and the cradles went deeper. Isaiah had been there. Isaiah had come out with a coat full of newsprint. Isaiah was Isaiah.</p>
+<p><em>Reduction to baseline achieved. Stable. Beautiful baseline.</em></p>
+<p>He had been at the floor once. Tanaka had named it for him. He knew exactly how far down it was, and how quiet, and how little of him had been left on the way back up. He did not think there was enough of him left now to make the climb twice.</p>
+<p>He looked at the wall, at the single letter under HOPES, and made himself breathe.</p>
+<hr>
+<p>Wei came at four.</p>
+<p>Marcus did not know it was four. He knew it was after the afternoon shift change, because the duty officer's voice had gone and a man's had replaced it, and before dinner, because there had been no dinner. The door unsealed without warning, the way it always did, and he stood up, because Wing C had taught him to stand up when a door opened, and a tall man came in carrying two paper cups.</p>
+<p>"Mr. Chen. Please, sit. I'm not one of them."</p>
+<p>He was graying at the temples, in a dark suit and an open coat, and his voice was quiet. He held out one of the cups.</p>
+<p>"Tea. I'm told it's terrible. I thought you might want something warm more than you'd mind that."</p>
+<p>Marcus did not drink tea. He had drunk black coffee without sugar every morning of his life that he could remember. He took the cup anyway, because it was warm, and because his hands wanted something to hold.</p>
+<p>"My name is Wei. I'm the lead investigator." The man sat down on the end of the bunk, which no one else had done, leaving a careful space between them. The door stayed open behind him, and a guard stood outside it, and Wei did not seem to notice the guard at all. "I've been reading about you for three days. I thought it was time I heard you."</p>
+<p>"The others have heard me."</p>
+<p>"The others have questioned you. It's not the same thing." Wei turned his own cup in his hand. "I'll tell you where I am, Mr. Chen, so that you don't have to guess. I don't believe you did it. That isn't the same as being able to prove you didn't." He looked up. His eyes were steady and tired and entirely serious. "Help me prove it."</p>
+<p>Marcus looked at him for a long time.</p>
+<p>It was a trick. It had to be a trick. It was the oldest one there was: the kind voice after the hard ones, the tea after the statements. And he found, sitting on a steel bunk with a paper cup in his hands, that he did not care. It had been four days. Nobody in four days had said <em>help me</em>.</p>
+<p>"What do you want to know?" he said.</p>
+<hr>
+<p>Wei wanted to know everything, and in order.</p>
+<p>Not what he had been asked for four days. Not <em>why did you kill her</em> or <em>how did you get the bandage</em>. He asked about the annex. Which entrance. How many people in the room. Where the cameras were. Which terminal, and why that one. How long the pass took to authenticate. What the guard had looked like, the one who had wandered past twice. He asked what the child had asked, and what Marcus had answered, and when Marcus said <em>History</em>, Wei smiled, briefly, as if he liked it.</p>
+<p>He asked about the time. How Marcus knew it was 14:10 when the upload began. The terminal clock. And 14:52? The terminal clock again. And the twelfth floor. How long on the stairs. Which stairs. How many flights. Whether the aide's chair had been pushed back or tucked in. Whether the door to the Deputy Minister's office had a window, and whether there had been a light under it.</p>
+<p>"There was a smell," Marcus said. "Flowers. Cut flowers. From one of the offices down the corridor. A door was open."</p>
+<p>Wei was quiet for a moment.</p>
+<p>"Yes," he said. "There were flowers."</p>
+<p>He asked about 14:21, and Marcus told him. The room too bright, for a moment, like a word almost remembered. No flicker. No pressure. Nothing like a storm. Wei listened to that with his head slightly on one side and did not write it down. He did not write anything down. He listened, all the way through, with his whole attention, the way a historian listens to a witness whose account he has not yet decided about, and Marcus found that he was telling it better than he had told it to anyone, more precisely and more slowly, because for the first time in four days someone was treating him as a witness to the hour instead of a suspect in it.</p>
+<p>When he had finished, Wei sat back.</p>
+<p>His left hand was resting on his knee, and then, when he leaned to put his cup on the floor, on the edge of the bunk between them. There was a white dressing across the back of it, neat, gauze and tape.</p>
+<p>Marcus looked at it.</p>
+<p>In his head, without his permission, a woman's voice from a tablet read: <em>His left hand was wrapped. A white bandage. Holding it like it hurt.</em></p>
+<p>Something went through him, small and cold, like a single drop of water down the back of the neck.</p>
+<p>Then Wei picked up his cup again, with his right hand, and drank from it, and made a face at the tea, and the moment passed. Marcus looked at the dressing once more and away. <em>A cut. People cut their hands.</em> Half the men in the capital had a cut somewhere. He had been staring at statements about a bandaged hand for four days, and now he was seeing bandages. It was exactly the kind of thing he had learned not to trust in himself.</p>
+<p><em>Coincidence</em>, he thought, and filed it, and did not write it down.</p>
+<hr>
+<p>Wei stood up. He looked round the cell, the way a man looks round a room he has been in for an hour and has only just noticed. His eyes stopped on the wall.</p>
+<p>He did not ask. He crossed the cell and stood in front of the three columns with his hands in his coat pockets and read them, all of it, the struck lines and the whole ones, the way you read a document that has been handed to you in evidence. Marcus watched him read. It felt, absurdly, like being undressed.</p>
+<p>Wei read for a long time. Then he turned round.</p>
+<p>"You keep your own record," he said.</p>
+<p>A pause.</p>
+<p>"Good."</p>
+<p>He said it simply, as if it were the most natural thing in the world, as if a man who had been told by forty witnesses and a Ministry and a nation that his memory was false should of course go on keeping his own record, on a wall, in pencil, with a camera watching. Marcus did not know what to say. He found that his eyes were stinging, and that he was angry about it.</p>
+<p>"They'll paint over it," he said.</p>
+<p>"Possibly. I'll ask them not to." Wei picked his cup up off the floor. At the door he stopped and turned back, and rolled his shoulders, and stretched his back a little, the way a man does who has been sitting too long on something hard. He smiled. It was a tired, crooked, friendly smile, and he said it lightly, like an old joke between colleagues at the end of a long shift:</p>
+<p>"Another day in paradise."</p>
+<p>Then he was gone, and the door sealed, and the guard's footsteps went away along the corridor.</p>
+<hr>
+<p>Marcus sat on the bunk with the paper cup in his hands.</p>
+<p>Something had moved in him.</p>
+<p>He did not know what. It was the thing he had felt once in Wing C, at a corridor junction, looking up into a pair of hazel eyes he had never seen before and knowing, with his whole body, <em>I know you</em>. Recognition without content. A key turning in a lock, and nothing behind the door.</p>
+<p>He knew the words. He knew where he had heard them: the fourteenth floor, the hum of the processors, three monitors, a man at the next workstation stretching his arms above his head. <em>Another day in paradise.</em> Thomas. He had found that piece in the garden at Ashford, in a four-minute gap, and turned it over, and kept it. <em>I think he was my friend.</em></p>
+<p>But it was a common thing to say. People said it on every floor of every office in the capital; it was the kind of joke that belonged to nobody. It was not the words that had moved in him.</p>
+<p>It was something in the way they had been said.</p>
+<p>He reached for it. He reached for Thomas, for the man at the next desk, for his face, for the sound of him, for anything he could lay beside the man who had just left and hold up to the light. And there was nothing there. Not a blur. Not a shadow. A smooth blank place, clean as a wiped table, where a face had been. Continuity had taken the faces of his old life with the feeling of them, and filed the rest, and what it had left him was a name and a stretch and four words that half the city used.</p>
+<p>He sat with his hands round the cup until it was cold.</p>
+<p>Then he got up and went to the wall, and under UNCHECKED, below the struck and unstruck hour, he wrote:</p>
+<p><em>"Another day in paradise." Thomas used to say it. Everyone says it. Where have I heard it said like that?</em></p>
+<p>He looked at it for a long time. He did not move it anywhere.</p>
+<hr>
+<p>The dinner tray came, and went back untouched.</p>
+<p>An hour later the door unsealed again. It was Kade.</p>
+<p>He did not come in. He stood in the doorway in his gray uniform, older and grayer than he had been a year ago, when he had said <em>seventy-three percent</em>, and he held a form in his hand that he did not look at. He looked at Marcus instead, and then, briefly, at the wall, and then back.</p>
+<p>"Mr. Chen," he said.</p>
+<p>Marcus waited.</p>
+<p>"The Undersecretary's request has been approved. You'll be transferred to Secure Care Unit 3 on Monday morning. For re-baselining." Kade's voice was as matter-of-fact as it had always been. It had never been cruel. It was not cruel now. "I'm told the lead investigator has asked for a review. I'm also told it's unlikely to be heard before Monday."</p>
+<p>He stood there a moment longer.</p>
+<p>"I'm sorry, Mr. Chen," said Kade, and closed the door.</p>
+<hr>
+<p>Marcus sat on the bunk.</p>
+<p>He put his elbows on his knees and his head in his hands, the way he had sat for two months in 7-H, with his face to the white wall, while the cameras watched and the orderlies ticked their boxes and the machine took him apart. He had learned to sit like that on purpose, afterwards. He had learned to make it a performance, a flat, empty, perfect copy of a man who had gone through the floor, so that nobody would look for the man who was still there underneath.</p>
+<p>He sat like that now, in cell 11, with the red light on in the corner.</p>
+<p>For the first time since Wing C, it was not a performance.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="09-recruitment.html" class="nav-button">← Previous: Chapter 9: Recruitment</a>
+            <div class="nav-center">Chapter 10: Another Day in Paradise</div>
+            <a href="11-erase-then-seed.html" class="nav-button">Next: Chapter 11: Erase, Then Seed →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

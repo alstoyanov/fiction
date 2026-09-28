@@ -65,7 +65,7 @@ He does not appear. Traces:
 - **Book 4, Ch 19:** Kovač says Reeves "has backing high up", and she doesn't know how high.
 - **Book 4, Ch 29:** Phase Two was "approved at Ministry level" by someone "still there". (Not identified. Do not identify it in Book 5.)
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 | Ch | What he does |
 |----|--------------|
 | Prologue | Offstage. His Deputy, Singh, holds page 30 of his copy and "has begun to suspect who in this building believes that sentence". |

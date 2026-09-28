@@ -1,0 +1,203 @@
+# Chapter 23: A Very Good Case
+
+*Friday, December 17, 2106. The resistance barn, the border zone; a rooftop, Veridica Capital*
+
+---
+
+There were twenty-three people in the room on the screen, and Dmitri Volkov counted them twice.
+
+*Briefing room, Ministry of Historical Integrity, sixth floor. One lectern. One wall display. Three rows of chairs. Undersecretary Pell, front row, left, arms folded. Director Kovač, front row, right, coat on. Eleven investigators from the lead investigator's office. Four from Enforcement. Two clerks. The lead investigator's technical team, standing at the back: five.* He found his brother among the five without meaning to look for him. A hunched contractor with a beard and glasses he did not need, holding a tablet against his chest. Pieter Lang. Beside him a young woman with short hair and her arms crossed. *Maya Reeves.*
+
+He felt Nikolai before he had finished counting him: the familiar cold at the ends of his own fingers, faint across the city, as if he had been holding something from a freezer. Kolya was afraid. Kolya was always afraid in that room, and went into it every morning anyway.
+
+In the barn the link ran on a salvaged screen propped on a hay rack. Elena stood behind it with her arms folded, as she had stood behind every briefing Dmitri had seen her give. Alexei sat on an upturned crate beside him with his elbows on his knees. By the stove, where it was warm, Old Songs had his hands round a cup, not humming. In a small window at the corner of the screen, relayed from the Ministry flat, were Marcus and Kira, side by side on a sofa that did not belong to them, with the rigid attentiveness of people who have been told they are safe.
+
+"If they are testifying," Director Kovač had said, "they should see the case." It was a sound principle. Dmitri had approved of it at once, which had been his first mistake of the morning.
+
+At ten exactly the lead investigator went to the lectern.
+
+---
+
+Thomas Wei did not use notes. He stood with his right hand resting on the edge of the lectern and his left held loosely at his side, and waited until the room was quiet. Tall. Graying at the temples. A voice that did not need to be raised. He thanked the Undersecretary and the Director. He thanked his team by name, all five of them, and his eyes went to Pieter Lang at the back and rested there for exactly as long as they rested on the others, and no longer.
+
+Then he turned to the camera.
+
+"And thank you to our witnesses on the link," he said. "Mr. Volkov. And Mr. Volkov." A small, courteous pause, almost a joke. "I know this is unusual. I think it is right."
+
+Alexei snorted, very quietly. Dmitri did not move.
+
+"I want to set out the case against Dr. Reeves," said Wei, "as simply as I can. Four things. Signal, method, motive, opportunity."
+
+The wall display behind him lit.
+
+*Signal.* At fourteen eighteen on November fifteenth, a carrier had been injected into the Ministry district's broadcast node. Ms. Reeves had found the injection point in a buffer that survived the erasure. Wei said her name without emphasis and did not look at her. The payload had been traced, by Ms. Reeves and Mr. Lang, to a terminal registered to the Ministry research annex in the north district, where Continuity's work had continued without authorisation after August. In the payload header was a developer's comment: a lowercase Latin tag, a joke about bees. The display showed it. It had been matched against Dr. Reeves's archived work at Ashford. Eleven instances. The style was his.
+
+*Method.* Continuity seeding. Phase Two. *Erase, then seed.* A method that Dr. Reeves had designed, named and, by his own words in the data centre at Ashford, piloted. There was a quotation from Isaiah Okonkwo's article on the display. Wei read it aloud, crediting it.
+
+*Motive.* Deputy Minister Singh's internal inquiry into Continuity had been opened on August sixth. By October it had reached the annex. In October, too, she had opened a second file, on Ashford. Wei turned his head, slightly, toward the front row. "On Ashford, and on its Director, whose cooperation with this investigation has been exemplary." Kovač inclined her head a quarter of an inch. "The Deputy Minister's inquiry would have ended Dr. Reeves. Not only professionally. Criminally."
+
+*Opportunity.* The door controller's error register, which had survived where its queue had not, recorded a staff card presented at the Deputy Minister's side entrance at fourteen twenty-one. The name field was corrupted. Dr. Reeves had held Ministry access throughout Continuity's sponsorship, and it had never been formally revoked. A witness, an unseeded witness, had seen a man in a dark jacket enter by that door at that minute. Dr. Reeves owned a dark jacket. It had been recovered from the annex.
+
+*So does every man in this city,* Dmitri thought. *So do I.*
+
+"And the forty witnesses," said Wei. He let the display go dark behind him, as if what came next did not need a slide. "Forty honest people who remember Marcus Chen walking into that office, in Wing C gray. I have thought about them more than anything else in this case. They are not lying. They were written. The method's author chose whose face to write." He paused. "He chose the face of a man who had escaped him. He chose the clothes of the wing he had lost. I do not think we need to look far for why."
+
+In the corner window Marcus had closed his eyes.
+
+---
+
+There was one more thing, and Wei came to it himself, before anyone could raise it.
+
+"Mr. Volkov," he said to the camera. "The elder Mr. Volkov. Your account of fourteen twenty-one is the most valuable piece of evidence we have. It is the only one we can be sure was not written. You described a man who moved like a younger man. I take that seriously." He said it gently. "I would ask you to consider this. You saw him from a rooftop across the street, at something over forty metres, for perhaps six seconds. He was a man about to do a terrible thing. Frightened men move quickly. Frightened men take stairs like athletes. I have seen it. So, I think, have you."
+
+It was well done. Dmitri noted, with the part of his mind that had once written arrest reports, how well it was done. The one fact that did not fit had been named, honoured and set down in a place where it no longer pressed on anything.
+
+*The elder,* he thought. He had never told anyone on the Justice Center steps which of them had been born first.
+
+---
+
+Afterwards the room on the screen loosened, the way rooms do.
+
+Pell unfolded his arms. He had wanted a dead man in Wing C gray, and he had been given a Continuity monster instead, and Dmitri watched him decide in the space of a breath that a Continuity monster would do. Two of the Enforcement officers were smiling. In the front row Director Kovač took off her glasses and pressed her fingers to her eyes, and when she put them back on her shoulders had come down a full centimetre.
+
+In the corner window Kira had put her hand on Marcus's knee. Marcus was looking at the screen as if he could not believe what it showed him, and was trying to.
+
+"Well," said Alexei beside him, and let his breath out, and laughed once, from somewhere low. "Well. That's that, then."
+
+"It clears him," said Elena. She said it as if testing the weight of it. "It clears all of you."
+
+By the stove, Old Songs said nothing. He was looking at the screen, at the lectern, at the tall man who was now shaking hands with the Undersecretary, and his face had the stillness it had in Wing C when he stopped humming.
+
+Dmitri reached forward and switched off the link.
+
+---
+
+He found Alexei in the yard an hour later, splitting kindling with a hatchet that was too small for it, badly.
+
+"You are holding it too high," said Dmitri.
+
+"I'm holding it exactly where I like it." Alexei swung, and missed the centre of the log, and swore. He looked up. His face changed. "Oh no. No, Dima. Don't."
+
+"Don't what?"
+
+"Don't do the face. You've got the face. The one you had in the barn on the fifteenth, with your pencil." Alexei set the hatchet down. "It's over. He did it. He's a monster and he did it, and they've got him, and for once in our lives the system has caught the right man. Let it."
+
+Dmitri looked at the half-split log.
+
+"It is a very good case," he said.
+
+"Yes."
+
+"I have built cases like this."
+
+Alexei waited.
+
+"I built them when I already knew the answer," said Dmitri.
+
+The yard was quiet. Somewhere beyond the wall, across the fields, a dog barked twice and stopped.
+
+"Four years under Sokolov," Dmitri said. "Three hunting you. I know how a case feels when it is real. It is untidy. There are facts that do not fit, and they go on not fitting, and you carry them into court and hope nobody asks. A real case has holes in it, Lyosha. It is shaped like what happened, and what happened is always a mess." He picked up the hatchet, turned it, and set the edge against the log where Alexei should have struck it. "When I built a case to fit a man I had already chosen, it was not like that. Every fact arrived when I needed it. Every piece was in its place. There were no threads left over, because I had not left any." He struck once, and the log fell cleanly in two. "That case this morning has no threads left over."
+
+Alexei looked at the two halves.
+
+"Reeves is guilty," he said. "Of Ashford. Of Papa. Of the storms. You know he is."
+
+"Yes."
+
+"Then what does it matter if—"
+
+"It matters," said Dmitri, "because the man at fourteen twenty-one was not him."
+
+---
+
+He went back over it that afternoon in the loft, alone, the way he had once gone back over surveillance tape.
+
+*Fourteen twenty-one. Roof, five storeys, building opposite the side entrance to the east lifts. Distance to the door: forty-odd metres. Light: overcast, flat, no shadow. Subject approaches from the north along the pavement. Height: tall. Build: lean. Dark jacket, hip length, not a coat. Staff card in the right hand, presented to the reader at the door. Left hand held slightly away from the body, forearm bent, as a man holds a hand that hurts.*
+
+*Gait.*
+
+That was the part he could not put down. There were three stone steps up to the side entrance, and the man had taken them two and then one, without the rail, without breaking stride. Not hurried. Not frightened. *Economical.* The weight carried high, forward, on the balls of the feet. A man who had always been able to move like that, and did not think about it. *He walks well.* He had said it into the radio without knowing why, and he knew why now. It was a thing he noticed in people because it had been his job to notice it: whether they could run.
+
+He had seen Reeves move. He had put Reeves on the floor of a data centre at Ashford on the night of the second of August, with one arm, in under a second, and he knew exactly how that body went down, because he had been the one who stopped it moving. Stiff through the spine. The weight carried back, on the heels. A desk scientist of fifty-four who had spent twenty years sitting behind mirrors. He had seen him again on Monday night, in the annex, getting up from his chair when the enforcer said his name, and the getting up had taken him two separate movements.
+
+That man had not taken two steps at once in a decade.
+
+*Frightened men move quickly.* It was true. He had seen it. But frightened men moved *badly*. They stumbled, they rushed, they looked round. The man at fourteen twenty-one had not looked round once.
+
+It was all he had. A way of walking, seen from a roof, by a witness who was legally a corpse. He knew exactly what it was worth in a courtroom. He had torn apart better evidence himself.
+
+---
+
+He called Kira at four, on the handset relay.
+
+"Dmitri." She sounded tired. Behind her he could hear the particular silence of a flat with a guard outside the door.
+
+"A question," he said. "Monday night. When we found him. Did Reeves have any injury? Anything at all. A cut. A dressing."
+
+A pause while she went back to it. He could almost hear her doing it: Kira did not remember things approximately.
+
+"No," she said. "Nothing. He was thinner. He hadn't shaved. His hands were fine. He folded them on his knee after he had looked at Maya. I remember, because they were very clean." Another pause. "Why?"
+
+He did not answer.
+
+The silence went on long enough that he knew she had followed him, and had arrived somewhere ahead of him, and was waiting there.
+
+"Dmitri," said Kira, very quietly. "Who *else* do we know with a bandaged hand?"
+
+He had been in the annex on Monday night. When the lights came up and the voice said *Lead investigator, nobody move*, two enforcers had turned him to the wall, face first, and he had let them. His training had gone on counting what it could from there, by sound: boots, doors, the voices. He had heard the lead investigator come down the corridor. He had seen only white paint. When they let him turn round, the man was already standing in the office doorway, quite still, his left hand at his side in a white dressing, and then an investigator had walked Dmitri out. He had seen him stand. He had never seen him walk.
+
+"I do not know," he said. It was the truth, precisely. He did not *know*.
+
+"No," said Kira. "Neither do I."
+
+Neither of them said the name. It sat on the line between them, a thing that could not be said by two dead people about the only official in the capital who had kept one of them out of a cradle.
+
+---
+
+At dusk he took the eastern tram into the capital, as he had on the day of the steps, because nobody stops the dead. At night he went up onto a roof. It was a habit from the border.
+
+The disused cold store by the eastern terminus had a service ladder at the back and a flat roof edged with a low parapet, and from it, on a clear night, the capital lay open across the whole of its middle distance: the transit lines in their lit threads, the dark bulk of the Archive District, the Spire with its slow pulse of light in the core. And east of it, lower, a band of ordered windows. The Ministry district.
+
+He sat with his back against the parapet and his knees drawn up and watched it the way he used to watch the fog on the lakeshore for a man who did not want to be found.
+
+*The man in the gray coat.*
+
+He had not stopped thinking about him since the steps. A good coat, well cut, not new. A face nobody would remember. He had stood at the mouth of the northern street while Marina and Jakob spoke, and when Alexei stepped up beside Dmitri, the same face twice in the noon light, the man in the gray coat had not looked at the speakers at all. He had looked from Dmitri, to Alexei, and then to the empty step at Dmitri's right, the way Dmitri himself counted a room.
+
+One. Two. And then a third look, to nowhere. To a place where there should have been someone standing.
+
+*He counted to three, Lyosha. There are only two of us up there.*
+
+Whoever had sent that man, or whoever that man was, knew that there should be three. And the third was sitting every morning at a desk in the lead investigator's own team room, with a beard and a pair of glasses and a rooftop in pinpricks folded in his wallet, and a week ago someone had put a perfect copy of that page on his desk and told him he had dropped it.
+
+Dmitri looked at the Ministry's windows. He thought about a door log with a senior staff card on it and a name that had been lost. He thought about a man who knew which Volkov had been born first.
+
+He had sat at the farmhouse table in November and understood that he was not afraid of being arrested. He was afraid of *mattering*, because a witness has to be believed, and the enforcer's truth had always been the system's. He understood now that it was worse than that. His truth mattered to exactly one case in the capital, and that case had been built, this morning, beautifully, by a man who had taken the one fact that did not fit and laid it down gently where it would do no harm.
+
+*I have seen it. So, I think, have you.*
+
+He had not been frightened, that man. Dmitri had seen frightened men all his life. He had been *pleased*.
+
+---
+
+The ladder rang under someone's weight. Dmitri knew who it was before the head came over the parapet; the pressure behind his eyes had been building for the last minute, quick and hot, like a hand tugging at his sleeve.
+
+Alexei hauled himself onto the roof and crouched there, breathing hard, the handset in his fist.
+
+"I knew where you'd be. You always go up. Elena called me. It's on the Synthesis feed. It'll be on ours in an hour." He held out the handset. On its small screen, white on black, the line crawled across and repeated itself:
+
+*CONTINUITY CHIEF REQUESTS TO MAKE STATEMENT. DR. REEVES, HELD IN MINISTRY MEDICAL WING, HAS ASKED TO ADDRESS INVESTIGATORS ON MONDAY. SOURCE: OFFICE OF THE LEAD INVESTIGATOR.*
+
+Dmitri read it twice.
+
+"He's going to confess," said Alexei. He did not sound triumphant. He sounded as if he were trying the words out and did not like the taste. "That's what that means. Isn't it."
+
+Dmitri gave him back the handset. Across the city the Ministry district lay in its neat bands of light. Somewhere in it, in a quiet room with a bed and a monitor, a man who laughed softly and said he had no imagination was lying under a hood on a jointed arm.
+
+*Someone has been using my cradles at night.*
+
+"On Monday night, in the annex, he told Kira he did not do it," said Dmitri. "He told his daughter he did not do it. He told us it was crude. A vandal's use of his work." He looked at his brother. "A man who says he did not do it on Monday does not ask to confess on Friday."
+
+Alexei waited.
+
+"Unless," said Dmitri, "someone has been visiting him at night."

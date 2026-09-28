@@ -75,7 +75,7 @@ Not named. Story 03's correction ritual ("State your name. State your crime.") i
 | 28 | Kira's answer: "Reeves arranged a room… He didn't arrange what we did in it." |
 | 29 | "Reeves has vanished." |
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 | Ch | What he does |
 |----|--------------|
 | Anchors | Missing since the escape. Continuity "suspended"; Phase Two only delayed. |

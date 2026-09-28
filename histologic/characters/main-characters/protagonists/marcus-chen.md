@@ -79,7 +79,7 @@ POV chapters: the Prologue and Ch 1, 2, 3, 9, 11, 16, 18, 23 and 29.
 | 29 | Begins the CHECKED/UNCHECKED lists. "Not one record… *Many witnesses.*" Faces the 0.58: "anything corrupted by people can be corrected by people." Elena: "You were the eighth." Marcus: "Both. I think it's allowed." He and Kira stay in the border zone. |
 | Epilogue | Border cottage, 214 statements, a flashback talked down with a fact entry. Elena's message: the upload, 14:00–15:00. "What if I remember it *wrong*?" |
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 POV chapters: 3, 4, 10, 18, 24, 26, 29 and 31.
 
 | Ch | What he does |

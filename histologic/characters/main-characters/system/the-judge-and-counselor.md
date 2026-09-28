@@ -95,7 +95,7 @@ The Book 5 Epilogue's new erasure is being prepared "in a different nation", whi
 | 28 | Marcus: "There's a field in my head that never happened, and I'd have sworn to it in front of The Judge." |
 | 29 | "If the system were truly infallible… a perfect system cannot be reformed." |
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 | Ch | What it does |
 |----|--------------|
 | Prologue | Singh: *"If it's in our record, The Judge must read it."* The upload is meant to force it to consider the 214 statements. |

@@ -5,8 +5,8 @@ Build every current ebook and HTML export.
 Runs, in order:
   1. create-ebook.py        -> novels/01-03-stories/histologic-stories.epub
   2. export-story-html.py   -> one HTML page per short story (--all)
-  3. create-novel-ebook.py  -> novels/04-the-correction/the-correction.epub
-  4. export-novel-html.py   -> novels/04-the-correction/html-export/
+  3. create-novel-ebook.py  -> one EPUB per novel (Books 4 and 5)
+  4. export-novel-html.py   -> html-export/ in each novel folder
 
 Books 5-9 are being rewritten; add their builders here as each book is finished.
 Standard library only. Can be run from any directory.

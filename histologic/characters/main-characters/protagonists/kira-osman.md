@@ -73,7 +73,7 @@ POV chapters: 4, 10, 19, 24 and 28.
 | 29 (Marcus) | Chooses the border zone: "We're a historian and an architect. That's what we're for." "Then I'll hope for both of us." |
 | Epilogue | Talks Marcus down from a flashback with a dated entry. Decodes Elena's message silently. "We'll remember together… Not one record. Many witnesses." |
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 POV chapters: 8, 16, 21 and 28. She works **from outside**. Nikolai is the insider, and Kira is never recruited by Wei.
 
 | Ch | What she does |

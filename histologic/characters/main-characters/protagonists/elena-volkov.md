@@ -76,7 +76,7 @@ No POV chapters. She is offstage until Ch 25.
 | 29 (Marcus) | Lays out the split as "the best briefing officer he had ever seen". Continuity is "suspended isn't dead". Being dead is "the best weapon we've got", but "a group of nine dead people… is a pattern". "Reform from inside. Starting from outside." On the last night, with Marcus: **"You were the eighth… I got you out. I still don't know which one I did."** Marcus: "Both. I think it's allowed." She almost smiles. She leaves with Alexei and Dmitri, and nods once to Marcus. |
 | Epilogue | In the mobile command post with her boots on the map. She has planned the extraction for three weeks, and her source says the operatives' covers "would not survive the week". *"She did not know yet why her source had been so insistent about the hour. Only that he had been."* She sends the message: *"TOMORROW. 14:00 TO 15:00. EVERYTHING HAPPENS IN THAT HOUR… — E."* |
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 No POV chapters. She is the coordinator whose tip is the book's first hidden thread.
 
 | Ch | What she does |

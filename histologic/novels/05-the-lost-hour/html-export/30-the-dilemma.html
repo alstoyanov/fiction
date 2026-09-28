@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="29-desk-14-09.html" class="nav-button">← Previous: Chapter 29: Desk 14-09</a>
+            <div class="nav-center">Chapter 30: The Dilemma</div>
+            <a href="31-the-commission.html" class="nav-button">Next: Chapter 31: The Commission →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 30: The Dilemma</h1>
+<p><em>Tuesday, January 11 – Wednesday, January 12, 2107. The resistance safe house, the border zone</em></p>
+<hr>
+<p>The back room of the safe house had one stove, and Mikhail Petrov had long ago decided it was his.</p>
+<p>It was a squat iron thing that gave out heat generously on the left and hardly at all on the right. He sat on its left, on a crate with a folded blanket on it, a glass of tea going cold by his foot, and watched the room fill.</p>
+<p>He had always liked watching a room fill. The machines recorded where a man was. They had no field for how he lowered himself into a chair.</p>
+<p>Elena came first, and counted the chairs, and counted them again when the others arrived, left to right, the way she counted trucks back into the barn. Tanaka came next, small and very straight, with the cold of the lakeshore checkpoint still on her coat. She had crossed that afternoon under her own name for the first time in two years, and had said so to no one but him, at the door: "They stamped it, Mikhail. They looked at my face and they stamped it."</p>
+<p>The brothers came together and did not sit together. Alexei took the bench by the window and put a boot up on it. Dmitri stood by the door, as if the room might need to be held. Nikolai came in last, with the girl. Maya Reeves sat at the end of the bench, as far from the stove as the room allowed, and Nikolai sat beside her and did not take her hand. Old Songs watched him not take it, and thought that not doing a thing could be a way of doing it.</p>
+<p>Kovač came in with her hands in the pockets of her dark coat and took the chair nearest the door, next to Dmitri. She took an envelope from her pocket and put it on her knee and kept her hand on it.</p>
+<p>Kira came in with Marcus. She laid a cardboard folder on the table, squared it to the edge, and sat down in front of it. Marcus sat beside her, took his lists out of his coat, and held them without unfolding them.</p>
+<p>On a crate at the end of the table, propped against a jar of spoons, Nikolai's small screen showed a cream wall in Chronos and Isaiah Okonkwo in front of it, very upright, his long hands folded on one knee. There was a second's delay on the line.</p>
+<p>Ten people, then, one of them on the far side of the lake. And an old man by the stove, who did not count, because furniture never did.</p>
+<p>He began, very softly, to hum.</p>
+<hr>
+<p>Alexei started. Alexei always started.</p>
+<p>"He was in that office at 14:21 with his hand in a bandage," he said. "Whatever he did in there. He put forty people's memories in a blender and poured out Marcus. He did it to his own colleagues so they'd swear he was at his desk. He put a murder into Reeves in a hospital cradle and brought Marcus in to watch it take. And now he's Technical Director of the Commission that's meant to stop anyone doing it again." He took his boot off the bench. "We tell the world tonight. Isaiah writes it. We go back on the steps. We name him."</p>
+<p>Old Songs watched his face: a young man who could not stand still in front of a wrong thing. It was a good face. It had never once been told to wait and been right to listen.</p>
+<p>"With what?" said Kira.</p>
+<p>She did not raise her voice. The angrier she became, the more level she spoke; at her angriest she sounded like someone reading a timetable aloud.</p>
+<p>She opened the folder.</p>
+<p>"To expose him," she said, "we have to show that testimony The Judge accepted was seeded. The confession. His alibi. The Doctrine survives because everyone believes seeding was one crime. One district, one hour, one man, now in prison. Known contamination. Weighted. Finished. If we show it's still going on, that a confession was written into a man five weeks after the hour, then nobody's exposure is known, and nothing can be weighted. The Doctrine falls."</p>
+<p>"Good," said Alexei. "Let it."</p>
+<p>"And every fact entered under it falls with it." She did not look at him. "<em>Chen, Marcus. Status: living.</em> Entered on testimony. So was mine. Yours. Tanaka's. Nikolai's. Isaiah's crossing. The Santos family leaving by choice. If the Doctrine is void, we're dead again, Alexei. On the record. By the morning."</p>
+<p>The stove ticked.</p>
+<p>"Second. It frees Reeves. He's guilty of Continuity, and he'll still be held for that, but the murder goes, and the Ministry will make that the headline. Third, it hands Pell what he's wanted since November: proof that testimony can't be trusted. He abolishes it, and we go back to the pure record. Which can be edited from the source." A very small pause. "By him."</p>
+<p>She turned the sheet over.</p>
+<p>"Fourth. What we actually have. A signature only I can read. An author cache that says <em>T. Wei</em>, which his people will call a forgery, and which I'd call a forgery too, if I were them, because it's exactly what a forger would leave. One young woman's memory of a time." She did not look at Maya. "A phrase from a man whose face Marcus can't remember. A torn page from a document that doesn't exist." And with no change at all in her voice: "And an old man's song."</p>
+<p>Several people looked at the stove.</p>
+<p>Old Songs went on humming. He had been called worse things than evidence.</p>
+<hr>
+<p>"Then we build the case," said Dmitri, from the door. His face did nothing, which Old Songs had long ago learned meant a great deal was happening behind it. "I have built cases against better-protected men. Slowly. Every piece checked before the next is placed. He has made mistakes. The arrival at 15:32. The code comment. An alibi made from the same district as his victims. A man who makes three mistakes will make a fourth. We wait. We do not strike until what we hold cannot be called a song." He glanced at the stove. "With respect."</p>
+<p>Old Songs inclined his head. It was a fair thing to say.</p>
+<p>"Two fragments are a pattern," said Isaiah, a second late. "The page and the song. We don't have the third. If I publish two, it's a photograph and an old man's tune, and they'll be right to laugh."</p>
+<p>"They'll say I forged it," said Kovač.</p>
+<p>She pushed her glasses up her nose, which Old Songs had seen her do each time before she said something she had decided to say, and lifted the envelope from her knee without opening it.</p>
+<p>"The original page. Recovered from the Deputy Minister's safe by the Director who falsified ten death certificates and admitted it from the stand. They'll say I wrote the margin note myself, to turn a murdered woman into a whistleblower and save my career." She put the envelope back. "I'd say it. It's a very good story."</p>
+<p>"I've kept a copy of everything," said Nikolai. "As always." He was looking at his hands. "The door log, the card class, the forty-one names, Kira's reading, the cache. Three places, none of them anywhere anyone would look. It doesn't make it true. It just makes it hard to lose."</p>
+<p>The girl beside him said nothing at all.</p>
+<p>Old Songs watched her say nothing. She was twenty-four. Her father was in a cell for a murder he had not committed and believed he had, and there was one road that led to him being cleared of it, and everyone in this room was discussing whether to take it. Her arms were folded tight. She was looking at a knot in the floorboards as if it had personally wronged her. Her eyes were wet, and she would not let them do more than that.</p>
+<p>"We can't just sit on it," said Alexei.</p>
+<p>"We are not sitting on it," said Dmitri. "We are holding it."</p>
+<p>"That's what we said in Wing C. Survive, wait, trust no one. People went into the white room while we waited, Dima."</p>
+<p>"And we got out. Because we waited."</p>
+<p>"Some of us got out."</p>
+<p>"Lyosha."</p>
+<p>It was only the name. It was a whole reprimand. Alexei looked away, at the window, where the fog had come in off the lake and pressed itself flat against the glass.</p>
+<p>They went round for another hour, each of them coming back to where they had started and finding it slightly more worn. Elena listed what exposure would cost and what silence would cost, and nobody liked either column. Tanaka said, precisely, that Reeves's seeded memory would not fade; that clearing him on paper would not clear him in his head. Marcus said nothing at all. He sat with his lists like a man doing a sum that would not come out, and doing it again.</p>
+<p>Old Songs hummed through all of it. The Lakeshore Air, round and round, lifting at the end of each phrase like a question. At some point he noticed that nobody could hear it any more. That was all right. That was what furniture was for.</p>
+<p>Then Kira said, tiredly, "So what do we <em>do</em>?"</p>
+<p>And the room was quiet.</p>
+<p>And Old Songs stopped humming.</p>
+<hr>
+<p>He had not meant to. He noticed it the way the others did, half a second after: a gap where the sound had been. In Wing C that silence had meant <em>they're watching</em>, and every head in the room remembered it. He saw it go through them like a draught. The three brothers turned at once, the same turn, as if one man had moved in three places.</p>
+<p>He drank the cold tea and folded his hands on his knees.</p>
+<p>"In 2063," he said, "I was twenty-five, and I had a desk in the Historical Archive in the capital, in the back room where they kept the periodicals nobody read."</p>
+<p>Nobody moved.</p>
+<p>"It had a lamp with a green shade and a drawer that stuck. My master was a man called Anselm Kerr. He had a beard like mine and a courtesy you could have set a clock by, and he believed an archive was a promise. <em>We keep what people would rather lose, Mikhail. Anyone can keep what they want.</em> I thought he was a pompous old man. I was right. He was also right."</p>
+<p>"That spring, three issues of a little quarterly came in the post. The <em>Journal of Post-Democratic Governance</em>. Gray covers. No names on the essays. Kerr gave them to me to catalogue, because they were small and dull and I was the junior. I read them twice. They were the most beautiful things I had ever read, and they frightened me more than anything before or since. They explained, very calmly and very kindly, how a frightened people might be governed through what it remembers. They didn't sound like tyrants. They sounded like doctors."</p>
+<p>Tanaka's hands tightened in her lap. He did not stop.</p>
+<p>"So I did what I have always done with a thing I can't bear to lose and can't bear to keep. I set it to a tune. The gentlest one I knew, so that I could never hear it without remembering how dangerous the words were. Then I filed the issues and went home."</p>
+<p>"And in sixty-six they came for the journal."</p>
+<p>The stove ticked.</p>
+<p>"Not with soldiers. Two men from a Ministry so new its letterhead still smelled of the printer, with a list. They took the issues away in a box. By the evening the card was gone from the catalogue and the numbers had been closed up, so that you couldn't see where the journal had been. Only that the numbers ran on very neatly, which is not how numbers run in a real archive. Kerr saw it. Kerr went upstairs and asked where it had gone."</p>
+<p>He was quiet a moment.</p>
+<p>"He asked politely. He asked in writing. He asked twice. Two others asked with him. In the spring all three were sent away for a little while, to be helped. They came back very calm. Kerr sat down at his desk and peeled his apple at eleven, in one long curl, exactly as he always had. I said the shelf mark to him, and he said, very pleasantly, <em>I'm afraid I don't know that one. Are you sure you have the number right?</em>" Old Songs looked at his hands. "He wasn't lying. That's what I want you to understand. They had taken it out of him so cleanly there was no hole."</p>
+<p>Marcus's hands had gone still on his lists. Old Songs did not look at him.</p>
+<p>"They helped me too, the year after. It didn't take. Forty years of it, one place and then another, and it has never once taken. Because what I love is kept in songs, and a song is rote. The machine sees an old man humming the tune he has always hummed, and moves on to look for what matters. It never thinks a lullaby could matter. So they let me keep it. The journal, and Kerr at the green lamp, and the empty shelf. Forty years of songs, so that <em>something</em> would be left."</p>
+<p>He let his eyes go round the room, face by face.</p>
+<p>"I kept it in my head for forty years," he said, "and it was worth nothing."</p>
+<p>"That's not—" said Alexei.</p>
+<p>"Worth nothing," said Old Songs, not loudly, and Alexei stopped. "I'm too old for modesty. I'm telling you what it was worth. How many people did my song save? How many shelves did it fill? None. It sat in one old man's head while they built a whole country out of those essays, stone by stone, and I hummed at them through meal slots, and was very clever about it, and it did nothing. Because a song dies with the singer. It lives in one throat. They don't even have to cut the throat. They only have to wait. I'm sixty-eight. They have only ever had to wait."</p>
+<p>His voice was cracking at the edges like an old record. He let it.</p>
+<p>"They let me keep it because one old man's memory is furniture. It isn't evidence. Kira is right. They'll enter it as <em>an old man's song</em>, and it'll be true, and the truth will bury it."</p>
+<p>"And now you have a man who can write memory. Who can put a murder in a man's head as easily as I put words to a tune. And you're deciding whether to fight him with one witness or three, whether to wait for the third fragment or the fourth mistake." He shook his head slowly. "He can write one of you. He can write forty. He can write a district for an hour. Can he write a thousand people who have each put down what they saw, in their own hand, on paper, and swapped their books every week, and checked, and argued about where they disagree?"</p>
+<p>"Don't be me," he said. "Don't keep it in your heads. Not in one drive, or one song, or one clever girl who can read a signature nobody else can. Write it down. All of it. In your own hands. Give copies to people you trust, and they to people they trust. Many hands. Many copies. Things that don't need one record to survive." He looked at Kira's folder, squared to the table's edge. "And can't be written by one pen."</p>
+<p>He stopped.</p>
+<p>Somebody outside was chopping wood, slow strokes, far off.</p>
+<p>"That's all," said Old Songs. "I don't expect I'll say anything so long again, so I hope somebody was listening."</p>
+<hr>
+<p>For a long time nobody said anything.</p>
+<p>Then Marcus unfolded his lists and smoothed them flat on the table with the side of his hand. CHECKED. UNCHECKED. HOPES. There was a place near the bottom of the middle column where something had been rubbed out, and the paper was thin there.</p>
+<p>"He chose me," Marcus said, quietly and very evenly. "Three years at the next desk. He chose a believer, and broke him, and saved what was left so that I'd be grateful. And I was. I thanked him in the rain with my whole heart." He looked at the page. "He built the people he needed. The ones who'd fight for the Doctrine, and win, and stand in front of it and make it trustworthy. He designed the reformers he wanted."</p>
+<p>He looked up.</p>
+<p>"Then we reform something he didn't design."</p>
+<p>Nobody spoke.</p>
+<p>"Not the Doctrine. Not the Commission. He built those, and we'll sit on them, because if we don't someone worse will. But the other thing. Journals. Written. Many witnesses checking each other, who don't need the factorepo to agree with them." A pause. "He writes memory through a node. You can't broadcast into a notebook."</p>
+<p>Something in Kira's face eased, a line at the corner of the mouth.</p>
+<p>"We say nothing," said Dmitri. It was not an objection. It was a correction of scope. "For now."</p>
+<p>"For now," said Marcus.</p>
+<p>"And the proof stays where it is," said Elena. "Kolya."</p>
+<p>"Three places," said Nikolai.</p>
+<p>Old Songs watched the fight go out of his shoulders by degrees, the way heat goes out of iron. "For now," Alexei said at last. "I want it written down that I said <em>for now</em>."</p>
+<p>"Then write it down," said Kira, and somebody laughed. It was Tanaka, very briefly, and she seemed surprised by it, and put her fingers to the scar at her temple.</p>
+<p>"I'll keep the column," said Isaiah, a second late. "And a place for the third fragment. When it comes, I'll know it."</p>
+<p>Kovač took off her glasses, looked at them, and put them back on. Old Songs understood that she had agreed, and that she would never say so in any room with a record in it.</p>
+<p>That left the girl.</p>
+<p>"Maya," said Nikolai.</p>
+<p>"He thinks he did it," she said. Her voice came out rough. "He <em>remembers</em> it. I went on Sunday and he told me about the letter opener. Colder than he expected. He says it like it's interesting." She pressed her lips together. "And I'm meant to agree to leave him there. For now. For the good of the record."</p>
+<p>Nobody answered her. It would not have been fair to.</p>
+<p>"Fine," said Maya. Old Songs watched it cost her. "For now. But I'm writing it down too. The date. That I didn't want to." She looked up at last, furious and wet-eyed at once, the way the young are when they have been asked to be older than they are. "So nobody can ever tell me I agreed."</p>
+<p>"Nobody will," said Nikolai.</p>
+<p>He did not take her hand. He moved along the bench until his shoulder was against hers, and stayed there. After a moment she leaned into it and closed her eyes.</p>
+<hr>
+<p>"Paper," said Old Songs.</p>
+<p>Kira looked round.</p>
+<p>"Proper paper. And a pen that won't run out halfway."</p>
+<p>She had them. Of course she had. From the folder she took a book with a plain dark cover, the kind of ledger the border-zone shops sold for accounts, opened it to the first page, uncapped a pen, and waited.</p>
+<p>"Write it the way I say it," said Old Songs. "Don't tidy it."</p>
+<p>He closed his eyes. He had sung it ten thousand times, in meal slots, in correction rooms with the hum starting behind his ears. He had never once <em>said</em> it. Without the tune it felt naked.</p>
+<p>"<em>A people that has lost part of its past,</em>" he said.</p>
+<p>He heard her pen move.</p>
+<p>"<em>will accept any past it is given —</em></p>
+<p><em>provided it is given gently,</em></p>
+<p><em>and by someone it trusts.</em>"</p>
+<p>The pen stopped.</p>
+<p>He opened his eyes. Kira turned the book round on the table so that he could see, and he leaned forward stiffly from the stove and looked.</p>
+<p>Four lines, in Kira's hand: small and square, every letter the same height. The words he had carried for forty-three years lay on the page in somebody else's letters, in ink, not moving.</p>
+<p><em>Now it exists in two places</em>, he thought, and was surprised by the weight of it, and sat back.</p>
+<p>"Is that right?" said Kira.</p>
+<p>"That's right." He looked a little longer. "Turn the page. Put down the old words as well. The grandmothers' words. So the tune has somewhere to live too."</p>
+<p>He gave her the ferry verse, a line at a time, the one he had learned at his grandmother's knee sixty years ago:</p>
+<p>"<em>Down by the water the ferry is late,</em> <em>lanterns are low on the pier;</em> <em>who will remember the name of the boat</em> <em>when there is no one left here?</em>"</p>
+<p>She wrote it down. She did not ask him why. He thought that she knew.</p>
+<hr>
+<p>They left in ones and twos, the way people leave a room after something has happened in it. Dmitri drove Kovač to the crossroads where her car waited. Tanaka shook the old man's hand with her small dry grip and said, "Thank you, Mikhail," as if he had done her a professional courtesy. Alexei hugged him and said into his ear, "You're a terrible old man," which he always said. Nikolai took Maya out into the fog with his arm round her at last. Marcus stopped by the stove and said nothing, and put his hand on the old man's shoulder a moment longer than he needed to, and went out.</p>
+<p>Then it was very late, and the stove had burned down to the red.</p>
+<p>Old Songs sat on the warm side of it with the blanket round his shoulders. Speaking was harder than singing. He had forgotten how much harder. He felt emptied in the good way, like a jug that has been poured.</p>
+<p>He began to hum.</p>
+<p>The Lakeshore Air, low and cracked, the way he had hummed it through every meal slot in Wing C and forty years of corridors. The phrase rose, and lifted at the end like a question, and fell again.</p>
+<p>From the next room, through the thin wall, where the lamp was still on, another voice came in.</p>
+<p>It was not a good voice. It was flat and careful, and it came in half a beat late and a little under the note: the voice of a woman who had never sung in front of anyone and was not doing it now, only trying out a thing she had written down to see whether it held.</p>
+<p>"<em>Down by the water the ferry is late …</em>"</p>
+<p>Old Songs stopped, for a moment, to listen.</p>
+<p>Then he took the tune up again under hers, and slowed it a little so that she could find it, and they went on together through the wall, one voice sure and one not, into the second line and the third, and up into the question at the end.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="29-desk-14-09.html" class="nav-button">← Previous: Chapter 29: Desk 14-09</a>
+            <div class="nav-center">Chapter 30: The Dilemma</div>
+            <a href="31-the-commission.html" class="nav-button">Next: Chapter 31: The Commission →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

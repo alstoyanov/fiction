@@ -44,7 +44,7 @@ Sharp, prickly, overworked and funny. The only person on the monitoring floor wh
 ### Stories 01–03 and Book 4: *The Correction*
 Not on the page. Her father is Book 4's antagonist inside Ashford.
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 | Ch | What she does |
 |----|---------------|
 | **1** | **POV, 15:01–17:30, Nov 15.** Every alarm goes off; she is the only one who doesn't freeze and runs the integrity check herself. The hole: 14:00:00–14:59:59, absent across every node and all three backups. **15:20:** the Ministry appoints Wei; **he arrives in twelve minutes, at 15:32**, which she times. He adds her to his team: "You found the gap first. Walk me through it." She notices his bandaged left hand ("Server rack. My own fault."). She flinches at "Continuity", and he notices. Late in the day she finds the unowned core block flagged on Nov 14 by a contractor called **Pieter Lang**. Wei: "Find me Mr. Lang." |

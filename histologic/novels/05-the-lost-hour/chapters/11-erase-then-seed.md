@@ -1,0 +1,227 @@
+# Chapter 11: Erase, Then Seed
+
+*Monday, November 22, 2106. A teaching hospital, Chronos*
+
+---
+
+*Patients: forty. Ministry of Historical Integrity, Veridica. Twelfth floor and adjacent. Interviewed November 15 by the Fact Enforcement Division. Presenting: a shared recollection of a single event, 14:20 on November 15. Onset: simultaneous. Course: stable. Insight: none. Each patient is certain.*
+
+Dr. Yuki Tanaka composed the note on her knees, on the floor of her office, with forty sheets of paper laid out around her in five rows of eight.
+
+She had printed them on Saturday. The hospital's printer had objected to the volume, and a porter had looked at her strangely when she carried the stack down the corridor, and she had not cared. She did not think well on screens. She had never thought well on screens. For eleven years at Ashford she had laid out case notes on the floor of her office when a patient would not make sense, and walked between them in her stockinged feet, and looked for the thing that did not fit. It was not a method anyone had taught her. It was only the way her mind worked when it was frightened.
+
+Her office was small. It had a desk, two chairs, a filing cabinet and a window onto the staff car park, where the lights had just come on in the early dusk. A cup of tea was going cold on the corner of the desk. Her trafficking hearing was on Thursday. Her advocate, a patient, anxious man appointed by the hospital, had sent her four messages that day about the hearing, and she had answered one.
+
+She worked anyway.
+
+---
+
+She had read all forty statements on Thursday night, after Kira's message. She had read them again on Friday, and twice over the weekend. By now she could have recited most of them.
+
+*He was in gray, like a patient's clothes.*
+
+*Gray. The gray they wear in the correction wards.*
+
+*I remember thinking he looked like someone from a hospital.*
+
+*His left hand was wrapped. A white bandage.*
+
+*He was holding his hand like it hurt.*
+
+*There was something on his left hand. White.*
+
+Forty people. Records officers, secretaries, an archivist, two security staff, a man who delivered the internal post. Men and women from twenty-two to sixty-one. Different floors, different departments, different angles on the same corridor, interviewed separately by different officers within the same afternoon. And every one of them had seen the same thing.
+
+That was the problem. That was the whole of the problem, and she had known it on Thursday, and she had spent four days making sure.
+
+*People do not remember like this.*
+
+---
+
+She stood up, carefully, because her knees had begun to ache, and walked along the first row in her stockinged feet.
+
+Memory was not a recording. It never had been, not even in Veridica, where every citizen had grown up believing that the interface made it one. The interface delivered facts, and facts felt like memory, but what a person *saw*, standing in a corridor at twenty past two on a Monday afternoon, went into the brain the old way: partially, selectively, shaped by where they had been looking and what they had been afraid of and what they had had for lunch. And it came out the old way too. Reconstructed. Each time a little differently.
+
+Two honest witnesses to a traffic accident will disagree about the colour of the car. Forty honest witnesses will disagree forty ways. They will disagree about the time, and the height, and which hand, and whether he was carrying anything, and one of them will be certain he had a beard. That was not a flaw. That was what honest memory looked like. It was noisy, and the noise was the signature of a real mind at work.
+
+These forty statements had no noise.
+
+The wording varied. The *details* did not. Not one witness had the man in blue, or brown, or a coat. Not one had the bandage on the right hand. Not one was unsure.
+
+She thought, as a clinician, through what could do that.
+
+*Confabulation.* She had diagnosed it herself, in August, in a broken factory in the border zone: Marcus Chen and his field under the stars, a memory built out of want and a storm and the gaps correction had left in him, and set so hard that he would never be able to feel it was false. But confabulation was individual. That was its nature. Each brain filled its own gaps with its own material, the way each person's handwriting was their own. Two confabulating patients, given the same stimulus, would produce two different stories. Forty would produce forty. *Forty identical false details are not confabulation.*
+
+*Suggestion, then. Contamination between witnesses.* But they had been interviewed separately, within hours, before the news had shown the photograph. And contamination produced drift toward a common story, not identity. The details would converge but blur at the edges. Here the edges were sharp.
+
+*Mass hysteria.* She had seen it once, at a school on the border after a storm, thirty children who all remembered a fire that had not happened. It had frightened her very much at the time. But the children's fire had been vague. It had been orange and loud and somewhere over there. Hysteria produced vagueness, because what spread from mind to mind was a feeling, not a fact. It did not produce a white bandage on a left hand.
+
+What produced the same precise memory in many heads at once was not something that happened inside the heads at all. It came from outside them, and it came to all of them at the same time.
+
+*A broadcast.*
+
+She stood at the end of the fifth row and looked down at forty sheets of paper, and made herself finish the thought.
+
+---
+
+James came at six.
+
+He knocked, which he always did, though the door was open, and stood in it with his tablet held against his chest in both hands, the way he had once held it at the console in Wing C, when he did not look at the patients. He looked at the floor now. Then he looked at the papers on it, and then at her, and she saw his face and put her pen down.
+
+"You've found it," she said.
+
+"I've been through the capture seven times since Thursday." His voice was low and rapid. "I didn't want to say any more until I was sure. I'm sure." He came in and sat down in the second chair without being asked, which he never did. "Yuki, I'm sorry. I should have seen it at the fence. I heard it at the fence."
+
+"Tell me."
+
+He told her again, properly this time, from the beginning.
+
+At the fence on Monday, at 14:20, he had been doing what he had done in the tunnel at Ashford: pushing a flatline through the telemetry relay for three people, a real signature and then zero, so that the Registry would record the Santos family as dead and stop looking for them. To time it, his rig listened to the broadcast network. Not the local node. The trunk. The whole network ran through the trunk, and everything that passed along it, every broadcast to every district, left a faint shadow there, far below anything a mind would notice, but not below anything a rig could log.
+
+At 14:21, in the shadow of the trunk, his rig had logged a carrier.
+
+"I thought it was noise," he said. "Or I thought I'd imagined it. I was pushing three flatlines and the girl was asking me if it would hurt. I didn't look at it again until Thursday." He turned the tablet round and held it out to her. "Look at the gain."
+
+She looked. She was not an engineer. But she had lain in a white chair under his gains for nine months, and she knew what she was looking at. A signal on a carrier, rising in steps, one, two, three, four, a small notch, then five, six, seven, and holding.
+
+"The notch," said James.
+
+"The left temporal pad," she said.
+
+"It drifted. You remember. It always drifted. I compensated for it in the profile, a notch at the fourth step, so the pad wouldn't overdrive. It's not in any standard. Nobody else would have done it. Nobody else would have needed to." His voice cracked on the last word. "It's my calibration. The one I built for the cradles. Someone put it on a *broadcast node*."
+
+She looked at him. He had gone gray, the particular gray of a man who has just seen the thing he made do the thing he was afraid of. And his right hand, holding the tablet out to her, was not quite steady. It was the first time since August.
+
+"Which node?" she said.
+
+"I can't be certain from the trunk. The shadow smears. But I can estimate the source from the delay." He took the tablet back and touched it twice. "The capital. The centre. The Ministry district."
+
+*Erase, then seed.*
+
+She had not been in the data centre at Ashford when Reeves said it. Kira had. But Kira had told them all, afterwards, in the factory, word for word, the way Kira told everything: Reeves in his gray suit with his clean hands folded, saying that anyone could empty a mind, that the hard half was putting something *back*. That there were carrier signals running in three districts, very low, barely above noise. *We're measuring baselines.*
+
+It was in Isaiah's report. It had been on the front page of every newspaper outside Veridica in August. Phase Two. The broadcast network, carrying Continuity to every head in the country.
+
+They had all read it. They had all believed it was a plan.
+
+"It isn't a plan," she said. "It's been used."
+
+James said nothing. He put the tablet face down on his knees, and put both hands flat on top of it, and held them there.
+
+---
+
+*The hour was erased,* she wrote, sitting at her desk now with a clean sheet in front of her, because some things had to be written in order. *At the same time, on the Ministry district node, a memory was written. Forty patients received it. Mechanism: Continuity seeding, R-2 at population scale, delivered by broadcast. Calibration: Morrison's.*
+
+She stopped, and read it, and went on.
+
+*Content of the seed.*
+
+That was the part that had kept her on the floor all weekend. Because the seed was not the whole memory. It could not be. Continuity had never worked that way, not even in the white chair, where Reeves had had nine months and a hood on the patient's head. The cradle found what was *hottest* in a memory, what mattered most to the mind that held it, and worked there. It did not bother with the rest. It had never needed to. Salience was the whole art.
+
+And what mattered most, when a person saw a stranger walk past them toward a door, was *who*. The face. Then what marked the face: the clothes, the uniform, the thing that said which kind of person this was. That was where the mind put its weight. That was what a witness would swear to. And that was where a seed would go.
+
+*A face: Chen, M. A single source, almost certainly the Wing C file photograph published with the August report. Clothing: Wing C gray, from the same photograph. The patients were given a photograph,* she wrote, *and it was laid over what they saw.*
+
+Over what they saw.
+
+She put the pen down.
+
+That was the other half, and it was the half that mattered. A seed was not a hallucination. It did not build a man out of nothing and walk him down a corridor. It was far more economical than that. It went to the memory that was already there, the real one, the man the witnesses had really seen at twenty past two, and it painted over the parts that mattered most. The face. The clothes. And it left the rest alone, because the rest was furniture, low heat, not worth the gain.
+
+Which meant that under the paint there was a man.
+
+---
+
+She got down on the floor again.
+
+James watched her from the chair and did not ask. He had watched her do this before, in Wing C, from the other side of a console, and had not known what he was watching.
+
+She went along the rows with a red pen. She was not reading any more. She was sorting. Every detail in every statement, into one of two places. *From the photograph.* Or *not from the photograph.*
+
+The face: the photograph. Every time.
+
+The gray: the photograph.
+
+The height: the photograph gave none, and the answers varied, the way honest answers do. *Noise. Real.*
+
+The walk toward the door: most of them had it, and it varied too: "quickly", "normally", "like he knew where he was going". *Real.*
+
+The time: 14:20, 14:20, "just after quarter past", 14:20, "twenty past, I think". *Mostly real. Some of it smeared.*
+
+And the hand.
+
+*His left hand was wrapped. A white bandage. Holding it like it hurt. There was something on his left hand, white.*
+
+It was not in the photograph. The photograph was a head and shoulders. It was not in any file she knew of. Marcus Chen's hands were unmarked. The arrest report, in the same bundle, said so in a single line: *No injuries observed.* And yet it was in every statement, the wording different and the detail the same, the way a real thing seen by forty people is the same.
+
+She went along all five rows with the red pen and drew a circle round it forty times.
+
+Then she sat back on her heels.
+
+"That one isn't a seed," she said. "It's what they actually saw."
+
+James leaned forward in his chair and looked at the circles.
+
+"The seed doesn't bother with small things," she said. "A hand. A way of holding it. It went for the face and the clothes and it left the rest, because the rest didn't matter. Why would it matter?" She heard her own voice, very quiet and very precise. "Whoever wrote this memory made one mistake, James. They thought the hand didn't matter."
+
+---
+
+It was not the only thing that made sense now.
+
+Kira had passed on, from the Director, an account of her hearing room, the one on the fourth floor, in the same building. Twelve people in a room during the hour, who afterwards could not agree about who had asked which question, or when the recess had been, or whether one of them had left. Each of them certain, and each of them different. Kovač had called it shock.
+
+*It was not shock,* Tanaka wrote. *It was the edge of the node's range.*
+
+She had seen it on the low-gain charts at Ashford, a hundred times, in the patients at the far end of a cradle's reach. A full gain wrote cleanly. A partial gain did not. It disturbed the memory without replacing it, loosened it, left it scrambled at the edges. Not one clean false story but a dozen slightly different true ones, jostled. The fourth floor had been on the edge of the seed, and the seed had not been meant for it, and it had got a splash.
+
+And Marcus, in the basement annex, below the street, under the whole weight of the building and whatever shielding a public archive had against broadcast, had felt it too. A moment at 14:21 when the room was too bright, like a word almost remembered. Nothing flickered. Nothing contradicted. *Seeding is not a storm.* It went in smoothly and it did not feel like anything, unless you were at the very edge of it, in a basement, with a mind that had spent a year learning what it felt like when something came into it uninvited.
+
+She thought of him in his cell, with his lists. He would be checking the hour against itself, over and over, and finding that he could not be sure it had not been written.
+
+It had not been. She was almost certain of it now. Of all the people inside the Ministry building that afternoon, the man accused of the murder was very nearly the only one whose memory of the hour she would have trusted.
+
+---
+
+The car park lights were bright now, and the window had gone black behind them. James had made fresh tea, without asking, and put it by her elbow, and gone back to his chair.
+
+She thought about the rest of it. She made herself.
+
+The Ministry district was not twelve people in a hearing room and forty on the twelfth floor. It was offices and archives and ministries and cafés and the flats above them. Thousands of people. Tens of thousands. Every one of them had been inside the node's range for the whole of that hour, and every one of them now remembered it with the ordinary, unquestioning confidence of a citizen who has never had a reason to doubt what they saw. And some of what they remembered was true, and some of it had been written, and none of them could tell which.
+
+Not the forty witnesses. Not the Deputy Minister's staff. Not the aide who had found her body. Not the enforcers who had taken the first statements, if they had been in the district. Nobody.
+
+And Veridica had no law for it.
+
+Veridican law did not need one. For forty years the record had been the truth, and memory had been what you checked against the record. Where the record and a citizen disagreed, the citizen was wrong, and was corrected, kindly, for his own good. Now there was no record for the hour. There was only memory. And memory, it turned out, could be issued.
+
+*Prognosis*, she wrote, and stopped, and did not finish the line.
+
+---
+
+She called Kira at eight, on the secure line that Elena's technician had built for her, which rang in a safe room somewhere in the border zone and which Kira always answered on the first ring.
+
+"Tanaka."
+
+"Kira. I've finished."
+
+"Tell me."
+
+She told her. The broadcast. James's gain profile, the notch at the fourth step. The Ministry district node. Kira did not interrupt. Tanaka could hear her breathing on the line, very even, the way she breathed when she was listening to something with her whole mind.
+
+"So they're lying," Kira said at last. "Or they were made to lie."
+
+"No. Your witnesses aren't lying," said Tanaka. "Most of what they remember is real. They saw a man walk in. Someone just painted Marcus's face over him, and the gray. Seeding doesn't bother with small things."
+
+There was a silence on the line.
+
+"What small things?" said Kira.
+
+Tanaka looked down at the floor of her office, at five rows of eight sheets of paper under the desk lamp, and forty red circles.
+
+"The killer was real," she said. "And he had a bandaged left hand."
+
+The silence went on for a long time. It went on long enough that Tanaka looked at the line to see whether it had dropped. It had not.
+
+Then Kira said, very quietly, in a voice Tanaka had not heard her use since Wing C:
+
+"I've seen a bandaged left hand this week."

@@ -68,7 +68,7 @@ Not on the page. (The "director" who gives up on the triplets at the **border fa
 | 29 | Elena: "Helena Kovač goes in front of it every day and tells them exactly what the Registry says, and they can't touch her." |
 | Epilogue | Nov 14, 2106. Isaiah's expulsion order "came from the top. Signed by some Director. Not ours." (She arranged it quietly.) At a quarter to midnight she walks the empty Wing C and sits in a chair outside 7-G, facing Samuel Ferris, coat on, hands in her pockets. "It was the only thing she knew how to do for him. She thought that someone ought to." |
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 She is a **POV character** (Ch 2, 15, 25).
 
 | Ch | What she does |

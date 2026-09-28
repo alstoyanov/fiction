@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <span class="nav-button disabled">← Previous</span>
+            <div class="nav-center">Prologue: 13:59</div>
+            <a href="01-system-failure.html" class="nav-button">Next: Chapter 1: System Failure →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Prologue: 13:59</h1>
+<p><em>Monday, November 15, 2106. The Deputy Minister's office, twelfth floor, Ministry of Historical Integrity, Veridica Capital</em></p>
+<hr>
+<p>At 13:52 Dr. Amara Singh signed the last of the morning's authorisations, capped her pen, and looked at the thing she had been not looking at since lunch.</p>
+<p>It lay squared on the blotter at her left hand, where she had put it so that she would have to see it every time she reached for anything. A single sheet, the Ministry's pale-blue file copy, with her own signature at the foot.</p>
+<p><em>VISITOR AUTHORISATION. PUBLIC ARCHIVE ANNEX (B1) AND LEVEL 12. HARROW, O. ARCHIVE RESEARCHER, WITH ONE ASSISTANT. MONDAY 15 NOVEMBER 2106. TERMINAL ACCESS: 14:00–15:00. APPOINTMENT: DEPUTY MINISTER, 14:30. AUTHORISED: A. SINGH.</em></p>
+<p>There was no Oswin Harrow. She had invented him on a Thursday evening in October with a cup of tea going cold beside her, choosing the name for its dullness, the way one chooses a coat for a funeral. The man who would be carrying Mr. Harrow's pass had a name of his own, and the Correction Registry recorded that he had died on the second of August, during a fact storm, of cognitive failure. The Registry was mistaken. She had known that since the morning of the sixth of August, when she had read Mr. Okonkwo's account for the third time, put it down, and called her aide in to open an inquiry.</p>
+<p>She was forty-nine. She had been in the Ministry for twenty-two years and a Deputy Minister for four, and in all that time she had never once done anything that could not be found in the record afterwards. Even Mr. Harrow was in the record, under her own name. She did not make speeches about it. She arranged things.</p>
+<p><em>If it's in our record, The Judge must read it.</em></p>
+<p>That was the whole of her plan, and she was privately rather proud of its simplicity. At 14:10, in the public annex in the basement, eleven floors below where she sat, a dead man and a dead woman would begin to enter their evidence into the official factorepo through an ordinary public terminal, on an ordinary visitor's pass, with a Deputy Minister's authorisation behind it. Not abroad, where it could be called forgery. In the record. Verified, cross-referenced, entered. And once a thing was in the record, The Judge could not decline to see it. There was no procedure for declining.</p>
+<p>Her colleagues thought she was naive. Some of them had said so, in the careful way people say things in a building where every room is listening: <em>Amara has always believed in process.</em> She had stopped minding at some point in September. She found it made a surprising amount of room in her day.</p>
+<p>She took her reading glasses off and let them drop on their cord against her blouse, and rubbed the bridge of her nose. Her sleeves were rolled to the elbow. They always were by this hour. Her mother used to say that she had been born with her sleeves rolled up and her mind already made up about something.</p>
+<hr>
+<p>At 13:53 there was a tap at the open door, and Lucian Bell leaned in.</p>
+<p>"Your 14:30 has been confirmed," he said. "I've put it through."</p>
+<p>"Thank you, Lucian."</p>
+<p>He withdrew. She heard his chair take his weight outside, and the small sound of his keyboard.</p>
+<p>She sat for a moment with her hand still on the file copy.</p>
+<p><em>Confirmed.</em> She had not asked him to confirm anything. She had arranged the appointment in October and not touched it since, so that it would sit in the calendar looking like every other appointment. But she had signed perhaps forty things since eight o'clock. Perhaps one of them had been a confirmation request from the annex, and she had initialled it with the rest.</p>
+<p>She put her glasses back on and brought the afternoon up on the screen to see.</p>
+<p><em>14:30–15:00. HARROW, O. (ARCHIVE RESEARCH). CONFIRMED.</em></p>
+<p>That was right. That was hers.</p>
+<p>Above it, and beside it, occupying the same hour, were three more.</p>
+<p><em>14:00. MEDICAL CROSSING WAIVER. APPROVAL.</em> <em>14:15. DEEP-COVER REVIEW (MINISTRY DISTRICT). CLOSED SESSION.</em> <em>14:30. BORDER TRANSFER SIGN-OFF (LAKESHORE).</em></p>
+<p>She read them three times, slowly, making sure the words were the words.</p>
+<p>She did not remember adding any of them. A border transfer sign-off she could almost account for: prisoner movements crossed her desk every week, and a lakeshore transfer might plausibly want a Deputy Minister's initials. But she had never in her life sat in on a deep-cover review, and she could not think what a medical crossing waiver was doing in her calendar at all, unless someone in the health liaison office had begun routing things through her again without saying so.</p>
+<p>Each entry carried her own credentials in the owner field. <em>SINGH, A.</em></p>
+<p>She looked at the time. 13:54. She thought about calling Lucian back in, and asking him, and hearing him say, in his reasonable voice, that she had approved them herself on Friday. She thought she would probably believe him. She thought that was the problem.</p>
+<p><em>Overwork,</em> she decided. It was the most reasonable explanation, and she had spent twenty-two years preferring the most reasonable explanation until it was disproved. She had been sleeping four hours a night since the summer. She made a note to check the entries against her authorisation log tomorrow morning, and she wrote the note on paper and tucked it under the corner of the blotter, and felt slightly better, and did not entirely believe herself.</p>
+<hr>
+<p>The window behind her desk looked east across the capital.</p>
+<p>It was an ordinary gray Monday, the sky low and even, the kind of November light that makes every building look as though it has been cut out of the same card. The transit lines ran on their elevated tracks between the towers. Far off, above everything, the Factorepo Spire stood in its eighty storeys of glass, and in its core the data rose and fell as light, a slow blue pulse, as it had risen and fallen every second of her life. As a schoolgirl she had been told that every light was a fact, and that the lights would never go out, and she had believed it with her whole heart.</p>
+<p>On the side table by the window, Lucian had replaced the flowers. He did it on Monday mornings. White chrysanthemums this week, cut short and packed into the low glass vase, and the room smelled faintly and greenly of them. Her gray coat hung on the stand by the door, where it had hung since half past seven, with her scarf pushed into the sleeve.</p>
+<p>She got up, and crossed to the wall safe behind the stand, and opened it.</p>
+<hr>
+<p>The page was where she had left it, in its plain card folder, on top of everything else.</p>
+<p>She took it out and carried it back to the desk, and sat, and laid it flat under the lamp.</p>
+<p>It was a single typed sheet, old, the paper softened and faintly yellow at the edges. She had found it seven weeks ago, in the fourth box of Continuity's correspondence with this Ministry, filed between two perfectly ordinary budget memoranda where it had no reason to be. Someone had torn the top of the page away across its width, just below the first word of the heading, so that what remained read:</p>
+<p><em>PRINCIPLE —</em></p>
+<p>and then nothing, the rest of the line gone with the rest of the strip.</p>
+<p>The page number survived at the bottom: <em>30</em>. In the lower right corner, very small, someone had typed a roman numeral, <em>XI</em>, the way a copy is numbered when there is more than one copy. And at the foot of the text, a little apart from it, like a signature, there was a short typed mark: two capitals and a number, divided by a raised dot. It meant nothing to her. She had spent an evening in September working through every office code and archive prefix she knew, and found nothing it matched.</p>
+<p>It had been typed on a machine, a real one, with a ribbon. The small <em>e</em> was chipped. Every <em>e</em> on the page had the same little bite taken out of its upper curve, the same flaw, over and over, like a limp.</p>
+<p>The page held one sentence that mattered. There were others around it, the tail of one argument and the start of another, but her eye went to this one, as it always did, as if it had been underlined.</p>
+<p><em>When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it.</em></p>
+<p>She had read it perhaps a hundred times. It did not become less calm.</p>
+<p>That was what she could not get past: how calm it was. It did not sound like a threat. It sounded like a piece of advice from someone who had thought about a problem for a long time and found the answer so obvious that it hardly needed saying. <em>When the record fails.</em> Not <em>if</em>.</p>
+<p>She had photographed it yesterday, under this lamp, and put the print in the envelope with Mr. Harrow's pass, and sent the envelope out through the same careful channel that had brought her the request in the first place. On the back of the print she had written, in pencil, <em>Have you seen this before? A.S.</em>, because it had occurred to her, in the course of a sleepless week, that the one person in Veridica most likely to recognise it was a historian who had spent most of a year inside the programme whose papers it had been hiding in.</p>
+<p>Perhaps he would bring the print up at half past two, and put it on this desk, and tell her something she did not want to know.</p>
+<hr>
+<p>She thought about the sentence, and about the building around her.</p>
+<p>Twelve floors of it, the basement below, the Minister's floor above: the long corridors of people who had sponsored a programme called Continuity and funded it and read its reports and signed off its phases, and who had, since August, been so very eager to help her inquiry. Everyone had brought her boxes. She had begun, in the last few weeks, to notice who brought which boxes, and when, and in what order, and to wonder whether she was conducting an inquiry or being walked through one.</p>
+<p><em>Arrange to be the one who restores it.</em></p>
+<p>She had begun to suspect who in this building believed that sentence. Not who had written it. The page was far older than anyone she worked with had been in post, older, she thought, than the Ministry itself. But a sentence like that does not stay in a box for forty years because nobody reads it. Somebody had kept it. Somebody had filed it where she would find it, or had failed to take it out of where she was always going to look. She had narrowed it, in her mind, to a very small number of people, and she had not yet written any of their names down anywhere, which for her was a kind of fear she had no other word for.</p>
+<p>She uncapped her pen.</p>
+<p>For a moment she held it over the page and did not write, because it was evidence, and one did not write on evidence. Then she thought that if the record failed, as the page so calmly supposed it might, this sheet of paper would be the only record there was, and she would rather it said what she thought.</p>
+<p>In the margin beside the sentence, in her small, upright hand, she wrote:</p>
+<p><em>Who restores it? Watch who restores it.</em></p>
+<p>She looked at it. Her own handwriting, very black beside the gray typescript. It was a question, and then an instruction. She found that most of what she wrote down lately came out that way.</p>
+<p>She blotted it, and put the page back in its folder, and carried the folder to the safe, and put it in, and closed the door, and heard the lock take. She stood with her palm flat on the cold metal for a second longer than she needed to. Then she went back to her desk and sat down, and straightened the file copy of Mr. Harrow's pass so that its edge ran parallel with the edge of the blotter, and folded her hands.</p>
+<p>It was 13:59.</p>
+<hr>
+<p>There was a knock at the door. Not at the open door where Lucian leaned in, but at the inner one, the one to her left that gave onto the side corridor, two short knocks, light, unhurried.</p>
+<p>She knew the knock. She looked at the door for a moment, and her face did something that she would not, if she had been asked, have been able to name, and then it settled.</p>
+<p>She took off her reading glasses and let them fall on their cord.</p>
+<p>"Come in," she said.</p>
+<p>She glanced up at the clock on the wall opposite, the plain white Ministry clock that hung in every office on every floor, synchronised to the Spire to the thousandth of a second. It read <em>13:59:58</em>.</p>
+<p>The second hand moved toward the top of the hour.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <span class="nav-button disabled">← Previous</span>
+            <div class="nav-center">Prologue: 13:59</div>
+            <a href="01-system-failure.html" class="nav-button">Next: Chapter 1: System Failure →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

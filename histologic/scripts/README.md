@@ -7,8 +7,9 @@ All scripts use **only the Python standard library**. The HTML exporter uses the
 | `create-all-epubs.py` | Runs everything below, in order. Works from any directory. |
 | `create-ebook.py` | `novels/01-03-stories/histologic-stories.epub`: the three short stories |
 | `export-story-html.py <folder>` or `--all` | `novels/01-03-stories/<story>/<story>.html`, using `templates/story-export-template.html` |
-| `create-novel-ebook.py` | `novels/04-the-correction/the-correction.epub`: title page, part dividers, chapters, and an NCX table of contents for older readers |
-| `export-novel-html.py` | `novels/04-the-correction/html-export/`: one page per chapter plus `index.html`, using `templates/novel-export-template.html` |
+| `create-novel-ebook.py` | One EPUB per novel (`the-correction.epub`, `the-lost-hour.epub`): title page, part dividers, chapters, and an NCX table of contents for older readers. Pass `04` or `05` to build one book |
+| `export-novel-html.py` | `html-export/` in each novel folder: one page per chapter plus `index.html`, using `templates/novel-export-template.html`. Pass `04` or `05` to build one book |
+| `novels_config.py` | Shared book list for the two novel scripts: folder, title, blurb, and the chapter order grouped by part. Add a book here to build it |
 
 ```bash
 python3 scripts/create-all-epubs.py          # build everything

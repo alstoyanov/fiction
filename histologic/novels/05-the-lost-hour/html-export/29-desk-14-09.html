@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="28-the-signature.html" class="nav-button">← Previous: Chapter 28: The Signature</a>
+            <div class="nav-center">Chapter 29: Desk 14-09</div>
+            <a href="30-the-dilemma.html" class="nav-button">Next: Chapter 30: The Dilemma →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 29: Desk 14-09</h1>
+<p><em>Monday, January 10, 2107. The Regional Factorepo; the Commission offices, Ministry of Historical Integrity, Veridica Capital</em></p>
+<hr>
+<p>If you held the page at an angle to the lamp, you could still read it.</p>
+<p>Marcus had found that out at two in the morning on Sunday, sitting at the kitchen table with his lists spread in front of him and Kira asleep at last in the next room. He had erased it carefully on the twenty-ninth, the way you correct an entry, until the paper was clean. But a pencil presses as well as marks. At the bottom of the UNCHECKED column, where the paper had gone thin and soft with rubbing, the shape of the letters was still there, pressed into the fibres, visible only when the light came across it low: <em>T.W.?</em></p>
+<p>The record had been erased. The groove had not.</p>
+<p>Kira had told him on Saturday night, in the car from the Ministry, with the tablet on her knees and the partition up. She had told him in order, the way she reported a fault: the structure of the file, the backwards seam, the first-save shadow, <em>T. WEI</em>, Maya, 15:32. When she had finished she had looked out of the window and said, "I smiled at him. For the photograph. I want you to know that I smiled at him," and he had understood that this was the part she needed him to hear.</p>
+<p>He had not slept much since.</p>
+<p>It was not the file. He believed Kira's reading of it the way he believed the time on a Spire clock. It was the phrase. A hand resting on the edge of a bunk beside a paper cup of tea, and a voice saying, lightly, like an old joke, <em>another day in paradise</em>, and the smooth blank place in him where the rest of it should have been.</p>
+<p>Kira had found a hand. Maya had found a time. Neither of them could find that. It was his.</p>
+<p>And he was a historian. When a historian cannot remember, he goes to the record.</p>
+<hr>
+<p>At eight thirty-one Marcus showed his new Commission card to the guard in the lobby of the Regional Factorepo, who read it twice, looked at his face, and said, "Fourteen, sir? Of course, sir," in the voice of a man who had seen that face on a great many screens and was trying not to say so.</p>
+<p>The lift was the same lift: the same brushed steel, the same slight hesitation between the ninth floor and the tenth. His body knew it before he did. He had ridden it down at seventeen hundred hours every working day for three years, and on one of those evenings he had walked out into the autumn sun and seen a woman by the fountain who needed directions.</p>
+<p>He had not been back since October 2105.</p>
+<p>The doors opened on fourteen.</p>
+<p>Long rows of workstations under even white light, each with its three monitors and its historian bent toward them. The soft hum of the processors. The quiet clicking of keys. A traffic incident, a birth, a property dispute, going in one by one, each small green tick a brick in a wall. He stood at the end of the aisle and breathed it, and for a moment, very distinctly, he could feel how he had once loved it, the way you can feel the shape of a tooth that has been taken out.</p>
+<p>Then it was gone, and he was a thin man in a coat standing in a doorway, and people had begun to look up.</p>
+<p><em>14-08</em> was the fifth from the window. A young woman sat there now, with short hair and a green cardigan and a small potted plant beside her centre monitor. She glanced up as he stopped, then looked properly, and her hands went still on the keys.</p>
+<p>"I'm sorry," said Marcus. "I used to sit here."</p>
+<p>"It's a good desk," she said, not seeming to know what to do with her face. "The light's good."</p>
+<p>"It is," said Marcus. "It always was."</p>
+<p>He had meant to say something else. There had been a story about the desk, something one winter with a burst pipe on the floor above, and he reached for the end of it and found that there was no end. He stood there for a moment with his mouth slightly open, and then closed it.</p>
+<p>The desk beside hers was empty.</p>
+<p><em>14-09.</em> Its three monitors were dark. Its chair was pushed in square under the desk. Nothing on the work surface at all, not a stylus, not a cup ring, only the faint clean gleam of a surface wiped down every night for more than a year and used by nobody.</p>
+<p>"Nobody sits there," said the young woman, following his look. "They never reassigned it. I asked once. They said it was booked."</p>
+<hr>
+<p>The staff archive was at the end of the floor, behind a frosted door: a counter, a clerk, a terminal for personnel records. Marcus had been in it perhaps twice in three years.</p>
+<p>The clerk was an older man who did not recognise him, or was too well trained to show it. Marcus put his card on the counter.</p>
+<p>"Staff roster, fourteenth floor," he said. "Desks 14-01 to 14-20. January 2102 to December 2105."</p>
+<p>The clerk brought it up and turned the screen round on its arm, and Marcus read it the way he had once read a day's entries before logging out: top to bottom, every line, in order.</p>
+<p><em>14-07. HALE, R. Historian. 2098–present.</em></p>
+<p><em>14-08. CHEN, MARCUS. Junior Historian. March 2102 – October 2105. Status: see Correction Registry.</em></p>
+<p>He read his own line twice. <em>See Correction Registry.</em> Someone had not updated the note since the twenty-ninth. He found that he did not mind.</p>
+<p><em>14-09. WEI, THOMAS. Historian (secondment from Systems Architecture). April 2102 – October 2105.</em></p>
+<p>He read it once, and then did not read anything for a while.</p>
+<p>There was no photograph. Staff rosters did not carry them. Only the name, in the same clean capitals as every other, and in the column at the end, where the reason for leaving was entered, one word: <em>Recalled.</em></p>
+<p><em>Thomas.</em></p>
+<p><em>"Another day in paradise," Thomas said from the next workstation, stretching his arms above his head.</em></p>
+<p>It was there. It had always been there, in the part of him that Continuity had not wanted: not a memory, exactly, but the shape of a memory, the way the letters had been pressed into the paper under the eraser. A man at the next workstation, stretching. A voice, warm and dry. <em>That's what I love about you, Marcus. You actually mean that.</em> Lunch, which he had turned down, because of a backlog. <em>You're going to die at that desk, and they'll add it to the factorepo.</em> And his own voice, answering, <em>There are worse epitaphs</em>, and the man laughing.</p>
+<p>He had kept the name and the voice, the joke, the stretch, the lunch he didn't go to. He had said to Kira in the garden at Ashford, <em>Thomas</em>, and then, <em>I think he was my friend.</em> And on another afternoon in that garden, over another name he had lost, she had said: <em>When we get out, we'll find it in the factorepo.</em></p>
+<p>The face was not there. There was no face at all. Where the face should have been there was the smooth blank place that Reeves's machine had left behind, and into that blank place, now, without any memory to support it, without any recognition, with nothing but a line on a roster to hold it up, came the only face that could possibly fit: tall, graying at the temples, quiet-voiced, lifting a cup of tea with his right hand.</p>
+<p>He did not remember it. He knew it. That was worse.</p>
+<p>They had got out. He had found it in the factorepo.</p>
+<p><em>April 2102 to October 2105.</em> Three years and six months at the next desk, half a metre away. Watching him believe.</p>
+<p>He went out past the rows of desks without looking at 14-09, and at 14-11 a woman of about fifty looked up from her monitors, and her face changed.</p>
+<p>"Marcus?" she said. "Marcus Chen?"</p>
+<p>He did not know her. She knew him well enough to say his first name, and expected him to know her. He had lost the fourteenth floor's faces with Thomas's; he had not realised until now that he had lost all of them.</p>
+<p>"I'm sorry," he said. "I was— I don't remember very much. From before."</p>
+<p>Something in her face softened into pity, and he let it. "It doesn't matter," she said. "I'm glad you're all right. We all— when they said, in October—" She stopped. "You sat there. By Thomas."</p>
+<p>"Yes," said Marcus. "Do you remember when he left?"</p>
+<p>She thought about it honestly. "The same month," she said. "The week after you. Somebody said he'd been recalled to his department. He cleared his desk on a Friday evening and I never saw him again." She hesitated. "He was always kind to you. He used to watch you work. I used to think it was funny, a senior architect sitting with us, watching you enter traffic reports as if they were the most interesting thing in the world."</p>
+<p>"Thank you," said Marcus, and meant it, and went to the lift.</p>
+<p><em>Fact entry. January 10, 2107. Oh-nine-twelve. Regional Factorepo, fourteenth floor. Witness: unnamed historian, desk 14-11. Event: Wei, T., left desk 14-09 in October 2105, the week after Chen, M. Status: CHECKED.</em></p>
+<hr>
+<p>He sat in a café across the plaza with a cup of black coffee he did not drink and took out his lists.</p>
+<p>Across the square the fountain was running in the gray January light, as it had on the evening a woman asked him the way to somewhere she already knew.</p>
+<p>He turned the UNCHECKED sheet over to its blank side and began to write. He wrote in fact entries, because that was the only language he had that could hold still under this, and in order, because if he did not do it in order he thought he might not be able to do it at all.</p>
+<p><em>Entry 1. 2102–2105. Regional Factorepo, desk 14-09. Wei, T. Event: seconded to a historian's desk beside a junior historian who believed. Watched him for three years. Chose him. The Believer.</em></p>
+<p><em>Entry 2. October 2105. Correction Registry. Wei, T. Event: the Judge found 0.58. Someone typed 0.73. Signature per Osman, K.: the same hand.</em></p>
+<p><em>Entry 3. November–December 2105. Factorepo Spire. Wei, T. Event: Security Protocol Update 7.3, entered by Osman, K., on November 18, deleted without contradiction. The Architect acquired. Signature: the same hand.</em></p>
+<p><em>Entry 4. November 15, 2106. 14:00–15:00. Primary repository, all backups. Wei, T. Event: one hour erased. Including 214 statements and the Continuity core, uploaded 14:10–14:52 by Chen, M. and Osman, K. Signature: the same hand.</em></p>
+<p><em>Entry 5. November 15, 2106. Ministry district node, carrier from 14:18. Wei, T. Event: forty witnesses seeded with the face of Chen, M. and the gray of Wing C. Also seeded: his own office. Alibi, 13:30–15:20. Arrived at the Regional Factorepo 15:32. Witness: Reeves, M.</em></p>
+<p><em>Entry 6. November 15, 2106. 14:21. Ministry, side entrance; the Deputy Minister's office. Wei, T. Event: entered with a staff card, Systems Architecture, senior. Left hand bandaged. Witnesses: forty, seeded, who kept the hand; Volkov, D., unseeded, who kept the walk. What happened in the office: unknown.</em></p>
+<p><em>Entry 7. December 13–20, 2106. Ministry medical wing, stabilisation cradle. Wei, T. Event: a murder written into the memory of Reeves, the man who invented the writing. Confession record authored by Wei, T.; author field amended. Witness: Chen, M., who watched it take.</em></p>
+<p><em>Entry 8. December 6, 2106. North road, checkpoint, rain. Wei, T. Event: stopped the transport to Secure Care Unit 3. Rescued Chen, M. from the cradle. So that the restorer would survive to restore.</em></p>
+<p>He stopped there, and looked at the last line, which he had not known he was going to write until he had written it.</p>
+<p>Then he read the whole column through, from the top, and felt the cold come up from somewhere under his ribs.</p>
+<p>It was consistent. There was no line in it that did not fit, no fact that arrived too early or too late. It explained the bandage and the card class and the returned page on Nikolai's desk and the question about whether they were sleeping well. It explained the hand held away from the body, and a younger man's walk, and the only slot available, and a dead woman's credentials in every calendar. It explained why the transfer to Unit 3 had been postponed, and why it had been stopped.</p>
+<p><em>It is a very good case,</em> Dmitri had said to his brother in December, of a different case, and Kira had passed it on. <em>I have built cases like this. I built them when I already knew the answer.</em></p>
+<p>Marcus looked at his column, and knew that he had built it backwards, from the answer, the way Dmitri meant. And he knew that it was true anyway. Both. He did not know how to hold that, and he held it.</p>
+<p>He did not write a status against any of the eight entries. None of it was CHECKED, except the roster and a woman at desk 14-11. It was not a hope. It was a record nobody could verify, kept by a man who had once been certain of a field.</p>
+<p>He folded the sheet and put it in his coat, and paid for the coffee, and went to the Ministry.</p>
+<hr>
+<p>The Commission had been given the east wing of the Ministry's seventh floor, a corridor of offices that still smelled of new carpet and had names on the doors in fresh black lettering.</p>
+<p>At the far end of the corridor was a larger door, half open, and a voice beyond it, quiet and unhurried, on a call. <em>No, that's fine. Friday's fine. Thank them for me.</em> Marcus did not look at the lettering on that door. He did not need to. He went into his own office and shut his door and sat at a desk that had nothing on it, and waited.</p>
+<p>Kira came at two. Kovač came ten minutes later, in her dark coat, with her hands in her pockets, and shut the door behind her and stood with her back against it.</p>
+<p>"Commissioner," she said. "Ms. Osman."</p>
+<p>"Director."</p>
+<p>"Possibly." She took a plain buff envelope from her pocket. "Deputy Minister Singh's office was sealed on the evening of November fifteenth. Her safe went into the case file as <em>personal effects, unopened, pending release to the family</em>. There is no family anyone can find." She pushed her glasses up her nose. "The lead investigator never asked for it to be opened. The Undersecretary didn't think of it. I did. In October, Deputy Minister Singh opened a file on me. A subject of the inquiry is entitled to inspect any material concerning her, wherever it's held. I petitioned Halvorsen's clerk on Wednesday. They opened the safe this morning, in my presence, with two witnesses, and I signed for its contents on paper." Something moved at the corner of her mouth that was not quite humour. "The file on me was on the bottom. This was on the top."</p>
+<p>She put the envelope on his desk.</p>
+<p>Marcus opened it.</p>
+<p>Inside was a plain card folder, and inside the folder a single typed sheet, old, the paper softened and yellowed at the edges, torn across the top just below the first word of the heading. <em>PRINCIPLE —</em>, and then nothing. He had seen it as a photograph, under the lamp in the safe flat, a dozen times since December. He had not seen it as a thing. It was lighter than he had expected, and smelled faintly of old paper.</p>
+<p>The page number at the foot: <em>30</em>. The small numeral in the lower right corner: <em>XI</em>. At the foot of the text, a little apart from it, a short typed mark, two capitals and a number divided by a raised dot, clear here as it had not been in the photograph, and meaning no more to him clear than it had blurred. Every <em>e</em> on the page had the same small bite out of its upper curve, over and over, like a limp.</p>
+<p><em>When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it.</em></p>
+<p>And in the margin beside it, where the photograph had shown nothing at all, in a small upright hand, very black against the gray typescript:</p>
+<p><em>Who restores it? Watch who restores it.</em></p>
+<p>Nobody in the room said anything.</p>
+<p>"She must have written it after she took the photograph," said Kira at last. "It isn't on the print."</p>
+<p>"She knew," said Marcus.</p>
+<p>"She suspected," said Kovač precisely. "Or she knew the building well enough to know what kind of person would believe that sentence. Or she was one of them, and she was keeping a note on her colleagues." She took her glasses off. "I have read that line forty times since nine o'clock this morning and I can make it mean any of the three."</p>
+<p>Marcus looked at the black handwriting. It was the hand of a woman who had arranged a pass for a dead man. It was the hand of a woman whose credentials were in every calendar entry that had herded them into the hour. It was both. He let it be both.</p>
+<p>He took a pencil and a clean sheet of paper from his coat, and wrote out, from memory, in his small historian's hand, as much of the sentence as Kira had been able to give him on the night of December sixth, the one she had heard an old man sing at a stove to the tune that came through the meal slot of Wing C. He had checked it with her twice since. There was still a place in the middle where neither of them was sure of the words, and he left it as a gap, because a gap was honest.</p>
+<p><em>A people that has lost part of its past will accept any past … given gently, and by someone it trusts.</em></p>
+<p>He laid the sheet on the desk beside the torn page, the pencil beside the typescript, and sat back, and read them together.</p>
+<hr>
+<p><em>When the record fails.</em></p>
+<p>It had failed. On the fifteenth of November, at 14:00:00, in every repository and all three backups. Not corrupted. Absent.</p>
+<p><em>A people that has lost part of its past.</em></p>
+<p>Veridica had lost an hour. And into that hour, forty people had been given a past: a dead man's face and a prisoner's gray, gently, through a node they had never heard of, and they had accepted it, and sworn to it.</p>
+<p><em>The people will believe whoever restores it.</em></p>
+<p>And then someone had restored it. Not the record, which was gone. Something better. A doctrine. <em>Where the record is absent, facts may be established by the concordant testimony of multiple independent witnesses.</em> A law that turned what people remembered into what was true.</p>
+<p>Marcus had fought for it. They all had. The dead had walked up the steps of the Justice Center for it. Kovač had put her career on the stand for it. He had watched <em>STATUS: LIVING</em> go green on a clerk's screen and sat down because his knees would not hold him.</p>
+<p>A nation where testimony was law. A nation where testimony could be seeded.</p>
+<p><em>Whoever can write memory,</em> he thought, very slowly, <em>can now write law.</em></p>
+<p>And who would the people believe, when the next hour failed, and the next district was written, and the Commission sat to establish, on the concordant testimony of witnesses, what had happened in it? Who would be standing in front of it? Whose names would be on the doors of the corridor, in fresh black lettering?</p>
+<p><em>Given gently. And by someone it trusts.</em></p>
+<p>He thought of the card clipped to the Minister's invitation. <em>With gratitude for what you have restored.</em> He thought of Wei at the top of the stairs on Saturday with two glasses, <em>the Minister wants a photograph of the restorers</em>. He thought of the stranger with the scarf on the pavement by the plaza, holding his hand in both of his own and crying, <em>thank you, thank you</em>.</p>
+<p>They were trusted. That was what they were for. The dead who had come back, the prisoners who had exposed Continuity: the most trusted faces in Veridica. Nobody would ever believe that Marcus Chen and Kira Osman were anyone's instrument. That was exactly why they were.</p>
+<p><em>Arrange to be the one who restores it.</em></p>
+<p>He had not been chosen as a suspect. Or not only. He had been chosen as a restorer. The Believer, broken and rebuilt, grateful, honest, sincere, standing at the front of the room. He had been chosen for this in 2102, at a desk half a metre from his own, by a man who liked him, or performed liking so well that the difference would never matter.</p>
+<p>He looked up. Kira was watching him. She had got there before him, he saw. She had got there on the stairs on Saturday, with a glass in her hand.</p>
+<p>"The gentle hands," he said. "That's us."</p>
+<p>"Yes," said Kira.</p>
+<p>Kovač said nothing at all.</p>
+<hr>
+<p>When they had gone, he took the other envelope out of his desk drawer.</p>
+<p>It had come on Friday, by hand, across the lake: two sheets in Isaiah's small print, folded in three, and a covering note. He had read it at the kitchen table and thought it very good, and very like Isaiah, and slightly unfair, and put it in the drawer.</p>
+<p>He read it again now.</p>
+<p><em>A nation that cannot trust its record has chosen to trust its memory in the same season it learned that memory can be written. We should be asking who is best placed to write it.</em></p>
+<p>On Friday it had been a question, and Marcus had admired it as a man admires a well-made instrument he does not expect to need.</p>
+<p><em>I do not know. I have asked, and I will go on asking.</em></p>
+<p>Marcus knew. He sat in his new office with the Commission's name on the door and a torn page on his desk, and he knew exactly who was best placed to write it, and where the man was sitting, forty metres down the corridor, with his door half open.</p>
+<p><em>Don't publish this. Read it at the Commission. Then decide who you are.</em></p>
+<p>He folded the column in three again, along Isaiah's creases, and put it in the inside pocket of his coat, with his lists.</p>
+<hr>
+<p>At four he took the lift down, and a tram back across the city, and crossed the plaza in the dark, and went into the Regional Factorepo again.</p>
+<p>The guard let him through without a word this time. The lift hesitated between nine and ten. On fourteen the historians were logging out, the monitors going dark along the rows, people saying goodnight in the low voices of a floor that has spent all day being quiet. The young woman at 14-08 had already gone. Her plant was on the desk, and a scarf over the back of her chair, for the morning.</p>
+<p>At seventeen hundred hours, exactly, the floor was nearly empty.</p>
+<p>Marcus pulled out the chair at 14-09 and sat down in it.</p>
+<p>It was an ordinary chair. It gave slightly as he sat. From here, if he turned his head a little, he could see the whole of 14-08: the three monitors, the angle of the keyboard, the place where a man would rest his elbow while he read an entry, and the side of that man's face, bent toward the screen, certain. He had never once, in three years, thought about how he looked from here.</p>
+<p>He sat there for a minute. There was nothing to remember with.</p>
+<p>Then, because a bored man at a desk for three years and six months might have done it, because he had to know, he reached under the edge of the desk and ran his fingers along the underside of it, slowly, from one end to the other.</p>
+<p>Nothing. No initials. No date. No scratch, no groove, no cut. Not even the rough place where a drawer runner had been fixed. The underside of desk 14-09 was smooth, and even, and perfectly clean, as if nobody had ever sat there at all.</p>
+<p>Of course it was.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="28-the-signature.html" class="nav-button">← Previous: Chapter 28: The Signature</a>
+            <div class="nav-center">Chapter 29: Desk 14-09</div>
+            <a href="30-the-dilemma.html" class="nav-button">Next: Chapter 30: The Dilemma →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

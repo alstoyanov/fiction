@@ -66,7 +66,7 @@ In Story 03 she is a believer who knows the storms are manufactured and says so 
 | 25 | Her unit makes the first storm ever inside the capital. Dmitri knows exactly who will be sent after them. |
 | 26 | Aug 2, 2106. The lakeshore checkpoint in the fog, nearly the one from Story 03. She walks out alone, hands in pockets, and looks through the windscreen at Alexei's face without knowing which brother it is. If she arrests them, the inquiry's first question is where the unit came from, and the third is Ivan Volkov. She lifts the radio: "No contact. I repeat, no contact. Checkpoint clear." The barrier goes up. She stands with her face turned away into the fog. Dmitri: "She let us go." |
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 | Ch | What she does |
 |----|---------------|
 | 5 | Flashback to 14:05–14:50, Nov 15. **She escorts Isaiah's expulsion in person**, unexpected and unexplained. At the lakeshore checkpoint: "The order says 14:30. The Director's office requested this slot. It was the only one available," sounding as if she doesn't believe it either. At 14:30 Isaiah crosses into **Chronos**. Behind him, very faintly: "Write carefully, Mr. Okonkwo." |

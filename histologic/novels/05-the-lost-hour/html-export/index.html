@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Table of Contents</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        .toc {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .toc h2 {
+            color: var(--line);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .part {
+            margin: 2rem 0;
+        }
+
+        .part-title {
+            color: var(--heading);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .chapter-list {
+            list-style: none;
+        }
+
+        .chapter-list li {
+            margin: 0.75rem 0;
+        }
+
+        .chapter-list a {
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            background: var(--bg-light);
+            border-left: 3px solid var(--line);
+            transition: all 0.3s ease;
+        }
+
+        .chapter-list a:hover {
+            background: var(--bg-medium);
+            border-left-color: var(--heading);
+            transform: translateX(5px);
+        }
+
+        .chapter-number {
+            color: var(--line);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .chapter-title {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-left: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <div class="part">
+                <div class="part-title">Prologue</div>
+                <ul class="chapter-list">
+                    <li><a href="00-prologue.html"><span class="chapter-number">Prologue:</span> 13:59 <span class="chapter-title">(Singh)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="part">
+                <div class="part-title">Part One: The Missing Hour</div>
+                <ul class="chapter-list">
+                    <li><a href="01-system-failure.html"><span class="chapter-number">Chapter 1:</span> System Failure <span class="chapter-title">(Maya)</span></a></li>
+                    <li><a href="02-the-hearing-room.html"><span class="chapter-number">Chapter 2:</span> The Hearing Room <span class="chapter-title">(Kovač)</span></a></li>
+                    <li><a href="03-the-upload.html"><span class="chapter-number">Chapter 3:</span> The Upload <span class="chapter-title">(Marcus)</span></a></li>
+                    <li><a href="04-the-dead-man.html"><span class="chapter-number">Chapter 4:</span> The Dead Man <span class="chapter-title">(Marcus)</span></a></li>
+                    <li><a href="05-the-coat.html"><span class="chapter-number">Chapter 5:</span> The Coat <span class="chapter-title">(Isaiah)</span></a></li>
+                    <li><a href="06-the-crossing.html"><span class="chapter-number">Chapter 6:</span> The Crossing <span class="chapter-title">(Tanaka)</span></a></li>
+                    <li><a href="07-the-ghosts.html"><span class="chapter-number">Chapter 7:</span> The Ghosts <span class="chapter-title">(Alexei)</span></a></li>
+                    <li><a href="08-forty-witnesses.html"><span class="chapter-number">Chapter 8:</span> Forty Witnesses <span class="chapter-title">(Kira)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="part">
+                <div class="part-title">Part Two: The Witnesses</div>
+                <ul class="chapter-list">
+                    <li><a href="09-recruitment.html"><span class="chapter-number">Chapter 9:</span> Recruitment <span class="chapter-title">(Nikolai)</span></a></li>
+                    <li><a href="10-another-day-in-paradise.html"><span class="chapter-number">Chapter 10:</span> Another Day in Paradise <span class="chapter-title">(Marcus)</span></a></li>
+                    <li><a href="11-erase-then-seed.html"><span class="chapter-number">Chapter 11:</span> Erase, Then Seed <span class="chapter-title">(Tanaka)</span></a></li>
+                    <li><a href="12-the-singer.html"><span class="chapter-number">Chapter 12:</span> The Singer <span class="chapter-title">(Old Songs)</span></a></li>
+                    <li><a href="13-the-only-clean-witness.html"><span class="chapter-number">Chapter 13:</span> The Only Clean Witness <span class="chapter-title">(Dmitri)</span></a></li>
+                    <li><a href="14-the-carrier.html"><span class="chapter-number">Chapter 14:</span> The Carrier <span class="chapter-title">(Maya)</span></a></li>
+                    <li><a href="15-the-doctrine.html"><span class="chapter-number">Chapter 15:</span> The Doctrine <span class="chapter-title">(Kovač)</span></a></li>
+                    <li><a href="16-the-source.html"><span class="chapter-number">Chapter 16:</span> The Source <span class="chapter-title">(Kira)</span></a></li>
+                    <li><a href="17-how-the-hour-was-written.html"><span class="chapter-number">Chapter 17:</span> How the Hour Was Written <span class="chapter-title">(Isaiah)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="part">
+                <div class="part-title">Part Three: The Source</div>
+                <ul class="chapter-list">
+                    <li><a href="18-protective-custody.html"><span class="chapter-number">Chapter 18:</span> Protective Custody <span class="chapter-title">(Marcus)</span></a></li>
+                    <li><a href="19-the-resurrection.html"><span class="chapter-number">Chapter 19:</span> The Resurrection <span class="chapter-title">(Alexei)</span></a></li>
+                    <li><a href="20-confessions.html"><span class="chapter-number">Chapter 20:</span> Confessions <span class="chapter-title">(Nikolai)</span></a></li>
+                    <li><a href="21-the-annex.html"><span class="chapter-number">Chapter 21:</span> The Annex <span class="chapter-title">(Kira)</span></a></li>
+                    <li><a href="22-the-body.html"><span class="chapter-number">Chapter 22:</span> The Body <span class="chapter-title">(Tanaka)</span></a></li>
+                    <li><a href="23-a-very-good-case.html"><span class="chapter-number">Chapter 23:</span> A Very Good Case <span class="chapter-title">(Dmitri)</span></a></li>
+                    <li><a href="24-i-remember-doing-it.html"><span class="chapter-number">Chapter 24:</span> I Remember Doing It <span class="chapter-title">(Marcus)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="part">
+                <div class="part-title">Part Four: The Verdict</div>
+                <ul class="chapter-list">
+                    <li><a href="25-the-hearing.html"><span class="chapter-number">Chapter 25:</span> The Hearing <span class="chapter-title">(Kovač)</span></a></li>
+                    <li><a href="26-status-living.html"><span class="chapter-number">Chapter 26:</span> Status: Living <span class="chapter-title">(Marcus)</span></a></li>
+                    <li><a href="27-the-editor.html"><span class="chapter-number">Chapter 27:</span> The Editor <span class="chapter-title">(Isaiah)</span></a></li>
+                    <li><a href="28-the-signature.html"><span class="chapter-number">Chapter 28:</span> The Signature <span class="chapter-title">(Kira)</span></a></li>
+                    <li><a href="29-desk-14-09.html"><span class="chapter-number">Chapter 29:</span> Desk 14-09 <span class="chapter-title">(Marcus)</span></a></li>
+                    <li><a href="30-the-dilemma.html"><span class="chapter-number">Chapter 30:</span> The Dilemma <span class="chapter-title">(Old Songs)</span></a></li>
+                    <li><a href="31-the-commission.html"><span class="chapter-number">Chapter 31:</span> The Commission <span class="chapter-title">(Marcus)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="part">
+                <div class="part-title">Epilogue</div>
+                <ul class="chapter-list">
+                    <li><a href="32-epilogue.html"><span class="chapter-number">Epilogue:</span> One Year Later</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>The Lost Hour</strong> - Novel 05 of the Histologic Series</p>
+            <p>© 2026 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Prologue, 29 chapters and Epilogue | ~114,167 words
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

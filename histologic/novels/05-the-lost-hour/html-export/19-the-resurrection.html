@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="18-protective-custody.html" class="nav-button">← Previous: Chapter 18: Protective Custody</a>
+            <div class="nav-center">Chapter 19: The Resurrection</div>
+            <a href="20-confessions.html" class="nav-button">Next: Chapter 20: Confessions →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 19: The Resurrection</h1>
+<p><em>Wednesday, December 8, 2106. The steps of the Justice Center, Veridica Capital</em></p>
+<hr>
+<p>The trick with a resurrection, Alexei had always thought, was that you only got to do it once.</p>
+<p>He had done disappearances, dozens of them, for ten years, on both sides of the lake: a family who stopped existing at a fence, a woman who crossed a frozen inlet in a borrowed coat while two nations argued over whose ice it was. He knew how to take someone out of the record. It was the only craft he had ever been good at.</p>
+<p>Putting someone back was different. You could not do it quietly. The whole point was to be seen.</p>
+<p>"Midday," he said. "Not evening, because nobody believes a thing they saw in the dark. Midday, on the steps, in the light, with every camera in the capital already pointing at the building because of Monday." He put his finger on the map. "We come in on the eastern tram. We walk the last four hundred metres. Nobody stops the dead."</p>
+<p>"Nobody tracks them," said Elena. "It isn't the same thing."</p>
+<p>They were in the barn, on the Tuesday night, round the crate with the lamp swinging over it: Elena on her upturned crate with the notebook she never wrote in, Dmitri standing, Marina Holt and Jakob Lind with mugs of Elena's terrible tea, Old Songs in the corner on a blanket, apparently asleep.</p>
+<p>The news had come through on Monday night in two parts. The first was the verdict, and Alexei had gone out and walked round the barn in the rain for half an hour, because there was nothing to hit. The second came two hours later, from Nikolai. <em>He is out. Wei stopped the van with an order from the Minister. Protective custody. K. is with him.</em></p>
+<p>"Protective custody," Elena had said, reading it, in a voice with nothing in it at all. "Well. That's one word for it."</p>
+<p>And then, this morning, flat and fast, the way she always gave the plan once she had decided it: "The verdict stands. He's in a Ministry flat for his own good, and he'll stay there until the Ministry decides his good lies somewhere else. The hearing question will sit on the Minister's desk until it's more embarrassing to leave it than to put it. The foreign press have been shouting since Friday and nobody here has to listen. So we give them something nobody can not listen to." She had counted them round the crate with her eyes, left to right. "Marina. Jakob. Dmitri."</p>
+<p>"And me," Alexei had said.</p>
+<p>"I didn't say you."</p>
+<p>"You didn't have to. He's not going up there alone."</p>
+<p>Dmitri had looked at him, one long look, and said nothing, which from Dmitri was agreement.</p>
+<p>Alexei had expected an argument all the same. Eleven days ago, at the farmhouse table, Dima had promised to wait for a room that would hear him.</p>
+<p>"On Monday a room heard forty statements and a machine," Dmitri had said, when Alexei reminded him, "and sent Marcus to Unit 3 by lamplight. The verdict stands. The order for Unit 3 has not been cancelled. It has been set aside by one man's signature, and a signature can be taken back." He looked at the map. "There is no other room. The steps will have to be the room."</p>
+<hr>
+<p>On the map the Justice Center was a rectangle with a broad fan of steps on its southern face, a plaza below it, and four streets going out of the plaza like spokes.</p>
+<p>"Enforcement Center's here," he said. "They'll come from the west. Elena's car is here, on the east side, engine running. We need eleven minutes. Marina first, then Jakob, then Dima. I'm there to stand next to him."</p>
+<p>"To be the same face twice," said Marina.</p>
+<p>"To be the same face twice." He grinned at her. "People can argue with one dead man. It's much harder to argue with a matching pair."</p>
+<p>Marina did not smile. She was a neat, fair-haired woman of about forty who had spent four years in a Ministry archive with her face arranged, and had not yet taken the arrangement off. Alexei liked her enormously. He suspected she found him tiring.</p>
+<p>"And after the eleven minutes," she said. "When they arrest us."</p>
+<p>"They can't arrest us," said Alexei. "That's the beauty of it. You and Jakob are the victims of a kidnapping. You're going to stand on the steps of the Justice Center and tell them you weren't kidnapped. And Dima and I are dead. You can't arrest a dead man. There's no field for it."</p>
+<p>"They will find a field," said Dmitri.</p>
+<p>"Then they'll have to find it on camera."</p>
+<p>Jakob Lind, who had spent years answering the enforcement dispatch line and knew exactly how long it took a unit to reach any address in the capital, said quietly, "Three minutes forty from the Enforcement Center to the Justice Center steps, if they run the sirens."</p>
+<p>"Three minutes forty," said Alexei. "Thank you, Jakob. See, this is why we bring professionals."</p>
+<hr>
+<p>Nikolai's message came in at midnight.</p>
+<p>He had felt it coming all evening through the bond: cold hands, which was Kolya, and which was fear. The small, steady cold that had been in Kolya since the fifteenth.</p>
+<p><em>You know what I said,</em> Nikolai had written, in the old shift. <em>If you come back, they will look at everyone who shares your face. There are three of us. They will count.</em></p>
+<p>Elena read it out and handed it to Dmitri. Dmitri read it and handed it to Alexei.</p>
+<p>"He's right," said Dmitri.</p>
+<p>"He's right," Alexei agreed. "He's always right. It's his worst quality."</p>
+<p>Then he wrote back: <em>We know. It's still the only door. Tell us not to and we won't.</em></p>
+<p>It was twenty minutes before the answer came, and when it did it was three lines.</p>
+<p><em>Go. I'll grow the beard longer.</em> <em>Stand where the cameras can see your faces and nothing behind you.</em> <em>And Lyosha, try not to enjoy it.</em></p>
+<p>Alexei laughed out loud, alone at the crate at half past midnight, and then sat with his hand over his eyes for a while.</p>
+<p>In the corner, on his blanket, Old Songs had begun, very softly, to hum. It was not the Lakeshore Air. It was the other one, the comic one he had sung for them after supper on the night Dmitri promised to testify, when everyone at the table had needed something to laugh at: the ballad about the town that lost an hour and argued forever about what happened in it.</p>
+<p><em>And every one of them was sure,</em> Alexei thought, <em>and every one was sworn.</em></p>
+<p>He went to bed.</p>
+<hr>
+<p>Wednesday came up cold and bright, with the kind of hard, clean winter light that made the capital look like its own architectural model.</p>
+<p>They had driven in before dawn. They came the last part of the way on the eastern tram, separately, two carriages apart, and nobody looked at them twice. A dead man on a tram looked exactly like a live one. The interface behind his ears sent its spoofed zero to the Registry every few seconds, <em>nothing, nothing, nothing</em>, and the Registry, which in Veridica was the truth, believed it. Somewhere, perhaps, a camera noted that his face resembled that of a citizen recorded as deceased, and weighed that against the flatline, and decided, as systems do, in favour of the record.</p>
+<p><em>You can walk anywhere,</em> he thought, <em>as long as you never ask to be believed.</em></p>
+<p>Today they were going to ask.</p>
+<p>They got off at the stop before the plaza and walked the last four hundred metres. Marina and Jakob went first, together, in their ordinary office coats. Dmitri a little behind. Alexei a little behind Dmitri, where he could see everything. And at the back, far back, among the lunchtime crowd crossing the plaza, a thin old man in a borrowed brown coat that was too big for him, with his white hair tied back and his hands in his pockets.</p>
+<p>The press was there. Isaiah had seen to it.</p>
+<p>He had done it from a borrowed desk at the SFW mission in Chronos, with his own name, which had been worth nothing a fortnight ago and was worth a great deal since Friday. <em>Be on the Justice Center steps at noon on Wednesday,</em> he had told a dozen correspondents, Chronos and Synthesis and SFW. <em>I can't tell you what you'll see. I can tell you that you'll want to have seen it.</em> And they had come. There were Veridican crews too, who had come for the foreigners, the way crews always came where other crews were.</p>
+<p>Alexei counted them as he walked. Nine cameras. Two broadcast vans. The Justice Center's own four, on the portico.</p>
+<p><em>Stand where the cameras can see your faces and nothing behind you.</em></p>
+<p>At twelve o'clock exactly, Marina Holt walked up the first eleven steps of the Justice Center, turned round, and faced the plaza.</p>
+<hr>
+<p>She did not raise her voice. She stood still in the bright midday light and waited until the cameras found her, and then she said:</p>
+<p>"My name is Marina Holt. Until the fifteenth of November I was a records archivist in the Ministry of Historical Integrity. The Ministry has told you that I was kidnapped from my post on that day. I was not. I left voluntarily at fourteen twenty-five, carrying a box of files, and I walked out of the Ministry district and got into a truck. Nobody forced me. I would like that to be entered."</p>
+<p>Her voice was dry and exact and entirely without drama, and it carried across the plaza the way a quiet voice carries in a library, and the plaza, which had been full of lunchtime noise, began to go silent from the front backwards.</p>
+<p>Jakob stepped up beside her. He was younger than Marina and visibly frightened, and his hands shook, and he said it anyway. "Jakob Lind. Enforcement dispatcher, central district. I left my post at fourteen thirty-five on the fifteenth of November. I was three minutes late to the truck. I wasn't kidnapped either. I'm sorry for the trouble."</p>
+<p>Somebody laughed, once, in the crowd, and stopped.</p>
+<p>A reporter near the front, a Synthesis woman with a long lens, called out: "Who was driving the truck?"</p>
+<p>And Dmitri walked up the steps.</p>
+<hr>
+<p>Alexei went with him. Not beside, at first: one step behind and to the left, where he had stood on the parapet of a roof in the border zone when they were twelve, because he had always been in the middle and Kolya had always been on the right. Then, at the top of the flight, he stepped up level, and they turned together and faced the plaza, and the cameras found them.</p>
+<p>He heard it happen. There was a sound a crowd makes when it sees something it does not have a word for. It is not a gasp. It is lower than that, and slower, and it goes through a crowd like a crack goes through ice.</p>
+<p><em>The same face twice.</em></p>
+<p>"My name is Dmitri Volkov," said Dmitri. "The Correction Registry records that I died at Ashford Correctional Facility on the second of August, of cognitive failure during a fact storm. I did not. This is my brother Alexei, who is also recorded as dead, and is also not."</p>
+<p>"Hello," said Alexei, and grinned, because he could not help it and because Kolya had told him not to enjoy it.</p>
+<p>"On the fifteenth of November, at fourteen twenty-one," said Dmitri, "I was on the roof of the building opposite the side entrance of the Ministry of Historical Integrity, providing overwatch for the operation Ms. Holt and Mr. Lind have described. I will tell you what I saw. I was an enforcer. I will tell it to you the way I would have written it."</p>
+<p>And he did.</p>
+<p>Alexei had heard it before, on the radio in the truck on the day itself and at the barn table a dozen times since. He had never heard it like this, in the flat, formal voice that had once read out charge sheets in the border zone, delivered to a plaza full of strangers as if the plaza were a tribunal and Dmitri the only witness who had turned up.</p>
+<p>"A man approached the side entrance on foot from the north. He wore a dark jacket, not a coat, and dark trousers. He carried a staff card, which he presented to the reader without breaking stride. He held his left hand a little away from his body, as a man does when the hand hurts. He did not look round. He did not look up. He went in at fourteen twenty-one. I did not see him come out." A pause. "He walked well. Light on his feet. Economical. He took the steps as a fit man takes them. I have watched a great many men walk, professionally."</p>
+<p>"Was it Reeves?" someone shouted, from the Veridican crews. The name had been everywhere since Friday. Isaiah's article had not printed it and had not needed to: within a day the commentators had supplied it, <em>where is Dr. Reeves?</em>, on Chronos front pages and then, cautiously, on Veridican ones. The man who had invented the thing the article described.</p>
+<p>Dmitri looked at the man who had shouted. His face did nothing at all.</p>
+<p>"I do not know who it was," he said. "I can tell you that it was a younger man than the one you are hunting."</p>
+<hr>
+<p>For a moment there was silence.</p>
+<p>Then someone at the back of the crowd, a man's voice, high and cracking with something that was not quite laughter, shouted: "<em>The dead are testifying!</em>"</p>
+<p>And the plaza came apart.</p>
+<p>Everyone talking at once. People pushing forward, people pushing back, a woman with both hands over her mouth, a child on a man's shoulders pointing. Somebody was saying <em>it's a trick, they're twins</em>, and somebody else was saying <em>twins, you idiot, they're both dead, it says so</em>, and a Chronos reporter was talking very fast into a microphone, and the phrase came through it again and again, the one the man at the back had shouted, which by evening would be on the front of every paper from Chronos to Synthesis.</p>
+<p><em>The dead are testifying.</em></p>
+<p>Through the bond, from somewhere on the far side of the city, Alexei felt Kolya's cold hands close into fists.</p>
+<p>And under that, steady, heavy, cold, at the edge of his mind, Dmitri, standing beside him on the steps with his face empty and his hands at his sides, and under the weight, for the first time Alexei could remember, something going very fast.</p>
+<p><em>You did it,</em> Alexei thought at him, uselessly, since the bond carried no words and never had. <em>They heard you. You mattered.</em></p>
+<p>The sirens came at three minutes and forty seconds.</p>
+<hr>
+<p>There were six enforcers in the first unit and eight in the second, and they came up the plaza from the west at a run, and then, at the foot of the steps, they slowed.</p>
+<p>He would tell it for years, at tables in the border zone, and he would always tell this part slowly: fourteen trained officers of the Fact Enforcement Division arriving at a disturbance, and reaching for the procedure, and finding that there wasn't one.</p>
+<p>The two people at the front were a kidnapping victim and a missing dispatcher, both alive, both saying that no crime had occurred. The two behind them were dead, on the authority of two death certificates signed by a Director of Correction in August. You could not detain a person the record said did not exist. You could not even ask him for his citizen number, because the number would come back <em>deceased</em>, and then what?</p>
+<p>The officer at the front of the second unit came up the steps alone.</p>
+<p>He was older than the others, and grayer, and he walked like a man who had been walking up steps towards trouble for thirty years. He stopped two steps below Alexei, which put their eyes level. He looked at Alexei for a long moment, and then at Dmitri, and then back at Alexei.</p>
+<p>"Officer Kade," he said. "Enforcement Center." He glanced at Marina and Jakob. "Ms. Holt. Mr. Lind. Are you in need of assistance?"</p>
+<p>"No, officer," said Marina. "I resigned."</p>
+<p>Kade nodded slowly, as if that were a perfectly ordinary answer, and turned back to Alexei.</p>
+<p>"I have no warrant," he said, "for a dead man, Mr. Volkov."</p>
+<p>Alexei had known someone would have to say it, on these steps, in front of these cameras, and he had known what he would say back.</p>
+<p>"Then you'd better prove I'm alive," he said.</p>
+<p>Something happened at the corner of Kade's mouth. It was not a smile. It was the start of one, caught and put away by thirty years of procedure, because Officer Kade did not smile on duty. It lasted perhaps a second.</p>
+<p>"That," said Kade, "is not my department."</p>
+<p>He went back down, and said something short to the unit, and the enforcers spread out along the foot of the steps facing the crowd, not the speakers. Keeping order round a disturbance nobody could arrest.</p>
+<p><em>The system's short-circuited,</em> Alexei thought, with a joy so large it hurt. <em>We've crossed two wires in the middle of the capital and it doesn't know which way to send the current.</em></p>
+<hr>
+<p>He looked for Old Songs, afterwards, because he always looked for Old Songs.</p>
+<p>The old man was at the back of the crowd, where he had been all along, at the edge of the plaza by the western streets. He had not come forward. He had not been asked to, and would not have if he had. <em>Somebody has to watch the audience,</em> he had said at the barn, when Marina asked him, and gone back to sleep. He stood with his hands in the pockets of the borrowed coat, very still among the moving people, and he was not looking at the steps at all. He was looking at faces. Alexei had seen him do it in the library at Ashford, a hundred times: the slow, patient sweep, face to face to face, like a man reading a shelf. And his mouth was moving very slightly. He was humming.</p>
+<p>Alexei followed the old man's gaze, the way he would have followed a line of sight at a border.</p>
+<p>And that was how he saw the man in the gray coat.</p>
+<p>It was a good coat: charcoal-gray wool, well cut, the kind a man buys once and wears for ten years. The man wearing it stood near the mouth of the northern street, perhaps forty metres from the steps, bareheaded, one of a thousand people in the plaza. Everyone round him was moving: craning, talking, holding up devices. He was not. He stood absolutely still, and he was not watching the speakers, or the enforcers, or the crowd.</p>
+<p>He was watching Dmitri.</p>
+<p>Only Dmitri. Steadily, attentively, without expression, the way you might watch a colleague give a presentation you had already read.</p>
+<p>Alexei turned his head to say <em>Dima</em>, and turned it back, and the man was gone. There was the mouth of the northern street, and people in it, and no gray coat.</p>
+<hr>
+<p>They made the car in eleven minutes and twenty seconds, which was twenty seconds over, and which Alexei would never let Jakob forget was Jakob's fault for stopping to apologise to a camera.</p>
+<p>Elena drove. She said nothing for the first two kilometres, which was how Alexei knew she was pleased. Marina and Jakob were in the back with Old Songs between them, the old man with his eyes closed and his hands folded. Dmitri sat in the front passenger seat with his back very straight. Alexei was jammed in beside the door behind him, with his knees against the seat, and he could not stop laughing.</p>
+<p>He did not know what he was laughing at. Everything. Kade's mouth. The noise the crowd had made when it saw the same face twice. Ten years of taking people out of the record, one at a time, at fences, in the dark, and today, in the bright light, in front of the whole world, he had put two back. He laughed until he coughed, and coughed until Marina, without a word, handed him a bottle of water.</p>
+<p>The car radio was on, low. Somewhere between the second and third kilometre it caught up with them.</p>
+<p><em>...Undersecretary Pell, speaking from the Ministry a few minutes ago, described the incident as a resistance stunt with forged corpses, and said that the individuals claiming to be the Volkov brothers would be identified and dealt with through the proper channels...</em></p>
+<p>"Forged corpses," said Alexei, wiping his eyes. "I like that. I'd like that on a card."</p>
+<p>"He is frightened," said Elena. "Good."</p>
+<p>"The Minister can't sit on the hearing question now. Not after that. Not with Chronos running it every hour." Alexei leaned forward between the seats. "Dima. <em>Dima.</em> You were—"</p>
+<p>He stopped.</p>
+<p>Dmitri had not moved. He was sitting with his hands on his knees, looking straight ahead through the windscreen at the road, and through the bond Alexei felt him, suddenly and all at once, not as the steady cold weight at the edge of his mind but as something heavier, and much colder, and very still. The way Dima had felt on the roof on the fifteenth of November, at fourteen twenty-one, for about a second.</p>
+<p>"He looked at the three of us," said Dmitri quietly, "and counted."</p>
+<p>Alexei's laughter was gone. He had not felt it go.</p>
+<p>"Who?"</p>
+<p>"The man in the gray coat. By the northern street." Dmitri did not turn his head. "He looked at me. Then at you. Then at the place on my right, on the step, where there was nobody. And he stopped there, as a man stops when he has reached the number he was counting to." A pause. Through the bond, from the far side of the city, faint and constant, came the cold of Kolya's hands. "He counted to three, Lyosha. There are only two of us up there."</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="18-protective-custody.html" class="nav-button">← Previous: Chapter 18: Protective Custody</a>
+            <div class="nav-center">Chapter 19: The Resurrection</div>
+            <a href="20-confessions.html" class="nav-button">Next: Chapter 20: Confessions →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

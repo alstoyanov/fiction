@@ -1,382 +1,135 @@
-# Prologue: The Day Before
+# Prologue: 13:59
 
-## November 14, 2106 - Evening
-
-### Marcus and Kira - Veridica
-
-The safe house overlooked the industrial district—all brass pipes and copper rooftops catching the last light of day. Marcus stood at the window, watching steam rise from the factorepo processing center three blocks away. Tomorrow, that building would become the center of a mystery that would change everything.
-
-He just didn't know it yet.
-
-"Final check," Kira said from her workstation, fingers dancing across three keyboards simultaneously. Screens surrounded her like a cathedral of glowing data. "Encryption: triple-layered. Upload route: anonymized through seventeen proxies. Backup location: secure server in neutral territory. Evidence package: complete."
-
-Marcus turned from the window. "How long will the upload take?"
-
-"Forty-seven minutes." Kira's eyes never left her screens. "I've compressed it as much as possible without losing integrity. Three months of corruption evidence, hundreds of conviction files, proof that Minister Chen Zhao is one of The Architects. It's all here."
-
-"And tomorrow between 14:00 and 15:00, we upload it."
-
-"Why that window?" Kira asked, though she'd asked before. She liked redundancy in her plans.
-
-"Because Elena said something big is happening then. Multiple resistance operations. System chaos. The perfect cover." Marcus moved to stand behind her, his hand resting on her shoulder. "We upload the evidence, it propagates through the factorepo before anyone notices, and by the time the dust settles, the truth is permanent."
-
-Kira saved her work and swiveled to face him. "You realize if this fails, we're not just outlaws anymore. We're dead outlaws."
-
-"It won't fail. You've planned it perfectly."
-
-"I've planned the technical side perfectly." She stood, closing the distance between them. "But technical isn't everything. People are unpredictable. Elena's operations could go wrong. The timing could be off. The Judge could—"
-
-Marcus silenced her with a kiss. When they separated, he said, "We survived a correction facility, orchestrated a mass escape, and built a resistance network while being hunted. Tomorrow is just another operation."
-
-"Tomorrow is THE operation. This is what we escaped for. This is what we've been working toward." Kira returned to her screens. "Tomorrow, we prove they're corrupt. Tomorrow, we force the system to acknowledge the truth. Tomorrow, everything changes."
-
-"Again," Marcus added with a slight smile.
-
-"Again," she agreed.
-
-They worked in comfortable silence, making final preparations. At 22:00, Marcus's comm device chimed. Elena's message glowed on the screen:
-
-**MARCUS, KIRA - TOMORROW, BETWEEN 14:00 AND 15:00, SOMETHING BIG IS HAPPENING. THE RESISTANCE IS PLANNING AN OPERATION. MULTIPLE OPERATIONS. AND SOMEONE IN THE GOVERNMENT IS PLANNING SOMETHING TOO. IT'S GOING TO BE CHAOS.**
-
-**DOCUMENT EVERYTHING. WHATEVER HAPPENS TOMORROW, MAKE SURE IT'S RECORDED.**
-
-**AND ONE MORE THING: BE CAREFUL. STAY SAFE. STAY TOGETHER. I HAVE A BAD FEELING ABOUT TOMORROW. SOMETHING'S GOING TO GO WRONG. I DON'T KNOW WHAT. BUT SOMETHING.**
-
-**I LOVE YOU BOTH. STAY ALIVE. - E**
-
-Marcus showed the message to Kira. Her expression darkened.
-
-"Elena never has bad feelings," Kira said quietly. "She's always confident. Always certain about operations."
-
-"Maybe she's learning uncertainty. Like we did."
-
-"Or maybe she knows something we don't." Kira pulled up her monitoring suite. "I'm setting up additional recording. If something goes wrong tomorrow, I want every byte documented."
-
-"Good idea." Marcus checked his chronometer. "We should rest. Tomorrow at 14:00, we make history."
-
-Neither of them could sleep that night. Tomorrow felt too big, too important, too uncertain. So they sat together on the rooftop, watching the city's brass lights flicker through the steam, preparing for whatever came next.
-
-Whatever happened tomorrow, they would face it together.
+*Monday, November 15, 2106. The Deputy Minister's office, twelfth floor, Ministry of Historical Integrity, Veridica Capital*
 
 ---
 
-### Isaiah - SFW Border Territory
+At 13:52 Dr. Amara Singh signed the last of the morning's authorisations, capped her pen, and looked at the thing she had been not looking at since lunch.
 
-Isaiah Okonkwo sat in his sparse apartment in the SFW border city of New Liberty, reviewing his notes for tomorrow's assignment. Maria Santos had arranged three interviews—two with recently escaped correction facility inmates, one with a Chronos diplomat discussing sanctions against Veridica.
+It lay squared on the blotter at her left hand, where she had put it so that she would have to see it every time she reached for anything. A single sheet, the Ministry's pale-blue file copy, with her own signature at the foot.
 
-All scheduled between 14:00 and 15:00. Elena's exact window.
+*VISITOR AUTHORISATION. PUBLIC ARCHIVE ANNEX (B1) AND LEVEL 12. HARROW, O. ARCHIVE RESEARCHER, WITH ONE ASSISTANT. MONDAY 15 NOVEMBER 2106. TERMINAL ACCESS: 14:00–15:00. APPOINTMENT: DEPUTY MINISTER, 14:30. AUTHORISED: A. SINGH.*
 
-He'd questioned the timing when Maria proposed it, but she'd insisted: "These people are only available tomorrow afternoon. Take it or leave it."
+There was no Oswin Harrow. She had invented him on a Thursday evening in October with a cup of tea going cold beside her, choosing the name for its dullness, the way one chooses a coat for a funeral. The man who would be carrying Mr. Harrow's pass had a name of his own, and the Correction Registry recorded that he had died on the second of August, during a fact storm, of cognitive failure. The Registry was mistaken. She had known that since the morning of the sixth of August, when she had read Mr. Okonkwo's account for the third time, put it down, and called her aide in to open an inquiry.
 
-Now, reading Elena's message again, Isaiah felt unease creep up his spine. Elena had been cryptic: *Document everything. Something big is happening.*
+She was forty-nine. She had been in the Ministry for twenty-two years and a Deputy Minister for four, and in all that time she had never once done anything that could not be found in the record afterwards. Even Mr. Harrow was in the record, under her own name. She did not make speeches about it. She arranged things.
 
-He set up his recording equipment with methodical care. Multiple cameras. Multiple audio devices. Redundant backups. Local storage and cloud synchronization. If something happened tomorrow, he would capture it. He would bear witness. He would tell the story.
+*If it's in our record, The Judge must read it.*
 
-That was his purpose now—chronicler of the resistance, documenter of truth, witness to history.
+That was the whole of her plan, and she was privately rather proud of its simplicity. At 14:10, in the public annex in the basement, eleven floors below where she sat, a dead man and a dead woman would begin to enter their evidence into the official factorepo through an ordinary public terminal, on an ordinary visitor's pass, with a Deputy Minister's authorisation behind it. Not abroad, where it could be called forgery. In the record. Verified, cross-referenced, entered. And once a thing was in the record, The Judge could not decline to see it. There was no procedure for declining.
 
-His tablet chimed. Message from an unknown sender:
+Her colleagues thought she was naive. Some of them had said so, in the careful way people say things in a building where every room is listening: *Amara has always believed in process.* She had stopped minding at some point in September. She found it made a surprising amount of room in her day.
 
-**TOMORROW 14:30, CROSS THE BORDER AT CHECKPOINT SEVEN. BRING THE DOCUMENTS. YOU WILL BE EXPECTED. THIS IS YOUR CHANCE TO ESTABLISH LEGAL RESIDENCY. DON'T MISS IT. - A FRIEND**
-
-Isaiah stared at the message. He'd been in SFW for three months on a temporary journalist visa, always uncertain of his status. The documents from the correction facility—evidence of systematic corruption—were his insurance policy. But they were also evidence that he'd illegally accessed government files.
-
-Crossing the border officially, with documents in hand, during Elena's window of chaos...
-
-It was either perfect timing or a trap.
-
-Isaiah deleted the message and packed a travel bag. Tomorrow at 14:30, he would find out which.
-
-He pulled up his notes and began writing:
-
-*"On November 15, 2106, between 14:00 and 15:00, history was made. And then it was lost. This is the story of that hour—the hour that changed everything, the hour that disappeared, the hour that proved truth exists even when it cannot be recorded..."*
-
-He stopped typing. Why was he writing as if the hour was already lost?
-
-Shaking off the premonition, Isaiah saved his work and tried to sleep. Tomorrow would answer all his questions.
+She took her reading glasses off and let them drop on their cord against her blouse, and rubbed the bridge of her nose. Her sleeves were rolled to the elbow. They always were by this hour. Her mother used to say that she had been born with her sleeves rolled up and her mind already made up about something.
 
 ---
 
-### Dr. Tanaka - Chronos
+At 13:53 there was a tap at the open door, and Lucian Bell leaned in.
 
-Dr. Yuki Tanaka stood in the Chronos parliament building, preparing for tomorrow's emergency session. The three-nation coalition—Chronos, Veritas, and Nova Factum—would vote on comprehensive sanctions against Veridica at 14:30. Economic pressure to force reform of the correction system.
+"Your 14:30 has been confirmed," he said. "I've put it through."
 
-She'd been invited to testify about neural correction procedures, about the ethical violations she'd witnessed, about why she'd refused to participate. Her testimony would influence the vote.
+"Thank you, Lucian."
 
-The weight of it pressed on her shoulders like lead.
+He withdrew. She heard his chair take his weight outside, and the small sound of his keyboard.
 
-In her office, three people waited nervously. A family: Amara and Davi Santos, and their teenage daughter Lia. Defectors. Seeking asylum. Scheduled for processing tomorrow at 14:20.
+She sat for a moment with her hand still on the file copy.
 
-"Will it work?" Amara asked in barely-accented English. "Will they grant us asylum?"
+*Confirmed.* She had not asked him to confirm anything. She had arranged the appointment in October and not touched it since, so that it would sit in the calendar looking like every other appointment. But she had signed perhaps forty things since eight o'clock. Perhaps one of them had been a confirmation request from the annex, and she had initialled it with the rest.
 
-"Your cases are strong," Yuki said gently. "You're fleeing persecution, seeking freedom of thought. Chronos accepts such claims."
+She put her glasses back on and brought the afternoon up on the screen to see.
 
-"But we left illegally. No exit visas. No approved documents." Davi wrung his hands. "What if they send us back?"
+*14:30–15:00. HARROW, O. (ARCHIVE RESEARCH). CONFIRMED.*
 
-"They won't." Yuki hoped her certainty sounded more genuine than she felt. "Tomorrow, during the parliamentary session, border processing will be minimal. You'll cross at 14:20, claim asylum, and by the time the session ends, you'll be official residents."
+That was right. That was hers.
 
-"You've arranged this?" Lia asked. At sixteen, she was sharp enough to see the coordination.
+Above it, and beside it, occupying the same hour, were three more.
 
-"I've... facilitated it," Yuki admitted. "The resistance coordinates these extractions. Tomorrow is special—multiple operations, maximum chaos, minimal oversight."
+*14:00. MEDICAL CROSSING WAIVER. APPROVAL.*
+*14:15. DEEP-COVER REVIEW (MINISTRY DISTRICT). CLOSED SESSION.*
+*14:30. BORDER TRANSFER SIGN-OFF (LAKESHORE).*
 
-"Elena's operation," Amara said. She'd been in the same correction facility briefly. She knew the players.
+She read them three times, slowly, making sure the words were the words.
 
-"Yes. Elena's operation."
+She did not remember adding any of them. A border transfer sign-off she could almost account for: prisoner movements crossed her desk every week, and a lakeshore transfer might plausibly want a Deputy Minister's initials. But she had never in her life sat in on a deep-cover review, and she could not think what a medical crossing waiver was doing in her calendar at all, unless someone in the health liaison office had begun routing things through her again without saying so.
 
-After the family left, Yuki meditated in her private room. Tomorrow would bring harm—the defectors fleeing brought pain to families left behind, the sanctions would hurt innocent Veridican citizens. But tomorrow would also bring healing—freedom for the oppressed, pressure for reform, hope for change.
+Each entry carried her own credentials in the owner field. *SINGH, A.*
 
-"First, do no harm," she whispered. "But sometimes, harm is necessary for healing."
+She looked at the time. 13:54. She thought about calling Lucian back in, and asking him, and hearing him say, in his reasonable voice, that she had approved them herself on Friday. She thought she would probably believe him. She thought that was the problem.
 
-Her comm device chimed. Elena's message:
-
-**TOMORROW 14:20, THREE DEFECTORS CROSS. MAKE SURE PROCESSING IS SMOOTH. THIS IS IMPORTANT, YUKI. THESE PEOPLE MATTER. - E**
-
-Yuki replied: **THEY WILL BE SAFE. I PROMISE. - Y**
-
-She returned to her meditation. Tomorrow at 14:30, she would testify before parliament. Tomorrow at 14:20, three people would become free. Tomorrow, everything would change.
-
-She was ready.
+*Overwork,* she decided. It was the most reasonable explanation, and she had spent twenty-two years preferring the most reasonable explanation until it was disproved. She had been sleeping four hours a night since the summer. She made a note to check the entries against her authorisation log tomorrow morning, and she wrote the note on paper and tucked it under the corner of the blotter, and felt slightly better, and did not entirely believe herself.
 
 ---
 
-### Alexei and Dmitri - Resistance Mobile Command
+The window behind her desk looked east across the capital.
 
-The mobile command center sat in neutral territory, fifty kilometers from the Veridica border. Inside, Alexei and Dmitri Volkov reviewed the operation plan on brass-edged screens while Elena coordinated from across the room.
+It was an ordinary gray Monday, the sky low and even, the kind of November light that makes every building look as though it has been cut out of the same card. The transit lines ran on their elevated tracks between the towers. Far off, above everything, the Factorepo Spire stood in its eighty storeys of glass, and in its core the data rose and fell as light, a slow blue pulse, as it had risen and fallen every second of her life. As a schoolgirl she had been told that every light was a fact, and that the lights would never go out, and she had believed it with her whole heart.
 
-"Twelve facilities," Dmitri said, studying the tactical map. "Forty-eight inmates total. Sixteen extraction teams. One-hour window."
+On the side table by the window, Lucian had replaced the flowers. He did it on Monday mornings. White chrysanthemums this week, cut short and packed into the low glass vase, and the room smelled faintly and greenly of them. Her gray coat hung on the stand by the door, where it had hung since half past seven, with her scarf pushed into the sleeve.
 
-"We've been planning this for two months," Alexei replied. "Every team knows their assignment. Every escape route is mapped. Every contingency has a contingency."
-
-"It's still the biggest operation we've ever attempted." Dmitri's enforcer training made him cautious. "If one team fails, it could compromise the others. If authorities respond quickly—"
-
-"They won't." Elena joined them, her presence commanding immediate attention. "Tomorrow between 14:00 and 15:00, Veridica's security systems will be... distracted. Multiple simultaneous events. Parliament in Chronos voting on sanctions. Border security stretched thin. And something else—I don't know what, but Nikolai says there's unusual traffic in the factorepo systems."
-
-"What kind of traffic?" Dmitri asked.
-
-"He wouldn't say. Just told me to be ready for chaos." Elena pulled up the extraction schedule. "Our operation runs 14:25 to 14:55. Thirty-minute execution window within the hour of chaos. We extract all forty-eight inmates, disperse to safe houses, and disappear before anyone knows what happened."
-
-Alexei grinned. "I love it when a plan comes together."
-
-"The plan hasn't come together yet," Dmitri said. "Tomorrow, it either works perfectly or fails catastrophically. There's no middle ground with an operation this size."
-
-"That's what makes it exciting," Alexei said.
-
-"That's what makes it terrifying," Dmitri countered.
-
-They clasped hands—the same gesture they'd shared in the correction facility. Two brothers who'd been separated by ideology, reunited by resistance, now leading the largest coordinated extraction in the movement's history.
-
-"For family," Alexei said.
-
-"For truth," Dmitri added.
-
-"For freedom," they finished together.
-
-Elena watched them with something like pride. Then her expression darkened. "I have a bad feeling about tomorrow."
-
-Both brothers stared at her. Elena never admitted doubt.
-
-"What kind of bad feeling?" Dmitri asked.
-
-"The kind that says we're not the only ones planning something. The kind that says someone else is using tomorrow's chaos for their own purposes." Elena pulled up a classified intelligence report. "Three months ago, a senior factorepo architect named Thomas Wei started exhibiting unusual behavior. Accessing systems outside his clearance. Meeting with unauthorized parties. Acting nervous."
-
-"You think he's a threat to the operation?"
-
-"I think he's planning something. I don't know what. But his unusual activity peaks tomorrow between 14:00 and 15:00." Elena closed the file. "Stay alert. If something seems wrong, abort and extract. The inmates matter more than the operation."
-
-"Understood," both brothers said.
-
-After Elena left, Alexei and Dmitri sat in silence.
-
-"Tomorrow," Alexei finally said, "we change everything."
-
-"Or tomorrow," Dmitri replied, "everything changes us."
-
-They didn't sleep much that night. Tomorrow felt too big.
+She got up, and crossed to the wall safe behind the stand, and opened it.
 
 ---
 
-### Nikolai - Underground Network Hub
+The page was where she had left it, in its plain card folder, on top of everything else.
 
-Nikolai Volkov sat surrounded by servers and screens in his hidden bunker beneath Veridica's industrial district. To the world above, he was a low-level factorepo technician. To the resistance, he was their eyes and ears inside the system.
+She took it out and carried it back to the desk, and sat, and laid it flat under the lamp.
 
-Tomorrow at 14:00, he would monitor everything.
+It was a single typed sheet, old, the paper softened and faintly yellow at the edges. She had found it seven weeks ago, in the fourth box of Continuity's correspondence with this Ministry, filed between two perfectly ordinary budget memoranda where it had no reason to be. Someone had torn the top of the page away across its width, just below the first word of the heading, so that what remained read:
 
-His screens showed a dozen simultaneous operations: Elena's extractions, Marcus and Kira's evidence upload, Isaiah's border crossing, Dr. Tanaka's defector processing. All coordinated for the same one-hour window. All depending on him to provide early warning if something went wrong.
+*PRINCIPLE —*
 
-But something was already wrong.
+and then nothing, the rest of the line gone with the rest of the strip.
 
-Nikolai had been tracking anomalous activity in the factorepo systems for weeks. Someone was preparing something. Unusual code insertions. Strange access patterns. Encrypted packages hidden in system files.
+The page number survived at the bottom: *30*. In the lower right corner, very small, someone had typed a roman numeral, *XI*, the way a copy is numbered when there is more than one copy. And at the foot of the text, a little apart from it, like a signature, there was a short typed mark: two capitals and a number, divided by a raised dot. It meant nothing to her. She had spent an evening in September working through every office code and archive prefix she knew, and found nothing it matched.
 
-The activity centered around Thomas Wei, a senior architect Nikolai had never heard of before. Wei had clearance for deep system access, but his recent behavior suggested something beyond normal operations.
+It had been typed on a machine, a real one, with a ribbon. The small *e* was chipped. Every *e* on the page had the same little bite taken out of its upper curve, the same flaw, over and over, like a limp.
 
-Nikolai pulled up Wei's activity log. The pattern was clear: Wei was building something. A program. A protocol. Something designed to activate tomorrow between 14:00 and 15:00.
+The page held one sentence that mattered. There were others around it, the tail of one argument and the start of another, but her eye went to this one, as it always did, as if it had been underlined.
 
-The same window as everyone else's operations.
+*When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it.*
 
-Nikolai's hands flew across his keyboards. He isolated Wei's code, attempted to analyze it, hit encryption he couldn't immediately break. Whatever Wei was doing, he'd hidden it well.
+She had read it perhaps a hundred times. It did not become less calm.
 
-Too well.
+That was what she could not get past: how calm it was. It did not sound like a threat. It sounded like a piece of advice from someone who had thought about a problem for a long time and found the answer so obvious that it hardly needed saying. *When the record fails.* Not *if*.
 
-Nikolai sent urgent messages to Marcus, Elena, Isaiah, and Dr. Tanaka:
+She had photographed it yesterday, under this lamp, and put the print in the envelope with Mr. Harrow's pass, and sent the envelope out through the same careful channel that had brought her the request in the first place. On the back of the print she had written, in pencil, *Have you seen this before? A.S.*, because it had occurred to her, in the course of a sleepless week, that the one person in Veridica most likely to recognise it was a historian who had spent most of a year inside the programme whose papers it had been hiding in.
 
-**UNUSUAL ACTIVITY DETECTED IN FACTOREPO SYSTEMS. SOMEONE NAMED THOMAS WEI IS PLANNING SOMETHING FOR 14:00-15:00 TOMORROW. I DON'T KNOW WHAT. STAY ALERT. IF ANYTHING SEEMS WRONG, ABORT YOUR OPERATIONS. I'LL MONITOR FROM HERE. - N**
-
-Then he returned to his analysis. He had sixteen hours to figure out what Wei was doing.
-
-Sixteen hours to prevent something he didn't understand.
-
-Sixteen hours before tomorrow's chaos began.
-
-He didn't sleep. He coded, analyzed, searched, and worried.
-
-Tomorrow at 14:00, multiple operations would collide. And Nikolai had a terrible feeling that not all of them would succeed.
+Perhaps he would bring the print up at half past two, and put it on this desk, and tell her something she did not want to know.
 
 ---
 
-### Thomas Wei - Government Factorepo Headquarters
+She thought about the sentence, and about the building around her.
 
-Thomas Wei sat in his private office on the 40th floor of the factorepo headquarters, reviewing his plan one final time. Everything had to be perfect. Everything had to execute exactly on schedule.
+Twelve floors of it, the basement below, the Minister's floor above: the long corridors of people who had sponsored a programme called Continuity and funded it and read its reports and signed off its phases, and who had, since August, been so very eager to help her inquiry. Everyone had brought her boxes. She had begun, in the last few weeks, to notice who brought which boxes, and when, and in what order, and to wonder whether she was conducting an inquiry or being walked through one.
 
-Tomorrow at 14:00, he would activate the erasure protocol.
+*Arrange to be the one who restores it.*
 
-Tomorrow at 14:23, he would kill Minister Viktor Kozlov.
+She had begun to suspect who in this building believed that sentence. Not who had written it. The page was far older than anyone she worked with had been in post, older, she thought, than the Ministry itself. But a sentence like that does not stay in a box for forty years because nobody reads it. Somebody had kept it. Somebody had filed it where she would find it, or had failed to take it out of where she was always going to look. She had narrowed it, in her mind, to a very small number of people, and she had not yet written any of their names down anywhere, which for her was a kind of fear she had no other word for.
 
-Tomorrow at 15:00, the erasure would complete, and one hour of history would be gone forever.
+She uncapped her pen.
 
-The plan was elegant in its simplicity. Kozlov had scheduled a meeting with Marcus Chen—the outlaw reformer who'd escaped the correction facility. Kozlov was going to expose the correction system, the fact storm weapons program, everything. His conscience had finally caught up with him.
+For a moment she held it over the page and did not write, because it was evidence, and one did not write on evidence. Then she thought that if the record failed, as the page so calmly supposed it might, this sheet of paper would be the only record there was, and she would rather it said what she thought.
 
-Wei couldn't allow that. The programs were too important. The research too valuable. The Architects had plans that required secrecy.
+In the margin beside the sentence, in her small, upright hand, she wrote:
 
-So Kozlov would die during the lost hour, and no factorepo record would exist to prove when or how. The outlaws' operations—Wei had intercepted communications, knew about the extractions, the uploads, the border crossings—would provide perfect cover. Chaos and confusion. Multiple suspects. No clear timeline.
+*Who restores it? Watch who restores it.*
 
-And with the factorepo data erased, no evidence would exist to contradict Wei's eventual explanation: that one of the outlaws had killed Kozlov during their operations.
+She looked at it. Her own handwriting, very black beside the gray typescript. It was a question, and then an instruction. She found that most of what she wrote down lately came out that way.
 
-Probably Marcus Chen. The perfect patsy—a known outlaw with motive, who would be near Kozlov's office during the lost hour for the evidence upload.
+She blotted it, and put the page back in its folder, and carried the folder to the safe, and put it in, and closed the door, and heard the lock take. She stood with her palm flat on the cold metal for a second longer than she needed to. Then she went back to her desk and sat down, and straightened the file copy of Mr. Harrow's pass so that its edge ran parallel with the edge of the blotter, and folded her hands.
 
-Wei reviewed the erasure code one final time. He'd been building it for months, hidden in legitimate system updates. Tomorrow at 14:00, it would activate automatically. The factorepo's backup systems would fail sequentially. The data for one hour—14:00 to 15:00—would be corrupted beyond recovery.
-
-By 15:01, that hour would be lost forever.
-
-And Kozlov would be dead.
-
-And the outlaws would be suspects.
-
-And The Architects' programs would remain secret.
-
-Perfect.
-
-Wei allowed himself a rare smile. Tomorrow, he would commit the perfect crime. Tomorrow, he would erase an hour of history. Tomorrow, he would prove that even the Histologic system could be beaten by someone clever enough, ruthless enough, patient enough.
-
-He sent a message to his contact:
-
-**TOMORROW 14:00, PROTOCOL ACTIVATES. 14:23, TARGET ELIMINATED. 15:00, ERASURE COMPLETE. EVERYTHING IS READY. - W**
-
-The reply came immediately:
-
-**EXCELLENT. THE ARCHITECTS WILL BE PLEASED. PROCEED AS PLANNED. LEAVE NO WITNESSES. - SYNTHESIS**
-
-Wei deleted both messages, stood, and looked out at the city. Tomorrow, Veridica would wake to chaos. Tomorrow, an hour would be lost. Tomorrow, history would change.
-
-And Thomas Wei would ensure that particular history was never recorded.
-
-He went home to sleep. Tomorrow required a clear mind.
+It was 13:59.
 
 ---
 
-### Viktor Kozlov - Minister's Residence
+There was a knock at the door. Not at the open door where Lucian leaned in, but at the inner one, the one to her left that gave onto the side corridor, two short knocks, light, unhurried.
 
-Minister Viktor Kozlov sat in his study, writing a letter he would never send. His hands shook as he wrote—not from fear, but from age and exhaustion.
+She knew the knock. She looked at the door for a moment, and her face did something that she would not, if she had been asked, have been able to name, and then it settled.
 
-He'd served Veridica for forty years. He'd helped build the correction system. He'd approved the fact storm weapons research. He'd looked the other way when The Architects had asked him to.
+She took off her reading glasses and let them fall on their cord.
 
-And now, at sixty-two, his conscience had finally caught up with him.
+"Come in," she said.
 
-Tomorrow at 14:30, he was scheduled to meet with Marcus Chen. The young man who'd been wrongly convicted, who'd escaped, who'd been gathering evidence of systematic corruption. Kozlov had arranged the meeting through intermediaries, had promised to provide testimony, had agreed to expose everything.
+She glanced up at the clock on the wall opposite, the plain white Ministry clock that hung in every office on every floor, synchronised to the Spire to the thousandth of a second. It read *13:59:58*.
 
-Tomorrow, he would tell the truth. Tomorrow, he would redeem himself. Tomorrow, he would atone for forty years of complicity.
-
-If he lived that long.
-
-Kozlov wasn't naive. He knew The Architects wouldn't let him testify freely. He knew there would be consequences for his betrayal. He'd taken precautions—written documents hidden in multiple locations, dead man's switches that would release information if he died unexpectedly, allies who would ensure the truth emerged even if he didn't survive.
-
-But tomorrow felt different. Tomorrow felt final.
-
-He finished the letter—a confession, an apology, an explanation—and sealed it in an envelope marked: *To be opened if I die before reform succeeds.*
-
-He gave the letter to his most trusted aide with instructions: "If anything happens to me tomorrow, deliver this to Marcus Chen. Make sure he knows the truth. Make sure my death means something."
-
-The aide, a young woman named Maya, took the letter with trembling hands. "Minister, are you in danger?"
-
-"We're all in danger, Maya. We have been for years. We just didn't notice." Kozlov smiled sadly. "Tomorrow, I'm going to do the right thing. Finally. After forty years of doing the expedient thing, the political thing, the comfortable thing. Tomorrow, I choose truth."
-
-"Sir—"
-
-"Go home, Maya. Tomorrow will be chaotic. Stay safe."
-
-After she left, Kozlov sat alone in his study, thinking about tomorrow. About redemption and consequences. About truth and lies. About the life he'd lived and the death he might die.
-
-Tomorrow at 14:30, he would tell Marcus Chen everything. Tomorrow, he would expose The Architects. Tomorrow, he would prove that even corrupted men could choose truth in the end.
-
-If The Architects let him live that long.
-
-Kozlov checked his chronometer: 23:47. In less than fifteen hours, everything would change.
-
-He hoped he'd be alive to see it.
-
----
-
-## November 15, 2106 - 00:01
-
-Across Veridica and beyond, people slept or didn't sleep, prepared or didn't prepare, worried or didn't worry about tomorrow.
-
-At 00:01, tomorrow became today.
-
-The clock ticked forward.
-
-Fourteen hours until chaos.
-
-Fourteen hours until history.
-
-Fourteen hours until the lost hour began.
-
----
-
-**End of Prologue**
-
-*Word Count: ~3,400 words*
-
----
-
-## Notes
-
-**Structure**: Eight POV sections showing key players on November 14, 2106
-**Timeline**: Evening before the lost hour + midnight transition
-**Purpose**: Setup all operations, create tension, establish stakes
-
-**Operations Planned for 14:00-15:00**:
-1. Marcus & Kira: Upload corruption evidence
-2. Isaiah: Cross border with documents
-3. Dr. Tanaka: Process defectors at 14:20
-4. Alexei & Dmitri: Extract 48 inmates from 12 facilities
-5. Nikolai: Monitor all operations from underground
-6. Wei: Execute murder and erasure (unknown to others)
-7. Kozlov: Meet Marcus at 14:30 (never happens—dies at 14:23)
-
-**Foreshadowing**:
-- Elena's bad feeling (never admits doubt normally)
-- Nikolai's warnings about Wei
-- Wei's erasure protocol
-- Kozlov's premonition of death
-- Multiple operations converging on same hour
-
-**Character States**:
-- Marcus & Kira: Confident but careful
-- Isaiah: Uncertain about border crossing
-- Dr. Tanaka: Preparing for harm and healing
-- Alexei & Dmitri: Excited but cautious
-- Nikolai: Worried about Wei's activity
-- Wei: Coldly confident in his plan
-- Kozlov: Resigned to consequences, determined to tell truth
-
-**Next Chapter**: Chapter 1 at 15:01 when everything goes wrong
-
-
+The second hand moved toward the top of the hour.

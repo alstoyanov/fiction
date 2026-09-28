@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="17-how-the-hour-was-written.html" class="nav-button">← Previous: Chapter 17: How the Hour Was Written</a>
+            <div class="nav-center">Chapter 18: Protective Custody</div>
+            <a href="19-the-resurrection.html" class="nav-button">Next: Chapter 19: The Resurrection →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 18: Protective Custody</h1>
+<p><em>Monday, December 6, 2106. The Justice Center; the north road; a Ministry flat, Veridica Capital</em></p>
+<hr>
+<p>The tribunal chamber was on the third floor of the Justice Center, at the end of a corridor Marcus had never walked down in his life, and it was smaller than he had expected.</p>
+<p>It was a white room with two short rows of chairs for the public, a long table for the tribunal, a smaller table for him, and a screen on the far wall no larger than a window. Most of the public chairs were empty. Pell sat in the front row with his coat folded on his knees and his hands folded on his coat. He did not look at Marcus when they brought him in. He looked at the screen, as if the tribunal were already over and he had come only to see it written down.</p>
+<p><em>December sixth, 2106. Ten hundred hours. Justice Center, third floor, tribunal chamber two. Involved parties: the tribunal (three), the Undersecretary, the subject. Status: pending.</em></p>
+<p>The presiding magistrate was a woman of about sixty with a soft voice and a tablet she did not need to read from. She thanked the subject for his cooperation during detention, and asked the clerk to read the statements into the record.</p>
+<p>"The record," said Marcus's advocate quietly, to nobody. She was young and very tired, and she had been appointed on Friday, and she had met him for eleven minutes that morning.</p>
+<p>The clerk read all forty. It took an hour and ten minutes. Marcus had heard them read before, again and again, by the Ministry's questioners, until he could have recited them himself. He listened the way a historian listens to a source he already knows, for the places where it repeats.</p>
+<p><em>Gray clothes. Like a patient's.</em></p>
+<p><em>Gray, the loose kind. Like they wear in correction.</em></p>
+<p><em>His left hand was bandaged. He held it like it hurt.</em></p>
+<p>Forty times. Forty honest people, from the typing pool and the records office and the Deputy Minister's own floor, each of them certain, each of them describing a man who had walked past their desks at twenty past two and gone into the Deputy Minister's office, and each of them giving the man his face. Marcus kept his own hands flat on the table, where the tribunal could see them. Nobody looked.</p>
+<p>When the clerk finished, the magistrate asked the advocate whether the subject wished to make a statement.</p>
+<p>The advocate stood and read it for him. He had written it himself in pencil, in the cell, in the small hand his mother had taught him, and the advocate had typed it up without changing a word, which was the one kindness he was sure of.</p>
+<p>"I was in the public archive annex of the Ministry of Historical Integrity from thirteen forty-five until fourteen fifty-five on the fifteenth of November. I did not go to the twelfth floor until fourteen fifty-five. The Deputy Minister's door was locked. I was accompanied throughout by Kira Osman, Senior Architect, who can confirm every part of this account."</p>
+<p>"Kira Osman," said the magistrate, looking at her tablet, "is recorded as deceased."</p>
+<p>"Yes," said the advocate.</p>
+<p>"Since August the second."</p>
+<p>"Yes."</p>
+<p>The magistrate looked at Marcus for the first time. It was not an unkind look. It was the look of a woman who had been told about a patient and was now seeing him.</p>
+<p>"Is there anything the subject wishes to add?"</p>
+<p>He had thought about it for three weeks. He had thought about the article Isaiah had published on Friday, the one the Ministry's questioners had stopped mentioning in the middle of a sentence: <em>How the Hour Was Written.</em> Seeding. Forty identical memories. He had thought about standing up and saying <em>they are not lying, and neither am I, and somebody put me in their heads.</em> And he had understood exactly how that would sound, in this room, from a man whose file said <em>C-1. BELIEVER. Persistent false memory (field)</em>.</p>
+<p>"No," he said. "Thank you."</p>
+<p>The magistrate nodded, and turned to the screen.</p>
+<hr>
+<p>The Judge could not rule on the hour. There was nothing in the hour to rule on. The magistrate explained this carefully, and Marcus found himself admiring the explanation, because it was accurate. The finding of guilt would be the tribunal's own, an administrative finding on sworn statements under the emergency provisions. It was, Marcus thought, a procedural novelty in its own right. Nobody in the room called it one.</p>
+<p>What The Judge could do was assess the subject.</p>
+<p>The screen brightened. The analysis built line by line, in the clean typeface he had looked at every working day on the fourteenth floor. <em>Subject asserts the presence of a deceased person. Subject asserts entries made to the primary repository during an interval for which the repository holds no entries. Subject's Continuity file records a documented false memory (outdoor location, night) held with high confidence. Subject's account is internally consistent and emotionally stable.</em> <em>Assessment: persistent false beliefs, consistent with incomplete correction.</em></p>
+<p><em>Contamination probability: 88%.</em></p>
+<p>He had been seventy-three once. He had been fifty-eight, really, and someone had typed seventy-three. He looked at the eighty-eight and could not tell whether anyone had touched it, and understood that he would never be able to tell, and that this was the whole of his life now.</p>
+<p><em>Internally consistent and emotionally stable.</em> He turned the phrase over. It was The Judge's reason for believing he was ill. It was also the only reason he had for believing he was not.</p>
+<p>"The tribunal finds the subject guilty," said the magistrate, "pending stabilisation. Sentencing is deferred until the subject is competent to understand it. The subject is remanded to Secure Care Unit 3 for re-correction, effective this evening." She looked at Marcus again. "I'm sorry, Mr. Chen. I hope they can help you."</p>
+<p>She meant it. That was the thing he would remember, afterwards, when he tried to put the day in order. Everyone in the room meant it.</p>
+<p>Pell stood, and put on his coat, and for a moment he did look at Marcus, briefly and without interest, the way a man checks that a door he has closed is closed.</p>
+<p>"For the subject's stability," he said, to the clerk, and left.</p>
+<hr>
+<p>They came for him at six.</p>
+<p>It was already dark, and it was raining, a cold, steady December rain that ran down the wired glass of the loading bay and made the lights of the Justice Center's yard into long smears. The van was white, with no windows in the back. Two orderlies in pale green helped him up the step, and one of them, a heavy man with a gentle voice, said, "Mind your head," and put his hand on top of it, lightly, the way you would with a child getting into a car.</p>
+<p>There was a seat against the wall. There were straps. They fastened him in at the chest and the waist and the wrists, and checked each buckle twice, and apologised for the cold. Then the doors closed, and the lock went over, and the van began to move.</p>
+<p><em>December sixth, 2106. Eighteen-oh-four hours. Transport, secure, north. Destination: Secure Care Unit 3. Journey time: approximately two hours. Involved parties: the subject; two orderlies (cab); driver (cab).</em></p>
+<p>Isaiah had spent three months in Unit 3. Concrete, Elena had said. No windows. Deeper cradles than Ashford's.</p>
+<p>His hands had begun to shake at the Justice Center. By the time the van reached the ring road they were shaking so hard that the wrist straps rattled against the frame of the seat, a small metallic sound, like teeth.</p>
+<p>He did what Wing C had taught him.</p>
+<p><em>Traffic incident. Corner of Fifth and Main. Fourteen-oh-two hours. Vehicles involved: two. Injuries: none. Status: verified.</em></p>
+<p><em>Weather observation. December sixth, 2106. Capital, northern districts. Rain, continuous. Status: verified.</em></p>
+<p>It helped, a little. The formats were the one thing in him they had never been able to find: dates and times and fields, the dullest language in the country, and under it, where the machine did not look, the things he loved. He had hidden a whole woman in them. He began, carefully, to take her out.</p>
+<p><em>Personnel entry. Osman, K. Senior Architect, Factorepo Spire, sixtieth floor. Hazel eyes. Counts things. Black coffee, no sugar. Location: unknown. Status:</em></p>
+<p>He stopped where he always stopped. He had never finished it himself. Finishing it would put it where the hood could reach.</p>
+<p>And the hood would reach. His body knew it before his mind would say it. In two hours someone would lift his head gently onto a rest and lower a cradle over the scars behind his ears, and there would be the cool pressure and then the hum, and the interface would say <em>yes</em>, and a voice, pleasant, unhurried, just behind him, would begin to look for what he loved. Not Reeves's voice. Somebody's. It did not matter whose. <em>There's someone new in here, isn't there, Marcus. Let's see her.</em></p>
+<p>He had lost the library to that voice. He had lost his mother's name, and three versions of what Elena said to him, and the colour of a dress, and the feeling of believing. He had learned to live in the holes. But there was a floor, Tanaka said, and below the floor there was Samuel, sitting on his bed with his hands in his lap, looking politely at a man who had once promised him something.</p>
+<p>He counted the minutes because there was nothing else he could count. Twenty. Twenty-five. The road noise changed as they left the lit districts, and the rain grew louder, and he had bitten the inside of his cheek and could taste it.</p>
+<p><em>Personnel entry. Osman, K. Location: unknown. Status:</em></p>
+<p>Thirty minutes. Thirty-five.</p>
+<p>He thought, very clearly: <em>she will not know. They will empty me and she will be somewhere on the border with the drive, and one day she will come and look at me through a window, and I will be polite to her.</em></p>
+<p>At forty minutes, the van stopped.</p>
+<hr>
+<p>It did not slow the way it had slowed at junctions. It stopped, hard, and the straps caught him across the chest, and the engine went on idling, and through the wall of the cab he heard a voice he did not know say, "What is this?"</p>
+<p>Lights, at the seam of the rear doors: white, then red, then white. A checkpoint. There had been no checkpoint on the transfer order. Voices outside, in the rain. One raised.</p>
+<p>"—Undersecretary's direct instruction. This transfer was authorised by tribunal this morning—"</p>
+<p>Another, lower. He could not hear the words. It was a quiet voice. It did not need to be raised.</p>
+<p>"I don't care whose signature—"</p>
+<p>A pause. Paper, perhaps; something being held up in the light. The raised voice stopped.</p>
+<p>For a long time, nothing. Marcus sat in the straps and did not let himself think anything at all, because anything he thought now would be a hope, and he did not know which column he could put it in.</p>
+<p>Then the lock went back, and the rear doors opened, and the rain came in, and the light, and in the light, with water running off the shoulders of his coat and a sheet of paper in a clear plastic sleeve in his right hand, stood Wei.</p>
+<p>"Mr. Chen," he said. "I'm sorry this took so long."</p>
+<p>Behind him a man in a Ministry coat was saying, very fast, that the Undersecretary would hear of this, that the tribunal had ruled, that the Minister could not simply— and Wei turned his head a little, without turning his body, and said, "The Minister has. You're welcome to read it again," and the man stopped talking.</p>
+<p>Wei climbed into the van. He had to stoop. He knelt beside the seat on the wet floor, in his good coat, and began to undo the straps himself, the wrists first.</p>
+<p>"<em>By order of the Minister of Historical Integrity,</em>" he said, working at the chest strap, in the tone of a man reading out something dull for the record. "<em>The subject Chen, Marcus, is transferred forthwith into the protective custody of the lead investigator of the events of November fifteenth, as the only material witness to the unrecorded interval. Signed, Chen Zhao.</em>" The buckle came free. "He was very gracious about it. He always is." He looked at Marcus's hands, which were still shaking, and then at his face. "Can you stand?"</p>
+<p>Marcus found that he could not, the first time. The second time he could.</p>
+<hr>
+<p>The car was dark and warm and smelled of wet wool. A driver Marcus could not see properly sat in front with the partition half raised. Wei got in on the other side and sat back and closed his eyes, and in the passing light he looked, for the first time since Marcus had met him, simply tired.</p>
+<p>"I told you I didn't believe you did it," he said, without opening his eyes. "I'm not going to let them empty you before I can prove it."</p>
+<p>Marcus tried to answer and could not.</p>
+<p>"The Undersecretary has his verdict. It stands, for now. But a man who's been re-baselined can't testify about anything that happened before it." He opened his eyes and looked across. "You're my only honest suspect, Mr. Chen. I need you alive. All of you."</p>
+<p>The car moved off. Through the rear window the van's lights receded, and the checkpoint's, and then there was only rain.</p>
+<p>"Thank you," Marcus said.</p>
+<p>It came out of him cracked and far too loud for the small dark car, and he did not care. He meant it with his whole heart. He had been forty minutes from the floor, and a man he barely knew had stood in the rain and knelt on a wet floor and undone the straps with his own hands.</p>
+<p>"Thank you," he said again. "I don't— I can't—"</p>
+<p>"You don't need to." Wei fastened his seatbelt one-handed, and caught Marcus looking. "Server rack," he said, as if it were an old joke among his team. Then, more gently: "There's someone waiting for you. I thought you'd rather not hear it from me in a car. But you should know, so you don't have to be frightened of the door."</p>
+<hr>
+<p>The flat was on the sixth floor of a Ministry residence in the eastern districts, the kind of building where visiting officials were put up for a week and never noticed the furniture. There were two guards on the landing, in plain clothes, and one at the street door. Wei walked Marcus up himself.</p>
+<p>"There are no cameras inside," he said, at the door. "I asked." He smiled slightly. "It's the only thing I've ever asked the Ministry for that they gave me without a form. The guards stay outside. If you need anything, knock." He held out his hand, the right one, and Marcus shook it. "Get some sleep, Mr. Chen. We'll talk tomorrow."</p>
+<p>Then he went back down the stairs, and Marcus opened the door.</p>
+<p>The room was plain and warm, with a table and two chairs and a lamp and a window full of rain. Kira was standing at the window.</p>
+<p>She had been standing there, he would learn, for three hours. Kovač had come for her that afternoon, alone, in her own car, and said that the lead investigator had asked for her, <em>because a witness needs his witness</em>, and that she could refuse. Kira had not refused. She had walked, a dead woman, into the custody of the Ministry of Historical Integrity, and let them take her bag at the street door, and waited at the window to see whether they would bring him.</p>
+<p>She turned round.</p>
+<p>Neither of them said anything. In every version he had imagined in the cell, one of them had said something. Instead she crossed the room and he crossed the room and they met somewhere near the table and held on to each other, hard, and did not let go, and did not speak, for a long time. Her hair smelled of woodsmoke from the stove at the safe house. His hands had not stopped shaking. She held them against her back until they did.</p>
+<p><em>Personnel entry. Osman, K. Location: here.</em></p>
+<p>He did not finish it. He did not need to.</p>
+<hr>
+<p>Later, much later, she made tea in the small kitchen, because there was no coffee, and they sat at the table under the lamp with the rain on the window, and she took out of the inside pocket of her coat the things the guards had not thought to take.</p>
+<p>One of his lists first: the top sheet from the pile of old August pages he had left on the cottage table when they came into the capital. She had taken it on her way out of the cottage, and nothing else. On the back, in her handwriting, three lines he read twice.</p>
+<p><em>Forty identical false memories. Same wrong clothes. Same wrong hand.</em> <em>Someone didn't just erase the hour.</em> <em>Someone wrote it.</em></p>
+<p>"I sent that to Tanaka," she said. "She was right. You've heard?"</p>
+<p>"Isaiah's article. They stopped reading it to me halfway through." He put his hand flat on the page. "I moved the upload," he said. "To UNCHECKED. On the wall. I couldn't bear it."</p>
+<p>"I know," she said. "Nikolai saw the photographs of your wall in the case file. You can move it back. I was there." She said it in the flat, dull voice she used for fact entries, and he understood that she was entering it. "November fifteenth. Fourteen-ten to fourteen fifty-two. The annex. Statement one of two hundred and fourteen. I was there."</p>
+<p>He did not move it back. Not yet. But he did not let go of the page, either.</p>
+<p>Then the photograph.</p>
+<p>He had carried it in his coat all day on the fifteenth without looking at it properly. Now she laid it under the lamp: a single typed page, torn across the top. <em>PRINCIPLE —</em> and then nothing. A page number, 30. A typed mark at the foot, too blurred to read. In the lower right corner, very small, a numeral. And one sentence.</p>
+<p><em>When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it.</em></p>
+<p>He turned it over. On the back, in pencil: <em>Have you seen this before? A.S.</em> The Deputy Minister's hand.</p>
+<p>"There's more," said Kira, and told him about the safe house, and Old Songs at the stove, and the moment when the old man stopped humming. She did not have it written down, and she did not have all of it. She gave him what she had, slowly, in pieces, the way she had heard it sung:</p>
+<p>"<em>A people that has lost part of its past</em> … <em>will accept any past</em> … <em>given gently.</em> And <em>by someone it trusts</em>. That's the end. There's more in the middle, or the words go differently. I only heard it once."</p>
+<p>"He sang it," she said. "To the tune. The one from the meal slot."</p>
+<p>He knew which one. Of course he knew. It was the tune that had come through the meal slot in Wing C for two seconds three times a day, the tune that had given him back a room with yellow curtains and his mother's voice. <em>Hush now, the river is long.</em> He sat very still at the table and understood that the song which had brought his mother back to him had been carrying this, too, the whole time: an old man's warning, folded into a lullaby, where nothing would ever look for it.</p>
+<p>"A journal," he said. "In 2063."</p>
+<p>"The <em>Journal of Post-Democratic Governance</em>. Three issues. He catalogued them."</p>
+<p>"And there's no record of it."</p>
+<p>"None. Not even a catalogue number. I looked."</p>
+<p>Marcus was, whatever else he had lost, a historian. He knew what the absence of a catalogue number meant. It did not mean nobody had kept a copy. It meant somebody had gone round afterwards and made sure there had never been one to keep.</p>
+<p>"Someone erased a journal," he said slowly, "forty years before anyone erased an hour."</p>
+<p>Kira did not answer that. She reached across and put one finger, very lightly, on the numeral in the corner of the page.</p>
+<p><em>XI.</em></p>
+<p>"I've seen this before," she said.</p>
+<p>He waited.</p>
+<p>"In the data centre at Ashford. The last folder I put on the drive. Ministry correspondence. I opened it once at the cottage: routing slips, minutes, nothing that meant anything. And the label. <em>RESTORATION</em>, and then a stroke, and then this." She tapped the page. "<em>XI.</em>"</p>
+<p>"The Deputy Minister found the page in Continuity's Ministry papers."</p>
+<p>"Yes."</p>
+<p>"And you found the folder in Continuity's Ministry papers."</p>
+<p>"Yes." She took her finger away. "Same set. Same numeral. I don't know what it means. I don't know what <em>restoration</em> means, in a folder, in a data centre, in a building where they emptied people." She looked at the sentence. <em>Arrange to be the one who restores it.</em> "I don't like it."</p>
+<hr>
+<p>It was past one when he told her the rest.</p>
+<p>He told her about the visit on the nineteenth of November: the two cups of tea, the questions about the stairs, <em>You keep your own record. Good.</em> And the thing Wei had said at the door, lightly, like an old office joke, and the way something in him had moved, reaching, and found nothing.</p>
+<p>"<em>Another day in paradise,</em>" he said. "Thomas used to say it. The man at the next desk. I told you, in the garden. But everyone says it. It wasn't the words." He stopped. "It was the way they were said. I know I've heard it said like that. It's in the holes somewhere. I can't find whose voice it was."</p>
+<p>Kira said it over to herself, under her breath, twice. He watched her search for it in her own vault and come back empty.</p>
+<p>"No," she said. "Nothing."</p>
+<p>"I wrote it on the wall. Under UNCHECKED."</p>
+<p>"Good." She was quiet for a moment. Then, carefully, without looking at him, in the same level voice she had used for the upload: "Did you see his hand?"</p>
+<p>"He cut it on a server rack," said Marcus.</p>
+<p>He heard himself say it. It sounded like what it was: a fact he had been given by the man it was about, and had not checked. He thought of a man kneeling on a wet floor, undoing the straps.</p>
+<p>"Lots of people cut their hands," he said.</p>
+<p>Kira did not answer.</p>
+<p>She looked, instead, at the door. Beyond it, on the landing, the guard the lead investigator had posted was standing exactly where he had stood at ten, and at midnight, and would stand, Marcus supposed, at dawn.</p>
+<p>"Protective custody," said Kira, very quietly.</p>
+<p>She did not finish the thought. She did not need to. He had been in custody before.</p>
+<p>In the pocket of her coat, the small receiver Elena's people had given her, the one the guards at the street door had not found, gave a single silent pulse of light. She took it out, and read it, and turned it so that he could see.</p>
+<p>It was from Nikolai. One line, in the old shift, which she decoded under her breath:</p>
+<p><em>W. ASKED ME TODAY WHETHER YOU TWO ARE SLEEPING WELL.</em></p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="17-how-the-hour-was-written.html" class="nav-button">← Previous: Chapter 17: How the Hour Was Written</a>
+            <div class="nav-center">Chapter 18: Protective Custody</div>
+            <a href="19-the-resurrection.html" class="nav-button">Next: Chapter 19: The Resurrection →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

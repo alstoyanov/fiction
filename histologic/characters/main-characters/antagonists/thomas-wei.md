@@ -151,7 +151,7 @@ He never appears. Traces of him:
 | 29 | Nikolai goes inside to find "who can delete a fact". |
 | Epilogue | As Pieter Lang, Nikolai has flagged an unowned 14:00–15:00 core block. |
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 | Ch | What he does |
 |----|--------------|
 | Prologue | Offstage. Singh "has begun to suspect who in this building believes that sentence". A knock, "someone she knows" (never shown). |

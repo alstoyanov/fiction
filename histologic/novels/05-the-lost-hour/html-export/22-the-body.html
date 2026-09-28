@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="21-the-annex.html" class="nav-button">← Previous: Chapter 21: The Annex</a>
+            <div class="nav-center">Chapter 22: The Body</div>
+            <a href="23-a-very-good-case.html" class="nav-button">Next: Chapter 23: A Very Good Case →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 22: The Body</h1>
+<p><em>Wednesday, December 15, 2106. The magistrates' court and a teaching hospital, Chronos</em></p>
+<hr>
+<p><em>Witness: Santos, Lia. Age sixteen. Veridican citizen, telemetry absent since November 15. Presenting manner: hostile. Prognosis: excellent.</em></p>
+<p>Dr. Yuki Tanaka composed the note on the bench outside Hearing Room Four, hands folded in her lap, and filed it in the place where she kept such things. Along the corridor the girl stood at the window with her arms crossed, glaring at the car park as if it had personally arranged her exile.</p>
+<p>The Chronos Magistrates' Court was a clean, pale building with the time displayed on every wall: not the hour and minute, as in Veridica, but the full Chronos stamp, running to nine places after the second, the last digits turning so fast they were only a shimmer. A nation that recorded everything to the nanosecond, Tanaka thought, and could not tell a courtroom whether three people had wanted to cross a fence.</p>
+<p>"They're late," said Lia, without turning round.</p>
+<p>"They are exactly on time," said Tanaka. "The clock says so. It is we who are early."</p>
+<p>Something almost like a smile went across the furious young face. Then the door opened, and a clerk said their names.</p>
+<hr>
+<p>The charge had not changed in four weeks, though the hearing itself had been put back once, in November, at the Veridican representative's request. <em>Facilitation of unlawful cross-border movement of persons. Aggravated: minor involved.</em> The Chronos word for it was longer and more precise. The officer who first read it to her had kindly translated it: trafficking.</p>
+<p>The difficulty was the record. The Chronos record was perfect. Its perimeter sensors showed three people passing through the unmaintained fence at the eastern culvert between fourteen twenty-eight and fourteen thirty-one, to a string of digits after the second, two more waiting for them on the Chronos side, and a car registered to her hospital leaving the track at fourteen forty-four. What it could not show was why. Veridica's record showed a family entering the strip on a one-day medical pass at thirteen forty, and then nothing until fifteen hundred, when there were three telemetry signals reading zero. No family walking to a gap in the wire. No choice. Not even the flatlines James Morrison had built so carefully, because they had been in the hour, and the hour was gone. The one precaution taken on the family's behalf had gone with the hour, and its absence made them look stolen.</p>
+<p>So it came down to testimony. And testimony, in a Histologic court, was what you listened to politely while you waited for the record.</p>
+<p>Davi Santos spoke first. He had entered Ministry correspondence for twenty years, and he spoke like a man reading from a file he had written himself. He had applied for a medical crossing waiver. It had been approved. He had taken his wife and daughter to the fence. He had wanted to go.</p>
+<p>"Why?" said the magistrate.</p>
+<p>"Because I entered things," said Davi. "And some of them weren't there the next week. And I stopped being able to tell whether I'd made a mistake." He looked at his hands. "I didn't want my daughter to grow up not being able to tell."</p>
+<p>Then Lia stood up. She did not wait to be asked a question.</p>
+<p>"Nobody abducted me," she said. "I want that in your record, since you've got such a good one. I was <em>taken</em>, which is different. My parents took me, and I didn't want to go, and I told them so for three months, and at the fence, and in the car. You can ask Dr. Tanaka. I was extremely rude to her."</p>
+<p>"She was," said Tanaka, to nobody in particular.</p>
+<p>"I had friends. I had a girl in my year I was going to tell something to, and now I'm never going to tell her, because I'm dead." Her voice did not shake. It went harder instead, the way Kira's used to in 7-K. "But I chose. When I was through the fence, I turned round and stood there. I could have stepped back over the post. It was one step. I stood there and thought about it, and I didn't." She looked straight at the Veridican representative, a young man in a good suit who had been sent across the lake to say <em>abduction</em>, and had said it that morning with diminishing conviction. "So if you want to charge somebody, charge me. I'm the one who didn't walk back."</p>
+<p>On every wall the time went on turning, very fast, in its last digits.</p>
+<p>The young man said that the Ministry did not dispute the sincerity of the witness, but that a minor's recollection of an unrecorded interval could not be weighed against a presumption of Veridican law. He said it quite well, and did not look at Lia again.</p>
+<p>The magistrate studied his screen for a long time. "The alleged offence began on Veridican territory," he said at last, "during an interval for which Veridica holds no record. The Veridican Judge will hear, on the twenty-third, whether testimony may establish a fact where the record is absent. It would be discourteous to a neighbouring Judge to rule before it does. The charge is suspended, pending that determination. The witnesses are thanked."</p>
+<p>Not an acquittal. A door left ajar. Tanaka had spent eleven years at Ashford learning that the difference between those two things could be the whole of a person's life, and when she stood her knees were not entirely steady.</p>
+<p>In the corridor Lia said, "Is that it?"</p>
+<p>"For now. That was very good."</p>
+<p>"I know," said Lia, and then her face did something complicated, and she turned back to the window, and Tanaka stood beside her, not touching her, until her mother came.</p>
+<hr>
+<p>Her office at the hospital was on the fourth floor and overlooked a different car park, which she had come to think of fondly. Morrison's desk stood against the far wall. On her own was a secure terminal the hospital director had not asked about, and on the terminal, since Monday night, the case file.</p>
+<p>It had come through Director Kovač's channel, the routine one that had carried Isaiah's evidence out of Ashford in August. <em>For Dr. Tanaka's clinical opinion,</em> ran the covering note. <em>I would be grateful for it before the twenty-third. H.K.</em> The complete investigative file on the death of Deputy Minister Amara Singh, compiled by the lead investigator's office. Four hundred and twelve pages. She had read it twice.</p>
+<p>She made tea and opened it a third time, at the section headed <em>MEDICAL</em>, and read it the way she had once read the charts of patients transferred from other wards: assuming nothing, and looking for what had not been written down.</p>
+<p><em>Subject: Singh, Amara. Deputy Minister of Historical Integrity. Age forty-nine. Post-mortem commenced 17:40, November 15, Ministry district medical facility.</em></p>
+<p><em>Cause of death: single penetrating wound, left anterior chest, fourth intercostal space, consistent with the letter opener recovered at the scene. Time of death: during the unrecorded interval. Temperature and lividity consistent with death between 14:00 and 14:40. Witness testimony places the assailant's entry at approximately 14:20. Estimated 14:23.</em></p>
+<p>It was a competent report. The wound was measured. The weapon was described: a steel letter opener with a flat handle, from the Deputy Minister's own desk set.</p>
+<p>There were no photographs of the face.</p>
+<p>She had taken it for a clerical omission the first time, and gone looking. On the second reading she had found the line at the foot of the photographic index: <em>Facial images withheld for dignity, at the request of the office of the Deputy Minister.</em></p>
+<p>She set her cup down on the desk, carefully.</p>
+<hr>
+<p><em>Interface telemetry: no signal. Registry entry absent for interval 14:00:00–14:59:59. Signal not resumed at 15:00:00. Consistent with death within the unrecorded interval.</em></p>
+<p>Entirely consistent, Tanaka thought. Consistent with a woman dying at her desk at fourteen twenty-three. Consistent, also, with a woman whose interface had been made to report nothing at a moment when nothing was being recorded. A flatline was not a death. It was a signal that looked like one. She knew that better than anyone who would ever read this file. She had been dead herself, by exactly this evidence, since the second of August.</p>
+<p><em>Visual identification: by the Deputy Minister's aide, Mr. L. Bell, at 15:05; confirmed by four members of the Deputy Minister's staff and by the Undersecretary's office.</em></p>
+<p>Every one of them had been in the Ministry district at fourteen twenty. Every one of them had been in the building.</p>
+<p>She wrote it on the pad beside the terminal, in her small neat hand, as she would have written it on a chart.</p>
+<p><em>All identifying witnesses within range of the Ministry district node during the interval. Seeding confirmed on that node. Extent unknown.</em></p>
+<p>And underneath, the thing she had been circling since Monday:</p>
+<p><em>Identification is an act of memory.</em></p>
+<p>You looked at a face, and your memory told you whose it was. It was the oldest test in medicine and the least examined, <em>do you know this person?</em>, and the answer came from the same place in the brain where forty people had been given a man in Wing C gray who had never been there. Tanaka had spent a week in November on her office floor with forty statements laid out around her, proving that memories could be issued like stationery. Now she was asked to accept, on the word of the same building, whose body it was.</p>
+<p><em>Disposition. Remains released to the family, November 16, at the family's request. Cremation completed 11:15, November 16.</em></p>
+<p>Within twenty-four hours. She had checked the arithmetic three times.</p>
+<p>The family's request was attached: one form, correctly completed, asking for immediate private cremation <em>in accordance with the Deputy Minister's expressed wishes</em>. It was not signed by a relative. It carried an authorisation code, and the code was routed through the Deputy Minister's own office.</p>
+<p>The dead woman's office had asked for the dead woman to be burned.</p>
+<p>There was no family in the file. No parent, sibling, spouse. Near the end, in the investigator's notes: <em>Next of kin: attempts to contact ongoing.</em> A week later, in a different hand: <em>Family not located. Enquiries suspended pending resolution of criminal matter.</em> A family that had asked for a cremation within hours, and then could not be found.</p>
+<p>She thought of the calendar with four entries in the hour that nobody remembered making, and of Kira's voice on a secure line two weeks ago saying <em>every one of them carries her credentials</em>, and she did not allow herself to go further.</p>
+<p><em>Pre-mortem medical record: not in file. Not requested. No comparison made.</em> A height, a dental chart, an old fracture to set beside the measurements. It was a very ordinary thing to want, and nobody had wanted it.</p>
+<p>She turned to a clean page and wrote the date at the top, as she always did. Then she wrote the sentence she had been carrying since Monday, and filed it where she filed the things she could not explain: beside 7-K kept empty through the November overflow, beside Reyna Moss weeping for joy at a patient's flattening.</p>
+<p><em>Nobody who can't be seeded has seen her body.</em></p>
+<p>It was not a diagnosis. It was not even a hypothesis. It was the absence of an examination, noted by a physician who had been trained never to accept one. There was no one she could tell it to who would not have to do something about it, and nothing that could be done.</p>
+<hr>
+<p>The second document was Kira's.</p>
+<p>It had come through Nikolai's relay on Tuesday, from the Ministry flat where Kira and Marcus were kept under the lead investigator's protective guard: Monday night at the research annex, in short numbered paragraphs like an incident report. Tanaka read paragraph eleven again.</p>
+<p><em>11. Reeves, unprompted: "Someone has been using my cradles at night. The session logs show sessions I didn't run." Eleven since September, between 01:00 and 04:00, subject field blank. "At first I thought it was my imagination." Laughed. "I don't have an imagination." Did not say on whom. I did not ask. I should have asked.</em></p>
+<p>A cradle was not a thing you used on nobody. Its whole purpose was a subject. She listed the possibilities as she would have listed a differential.</p>
+<p><em>A calibration run. Someone testing a profile before a broadcast.</em></p>
+<p><em>A subject brought in from outside.</em></p>
+<p><em>Reeves himself.</em></p>
+<p>She looked at the last line. A man who slept in his own laboratory, who said he had no imagination, and laughed. She did not finish the list. She turned back to the case file, because there was something on the second reading she had seen and not understood.</p>
+<p>It was on page three hundred and eighty-one, in an appendix of custodial orders, the dry paper that followed every arrest in Veridica like a wake behind a boat.</p>
+<p><em>CUSTODIAL ORDER. Subject: REEVES (Dr.), formerly Director of Treatment, Project Continuity. Detained December 13, 2106. Held pending charge at: Ministry Medical Wing, Secure Suite 2. Conditions: cradle-equipped stabilisation, at the discretion of the lead investigator, in view of the subject's specialist knowledge and the risk of deterioration under interview.</em></p>
+<p>She knew the phrase. Everyone who had worked at Ashford knew it. It was the room you put a patient in when you were afraid he would come apart before you had finished with him: a bed, a monitor, a quiet cradle on its jointed arm above the pillow, for settling the mind at night. She had signed for such rooms herself, for storm-touched women from the border who woke screaming.</p>
+<p>It was not a room for a murder suspect. A murder suspect needed a cell, a lawyer and an interview room with a camera. He did not need a machine above his pillow that could reach into the architecture of his memory, find the places where it was warm, and press. Reeves was not ill. Reeves was the calmest man she had ever met. Kira's paragraph fourteen had him walking out between two enforcers <em>as if he were going to a seminar</em>.</p>
+<p><em>Why does a murder suspect need a cradle?</em></p>
+<p>Out of the window the December light was going early over the car park, and the lamps were coming on one by one along the rows.</p>
+<hr>
+<p>Morrison came in a little after five, his hair, which needed cutting, flattened on one side from the hood of a lab scanner. He said "Sorry," for nothing, as he always did, and then stopped, because he had seen her face.</p>
+<p>"The hearing?"</p>
+<p>"Suspended. Lia was magnificent." She did not look up. "James. Come and look at this."</p>
+<p>He read the custodial order over her shoulder. She watched his hands, from habit. They rested on the back of her chair and stayed there. They were steady again, as they had been before that evening in November, and she still checked.</p>
+<p>"Stabilisation," he said.</p>
+<p>"Tell me what it is."</p>
+<p>When he spoke it was in the low, fast voice he used for anything he understood better than he wanted to. "It's a Wing C cradle. Same hood, same pads, same arm, same Chronos chassis. The difference is the software, and the gain. For stabilisation you run it very shallow, a few percent of treatment depth. It finds the hot clusters, the ones keeping someone awake, and cools them a little. It doesn't lift anything. It doesn't write anything." He stopped.</p>
+<p>"But it could."</p>
+<p>"It's the same machine." He took his hands off the chair. "If someone brought the right calibration. The hardware wouldn't know the difference. The night staff wouldn't know, unless they read the gain curves, and nobody reads the gain curves at night. It can do anything a Wing C cradle can. Including seeding. If someone brings the right calibration."</p>
+<p>"Could you tell afterwards? From the man?"</p>
+<p>"No. You know you couldn't. You'd have a man who remembered something. And he'd remember it exactly the way he remembers anything else."</p>
+<p>She thought of forty statements on her office floor. <em>Gray, like a patient's clothes. White bandage. Holding it like it hurt.</em> She thought of Reeves in a quiet room in the dark, with a hood above his pillow, and someone at the console who had read his work more closely than he had ever been read in his life. <em>I know who writes like me now.</em></p>
+<p>"James," she said. "Whose calibration was on the Ministry node?"</p>
+<p>He did not answer. He did not need to. He had told her in November, on this floor, gray to the lips. Someone had his gain profile, and Reeves's code comment, and a Ministry annex at night.</p>
+<p>And now, it seemed, a Ministry medical wing.</p>
+<hr>
+<p>She called Kira at six.</p>
+<p>The receiver Elena's people had given Kira, the one the guards at the street door had not found, did not exist on any register in Veridica, and it took nearly a minute to relay, while Tanaka sat with the receiver to her ear and her other hand flat on the pad as though it might move.</p>
+<p>"Yuki." Kira's voice, low.</p>
+<p>"You're alone?"</p>
+<p>"Marcus is asleep. The guard's outside the door. There are no cameras inside, apparently. He asked." A pause that said exactly what Kira thought of being told so. "The hearing?"</p>
+<p>"Suspended. That isn't why I called. Where is Reeves being held?"</p>
+<p>"The Ministry medical wing. The news said he was being kept somewhere secure for his health. Why?"</p>
+<p>"He isn't in a cell. He's in a stabilisation suite, at the lead investigator's discretion." Tanaka said it plainly, the way she had once told families what the chart said. "There is a cradle above his bed. James says it can do anything the ones in Wing C could do. If someone brings the right calibration."</p>
+<p>The line was silent so long she thought the relay had dropped.</p>
+<p>Then Kira said, very quietly, "Paragraph eleven."</p>
+<p>"Yes."</p>
+<p>"Say what you think."</p>
+<p>Tanaka closed her eyes. She saw Reeves as Kira had written him, calm and unshaven among his dust-covered cradles, saying <em>I don't have an imagination</em>. She saw a line of print on page three hundred and eighty-one, and a body nobody who could not be seeded had ever seen, burned within a day.</p>
+<p>"They're going to seed him," she said.</p>
+<p>"Seed him with what?"</p>
+<p>Tanaka opened her eyes. The lamps had all come on over the car park, in their neat rows, each exactly where it had been the night before.</p>
+<p>"With whatever they need him to remember," she said.</p>
+<p>Neither of them said what that was.</p>
+<p>Both of them knew.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="21-the-annex.html" class="nav-button">← Previous: Chapter 21: The Annex</a>
+            <div class="nav-center">Chapter 22: The Body</div>
+            <a href="23-a-very-good-case.html" class="nav-button">Next: Chapter 23: A Very Good Case →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

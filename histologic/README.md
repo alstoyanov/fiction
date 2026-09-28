@@ -16,7 +16,7 @@ Beneath it all lies a secret. The system was **designed**, including its wars, i
 | 2 | *The Stolen Fact* (short story) | Canon |
 | 3 | *The Divided Truth* (short story) | Canon |
 | 4 | *The Correction* (novel, ~95,500 words) | **Rewritten, first draft complete (Sept 2026)** |
-| 5 | *The Lost Hour* (novel) | Plot v3.1 approved; chapters next |
+| 5 | *The Lost Hour* (novel, ~113,000 words) | **Rewritten, first draft complete (Sept 2026)** |
 | 6–9 | *The Distributed Truth*, *Battle of Truths*, *Battle of Blood*, *Architects of Chaos* | Provisional; will be rewritten in order |
 
 Details, dates and the provisional arc: **[SERIES-OVERVIEW.md](SERIES-OVERVIEW.md)**.

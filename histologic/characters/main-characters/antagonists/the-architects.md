@@ -206,7 +206,7 @@ Seeds only (Foundation §5):
 - Isaiah's "Aunt Sarah at the head of the table" (Ch 8): **SO·04**, unrecognisable as such.
 - Helena Kovač's family; her uncle is never mentioned.
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 - **The torn page** (Prologue, Ch 3, 12, 18, 29): page 30, copy XI, mark CZ·11, number torn off.
 - **The sung essay** (Ch 12, 30, Epilogue): Chen Zhao's 2063 essay in Old Songs' "Given Gently".
 - **Reeves:** "You've found the sermon. I only ever had the one page too. They quote it at you in meetings." (Ch 21)

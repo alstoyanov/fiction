@@ -1,134 +1,32 @@
-# The Lost Hour - Novel #5
+# The Lost Hour (Histologic, Book 5)
 
-## Overview
+**Status:** first draft complete (Sept 2026), about 113,000 words. Rewritten from scratch from plot v3.1/v3.2 (`plots/05-the-lost-hour-full.md`) and the chapter summaries. The earlier v2 draft and its `docs/` are in git history.
+**Set:** Monday, November 15, 2106 – Friday, January 14, 2107. The epilogue is on Tuesday, November 15, 2107.
+**Follows:** *The Correction* (Book 4). **Followed by:** *The Distributed Truth* (Book 6, provisional).
 
-**Series Position**: Book 2 of the Histologic Series  
-**Genre**: Mystery Thriller / Multiple Timeline Narrative  
-**Status**: ✅ COMPLETE (First Draft)  
-**Length**: ~76,000 words (30 chapters + prologue + epilogue)
+## Premise
+Between 14:00 and 15:00 on November 15, 2106, an hour of Veridica's history disappears from every record at once. In that hour Deputy Minister Amara Singh is found dead, and forty Ministry witnesses remember the killer: Marcus Chen, a man the Registry lists as deceased. Marcus was in the building, and so, for their own reasons, were all the people who escaped Ashford with him. To clear him they have to prove that testimony can outweigh the record. The deeper they go, the clearer it becomes that the hour was not only erased. It was **written**.
 
-## High Concept
-
-Three months after escaping the correction facility, all seven protagonists use one planned hour (14:00-15:00, November 15, 2106) for their operations. But someone also commits murder and erases the hour from history. Now everyone who acted is a suspect, and the team must prove their innocence while exposing the real killer—all without factorepo records.
-
-## Timeline
-
-- **Before**: August 2106 - Correction facility escape ("The Correction")
-- **Between**: August-November 2106 - Characters scattered, planning
-- **The Lost Hour**: November 15, 2106, 14:00-15:00
-- **After**: November 15 onward - Investigation, reconstruction, revelation
-
-## Main Characters
-
-### Returning from "The Correction"
-1. **Marcus Chen** - Uploads corruption evidence, accused of murder
-2. **Kira Osman** - Helps Marcus, investigates from inside
-3. **Isaiah Okonkwo** - Crosses border with documents
-4. **Dr. Yuki Tanaka** - Helps defectors escape
-5. **Alexei Volkov** - Extracts resistance members
-6. **Dmitri Volkov** - Provides security, witnesses suspicious activity
-7. **Nikolai Volkov** - Monitors operations, has partial backup
-
-### New Characters
-8. **Thomas Wei** - Senior factorepo architect, actual murderer
-9. **Maya Reeves** - Young technician who discovers erasure
-10. **Captain Yevgenia Sokolov** - Investigates murder without factorepo
-11. **Minister Viktor Kozlov** - Victim, was going to expose corruption
-12. **Director Helena Kovač** - Joins investigation, helps expose Wei
+## The Three Twists
+1. **The hour was written** (Ch 11). Forty witnesses were *seeded* with the same memory. The gray clothes are seeded; the bandaged left hand is real.
+2. **They were herded in** (Ch 16). Every operation was steered into the hour by the dead woman's own credentials.
+3. **The victory was the design** (Ch 28–29, confirmed Ch 31). The hidden author is Thomas Wei, the kind lead investigator and Marcus's old deskmate at 14-09. The Lost Hour Doctrine the heroes win is the "restoration" Principle Six describes. They stay silent and begin keeping written journals kept by many hands.
 
 ## Structure
+| Part | Chapters | POV |
+|------|----------|-----|
+| Prologue: 13:59 | 00 | Singh |
+| Part One: The Missing Hour | 1–8 | Maya, Kovač, Marcus ×2, Isaiah, Tanaka, Alexei, Kira |
+| Part Two: The Witnesses | 9–17 | Nikolai, Marcus, Tanaka, Old Songs, Dmitri, Maya, Kovač, Kira, Isaiah |
+| Part Three: The Source | 18–24 | Marcus, Alexei, Nikolai, Kira, Tanaka, Dmitri, Marcus |
+| Part Four: The Verdict | 25–31 | Kovač, Marcus, Isaiah, Kira, Marcus, Old Songs, Marcus |
+| Epilogue: One Year Later | 32 | Rotating, with a coda from Wei's journal |
 
-### Prologue: The Day Before
-All characters preparing for tomorrow's operations
+## Folder
+- `chapters/`: the draft chapters, `00-prologue.md` to `32-epilogue.md`.
+- `chapters-summaries/`: the chapter summaries (the plan the draft follows), with a README covering the drafting refinements, the timeline, the cast additions and the clue map.
+- `html-export/` and `the-lost-hour.epub`: built with `python3 scripts/export-novel-html.py 05` and `python3 scripts/create-novel-ebook.py 05`.
 
-### Part 1: The Erasure (Chapters 1-8)
-- Discovery of lost hour
-- Kozlov's body found
-- Marcus accused
-- Initial investigations begin
-
-### Part 2: The Investigation (Chapters 9-18)
-- Kira recruited to investigation team
-- Flashbacks to lost hour operations
-- Evidence gathering
-- Wei's involvement discovered
-
-### Part 3: The Convergence (Chapters 19-25)
-- All parties converge
-- Wei exposed
-- Confrontation
-- Truth reconstructed
-
-### Part 4: The Aftermath (Chapters 26-30)
-- Wei's trial
-- Lost Hour Doctrine established
-- Pardons granted
-- New system built
-
-### Epilogue: One Year Later
-- Memorial ceremony
-- All seven reunited
-- New threat detected
-
-## Major Themes
-
-1. **Memory vs. Record** - When records fail, memory becomes truth
-2. **Fragility of Truth** - Truth can be erased but persists in witnesses
-3. **Multiple Perspectives** - Different viewpoints reveal larger truth
-4. **Human vs. Machine** - Testimony proves more reliable than data
-5. **Justice Without Certainty** - Pursuing truth without perfect proof
-
-## Innovation
-
-**Lost Hour Doctrine**: Revolutionary legal change allowing human testimony to override missing factorepo data. Proves The Judge isn't infallible.
-
-## Writing Progress
-
-- ✅ Prologue (3,400 words)
-- ✅ Part 1: THE ERASURE - Chapters 1-8 (21,800 words)
-- ✅ Part 2: THE INVESTIGATION - Chapters 9-18 (18,000 words)
-- ✅ Part 3: THE CONVERGENCE - Chapters 19-25 (13,000 words)
-- ✅ Part 4: THE AFTERMATH - Chapters 26-30 (12,500 words)
-- ✅ Epilogue (2,400 words)
-
-**Final Word Count**: ~76,000 words ✅ COMPLETE
-
-## Connection to Series
-
-- Direct sequel to "The Correction"
-- All seven main characters return
-- Proves factorepo can be erased (sets up Book 3)
-- Legal revolution enables future changes
-- Marcus and Kira become official reformers
-
-## Key Scenes Completed
-
-- [x] The factorepo failure moment
-- [x] Kozlov's body discovery
-- [x] Marcus's arrest
-- [x] Kira's realization about Wei
-- [x] Multiple flashbacks to lost hour operations
-- [x] Convergence of all parties
-- [x] Wei's confession
-- [x] One-year anniversary reunion
-- [x] Trial with human testimony
-- [x] Lost Hour Doctrine established
-- [x] All seven heroes reunited
-- [x] Setup for next novel
-
-## Notes
-
-- Multiple POVs showing different perspectives of same hour
-- Flashbacks interwoven with present investigation
-- Mystery structure: readers know Wei is guilty, characters must discover it
-- Focus on how to prove truth without records
-- Emotional reunion of all seven characters
-- Setup for next novel in series
-
----
-
-**Status**: ✅ NOVEL COMPLETE  
-**Completed**: November 23, 2025  
-**Quality**: Professional first draft, ready for revision  
-**Next**: Revision pass, then begin "Battle of Truths" (Novel #6)
-
+## Related
+- Characters: `characters/README.md` (cast register), especially `thomas-wei.md`, `amara-singh.md`, `maya-reeves.md` and `old-songs-character.md` (the songbook).
+- The manuscript: `plots/00-FOUNDATION-MANUSCRIPT.md`. In this book only the torn page 30 and the sung Journal passage appear.

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="00-prologue.html" class="nav-button">← Previous: Prologue: 13:59</a>
+            <div class="nav-center">Chapter 1: System Failure</div>
+            <a href="02-the-hearing-room.html" class="nav-button">Next: Chapter 2: The Hearing Room →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 1: System Failure</h1>
+<p><em>Monday, November 15, 2106. Monitoring floor, Regional Factorepo, Veridica Capital</em></p>
+<hr>
+<p>At 15:01:04 every alarm on the monitoring floor went off at once.</p>
+<p>Maya Reeves would remember the time exactly, because she looked at it. It was the first thing she did. Around her the floor had become a single sound, forty consoles and the ceiling panels and the supervisor's desk all shrieking in the same flat tone, and the red integrity bands had come up on every screen in the room, and eleven people who monitored the national record for a living had stopped moving. Greta Szabo, halfway out of her chair, with a cup in her hand. Colm Adeyemi at the next console, his mouth open. Mr. Dunmore at the supervisor's desk with his palms flat on either side of his keyboard, as if the desk might be about to tilt.</p>
+<p>Maya looked at the clock in the corner of her screen. <em>15:01:04.</em> Then she looked at the alarm codes, and saw that they were all the same code, and that the code was one she had only ever seen in training.</p>
+<p><em>PRIMARY CONTINUITY FAULT.</em></p>
+<p>She was twenty-four and the most junior technician on the floor, and she did not wait to be told. She pulled up the integrity suite and ran it herself.</p>
+<hr>
+<p>The check took forty seconds. She watched it run with her hands in her lap because they had started, very slightly, to shake, and she did not want anyone to see.</p>
+<p>It came back green.</p>
+<p>Every hash chain verified. Every index reconciled. No contradictions, no corruption, no null records, no failed writes. By every measure the suite knew how to take, the record was perfect.</p>
+<p>And the alarms were still going.</p>
+<p>She ran the timeline view instead, the plain one they gave to first-year trainees: a single bar of the day's entries in blocks of an hour, thick bands of traffic and transit and sensor data, the ordinary weight of a Monday.</p>
+<p>13:00 to 14:00, dense.</p>
+<p>14:00 to 15:00.</p>
+<p>Nothing.</p>
+<p>Not a dark block. Not a red one. There was no block at all. The bar ran up to 13:59:59 and then it simply resumed at 15:00:00, and between them there was no gap on the screen, because the software did not know how to draw a gap. The timeline had closed over the missing hour the way water closes over a stone. You could only see it by reading the numbers.</p>
+<p>She read the numbers. She read them again.</p>
+<p>Then she opened the primary repository directly, which she was not supposed to do without a supervisor's key, and used Mr. Dunmore's, which she had watched him type every morning for eleven months, and looked.</p>
+<p>Nothing. The primary ran to 13:59:59.998 and resumed at 15:00:00.000. She opened the three backups, one after another, each supposedly independent, each on its own hardware in its own building, and each ran to 13:59:59.998 and resumed at 15:00:00.000, and each reconciled perfectly with the other two. She opened the local repositories for the capital, the lakeshore districts, the northern provinces, and, at random, a village in the east whose name she had never heard of. Nothing.</p>
+<p>Not corrupted. Not contradictory. <em>Absent.</em></p>
+<p>The traffic records for the whole nation between two and three o'clock. Every purchase, every payment. Every camera, every door, every sensor on every street. The broadcast logs. The births. Somewhere in Veridica a child had been born between two and three this afternoon, and there was no record that the child existed. Somewhere someone had died, and had not.</p>
+<p>An hour of the country's history had not been damaged. It had never happened.</p>
+<p>Maya's stomach turned over. It was a precise, physical sensation, and she recognised it: it was what happens when you go down a staircase in the dark and your foot reaches for a stair that isn't there. That lurch. That sick drop through nothing. She held on to the edge of the console and waited for her foot to land, and it did not land, and it went on not landing.</p>
+<p>"Mr. Dunmore," she said. Her voice came out perfectly level, which surprised her. "It's the primary. Fourteen hundred to fifteen hundred. The whole hour. It's gone."</p>
+<p>Behind her, somebody laughed. It was a short, frightened sound, and it stopped.</p>
+<p>"That's not possible," said Greta Szabo. She had put her cup down at last. "Facts can't be deleted."</p>
+<p>"I know."</p>
+<p>Mr. Dunmore said it too, a moment later, looking at his own screen with the colour going out of his face. Colm said it. Somebody at the back said it. They said it the way people repeat a thing when they want to hear it said aloud by someone else. Maya had heard the sentence all her life, in school and on the broadcasts and in the induction lectures, and she had never before heard anyone say it as if it might be the last thing holding up the ceiling.</p>
+<p>She said nothing. She was reading the numbers again.</p>
+<hr>
+<p>The Ministry called at 15:20.</p>
+<p>Maya knew because the notice came up on the floor feed, and because she had started, without deciding to, a log of her own in a plain text file on the corner of her screen. She had always timestamped things; her mother said she had timed her own baths. The record told you what happened. It did not tell you what order you had found it out in.</p>
+<p><em>15:01:04. Alarms. PRIMARY CONTINUITY FAULT.</em> <em>15:02:31. Integrity suite. Green. (!!)</em> <em>15:05. Timeline. 14:00–15:00 absent. Primary, 3 backups, locals (all tested).</em> <em>15:20. Ministry notice: investigation lead appointed. WEI, T., Senior Systems Architect.</em></p>
+<p>"Wei," said Mr. Dunmore, reading it. Some of the colour came back into his face. "Well. Thank God for that."</p>
+<p>"Who's Wei?" said Maya.</p>
+<p>"Systems Architecture. Ministry district. He's—" Dunmore made a small gesture that took in the whole building, the floor, the country. "He's good. He's the best they've got. He'll be half an hour from over there, at least."</p>
+<p><em>15:32. WEI arrives.</em></p>
+<p>She typed it, and then looked at it, because it was wrong.</p>
+<p>She knew the Ministry district. From there to the Regional Factorepo was twenty-five minutes at the best of times, on a clear road, with a driver who knew the lights. At three o'clock on a Monday it would be more. And it had been twelve.</p>
+<p>He must have been on his way already, she thought. On his way here, or somewhere near here, when they called him. She let the thought go, because he had come through the doors from the lift lobby and was walking onto the floor, and everyone was turning to look at him.</p>
+<p>He was tall, and graying at the temples, and he did not hurry. He had a plain coat over his arm, a Ministry lanyard round his neck and a paper cup of tea in his right hand, and his left hand was wrapped in a clean white bandage, across the palm and around the knuckles. He stopped just inside the floor and looked round it once, slowly, and she had the odd impression that in that one look he had counted them.</p>
+<p>"Mr. Dunmore," he said. His voice was quiet. It did not need to be anything else; the alarms had been silenced at 15:14 and the floor had gone very still. "Thank you for holding the floor. Greta. Colm." He knew the names of people Maya was fairly sure he had never met. He went on round the room with them, not all of them, but most, and then his eyes came to her, and paused, and dropped to the badge on her jacket.</p>
+<p>"Ms. Reeves," he said.</p>
+<p>There was the smallest pause. She had grown used, since August, to the pause. It came after her surname the way a flinch comes after a raised hand. People heard <em>Reeves</em> now and something went across their faces, and then they asked, <em>Any relation?</em> in a joking voice, and she said <em>It's a common name,</em> in a joking voice, and they both pretended that was the end of it.</p>
+<p>He did not ask. He looked at her face instead.</p>
+<p>"I'm told you found it first," he said.</p>
+<p>"I ran the integrity check." Her mouth was dry. "It came back clean. That's how I knew."</p>
+<p>He came over and pulled out the chair beside hers, the empty one, and sat down in it, and set his tea on the desk by her keyboard.</p>
+<p>"You found the gap first," said Thomas Wei. "Walk me through it."</p>
+<hr>
+<p>She walked him through it.</p>
+<p>She showed him the suite coming back green, and the timeline with no hole in it, and the numbers. The primary, the three backups, the locals, the village in the east with its name she still could not pronounce. She talked faster than she meant to. He did not interrupt. When she said something only half right he asked a question that let her find the other half herself.</p>
+<p>He listened, she thought, like someone reading.</p>
+<p>Once, reaching across her for the second screen, he steadied himself on the edge of the desk with his left hand and drew it back again at once. She glanced at the bandage. It was very white, very neatly done.</p>
+<p>"Server rack," he said, and smiled a little, ruefully, the way people smile at their own clumsiness. "My own fault." He picked up his tea with his right hand. "Go on. The backups."</p>
+<p>She went on.</p>
+<p>When she had finished he sat for a moment without speaking, looking at the place on the screen where the hour should have been.</p>
+<p>"It's clean," he said at last. "That's the remarkable thing. Not the size of it. Anyone can break something. This isn't broken. Whoever did this"—he said it very simply, <em>whoever did this</em>, as if it had never occurred to him to call it a fault—"did it so that nothing contradicts anything else. The record doesn't know it's missing anything." He looked at her. "You knew. The suite didn't. That's worth remembering."</p>
+<p>She did not know what to say to that. She said, "Thank you."</p>
+<p>"I'm putting a team together," he said. "Six or seven people, on the ninth floor, from tonight. I'd like you on it." He did not make it sound like a question, but he paused afterwards as though it might be one.</p>
+<p>"I'm—I'm a junior technician," said Maya. "Sir."</p>
+<p>"I know," said Wei. "You're also the only person on this floor who didn't freeze." He stood, and picked up his coat. "Bring your log. The one in the corner of your screen. I'd like a copy."</p>
+<p>She had not known he'd seen it.</p>
+<hr>
+<p>At 15:40 the second thing happened.</p>
+<p>It came up the building the way news does, before any notice: a phone, then two, then a knot of people by the lift lobby, and one of them was crying. Colm came back from it with his face gone gray and said, to no one in particular, that Deputy Minister Singh had been found dead in her office at the Ministry. At five past three. Her aide had found her.</p>
+<p>"Dead how?" said Greta.</p>
+<p>Colm shook his head. "They're saying—" He stopped. "They're saying somebody killed her."</p>
+<p>The floor was silent. Maya looked at her log, and at the two times in it, and at the hour between them that did not exist, and felt the missing stair again, lower down this time, in her chest.</p>
+<p><em>15:40. Word: Dep. Min. SINGH dead (found 15:05). Ministry. Killed?</em></p>
+<p>She typed the question mark, and then she deleted it, and then she put it back.</p>
+<hr>
+<p>Wei briefed them at 16:10, in a borrowed meeting room along the corridor from the monitoring floor, with a long table and a window onto the transit line.</p>
+<p>There were seven of them. Maya, and Colm, whom Wei had also taken, and four people she did not know from Systems Architecture who had arrived in a Ministry car at 15:55, and Wei himself at the end of the table with a closed folder in front of him and his tea, a fresh one, at his elbow.</p>
+<p>He did not stand to speak. He told them what they knew, which was very little, and then what it meant.</p>
+<p>"You'll all have been taught that the factorepo can't be altered," he said. "I was taught it. I believed it. I'd like you to keep believing it for as long as you usefully can, because it's going to make you careful." He turned his cup a quarter-turn on the table. "But understand what we're dealing with in the meantime. No record means no fact. No fact means The Judge can't rule. Whatever happened in the capital between two and three o'clock this afternoon—every conversation, every transaction, every crossing, every crime, including a Deputy Minister's death—is now, in law, nothing. It did not happen. There is no procedure for it. The Judge can't judge what it doesn't know happened."</p>
+<p>Nobody spoke.</p>
+<p>"So we rebuild it," said Wei. "From whatever survived." He looked round the table at them, one after another, pleasantly, and his eyes rested on each face for a moment, as if it were a thing he wanted to remember. "Or from whoever."</p>
+<p>Maya found that she had written it down. <em>Or from whoever.</em> She did not know why.</p>
+<p>"There are three possibilities, broadly," Wei went on. "A fault in the architecture that none of us understands. An attack from outside, from Chronos, say, which the Ministry will certainly want us to consider and which I'd ask you to consider sceptically. Or someone inside." He paused. "The Ministry will also want us to consider the people who came out of Ashford in August. Continuity's people."</p>
+<p>Maya flinched.</p>
+<p>It was not much: a tightening across her shoulders, her pen stopping on the page. She had been flinching at that word since the fifth of August, when she had read Isaiah Okonkwo's account on her kitchen floor at two in the morning, and she had got better at hiding it, but not good.</p>
+<p>Wei's eyes came to her and stayed there, for perhaps a second. He did not say anything. His face did not change. Then he looked away, back to the whole table, and went on, and she sat with her pen stopped on the page and her face hot and understood that he had seen it, and that he had decided, for whatever reason, to let her keep it.</p>
+<p>"I want to be clear," he said, "that those people are officially dead, and that the Ministry is not always right about what it would like to be true. We'll go where the record goes. Where there isn't one, we'll go carefully."</p>
+<hr>
+<p>Her surname was Reeves.</p>
+<p>For twenty-four years it had been an ordinary surname. Since August it had been the most famous surname in Veridica, in every article about Ashford and Wing C and the seven people in their glass cells: <em>Dr. Reeves</em>, <em>Dr. Reeves's programme</em>, <em>Dr. Reeves, whose whereabouts remain unknown.</em> There was no first name. The articles never gave one. It was as though the man had been nothing but a surname all along, and in a way, for her, he had.</p>
+<p>She had not spoken to her father in four years. There had been a dinner, and she had walked out of it, and afterwards there had been an old message account that she simply stopped opening, so that whatever he sent, if he sent anything, would go into it and stay there. Since the first of August she had thought about that account more often than in all the four years before, and she had still not opened it. She did not want to know whether it was full or empty. She had noticed that about herself the way you notice a clock has stopped: not at the moment it stopped, but some time afterwards, all at once.</p>
+<p>She did not know if he was alive. She told herself she did not care. She sat at the long table in the borrowed room with Wei's voice going on quietly at the end of it and her pen still stopped on the word <em>Continuity</em>, and she found that she cared very much, and that she hated it.</p>
+<hr>
+<p>At 17:10 Wei sent everyone to get something to eat and told them to come back by six.</p>
+<p>"And I'd rather nobody watched the broadcasts tonight," he said, as they were getting up. "Not for my sake. For yours. There'll be a great deal of noise by the evening, and we need your heads clear of it. Whatever they're saying, it isn't evidence."</p>
+<p>So Maya did not watch the broadcasts. She ate a sandwich at her desk on the monitoring floor, which had emptied, and at 17:30, because she could not stop, she began to go through the scheduling logs.</p>
+<p>It was dull work, and she liked it for that. Every job on the factorepo's core was scheduled in advance, with an owner, a window and a reason; it was the first rule of the architecture. You did not touch the core without your name in the record. She went through the fifteenth window by window, looking for anything that touched two to three o'clock.</p>
+<p>At 21:48 she found it.</p>
+<p><em>Scheduled activity: primary repository, core synchronisation. Window: 15 NOV 2106, 14:00–15:00. Owner:</em></p>
+<p>The field was blank.</p>
+<p>She sat very still. She checked the booking record behind the entry, and the booking record said the window had been reserved at 06:12 on Sunday morning, the fourteenth, and that the owner field had been blank from the moment it was made. She checked for a correction, a later amendment, a supervisor's override, and there was none.</p>
+<p>Someone had booked the hour. A day in advance. On the core. And left their name off.</p>
+<p>And someone had noticed. There was a flag on the entry. A contractor's anomaly note, the kind anyone with schedule access could raise and almost nobody ever did, filed at 23:31 on Sunday night, the fourteenth:</p>
+<p><em>OWNER FIELD BLANK ON CORE WINDOW 14:00–15:00 (15 NOV). PLEASE CONFIRM OWNER BEFORE WINDOW OPENS. — P. LANG (CONTRACTOR, SYSTEMS MAINTENANCE)</em></p>
+<p>Nobody had answered it. The note sat there on the schedule exactly as it had been filed, polite and plain and unregarded, fifteen hours before the hour it was warning about.</p>
+<p>"Well," said a quiet voice behind her. "Look at that."</p>
+<p>She jumped. Wei was standing at her shoulder with his coat over his arm. She had not heard him come onto the floor. He was reading her screen, and his face in its blue light was thoughtful, and very faintly, she thought, pleased.</p>
+<p>"The hour was booked," she said. "Nobody owned it. And a contractor flagged it the night before."</p>
+<p>"So he did." Wei read the note again. Then he smiled, a small, private smile, as though something had gone the way he had rather hoped it might.</p>
+<p>"Find me Mr. Lang," he said.</p>
+<hr>
+<p>She got home a little after midnight.</p>
+<p>Her flat was on the sixth floor of a building in the western districts, and it was cold, because she had forgotten to set the heating. She stood in the dark hall with her coat still on and felt, for the first time since 15:01:04, how tired she was. Her hands had stopped shaking some time in the afternoon. That time she had not logged.</p>
+<p>She had not watched the broadcasts, as she had been told, and she was proud of it in a small and slightly foolish way. It was past midnight now. She was no longer on duty. She turned the screen on in the kitchen, with the sound low, and filled the kettle.</p>
+<p>The news was already running. It had, she understood after a moment, been running for hours.</p>
+<p>It was the Ministry: pictures of the building at dusk with its lights on; enforcers on the steps; a still of Deputy Minister Singh at some official function, a composed woman with reading glasses on a cord around her neck, smiling slightly at someone out of frame. Maya stood with the kettle in her hand and watched.</p>
+<p>Forty Ministry employees, the newsreader said, had given statements to enforcers during the afternoon. Forty separate people, interviewed separately. Every one of them had seen the killer walk into the Deputy Minister's office at twenty past two. Every one of them described him. Every one of them named the same man.</p>
+<p>The picture changed.</p>
+<p>It was a photograph she knew. Everyone knew it. It had been in Isaiah Okonkwo's account in August, and on every broadcast after, one of seven: a thin young man in gray, with glasses, looking into the camera with no expression at all, the way people look in a file photograph when they have stopped expecting anything from the person taking it.</p>
+<p>Under it, in the Registry's plain white letters, was his name, and beneath his name the single word the Registry had entered against it on the second of August.</p>
+<p><em>MARCUS CHEN. STATUS: DECEASED.</em></p>
+<p>The kettle began to boil in Maya's hand. She did not move to put it down.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="00-prologue.html" class="nav-button">← Previous: Prologue: 13:59</a>
+            <div class="nav-center">Chapter 1: System Failure</div>
+            <a href="02-the-hearing-room.html" class="nav-button">Next: Chapter 2: The Hearing Room →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

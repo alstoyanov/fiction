@@ -55,7 +55,7 @@ None.
 ### Book 4: *The Correction* (drafted)
 Not on the page and not named. The Epilogue's "a Deputy Minister who had read Isaiah's article had quietly arranged a visitor's pass in a false name", and Elena's *"THE DEPUTY MINISTER HAS OPENED THE DOOR."* Kira's folder from the data centre (Ch 24), *RESTORATION / XI*, comes from the same Ministry correspondence as Singh's page.
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 | Ch | Her part |
 |----|----------|
 | **Prologue** | **POV, 13:52–13:59:58.** The pass, the page in the safe, the margin note, the calendar entries, the knock. The first image of the book is the last recorded second. |

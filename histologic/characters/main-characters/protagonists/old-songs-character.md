@@ -74,7 +74,7 @@ These rules apply to every book.
 | 29 | *"I'll go with the boys. The songs are only useful where the people are."* He leaves with Alexei, Dmitri and Elena. |
 | Epilogue | In a barn with the brothers, humming, while they argue about who goes first. |
 
-### Book 5: *The Lost Hour* (plot v3.1)
+### Book 5: *The Lost Hour* (drafted)
 | Ch | What he does |
 |----|--------------|
 | 7 | In the resistance truck during the extraction. He asks the question nobody else does: *"Who told you their covers wouldn't last the week?"* (It points toward Twist 2.) |

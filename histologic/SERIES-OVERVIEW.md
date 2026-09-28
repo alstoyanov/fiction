@@ -13,7 +13,7 @@
 | 2 | *The Stolen Fact* | Short story (Kira) | Nov–Dec 2105 | **Canon** |
 | 3 | *The Divided Truth* | Short story (the Volkov triplets) | Nov 2104 (epilogue Nov 2105) | **Canon** |
 | 4 | *The Correction* | Novel, ~95,500 words | Oct 2105 – Aug 2106 (epilogue Nov 14, 2106) | **Canon.** Rewritten Sept 2026, first draft complete |
-| 5 | *The Lost Hour* | Novel | Nov 15, 2106 – Jan 2107 (epilogue Nov 2107) | **Plot v3.1 approved.** Chapter summaries and chapters to do (old draft to be replaced) |
+| 5 | *The Lost Hour* | Novel, ~113,000 words | Nov 15, 2106 – Jan 2107 (epilogue Nov 2107) | **Canon.** Rewritten Sept 2026 from plot v3.1, first draft complete |
 | 6 | *The Distributed Truth* | Novel | ~Nov 2108 – Feb 2109 | Provisional |
 | 7 | *Battle of Truths* | Novel | ~2109 | Provisional |
 | 8 | *Battle of Blood* | Novel | ~2110 | Provisional |

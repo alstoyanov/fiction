@@ -57,7 +57,7 @@ A brilliant, frightened young woman who lived through the Fracture Years and bel
 ### Stories 01–03 and Book 4: *The Correction*
 None. She is never named, and nothing points to her. (Continuity's aim in Book 4 echoes Principle Four, which is Wei Zhang's, not hers.)
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 - **Ch 12, "The Singer" (Old Songs' POV):** his memory of 2063 includes "a brilliant young woman from the systems department" who reads in the Archive every Thursday and argues with him about poetry. **He doesn't name her.** This is her only presence in the book.
 - **Ch 30:** Old Songs' "Write it down. All of it. Many hands" echoes her Warning's "Build by many hands", which nobody in the book has read. The reader can't know this yet. Don't point at it.
 - **No character may identify her, or learn that a Compiler exists** (Manuscript §5 and §8.4).

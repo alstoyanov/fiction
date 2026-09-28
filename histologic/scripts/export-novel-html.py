@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
 Export novel chapters to HTML with navigation.
+
+Usage: python3 scripts/export-novel-html.py [04] [05]   (default: all books)
+Books are configured in scripts/novels_config.py.
 """
 
 import os
@@ -33,65 +36,23 @@ except ImportError:  # fall back to a minimal converter for the chapter markdown
                     out.append(f'<p>{inline(" ".join(block.splitlines()))}</p>')
             return "\n".join(out)
 
-# Configuration
-NOVEL_DIR = Path("novels/04-the-correction")
-CHAPTERS_DIR = NOVEL_DIR / "chapters"
-OUTPUT_DIR = NOVEL_DIR / "html-export"
+from novels_config import BOOKS, select_books
+
 TEMPLATE_FILE = Path("templates/novel-export-template.html")
 
-# Novel metadata
-NOVEL_TITLE = "The Correction"
-NOVEL_SUBTITLE = "Novel 04 of the Histologic Series"
 
-# Chapter order, grouped by part: (file, number, title, POV)
-PARTS = [
-    ('Prologue', [
-        ('00-prologue.md', 'Prologue', 'The Conviction', 'Marcus'),
-    ]),
-    ('Part One: The Erasure', [
-        ('01-cell-7h.md', 'Chapter 1', 'Cell 7-H', 'Marcus'),
-        ('02-the-white-room.md', 'Chapter 2', 'The White Room', 'Marcus'),
-        ('03-two-months.md', 'Chapter 3', 'Two Months', 'Marcus'),
-        ('04-the-arrival.md', 'Chapter 4', 'The Arrival', 'Kira'),
-        ('05-the-corrected.md', 'Chapter 5', 'The Corrected', 'Dmitri'),
-        ('06-the-library.md', 'Chapter 6', 'The Library', 'Alexei'),
-        ('07-the-observer.md', 'Chapter 7', 'The Observer', 'Tanaka'),
-        ('08-the-pattern.md', 'Chapter 8', 'The Pattern', 'Isaiah'),
-    ]),
-    ('Part Two: The Connection', [
-        ('09-the-recognition.md', 'Chapter 9', 'The Recognition', 'Marcus'),
-        ('10-the-whisper.md', 'Chapter 10', 'The Whisper', 'Kira'),
-        ('11-the-garden-meetings.md', 'Chapter 11', 'The Garden Meetings', 'Marcus'),
-        ('12-the-discovery.md', 'Chapter 12', 'The Discovery', 'Nikolai'),
-        ('13-the-revelation.md', 'Chapter 13', 'The Revelation', 'Dmitri'),
-        ('14-the-message-system.md', 'Chapter 14', 'The Message System', 'Alexei'),
-        ('15-the-triplet-story.md', 'Chapter 15', 'The Triplet Story', 'Nikolai'),
-        ('16-the-conspiracy.md', 'Chapter 16', 'The Conspiracy', 'Marcus'),
-        ('17-the-ally.md', 'Chapter 17', 'The Ally', 'Tanaka'),
-    ]),
-    ('Part Three: The Plan', [
-        ('18-the-breaking-point.md', 'Chapter 18', 'The Breaking Point', 'Marcus'),
-        ('19-the-alliance-forms.md', 'Chapter 19', 'The Alliance Forms', 'Kira'),
-        ('20-the-impossible-plan.md', 'Chapter 20', 'The Impossible Plan', 'Dmitri'),
-        ('21-the-single-node.md', 'Chapter 21', 'The Single Node', 'Nikolai'),
-        ('22-the-sacrifice.md', 'Chapter 22', 'The Sacrifice', 'Isaiah'),
-    ]),
-    ('Part Four: The Storm', [
-        ('23-the-fact-storm.md', 'Chapter 23', 'The Fact Storm', 'Marcus'),
-        ('24-the-breakout.md', 'Chapter 24', 'The Breakout', 'Kira'),
-        ('25-the-cost-of-freedom.md', 'Chapter 25', 'The Cost of Freedom', 'Dmitri'),
-        ('26-the-pursuit.md', 'Chapter 26', 'The Pursuit', 'Alexei'),
-    ]),
-    ('Part Five: The Aftermath', [
-        ('27-the-report.md', 'Chapter 27', 'The Report', 'Isaiah'),
-        ('28-the-recovery.md', 'Chapter 28', 'The Recovery', 'Kira'),
-        ('29-the-missions.md', 'Chapter 29', 'The Missions', 'Marcus'),
-    ]),
-    ('Epilogue', [
-        ('30-epilogue.md', 'Epilogue', 'Seven Paths, One Truth', None),
-    ]),
-]
-CHAPTERS = [(f, n, t) for _, chs in PARTS for (f, n, t, _pov) in chs]
+def configure(key):
+    """Point the module-level settings at one book from novels_config.BOOKS."""
+    global NOVEL_DIR, CHAPTERS_DIR, OUTPUT_DIR, NOVEL_TITLE, NOVEL_SUBTITLE, PARTS, CHAPTERS
+    book = BOOKS[key]
+    NOVEL_DIR = book["dir"]
+    CHAPTERS_DIR = NOVEL_DIR / "chapters"
+    OUTPUT_DIR = NOVEL_DIR / "html-export"
+    NOVEL_TITLE = book["title"]
+    NOVEL_SUBTITLE = book["subtitle"]
+    PARTS = book["parts"]
+    CHAPTERS = [(f, n, t) for _, chs in PARTS for (f, n, t, _pov) in chs]
+
 
 def extract_chapter_info(content):
     """Extract POV, timeline, and word count from chapter notes."""
@@ -367,7 +328,7 @@ def create_index():
         </div>
 
         <footer>
-            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p><strong>{NOVEL_TITLE}</strong> - {NOVEL_SUBTITLE}</p>
             <p>© 2026 - All Rights Reserved</p>
             <p style="margin-top: 1rem; font-size: 0.8rem;">
                 Prologue, 29 chapters and Epilogue | ~{total_words:,} words
@@ -413,7 +374,11 @@ def main():
     print(f"Open {OUTPUT_DIR}/index.html to start reading")
 
 if __name__ == "__main__":
-    main()
+    import sys
+    for key in select_books(sys.argv[1:]):
+        configure(key)
+        main()
+        print()
 
 
 

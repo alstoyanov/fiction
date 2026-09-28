@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Hour - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Lost Hour</h1>
+            <div class="novel-meta">Novel 05 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="05-the-coat.html" class="nav-button">← Previous: Chapter 5: The Coat</a>
+            <div class="nav-center">Chapter 6: The Crossing</div>
+            <a href="07-the-ghosts.html" class="nav-button">Next: Chapter 7: The Ghosts →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 6: The Crossing</h1>
+<p><em>Monday, November 15 – Thursday, November 18, 2106. The contested strip, and Chronos</em></p>
+<hr>
+<p><em>Crossing four. Santos, Davi, 44, records clerk, Ministry of Historical Integrity, eastern registry office. Santos, Lucia, 41. Santos, Lia, 16. Documentation: medical crossing waiver (strip access, one day), obtained through a Ministry contact. Identity papers: Elena's. Point of crossing: the culvert gap, contested strip, east of the old pumping station. Planned time: 14:00.</em></p>
+<p><em>Presenting condition: fear, moderate to severe, all three. Anger, severe, one.</em></p>
+<p>Dr. Yuki Tanaka composed the note while she waited, and filed it, and looked at her watch. It was six minutes past two.</p>
+<p>The fence ran along the Chronos edge of the strip in a line of gray posts and wire, straight as a ruled margin, until it reached the culvert. There, where a stream went under the road in a concrete pipe, the ground had slumped some years ago and taken two posts with it, and nobody on either side had ever mended them. Veridica said the strip beyond the fence was Veridican. Chronos said it was Chronos's. Both of them had surveyed the gap, and each had written it down as the other's responsibility, and so it stayed open. Yuki had come to think of it as the only honest piece of engineering in the border zone.</p>
+<p>She stood on the Chronos side of it, in her good coat, with her hands folded in front of her. Beside her, crouched on a folding stool with a case open on his knees, Dr. James Morrison was talking very quietly to a machine.</p>
+<p>"Relay's up," he said, without looking round. "Veridican telemetry, eastern strip sector. Three live signatures, eight hundred metres out, moving. That's them." A pause. "Walking quite slowly."</p>
+<p>"They have a sixteen-year-old with them," said Yuki. "Sixteen-year-olds walk slowly when they are being taken somewhere against their will."</p>
+<p>"Is she? Against her will?"</p>
+<p>"She thinks so. That is not quite the same thing."</p>
+<p>He nearly smiled. He had changed in three months. In Ashford he had never looked at anyone; now he looked at her sometimes, briefly, and then back at his screen. His hands on the case were perfectly still. She had watched those hands shake for nine months across a console in a white room. She had turned him in ninety seconds with the red light off. She still checked them, every time, the way she would check the pupils of a patient who had once had a head injury. They were steady.</p>
+<hr>
+<p>She saw the family first as three shapes in the long wet grass of the strip, coming along the stream bank from the direction of the road where Elena's driver had left them. A man in front, carrying a bag. A woman behind him with her arm through her daughter's. And the daughter, a little apart, as though she had been attached to the group by a rope she was pulling against.</p>
+<p>Yuki went forward to the gap to meet them. She did not step through it. She had not set foot on Veridican soil, or on soil Veridica claimed, since August, and she would not start now, when three people's lives depended on her being where she was supposed to be.</p>
+<p>"Mr. Santos," she said. "I'm Dr. Tanaka. You're very welcome."</p>
+<p>Davi Santos was a slight, balding man with the careful face of someone who had spent twenty years filing other people's facts. He was holding the waiver in its plastic sleeve as though it might go off. "We were told there would be a car."</p>
+<p>"There is. Two hundred metres behind me. First, Dr. Morrison needs a few minutes with you."</p>
+<p>Lucia Santos said nothing. She was a small, dark woman with very straight shoulders, and she was looking past Yuki at the fence posts and the road beyond them, at Chronos, with an expression Yuki recognised from other crossings: the face of someone looking at the far side of a very cold river.</p>
+<p>The daughter looked at nobody.</p>
+<p>She was tall for sixteen, taller than her mother, with a great deal of dark hair tied back badly and a school bag over one shoulder that was far too full. She had been crying earlier, and had stopped, and was now furious about both.</p>
+<p>"This is Lia," said her father.</p>
+<p>"I know who I am," said Lia.</p>
+<hr>
+<p>Morrison did it at twenty past two.</p>
+<p>He had explained it to Yuki a month ago in the hospital canteen, low and fast and apologising at the end of every second sentence, the way he explained everything. At Ashford there had been a fact storm, and a hundred interfaces failing at once, and a Registry that expected failures; nine more flatlines had been nothing. Here, on a clear afternoon, there was no storm to hide in. His answer was the waiver and the strip. A family on a one-day medical crossing, the father listed with a cardiac condition, walking the eastern sector where Veridica's relay coverage thinned out to almost nothing. Three signals lost in the strip. Sad, and ordinary, and a week of paperwork before anyone asked a second question.</p>
+<p>"Sorry," he said now, to all three of them. "I need you to stand still. Just there. Thank you."</p>
+<p>He had three flatline signatures in the case: real ones, from Veridican storm-trauma patients who had died on the border ward at Yuki's hospital over the summer, whose families had signed the release for research. He pushed them through the relay one after another, each one a small green trace that rose, and faltered, and ran out into a straight line. Then he set the relay to report zero.</p>
+<p>"Santos, Davi," he said quietly, like a man reading a register. "Santos, Lucia." A pause, while his fingers moved. "Santos, Lia."</p>
+<p>At one point, between the first and the second, his head tilted a fraction, as if he had heard a note from a neighbouring room. Yuki noticed it the way she noticed everything about him. Then he went on, and it was gone.</p>
+<p>Lia had been watching the case with her arms folded.</p>
+<p>"Will it hurt?" she said.</p>
+<p>"No," said Morrison. He did not look up. "You'll just stop existing to them."</p>
+<p>Lia considered this.</p>
+<p>"Great," she said.</p>
+<hr>
+<p>They came through the gap at twenty-eight minutes past, one at a time, stepping over the fallen post. Davi first, then Lucia. Lia last, and slowly, and when she was through she turned round and stood looking back across the strip for so long that her mother came and took her arm again.</p>
+<p>Yuki did not hurry her. She had done this four times now, and she had learned that there was always one who looked back, and that it was better to let them. <em>Once you leave you can never come back.</em> Alexei Volkov had said that to a hundred families; he had told her so once, at Ashford. She had not really understood it until the first family, in September, when the grandmother had knelt down in the wet grass at the fence and touched the Veridican side of it with her whole hand.</p>
+<p>They walked to the car along a farm track, with Morrison behind them carrying his case. At fourteen forty-four by the clock on the dashboard they were inside it, with the doors shut and the engine running and the heater on, and Chronos on every side of them.</p>
+<p>Lia sat in the back beside her mother, with her bag on her knees, and cried, quite silently, with her face turned to the window. Nobody spoke. After ten minutes her head went sideways onto her mother's shoulder, and she slept.</p>
+<p>Yuki drove. In the mirror she watched Lucia Santos sit very straight, with her sleeping daughter against her, and look at nothing, and not move at all.</p>
+<hr>
+<p>On Tuesday morning two officers of the Chronos border directorate came to the hospital, and were very polite.</p>
+<p>They were polite in the Chronos way, which was thorough and did not waste time. They asked for a room. The hospital director, who had come down in person from the ninth floor, gave them one: a small interview room on the ground floor with a table and three chairs and a camera that Chronos did not bother to disguise. The senior officer was a woman of about fifty with cropped gray hair and a very clean tablet. She thanked Yuki for her time. She said that she understood Dr. Tanaka was a busy clinician.</p>
+<p>Then she put the tablet on the table and turned it round.</p>
+<p>"Yesterday," she said, "our neighbour lost an hour of its record. You'll have heard."</p>
+<p>"Yes."</p>
+<p>"This morning, Veridica filed a complaint through the joint border procedure. Three of its citizens have disappeared from the eastern strip. A family. Santos." She let the name sit. "Veridica says they were abducted, by a network operating from our side of the lake. It asks us to identify whoever received them."</p>
+<p>Yuki folded her hands on the table. "And what does Chronos say?"</p>
+<p>"Chronos says," said the officer, "that our perimeter sensors recorded three people passing through the unmaintained section of fence at the eastern culvert between fourteen twenty-eight and fourteen thirty-one yesterday, two more waiting for them on our side of it, and a vehicle registered to this hospital leaving the adjoining track at fourteen forty-four. Chronos says that the three were admitted to this hospital at sixteen ten as refugee patients under the director's authority, and that one of the two who waited was you." She tapped the screen. "Chronos says that this is the fourth such admission since September."</p>
+<p>It was all true. That was the thing about Chronos; it did not bother to lie, because it did not need to. It simply had everything.</p>
+<p>"They came of their own free will," said Yuki. "They asked to come."</p>
+<p>"I'm sure you believe so. Can you prove it?"</p>
+<p>"They had a medical crossing waiver. It was lawfully issued. It was on the Veridican record."</p>
+<p>"Between fourteen hundred and fifteen hundred," the officer said gently, "there is no Veridican record."</p>
+<p>Yuki looked at her.</p>
+<p>"The waiver would have been logged when it was used," the officer went on. "At the strip checkpoint, at, I think, around thirteen forty. That survives. It shows the family entering the strip on a one-day medical pass. After that, the next Veridican record of them is at fifteen hundred, and it is three telemetry signals reading zero. Everything between is gone. There is no record that they walked to the fence. There is no record that they chose to. There is no record even of their interfaces failing." She paused. "Veridica's position is that a family on a medical visit went into the strip and did not come back, and that they now appear, a day later, in a Chronos hospital under the care of a doctor Veridica would very much like to identify. I am afraid I find that position quite difficult to argue with."</p>
+<p><em>The flatlines</em>, Yuki thought. Morrison had built them so carefully. Three small green traces, rising and faltering and running out. And they had gone into the hour with everything else. The one thing they had done to make the family safe had been erased, and the erasure had made them look stolen.</p>
+<hr>
+<p>She was charged on Wednesday afternoon.</p>
+<p><em>Facilitation of unlawful cross-border movement of persons. Aggravated: minor involved.</em> In Chronos the word for it was longer and more precise, but the officer, kindly, translated it for her. Trafficking. The joint procedure would require Chronos to hold a preliminary hearing within four weeks. Veridica would be entitled to a representative. Veridica would be entitled to request the identity documents of the accused.</p>
+<p>The hospital director stood surety. He was a tall, stooped man with beautiful manners who had protected her since August for reasons he had never fully explained and she had never asked; she suspected that he had read Isaiah's article and had a daughter. He walked her back up to her office afterwards, and closed the door, and did not sit down.</p>
+<p>"You understand the difficulty," he said.</p>
+<p>"Yes."</p>
+<p>"Your registration here is sound as far as it goes. Émigré clinician, status pending. Nobody in Chronos has had any reason to look behind it." He looked at the window. "A trafficking case with a Veridican complainant is a reason. If their representative asks for your documents, and I can't see why he wouldn't, he will find a name. And in the Veridican Registry, that name belongs to a woman who died in August at Ashford, of cognitive failure during a fact storm, certified by a Director who is currently answering questions before an inquiry."</p>
+<p>"It will not only be me," said Yuki.</p>
+<p>"No," he said. "I didn't think it would be."</p>
+<hr>
+<p><em>Complicating factor</em>, she wrote that night, in the place where she kept such things. <em>The only witnesses who can establish voluntary departure are the three persons whose departure is in question. Testimony requires them to be named, to be seen, and to be heard by a Veridican representative. If the court is not persuaded, the remedy Veridica will seek is their return.</em></p>
+<p>She read it back, and left the last line unfinished, because she could not bear to finish it. <em>Prognosis if returned:</em></p>
+<hr>
+<p>The Santos family were being held in the detention wing of the directorate building by the harbour, in what Chronos called a family room. It was clean and warm and had soft chairs and a window, and a camera in each corner. On Thursday morning Yuki was permitted to see them as their physician.</p>
+<p>Davi Santos was sitting at the table with his hands flat on it. He looked as though he had not slept since Monday.</p>
+<p>"They want us to say it," he said. "That we chose. In front of a Veridican."</p>
+<p>"Yes."</p>
+<p>"If we say it, they'll know. The office. My supervisor. Everyone I ever worked with." He stared at his hands. "I file facts, Dr. Tanaka. I know what happens to the families of people who are recorded as having left. I know what the files say. I've <em>typed</em> them." His voice cracked on the word. "I brought them out so that nobody would ever have to type ours."</p>
+<p>Lucia said nothing. She was sitting by the window with her straight shoulders, looking out at the harbour, at the water, at the fog far out on the lake where Veridica was.</p>
+<p>Lia was on the floor in the corner, with her back against the wall and her knees up. There was a tray beside her with a bowl of soup and a roll on it, untouched, going cold.</p>
+<p>"She hasn't eaten since yesterday," said Davi.</p>
+<p>Yuki crossed the room and sat down on the floor, a metre away, with her back to the same wall. It was not a dignified position for a woman of forty-six in a good coat. She did it anyway.</p>
+<p>"The soup is quite good," she said. "I've had it."</p>
+<p>Lia looked at her. It was a long, flat, furious look, the look of someone who had been moved against her will from one room to another and was going to make every single person responsible for it pay, one at a time, starting with whoever was nearest.</p>
+<p>And Yuki knew it. She had seen it before, through two panes of glass, across a silent atrium, on the face of a young woman in 7-K who had arrived in December and refused to be emptied. The same set of the jaw. The same eyes that counted the exits and found them all shut and hated them for it. It had been the best sign she had seen in Wing C in months. Anger was not despair. Anger was a person, still there, pushing back against the walls.</p>
+<p><em>Good</em>, she thought, as she had thought then. <em>Oh, good.</em></p>
+<p>"I had friends," said Lia. "I had a <em>life</em>. Nobody asked me."</p>
+<p>"No," said Yuki. "I don't expect they did."</p>
+<p>"And now I'm dead. And I'm not even allowed to be dead properly. I'm <em>abducted</em>." She laughed, once, without any humour at all. "So I have to go in front of some man from the Ministry and say, <em>actually, I wanted to come</em>. When I didn't."</p>
+<p>"You don't have to say anything you don't believe," said Yuki. "But you might think about what you do believe. Not today." She got up, slowly, because her knees were forty-six. At the door she turned back. "Eat the roll, at least. Anger uses a great deal of energy. I'm a doctor. I know about these things."</p>
+<p>When she looked back through the glass from the corridor, Lia had picked up the roll. She was not eating it. She was holding it, and scowling at it, as if it owed her money.</p>
+<hr>
+<p>Morrison was quiet all week.</p>
+<p>This was not in itself unusual. He was a quiet man, and in Chronos, where nobody was watching him through a mirror, he had grown quieter still, as if he were spending the silence carefully after years of being overheard. But this was a different quiet. On Tuesday he stood at the window of their shared office for a long time and did not work. On Wednesday, when she came back from being charged, he made her tea without being asked, and apologised for it. On Thursday evening, when she came back from the harbour, he was still at his desk with the lamp off and his case open in front of him, and he did not look up when she came in.</p>
+<p>She sat down at her own desk. She did not turn on the light either. Outside, the car park was full of fog and orange lamps.</p>
+<p>"James," she said, after a while.</p>
+<p>"Sorry. Yes." He rubbed his face. "I've been sitting on something. Since Monday. I kept telling myself it was nothing, and then I kept not being able to stop thinking about it, which is usually—" He stopped. "Which is usually how I know it isn't nothing."</p>
+<p>She waited. She had learned with him, in Ashford, that the best thing to do was to wait.</p>
+<p>"At the fence," he said. "When I was pushing the signatures. I had the rig on the Veridican relay, and the relay carries the broadcast band as well, so I had that on the screen too. Background. I wasn't watching it." He turned the case a little towards her, though there was nothing on it now, only dark glass. "At fourteen twenty-one, between your Mr. and Mrs. Santos, a carrier came up on the band. Very faint. Very far away. Not ours, not local; it was riding the national feed from somewhere inland. It was only there for a moment, and I thought it was a reflection of my own output. It happens. I nearly didn't look."</p>
+<p>"But you did look."</p>
+<p>"I looked." He was staring at his hands. They were steady. That was, she thought afterwards, the most frightening thing about it: that his hands were perfectly steady. "It had a gain profile. The way the signal comes up. The ramp, and the shoulder at the top. Everyone's is a little different, it's like handwriting, you can't help it." He swallowed. "Yuki. It was mine. It was the profile I built. For the cradles. For Wing C."</p>
+<p>Yuki had picked up her tea while he talked. She had been holding it in both hands, for the warmth.</p>
+<p>She set it down now on the desk in front of her. She did it very carefully, the way you put down something you are afraid you might drop. She had done it once before in her life, at a kitchen table in the summer of 2105, with a protocol on a tablet in front of her and the words <em>to baseline</em> on the screen.</p>
+<p>"James," she said. "Say that again."</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="05-the-coat.html" class="nav-button">← Previous: Chapter 5: The Coat</a>
+            <div class="nav-center">Chapter 6: The Crossing</div>
+            <a href="07-the-ghosts.html" class="nav-button">Next: Chapter 7: The Ghosts →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

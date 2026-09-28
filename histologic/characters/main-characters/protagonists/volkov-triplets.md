@@ -139,7 +139,7 @@ Part One: Dmitri hunts the Phantom in the fog; Alexei counsels a defector; Nikol
 | 28–29 | Scars (Nikolai reads the rooftop page nightly, Dmitri sleeps in his boots). The missions and the parting: "Promise." |
 | Epilogue | Alexei and Dmitri argue over who goes first; Pieter Lang flags 14:00–15:00. |
 
-### Book 5: *The Lost Hour* (summaries done)
+### Book 5: *The Lost Hour* (drafted)
 POV chapters: **Alexei 7, 19**; **Nikolai 9, 20**; **Dmitri 13, 23** (details in each brother's section). They also appear in Ch 1 (the "Pieter Lang" flag), 8 (Nikolai's feed), 14 (Maya confides in Pieter), 15–16 (Alexei and Kovač), 21 (the annex), 25–26 (the hearing, *STATUS: LIVING*), 28 (Nikolai and Maya), 30 (the dilemma), 31 (Dmitri's nod) and the Epilogue (the new erasure).
 
 ### Books 6–9 (provisional; to be rewritten)
