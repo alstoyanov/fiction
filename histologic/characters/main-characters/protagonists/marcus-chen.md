@@ -178,3 +178,11 @@ From the Book 5 summaries (the wording is not yet drafted):
 | Book 6 target "Adrian Kovač" | Julian Kovač | Adrian is Kira's lover |
 | Marriage, children, cousin Sarah Chen as fact | Provisional; names flagged | Name rule; Books 6–9 unwritten |
 | Old book numbers (06/07/08) | Books 6–9 as now numbered | Series order |
+
+## Update: Book 9 Plot v2 (Sept 2026)
+From `plots/09-architects-of-chaos-full.md`:
+- **Book 9, settled:**
+  - Married to Kira (June 2112). Daughter **Tamsin** (born Apr 9, 2113).
+  - Dissenting member of the Commission of Rebuilding.
+  - He learns he was Chen Zhao's prepared heir, refuses the World Record's chair in public and without a remedy, and argues for containment.
+  - Last entry (Nov 15, 2115): *"Verification: we were all there."*

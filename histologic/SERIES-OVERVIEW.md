@@ -17,7 +17,7 @@
 | 6 | *The Distributed Truth* | Novel, ~110,000 words planned | Oct 30, 2108 – Feb 14, 2109 (epilogue Mar 15, 2109) | **Plot v2 (Sept 2026)** in `plots/06-the-distributed-truth-full.md`. Chapter summaries and chapters to do (old draft to be replaced) |
 | 7 | *Battle of Truths* | Novel, ~110,000 words planned | Aug 14 – Dec 23, 2109 (epilogue Jan 10, 2110) | **Plot v3 (Sept 2026)** in `plots/07-battle-of-truths-full.md`. Chapter summaries and chapters to do (old draft to be replaced) |
 | 8 | *Battle of Blood* | Novel, ~110,000 words planned | Feb 12 – May 28, 2110 (epilogue Aug 15, 2110) | **Plot v2 (Sept 2026)** in `plots/08-battle-of-blood-full.md`. Chapter summaries and chapters to do (old draft to be replaced) |
-| 9 | *Architects of Chaos* | Novel, finale | ~2115 (epilogue ~2135) | Provisional |
+| 9 | *Architects of Chaos* | Novel, finale, ~110,000 words planned | Mar 15 – Nov 15, 2115 (epilogue Nov 15, 2135) | **Plot v2 (Sept 2026)** in `plots/09-architects-of-chaos-full.md`. Chapter summaries and chapters to do (old draft to be replaced) |
 
 Story 03 happens *before* Stories 01–02 in-world, but it is read third. The triplets are already at Ashford when Marcus arrives.
 
@@ -74,12 +74,15 @@ These are the ideas carried forward from the pre-rewrite plots, adjusted to fit 
 - **Deaths:** Alexei, Nora Chen (Marcus's SFW cousin), Vance and General Farahani.
 - **Ending:** both Judges end: "Truth endures. I do not need to." Nine minutes before the cascade the true source was restored to a **third site to the east**. Old Songs holds Vance's riddle to where her copy is.
 
-### Book 9: *Architects of Chaos*
-- **Premise:** five years on, the Register and the Annex reveal the Architects and their heirs, and the Architects' families are connected to the heroes.
-- **Characters:** Dr. Amara Singh returns; her 2106 death was staged. Chen Zhao, Marcus's relative, is exposed.
-- **The Architects' last move:** they **welcome** exposure. "You just changed the enemy." They flee to the CNT.
-- **Marcus's choice:** containment, not invasion. "If we invade, we prove them right."
-- **Ending:** an epilogue twenty years on. Old Songs has died, and children sing his round.
+### Book 9: *Architects of Chaos* (plot v2 written; see `plots/09-architects-of-chaos-full.md`)
+- **Premise:** **Singh returns.** Old Songs solves Vance's riddle, and **the Compiler's copy** turns up behind Kerr's second letter in the Historical Archive. It contains the **Annex** and the **Register**, with every mark decoded, plus Kerr's page "On Keeping".
+- **Twists:**
+  - Wei spared Singh at 14:21.
+  - **RA·12 founded the CNT.** The enemy was built.
+  - **The heirs disclose first**, offering a **World Record**: one record for every nation, restored from the source held in the CNT.
+  - Chen Zhao's heir is **Marcus**.
+- **Ending:** Marcus refuses the inheritance. The World Record runs in only three nations. The Architects flee east ("You just changed the enemy"). The answer is containment and paper, not invasion. Old Songs sings the complete Lakeshore Air on the Day of Testimony and dies in Jan 2116.
+- **Epilogue (2135):** children sing "Many Hands", and the CNT is opening on paper.
 
 ### Names to settle before Books 6–9
 - **Rename:** the Architect called "Colonel James Morrison" (clashes with Dr. James Morrison), and "Director Maya Tanaka" (too close to Maya Reeves).

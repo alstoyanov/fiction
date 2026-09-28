@@ -140,3 +140,11 @@ Old file, usable (Book 9 only): *"We made you a hero, Marcus. We needed you."*
 | No principle | Author of Principle Six, mark CZ·11, copy XI | Foundation §4.8 |
 | "Captured, imprisoned, remains defiant" | Exposed in Book 9 (provisional). The manner is open | SERIES-OVERVIEW §4 |
 | Relation to Marcus "revealed Novel 08" | Hinted in Book 5 ("related somewhere", "cousin"); settled in Book 9 | Book 5 summaries; numbering fixed |
+
+## Update: Book 9 Plot v2 (Sept 2026)
+From `plots/09-architects-of-chaos-full.md`:
+- **Book 9, settled:**
+  - CZ·11 is decoded.
+  - He is **the heir-maker**. He prepared Marcus as his heir from Story 01 onward (Twist 4): *"You are my heir, Marcus. You always were. We made you a hero. We needed you."*
+  - He endorses the World Record and offers Marcus its chair. Marcus refuses.
+  - He flees east through Sokolov's checkpoint on Sep 2, 2115.

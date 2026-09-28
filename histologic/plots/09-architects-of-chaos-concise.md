@@ -1,136 +1,80 @@
-# Architects of Chaos - Concise Plot (Novel 9 - Series Finale)
+# Architects of Chaos: Concise Plot (v2, Series Finale)
 
-## Novel Type
-Ninth Novel - Conspiracy Thriller / Philosophical Epic / SERIES FINALE
+**Status:** CURRENT, Sept 2026. This is the short version of `09-architects-of-chaos-full.md` (v2), which is authoritative.
+**Type:** Book 9, the finale. A conspiracy thriller.
+**Length:** Prologue + 30 chapters + Epilogue, about 110,000 words.
+**Timeline:** Mar 15 – Nov 15, 2115. The Epilogue is set on Nov 15, 2135.
 
 ## Core Concept
-Five years after the war, Marcus discovers the ultimate truth: The Architects—twelve people who created the entire Histologic system as a control mechanism. They deliberately designed it to be corruptible, maintained non-Histologic nations as "enemies," and orchestrated all conflicts. "When people unite, they're ungovernable; when they fight, they're controllable." Marcus must expose them, unite humanity, and break the cycle.
+Five years after both Judges ended, two things come back. **Amara Singh**, "murdered" in the Lost Hour, walks out of the crowd at the stone. And **Old Songs** solves Vance's riddle. Behind Anselm Kerr's two unanswered letters about shelf 114, in the Historical Archive's correspondence file, lies **the Compiler's copy**. It holds the **Annex**, the **Register** and the heirs clause, and one page written by Kerr: *"Keep it by many hands."*
 
-## The Architects (The Twelve)
-1. **Dr. Helena Voss** (78): Visionary, created Histologic theory
-2. **Minister Chen Zhao** (65): Politician, Marcus's relative
-3. **General Victoria Stone** (58): Warrior, orchestrated wars
-4. **Dr. Yuri Petrov** (70): Scientist, built Judge's vulnerabilities
-5. **Chairman Liu Wei** (62): Financier, funds all conflicts
-6. **Ambassador Sarah Okonkwo** (55): Diplomat, Isaiah's aunt
-7. **Professor Adrian Volkov** (68): Historian, Volkov triplets' uncle
-8. **Director Maya Tanaka** (52): Technologist, controls factorepos
-9. **Cardinal Thomas Kovač** (73): Ideologue, moral justification
-10. **Colonel James Morrison** (45): Operative, covert operations
-11. **Chancellor Elena Sokolov** (60): Administrator, Yevgenia's mother
-12. **Dr. Wei Zhang** (58): Psychologist, mass control expert
+Every name on the Register is a family, and the twelfth founded the CNT. When the heroes move to publish, **the heirs disclose first**. They offer a **World Record**, one record for every nation, which is Principle One's final form. At the centre of it, Chen Zhao offers its chair to the heir he has been preparing since Story 01: **Marcus**. Marcus refuses. The Architects flee east to the enemy they built, saying "You just changed the enemy." The heroes answer with containment, not invasion, and with paper carried by hand into the CNT. Old Songs sings the complete Lakeshore Air once, and dies that winter.
 
-## Main Characters (All Returning)
-Marcus (36), Kira (34), Dmitri (39), Nikolai (39), Elena (49), Sokolov (42), Isaiah (45), Dr. Tanaka (52)
-**New**: President Martinez (SFW), Chairman Kozlov (CNT), Dr. Amara Singh (survived "Lost Hour"), The Counselor (AI)
+## The Register (settled)
+- **Twelve signatories:**
+  - HV·01 Hedda Voss
+  - YP·02 Yuri Petrov (not related to Old Songs)
+  - LW·03 Liu Wei
+  - **SO·04 Sarah Okonkwo** (Isaiah's aunt, alive)
+  - AV·05 Arkady Volkov (Ivan's cousin)
+  - MT·06 Michiko Tanaka (Yuki's great-aunt)
+  - **TK·07 Tobias Kovač** (Helena's uncle, alive; his heir is Mera)
+  - JM·08 Jerome Morrison (Morrison's grandfather)
+  - **VS·09 Viktoria Sokolov** (alive, in the CNT)
+  - WZ·10 Wei Zhang (his heir is Thomas Wei)
+  - **CZ·11 Chen Zhao** (alive; his heir is Marcus)
+  - **RA·12 Rustam Aslanov** (founder of the CNT; his heir is Chairman Timur Aslanov)
+- **The struck-through five** include **Anselm Kerr**.
+
+## The Twists
+1. **The man at 14:21 let her live (Ch 6).** Chen Zhao's private office routed the scheduling through Singh's login. Wei came through her side door and said *"Die in the record, or die."* She chose the record, and has spent nine years watching who restores it.
+2. **The enemy was built (Ch 16).** RA·12 founded the CNT. The third site is CNT Council infrastructure. The design didn't flee to the enemy: it went home.
+3. **They disclose first (Ch 20).** A week before the heroes' date, the heirs publish the Register through Synthesis, with a remedy attached: the **World Record**, under the Meta-Judge. It is the peace everyone wants. Its architecture restores every nation from the source held in the CNT (Ch 23).
+4. **The heir (Ch 24).** *"You are my heir, Marcus. You always were. We made you a hero. We needed you."*
+- **Closing:** *"You just changed the enemy."* The answer is containment, and paper sent into the CNT.
 
 ## Plot Structure
+- **Prologue: The Fifteenth.** Tanaka crosses the plaza to the woman in the gray coat: *"Doctor. I think you've been keeping my file."*
+- **Part One: The Riddle (Ch 1–8).**
+  - Marcus as dissenting commissioner. Chen Zhao keeps "your chair" open.
+  - Old Songs begins on the riddle.
+  - Kira traces the third site east.
+  - Isaiah's aunt invites him to tea.
+  - Singh's POV, then her testimony (**Twist 1**).
+  - At the Archive, the numbers run 113, 115: *ask him twice*.
+  - Kovač opens Kerr's file, and the copy is behind the second letter.
+- **Part Two: The Register (Ch 9–16).**
+  - The Annex, and "prepare an heir".
+  - Dmitri reads the names aloud; AV·05 is their father's cousin.
+  - Isaiah and Carver Street: "You never do the arithmetic."
+  - Sokolov's mother: "Even your career."
+  - Morrison asks whether he was "prepared"; the answer is "heir, declined".
+  - Julian, Adrian and Helena face Tobias. Mera was his heir.
+  - Wei hands over **copy X** and will not flee.
+  - RA·12 (**Twist 2**).
+- **Part Three: The Disclosure (Ch 17–24).**
+  - The heroes plan to publish by hand on Jul 15.
+  - Martinez: "We were cast."
+  - Elena at Alexei's grave.
+  - The heirs disclose first (**Twist 3**).
+  - The World Record spreads like relief.
+  - Dmitri refuses revenge.
+  - Kira finds that the World Record restores everything from one source.
+  - Chen Zhao names his heir (**Twist 4**).
+- **Part Four: Many Hands (Ch 25–30).**
+  - Old Songs' one speech, on Kerr: "My teacher said no."
+  - Marcus refuses the chair, without a remedy. The vote splits, and the World Record runs in three nations only.
+  - Sokolov lets the flight east pass: "Traffic normal."
+  - The CNT broadcast: "You just changed the enemy." Mera is alive.
+  - Containment, and paper into the CNT.
+  - The Day of Testimony: the complete Lakeshore Air.
+- **Epilogue: Twenty Years (2135).**
+  - Old Songs died in Jan 2116 and lies in the plum orchard between Vance and Alexei.
+  - Children sing "Many Hands".
+  - Tamsin keeps a journal.
+  - The CNT is opening on paper.
+  - Wei teaches: "Nobody designs everyone."
+  - **Final line:** *"There was never one truth to keep. There were only people, keeping it for each other."*
 
-**Part 1: The Discovery** (Chapters 1-10)
-- Marcus notices patterns: too perfect to be accidental
-- Kira finds deliberate backdoors in Judge's code
-- Family connections discovered (everyone linked to Architects)
-- Dr. Amara Singh (faked death) provides evidence
-- Team identifies all twelve Architects
-- "They created Histologic nations to control us"
-
-**Part 2: The Preparation** (Chapters 11-20)
-- Plan: Insert truth into all factorepos simultaneously
-- Alliance with SFW (President Martinez)
-- Nikolai builds infiltration tools
-- Elena activates global resistance
-- Isaiah prepares exposé
-- Architects realize exposure coming, set trap
-- Team goes underground, hunted
-
-**Part 3: The Revelation** (Chapters 21-30)
-- Nikolai executes global factorepo hack
-- Truth inserted into all seven Histologic nations simultaneously
-- Citizens wake to reality: "We were puppets"
-- Isaiah's exposé published globally
-- Captured Architects put on trial
-- Most Architects flee to CNT
-- Dr. Wei Zhang defects, helps Marcus
-
-**Part 4: The New World** (Chapters 31-40)
-- Historic peace treaty (all nations except CNT)
-- Factorepos merge into unified system
-- SFW joins voluntarily
-- CNT refuses, harbors Architects
-- Becomes world's sole opposition
-- Architects broadcast: "You united against us. You need enemies. The cycle continues."
-- **Marcus's choice**: Containment, not conquest
-- "The cycle breaks here. We defend, but we don't attack."
-
-**Epilogue: Twenty Years Later** (2134)
-- Marcus and Kira: grandparents, retired
-- Unified world thriving
-- CNT beginning to reform
-- Next generation grows up without divisions
-- "We didn't create utopia. We created possibility."
-
-## The Architects' Philosophy
-**Core Belief**: "Humans are ungovernable without enemies."
-- Created Histologic nations after World War III
-- Designed The Judge with vulnerabilities
-- Maintained SFW and CNT as permanent enemies
-- Orchestrated all conflicts to prevent unity
-- "Perpetual small conflicts prevent catastrophic wars"
-
-## Retroactive Reframing
-**Everything in Books 1-4 was manipulated**:
-- The seven inmates were targeted deliberately
-- Fact wars were orchestrated
-- Physical wars were planned
-- Even The Judge's destruction was anticipated
-- But heroes' choices still mattered
-- "They controlled context, not will"
-
-## Key Themes
-- Control vs. Freedom
-- Do humans need enemies?
-- Breaking cycles
-- Truth and consensus
-- Legacy and responsibility
-
-## Major Revelations
-- Marcus's relative is an Architect
-- Volkov triplets' uncle is an Architect
-- Isaiah's aunt is an Architect
-- Sokolov's mother is an Architect
-- Everyone connected to Architects somehow
-
-## The Unified World
-- Single factorepo, all nations
-- The Counselor advises, humans decide
-- Conflicts resolved by evidence + consensus
-- Democratic, transparent, imperfect but honest
-- CNT isolated but not invaded
-
-## The Choice That Breaks the Cycle
-**The Architects**: "You united against us. Now CNT is your enemy. The cycle continues."
-**Marcus**: "No. We choose containment, not conquest. The cycle breaks here."
-**The Difference**: Before = conflict imposed. After = conflict chosen. Choice = freedom.
-
-## Ending
-Most Architects defeated. Humanity united (mostly). CNT remains opposed but coexistence maintained. Twenty years later: sustainable peace, next generation unified. "We didn't create utopia. We created possibility."
-
-**Final Line**: "The architects of chaos are gone. The architects of peace remain. And they are us."
-
-## Connection to Series
-- **Completes all arcs**: Marcus (believer → unifier), System (oppression → freedom), Humanity (divided → united)
-- **Reveals retroactive truth**: Everything was manipulated
-- **Resolves all threads**: No cliffhangers, satisfying conclusion
-- **Ultimate message**: Humans can choose unity over conflict
-
-## Timeline
-2114 (5 years after Battle of Blood), Epilogue: 2134
-
-## Word Count Target
-~150,000 words (40 chapters + prologue + epilogue)
-
-## Series Completion
-This is the TRUE FINALE. All character arcs complete. All mysteries solved. All themes resolved. Hopeful ending despite complexity.
-
-
-
+## Manuscript Revealed
+The Implementation Annex · the Register of Contributors (all marks decoded) · the complete Compiler's copy · Kerr's withdrawn page · copy X as a cross-check. **The whole design is now known.**

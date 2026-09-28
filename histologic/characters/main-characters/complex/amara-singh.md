@@ -157,3 +157,12 @@ Not on the page and not named. The Epilogue's "a Deputy Minister who had read Is
 | Returns in "Novel 08" | Returns in Book 9 | Correct numbering |
 | Victim was once "Minister Viktor Kozlov" | Singh | Plot v3.1 |
 | "I faked my death because I knew they'd kill me" as settled motive | Usable only if Book 9 chooses the victim reading | Keeps the Book 5 ambiguity |
+
+## Update: Book 9 Plot v2 (Sept 2026)
+From `plots/09-architects-of-chaos-full.md`:
+- **Resolved in Book 9 (Twist 1):**
+  - Chen Zhao's private office routed the hour's scheduling through her login.
+  - At 14:21, Wei came through her side door and offered her the choice: *"Die in the record, or die."* She chose the record.
+  - She spent nine years in unaligned territory and Chronos, watching who restores it.
+  - She returns on Mar 15, 2115, through Tanaka.
+  - She was used, spared and silent, and then she chose to return.

@@ -287,3 +287,10 @@ Old file, usable (provisional, Books 7–9): *"We didn't fail. We succeeded. You
 | Chen Zhao "ensured Marcus's conviction" | Wei did that; Chen Zhao appoints the restorers | Book 5 |
 | Ages 45–78, unanchored | Ages check: all born by ~2041 | 2064 contributors |
 | Fates: mostly captured | Provisional: they welcome exposure and flee to the CNT | SERIES-OVERVIEW §4 |
+
+## Update: Book 9 Plot v2 (Sept 2026)
+From `plots/09-architects-of-chaos-full.md`:
+- **The roster is settled.** See the table in `plots/00-FOUNDATION-MANUSCRIPT.md` §6. Newly named: **AV·05 Arkady Volkov**, **MT·06 Michiko Tanaka**, **JM·08 Jerome Morrison**, **RA·12 Rustam Aslanov** (the CNT's founder).
+- **Alive in 2115:** Chen Zhao, Viktoria Sokolov, Sarah Okonkwo, Tobias Kovač.
+- **Heirs:** Thomas Wei, Mera, Timur Aslanov, and Marcus, who declines.
+- **Their last move:** they disclose first, offering the World Record. Then they flee east: *"You just changed the enemy."* Tobias stays.

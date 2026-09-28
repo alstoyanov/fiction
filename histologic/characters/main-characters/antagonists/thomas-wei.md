@@ -292,3 +292,11 @@ Old file, usable: *"The Judge can't judge what it doesn't know happened."* It fi
 | Only the Lost Hour | Also the 73 and Kira's fact (one signature) | Book 4; Ch 8, 28 |
 | Father "horrified", defects | Father WZ·10, author of Principle Four; Thomas his heir. Any defection is provisional | Foundation §4.6, §4.9 |
 | No interior life | One journal coda; Books 6+ may open it | Epilogue |
+
+## Update: Book 9 Plot v2 (Sept 2026)
+From `plots/09-architects-of-chaos-full.md`:
+- **Book 9, settled:**
+  - It was he who spared Singh at 14:21 in 2106.
+  - He hands Marcus **copy X**, his father's (WZ·10), as a cross-check: *"I would like it to have been finished by you."*
+  - He refuses to flee and stands trial in a human court. He is released after twelve years and teaches: *"Nobody designs everyone."*
+  - Still no POV.

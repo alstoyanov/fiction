@@ -206,8 +206,13 @@ All lyrics here are **original to the series** unless marked as public domain. W
   > *and why is the hand in the corner*
   > *the same on both maps still?*
 
-### 8. The Lakeshore Air, complete (planned, Book 9)
-Its old verses and his hidden verses sung together, once, at the end.
+### 8. The Lakeshore Air, complete (Book 9, Ch 30)
+Its old verses and his hidden verses sung together, once, on the Day of Testimony, Nov 15, 2115: the ferry verses, the lullaby, "Given Gently", and a last verse written for the day:
+  > *Down by the water the ferry comes in,*
+  > *lanterns are lit on the pier;*
+  > *everyone knows the name of the boat —*
+  > *who will remember we're here?*
+- **After:** he dies in January 2116 at the farmhouse and is buried in the plum orchard between Vance and Alexei. In the 2135 Epilogue, children sing "Many Hands".
 
 ### Public-domain pieces he may use (sparingly)
 Use these only where an older, "classical" register helps.

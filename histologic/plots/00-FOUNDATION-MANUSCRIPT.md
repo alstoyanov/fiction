@@ -155,13 +155,13 @@ Seventeen marks, each beside a name. Twelve have signatures: they are the Archit
 | **6: The Distributed Truth** | **Compiler's Introduction**, **Principle Three**, **Principle Five**, **Compiler's Warning**. Page 30 identified as **Principle Six**. **Vance** revealed as the Compiler. | Old Songs, through his memory of Vance. Kira, through the mechanism of her stolen fact. Vance confesses. | It is a design. The storms and deletions were planned. Reform will be absorbed, so replace the system, "by many hands". |
 | **7: Battle of Truths** | **Title page and table of contents**, **Principle One**, **Principle Two**. | During the fact war. The table of contents shows that a Register and an Annex exist. | The rivalries between nations are staged. The whole map is one design. |
 | **8: Battle of Blood** | **Principle Four**. **Principle Seven**, hidden in Vance's copy. | The Continuity subjects, and Vance's legacy. Seven is used when The Judge faces capture. | Their torture was a principle. The Judge was built to be able to die. |
-| **9: Architects of Chaos** | **Implementation Annex**, **Register of Contributors**, the complete copy. All marks decoded. | Vance's own copy (location to be decided). | The names. The heirs. Phase Two's origin. The full circle. |
+| **9: Architects of Chaos** | **Implementation Annex**, **Register of Contributors**, the complete copy. All marks decoded. | Vance's own copy, found through her riddle behind Kerr's second letter (Historical Archive). Copy X handed over by Thomas Wei as a cross-check. | The names. The heirs. Phase Two's origin. The full circle. |
 
 **Pacing rule:** each book reveals *less than the characters want* and *more than they can use*. No fragment should resolve that book's plot by itself. Each one reframes it.
 
 ---
 
-## 6. The Contributors (Provisional; Reconcile When Rewriting Books 6–9)
+## 6. The Contributors (Settled by the Book 9 plot v2, Sept 2026)
 
 Seventeen contributed. Twelve signed and became **the Architects**. Five are struck through. The marks below reuse the Book 9 roster where it survives the rewrite.
 
@@ -171,17 +171,23 @@ Seventeen contributed. Twelve signed and became **the Architects**. Five are str
 | YP·02 | The Scientist | Dr. Yuri Petrov | Three, Annex | — | *Not* related to Old Songs (a common surname). Say so on the page, or rename. |
 | LW·03 | The Financier | Chairman Liu Wei | — (funding) | — | |
 | SO·04 | The Diplomat | Ambassador Sarah Okonkwo | Two | Isaiah's aunt | Isaiah's parlour "aunt at the head of the table" (Book 4) stays innocent-seeming until then. |
-| — ·05 | The Historian | *(open)* | Methodology | — | The old roster had "Professor Adrian Volkov, the triplets' uncle". Ivan's correction record (Book 4) lists only a wife and a sister as next of kin. Either make him a cousin, or choose someone else. |
-| MT·06 | The Technologist | Director Maya Tanaka | Annex | Senior to Tanaka's younger sister | Too close to "Maya Reeves" (Book 5); consider renaming. |
+| AV·05 | The Historian | Professor **Arkady Volkov** | Methodology (the calibration record) | **Ivan Volkov's cousin** | Died 2098. Ivan found his design in 2089 and was corrected for asking. |
+| MT·06 | The Technologist | Director **Michiko Tanaka** | Annex | **Yuki Tanaka's great-aunt** | Renamed from "Maya" (clash with Maya Reeves). Died 2092. |
 | TK·07 | The Ideologue | Cardinal Tobias Kovač | Moral cover | Helena Kovač's uncle; great-uncle of Adrian and Julian | Renamed from "Thomas Kovač" (Sept 2026) to avoid a clash with Thomas Wei. Made an uncle rather than a brother: a 2064 contributor was born by the mid-2030s, and Helena was born in 2054. |
-| JM·08 | The Operative | *(rename)* | Five | — | The old name "Colonel James Morrison" clashes with Dr. James Morrison. Make him Morrison's father or uncle under a different first name, or unrelated. |
+| JM·08 | The Operative | Colonel **Jerome Morrison** | Five | **Dr. James Morrison's grandfather** | Died 2081. |
 | VS·09 | The Administrator | Chancellor **Viktoria Sokolov** | Annex | Captain Sokolov's mother | Name settled (Sept 2026): Viktoria, not Elena. **Former Chancellor of Veridica** (c. 2085–2098), about 70 in 2106, keeps the title in retirement. |
 | WZ·10 | The Psychologist | Dr. Wei Zhang | Four | Thomas Wei's father | Continuity is his principle. His son ran the Lost Hour. |
 | CZ·11 | The Politician | Minister Chen Zhao | Six | Marcus's distant relative | Appears in Book 5, and appoints the Commission. |
-| — ·12 | *(open)* | *(open)* | — | — | The old files had "DV-12, the thirteenth architect". This plan retires that: Vance is the **Compiler**, not a signatory. A twelfth signatory is still needed. |
+| RA·12 | The Adversary | **Rustam Aslanov** | Two, in practice: founder of the **CNT's Supreme Council** (2068) | — | Died 2093. His son and heir is **Chairman Timur Aslanov**. The "enemy outside" was built (Book 9 Twist 2). |
 | — | The Compiler | **Dr. Elise Vance** | Introduction, Warning, Seven | Mikhail Petrov's friend in the 2060s | Did not sign the Register. Hid Principle Seven. |
 
-**The heirs principle** ("each contributor shall prepare an heir") explains why a 2066 conspiracy is still active in 2106. Thomas Wei, and in time other heirs, run it now.
+**The heirs principle** ("each contributor shall prepare an heir") explains why a 2066 conspiracy is still active in 2106. **Known heirs:** Thomas Wei (WZ·10); Dr. Augustin Mera (TK·07); Timur Aslanov (RA·12); and **Marcus Chen** (CZ·11), prepared without his knowledge, who declines (Book 9 Twist 4).
+
+**Alive in 2115:** Chen Zhao (74), Viktoria Sokolov (about 79), Sarah Okonkwo (about 80) and Tobias Kovač (81). **Deaths:** Voss 2095, Petrov 2101, Liu Wei 2099, Arkady Volkov 2098, Michiko Tanaka 2092, Jerome Morrison 2081, Wei Zhang 2104, Rustam Aslanov 2093.
+
+**The struck-through five** include **Anselm Kerr**, whose withdrawn page, *"On Keeping"*, is found with the Compiler's copy (Book 9): *"A record kept by one hand is a confession waiting for its torturer. Keep it by many hands."* Vance's Warning took its answer from him.
+
+**Where the Compiler's copy was:** in the Historical Archive's correspondence registry, behind the second of Kerr's two 2066 letters of inquiry about Periodicals, Governance, 114. Found Apr 11, 2115.
 
 ---
 
