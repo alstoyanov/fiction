@@ -1,0 +1,27 @@
+# Large generated media stays out of git by default.
+# Keep links to Suno / the image tool in the markdown files instead.
+# Remove a line if you do want that file type versioned (or use Git LFS).
+
+# Audio
+*.wav
+*.flac
+*.mp3
+*.m4a
+*.aiff
+*.ogg
+
+# Image masters and working files (final covers can be committed as .jpg/.png)
+*.psd
+*.kra
+*.xcf
+*.tif
+*.tiff
+
+# Stems and project files
+stems/
+*.als
+*.flp
+*.logicx
+
+# OS
+.DS_Store
