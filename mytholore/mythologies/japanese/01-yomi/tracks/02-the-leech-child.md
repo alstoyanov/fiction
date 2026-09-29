@@ -15,11 +15,10 @@ The *Kojiki* says nothing more of Hiruko. This song gives him a voice: the first
 
 ## 2. Suno Style
 ```
-atmospheric doom metal, melancholic, koto, shamisen, taiko pulse,
-ethereal female vocals, clean male vocals, harsh male vocals in chorus, lullaby-like verses,
-mournful, 75 bpm
+symphonic power metal, dramatic, full orchestra, soaring guitars, galloping double bass,
+koto, shamisen, taiko, operatic female vocals, powerful clean male vocals, epic choir, melancholic, 130 bpm
 ```
-**Exclude styles:** `pop, EDM, autotune, trap`
+**Exclude styles:** `death metal, doom metal, growls, screamed vocals, pop, EDM, autotune`
 
 ---
 
@@ -43,7 +42,7 @@ Ana-ni-yashi, e-otome-o,
 but the word came second, and the sea would know.
 
 [Chorus]
-[Harsh Vocals]
+[Powerful Male Vocals]
 Leech child, leech child,
 born without bone,
 too soft for the island,
@@ -61,7 +60,7 @@ I drifted from the pillar, from the father and the flame,
 the first child of the gods, and I never had a name.
 
 [Chorus]
-[Harsh Vocals]
+[Powerful Male Vocals]
 Leech child, leech child,
 born without bone,
 too soft for the island,
@@ -88,7 +87,7 @@ the tide became my cradle and the salt became my bone,
 the first of all their children, and the first to be alone.
 
 [Chorus]
-[Harsh Vocals]
+[Powerful Male Vocals]
 Leech child, leech child,
 born without bone,
 too soft for the island,

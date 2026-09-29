@@ -15,23 +15,22 @@ The song is the album's chase and its fastest track: a god running uphill out of
 
 ## 2. Suno Style
 ```
-blackened death metal, frantic, blast beats, relentless tremolo riffs, galloping taiko,
-shrieking shakuhachi, harsh male vocals, shrieked female backing vocals, chase, panic,
-ferocious, 170 bpm
+speed power metal, frantic, galloping double bass, fast twin guitar leads, full orchestral stabs, taiko,
+shakuhachi, high powerful male vocals, operatic female backing vocals, chase, 180 bpm
 ```
-**Exclude styles:** `pop, EDM, autotune, trap`
+**Exclude styles:** `death metal, doom metal, growls, screamed vocals, pop, EDM, autotune`
 
 ---
 
 ## 3. Lyrics (Optimised for Suno)
 ```
 [Intro]
-[Blast Beats]
-[Shrieked Female Vocal]
+[Galloping Drums]
+[Operatic Female Vocal]
 Bring him back!
 
 [Verse 1]
-[Harsh Vocals]
+[Powerful Male Vocals]
 Out of the palace, into the black,
 the hags of Yomi are on my back,
 their feet on the stone and their breath at my neck,
@@ -42,14 +41,14 @@ wild grapes in the dark, and they fell to their feast,
 and I ran while they gorged like a starving beast.
 
 [Chorus]
-[Harsh Vocals]
+[Powerful Male Vocals]
 Run! From the hags of Yomi!
 Run! From the dead she sends!
 Throw what you carry, throw it behind you,
 run to the place where the underworld ends!
 
 [Verse 2]
-[Harsh Vocals]
+[Powerful Male Vocals]
 They came again, they were close as my shade,
 I broke the right comb and I threw what it made:
 bamboo in the darkness, bursting from ground,
@@ -60,7 +59,7 @@ and fifteen hundred warriors rose from the deep,
 the army of Yomi that never will sleep.
 
 [Chorus]
-[Harsh Vocals]
+[Powerful Male Vocals]
 Run! From the hags of Yomi!
 Run! From the dead she sends!
 Throw what you carry, throw it behind you,
@@ -68,7 +67,7 @@ run to the place where the underworld ends!
 
 [Breakdown]
 [Heavy Taiko]
-[Harsh Vocals]
+[Powerful Male Vocals]
 I drew the sword, ten hands long,
 I swung it behind me, I did not turn,
 I swung it behind me, I did not look,
@@ -77,21 +76,21 @@ I will not look again!
 [Guitar Solo]
 
 [Verse 3]
-[Harsh Vocals]
+[Powerful Male Vocals]
 The eight thunders split the darkness, they were cracking at my heel,
 fifteen hundred of the dead of Yomi, drawn in bone and steel,
 my breath was fire, my legs were stone, my heart was breaking through,
 and the only light before me was a pale and distant blue.
 
 [Chorus]
-[Harsh Vocals]
+[Powerful Male Vocals]
 Run! From the hags of Yomi!
 Run! From the dead she sends!
 Throw what you carry, throw it behind you,
 run to the place where the underworld ends!
 
 [Outro]
-[Harsh Vocals]
+[Powerful Male Vocals]
 And the slope was rising under my feet,
 the light of the living so faint and so sweet,
 Yo-mo-tsu Hi-ra-sa-ka, the end of the road,

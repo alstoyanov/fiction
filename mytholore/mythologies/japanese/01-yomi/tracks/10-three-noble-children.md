@@ -15,11 +15,10 @@ So the album's descent ends in light. From a death, a grief and a forbidden glan
 
 ## 2. Suno Style
 ```
-triumphant symphonic metal, major key, soaring, full orchestra, massive taiko ensemble,
-shō and koto, shakuhachi melody, powerful clean male vocals, full mixed choir,
-radiant, majestic, cathartic finale, 120 bpm
+triumphant symphonic power metal, major key, anthemic, full orchestra, massive taiko ensemble,
+galloping double bass, shō and koto, shakuhachi melody, soaring high male vocals, huge choir, 145 bpm
 ```
-**Exclude styles:** `pop, EDM, autotune, trap`
+**Exclude styles:** `death metal, doom metal, growls, screamed vocals, pop, EDM, autotune`
 
 ---
 
@@ -68,7 +67,7 @@ at the end of my begetting,
 I have gotten three!
 
 [Verse 3]
-[Harsh Vocals]
+[Powerful Male Vocals]
 Susanoo! Swift and raging,
 born from breath and born from rain,
 the storm came roaring out of the water

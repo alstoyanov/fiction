@@ -15,11 +15,10 @@ The song is the album's exhale after the horror: grief washed away in cold water
 
 ## 2. Suno Style
 ```
-atmospheric post-metal, slow build from ambient to heavy, flowing water ambience, koto arpeggios,
-shakuhachi, gentle taiko, clean male vocals, chanted male choir, cathartic, sacred, cleansing,
-80 bpm rising to 100 bpm
+symphonic power metal, uplifting, full orchestra, soaring guitars, driving taiko, koto arpeggios, shakuhachi,
+flowing water, powerful clean male vocals, chanted choir, cathartic, sacred, 130 bpm
 ```
-**Exclude styles:** `pop, EDM, autotune, trap`
+**Exclude styles:** `death metal, doom metal, growls, screamed vocals, pop, EDM, autotune`
 
 ---
 

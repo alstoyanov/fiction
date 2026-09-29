@@ -16,7 +16,7 @@
 - Keep the line lengths within each section even. Suno phrases more cleanly when lines have similar syllable counts.
 - Rhyme is optional, but rhythm isn't. Read every line aloud against a pulse.
 - Words in the original language work best in choruses and chants, where repetition helps pronunciation. Always check the meaning (`lore.md` › Words and Phrases).
-- Put harsh and clean vocal cues in tags (see `suno.md`), not in the lyrics themselves.
+- Put vocal cues (male or female lead, operatic, choir, spoken) in tags (see `suno.md`), not in the lyrics themselves.
 
 ## Sensitivity
 Some mythologies belong to **living religions and communities**: for example Yoruba (Ifá, Òrìṣà), Vodou, Hindu, Shinto, Aboriginal Australian, Māori, and many Indigenous nations of the Americas. For these:

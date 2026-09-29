@@ -10,7 +10,7 @@ Candidate stories for concept albums. Each one has a clear arc and enough materi
 
 | # | Idea | Source | Tone | Scale | Living-tradition care |
 |---|------|--------|------|-------|-----------------------|
-| 1 | **Yomi: The Land of the Dead** (Taken) | K, NS | Doom, horror, grief | 8–10 tracks | Medium |
+| 1 | **Yomi: The Land of the Dead** (Taken) | K, NS | Dark, grief, triumphant | 8–10 tracks | Medium |
 | 2 | **Susanoo: The Storm Exiled** (Amano-Iwato and Orochi) | K, NS | Epic, violent, triumphant | 10–12 | Medium |
 | 3 | **The Great Lord of the Land** (Ōkuninushi) | K | Heroic, mythic, bittersweet | 10–12 | Medium |
 | 4 | **The Palace Beneath the Waves** (Umisachi and Yamasachi) | K, NS | Oceanic, mysterious | 8–10 | Low |
@@ -42,7 +42,7 @@ Candidate stories for concept albums. Each one has a clear arc and enough materi
   8. Yomotsu Hirasaka (peaches, the boulder, the vow of the dead)
   9. Misogi (purification)
   10. Three Noble Children (sun, moon, storm)
-- **Why it works:** it moves from creation to catastrophe to horror to rebirth. It suits a doom-to-epic sound: slow and funereal in Yomi, then a symphonic finale.
+- **Why it works:** it moves from creation to catastrophe to horror to rebirth. It suits a dark-to-triumphant symphonic sound: gothic and dramatic in Yomi, then a triumphant finale.
 - **Sources:** K (Book 1, Chamberlain §§I–XI); NS (Book 1, with many variants).
 - **Care:** tell it as the *Kojiki* tells it. The imagery of Izanami's decay is canonical. Don't make her a generic "demon queen".
 
@@ -70,7 +70,7 @@ Candidate stories for concept albums. Each one has a clear arc and enough materi
 ## 5. Yamato Takeru: The White Bird
 **The story.** Prince **Ousu** is so violent (he tears his own brother apart) that his father the emperor fears him and sends him away to fight. He kills the **Kumaso** chieftains by disguising himself as a woman at their feast, and the dying chief gives him the name **Yamato Takeru**, "the brave of Yamato". He tricks and kills Izumo Takeru with a wooden sword. He is sent at once to subdue the east. His aunt, priestess of Ise, gives him the sword **Kusanagi** and a small bag. On a plain his enemies set the grass on fire around him. He mows down the grass with the sword, lights a counter-fire with the flint from the bag, and escapes. At sea a storm threatens his ships, and his wife **Ototachibana-hime** gives herself to the waves to calm them. Weary and proud, he leaves the sword behind and goes to fight the god of **Mount Ibuki** barehanded, insulting the god in the shape of a white boar. He is struck with sickness, and dies far from home, singing of the land he will not see again. His soul rises as a **great white bird** and flies west.
 - **Possible tracklist arc:** Ousu · Feast of the Kumaso · The Wooden Sword · Sent East · Kusanagi · The Burning Plain · Ototachibana (the sacrifice) · Ibuki · Nobono (the dying poems) · The White Bird
-- **Why it works:** a classic tragic-hero war epic, violent and doomed. It is well suited to melodic death metal.
+- **Why it works:** a classic tragic-hero war epic, violent and doomed. It is ideal for galloping power metal.
 - **Sources:** K (Book 2); NS (Book 7, Emperor Keikō), where the account differs.
 - **Care:** he is an imperial prince used in nationalist history. Keep the focus on the tragic man, not the conquest.
 
@@ -106,7 +106,7 @@ Candidate stories for concept albums. Each one has a clear arc and enough materi
 ## 10. The Bell of Dōjōji (Kiyohime) *(EP)*
 **The story.** A young monk, **Anchin**, on pilgrimage, stays at an inn, and **Kiyohime**, the innkeeper's daughter, falls in love with him. He promises to return, and flees instead. She pursues him. When he crosses the **Hidaka River** and the ferryman refuses her, she plunges in and becomes a **serpent**. Anchin hides beneath the great bell of **Dōjōji** temple. The serpent coils around the bell, and her fury burns it red-hot until the monk inside is ash.
 - **Arc (6–8 tracks):** The Guest · The Promise · Flight · The River Hidaka · Serpent · The Bell · Ash
-- **Why it works:** an obsession story with a horror ending. It suits a compact EP, doom into black metal.
+- **Why it works:** an obsession story with a horror ending. It suits a compact gothic symphonic EP.
 - **Sources:** *Dōjōji engi emaki*; Noh play *Dōjōji*; *Konjaku* variant.
 
 ## 11. The Night Parade of One Hundred Demons (Hyakki Yagyō)

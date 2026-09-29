@@ -5,19 +5,24 @@ Suno changes often (models, character limits, features). **Check the current lim
 ## Style Prompts
 - **Build in layers:** genre and subgenre → era or production feel → instruments → vocals → mood → tempo or key (optional).
   ```
-  melodic death metal, epic folk metal, hurdy-gurdy, tagelharpa, war drums,
-  harsh male growls, choir chorus, dark, cinematic, 120 bpm
+  symphonic power metal, epic folk metal, galloping double bass, hurdy-gurdy, tagelharpa, war drums,
+  soaring clean male vocals, huge choir chorus, full orchestra, heroic, cinematic, 150 bpm
   ```
 - **Keep one base prompt per mythology** (in its README) and **one per album** (in the album README). Track prompts adjust the album prompt. They never start from scratch, so the album stays coherent.
 - **Put the most important words first.** Front-load the core genre.
 - **Don't name real artists or bands.** Describe the sound instead.
 - **Use "exclude styles"** (when available) to keep out things the model drifts toward, for example `pop, EDM, autotune`.
 
+## The Band's Default Exclude List
+```
+death metal, doom metal, growls, screamed vocals, pop, EDM, autotune
+```
+
 ## Metatags in Lyrics
 Square-bracket tags steer structure and delivery. Suno treats them as hints, not guarantees.
 - **Structure:** `[Intro]`, `[Verse 1]`, `[Pre-Chorus]`, `[Chorus]`, `[Bridge]`, `[Breakdown]`, `[Interlude]`, `[Outro]`, `[End]`
 - **Instrumental sections:** `[Guitar Solo]`, `[Instrumental]`, `[Drum Break]`, `[Orchestral Swell]`
-- **Vocal delivery:** `[Harsh Vocals]`, `[Clean Vocals]`, `[Growl]`, `[Choir]`, `[Chant]`, `[Spoken Word]`, `[Whisper]`, `[Female Vocal]`
+- **Vocal delivery:** `[Powerful Male Vocals]`, `[High Male Vocals]`, `[Deep Male Vocals]`, `[Operatic Female Vocal]`, `[Female Vocal]`, `[Duet]`, `[Choir]`, `[Chant]`, `[Spoken Word]`, `[Whisper]`. Mytholore does **not** use harsh vocals or growls (see the band sound in the main README).
 - **Atmosphere or effects** (use sparingly): `[Thunder]`, `[War Horns]`, `[Silence]`
 - End with `[End]` to reduce the chance of the song trailing on.
 

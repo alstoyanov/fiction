@@ -22,9 +22,9 @@ Where the myths actually come from. List the texts, oral traditions or inscripti
 
 ## Sound Palette
 The musical identity shared by every album from this mythology, so they sound like one family.
-- **Subgenre anchor:** <e.g. melodic death metal with folk elements>
+- **Subgenre anchor:** <e.g. symphonic power metal with folk elements (see the band sound in the main README)>
 - **Traditional instruments or colours:** <e.g. hurdy-gurdy, frame drum, throat singing, tagelharpa>
-- **Vocal approach:** <e.g. harsh verses, chanted choirs in the choruses>
+- **Vocal approach:** <e.g. soaring clean male lead, operatic female voice for goddesses, big choirs in the choruses>
 - **Language(s):** <English, or English with phrases in … (check pronunciation in `lore.md`)>
 - **Base Suno style prompt:** the shared starting point that each album adjusts:
   ```

@@ -6,6 +6,14 @@ This folder holds everything behind each album: the mythological research, the s
 
 ---
 
+## The Band's Sound
+Mytholore is **power, heavy and symphonic metal**, not death or doom. The touchstones are classic power metal with epic choirs and galloping speed, anthemic heavy metal, classic 70s–80s heavy rock and metal with a big voiced lead singer, and symphonic metal with operatic female vocals.
+- **Vocals:** clean and powerful. A soaring or gritty male lead, an operatic female voice for goddesses and narrators, and big choirs on the choruses. **No growls, no screamed vocals.**
+- **Sound:** full and dramatic. A full orchestra, twin lead guitars, galloping double bass, keyboards, and a guitar solo in most songs.
+- **Tempo:** mostly mid-to-fast (110–180 bpm). A slow track is rare and has to earn its place.
+- **Folk colour:** each mythology adds its own traditional instruments on top (see the mythology README).
+- **In Suno:** never name real bands. Describe the sound instead, and use the default exclude list in `guides/suno.md`.
+
 ## Folder Structure
 
 ```

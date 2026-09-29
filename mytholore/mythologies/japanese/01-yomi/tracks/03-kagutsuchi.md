@@ -15,10 +15,10 @@ The song is the album's turn from creation into catastrophe. The mother of every
 
 ## 2. Suno Style
 ```
-melodic death metal, symphonic, driving taiko drums, crackling fire ambience, distorted guitars,
-harsh male vocals, anguished clean male vocals, dark female choir, tragic, intense, 110 bpm
+epic heavy metal, symphonic, driving riffs, full orchestra, pounding taiko, crackling fire, biwa accents,
+powerful high male vocals, dramatic choir, soaring guitar solo, tragic, 140 bpm
 ```
-**Exclude styles:** `pop, EDM, autotune, trap`
+**Exclude styles:** `death metal, doom metal, growls, screamed vocals, pop, EDM, autotune`
 
 ---
 
@@ -29,7 +29,7 @@ harsh male vocals, anguished clean male vocals, dark female choir, tragic, inten
 [Heavy Taiko]
 
 [Verse 1]
-[Harsh Vocals]
+[Powerful Male Vocals]
 She gave the world its rivers, she gave the wind its breath,
 the mountains and the moorlands, the boat that crosses death,
 the food of every harvest, the trees of every shore,
@@ -41,7 +41,7 @@ Swift, swift, the burning male,
 the last of all her sons...
 
 [Chorus]
-[Harsh Vocals]
+[Powerful Male Vocals]
 Ka-gu-tsu-chi!
 The flame that tore her open,
 Ka-gu-tsu-chi!
@@ -52,14 +52,14 @@ and the world has learned of fire,
 and the world has learned of dead.
 
 [Verse 2]
-[Harsh Vocals]
+[Powerful Male Vocals]
 From the fever came the metal, from the sickness came the clay,
 gods were born of her dying, even as she slipped away,
 the first of all the living to lie down and not return.
 She divinely retired, and the hall began to burn.
 
 [Chorus]
-[Harsh Vocals]
+[Powerful Male Vocals]
 Ka-gu-tsu-chi!
 The flame that tore her open,
 Ka-gu-tsu-chi!
@@ -79,14 +79,14 @@ I gave you in exchange, and now my world is done.
 [Guitar Solo]
 
 [Verse 3]
-[Harsh Vocals]
+[Powerful Male Vocals]
 And the child lay in the embers with his mother's face aflame,
 he did not know what he had done, he did not know his name,
 I looked upon the burning son, the sword hung at my side,
 and the grief began to turn to steel, the night the mother died.
 
 [Chorus]
-[Harsh Vocals]
+[Powerful Male Vocals]
 Ka-gu-tsu-chi!
 The flame that tore her open,
 Ka-gu-tsu-chi!

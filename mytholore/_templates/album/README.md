@@ -17,7 +17,7 @@
   ```
   <album style prompt>
   ```
-- **What's different on this album:** <e.g. slower and doom-laden; female lead vocal for the narrator; more orchestral>
+- **What's different on this album:** <e.g. more gothic and orchestral; operatic female lead for the narrator; faster, galloping battle tracks>
 - **Recurring motif:** <a riff, chant or phrase that returns across tracks, if any>
 
 ## Tracklist

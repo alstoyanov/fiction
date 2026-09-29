@@ -15,11 +15,10 @@ This is the heart of the album. Two lovers, who together made the world, now sta
 
 ## 2. Suno Style
 ```
-epic symphonic doom metal, massive, slow and monumental, huge taiko, grinding low strings,
-koto and shakuhachi, male and female vocal duet, female vocal turning harsh, full choir,
-tragic, apocalyptic, 65 bpm
+epic symphonic metal, monumental, full orchestra and huge choir, heavy anthemic riffs, huge taiko,
+koto and shakuhachi, male and operatic female vocal duet, tragic, majestic, 110 bpm
 ```
-**Exclude styles:** `pop, EDM, autotune, trap`
+**Exclude styles:** `death metal, doom metal, growls, screamed vocals, pop, EDM, autotune`
 
 ---
 
@@ -56,7 +55,7 @@ the ones who made the islands
 now divide who lives and dies.
 
 [Verse 2]
-[Female Vocal, Turning Harsh]
+[Female Vocal, Turning Fierce]
 My beloved husband, if this is what you do,
 I will strangle every day a thousand of your people through,
 a thousand every morning, a thousand every night,

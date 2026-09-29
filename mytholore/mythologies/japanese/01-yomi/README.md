@@ -19,12 +19,13 @@ The first story in Japanese myth, told as a descent. Izanagi and Izanami, the fi
 5. **Rebirth (tracks 9–10):** washing away death, and three noble children born from it.
 
 ## Sound
-- **Base style:** the Japanese base prompt, pulled toward doom and death metal for the underworld, with a symphonic lift at the end:
+- **Base style:** the Japanese base prompt, as **full, dramatic symphonic power and heavy metal**: full orchestra, soaring guitars, galloping double bass and huge choirs under the traditional instruments. Clean, powerful male lead, operatic female voice for Izanami, and no harsh vocals. Mostly mid-to-fast tempos (110–180 bpm).
   ```
-  symphonic doom metal, melodic death metal, taiko drums, shakuhachi, koto, biwa,
-  harsh male vocals, ethereal female vocals, ritual chanted choir, cinematic, dark, funereal
+  symphonic power metal, epic heavy metal, dramatic, full orchestra, soaring twin guitars, galloping double bass,
+  taiko, shakuhachi, koto, biwa, powerful clean male vocals, operatic female vocals, huge choir, epic
   ```
-- **The shape of the album:** the sound darkens and slows from track 1 to track 8, then breaks open into light. Track 5 is the slowest and heaviest. Track 7 is the fastest. Track 10 is the only major-key, triumphant track.
+- **The shape of the album:** track 1 is the **slow, reverent opener** (70 bpm). Keep its style as it is; it is already well produced. From track 2 the album is fast and full. It darkens through the descent: track 5 is the heaviest (115 bpm, driving rather than slow), track 7 the fastest (175 bpm), and track 8 is monumental (110 bpm). Then it breaks into light, and track 10 is the only major-key, triumphant track (135 bpm).
+- **Avoid:** death and doom metal, growls and screamed vocals, and very slow tempos (the band's default exclude list), except in track 1.
 - **Recurring motif:**
   - **Chant:** *"koworo, koworo"*, the sound the *Kojiki* gives for the spear stirring the brine. It opens track 1, returns under track 8 as the stone grinds shut, and closes track 10 as the gods are born.
   - **Phrase:** *"Do not look"*, sung by Izanami in tracks 6 and 8, and echoed by Izanagi in track 9.

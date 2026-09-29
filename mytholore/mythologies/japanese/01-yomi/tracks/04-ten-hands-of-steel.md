@@ -15,10 +15,10 @@ The song is Izanagi's grief turning into violence, and the strange law of this w
 
 ## 2. Suno Style
 ```
-melodic death metal, blackened, fast tremolo guitars, blast beats into heavy taiko breakdown,
-biwa accents, harsh male vocals, war chant choir, violent, grieving, 140 bpm
+speed power metal, galloping double bass, twin lead guitars, full orchestra, massive taiko, biwa accents,
+powerful gritty male vocals, battle choir, heroic and grieving, 160 bpm
 ```
-**Exclude styles:** `pop, EDM, autotune, trap`
+**Exclude styles:** `death metal, doom metal, growls, screamed vocals, pop, EDM, autotune`
 
 ---
 
@@ -26,11 +26,11 @@ biwa accents, harsh male vocals, war chant choir, violent, grieving, 140 bpm
 ```
 [Intro]
 [War Drums]
-[Harsh Vocals, Spoken]
+[Male Vocal, Spoken]
 Ten hands long. Ten hands of steel.
 
 [Verse 1]
-[Harsh Vocals]
+[Powerful Male Vocals]
 I drew the sword that hung beside me, Heaven's blade, Ohabari,
 I stood above the burning child who took her life from me,
 he looked at me with his mother's eyes, he burned with her last breath,
@@ -52,7 +52,7 @@ from the hilt, a rain of dragons,
 every drop a god it makes.
 
 [Verse 2]
-[Harsh Vocals]
+[Powerful Male Vocals]
 It splashed upon the boulders and the boulders split in two,
 it burned upon the sword-guard and the thunder broke through.
 Takemikazuchi rising, the lightning in the steel,
@@ -71,7 +71,7 @@ every drop a god it makes.
 
 [Breakdown]
 [Heavy Taiko]
-[Harsh Vocals]
+[Powerful Male Vocals]
 Head: a mountain! Breast: a mountain!
 Belly: a mountain! Hands: a mountain!
 Eight mountains rising from the body of my son!
@@ -79,7 +79,7 @@ Eight mountains rising from the body of my son!
 [Guitar Solo]
 
 [Verse 3]
-[Harsh Vocals]
+[Powerful Male Vocals]
 I wiped the blade and sheathed it and the mountains stood around,
 the fire child was silent and the rain was on the ground,
 the gods of blood were born and born, and still I stood alone,

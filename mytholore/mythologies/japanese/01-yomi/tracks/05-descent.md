@@ -9,28 +9,27 @@ Izanagi could not bear to be without her. *"Wishing to meet and see his younger 
 
 At the **door of the palace hall** of Yomi, Izanami came out to meet him. *"My beloved younger sister,"* he said, *"the lands that you and I were making are not yet finished. Come back!"* She answered: *"How I regret that you did not come sooner! **I have already eaten at the hearth of Yomi.**"* Eating the food of the dead (*yomotsu-hegui*) binds the eater to them, and there is no simple way home after it. Still, she said, because he had come so far, she would go and speak with the gods of Yomi about returning.
 
-The *Kojiki* says nothing of the road itself. This song imagines it: a living god walking down into the dark, the last one to go there willingly. It is the album's slowest, heaviest song, and it ends at the door. (*Kojiki*, Book 1, Chamberlain §IX.)
+The *Kojiki* says nothing of the road itself. This song imagines it: a living god walking down into the dark, the last one to go there willingly. It is the album's darkest, heaviest song, driving and ominous rather than slow, and it ends at the door. (*Kojiki*, Book 1, Chamberlain §IX.)
 
 ---
 
 ## 2. Suno Style
 ```
-funeral doom metal, extremely slow, crushing low guitars, deep drones, sparse taiko,
-distant shakuhachi, deep growled male vocals, whispered female vocals, cavernous reverb,
-desolate, heavy, 55 bpm
+epic symphonic metal, dark and majestic, heavy mid-tempo riffs, full dark orchestra, thunderous taiko,
+distant shakuhachi, deep powerful male vocals, haunting operatic female vocals, cinematic, 115 bpm
 ```
-**Exclude styles:** `pop, EDM, autotune, upbeat`
+**Exclude styles:** `death metal, doom metal, growls, screamed vocals, pop, EDM, autotune`
 
 ---
 
 ## 3. Lyrics (Optimised for Suno)
 ```
 [Intro]
-[Low Drone]
+[Heavy Riff]
 [Distant Shakuhachi]
 
 [Verse 1]
-[Growled Vocals]
+[Deep Male Vocals]
 There is no map to Yomi,
 there is no sun below,
 the road goes down through silence
@@ -46,7 +45,7 @@ Who walks here with a heartbeat?
 Who walks here with a name?
 
 [Chorus]
-[Growled Vocals]
+[Deep Male Vocals]
 Descent, descent,
 the dark has no floor,
 descent, descent,
@@ -57,7 +56,7 @@ and I have come to bring you home,
 to bring you back to day.
 
 [Verse 2]
-[Growled Vocals]
+[Deep Male Vocals]
 The air is thick with ending,
 the cold is in the stone,
 and at the door of the palace hall
@@ -79,14 +78,14 @@ Wait, and do not follow.
 Wait, and do not see my face.
 
 [Verse 3]
-[Growled Vocals]
+[Deep Male Vocals]
 I said I'll wait, my sister, I will wait here at the door,
 as long as all the darkness, as long as all before,
 and she turned into the palace and the door fell shut like stone,
 and I stood at the gate of Yomi, the living, and alone.
 
 [Chorus]
-[Growled Vocals]
+[Deep Male Vocals]
 Descent, descent,
 the dark has no floor,
 descent, descent,

@@ -15,10 +15,10 @@ What the light showed him was his wife as death had made her. Her body was **swa
 
 ## 2. Suno Style
 ```
-doom metal into death metal, slow tense verses erupting into heavy chorus, taiko, koto, biwa,
-ethereal female lead vocals, harsh male vocals, horror atmosphere, dissonant, tragic, 80 bpm
+gothic symphonic metal, dramatic, operatic female lead vocals, powerful male vocals, full orchestra and choir,
+heavy guitars, taiko, koto, biwa, tense build into soaring chorus, tragic, 130 bpm
 ```
-**Exclude styles:** `pop, EDM, autotune, trap`
+**Exclude styles:** `death metal, doom metal, growls, screamed vocals, pop, EDM, autotune`
 
 ---
 
@@ -47,14 +47,14 @@ Do not look! Do not look!
 Leave me in the dark I keep,
 do not look! Do not look!
 Let the dead be dead and sleep!
-[Harsh Vocals]
+[Powerful Male Vocals]
 But the light was in my hand
 and the fire showed me true,
 and I looked, and I looked,
 and the thing I saw was you.
 
 [Verse 2]
-[Harsh Vocals]
+[Powerful Male Vocals]
 The maggots swarmed upon her, they were singing in her skin,
 and eight thunders were enthroned there, eight thunders sat within:
 the Great upon her forehead, the Fire upon her breast,
@@ -68,14 +68,14 @@ Do not look! Do not look!
 Leave me in the dark I keep,
 do not look! Do not look!
 Let the dead be dead and sleep!
-[Harsh Vocals]
+[Powerful Male Vocals]
 But the light was in my hand
 and the fire showed me true,
 and I looked, and I looked,
 and the thing I saw was you.
 
 [Bridge]
-[Female Vocal, Rising to Scream]
+[Female Vocal, Rising, Operatic]
 You have shamed me.
 You have seen me as I am.
 You have shamed me.
@@ -86,7 +86,7 @@ bring him back to me!
 [Guitar Solo]
 
 [Verse 3]
-[Harsh Vocals]
+[Powerful Male Vocals]
 And she rose upon her throne of thunder, rotting and a queen,
 the eight gods cracked and rumbled at the thing that I had seen,
 her eyes were still the eyes I loved, but death was in their light,
@@ -98,14 +98,14 @@ Do not look! Do not look!
 Leave me in the dark I keep,
 do not look! Do not look!
 Let the dead be dead and sleep!
-[Harsh Vocals]
+[Powerful Male Vocals]
 But the light was in my hand
 and the fire showed me true,
 and I looked, and I looked,
 and the thing I saw was you.
 
 [Outro]
-[Harsh Vocals]
+[Powerful Male Vocals]
 I dropped the burning comb-tooth and I ran into the black,
 and behind me in the palace, I heard the dead come back.
 [End]

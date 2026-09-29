@@ -42,14 +42,14 @@ Beside that court mythology runs a second world. It holds oni (demons or ogres),
 - **Forbidden looking:** Izanagi in Yomi, Toyotama-hime giving birth, the box Urashima opens. The motif recurs throughout Japanese myth.
 
 ## Sound Palette
-- **Subgenre anchor:** melodic death metal and symphonic folk metal. Doom for the Yomi and onryō material.
+- **Subgenre anchor:** symphonic power metal and epic heavy metal, with folk colour. Gothic symphonic metal for the Yomi and onryō material.
 - **Traditional instruments and colours:** taiko ensemble drums, shamisen, koto, shakuhachi, biwa (the instrument the *Heike* was sung to), and the shō and hichiriki of gagaku (court music) for the scenes in Heaven.
-- **Vocal approach:** harsh verses and chanted choruses. Noh-style chant for the dead and the gods. Spoken word for narration.
+- **Vocal approach:** a powerful clean male lead, an operatic female voice for goddesses, and huge choirs. Noh-style chant for the dead and the gods, and spoken word for narration. No harsh vocals.
 - **Language(s):** English, with Japanese names and short phrases (chants, invocations, titles). Check every phrase in `lore.md`.
 - **Base Suno style prompt:**
   ```
-  symphonic folk metal, melodic death metal, taiko drums, shamisen, koto, shakuhachi,
-  harsh male vocals, ritual chanted choir, cinematic, dark, epic
+  symphonic power metal, epic folk metal, full orchestra, galloping double bass, taiko drums, shamisen, koto,
+  shakuhachi, powerful clean male vocals, operatic female vocals, huge choir, dramatic, epic
   ```
 
 ## Visual Palette
