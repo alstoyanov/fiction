@@ -156,3 +156,9 @@ Old material is kept only where it fits Books 1–5. The old file's "Novel 06/07
 ## Update: Book 8 Plot v2 (Sept 2026)
 From `plots/08-battle-of-blood-full.md`:
 - **Book 8, settled:** her mother Viktoria leaked her coastal plan to the SFW (Twist 1, Ch 9), and has fled east. Yevgenia reports it in full and refuses the rank of General in August 2110. VS·09 is still undecoded (Book 9).
+
+## Update: Book 9 Chapter Summaries (Sept 2026)
+Settled in `novels/09-architects-of-chaos/chapters-summaries/` (the README decisions win if anything here differs):
+- **Book 9:**
+  - Her mother's letter, *"I gave you everything, Yevgenia. Even your career."*, and her reply, *"Mother. I am where I should be. It is not where you put me."* (Ch 12).
+  - Her standing order *"No holds without warrant. Traffic normal."*, and she lets the flight east pass (Ch 27).

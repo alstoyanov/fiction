@@ -300,3 +300,7 @@ From `plots/09-architects-of-chaos-full.md`:
   - He hands Marcus **copy X**, his father's (WZ·10), as a cross-check: *"I would like it to have been finished by you."*
   - He refuses to flee and stands trial in a human court. He is released after twelve years and teaches: *"Nobody designs everyone."*
   - Still no POV.
+
+## Update: Book 9 Chapter Summaries (Sept 2026)
+Settled in `novels/09-architects-of-chaos/chapters-summaries/` (the README decisions win if anything here differs):
+- **Book 9 dates:** he presents himself at the Justice Center on Sep 2, 2115. His trial opens Oct 14, and he is sentenced in Nov 2115 to twelve years. He is released about 2127, and by 2135 he teaches a seminar (*"Nobody designs everyone."*).

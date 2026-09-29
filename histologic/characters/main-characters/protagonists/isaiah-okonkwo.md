@@ -142,3 +142,9 @@ Nine rooms. The **parlour** holds harmless, true, warm things (his aunt's table,
 | Notebook always with him | Memory palace (parlour and cellar), coat lining | Book 4 |
 | Aunt "Sarah Okonkwo (Architect)" as fact | Provisional, Book 9 | Books 6–9 are provisional |
 | Old numbering (Novel 06/07/08) | Books 7/8/9 | Canon numbering |
+
+## Update: Book 9 Chapter Summaries (Sept 2026)
+Settled in `novels/09-architects-of-chaos/chapters-summaries/` (the README decisions win if anything here differs):
+- **Carver Street** has been rebuilt. Aunt Sarah lives in a new house on the old number, with the old parlour furniture moved into it piece by piece (Book 9 Ch 11). The childhood house itself still survives only in his head.
+- **The memory palace:** in Mar 2115 a teacup appears before the aunt's chair (Ch 4). In Ch 11 he asks her to leave the head of the table and takes the chair himself.
+- **Mera's photograph:** Julian sends him the 2107 Chronos Archive staff photograph (Ch 14), and Isaiah recognises Mera in the Ch 28 broadcast.

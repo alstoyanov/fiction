@@ -294,3 +294,9 @@ From `plots/09-architects-of-chaos-full.md`:
 - **Alive in 2115:** Chen Zhao, Viktoria Sokolov, Sarah Okonkwo, Tobias Kovač.
 - **Heirs:** Thomas Wei, Mera, Timur Aslanov, and Marcus, who declines.
 - **Their last move:** they disclose first, offering the World Record. Then they flee east: *"You just changed the enemy."* Tobias stays.
+
+## Update: Book 9 Chapter Summaries (Sept 2026)
+Settled in `novels/09-architects-of-chaos/chapters-summaries/` (the README decisions win if anything here differs):
+- **"You just changed the enemy"** is spoken by **Viktoria Sokolov**, all four sentences, in the CNT broadcast of Oct 7, 2115. Mera stands silent beside her.
+- **Departures:** Sarah Okonkwo leaves by air and Chen Zhao by sea, both on Sep 2. Tobias stays in Chronos.
+- **Funding:** LW·03's money survives as the **Liu Wei Endowment**, which funds the World Record.

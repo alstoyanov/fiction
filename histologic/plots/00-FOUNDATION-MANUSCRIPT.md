@@ -28,7 +28,7 @@ In 2063 a 25-year-old junior archivist called **Mikhail Petrov** catalogued thre
 These rules let fragments be found, dated and matched believably across five books.
 
 - **Thirteen typed copies** were made in 2066. There is one for each of the twelve contributors who signed the Register, and one for the Compiler. Each page carries a small **copy numeral** in the lower right corner: I to XII for the contributors, and none for the Compiler's own copy.
-- **Contributor marks:** every principle ends with its author's **mark**, a two-letter cipher and a number, such as *CZ·11*. The marks are explained only in the Register of Contributors (section 4.10). Until then they are meaningless.
+- **Contributor marks:** the author's **mark** is typed at the foot of **each even-numbered page** of a principle and **at its end** (settled Sept 2026, reconciling Book 5's p. 30, which has one, with Book 8's p. 19, which does not). It is a two-letter cipher and a number, such as *CZ·11*. The marks are explained only in the Register of Contributors (section 4.10). Until then they are meaningless.
 - **Page numbers** run continuously. Matching a fragment's page number to the table of contents (section 4.1) is how an unnumbered principle gets identified.
 - **The typewriter:** one machine, with a chipped lowercase *e*. Later investigators use it to authenticate fragments.
 - **The Compiler's hand:** the 2066 Warning and Principle Seven are **handwritten** additions in Vance's copy only.
@@ -185,9 +185,9 @@ Seventeen contributed. Twelve signed and became **the Architects**. Five are str
 
 **Alive in 2115:** Chen Zhao (74), Viktoria Sokolov (about 79), Sarah Okonkwo (about 80) and Tobias Kovač (81). **Deaths:** Voss 2095, Petrov 2101, Liu Wei 2099, Arkady Volkov 2098, Michiko Tanaka 2092, Jerome Morrison 2081, Wei Zhang 2104, Rustam Aslanov 2093.
 
-**The struck-through five** include **Anselm Kerr**, whose withdrawn page, *"On Keeping"*, is found with the Compiler's copy (Book 9): *"A record kept by one hand is a confession waiting for its torturer. Keep it by many hands."* Vance's Warning took its answer from him.
+**The struck-through five** are SA·13 Sigrun Ahlgren, EO·14 Emeka Obi, **AK·15 Anselm Kerr**, LB·16 Lorenzo Bassi and MR·17 Matthias Roe. They include **Anselm Kerr**, whose withdrawn page, *"On Keeping"*, is found with the Compiler's copy (Book 9): *"A record kept by one hand is a confession waiting for its torturer. Keep it by many hands."* Vance's Warning took its answer from him.
 
-**Where the Compiler's copy was:** in the Historical Archive's correspondence registry, behind the second of Kerr's two 2066 letters of inquiry about Periodicals, Governance, 114. Found Apr 11, 2115.
+**Where the Compiler's copy was:** in the Historical Archive's correspondence registry, behind the second of Kerr's two 2066 letters of inquiry about Periodicals, Governance, 114. Found Apr 11, 2115, missing the pieces Vance gave away (pp. 2–4, the contents strip, p. 40, Seven). It is complete again when those are laid beside it (Book 9 Ch 9).
 
 ---
 

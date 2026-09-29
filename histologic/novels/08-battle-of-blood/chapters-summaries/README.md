@@ -63,7 +63,7 @@ These summaries are based on `plots/08-battle-of-blood-full.md` (v2), with the d
 17. **Diagnosis (Mon Apr 14).**
     - Tanaka's case notes record identical presentation and an absence of doubt that is clinically impossible.
     - **Morrison** recognises his calibration once more.
-    - **Maya** brings the order's technical file. In it is a typed page, **copy numeral X**, **page 19** of Principle Four, with the chipped *e*. It carries **no mark**, because a principle's mark comes at its end, on p. 22, which isn't in the file. Nobody sees WZ·10 in this book.
+    - **Maya** brings the order's technical file. In it is a typed page, **copy numeral X**, **page 19** of Principle Four, with the chipped *e*. It carries **no mark**, because marks are typed only on a principle's even-numbered pages and at its end (p. 22). Page 19 is neither. Nobody sees WZ·10 in this book.
     - **Tanaka reads it aloud in the linen room.**
 18. **"Read your own book" nights** run from **Fri Apr 18**, in cellars. People read their journals from January and find doubts they no longer feel.
 19. **Alexei's death.** **Wed Apr 23**, at an overpass on the eastern ring road, covering Isaiah's crossing. His last words, exact: *"Tell Elena I love her. Tell Dima he was first by thirty seconds, and I never minded."*

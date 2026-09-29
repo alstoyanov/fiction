@@ -169,3 +169,10 @@ Old file, usable: "I can't save everyone. But I can save some." Use it once, per
 | Marcus "respects his idealism" | Lover, target, reporter, rescuer; unresolved | Story 01, Book 4 Ch 25, 29 |
 | Ages 42 → 44 → 49 | 42 (2106), 44 (2108), 46 (2110), 51 (2115) | Series dates |
 | Completion badge, alignment tags | Removed | House style |
+
+## Update: Book 9 Chapter Summaries (Sept 2026)
+Settled in `novels/09-architects-of-chaos/chapters-summaries/` (the README decisions win if anything here differs):
+- **Book 9:**
+  - Her last words to Alexei: *"Two of mine go with you. I want three back."*
+  - She sings Alexei's verse of "The Names" at his grave (Ch 19).
+  - She runs the paper routes into the CNT ("Paper walks.").

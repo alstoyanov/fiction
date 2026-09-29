@@ -186,3 +186,9 @@ From `plots/09-architects-of-chaos-full.md`:
   - Dissenting member of the Commission of Rebuilding.
   - He learns he was Chen Zhao's prepared heir, refuses the World Record's chair in public and without a remedy, and argues for containment.
   - Last entry (Nov 15, 2115): *"Verification: we were all there."*
+
+## Update: Book 9 Chapter Summaries (Sept 2026)
+Settled in `novels/09-architects-of-chaos/chapters-summaries/` (the README decisions win if anything here differs):
+- *Where is east?* is crossed through on Jun 10, 2115 (RA·12).
+- *"If we invade, we prove them right"* is his line (Ch 29). *"The cycle breaks here. We defend, but we don't attack."* now belongs to **Martinez**.
+- His last entry is on Nov 15, 2115: *"…Verification: we were all there."*

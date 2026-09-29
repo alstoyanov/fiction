@@ -147,3 +147,9 @@ A doctor imprisoned in the building where she practised. She knows exactly what 
 | Trauma surgeon, memoir and war arc as fact | Provisional, Book 8 | Books 6–9 are provisional |
 | Old numbering (Novel 06/07/08) | Books 7/8/9 | Canon numbering |
 | Morrison missing | Morrison is her key relationship in Books 4–5 | Book 4 Ch 17, 29; Book 5 Ch 6, 11 |
+
+## Update: Book 9 Chapter Summaries (Sept 2026)
+Settled in `novels/09-architects-of-chaos/chapters-summaries/` (the README decisions win if anything here differs):
+- **MT·06 Michiko Tanaka** is her great-aunt, her grandfather's sister (Book 9 Ch 13).
+- **The gray coat:** she sees Singh at the stone and brings her in (Prologue).
+- **p. 19** of copy X goes to the court with copy X for Wei's trial after Ch 30.

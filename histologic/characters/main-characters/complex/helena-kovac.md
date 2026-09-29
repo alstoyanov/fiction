@@ -171,3 +171,9 @@ She is a **POV character** (Ch 2, 15, 25).
 From `plots/06-the-distributed-truth-full.md`:
 - **Status after Book 5, settled:** dismissed as Director of Ashford in Feb 2107 without charge. Under the Doctrine her certificates were amended as "corrected entries". From mid-2107 she is the Commission's **Registrar of Testimony**, running the public intake.
 - **Book 6:** she tells Marcus that Julian is her nephew (Ch 7) and gives him Adrian's one-line letter. Her intake receives the copy-X deposits and logs no visitor (Ch 9).
+
+## Update: Book 9 Chapter Summaries (Sept 2026)
+Settled in `novels/09-architects-of-chaos/chapters-summaries/` (the README decisions win if anything here differs):
+- **After Book 9 Ch 9:** she holds the Compiler's copy and the Book 6 pieces, and later copy X for the court.
+- **The removal ledger:** she signed the copy out in the registry's paper removal ledger (Ch 8).
+- **Nov 15, 2115:** she brings everything for shelving at Periodicals, Governance, 114 (Ch 30).

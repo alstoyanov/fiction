@@ -89,7 +89,7 @@ The plot's clue map lists him under "later book": **Ch 15** ("all related somewh
   - His last move follows the Architects' (see `the-architects.md`): he *welcomes* exposure. Principle Six's second sentence tells him how: "disclose it first, in your own words, with your own remedy attached."
 - **The family link:** decide in Book 9 how distantly he and Marcus are related, and whether it matters to the design (for example, a Believer chosen partly because he was family), or is only the capital's small joke. Canon so far has only "related somewhere" and "cousin".
 - **His heir:** the Annex requires one. Unnamed. Do not make it Marcus.
-- **Old file lines, usable in Book 9 once he is exposed:** *"We don't control people. We control their context."* *"We made you a hero, Marcus. We needed you."* *"Politics is the art of making people want what you need them to want."* The second one is Principle Six in a sentence.
+- **Old file lines, usable in Book 9 once he is exposed:** *"We don't control people. We control their context."* *"We made you a hero. We needed you."* *"Politics is the art of making people want what you need them to want."* The second one is Principle Six in a sentence.
 
 ---
 
@@ -117,7 +117,7 @@ His written words (Foundation Manuscript, canonical):
 - *"When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it."*
 - *"A people that has lost part of its past will accept any past it is given, provided it is given gently, and by someone it trusts."* (the 2063 essay; sung by Old Songs as "Given Gently")
 
-Old file, usable (Book 9 only): *"We made you a hero, Marcus. We needed you."*
+Old file, usable (Book 9 only): *"We made you a hero. We needed you."*
 
 ---
 
@@ -148,3 +148,11 @@ From `plots/09-architects-of-chaos-full.md`:
   - He is **the heir-maker**. He prepared Marcus as his heir from Story 01 onward (Twist 4): *"You are my heir, Marcus. You always were. We made you a hero. We needed you."*
   - He endorses the World Record and offers Marcus its chair. Marcus refuses.
   - He flees east through Sokolov's checkpoint on Sep 2, 2115.
+
+## Update: Book 9 Chapter Summaries (Sept 2026)
+Settled in `novels/09-architects-of-chaos/chapters-summaries/` (the README decisions win if anything here differs):
+- **The deputy chair** at his right in the Commission of Rebuilding has stood empty since Aug 2110. It is the heir's seat (Ch 1, 24).
+- **Jul 8, 2115:** when the Register is published he **confesses first**, at 17:00 on the Ministry steps, and stays Minister, championing the World Record.
+- **Ch 24:** *"You are my heir, Marcus. You always were."* / *"We made you a hero. We needed you."*
+- **Sep 2:** he leaves **by sea**, through Sokolov's checkpoint (*"Colonel."* / *"Minister. Traffic normal."*).
+- Any earlier provisional note against making Marcus his heir is superseded.

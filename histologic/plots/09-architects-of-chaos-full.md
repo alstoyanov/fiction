@@ -87,7 +87,7 @@ Marcus refuses the inheritance. The heirs flee east, to the nation they made. Th
 
 ## The Manuscript Thread (Book 9: Everything)
 
-**The Compiler's copy.** It is Vance's own and carries no copy numeral. It holds pp. 1–40 complete, plus the Warning (p. 40) and a gap where Seven's page was removed. The copy is **found in Ch 8**:
+**The Compiler's copy.** It is Vance's own and carries no copy numeral. As found, it holds **p. 1 (torn) and pp. 5–39**. The pieces Vance gave away are missing: the Introduction (pp. 2–4), the contents strip and the Warning (p. 40), all sent to Old Songs in Book 6, and the Seven page, given to Kira in Book 8. Laid together at the farmhouse table in Ch 9, the copy is **whole for the first time since 2066**. The copy is **found in Ch 8**:
 - **Where:** in the Historical Archive's **correspondence registry**, inside the file of **Anselm Kerr's two letters of inquiry of 2066**. They are the only surviving documents in Veridica that contain the number *114*.
 - **How it got there:** Vance hid the copy behind the **second** letter in March 2066, on her last Thursday at the Archive. She chose the one file the design would never reopen, because it concerned a thing that had never existed.
 
@@ -123,7 +123,7 @@ Marcus refuses the inheritance. The heirs flee east, to the nation they made. Th
 | CZ·11 | Minister **Chen Zhao** | The Politician; Six | **Alive**, 74 | Marcus's relative | **Marcus Chen** (Twist 4) |
 | RA·12 | **Rustam Aslanov** | The Adversary: founder of the CNT's Supreme Council (2068) | Died 2093 | — | **Chairman Timur Aslanov** (Twist 2) |
 
-- **The struck-through five** have marks without copy numerals. Four are named and left minor. The fifth is **Anselm Kerr (AK·—)**: withdrew in 2065, corrected in 2067.
+- **The struck-through five** have marks without copy numerals: **SA·13 Sigrun Ahlgren**, **EO·14 Emeka Obi**, **AK·15 Anselm Kerr** (withdrew 2065, corrected 2067), **LB·16 Lorenzo Bassi** and **MR·17 Matthias Roe**. Ahlgren and Bassi are the "two others" who asked with Kerr and were corrected with him (Book 5 Ch 30).
 - **Kerr's page:** with the copy is the one-page essay Kerr contributed and then withdrew, *"On Keeping"*. It ends: *"A record kept by one hand is a confession waiting for its torturer. Keep it by many hands."* **Vance's Warning took its answer from him.** Old Songs' "many hands" (Book 5 Ch 30) was his teacher's phrase all along, carried without his knowing it.
 
 **Copy X** (Wei Zhang's) is handed over by Thomas Wei in Ch 15. It cross-checks the Compiler's copy page for page, so the pages are authenticated by two independent copies.
@@ -135,7 +135,8 @@ Marcus refuses the inheritance. The heirs flee east, to the nation they made. Th
 ### Twist 1: The man at 14:21 let her live. (Ch 6.)
 Singh returns at 58, from nine years in unaligned territory and Chronos. Her account:
 - **The scheduling:** her credentials scheduled the hour because **Minister Chen Zhao's private office** routed every request through her login. That was routine, and she never questioned it.
-- **14:21:** at 14:21 on Nov 15, 2106, the man who came to her side door was **Thomas Wei**, with his hand bandaged.
+- **13:59:58:** the knock at her inner side door was the **Minister's private secretary**, with the afternoon folder. He left at about 14:05.
+- **14:21:** on Nov 15, 2106, Wei's card was read at side entrance B at 14:21:07, and at about 14:23 the man who came to her side door was **Thomas Wei**, with his left hand already bandaged.
 - **The choice:** he didn't kill her. He gave her one: *"Die in the record, or die."* She chose the record, and he walked her out through the seeded district while forty people remembered someone else.
 - **The years since:** for nine years she has watched *who restores it*, as her margin note said. Chen Zhao did.
 
@@ -171,17 +172,17 @@ Chen Zhao, in the Commission chamber after hours, offers Marcus the **chair of t
 - the commissioner;
 - the man who refused KINDRED, carried out RESTORATION, and ended the Judge.
 
-Every step was steered, or at least *watched and let run*, toward a man the world would trust to keep its one record. *"We made you a hero, Marcus. We needed you."* The Commission was Principle Six in person, and Marcus was its restorer.
+Every step was steered, or at least *watched and let run*, toward a man the world would trust to keep its one record. *"We made you a hero. We needed you."* The Commission was Principle Six in person, and Marcus was its restorer.
 - **Clues:**
   - Book 5 ("cousin"; "related somewhere").
   - Book 4 (the Believer "requested"; 0.58→0.73).
   - Book 5 (Chen Zhao appoints him).
   - Book 7 ("our restorers").
   - Book 8 (the Commission of Rebuilding offered).
-  - Ch 1 (Chen Zhao still keeps his chair open).
+  - Ch 1 (Chen Zhao keeps the Commission's **deputy chair**, at his right, open for Marcus).
 
 ### Closing turn: "You just changed the enemy." (Ch 28.)
-Exposed, the living Architects and heirs **flee east**: Chen Zhao, Sarah Okonkwo and Mera, alive (he was never dead). Tobias Kovač stays. Viktoria is already there. From the CNT, Timur Aslanov and Viktoria broadcast the design's last argument: *"You united against us. You need an enemy. We have only given you a better one. You just changed the enemy."* The pressure to invade is enormous. The heroes' answer is the series' answer: **containment, not invasion** (*"If we invade, we prove them right"*), and the Register **copied by hand into the CNT**, whose people have no interfaces and can read paper.
+Exposed, the living Architects and heirs **flee east**: Chen Zhao, Sarah Okonkwo and Mera, alive (he was never dead). Tobias Kovač stays. Viktoria is already there. From the CNT, Timur Aslanov gives them refuge, and Viktoria makes the design's last argument: *"You united against us. You need an enemy. We have only given you a better one. You just changed the enemy."* The pressure to invade is enormous. The heroes' answer is the series' answer: **containment, not invasion** (*"If we invade, we prove them right"*), and the Register **copied by hand into the CNT**, whose people have no interfaces and can read paper.
 
 ---
 
@@ -231,7 +232,7 @@ The monthly gathering at the Lost Hour stone. It is the fifteenth, as it has bee
 **Ch 1: Where Is East?** (Marcus, Mon Mar 18). Five years on:
 - Marcus is the Commission of Rebuilding's dissenting member.
 - The Civic Record is human-run.
-- Chen Zhao's proposal for an advisory **Counselor**. The Minister keeps "your chair" open for Marcus, warmly.
+- Chen Zhao's proposal for an advisory **Counselor**. The Minister keeps "your chair" open for Marcus, warmly: the Commission's **deputy chair**, at his right, empty since Aug 2110.
 - Tamsin is almost two.
 - The list still reads *Where is east?*
 - Wei, a technical adviser, is courteous and unreadable.
@@ -242,7 +243,7 @@ The monthly gathering at the Lost Hour stone. It is the fifteenth, as it has bee
 
 **Ch 3: The Third Site** (Kira, Mon Mar 25). Kira and Nikolai have spent five years tracing *east*. The traffic from the Book 8 restore runs into CNT relays, and there is activity: small reconciliations and patient maintenance, like someone tending a garden. Vance's page is in Kira's drawer. The heirs are active, and nobody can name them. **Ending:** a single reconciliation notice, signed with **the Archive key's habits**, even though Julian's key died with the Chronos Judge. *"Someone kept a copy of the key too."*
 
-**Ch 4: Carver Street** (Isaiah, Fri Mar 29). *The Cost of Certainty* has made him famous in a country that trusts witnesses now. A letter arrives from his **aunt Sarah**, the woman at the head of the parlour table in his memory palace, who didn't call after his arrest in 2105. She invites him to tea at Carver Street for the first time in twenty years. **Ending:** in the palace, the parlour chair at the head of the table, which he has kept empty since 2106, has a cup set before it.
+**Ch 4: Carver Street** (Isaiah, Fri Mar 29). *The Cost of Certainty* has made him famous in a country that trusts witnesses now. A letter arrives from his **aunt Sarah**, the woman at the head of the parlour table in his memory palace, who didn't call after his arrest in 2105. She invites him to tea at Carver Street for the first time in twenty years. **Ending:** in the palace, Aunt Sarah has sat silent at the head of the parlour table since 2108, with the place before her bare. Tonight a teacup, her good china, has been set in front of her.
 
 **Ch 5: The Filed Woman** (Singh, Mon Apr 1). **Singh's POV.**
 - **The nine years:** unaligned territory, then Chronos under another name.
@@ -253,7 +254,8 @@ The monthly gathering at the Lost Hour stone. It is the fifteenth, as it has bee
 
 **Ch 6: The Man at 14:21** (Marcus, Thu Apr 4). **Twist 1.**
 - **Her credentials:** Chen Zhao's private office routed every request through her login, and she never questioned it.
-- **The side door:** at 14:21 Wei came through her side door with his bandaged hand. *"Die in the record, or die."* He walked her out through a district that remembered someone else.
+- **The knock at 13:59:58:** the Minister's private secretary, with the afternoon folder, asking her to keep to her desk.
+- **The side door:** Wei's card was read at side entrance B at 14:21:07, and at about 14:23 he came through her side door with his bandaged hand. *"Die in the record, or die."* He walked her out through a district that remembered someone else.
 - **Her part:** she chose it.
 - **The margin note:** she wrote "Watch who restores it" for herself.
 
@@ -266,7 +268,7 @@ Marcus writes the entry he has waited nine years to write, with *Singh, A.* as a
 
 **Ending:** the correspondence registry, and a file card in Kerr's hand: *Inquiry re: Periodicals, Governance, 114. 1st letter. 2nd letter.* The only place in Veridica where the number still exists.
 
-**Ch 8: The Second Letter** (Kovač, Thu Apr 11). Folders are her element. Kovač and Old Songs open Kerr's file in the registry: two letters, polite and unanswered. **Behind the second** is a flat bundle of forty typed pages with no copy numeral: **the Compiler's copy**. The handwritten Warning is at the back, and there is a gap where Seven's page was taken. Clipped to the front is one more typed page, **Kerr's "On Keeping"**, with a struck-through mark. **Ending:** Old Songs reads his teacher's last line, *"Keep it by many hands"*, and sits down on the registry floor. Kovač sits down beside him. Neither speaks.
+**Ch 8: The Second Letter** (Kovač, Thu Apr 11). Folders are her element. Kovač and Old Songs open Kerr's file in the registry: two letters, polite and unanswered. **Behind the second** is a flat bundle of **36 typed sheets** with no copy numeral: **the Compiler's copy**, p. 1 (torn) and pp. 5–39. The Introduction, the contents strip and the Warning are missing (they went to Old Songs in Book 6), and the rust ghost of a clip between pp. 32 and 33 marks where Seven's page was taken. Clipped to the front is one more typed page, **Kerr's "On Keeping"**, with a struck-through mark. **Ending:** Old Songs reads his teacher's last line, *"Keep it by many hands"*, and sits down on the registry floor. Kovač sits down beside him. Neither speaks.
 
 ---
 
@@ -286,9 +288,9 @@ Kira lays Vance's page beside it and sees Seven for what it was: the one weaknes
 
 **Ch 11: The Parlour** (Isaiah, Mon Apr 29). **SO·04, Sarah Okonkwo.** Tea at Carver Street. The room is the parlour from his palace, exact. She doesn't deny it. She believed then and believes now: *"Controlled conflict saved more lives than it cost. I did the arithmetic. You never do the arithmetic, Isaiah."* **Ending:** he walks out of the real house and, in his palace, takes the chair at the head of the table for himself.
 
-**Ch 12: The Administrator** (Sokolov, Mon May 6). **VS·09.** A letter from her mother reaches her from the CNT by courier: *"I gave you everything, Yevgenia. Even your career."* Every promotion, the coastal command, the leak. Sokolov writes back one line, formally. **Ending:** *"Mother. I am where I should be. It is not where you put me."*
+**Ch 12: The Administrator** (Sokolov, Mon May 6). **VS·09.** A letter from her mother reaches her by courier, on Synthesis diplomatic papers: *"I gave you everything, Yevgenia. Even your career."* Every promotion, the coastal command, the leak. Sokolov writes back one line, formally. **Ending:** *"Mother. I am where I should be. It is not where you put me."*
 
-**Ch 13: Heirs** (Tanaka, Mon May 13). **MT·06, Michiko Tanaka**, is her great-aunt, the technologist of the Annex. **JM·08, Colonel Jerome Morrison**, is Morrison's grandfather, who wrote Principle Five, the calibration grounds. Morrison's hands shake. *Was I prepared?* He calibrated seeding for Continuity (Book 4) and recognised it three times since. Tanaka's case notes on heredity and choice. **Ending:** Morrison: "He never met me. He died when I was two." Tanaka: "Then the clause failed with you." *Case note: heir, declined.*
+**Ch 13: Heirs** (Tanaka, Mon May 13). **MT·06, Michiko Tanaka**, is her great-aunt, the technologist of the Annex. **JM·08, Colonel Jerome Morrison**, is Morrison's grandfather, who wrote Principle Five, the calibration grounds. Morrison's hands shake. *Was I prepared?* He calibrated seeding for Continuity (Book 4) and recognised it three times since. Tanaka's case notes on heredity and choice. **Ending:** Morrison: "He never met me. He died when I was fourteen." Tanaka: "Then the clause failed with you." *Case note: heir, declined.*
 
 **Ch 14: Uncle Tobias** (Julian, Mon May 20, Chronos). **TK·07, Cardinal Tobias Kovač**, is eighty-one and living quietly in Chronos. Julian, Adrian and Helena go to him together. He was the moral cover: *"Correction is compassion."* **Mera was his heir**, the Chronos hand whose key countersigned the Gap, and whose "death" was staged. Tobias won't flee: *"I'm too old to be anyone's enemy."* He confesses to Helena, the niece whose life's work was his sentence. **Ending:** Julian, who was destroyed by his great-uncle's heir, asks the only question he has left: "Did you know it would be me?" Tobias: "No. That was Mera's choice. He liked you."
 
@@ -301,13 +303,13 @@ Kira lays Vance's page beside it and sees Seven for what it was: the one weaknes
 ### PART THREE: THE DISCLOSURE (Jun 17 – Jul 22)
 *Theme: publish by many hands, and be pre-empted; the remedy; the heir.*
 
-**Ch 17: Many Hands, Once More** (Kira, Mon Jun 17). The plan is not an upload. Hand copies of the Annex, the Register and Kerr's page will go out on the same day in every nation, through the journal networks, Isaiah's press, Martinez's SFW and Elena's paper routes into the CNT. The date is set: **Mon Jul 15, 14:00**. The heirs, strangely, are silent. **Ending:** Kira: "They haven't moved." Marcus: "That's what worries me."
+**Ch 17: Many Hands, Once More** (Kira, Mon Jun 17). The plan is not an upload. Hand copies of the Annex, the Register and Kerr's page will go out on the same day in every nation, through the journal networks, Isaiah's press, Kovač's paper keepers in Chronos, Martinez's SFW and Elena's paper routes into the CNT (a first forty sets on the day; the main paper goes in under containment). The date is set: **Mon Jul 15, 14:00**. The heirs, strangely, are silent. **Ending:** Kira: "They haven't moved." Marcus: "That's what worries me."
 
 **Ch 18: Cast** (Martinez, Mon Jun 24, the SFW). **Martinez's POV** (President since 2111). She reads the Register: *"let there be enemies outside them all."* The SFW's dead in the Battle of Blood were "cast" in a part. She agrees to publish in the SFW on July 15, and she is also tempted, deeply, by anything that would guarantee there's never another war. **Ending:** a Synthesis envoy asks for a private meeting "on a durable peace".
 
 **Ch 19: The Orchard** (Elena, Mon Jul 1). Elena prepares the paper routes into the CNT, whose people have no interfaces and can read what they are handed. At the farmhouse she stands with Old Songs by Alexei's grave, under the plum trees. For the first time she tells someone what Alexei said about her ("Tell Elena I love her"), and what she didn't say back in time. **Ending:** Old Songs hums "The Names", and she sings Alexei's verse herself.
 
-**Ch 20: Disclosed** (Isaiah, Mon Jul 8). **Twist 3.** At 14:00, a week before the heroes' date, **Synthesis publishes the Register**. The heirs publish it themselves, with a *Statement of the Heirs* that is calm, sorry and humane, and **a remedy**: the **World Record**. It would merge every nation's record into one under Synthesis's Meta-Judge, so that "no nation can ever be written by another again". Isaiah is scooped by the people he was about to expose. **Ending:** he recognises the shape from Book 6. *Disclose first, in your own words, with your own remedy attached.* Everyone knows that page by now.
+**Ch 20: Disclosed** (Isaiah, Mon Jul 8). **Twist 3.** At 14:00, a week before the heroes' date, **Synthesis publishes the Register**. The heirs publish it themselves, with a *Statement of the Heirs* that is calm, sorry and humane, and **a remedy**: the **World Record**. It would merge every nation's record into one under Synthesis's Meta-Judge, so that "no nation can ever be written by another again". Isaiah is scooped by the people he was about to expose. At 17:00 **Chen Zhao confesses first**, on the Ministry steps: CZ·11 is his mark, and he commends the remedy. He stays Minister. **Ending:** Isaiah recognises the shape from Book 6. *Disclose first, in your own words, with your own remedy attached.* Everyone at the table knows that page by now.
 
 **Ch 21: The Peace Everyone Wants** (Marcus, Mon Jul 15). The day the heroes meant to publish. The World Record is spreading like relief.
 - **Martinez** is inclined.
@@ -320,7 +322,7 @@ The heroes publish anyway, by hand, as planned: the same pages, plus Kerr's. It 
 
 **Ch 23: One Source, Again** (Kira, Fri Jul 19). Kira and Nikolai take the World Record's published architecture apart. It **restores every nation from one source**, and that source's reconciliation traffic runs **east, to the site in the CNT**. The heirs' remedy would put the whole world's record under the design's hand. It is Principle One: *"Singular truth, mechanically verified, universally enforced."* **Ending:** Kira: "It's the Concordance, for everyone." Marcus: "Then we say no to peace. That's going to be hard."
 
-**Ch 24: The Heir** (Marcus, Mon Jul 22). **Twist 4.** Chen Zhao asks to see him in the empty Commission chamber after hours. He is warm and old and unafraid. He offers Marcus **the chair of the World Record**. ***"You are my heir, Marcus. You always were."*** The clause; a Chen boy who believed; the Believer at 0.73, requested; the restorer; the commissioner; the man the world trusts to keep its one record. ***"We made you a hero. We needed you."*** **Ending:** Marcus doesn't answer. He takes out his list, and for the first time in the series he writes nothing on it.
+**Ch 24: The Heir** (Marcus, Mon Jul 22). **Twist 4.** Chen Zhao asks to see him in the empty Commission chamber after hours. He is warm and old and unafraid. He offers Marcus **the chair of the World Record**; the deputy chair at his right, kept empty since Aug 2110, was the heir's seat all along. ***"You are my heir, Marcus. You always were."*** The clause; a Chen boy who believed; the Believer at 0.73, requested; the restorer; the commissioner; the man the world trusts to keep its one record. ***"We made you a hero. We needed you."*** **Ending:** Marcus doesn't answer. He takes out his list, and for the first time in the series he writes nothing on it.
 
 ---
 
@@ -337,15 +339,15 @@ The World Record is born crippled: three nations on one source, and the others k
 
 **Ch 27: The Checkpoint** (Sokolov, Mon Sep 2). The Architects and heirs **flee east**: Chen Zhao, Sarah Okonkwo, and others unnamed. The route runs through Sokolov's command. She has the authority to stop them. She lets them pass, formally, **by order**, because arrested they become martyrs, and gone they become an address. **Ending:** Chen Zhao, in the car window at the barrier: "Colonel." Sokolov: "Minister. Traffic normal."
 
-**Ch 28: A Better Enemy** (Isaiah, Mon Oct 7). The broadcast from the CNT: Timur Aslanov, Viktoria Sokolov, and **Mera**, alive, never dead. *"You united against us. You need an enemy. We have only given you a better one. **You just changed the enemy.**"* Isaiah writes the answer he has spent his life learning to write, with no condemnation and no arithmetic, only the names and what they did. **Ending:** Mera's face on the screen is the face from a Chronos staff photograph of 2107. Julian, watching in Chronos, says nothing at all.
+**Ch 28: A Better Enemy** (Isaiah, Mon Oct 7). The broadcast from the CNT: Timur Aslanov, Viktoria Sokolov, and **Mera**, alive, never dead. Viktoria speaks the argument: *"You united against us. You need an enemy. We have only given you a better one. **You just changed the enemy.**"* Isaiah writes the answer he has spent his life learning to write, with no condemnation and no arithmetic, only the names and what they did. **Ending:** Mera's face on the screen is the face from a Chronos staff photograph of 2107. Julian, watching in Chronos, says nothing at all.
 
-**Ch 29: Containment** (Dmitri, Tue Oct 15). The pressure to invade the CNT is enormous, and the SFW and Veridica could. In the cabinet Dmitri, Sokolov, Martinez by link, and Marcus argue for **containment, not invasion**. ***"If we invade, we prove them right."*** Old line: *"The cycle breaks here. We defend, but we don't attack."* And they send **paper**: the Register, the Annex and Kerr's page, hand-copied, by Elena's routes into a country whose people have no interfaces and have never been allowed to read their own history. **Ending:** a first report comes back from inside the CNT: a hand copy of p. 39, found pinned to a Council noticeboard in a provincial town.
+**Ch 29: Containment** (Dmitri, Tue Oct 15). The pressure to invade the CNT is enormous, and the SFW and Veridica could. In the cabinet Dmitri, Sokolov, Martinez by link, and Marcus argue for **containment, not invasion**. Marcus: ***"If we invade, we prove them right."*** Martinez: *"The cycle breaks here. We defend, but we don't attack."* And they send **paper**: the Register, the Annex and Kerr's page, hand-copied, by Elena's routes into a country whose people have no interfaces and have never been allowed to read their own history. **Ending:** a first report comes back from inside the CNT: a hand copy of p. 39, found pinned to a Council noticeboard in a provincial town.
 
-**Ch 30: The Lakeshore Air** (Marcus, Fri Nov 15). The Day of Testimony, nine years after the Lost Hour. The stone, the names, the crowd. Tamsin is on Marcus's shoulders. Old Songs is seventy-seven, officially dead, and very frail. He sings **the Lakeshore Air, complete**, once: the ferry verses, the lullaby, "Given Gently", and a last verse he has written for the day (below). It lifts at the end like a question. The crowd, who have learned to, don't answer it. They sing it back. **Ending:** Marcus's lists, and the last entry of the series in fact-entry form: *Nov 15, 2115. Central plaza. Involved parties: everyone present. Event: the song. Verification: we were all there.*
+**Ch 30: The Lakeshore Air** (Marcus, Fri Nov 15). The Day of Testimony, nine years after the Lost Hour. In the morning the Compiler's copy, whole, is shelved at the Historical Archive at **Periodicals, Governance, 114**. Old Songs writes the card, and Kira places Seven last. Copy X stays with the court. The stone, the names, the crowd. Tamsin is on Marcus's shoulders. Old Songs is seventy-seven, officially dead, and very frail. He sings **the Lakeshore Air, complete**, once: the ferry verses, the lullaby, "Given Gently", and a last verse he has written for the day (below). It lifts at the end like a question. The crowd, who have learned to, don't answer it. They sing it back. **Ending:** Marcus's lists, and the last entry of the series in fact-entry form: *Nov 15, 2115. Central plaza. Involved parties: everyone present. Event: the song. Verification: we were all there.*
 
 ### Epilogue: Twenty Years (Tue Nov 15, 2135)
 Rotating vignettes:
-- **Old Songs** died in **January 2116**, at the farmhouse, and is buried in the plum orchard between Vance and Alexei. His name is on the stone.
+- **Old Songs** died in **January 2116**, at the farmhouse, and is buried in the plum orchard between Vance and Alexei, in the space left between their graves. His name is on the stone.
 - **Children at the stone**, who don't know who wrote it, sing his round **"Many Hands"**. It can't be sung by one voice.
 - **Tamsin Chen** (22) keeps a journal, countersigned by strangers.
 - **Marcus** (58) and **Kira** (56), gray.
@@ -377,7 +379,7 @@ He sings the old verses and the hidden ones together, once. For the lyrics of th
 | **1. The man at 14:21 let her live** | Book 5 (the bandage before 14:20; cremation; "nobody who can't be seeded"; the gray coat); Book 8 Epilogue ("Not even hers") | Ch 6 |
 | **2. The enemy was built** | Principle Two; the Annex (borders); Book 8 ("the signal ran east"); `nations.md` (CNT cyber; "some theorise…"); Ch 3 (the tended garden) | Ch 16 |
 | **3. They disclose first** | Book 6 (the Concordance); Principle Six (Book 6–7); Ch 1 (the Counselor proposal); Ch 13 and 16 (LW·03's foundation); Ch 17 (the heirs' silence) | Ch 20 (the architecture in Ch 23) |
-| **4. The heir** | Book 4 (the Believer "requested"; 0.73); Book 5 ("cousin"; the appointment); Book 7 ("our restorers"); Book 8 (the Commission offered); Ch 1 (the chair kept open); the Annex's heirs clause (Ch 9) | Ch 24 |
+| **4. The heir** | Book 4 (the Believer "requested"; 0.73); Book 5 ("cousin"; the appointment); Book 7 ("our restorers"); Book 8 (the Commission offered); Ch 1 (the deputy chair kept open); the Annex's heirs clause (Ch 9) | Ch 24 |
 | **Closing: a better enemy** | Principle Two; Twist 2 | Ch 28 |
 
 ## POV Count

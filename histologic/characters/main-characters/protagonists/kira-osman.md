@@ -177,3 +177,7 @@ Old file, usable: "Every fact in the factorepo was put there by a human. Remembe
 | Sarcastic catchphrases | Precise, cold when angry, "Both." | Book 4 voice |
 | Age 25 (Story 02) | 26 at arrest, 27 in 2106 | `SERIES-OVERVIEW.md` |
 | Old book numbers (06/07/08) | Books 6–9, provisional | Series order |
+
+## Update: Book 9 Chapter Summaries (Sept 2026)
+Settled in `novels/09-architects-of-chaos/chapters-summaries/` (the README decisions win if anything here differs):
+- **Book 9:** she keeps Vance's Seven page until Nov 15, 2115, and places it last in the box shelved at Periodicals, Governance, 114 (Ch 30).

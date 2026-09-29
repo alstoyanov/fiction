@@ -29,7 +29,7 @@ He is not a mystic and not a fool. He is a very old, very tired, very sharp arch
 | 2062 | Joins the capital's Historical Archive as a junior archivist, under his mentor **Anselm Kerr**, a senior archivist. |
 | 2063 | Catalogues three issues of the *Journal of Post-Democratic Governance*. The anonymous essays frighten him, and he sets passages of them to old tunes, the way he sets everything he wants to keep. At the Archive he gets to know a brilliant young systems theorist who comes in to read: **Elise Vance**. They argue about the essays and become friends. She wrote none of them; she reads each issue as it comes out, closely, the way you read something you mean to build on. He never suspects that she is studying them for a reason, or that she will compile them into a design. |
 | 2066–2067 | The journal is classified and erased. Kerr, who had contributed an essay and then withdrawn (one of the five struck-through marks in the Register), is corrected and never recovers. Mikhail understands what is happening and starts hiding his memory in songs on purpose. Vance stops coming to the Archive. |
-| 2067 | His first correction, for "proximity to classified material". Mild. He comes out whole, and he knows why: the songs. |
+| 2068 | His first correction, the year after Kerr's (Book 5 Ch 30: "the year after"), for "proximity to classified material". Mild. He comes out whole, and he knows why: the songs. |
 | 2069–2074 | Teaches history and music at a lakeshore school. Marries **Anya**. A daughter, **Katya**, is born in 2071. |
 | 2074 | Anya and Katya die in one of the early border fact storms. (It was manufactured, though he doesn't know that until later books.) |
 | 2076 | His second conviction, for **"dangerous nostalgia"**: teaching students that pre-Histologic songs held truths the factorepo couldn't record. |
@@ -255,3 +255,15 @@ From `plots/08-battle-of-blood-full.md`:
   - "The Names" grows every night with the war's dead from every side, including Alexei (Ch 20, where his voice breaks for the first time), Nora Chen and **Elise Vance**.
   - **His one speech** is at Vance's burial in the farmhouse orchard (Ch 29).
   - She leaves him a rhymed riddle about where her copy is. He sets it to the Lakeshore Air, and solves it in Book 9.
+
+## Update: Book 9 Chapter Summaries (Sept 2026)
+Settled in `novels/09-architects-of-chaos/chapters-summaries/` (the README decisions win if anything here differs):
+- **Book 9:**
+  - He solves the riddle (Ch 2, 7).
+  - He sits on the registry floor when Kerr's page is found (Ch 8).
+  - The book's one riddle is his: *"Twelve shepherds tend the flock. Who tends the shepherds?"* (Ch 10).
+  - At Alexei's grave with Elena (Ch 19).
+  - His one speech, on Kerr (Ch 25).
+  - The complete Lakeshore Air (Ch 30).
+- **The green lamp** was at his own desk at the Archive (Book 5 Ch 30).
+- **Death and burial:** he dies Mon Jan 20, 2116, and is buried in the plum orchard in the grave's width left between Vance and Alexei.

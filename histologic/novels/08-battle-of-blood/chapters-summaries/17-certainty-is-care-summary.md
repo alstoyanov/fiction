@@ -21,7 +21,7 @@
   - **The preamble:** legal language, then an unattributed quotation.
   - **The annex:** the broadcast schedule by district. Its first three lines are the three early districts, *continued from 24 February 2110 under emergency information powers*; then one district a week from Mar 24. It matches her onsets to within days. **The broadcasting began three weeks before the law that authorised it.** The Order legalised it after the fact. Tanaka writes that down as a finding, not a feeling.
   - **The technical sign-off:** *Dr. Reeves, Director of Stabilisation Broadcasting*.
-- **The page.** Clipped behind the annex is **one typed page**: chipped *e*, copy numeral **X** in the lower right, page **19**. Maya: *"X. Like the intake pages."* (Book 6.) The circle's notes of copy VII's contents page put Principle Four at p. 18. The page carries no mark: this is the middle of the principle, not its end.
+- **The page.** Clipped behind the annex is **one typed page**: chipped *e*, copy numeral **X** in the lower right, page **19**. Maya: *"X. Like the intake pages."* (Book 6.) The circle's notes of copy VII's contents page put Principle Four at p. 18. The page carries no mark: it is an odd page in the middle of the principle.
 - **Tanaka reads it aloud,** slowly, the way she read the protocol at her kitchen table. It matches the preamble word for word (manuscript §4.6):
   > *"Do not punish the doubter; heal him. Punishment makes martyrs; correction makes converts. The aim is not obedience but belief: a citizen who, corrected, experiences his certainty as his own. Correction is compassion. Certainty is care."*
 - **Recognition.** In *"experiences his certainty as his own"* she hears Continuity's aim, *genuine belief, experienced as self-originated*: the protocol she refused in 2105 was a paraphrase of this page. She sets the page down the way she once set down her cup. In *"Certainty is care"* she hears forty-one patients. Morrison: *"He used to say 'healing'."* Maya cries and is furious at once: *"Somebody put this in my queue."*
@@ -34,7 +34,7 @@ Night, her office. She writes the diagnosis and stops at the last line: *Aetiolo
 ## Notes
 - **(Twist 2 reveal.)** It pays off Book 4 (Phase Two), Book 7 (*Phase: justification*), Ch 6, Ch 12 (the file's title, and the recital's "since 24 February"), Ch 14 (Reeves, and the Feb 24 allocation) and Ch 15.
 - **Dating (README decision 11):** pilot broadcasts in three capital districts from **Mon Feb 24**, under emergency information powers; the Order signed **Mon Mar 17** legalised them after the fact; district-by-district broadcasting from **Mon Mar 24**. That it started before any law existed is part of the horror.
-- **Manuscript (README 17, 32):** only Principle Four. Page 19 carries no mark (Four's mark is at its end, p. 22, which is not in the file), so WZ·10 is not seen in this book. Copy X is tied to no one. The unnamed slip echoes Book 6's "no visitor"; don't explain it.
+- **Manuscript (README 17, 32):** only Principle Four. Page 19 carries no mark (marks fall on even pages and at a principle's end, and p. 19 is neither), so WZ·10 is not seen in this book. Copy X is tied to no one. The unnamed slip echoes Book 6's "no visitor"; don't explain it.
 - **Morrison's shaking hands** are deliberate: his trap rule is that if they shake again, it must mean something.
 - **Voice:** italic case notes; "James" only under strain.
 - Sources: plot v2 Ch 17; README 5, 11 and 17; manuscript §2, §4.6 and §5; `dr-yuki-tanaka.md`; `secondary-allies.md` §1; Book 6 README 6.

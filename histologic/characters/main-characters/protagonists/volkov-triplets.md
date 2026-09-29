@@ -211,3 +211,11 @@ POV chapters: **Alexei 7, 19**; **Nikolai 9, 20**; **Dmitri 13, 23** (details in
 ## Update: Book 8 Plot v2 (Sept 2026)
 From `plots/08-battle-of-blood-full.md`:
 - **Book 8, settled:** Alexei dies on Wed Apr 23, 2110, covering Isaiah's crossing through the siege lines. His last words: *"Tell Elena I love her. Tell Dima he was first by thirty seconds, and I never minded."* Dmitri tells Nikolai, who lost the rooftop memory: *"I was. By thirty seconds."*
+
+## Update: Book 9 Chapter Summaries (Sept 2026)
+Settled in `novels/09-architects-of-chaos/chapters-summaries/` (the README decisions win if anything here differs):
+- **Book 9:**
+  - Dmitri holds no title in 2115.
+  - **AV·05 Arkady Volkov** was their grandfather's brother's son, Ivan's cousin.
+  - Dmitri refuses revenge (Ch 22) and argues for containment (Ch 29).
+  - Nikolai traces RA·12 (Ch 16).

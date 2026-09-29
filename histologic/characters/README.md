@@ -87,8 +87,8 @@ Minor characters (Samuel Ferris, Hanna Marsh, Pavel Ionescu, Teo, Brandt, Priya,
 - **Settled by the Book 6 plot (v2):** Oskar (Maitland, First Minister), Constance (Aubry, Chronos), Ruth and Wren (Calloway), Emmet (Varley), Soren (Vale), Ji-won (Park); alias Margit Kerr (Vance).
 - **Settled by the Book 7 plot (v3):** Augustin (Mera, Julian's predecessor), Beatriz (Martinez, SFW intelligence); the place Gullhaven.
 - **Settled by the Book 8 plot (v2):** Omid (Farahani, SFW commander), Nora (Chen, SFW intelligence, Marcus's cousin).
-- **Settled by the Book 9 plot (v2):** Arkady (Volkov, AV·05), Michiko (Tanaka, MT·06), Jerome (Morrison, JM·08), Rustam (Aslanov, RA·12), Timur (Aslanov, CNT Chairman), Tamsin (Chen, born 2113).
+- **Settled by the Book 9 plot (v2):** Arkady (Volkov, AV·05), Michiko (Tanaka, MT·06), Jerome (Morrison, JM·08), Rustam (Aslanov, RA·12), Timur (Aslanov, CNT Chairman), Tamsin (Chen, born 2113); the struck-through contributors Sigrun (Ahlgren), Emeka (Obi), Lorenzo (Bassi), Matthias (Roe).
 - **Suggested, not settled:** Rafael Ostrander, Lev Petrov, Oren Falk, Rosa Santos (for Lucia).
 - **Still open:** none of the Architect marks (all settled in Book 9).
-- **Near-clashes to watch:** Iver/Ivan/Ines; Lucia/Lia/Lucian; Reyna/Reyes/Reeves; Lind/Lang; Pell/Pavel; Halvorsen/Holt; Liu Wei vs the surname Wei; Maya Reeves vs "Maya Tanaka" (why MT·06 is being renamed).
-- **Shared surnames that need a line of explanation on the page:** Chen (Marcus, Chen Zhao: "related somewhere"), Petrov (Old Songs is not related to Dr. Yuri Petrov), Tanaka (Yuki and MT·06, kinship open), Kovač (Helena, Adrian, Julian, Tobias: one family).
+- **Near-clashes to watch:** the Liu Wei Endowment (Book 9) vs the Synthesis Institute for Historical Methods; Iver/Ivan/Ines; Lucia/Lia/Lucian; Reyna/Reyes/Reeves; Lind/Lang; Pell/Pavel; Halvorsen/Holt; Liu Wei vs the surname Wei; Maya Reeves vs "Maya Tanaka" (why MT·06 is being renamed).
+- **Shared surnames that need a line of explanation on the page:** Chen (Marcus, Chen Zhao: "related somewhere"), Petrov (Old Songs is not related to Dr. Yuri Petrov), Tanaka (Yuki and MT·06 Michiko, her great-aunt), Kovač (Helena, Adrian, Julian, Tobias: one family).

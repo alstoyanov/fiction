@@ -164,3 +164,12 @@ From `plots/06-the-distributed-truth-full.md`:
 ## Update: Book 8 Plot v2 (Sept 2026)
 From `plots/08-battle-of-blood-full.md`:
 - **Marcus's cousin, settled as Colonel Nora Chen** (SFW intelligence, born about 2072, defected in 2095 after her father's correction). In Book 8 she handles the Veridican leak, turns in the Spire, and dies in the core fire on Wed May 21, 2110. **Martinez** negotiates the SFW withdrawal after **General Omid Farahani** is killed. During the negotiation (Ch 30) she is shown Principle Two from the heroes' notes of copy VII and learns that the SFW's place as the enemy was designed ("Then we were cast."). This is her SFW turn, and it sets her up to lead the SFW in Book 9.
+
+## Update: Book 9 Chapter Summaries (Sept 2026)
+Settled in `novels/09-architects-of-chaos/chapters-summaries/` (the README decisions win if anything here differs):
+- **Martinez (Book 9):**
+  - SFW President.
+  - Her POV is in Ch 18 ("We were cast").
+  - She votes against the World Record.
+  - *"The cycle breaks here. We defend, but we don't attack."* (Ch 29).
+- **Maitland (Book 9):** tempted by the World Record, persuaded offstage, and votes against.

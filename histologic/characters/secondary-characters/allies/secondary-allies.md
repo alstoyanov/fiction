@@ -156,3 +156,7 @@ No new names are needed yet. Notes carried forward from the old file:
 | Kade listed as an ally, "later becomes reformer" | Moved to opposition. No reform arc | Stories 01–02; Book 5 Ch 4, 19 |
 | Maya Reeves and Singh profiled here | Removed; they have their own files | They are major characters in Book 5 |
 | No Adrian, Hayes or Bell | Added | Story 02; Book 4; Book 5 |
+
+## Update: Book 9 Chapter Summaries (Sept 2026)
+Settled in `novels/09-architects-of-chaos/chapters-summaries/` (the README decisions win if anything here differs):
+- **Morrison:** born about 2067. His grandfather Jerome (JM·08) died in 2081, when Morrison was fourteen. They never met, because his father was estranged from the grandfather (Book 9 Ch 13, where the case note reads *"heir, declined"*).

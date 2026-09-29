@@ -166,3 +166,7 @@ From `plots/09-architects-of-chaos-full.md`:
   - She spent nine years in unaligned territory and Chronos, watching who restores it.
   - She returns on Mar 15, 2115, through Tanaka.
   - She was used, spared and silent, and then she chose to return.
+
+## Update: Book 9 Chapter Summaries (Sept 2026)
+Settled in `novels/09-architects-of-chaos/chapters-summaries/` (the README decisions win if anything here differs):
+- **Resolved:** the knock at 13:59:58 was the Minister's private secretary, bringing the afternoon folder. Wei's card was logged at the side entrance at 14:21:07, and he reached her door at about 14:23. Her telemetry was spoofed to flatline. The cremated body was an unclaimed woman from a Ministry mortuary, whose name Singh never learned.
