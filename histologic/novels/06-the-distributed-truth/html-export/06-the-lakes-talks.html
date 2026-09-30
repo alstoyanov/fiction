@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Distributed Truth - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Distributed Truth</h1>
+            <div class="novel-meta">Novel 06 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="05-the-compilers-voice.html" class="nav-button">← Previous: Chapter 5: The Compiler's Voice</a>
+            <div class="nav-center">Chapter 6: The Lakes Talks</div>
+            <a href="07-aunt-helena.html" class="nav-button">Next: Chapter 7: Aunt Helena →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 6: The Lakes Talks</h1>
+<p><em>Monday, November 12 – Thursday, November 15, 2108. The Old Customs House, Saltmarsh Crossing, the neutral zone</em></p>
+<hr>
+<p><em>November twelfth, 2108. Oh-nine-hundred hours. Old Customs House, Saltmarsh Crossing, neutral zone. Involved parties: Veridican delegation, three; Chronos delegation, four; Synthesis mediator and secretariat. Purpose: talks. Status: opening.</em></p>
+<p>It was a true entry. Marcus had checked every word of it in the car. It was only not the whole entry, and he had spent the forty minutes of marsh road deciding that an entry could be true without being whole, and not liking where the decision left him.</p>
+<p>On Thursday, the eighth, at the end of his week, he had gone back up to the top floor of the Cabinet Office and said two things. He would lead the delegation. And the annex, the file with no signature line, he would study.</p>
+<p>Maitland had heard <em>yes</em>. Marcus had watched him hear it: the chin coming off the fist, the big tired body settling back in its chair like a man hearing a number he liked. Chen Zhao had beamed. Wei, at the side table with his tablet, had looked up and said pleasantly, "That's all anyone could ask." And nobody had asked anything else, which was how Marcus knew that <em>study</em> had been the right word, and that he ought to be more frightened of it than he was.</p>
+<p>Kira had known since the night of the first. He had come home at half past eleven and put the folder on the kitchen table and told her everything, in order, because nobody had asked him not to, and because he had noticed that nobody had asked. She had read the file through once. She had turned to the last page, the photograph, and looked at the caption for a long time. Then she had asked one question.</p>
+<p>"Kovač?"</p>
+<p>He had not been able to answer it. He still could not. She had not asked again. She had been very quiet since, in the way Kira was quiet, which was not the same as saying nothing. It was more like a room where the heating has been turned off: everything still in its place, and colder.</p>
+<hr>
+<p>The Old Customs House stood on a spit of higher ground in the middle of the marsh, where the old road had once crossed from one shore's jurisdiction to the other's and paid for the privilege. It was pre-Histologic, two storeys of gray stone with tall sash windows and a slate roof gone green, and it was the only building for a kilometre in any direction. The fog had come up off the reeds before dawn and not lifted. On a pole above the door the Synthesis flag hung wet and nearly colourless, doing its best.</p>
+<p>Inside, the Synthesis Institute had made it into something else. The conference rooms on the ground floor had been lined with shielding, pale panels behind the old plaster, so that inside them no Chronos interface could log and no broadcast from either shore could reach. Marcus felt nothing when he crossed the threshold; a Veridican interface received, it did not record, and he had spent most of a year in a shielded wing and knew the feeling of a room with the sky cut off. But he watched the Chronos delegates come in after him and saw it on them. The first Administrator hesitated at the door, half a step, the way a person hesitates who has walked from a noisy street into a church. The second touched the place behind her ear, very briefly, and took her hand away. A small deafness. They sat down like people who had left something running at home.</p>
+<p>Behind the house, through a door at the end of the front hall, there was a garden. Walled, old brick, with a gravel path and dead roses and a wooden bench. Against the south wall a pear tree had been trained flat, its branches tied out along wires in a pattern of horizontal arms, bare now for the winter. The garden was not shielded. The Synthesis secretariat had been very clear about that in the briefing notes: in the garden, anything a Chronos citizen saw or heard went into his log, as it did everywhere else in his life.</p>
+<p>Marcus read the note twice. Then he put it away.</p>
+<hr>
+<p>The mediator was Professor Park Ji-won, and he liked her at once, which he noted as a fact without knowing yet what kind.</p>
+<p>She was seventy-four, small and white-haired, with a round, lined, amused face and a cardigan buttoned wrong. She had a pot of tea brought to the table before anything else was said, and poured it herself, and pushed the first cup across to the Chronos side and the second to Marcus's, and told a story about a mediation in the southern Synthesis states where the delegates had refused to sit at the same table for a week, and had in the end been reconciled by a shared dislike of the soup.</p>
+<p>"Perhaps that will not be necessary here," she said. "Perhaps the soup is better."</p>
+<p>She said <em>perhaps</em> the way other people breathed. At the first break, stirring her tea, she told Marcus that she had read in the capital once, as a young scholar. "The old Historical Archive. Perhaps in the sixties. Perhaps a little later. It was a very beautiful room. I remember the lamps." She smiled. "I remember the lamps better than anything I read."</p>
+<p>He did not ask which lamps.</p>
+<hr>
+<p>The positions took the first morning.</p>
+<p>Chronos wanted what it had wanted since January: a joint verification of the December interval, the seventeen minutes, run inside its own backup architecture under the Temporal Archive's senior reconciliation key, with Veridican witnesses present to watch every step. The first Administrator set it out without heat. Chronos did not need to prove the Gap; its Judge had already determined it, at 0.94. It asked only that Veridica come and see for itself.</p>
+<p>Watch, Marcus thought. Watch its own guilt confirmed, in a room Chronos owned, under a key Chronos held.</p>
+<p>The Veridican answer was Wei's, in Marcus's mouth. Veridica did not accept the attribution. The technique Chronos described had died with Dr. Reeves's conviction; its structure had been in the Commission's public archive for a year, where anyone might have copied it; and a state that recorded every heartbeat of four million people was in an unusual position to fabricate seventeen minutes of its own silence. Veridica would welcome a verification. Under conditions.</p>
+<p>He did not say what conditions. He had them in the annex, in his case, under the table. <em>Re-verify from the true source.</em> One key, one man, and the war over by determination in a month.</p>
+<p>It came to him slowly, over the morning, and then all at once: both of them wanted the same thing. Both states wanted the senior key turned in the same lock. Chronos wanted it turned so that Veridica would watch its guilt made permanent. Veridica wanted it turned so that the guilt would come undone. Opposite reasons, the same key. He wrote <em>both want the key</em> on his pad and looked at it.</p>
+<p>At the end of the Chronos row, the fourth delegate, the one who had not yet spoken, was looking down at his own hands.</p>
+<hr>
+<p>He was introduced after lunch as the Chronos delegation's technical adviser: Senior Historian Julian Kovač, of the Temporal Archive.</p>
+<p>He was exactly the photograph. Narrow, attentive face; dark hair cut short; very blue eyes; a gray cardigan under a plain archivist's jacket. He spoke for eleven minutes on the Archive's reconciliation procedures, and he was precise and clear and gentle, and at one point, explaining the tolerances of the Archive's clocks, he said without changing his tone, "In Chronos we can tell you that a meeting began at fourteen hundred hours, zero minutes, zero seconds and four hundred and twelve nanoseconds. We have never once been able to tell you why it started late." The Synthesis secretariat laughed. The second Administrator did not. Julian looked, briefly, very pleased with himself, and then embarrassed to be caught looking pleased, and went on.</p>
+<p>At the first break he came round the end of the table with a cup of Park's tea in each hand and gave one to Marcus.</p>
+<p>"Commissioner Chen." He had a light, clear voice with the Chronos flatness under it, and the faintest trace of something else, older. "I've wanted to meet you for two years. I'm sorry. That sounds like something one says." He considered. "It's also true. Fourteen-oh-eight, I think? I read your testimony."</p>
+<p>Marcus held the tea.</p>
+<p>"Yes," he said. "Fourteen-oh-eight."</p>
+<p>"The desk you kept the entries at. In your head. In the white room." Julian said it quietly, not as a man showing off his reading, but as one naming a place where something had happened, the way you name a street. "I cited you eleven times in the monograph. I'm told that's excessive. I'm told a great many things are excessive."</p>
+<p>That night, in his room at the Synthesis guesthouse along the marsh road, Marcus opened the Commission's public archive on his tablet and searched his own testimony from the hearing. It took him four minutes. <em>Fourteen-oh-eight.</em> It was there, twice, in his own voice, transcribed. Anyone in the world could have read it.</p>
+<p><em>CHECKED</em>, he wrote.</p>
+<p>He sat for a while with the tablet on his knee. He had been flattered. A stranger from across the lake had read his worst year and remembered the number of his desk, and he had been flattered by it, like a student. He was ashamed of that. He was also, underneath the shame, still flattered, and he was ashamed of that too, and he wrote neither of them down.</p>
+<hr>
+<p>Julian's aide was a young protocol officer with a tablet and very correct shoes, who was never introduced by name and did not seem to expect to be. At every break the aide appeared at Julian's elbow and said, with perfect courtesy, that the delegation's protocol required informal contact between delegates to take place in the shielded rooms, and indicated the small side room off the main chamber, with its two armchairs and its jug of water.</p>
+<p>And every time, Julian said, "Of course," and walked Marcus to the door of the side room, and stopped.</p>
+<p>"I'm sorry," he said, the first time. "I can't. I can't think in a room that doesn't remember." He smiled, a little helplessly. "It's like trying to talk with cotton in one's ears. Do you mind very much?" And he turned and went down the front hall to the garden door, and after a moment Marcus followed him, and the aide stood in the hall with the tablet and did not follow either of them.</p>
+<p>So they talked in the garden. Every break, for four days. On the wooden bench in front of the pear tree, in the fog, with their coats buttoned and their tea going cold in their hands.</p>
+<p>Marcus knew what that meant. Every word he said on that bench went into Julian's log, timed to the nanosecond, and would be there for as long as Chronos stood. He told himself that it did not matter. He said nothing on the bench that he would not have said at the table. He told himself that too.</p>
+<hr>
+<p>The questions came one at a time, easily, in the gaps between other things.</p>
+<p>On Monday afternoon, watching a heron go over the wall into the fog: "What did you want to be? Before you were a historian."</p>
+<p>On Tuesday, with the gravel wet under their shoes: "Who taught you to keep records? Properly, I mean. Not the job. The habit."</p>
+<p>On Wednesday, near the end of the long session on the broadcast overlap, when both of them were tired: "Who still writes to you?"</p>
+<p>Marcus answered them. He answered them truthfully, because it had not occurred to him to do anything else, and because the truth was easier to keep straight.</p>
+<p>He did not know what he had wanted to be. He said so. He had reached for it and found a smooth place where the answer should have been, and it might have been one of the holes, and it might simply have been that he had never wanted anything else. His mother had taught him to keep records. She had marked essays in green ink and carried them home in a canvas bag, and made him write down what he had done each day before he could have his supper, and he had thought it was a punishment until he was twelve. Kira wrote to him. In the journal, at the kitchen table, when there were things she could not say aloud. And Isaiah, from the Sovereignty, once a month, long and courteous and very funny.</p>
+<p>It was on Tuesday night, in the guesthouse, that he took out the last sheet in the folder, the plain white one with no heading and no signature, and read the seven questions again.</p>
+<p><em>What did you want to be before you were what you are? Who taught you to keep records? Who still writes to you?</em></p>
+<p>Nearly in order. Nearly word for word.</p>
+<p>He sat on the edge of the bed with the page in his hand for a long time. Then he did the only sensible thing, and explained it to himself. They were the questions anyone would ask. They were what you asked a person you wanted to know, if you were a certain kind of lonely, and had spent your life with records instead of people. Wei's annex had not invented them. Wei's annex had only written down what lonely people asked each other, and handed it to Marcus as a method, and Julian was asking them because Julian was lonely. That was all. That was, if anything, the point of the annex.</p>
+<p>It was a good explanation. It covered every fact he had. He filed it where he could see it.</p>
+<p>And on Wednesday, on the bench, he asked Julian the same questions. Some of them. He did it lightly, the way Julian did, in the gaps, and hated himself a little for each one, because he knew where they came from and Julian did not.</p>
+<p>Julian answered them all, and generously.</p>
+<p>He had wanted to be a lock-keeper, on the old canal behind the house where he grew up. "Nothing goes through a lock without being written in the book. The time, the boat, the direction. I thought it was the most beautiful job in the world." His grandmother had started him, with a pencil and a little book, when he was a boy; after that he had taught himself, he said, because in Chronos nobody had to keep records; everything kept itself. "So I keep the other kind. What I thought about it. There's an annotation layer on the log. Almost nobody uses it. I use it far too much."</p>
+<p>And nobody wrote to him.</p>
+<p>"Nobody," he said, looking at the pear tree. "My log writes to me every morning. It's very thorough." A small pause. "I'm told that's unusual, at my age. Not the log. The nobody."</p>
+<p>Marcus did not write that down either.</p>
+<hr>
+<p><em>Subject asks questions: yes.</em></p>
+<p><em>Subject lonely: yes.</em></p>
+<p><em>Subject trusts me:</em></p>
+<p>He kept the column on the last page of his notebook, in pencil, in the guesthouse at night, under the heading he had given it on Monday in a moment of something like honesty: KINDRED. He told himself it was study. He had said he would study it. This was what studying it looked like: a list, with entries, in his own hand, of a man's loneliness and how far it had come towards him.</p>
+<p>He looked at the third line every night. He did not fill it in. He did not cross it out either, because he did not cross things out; Kira's journal had taught him that. He left it open, with its colon, the way he had once left another entry open for two years, in a white room, because finishing it would have made it true.</p>
+<p>He knew what the column was. He knew what it was the moment he wrote the heading. He wrote it anyway.</p>
+<hr>
+<p>On Wednesday, at the second break, they sat on the bench and looked at the pear tree for a while without talking.</p>
+<p>Its branches ran out flat along the wall in three tiers, level as shelves, each one tied to its wire with a twist of soft green twine. Somebody had shaped it that way over many years. Marcus found himself wanting to say so, and reached for the word for it, the proper word, the gardener's word, and it was not there.</p>
+<p>Not forgotten. <em>Gone.</em> A smooth place where the word had been, the way there was a smooth place where his mother's first name had been, and the first conversation in the library, and the end of a story about the fourteenth floor that he had started telling Kira once and never finished. He had learned not to reach too hard. Reaching made the edges show.</p>
+<p>"Espalier," said Julian.</p>
+<p>Marcus turned his head.</p>
+<p>Julian was not looking at him. He was looking at the tree, with his tea in both hands, and his voice was quite ordinary. "It's trained flat, so it gets all the sun on the wall. Espalier. I always think it looks like a set of shelves somebody forgot to put books on." He drank his tea. "My grandmother had one. Plums, not pears."</p>
+<p>He had not been asked. He had simply seen a man reach for something and not find it, and put it into his hand, and gone on talking about something else so that neither of them had to notice.</p>
+<p>Marcus looked at the tree. <em>Espalier.</em> He had the word now. He would not have it tomorrow unless he wrote it down, and he knew that, and so, he thought, did Julian, who had read his testimony and knew all about the holes.</p>
+<p>He wrote it down that night, on the page opposite the KINDRED column. <em>Espalier. From J.K.</em> Then he looked at the two pages side by side for longer than he meant to.</p>
+<hr>
+<p>Thursday was the fifteenth. The Day of Testimony.</p>
+<p>Park had closed the afternoon session at a quarter to two, so that anyone who wished could watch the readings from the capital. The Synthesis press screen was in the front hall, on a stand by the main door, where the secretariat showed its daily summaries to the journalists who waited in the fog outside. The front hall was not shielded. Everyone knew that. The aide knew it best of all, and stood beside the door of the side room with the tablet, indicating it, as if nothing had changed.</p>
+<p>"Would you watch it with me?" said Julian. "Here, I mean." He nodded at the screen, the plain hall, the old stone floor. "I'd like to see it. I've only ever seen it in the log."</p>
+<p>They stood in the front hall with their coats on, a little apart, and at fourteen hundred the readings began.</p>
+<p>The central plaza. The Lost Hour stone, plain and gray, waist-high by the fountain, with its inscription cut in capitals. A queue of ordinary people in winter coats. A woman reading out the weather on the fifteenth of November two years ago, and what she had made for supper. A boy reading his bus route. An old man reading the names of the people who had been in his shop, and stopping halfway, and starting again. A clerk at a folding table writing each one down by hand, and each speaker signing it, and somebody else signing beside them.</p>
+<p>Marcus had read at the stone last year. He had not read this year. He was here instead, in a customs house in a marsh, with a man he had been sent to use.</p>
+<p>The camera went across the crowd, slowly, the way broadcast cameras did at the end of a reading.</p>
+<p>Kira was in it. Near the front, in her plain dark coat, with her book held flat against her chest in both arms, the way she had held it last year. She was not looking at the camera. She was looking at the stone, and her face was very level, and he knew that face.</p>
+<p>He looked at her on the screen, and then at Julian beside him, watching her too without knowing who she was, and then at the floor. He found he could not look at either of them for long.</p>
+<hr>
+<p>The readings ended at fifteen hundred. The clerk capped her pen. The broadcast went back to the studio, and somebody in the fog outside the door laughed at something, and the hall was a hall again.</p>
+<p>Julian did not move. He was still looking at the screen, at the studio desk and the presenter's bright face, and when he spoke it was quite simply, the way he had said <em>espalier</em>, not to Marcus exactly, but not to anyone else.</p>
+<p>"In Chronos nobody forgets anything," he said. "You can't imagine how lonely it is."</p>
+<p>Marcus could.</p>
+<p>He had spent two years with holes where his life had been. With a smooth place where his mother's name should be, and a word for a tree that would be gone by morning unless he wrote it down. He knew exactly what it was to be alone inside your own record, to have no one who remembered with you. He could imagine it perfectly. He had lived it from the other side.</p>
+<p>And it was exactly the loneliness the annex had told him to use.</p>
+<p>He stood in the unshielded hall beside a man whose log was taking down every second of this, and understood that he could, now. He had the questions and the answers and the word for the tree. He had the column with its open colon. He could use it tomorrow.</p>
+<p>That was the problem.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="05-the-compilers-voice.html" class="nav-button">← Previous: Chapter 5: The Compiler's Voice</a>
+            <div class="nav-center">Chapter 6: The Lakes Talks</div>
+            <a href="07-aunt-helena.html" class="nav-button">Next: Chapter 7: Aunt Helena →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

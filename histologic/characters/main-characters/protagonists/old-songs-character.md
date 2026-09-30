@@ -182,7 +182,7 @@ All lyrics here are **original to the series** unless marked as public domain. W
   > *and nobody could tell the hour*
   > *the day the clocks were gone.*
 
-### 6. Many Hands (planned, Book 6)
+### 6. Many Hands (Book 6, Ch 27–28 and Epilogue)
 *His first new composition in forty years: a **round**. One voice starts, a second enters, then a third. It cannot be sung alone. The form is the meaning.*
   > *One hand writes and one hand checks,*
   > *one hand holds the light;*

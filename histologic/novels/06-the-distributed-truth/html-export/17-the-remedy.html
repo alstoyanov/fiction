@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Distributed Truth - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Distributed Truth</h1>
+            <div class="novel-meta">Novel 06 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="16-fourteen-hundred.html" class="nav-button">← Previous: Chapter 16: Fourteen Hundred</a>
+            <div class="nav-center">Chapter 17: The Remedy</div>
+            <a href="18-the-league-of-the-record.html" class="nav-button">Next: Chapter 18: The League of the Record →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 17: The Remedy</h1>
+<p><em>Tuesday, December 18, 2108. The Commission building, Veridica Capital</em></p>
+<hr>
+<p><em>December eighteenth, 2108. Oh-nine-ten hours. Commission building, fourth floor. First morning without a storm since May 2. Chronos determination (December 17, 23:40): 0.88. Border Security stand-down (December 17, 14:05). Status of the war:</em></p>
+<p>Marcus looked at the colon for a while and left the line empty.</p>
+<p>It was not that he didn't know. Everyone knew. The war had stopped at five past two yesterday on the lakeshore and at twenty to midnight on the other shore, and between those two times the country had discovered what it had been fighting with. But a status was a claim about now, and now was nine hours old, and he had learned not to write a status until somebody else had seen the same thing.</p>
+<p>He put the pencil down and went to find coffee.</p>
+<p>The corridor still smelled faintly of new carpet, nine months after the move. The names on the doors were still in black lettering. What had changed was the people in it. A senior clerk who had not met his eye since November stopped him outside the records room and shook his hand, hard, without saying anything, and went away looking embarrassed. Two of the Commission's investigators, who had spent the autumn being scrupulously polite to him in the way people are polite to a man who might be about to become a problem, made room for him at the coffee machine and asked how he had slept. A woman from the press office he had never spoken to said, "I watched it on the steps. My mother lives in the strip," and burst into tears, and apologised, and went on crying while she apologised.</p>
+<p>He said thank you to all of them. He meant it each time. Under it, all morning, he was waiting for Kade.</p>
+<p>He had been arrested twice by Officer Kade, both times without cruelty, and both times at the moment when he had believed things were going well. His body had drawn its own conclusions. It kept listening for the lift doors. At ten there was a knock on his office door and his hands went flat on the desk before his mind caught up, and it was a junior clerk with the overnight digest.</p>
+<p>The digest was forty pages long. He read it in order.</p>
+<p>The publication was everywhere. In the Commission's public archive, where Kira had entered it at 14:00 and where by morning it had been opened more times than the archive's counter had been built to show. In the Commission's testimony records, where Kovač had entered the two copy-X deposits as <em>testimony received, anonymous, released on publication</em>, in her own procedure's wording, with her own signature. In the journals, above all. Overnight, according to the digest, people across the country had copied the pages by hand into books that had never been registered anywhere, and then copied the copies. The digest could not count them. It said so in a footnote, with some irritation.</p>
+<p>In Chronos, Julian's orders sat in his public log, where anyone in Chronos could scroll back to them. <em>DIRECTIVE MERIDIAN</em>, and under it, timed to the second, the garden on the twenty-second of November: the bench, the fog, two men with the same list of questions. Marcus did not open it. He knew what was in it. He had been there.</p>
+<p><em>Fact entry. Oh-ten-forty. No arrest.</em></p>
+<hr>
+<p>At noon the wall screen in the commissioners' room was turned up, and the commissioners came in from their offices and stood about with cups in their hands, the way people stand at a reception where nobody has said whether to sit down.</p>
+<p>Kira came in last and stood beside him with her arms folded.</p>
+<p>The First Minister's crest filled the screen, and then the First Minister. Oskar Maitland looked as he always did on camera: big, tired, well-tailored, with his hands folded on a plain desk and nothing behind him but a flag. He looked, Marcus thought, like a man who had been told the numbers first.</p>
+<p>"Yesterday," said Maitland, "a commissioner of this nation read aloud, on the steps of the Justice Center, orders that I authorised."</p>
+<p>The room went very still.</p>
+<p>"Operation KINDRED was an error of judgement. It has ended. I authorised it. I was wrong." He let that sit for exactly as long as it could bear. "I will not tell you that others advised it. That is true of every decision a government makes, and it is no excuse for any of them. The decision was mine."</p>
+<p>He named nobody. He did not name Wei, whose technical annex had gone out with the orders. He did not name Chen Zhao, who had sat in the armchair that night and been delighted. He paid, instead, a tribute. "I want to thank our commissioners for their courage. They were asked to do something wrong, and they refused, and they told you. That is what a Commission of Historical Integrity is for." A small pause. "Veridica no longer seeks any other nation's keys."</p>
+<p>Someone in the room said, "Hear, hear," quietly, and then looked round to see whether that was allowed.</p>
+<p>"But a confession is not enough," said Maitland. "You have read the pages. You know now that your record was designed to be adjustable by the few. I will not ask you to trust that record again on my word. I am going to ask you to trust your own."</p>
+<p>And he announced it.</p>
+<p><em>The National Concordance of Testimony.</em> Every citizen's journal, every handwritten book of days that had grown up since the Doctrine, might be registered with the Commission, indexed, and weighed by The Judge as testimony, with the same standing as the record itself. No one would be compelled. Keepers would be protected. The Commission would administer it. A Concordance Act would go before The Judge in public session on the fourteenth of January.</p>
+<p>He set it out in four numbered provisions. The fourth came with a figure: an initial allocation of thirty-eight million, drawn from the Ministry's existing budget, <em>so that not one citizen pays to be believed</em>. There was a line about the lakeshore towns, where the journals had grown fastest. There was a line about the Commission's "long work of testimony, begun under the Doctrine". The Concordance's crest appeared in the corner of the screen as he spoke: an open book under two joined hands, cleanly drawn.</p>
+<p>"Yesterday," said Maitland, "we read a warning written by someone who helped design the system we live in. It told us how it should be answered." He looked into the camera. "<em>Build by many hands.</em> We intend to."</p>
+<p>The commissioners' room applauded. It was not polite applause. Two people were crying. The senior clerk from the records room had come to the door to watch, and he was clapping with his cup still in one hand, spilling it.</p>
+<p>Kira did not applaud. She stood with her arms folded, looking at the screen, and her face was perfectly level, which was how Marcus knew.</p>
+<hr>
+<p>He went back to his office and shut the door and sat down with the transcript, which the press office had circulated four minutes after the broadcast ended.</p>
+<p>It was very good.</p>
+<p>That was the first thing. It was a very good speech. It had the confession in the right place, early, before anyone could demand it. It had a tribute that made refusing it impossible. It had the Warning. It had four numbered provisions, each with a sub-clause, and a budget figure with a source, and a date before The Judge, and a crest. It used the Commission's own words, <em>concordant</em>, <em>testimony</em>, <em>weighed</em>, words Marcus and Kira had spent two years teaching the country, and it used them correctly.</p>
+<p>He took a clean sheet and began, from habit, to write down what he knew.</p>
+<p><em>Publication: December 17, 14:00.</em></p>
+<p><em>Speech: December 18, 12:00.</em></p>
+<p>He counted. Twenty-two hours. From the moment he had read the first line on the steps to the moment Maitland said <em>thirty-eight million</em>. Twenty-two hours, of which some had been night, and in which the same government had been fighting a war until five past two.</p>
+<p>He had sat on the Commission for two years. He knew how long it took to draft a paragraph. A single change to the Commission's intake procedure, in the spring, had taken eleven weeks and four committees, and the budget line had taken longer than the procedure. A crest took a design office a month. Nobody in any ministry could cost a national programme overnight. Nobody in the Ministry could agree on a font overnight.</p>
+<p>It was as if the speech had been—</p>
+<p>He reached for the word and it was not there.</p>
+<p>He knew it was a word. He knew its shape, roughly: the word for a thing made well in advance and kept until it was wanted, the way a careful man keeps a coat ready by the door for a journey he has not yet been told about. He had used it. He had used it in entries, in reports, at a desk on the fourteenth floor. Where it should have been there was only the smooth place, the one the machine had left in him two years ago, cool and even, like the underside of a desk.</p>
+<p>He sat with his pencil above the paper. Then he wrote, because he could not write the word: <em>fast</em>. And underlined it. It was not the right word. It would do.</p>
+<p>From the window of his office he could see a corner of the plaza, and across it the steps of the Justice Center. There were people in it, more than usual for a Tuesday lunchtime, standing in front of the great public screen where Maitland's face had just been. Some of them were holding things up to it. He had to stand and go to the glass to see what.</p>
+<p>Books. Notebooks, school exercise books, bound ledgers, loose sheets in folders. They were holding their journals up to the screen, above their heads, the way people hold something up to be counted.</p>
+<hr>
+<p>At four the Commission sat in the session room, which was smaller than the great hall and had no public benches; a few of the technical staff stood along the back wall. Minister Chen Zhao presided. He came in smiling, with a glass of tea already in his hand, and went round the table before he sat down, touching shoulders.</p>
+<p>When he reached Marcus he stopped and put his hand on Marcus's arm, and held it there.</p>
+<p>"You have restored more than a record, cousin," he said warmly. "You've restored a country's faith in its own voice."</p>
+<p>"Thank you, Minister."</p>
+<p>Since the fifth of December, since a strip of paper a finger wide, Marcus had known that the room he was sitting in was page 30. <em>When the record fails, the people will believe whoever restores it.</em> The Commission restored. The Commission was trusted. He sat at its table. He had said nothing about it to anyone but Kira and the farmhouse, and he said nothing now. The Minister's hand was warm and dry. He took it away and went to his chair and set his tea down, and looked round the table with open delight.</p>
+<p>"Well," said Chen Zhao. "The First Minister has confessed, and very handsomely. That's done." He turned the glass a quarter turn on its saucer. "But a confession without a remedy is only noise. Thomas, would you show them?"</p>
+<p>Wei stood. He had a slim tablet and nothing else. He was tall and graying at the temples, and his voice was quiet, and he waited until the room was ready before he began, which was one of the things people liked about him.</p>
+<p>The architecture was beautiful. Marcus could see that it was, the way he had seen that the KINDRED annex was beautiful, in November, before he knew what it was for. Each registered page would be scanned and sealed, its hand preserved exactly, every crossing-out, every marginal note. Each page would be cross-referenced with every other registered page that mentioned the same day, the same street, the same hour, so that a journal from one town could stand beside a journal from another and The Judge could see, at a glance, where they agreed. Where they disagreed, the disagreement would be flagged, not resolved.</p>
+<p>"Kestrel-style," said Wei, and smiled. "We learned that from the lakeshore. They keep the argument in the margin. So will we."</p>
+<p>Keepers would be protected: no journal could be used against the person who kept it. Registration would be voluntary. The index would be public, as the Commission's archive was public.</p>
+<p>"And no journal," said Wei, "will ever be lost to a fire or a flood again. If a book burns, we restore it."</p>
+<p>On <em>restore</em> he looked at Marcus, down the length of the table. It was a pleasant look, friendly, the look of a colleague sharing a small satisfaction. It lasted a fraction longer than a look needs to.</p>
+<p>"I want to thank Commissioner Chen," said Wei. "None of this would have been possible without what he did yesterday. I mean that sincerely. He made it possible."</p>
+<p>One of the older commissioners asked, mildly, how soon. Wei said that if The Judge approved the Act in January, the first towns could register by March. "Sooner, if people want it sooner. It's their testimony."</p>
+<p>He sat down. The room applauded him too. He accepted it with a slight, genuine inclination of the head, the way a man accepts praise for work he is proud of and has been waiting a long time to show.</p>
+<hr>
+<p><em>Veridica no longer seeks any other nation's keys.</em></p>
+<p>It came back to him on the way out, in the corridor, among the panels of winter light the tall windows laid on the floor. Maitland's line, and under it, another afternoon.</p>
+<p>Thursday, the thirteenth. The last day of round three, and the first anniversary of the Chronos Gap. The talks had spent four days on the claimed strip and the broadcast overlap, and on the Monday, in the garden, Marcus had given Julian the hour: <em>Monday week. Fourteen hundred.</em> Julian had said, "Yes," at once, and then, "I'll need to check the right of disclosure covers the garden," and then, "It does. I knew it did. I wanted to hear myself say it." By Thursday there had been nothing left to agree, and they had gone out to the bench anyway.</p>
+<p>The fog had been in since morning. The pear tree was bare and black and dripping, its branches trained flat against the wall. Julian had sat with his hands in the pockets of his archivist's jacket and his cardigan buttoned to the throat, and said, without any preamble at all, "I said I'd show you the key."</p>
+<p>Marcus had told him he didn't need to.</p>
+<p>"I know. That's why." Julian had taken out the Archive's token, a small flat gray thing that lay in his palm, and opened the session on his tablet. Marcus had looked away while he did it, the way you look away when someone enters a code at a counter, and Julian had laughed at him. "Marcus. It's in my log either way. Watch, or there's no point."</p>
+<p>So he had watched, a little, without understanding much. Julian typed one line on the tablet, a harmless line, a test entry of the kind the Archive used to check a key was working: <em>Saltmarsh Crossing, garden, 13 Dec 2108</em>. Then he countersigned it with the senior reconciliation key of the Chronos Temporal Archive, the key two nations had been trying to get their hands on all autumn, and a narrow printed slip came out of the little printer he carried in his bag. He tore it off and handed it to Marcus.</p>
+<p>"There," Julian had said. "That's all it is. It signs things." And then, as he had written in November: "So you can see there is nothing behind it."</p>
+<p>Marcus had not touched the token. He had held the slip by its edges.</p>
+<p>"It's a year today," Julian had said after a while, looking at the wet lawn. "Everyone in Chronos looked at their logs this week. I did too. I was asleep. The whole seventeen minutes." He had smiled sideways. "Like everyone. I've never slept so well."</p>
+<p>And Marcus had laughed. It had been a good joke, dry and quick, the kind of joke Julian made about Chronos's clocks. He had laughed out loud on the bench in the fog, and Julian had looked pleased with himself.</p>
+<p>On the Friday he had given the slip to Nikolai, because Nikolai kept copies of everything, and a thing like that ought to be kept. Nikolai had put it in a folder without looking at it much.</p>
+<p>Marcus still thought it was the most honest thing anyone had done at the talks. A man with the one key both states wanted had opened it on a garden bench, in the place where he was recorded, to show that there was nothing behind it. There were not many people who would do that.</p>
+<hr>
+<p>At seven the endorsement came round.</p>
+<p>It was two pages, on the Commission's letterhead: <em>The Historical Integrity Commission endorses the National Concordance of Testimony and commends it to The Judge.</em> Under it, a column of lines for signatures. Chen Zhao had signed the first line, in a large, graceful, unhurried hand. Four commissioners had signed under him. The clerk who brought it said the Minister hoped to have the Commission's name on it by the morning bulletin, "but there is no pressure at all, Commissioner, he was very clear about that".</p>
+<p>Marcus took it home.</p>
+<hr>
+<p>At half past ten the flat was quiet. Kira was at the table with the first journal open, copying the day into it, as she did every night. Tonight it was the speech. She had the press office's transcript beside her and was taking it down by hand, all four provisions and every sub-clause, the figure, the date, the line about the lakeshore towns, in her small upright engineer's print. He asked her why. "So that it exists twice," she said, without looking up, which was what she had done in November with Principle Three, and he did not ask again. He sat across from her with his lists spread out and the endorsement lying beside them, with his pen on top of it.</p>
+<p>He wanted to sign it.</p>
+<p>He wanted to sign it the way he had once wanted to log the day's entries before going home: because it was right, and because it would be finished. The journals would be safe. Every book in the lakeshore towns, every exercise book held up to the screen in the plaza, would be sealed and kept and protected. No keeper could be prosecuted for what they had written. The war's end would be law, not a determination that might be reversed by another. It was everything they had asked for, and it had come with a crest.</p>
+<p>He picked up the pen.</p>
+<p>Then he put it down, and pulled the UNCHECKED sheet towards him, and wrote:</p>
+<p><em>Maitland's speech. Drafted: when?</em></p>
+<p>He looked at it. The word he had lost was still not there. The question was the shape of it.</p>
+<p>Kira had stopped writing. She came round the table and stood at his shoulder and read the line, and then she put her hand flat on the page, over the question and the pen and the endorsement together, and held it there.</p>
+<p>"Don't sign anything tonight," she said.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="16-fourteen-hundred.html" class="nav-button">← Previous: Chapter 16: Fourteen Hundred</a>
+            <div class="nav-center">Chapter 17: The Remedy</div>
+            <a href="18-the-league-of-the-record.html" class="nav-button">Next: Chapter 18: The League of the Record →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

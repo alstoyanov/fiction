@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Distributed Truth - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Distributed Truth</h1>
+            <div class="novel-meta">Novel 06 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="17-the-remedy.html" class="nav-button">← Previous: Chapter 17: The Remedy</a>
+            <div class="nav-center">Chapter 18: The League of the Record</div>
+            <a href="19-the-false-entry.html" class="nav-button">Next: Chapter 19: The False Entry →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 18: The League of the Record</h1>
+<p><em>Saturday, December 22 – Monday, December 24, 2108. Veridica Capital; the lakeshore</em></p>
+<hr>
+<p>The banners were very well made.</p>
+<p>That was the first thing Nikolai noticed, standing at the edge of the central plaza with his hands in his pockets and his shoulders up against the cold. White cloth, black letters a metre high, hemmed and eyeleted and strung between poles that someone had cut to the same length. <em>THE JOURNALS ARE CONTAMINATION.</em> <em>ONE NATION, ONE RECORD.</em> <em>RESTORE THE PURE RECORD.</em> He had seen the first of those words on a leaflet in November, in a photograph Kira had brought back from the lakeshore. The leaflet had been printed on good paper too.</p>
+<p>The League of the Record filled the square. It filled it all the way round the fountain and up to the Lost Hour stone, where on the fifteenth of every month people came, without anyone arranging it, to read out ordinary days. Today nobody was reading. A platform had been built beside the stone, close enough that the stone stood in every picture of it, and on the platform, in a good dark coat, with his hands on the rail, Undersecretary Iver Pell was speaking into a very clean sound system.</p>
+<p>"They tell you it's freedom," said Pell. "A book in every kitchen. A record in every hand. I ask you what we had before they gave you this freedom. We had one record. It was checked. It was kept. When it said a thing had happened, it had happened." His voice carried, flat and hard, off the Justice Center's face and back again. "Now you have ten thousand books, and every one of them says something different, and a man in the strip writes that a pier is there and his neighbour writes that it isn't, and they both sign it. What is that? That is not a record. That is a quarrel on paper."</p>
+<p>The crowd made a sound. Not a cheer, quite. Something lower.</p>
+<p>"Burn them," said Pell. "Burn the journals. Give the record back its authority, and let The Judge weigh what the record says, as it did for forty years, before any of this. A nation of memories," he said, and the crowd knew the line and said it with him, "is a nation of liars."</p>
+<p>Maya, beside Nikolai, said under her breath, "He's been saying that since the hearing."</p>
+<p>"It's a good line," said Nikolai. "That's the trouble with it."</p>
+<hr>
+<p>He had not wanted to come. Kira had asked him to, on Thursday, in her level way: somebody should watch the League properly, not on the bulletin, and he was the one who watched traffic. He had said yes because he always said yes to Kira, and because since Monday he had been unable to settle to anything, and watching was a way of doing something with his hands in his pockets.</p>
+<p>He found he could not dislike the crowd.</p>
+<p>There was a woman beside him, older, in a brown coat buttoned wrongly, holding a sign she had lettered herself on the back of a calendar. It said <em>I WANT TO KNOW WHAT HAPPENED</em>. The letters had been gone over twice in marker, so that they were thick and uneven. She was crying, not loudly, the way people cry when they have been crying on and off for a long time and have stopped noticing.</p>
+<p>"I used to know what happened yesterday," she said. She didn't say it to him. She said it to nobody, to the fountain. "I used to wake up and know."</p>
+<p>Nikolai looked at his hands.</p>
+<p>He knew what she meant better than he wanted to. Seven months of storms. Seven months of towns that remembered two piers and two charters and two sets of dead. People wanted one thing, just one, that did not argue with them. They wanted to be told, and to be able to believe the telling, and to stop checking. He had lost a memory once, the roof, three boys on a parapet in the fog. It had been cut out of him in a room with a single node and never came back, and his brothers had given it to him afterwards as testimony, a story told aloud at a table until he could answer the question at the end of it. He carried it folded in his wallet on a primer page. It was his, and it was not a memory, and some nights that was bearable and some nights it wasn't.</p>
+<p>He did not want the journals burned. But he understood the woman in the brown coat. She was not a liar. She was tired.</p>
+<p>"I'm sorry," he said, and she looked at him as if she hadn't known he was there, and nodded, and went on holding her sign.</p>
+<hr>
+<p>The professionals were easier to see once he had stopped looking at the people.</p>
+<p>There were stewards. They wore dark jackets and small earpieces, the kind with a coiled wire going down inside the collar, and they moved through the crowd in a slow, even way that was not the way anyone in a crowd moves. Where the crowd thickened they eased it. Where it thinned near the platform they filled it. They never shouted, and they never stood still.</p>
+<p>The placards were all from one print run. He checked a dozen before he was sure. White board, black type, and in the top corner a small version of the Ministry's crest that the League had borrowed for itself, with a circle round it. On every placard the crest sat a little too far to the left, its edge just touching the circle, where a printer's plate had been set a millimetre out and nobody had corrected it. Hundreds of placards. The same millimetre on every one.</p>
+<p>Coaches were parked along the east side of the square, nose to tail. He read the destination boards: three towns, two of them in the lakeshore districts, one inland.</p>
+<p>"Twenty minutes," said Maya.</p>
+<p>He looked at her. She had her watch in her palm, face up, and she was not looking at the platform. She was looking at a steward by the fountain.</p>
+<p>"They rotate. Every twenty minutes, the whole ring moves one position clockwise. That one was by the stone at 13:40. He's been at the fountain since 14:00. At 14:20 he'll go to the east steps." She glanced at the watch. "Eleven seconds. Ten."</p>
+<p>At 14:20, to the second, the steward by the fountain touched his ear and walked, unhurried, to the east steps, and the steward from the north corner came and took his place.</p>
+<p>"Nobody asked you to time them," said Nikolai.</p>
+<p>"Nobody ever does." She put the watch away. "People don't do things every twenty minutes to the second, Nikolai. Schedules do."</p>
+<p>When the speeches ended the crowd did not so much leave the square as drain out of it, towards the trams and the coaches, and on the way a good part of it passed the west side of the plaza, where the Commission had set up a trestle table under an awning. It had not been there in the morning. It had a small banner with the new crest on it, an open book under two joined hands, and two young clerks in Commission scarves handing out a leaflet about the Concordance Act. <em>Your testimony, kept safe. Registration is voluntary.</em> People who had been shouting <em>burn them</em> ten minutes before stopped at the table and took a leaflet, and read it, and some of them nodded, the way people nod when somebody finally says something reasonable.</p>
+<p>The woman in the brown coat took one. She folded it very small and put it in her pocket, with her calendar sign under her arm.</p>
+<p>"Well," said Maya quietly. "That's tidy."</p>
+<p>Nikolai said nothing. He watched the table for a while, and then the stewards, who did not go near it.</p>
+<hr>
+<p>On Sunday it was a market town two hours up the lakeshore road, in the fog, on a square a quarter the size. Four hundred people, perhaps. A local man spoke instead of Pell, less well. The banners were the same banners. The placards had the same crest, a millimetre out. Two of the stewards Nikolai had seen by the fountain on Saturday were there by the war memorial, in the same dark jackets, rotating every twenty minutes.</p>
+<p>He came home and sat down at his terminal at nine in the evening with a bowl of noodles he didn't eat, and did what he had been wanting to do since the fountain.</p>
+<p>The earpieces were on a channel. A channel was on a network block. And a network block, in Veridica, was provisioned by somebody, and paid for by somebody, and both of those things were published, because Veridica published its procurement and was proud of it. A nation that believes its record likes to be seen keeping it. Nobody read the procurement register. It ran to millions of lines and changed every hour. But it was public, and it was indexed, and Nikolai had spent ten years maintaining systems in the border zone for people who did not want their work examined, which is how you learn exactly where other people do not look.</p>
+<p>It took him until a little after one.</p>
+<p>The stewards' channel sat on a short-range block, encrypted, licensed for event use. The licence had been issued on Tuesday the eighteenth, in the afternoon. Its provisioning order had been raised under a Ministry heading, the Ministry of Historical Integrity's own, and the heading was a budget line so general that it was almost not there.</p>
+<p><em>Public order: support to lawful public assemblies.</em></p>
+<p>He read it three times. Then he went back through the register and pulled every order that had been raised against that line since the first of December.</p>
+<p>Before the eighteenth, the line had paid for almost nothing: a sound system for a remembrance service in October, barriers for a parade. From the eighteenth it had paid for a great deal. Coaches, chartered from three depots. Printing, from one firm. The platform in the plaza, and its sound system. Four network blocks for event use, all licensed the same week. Every order he could find since the eighteenth had been raised for a League of the Record assembly, and for nothing else.</p>
+<p>He sat back.</p>
+<p>Maya came in from the other room in her dressing gown, looked over his shoulder, and read the screen without being asked. She read logs the way other people read faces.</p>
+<p>"It's legal," she said.</p>
+<p>"Yes."</p>
+<p>"Pell's an undersecretary at the Ministry. The Ministry supports his rallies. Of course it does." She pulled the other chair round. "That's the story, and it's true. If you put this in front of anyone, that's what they'll tell you, and they'll be right."</p>
+<p>"Yes."</p>
+<p>"And since the eighteenth it's paid for nothing but the League."</p>
+<p>"Yes."</p>
+<p>She looked at the screen for a long time. "That isn't evidence."</p>
+<p>"No," said Nikolai. "It's a shape."</p>
+<p>He made three copies, as he always did. One to the partition he kept in a borrowed corner of an old relay, where nobody looked. One printed, on paper, dated and initialled. One to Maya's notebook, in her hand, because she asked to copy it herself and he had learned that when Maya asked to copy something it was because she did not trust herself not to forget it.</p>
+<p>"Where does the paper go?" she said.</p>
+<p>"In the folder."</p>
+<hr>
+<p>The folder lived in the bottom drawer of the desk, under the spare cables. It was a plain gray card folder, and it had been getting thicker for thirteen months.</p>
+<p>On the front, in his own small print, it said <em>NOT OURS</em>, because that was what he had said on the fifteenth of November last year, in the colonnade, when he showed them a reservation in another nation's registry with a blank owner field. <em>Some weeks ahead.</em> And then the thirteenth of December had come, and seventeen minutes had gone out of four million lives on the other shore, and Kira had read Chronos's own analysis of it in January and known the seam within an hour. <em>It's the same hand.</em></p>
+<p>That was one hand. The folder was about the other.</p>
+<p>Sealing seventeen minutes inside Chronos's primary record needed a Chronos countersignature. It was there in the Chronos analysis, published for the whole world to read, because Chronos had wanted the world to see how completely it had been violated: a countersignature block on every sealed segment. Nikolai had its shape. He had its length, its position, the way it sat at the end of each block. He did not have its grammar. A signature is a way of writing, and you cannot read a way of writing from the writing alone. You need to have seen the hand write something else.</p>
+<p>He had fourteen pages of notes about what he couldn't read. He put the League's budget line in on top of them, and closed the folder, and then opened it again, because he needed a date.</p>
+<p>He wanted the last day of round three of the talks, for the timeline he was building of the League's traffic, and he couldn't remember whether it had been the thirteenth or the fourteenth. The slip was in the folder's back pocket, where he had put it on the fourteenth, when Marcus gave it to him. A narrow printed slip, one line of text and a block beneath it. <em>Saltmarsh Crossing, garden, 13 Dec 2108.</em></p>
+<p>The thirteenth. He wrote it on the timeline.</p>
+<p>He did not look at the block under the line. There was nothing in it to see: one test signature, made on a bench to show a friend there was nothing behind a key. One demonstration was a sample, not a profile. You could learn nothing from one.</p>
+<p>He put the slip back in the pocket, and the folder back in the drawer, under the cables.</p>
+<hr>
+<p>Christmas Eve was clear in the capital and cold, and it was the first holiday since May that nobody had to spend with their back to a wall. The trams were full. People carried parcels. In the plaza the League's platform had been taken down overnight, and the stone stood on its own again, and somebody had put a small branch of evergreen on it.</p>
+<p>Alexei was on the lakeshore.</p>
+<p>He had been on the lakeshore since the seventeenth, carrying paper. Hand copies of the fragments, the Introduction and Three and Five and the strip and the Warning, copied out by people in the capital and the border zone and bundled in oilcloth, to the towns along the shore that had no screens that worked or didn't trust the ones they had. Kestrel Point, and the four towns south of it, and the six north. Tonight the Kestrel contributors were holding an evening reading in the old chandlery on Harbour Street, where their book was kept by day, and Alexei had called at six to say he'd been asked to stay for it.</p>
+<p>"They've made a cake," he said. "Somebody has sugar. I don't want to know where from."</p>
+<p>"Stay," said Nikolai.</p>
+<p>"I'm going to. I'm telling you so Dima doesn't count the roads." A pause, the line crackling. "You all right, Kolya? You sound like you've been reading budgets."</p>
+<p>"I've been reading budgets."</p>
+<p>"God help you." And he was gone.</p>
+<p>Maya made supper. They ate it at the table by the window with the city lit up below, and did not talk about budget lines, or folders, or anything at all that had a timestamp, and for three hours it was very nearly an ordinary evening.</p>
+<p>At a quarter past ten, it wasn't.</p>
+<hr>
+<p>It came up through him like heat.</p>
+<p>Not a thought. It was never a thought. The bond didn't carry words. It carried where his brothers were, the way he knew where his own hand was in the dark, and it carried weight: Dmitri's steady cold at the edge of everything, Alexei's impatience as pressure behind the eyes. This was pressure behind the eyes. But it was climbing, fast, and it was hot, and under the heat was something tight and airless that made him put his hand to his own throat before he knew why.</p>
+<p>He was on his feet. His chair had gone over behind him.</p>
+<p>"Nikolai?"</p>
+<p>"Lyosha," he said.</p>
+<p>He had the line open before Maya reached him. He called Alexei's relay and got the empty hiss of an open channel with nobody on it. He called again. Nothing. He called the ferry office in Kestrel Point, which would be locked, and heard it ring in an empty room eleven times.</p>
+<p>The heat was still climbing. Then, somewhere far off at the edge of it, Dmitri: a hard cold weight, suddenly nearer, suddenly awake, the way Dima was awake in a single second. Wherever he was tonight, the eldest had sat up in the dark too.</p>
+<p>Nikolai called Alexei a third time.</p>
+<p>Nothing.</p>
+<p>Maya had his wrist in her hand. She didn't ask anything. She stood beside him and held his wrist, and looked at her watch, and he understood after a while that she was timing it, because timing it was the thing she could do.</p>
+<p>At 22:28 the heat broke. It didn't fade. It broke, all at once, the way a fever breaks, and what was left behind it was ragged and exhausted and, underneath, unmistakably, still there. Still there. He sat down on the floor because his legs had decided to.</p>
+<p>"He's alive," he said.</p>
+<p>"I know," said Maya. "You stopped holding your breath."</p>
+<hr>
+<p>At 22:41 Alexei called.</p>
+<p>He was coughing. He coughed for a long time before he could say anything, a deep wet tearing cough, and when he could talk his voice was hoarse and raw and, for once, completely serious. And for once he told it in order, the way Dmitri would have, as if he had already been through it several times in his head and wanted it to come out straight.</p>
+<p>"The reading ended about half nine. Ruth went off with the book, walking one of the old ones home, Mrs. somebody with a stick. Wren stayed to stack chairs. Me too. There were four or five of us, clearing up." Cough. "About ten past ten the front went. All of it, at once. Not a spark, not a smell first. The whole front of the room, door and window, like it had been waiting. There was a League leaflet pinned on that door this morning. Somebody said so after. Nobody took any notice this morning. You don't, do you."</p>
+<p>"Lyosha—"</p>
+<p>"Let me. The others got out the side. Wren was at the back with the chairs and she couldn't get past. There's a window at the back over the water, an old one, painted shut. I put a chair through it." Cough. "She cut her wrist on the frame. It's nothing. It's a scratch, they've wrapped it. I got her down onto the slip and we went along the wall to the steps. Nobody's hurt. Nobody. Smoke, that's all. Everyone's coughing." A long breath. "The reading room's gone, Kolya. The whole thing. The table they kept it on. It's just a shell."</p>
+<p>Nikolai sat on the floor with the handset against his ear and his back against the wall, and Maya sitting beside him with her shoulder against his, and let the relief go through him until it had finished. Then he asked the only question that mattered to the town.</p>
+<p>"The book?"</p>
+<p>On the other end, still coughing, Alexei laughed. Once.</p>
+<p>"The Kestrel Book's in Ruth's coat."</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="17-the-remedy.html" class="nav-button">← Previous: Chapter 17: The Remedy</a>
+            <div class="nav-center">Chapter 18: The League of the Record</div>
+            <a href="19-the-false-entry.html" class="nav-button">Next: Chapter 19: The False Entry →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

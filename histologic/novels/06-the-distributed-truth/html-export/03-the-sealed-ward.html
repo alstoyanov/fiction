@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Distributed Truth - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Distributed Truth</h1>
+            <div class="novel-meta">Novel 06 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="02-kindred.html" class="nav-button">← Previous: Chapter 2: KINDRED</a>
+            <div class="nav-center">Chapter 3: The Sealed Ward</div>
+            <a href="04-the-kestrel-book.html" class="nav-button">Next: Chapter 4: The Kestrel Book →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 3: The Sealed Ward</h1>
+<p><em>Monday, November 5, 2108. The teaching hospital, the Chronos lakeshore city</em></p>
+<hr>
+<p><em>Admission, 04:10. Female, sixty-one. Lakeshore district, east of the city, three kilometres from the shore. Brought in by her son following a corrective broadcast at 02:30 (Veridican origin, per the district log). Presenting: acute contradictory recall regarding her own street. States the chapel at the end of it has always been there and was never built. States both calmly. Became distressed only when asked which to believe. Asks repeatedly which way her front door faces. No seizure. No focal signs. Sleeping at 06:00 with the lamp on, at her request. Prognosis: good, for this. She will know both chapels for the rest of her life.</em></p>
+<p>Yuki Tanaka wrote the last line, and looked at it, and did not take it out. It was clinically accurate. She had begun to find that the most clinically accurate lines were the ones she least wanted to write.</p>
+<p>It was the fourth broadcast admission since Friday, and the ninth since the first of the month. She filed the note to the ward system and made tea.</p>
+<p>Her office was on the fourth floor and looked out over the staff car park, a view she had come to regard with affection, because nothing in it had ever been anything other than a car park. Morrison was at his desk against the far wall already, his hair flattened on one side from a scanner hood, reading the night's gain curves with the absorbed, unhappy face he wore for anything he understood better than he wanted to. On every wall the Chronos time turned in its last digits, too fast to read.</p>
+<p>The circular was waiting when she sat down.</p>
+<hr>
+<p>It came from the Administration of Temporal Defence, under the seal of its clinical directorate, and it was addressed to the directors and senior clinical staff of every hospital in the lakeshore province. It was eleven pages long. It was headed, in the plain courteous type that Chronos used for everything, <em>Stabilisation: Interim Clinical Guidance for Acute Broadcast-Conflict Trauma.</em></p>
+<p>She read the first page twice.</p>
+<p><em>In view of the continuing incidence of acute contradictory recall among citizens exposed to hostile broadcasting, the Administration proposes the wartime use of cradle-assisted stabilisation, delivered at shallow depth, to settle contradictory memory structures and return affected citizens to a stable baseline. Sessions of forty minutes, nightly, for a course of up to twelve nights. Equipment: standard clinical cradle, Chronos pattern, with hood assembly. Gain: per the attached curve.</em></p>
+<p>She turned to the attached curve.</p>
+<p>She knew it. She had not seen this one, not this exact graph with this exact Chronos header, but she knew its shape the way she knew the shape of her own hand. A slow rise, a plateau, a shoulder. The point at which the gain stopped finding and started pressing. She had watched that shoulder on a monitor from inside a hood, in a white room at Ashford, with a woman she liked standing beside the console saying <em>good, Yuki, you're doing very well</em>.</p>
+<p><em>The hood.</em> Page four: the pad placements, eight of them, left and right temporal, frontal, occipital. <em>The gain curve.</em> Page six. <em>Baseline.</em> Page one, page three, page seven, page nine. The word came back and back, the way a word comes back in a document written by someone who has stopped hearing it.</p>
+<p>Two years ago it had been called salience therapy. It had been proposed for the same patients in almost the same language, and in her first autumn in Chronos she had written eleven memoranda against it in eight weeks, each one filed in the public register as Chronos filings were. Then she had waited a year while the committee read them, until the Administration withdrew the proposal last November without explanation. She had thought she had won. She had been careful not to think it too loudly.</p>
+<p>This was the same thing. It had a new name and a war behind it, and nobody would withdraw it this time, because nobody would want to be the Administrator who refused to treat the storm-touched in wartime.</p>
+<p>It was Continuity. It was Wing C with a Chronos seal on it, and the word <em>wartime</em> in front of it, and the word <em>stabilisation</em> on top, which she had last seen in a Veridican custodial order for a man who was now in prison for a murder he remembered committing.</p>
+<p>She set her tea down on the desk. She did it very carefully, with both hands, because she was not certain that one would hold it.</p>
+<p>Behind her, the other chair creaked. Morrison had got up. He came and stood at her shoulder and read the screen, and she watched his hands, from habit, where they rested on the back of her chair. They were steady. They had been steady for two years, and she still checked.</p>
+<p>He read all eleven pages. He did not say anything for a long time.</p>
+<p>"Page six," he said at last, very low.</p>
+<p>"Yes."</p>
+<p>He took his hands off the chair and went back to his desk, and sat, and did not pick up his cup.</p>
+<hr>
+<p>The director's office was on the ninth floor.</p>
+<p>She went up at eleven, because the circular was addressed to him and she wanted to know what he intended before he had to tell anyone else. The ninth floor was quieter than the rest of the hospital, and cooler, and it smelled different, which she had noticed on her first visit and still noticed every time. She did not have to knock. Dr. Soren Vale was standing in the corridor outside his own door, with a printed copy of the circular in his hand, as though he had been waiting for her, and perhaps he had.</p>
+<p>He was a tall man, and he stooped, the way tall men stoop who have spent their lives bending to hear people shorter than themselves. He had beautiful manners. He inclined his head to her as he always did, as though she were the senior of the two of them, and said, "Dr. Tanaka. You've read it."</p>
+<p>"Yes."</p>
+<p>"And?"</p>
+<p>She told him plainly, the way she had once told families what the chart said: the hood, the curve, the baseline, how easily shallow stopped being shallow, and what a cradle could do in the night if somebody brought it the right calibration and nobody read the gain curves. She did not say <em>Ashford</em>. He had read her file when he took her on. He had read, she suspected, rather more than her file.</p>
+<p>He listened without interrupting. When she had finished he looked down at the circular in his hand for a moment, and folded it once, neatly, along its length.</p>
+<p>"It will not be carried out in this hospital," he said. "For now."</p>
+<p>"For now?"</p>
+<p>"For now." He said it gently. He did not explain. He had never explained. He had stood surety for her in front of the border directorate, and given her a registration nobody looked behind, and in two years he had never once told her why. She had decided early that he had read Isaiah's article and had a daughter, and did not want to live in a country that would do what the article described to someone's daughter. It was the kind of explanation she could understand, and so she had given it to him, and he had never corrected it.</p>
+<p>"Thank you," she said.</p>
+<p>"Don't thank me yet." He glanced along the corridor, towards the heavy door at the end of it. "You're going in?"</p>
+<p>"It's Monday."</p>
+<p>"Of course." He smiled, and the smile was tired and entirely kind. "Give her my regards."</p>
+<hr>
+<p>Ward 9S was the only place in Chronos where nothing was recorded.</p>
+<p>It was twelve beds behind a pair of plain doors that looked like every other door on the floor and were not, at the end of the ninth-floor corridor, next to the director's office. Tanaka had never been told why it existed, and had never asked. The walls were shielded. The life-logs of its patients were sealed by clinical order, on the director's authority, and anyone who went through those doors, patient or physician or cleaner, dropped out of the Chronos record until they came out again. In the log it read <em>CLINICAL SEAL</em>, and a time in, and a time out, and nothing between.</p>
+<p>She felt it as she went through: a small deafness, a soundless click behind the ears, as though a room she had not known she was standing in had been shut off. It was the only place in the country where she felt it.</p>
+<p>The ward ran on paper. It had to. Its charts were paper, clipped to the ends of the beds, and its menus, and its drug round, and the library books on the trolley that came up from the basement on Thursdays. There was a screen in the day room that received the broadcasts and the Synthesis news channel in the evenings, and recorded nothing. Its patients were listed on the board by the nurses' station by initials only. It was the ward's one courtesy, and Tanaka thought it the finest thing in the building: a place where a person could be known by two letters, and nothing else about them was anybody's business.</p>
+<p>And it smelled of the ninth floor. The ward's own disinfectant was not what the rest of the hospital used. It was sharp and cold and faintly green, like cut stems standing in water, and it got into everything. She noticed it on her cuffs every evening when she took her coat off at home, and every evening she thought, <em>9S</em>, and every evening she was a little surprised by how much she liked it.</p>
+<p><em>Step one,</em> she thought, going down the ward. <em>Confirm patient identity.</em> It was the first line of the checklist she had recited before every procedure for twenty years. On 9S the identity was two initials and a chart number, and she had never needed more.</p>
+<hr>
+<p><em>Patient M.K., 72. Long-term, 9S. Admitted 2098, under the director's seal. Chart: progressive cognitive decline. Under my care since August 2106, at the director's personal request.</em></p>
+<p>The bed by the east window, facing the lake.</p>
+<p>M.K. was sitting up in the chair beside it, fully dressed, as she always was by ten. She was small and very upright, in a plain gray cardigan and a dark skirt, and her white hair was cut short and close to her head, like a boy's. She had a cup of tea on the table at her elbow and a pencil in her hand and a newspaper folded to the puzzle on her knee, and she looked up as Tanaka came down the ward with the precise, faintly amused attention of someone who had been expecting a particular visitor and was pleased to have been right.</p>
+<p>"Doctor."</p>
+<p>"Good morning. How did you sleep?"</p>
+<p>"Adequately. The woman in four talks in her sleep, and she has been talking about her sister. I now know a great deal about her sister." She put the pencil down on the puzzle. "You've been upstairs. You have your upstairs face."</p>
+<p>Tanaka sat down in the visitor's chair and did the round in order: pulse, pressure, the short cognitive screen the chart required every week. M.K. answered the questions correctly and a little too fast, with the air of someone indulging a formality. She spelled the word the screen required her to spell backwards, and then spelled it forwards again, without being asked, as though the word had been treated unkindly.</p>
+<p><em>Lucid beyond her chart,</em> Tanaka thought. She had thought it every Monday for two years.</p>
+<p>The chart said progressive cognitive decline, and had said it since 2098, in several hands, all of them plausible, none of them describing the woman in the chair. Tanaka had filed the discrepancy in her first month, in the place where she kept what she could not explain. A chart could be wrong. Patients could be admitted for one thing and kept for another. It was not her business to ask which. It was her business to take the pulse.</p>
+<p>She took the pulse. When she lifted M.K.'s right hand to turn it, it trembled in hers: a fine, fast tremor in the fingers, the kind that lives in the hand and nowhere else. It had been there when she first examined her. It had not changed. And when she let go, and M.K. reached for her cup and held it, the tremor stopped. It always stopped. Give the hand a cup, a pencil, the edge of a newspaper, anything to hold, and it was as still as a surgeon's.</p>
+<p><em>Tremor, right hand. Resolves on grip.</em></p>
+<p>"You're writing me down," said M.K.</p>
+<p>"I always write you down."</p>
+<p>"I know. I like it. Nobody else in this building is allowed to." She drank some of her tea. "Tell me about upstairs."</p>
+<hr>
+<p>She had not meant to. She never meant to. But M.K. read every memorandum Tanaka had ever written.</p>
+<p>It had begun in her first winter, when printed copies of all eleven memoranda had turned up on M.K.'s bedside table with pencilled questions in the margins. Chronos filings were public. M.K. had asked the Thursday library trolley to bring them from the register, and had read them the way senior physicians read a junior's case report: slowly, with a pencil, looking for the weak sentence. She had found some. She had been right about all of them.</p>
+<p>Last November, when the proposal had been withdrawn after the eleventh and Tanaka had brought the news up to 9S feeling almost triumphant, M.K. had listened, and put the printed copy down on the table, and said, <em>Write a twelfth.</em></p>
+<p>Tanaka had asked her why. The proposal was gone.</p>
+<p><em>It will come back,</em> M.K. had said. <em>They always come back. Write a twelfth.</em></p>
+<p>She had begun one. It was in the bottom drawer of her desk on the fourth floor, eight pages in, where it had been for a year.</p>
+<p>So she told her. She told her about the circular, the eleven pages, the hood and the curve and the baseline, the nightly sessions and the word <em>wartime</em>. She told her that the director had said <em>not in this hospital, for now</em>. She did not tell her what she thought it was. She did not say <em>Continuity</em>. It was not the kind of thing you said to a patient.</p>
+<p>M.K. listened with her cup held in both hands. When Tanaka had finished, she was quiet for a moment, looking out of the east window at the lake, which was the colour of slate this morning under a low sky, with the far shore invisible.</p>
+<p>"Write a twelfth," she said. And then, turning back, very dry: "Finish it this time."</p>
+<p>"I've begun it."</p>
+<p>"I know you have. You've begun it for a year. Have you got it with you?"</p>
+<p>She had. She had brought the eight pages up in her bag that morning without quite admitting to herself why. She took them out, and M.K. put down her cup and held out her hand, and Tanaka gave them to her and watched her read.</p>
+<p>She read the way she always read. Slowly, with the pencil. The tremor did not show; she had something to hold. Halfway down the second page she stopped, and made a small mark in the margin, and looked up.</p>
+<p>"Here," she said. "You say the proposal is unprecedented."</p>
+<p>"It is. In Chronos."</p>
+<p>"Then say so. It isn't unprecedented. It has a precedent. You know it has a precedent better than anyone who will ever read this." She turned the page towards Tanaka and put the tip of the pencil under the word. "It is <em>unrepeated</em>. It hasn't happened <em>here</em>. If you say <em>unprecedented</em>, some clever young Administrator will write back and tell you it has, and name the place, and you'll have given him the argument. Say <em>unrepeated</em>. Make him tell you why it shouldn't be."</p>
+<p>Tanaka looked at the word. The distinction was exact. It was the kind of distinction she made herself, a dozen times a day, <em>I'm telling you it didn't happen, that isn't quite the same thing</em>, and she had missed it in her own draft for a year.</p>
+<p>She took the pencil and crossed out <em>unprecedented</em> and wrote <em>unrepeated</em> above it, in her small neat hand.</p>
+<p>She did not ask why the distinction mattered so much to her patient. It was the sort of question she did not ask.</p>
+<hr>
+<p><em>Patient M.K., 72. Long-term, 9S. Lucid beyond her chart. Tremor, right hand. Reads every memorandum I write ("Write a twelfth"). Asks after "the old man who sings on your broadcasts."</em></p>
+<p>She asked at the end of the round, as she often did. She asked it the way people ask after a mutual acquaintance, lightly, as a courtesy.</p>
+<p>"And the old man who sings on your broadcasts. Is he well?"</p>
+<p>She had seen him last November on the day-room screen, when the Synthesis channel carried the Day of Testimony from the plaza on the Veridican shore, and an old man with a white ponytail had gone up to the plain stone and put his hand on it and sung. The nurses said M.K. had asked them to turn the sound up, which she had never done before, and had sat very straight until it was over, and said nothing afterwards. Since then she had asked after him perhaps once a month. Always <em>the old man who sings</em>, never a name. Tanaka had never offered one.</p>
+<p>"He is well," she said.</p>
+<p>That was all. It was true, as far as she knew; Alexei had said so on the link a week ago, and complained that the old man had found a new way to beat him at cards. She did not say where he was, or that he was officially dead, or that she had lain with her head in his lap in the back of a car on the night they all died. It was not hers to say.</p>
+<p>M.K. nodded, as if that were enough. Perhaps it was.</p>
+<hr>
+<p>It was the one wall Tanaka had built herself.</p>
+<p>Everything else in her life had been built by someone else. Wing C had been built by Reeves, and the hood and the white room by people she had worked beside and liked. Chronos had been built by men who believed that a life recorded in every moment was a life made safe, and she had come here of her own will to stand inside it. She had only ever been on one side of those walls or the other.</p>
+<p>But she did not ask her patients about themselves beyond what the chart required. She had not asked in eleven years at Ashford, and she did not ask now. What they told her, she kept. What they did not tell her, she did not go looking for. In a country that recorded every breath its citizens took, a physician who did not ask, and did not tell, was the rarest thing it had, and the most valuable thing she could give anyone. It was the one wall that was hers.</p>
+<p>She did not know M.K.'s name. She did not know where she had lived before 2098, or who had admitted her, or why the director had asked Tanaka personally to take the case in the August she arrived, a Veridican émigré with a scar on her temple and a registration nobody looked behind. She had never asked. She did not intend to.</p>
+<hr>
+<p>She stood, and gathered her pages, and put the twelfth memorandum back in her bag.</p>
+<p>"Doctor," said M.K.</p>
+<p>She had leaned across to the bedside locker and opened the lower door, and she was taking something out: two small books, one after the other, and setting them on her knee. They were very old: pre-Histologic printed collections, small enough to go in a coat pocket, bound in cloth that had faded, one to the green of a dry leaf and one to a pale, soft blue. The gilt on their spines had worn away almost entirely. The spines themselves had been mended, both of them, neatly, with a patience that showed in every fold: new cloth laid under the old along the hinge and glued so carefully that you had to turn them to the light to see where.</p>
+<p>"For the old gentleman," said M.K., and held them out. "From an admirer."</p>
+<p>Tanaka took them. She turned them over in her hands. <em>Songs of the Lakeshore,</em> the green one said on its title page, in a faded old typeface, and under that the name of a school on the Veridican shore that she did not think existed any more. The blue one had no title page left, only a list of first lines. They were border songs. Ferry songs, fishing songs, a hymn she half knew. Someone, long ago, had written a child's name inside the green one's cover in pencil and rubbed it out.</p>
+<p>"Paper should go home," said M.K.</p>
+<p>She had taken her cup up again. Her hand was perfectly steady.</p>
+<p>"I'll see that he gets them," said Tanaka.</p>
+<p>"I know you will."</p>
+<p>She put them in her bag, beside the twelfth memorandum, and said goodbye, and went back down the ward past the woman in four who talked about her sister, and through the heavy door into the corridor, and felt the small soundless click behind her ears as the record took her back.</p>
+<p>The lift was empty. She stood in it with her bag on her shoulder and watched the floor numbers count down from nine, and somewhere around the sixth floor she became aware of the smell. Sharp and cold and faintly green, like cut stems. It was not on her cuffs this time. It was coming from the bag.</p>
+<p>She could smell the ninth floor on the books.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="02-kindred.html" class="nav-button">← Previous: Chapter 2: KINDRED</a>
+            <div class="nav-center">Chapter 3: The Sealed Ward</div>
+            <a href="04-the-kestrel-book.html" class="nav-button">Next: Chapter 4: The Kestrel Book →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

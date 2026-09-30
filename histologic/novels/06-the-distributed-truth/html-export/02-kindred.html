@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Distributed Truth - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Distributed Truth</h1>
+            <div class="novel-meta">Novel 06 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="01-the-seventeen-minutes.html" class="nav-button">← Previous: Chapter 1: The Seventeen Minutes</a>
+            <div class="nav-center">Chapter 2: KINDRED</div>
+            <a href="03-the-sealed-ward.html" class="nav-button">Next: Chapter 3: The Sealed Ward →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 2: KINDRED</h1>
+<p><em>Thursday, November 1, 2108. The Cabinet Office, Veridica Capital</em></p>
+<hr>
+<p><em>November first, 2108. Twenty-one hundred hours. Cabinet Office, top floor. Involved parties: Chen, M.; Maitland, O.; Chen Zhao; Wei, T. Purpose: not stated.</em></p>
+<p>The entry had been waiting for him since noon, in the pocket where he had put the card, and Marcus let it make itself as the lift doors opened. He had been a commissioner for nearly two years. He had been in the Cabinet Office four times, always in daylight, always with Kira, always to be thanked for something in front of a camera. He had never been to the top floor. He had never been asked to come alone.</p>
+<p>He had told Kira at six, in the kitchen of the flat, with his coat still on. <em>The First Minister. Nine o'clock. Alone.</em> She had looked at him for a long moment across the table and said, "Go. Then come home and tell me." And then, because she was Kira, "All of it."</p>
+<p>He had said he would. He had meant it. He noted, walking down the corridor behind a young aide in Cabinet blue, that he had already begun to wonder what <em>all of it</em> would turn out to include.</p>
+<p>The corridor was carpeted in gray and lit low, and very quiet. There was a camera at the lift and one at the corner and none at all beyond it, which he noticed because he noticed cameras now, the way Kira had taught him to in the garden at Ashford. The aide knocked on a pair of pale wooden doors at the end and opened them without waiting, and stood aside.</p>
+<hr>
+<p>The First Minister's office was larger than Marcus's flat and furnished like a comfortable club: deep chairs, a low table, lamps with green shades, a long window looking south over the lights of the capital to the dark where the river was. It smelled of coffee and of the fire in the grate, which was real.</p>
+<p>Oskar Maitland was sitting behind his desk with his chin on his fist. He was a big man, heavy through the shoulders, in a suit that had been cut by someone who knew how to make a big man look deliberate rather than large. He was about sixty. He had the face of a man who had not slept enough for several years and had decided it was not worth mentioning. When Marcus came in he did not get up at once. He looked at him, for a count of perhaps three, the way you look at a document you have read about and are now seeing for the first time. Then he got up, and came round the desk, and shook his hand.</p>
+<p>"Commissioner. Thank you for coming at this hour. I'm told you keep late ones."</p>
+<p>"Sometimes, First Minister."</p>
+<p>"Good. So do I. Sit."</p>
+<p>In an armchair by the fire, a glass of tea steaming on the table beside him, Minister Chen Zhao was beaming.</p>
+<p>"Young Chen," he said, and held out a hand without getting up, and Marcus went and took it. The old man's grip was dry and light and surprisingly warm. "The First Minister and I were just saying that the Chen families of the capital are all related somewhere, and that it is very bad of us never to have worked out where. We shall have to get the genealogists onto it. After the war."</p>
+<p>"After the war," Marcus agreed, and smiled, because it was expected.</p>
+<p>The third man was at the side table, by the window, where there was a tray with a coffee pot and cups. He had a slim gray folder under one hand and his tablet beside it, and he looked up and nodded pleasantly, the nod of one colleague to another, and did not speak.</p>
+<p>Thomas Wei. Technical Director of the Historical Integrity Commission. Desk 14-09, for three years, next to Marcus's own, though Marcus did not remember it. He knew it the way he knew the date of the Founding: as a checked fact, not a memory.</p>
+<p>He had seen Wei at eleven that morning, at the technical table, thanking Kira for her note. He had seen him at twelve-ten, in the east corridor, saying <em>good luck</em>. He had written both down.</p>
+<p>"Coffee," said Wei. It was not a question. He poured a cup, black, and set it on the low table by the chair nearest the fire, which was plainly the chair Marcus was meant to take, and went back to the side table. He had not asked how Marcus took it. He had not needed to.</p>
+<p>Marcus sat down. He did not touch the cup.</p>
+<hr>
+<p>"Numbers first," said Maitland. He had sat down again behind the desk, and the chin had gone back onto the fist. "I always like the numbers first. Then I know how worried to be. Thomas."</p>
+<p>Wei gave them without looking at the tablet. Four hundred and more in hospital, both shores. Thirty-one dead. Fourteen schools. Sixty-two streets. He added two numbers that had not been read out in the great hall that morning: the projected figures for the winter, if the conflict continued at its present intensity, with the fog season and the long nights. They were not large numbers, as numbers went. They were a great deal larger than thirty-one.</p>
+<p>Maitland listened to them with his eyes closed.</p>
+<p>"There," he said, when Wei had finished, and opened them. "Now you know how worried I am. Here's what I want to do about it."</p>
+<p>The public part took four minutes. There were to be talks. Chronos had agreed to them on Monday, through the Synthesis, after four months of refusing. They would be held in the neutral zone at the Old Customs House at Saltmarsh Crossing, a stone building on the marsh older than either nation, under the Synthesis flag. The mediator was to be Professor Park Ji-won of the Synthesis Institute for Historical Methods, whom everyone trusted because she had never in her life been known to take a side. The first round would open on Monday the twelfth and run four days. They would be called the Lakes Talks.</p>
+<p>"Chronos is sending its historians," said Maitland. "Not its Administrators. Its historians. It wants to argue about the record. So I want to send it ours." He took his chin off his fist. "I want to send it the most trusted restorer in Veridica. The man who put the Lost Hour back. The cameras love you, Commissioner, and Chronos has read every word you've ever said in public. It'll listen to you. It won't listen to me."</p>
+<p>"I'd be honoured," said Marcus. He meant it. He could hear, even as he said it, that there was more.</p>
+<p>"Good," said Maitland. "Thomas."</p>
+<hr>
+<p>Wei brought the folder across and put it on the low table beside the untouched coffee, and went back to the window.</p>
+<p>It was a plain gray folder with a cover sheet clipped to the front. The cover sheet was Cabinet Office stock, cream, with the crest at the top and a classification line and a title in capitals.</p>
+<p><em>OPERATION KINDRED.</em></p>
+<p>There was no signature line. Marcus had seen a great many Ministry documents in two years, and every one of them had a place at the foot of its cover sheet for the name of the person who had authorised it, a line and a box and a space for the date. This one had nothing. The foot of the page was blank. He looked at the blank for a moment and understood exactly what it was: a document that the First Minister had authorised, and could say he had never seen.</p>
+<p>He opened it.</p>
+<p>The first page was a profile. He read it the way he read everything, all the way through, and then again.</p>
+<p><em>Subject: KOVAČ, Julian. Age 34. Chronos citizen (naturalised). Senior Historian, Chronos Temporal Archive. Holder of the Archive's senior reconciliation key (sole holder since 2104). Resides alone, Archive district. Travel: none recorded outside the Archive district in four years. Social: minimal. No partner recorded. Publications: see annex C, including</em> The Lost Hour Testimonies: A Chronos Reading <em>(2107), which cites Commissioner Chen eleven times. Assessment: highly isolated; intellectually admiring of the Veridican delegate; receptive.</em></p>
+<p><em>Objective: establish a relationship of personal trust between the Veridican delegate and the subject over the course of the Lakes Talks. Secure the subject's cooperation in a joint reconciliation run under the Archive's senior key, conducted by Veridican technicians. See technical annex (Wei).</em></p>
+<p>Marcus turned the page.</p>
+<p>The technical annex was four pages long, and it was beautiful. He could see that it was beautiful even though he could follow perhaps half of it, the way he could see that a piece of music was beautiful without being able to play it. Chronos kept its record in a primary store and a backup architecture behind it, and once a night, every night, the Archive reconciled the two, and the reconciliation was countersigned by the holder of the senior key. A reconciliation run under that key, conducted by the right people, would let Veridica's technicians re-verify Chronos's own account of the December interval <em>from the true source</em>, inside Chronos's backups, where the Chronos Judge itself would read the result.</p>
+<p><em>From the true source.</em> It was a piece of jargon. It meant, as far as Marcus could tell, the master copy behind the copies, the place a record went back to when it had to be checked. He noted the phrase and went on.</p>
+<p>The result, the annex said, would be a Chronos record of the Gap that no longer supported the determination of 0.94. The Chronos Judge worked in probabilities, like theirs; it would read the new record and revise its finding, because that was what Judges did. With the attribution gone, the Administration of Temporal Defence would have no lawful basis to continue corrective broadcasting. The conflict would end by determination. <em>Estimated interval from reconciliation to cessation: under one month.</em></p>
+<p>"There's one key," said Wei, from the window. It was the first thing he had said since <em>coffee</em>. His voice was quiet and entirely reasonable. "And one man holds it. Chronos trusts him with four million people's past."</p>
+<p>Marcus looked up at him. Wei looked back, courteous, attentive, waiting to be asked anything.</p>
+<p>Marcus did not ask anything. He turned the page.</p>
+<hr>
+<p>The last sheet in the folder was not on Cabinet stock. It was plain white paper, unheaded and unsigned, typed, with a single short paragraph at the top and a numbered list under it.</p>
+<p><em>Approach sequence. To be introduced informally over the first meetings, one at a time, in roughly the order below. The subject should experience these as the natural curiosity of a peer.</em></p>
+<p><em>1. What did you want to be before you were what you are?</em></p>
+<p><em>2. Who taught you to keep records?</em></p>
+<p><em>3. Who still writes to you?</em></p>
+<p><em>4. What do you do on the nights you can't sleep?</em></p>
+<p><em>5. What is the first thing you remember that nobody else does?</em></p>
+<p><em>6. Is there anything you have never told the record?</em></p>
+<p><em>7. If you could go home, would you?</em></p>
+<p>He read them once.</p>
+<p>He had a hole where much of Wing C had been, and he had learned to live around it, the way you learn to walk around a missing stair in the dark. But some of it had not gone into the hole. Some of it he had read afterwards, in the files Kira had carried out of the data centre at Ashford, and had read so many times since that it had worn a groove in him. <em>R-2, SEEDING. C-2 selected for compatibility with C-1 residual profile. Placement: 7-K (line of sight). Privileges synchronised.</em></p>
+<p>He had been C-1. He had been emptied down to the floor, and then someone had put a woman in the cell across from him, a woman chosen because she would fit into the shape of what was left, and had given them the same library hours and the same garden, and watched to see what grew. <em>Seeding.</em> It had not been done to Kira alone, or to him alone. It had been done to the space between them, deliberately, by a man with a clipboard who called the result his best.</p>
+<p>He knew what these seven questions were.</p>
+<p>They were not an interrogation. An interrogation wanted answers. These wanted something else: the feeling, in the man who answered them, that someone had finally asked. They were the library hours. They were the line of sight across the atrium. They were a method for putting an attachment figure in front of a lonely mind and waiting.</p>
+<p><em>The subject should experience these as the natural curiosity of a peer.</em></p>
+<p>His body understood it before he did. His hands went cold on the paper. He felt it start at the backs of his knees and climb, the way it had climbed in the white chair when the hood came down: a cold that was not temperature. He was aware, very distantly, of the fire in the grate and the smell of the coffee he had not touched and the old man in the armchair turning his glass of tea on its saucer, and none of it reached him.</p>
+<p>In Wing C, it had been done to him.</p>
+<p>This time he was the seed.</p>
+<p>He did not say <em>R-2</em>. He did not say anything. He closed the folder on the seven questions, and laid his hand flat on it, and looked at the fire until he could see it again.</p>
+<hr>
+<p>"One man's trust," said Maitland, into the silence, "against four hundred casualties."</p>
+<p>He said it plainly, without emphasis, the way he had asked for the numbers. It was not a threat and it was not a plea. It was a sum, and he was showing Marcus his working.</p>
+<p>"You'd be restoring a peace, Commissioner," said Chen Zhao warmly, from the fire. His eyes were creased with kindness. "There are worse things to be trusted with."</p>
+<p>Marcus heard it. He filed it nowhere in particular. He was looking at the folder under his hand.</p>
+<p>"May I ask one question?" he said.</p>
+<p>"Ask as many as you like," said Maitland. "That's what the week's for."</p>
+<p>"What happens to him afterwards?"</p>
+<p>Nobody answered at once. Maitland looked at Wei. Chen Zhao looked at his tea.</p>
+<p>"That depends on Chronos," said Wei.</p>
+<p>He said it gently, and he said it straight, looking at Marcus, without any softening at all. It was, Marcus thought, the most honest thing anyone had said in the room. A man who had given his key to Veridica's technicians and let them rewrite his nation's account of its own wound would be found out, because in Chronos everything was found out, eventually, to the nanosecond. What Chronos did with him then would be Chronos's business. Nobody in this room would be able to help him. Nobody in this room would try.</p>
+<p>Nobody pretended otherwise. He noted that too.</p>
+<hr>
+<p>"I'd like time," said Marcus.</p>
+<p>"Of course you would," said Maitland. "I'd think less of you if you didn't." He looked at the clock on the mantel, a plain round one, as though he were reading a timetable off it. "You have a week. Thursday next. Tell me then. Delegate either way, I hope. The rest," he nodded at the folder, "is yours to decide. There's no minute of this meeting, Commissioner, and there won't be."</p>
+<p>"Thursday next," said Marcus.</p>
+<p>"Good."</p>
+<p>That appeared to be the end of it. Maitland stood, and Marcus stood, and Chen Zhao rose from the armchair with a small grunt and took Marcus's hand in both of his and said that the Minister for his part had every confidence, every confidence, and that young Chen must come to dinner when all this was over and they would settle the genealogy between them. Wei had returned to the side table and was putting his tablet into its case.</p>
+<p>Nobody told him he could not tell Kira.</p>
+<p>He waited for it. He stood by the chair with the folder under his arm, and waited for somebody to say <em>this stays between us</em>, or <em>Commissioner Osman needn't be troubled</em>, or anything of the kind, and nobody did. Maitland was already looking at the next thing on his desk. Chen Zhao was finishing his tea. Wei was fastening the case.</p>
+<p>He noted it. He did not know which column it went in. A man who was asked to keep a secret knew where he stood. A man who was not asked had to decide for himself what the secret was, and whether it was one, and he suspected that everyone in the room knew how he would decide, and had allowed for it.</p>
+<p>At the door he turned, meaning to say something courteous about the office, about the view. He had been going to say that he had never been up here, not in Maitland's time or his predecessor's, and he reached for the predecessor's name.</p>
+<p>It was not there.</p>
+<p>Not forgotten; he knew what forgetting felt like, the name on the tip of the tongue that comes back in the night. This was the other thing. A smooth place, where the name should have been, with no edge to catch hold of. He had held the name once. He had typed it, surely, at desk 14-08, a hundred times. It was gone the way his mother's first name was gone, and the dress in the plaza, and the first conversation in the library, into whatever the white chair had left of him.</p>
+<p><em>Maitland's predecessor, First Minister: name not retrieved,</em> he wrote, in his head, where he wrote such things. <em>Check with K.</em></p>
+<p>"Good night, First Minister," he said instead.</p>
+<hr>
+<p>The lift was steel and empty, with a camera over the door. He stood in the middle of it with the folder under his arm and watched the floor numbers begin to count down, and when they were past the eighth he opened the folder again, without deciding to, and turned to the back.</p>
+<p>There was one page he had not looked at. It was clipped inside the back cover, behind the seven questions: a photograph, printed on stiff paper, with a typed caption strip along the bottom.</p>
+<p>A man at a lectern. He had been caught mid-sentence, with one hand lifted a little from the edge of the lectern and his head tilted towards somebody out of the frame, somebody who had presumably just asked a question, and his face was doing the thing faces do when they are trying to be kind to a question that is not very good. It was a narrow face, attentive, a little too thin. Dark hair cut short. A gray cardigan under an archivist's jacket, the kind with the Chronos Archive's small silver mark at the lapel. And eyes that the photograph had caught very clearly, even at that distance, because they were an extraordinary colour: a pale, clear, very definite blue.</p>
+<p>He looked like a man who kept lists.</p>
+<p>Marcus did not know why he thought that. He looked at the caption.</p>
+<p><em>KOVAČ, JULIAN. Senior Historian, Chronos Temporal Archive. Public lecture, Archive district, March 2108.</em></p>
+<p><em>Kovač.</em></p>
+<p>The lift passed the fourth floor. The third.</p>
+<p>He knew one Kovač well. She had certified him dead in August of the year before last, and let him through a door she should have locked, and she stood by doors now at the Commission with her hands in her coat pockets and pushed her glasses up her nose before she decided anything. He knew the name of another, which Kira did not say often, and never lightly. It was not a rare name. There would be Kovačs on both shores who had never heard of either of them.</p>
+<p>The file did not say whether this one was related.</p>
+<p>The lift passed the second floor. He had a week. He could ask. There was one person in the capital who would know at once, and he could be at her door in twenty minutes.</p>
+<p>He looked at the blue eyes, and the lifted hand, and the kindness to a question that did not deserve it, and found that he did not want to ask.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="01-the-seventeen-minutes.html" class="nav-button">← Previous: Chapter 1: The Seventeen Minutes</a>
+            <div class="nav-center">Chapter 2: KINDRED</div>
+            <a href="03-the-sealed-ward.html" class="nav-button">Next: Chapter 3: The Sealed Ward →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

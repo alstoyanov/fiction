@@ -121,6 +121,61 @@ Marcus did not do it. But he was in the building, and so, for their own secret r
             ]),
         ],
     },
+    "06": {
+        "dir": Path("novels/06-the-distributed-truth"),
+        "epub": "the-distributed-truth.epub",
+        "title": "The Distributed Truth",
+        "subtitle": "Novel 06 of the Histologic Series",
+        "description": """Seventeen minutes vanish from the life-logs of Chronos, a nation that records every heartbeat, and the scar of the Lost Hour is in the wound. Two nations slide into a war of facts. Veridica asks its most trusted restorer, Marcus Chen, to end it by manufacturing the trust of Chronos's senior historian, a lonely man who admires him.
+
+Marcus refuses, and publishes everything, by many hands, in three nations at once. The war stops. Then the government confesses first and offers the remedy the heroes always wanted: an index of every citizen's journal. The design has anticipated every reformer. Now it has to anticipate everyone.""",
+        "parts": [
+            ('Prologue', [
+                ('00-prologue.md', 'Prologue', 'The Doubled Pier', 'Ruth'),
+            ]),
+            ('Part One: The War of Facts', [
+                ('01-the-seventeen-minutes.md', 'Chapter 1', 'The Seventeen Minutes', 'Kira'),
+                ('02-kindred.md', 'Chapter 2', 'KINDRED', 'Marcus'),
+                ('03-the-sealed-ward.md', 'Chapter 3', 'The Sealed Ward', 'Tanaka'),
+                ('04-the-kestrel-book.md', 'Chapter 4', 'The Kestrel Book', 'Ruth'),
+                ('05-the-compilers-voice.md', 'Chapter 5', "The Compiler's Voice", 'Old Songs'),
+                ('06-the-lakes-talks.md', 'Chapter 6', 'The Lakes Talks', 'Marcus'),
+                ('07-aunt-helena.md', 'Chapter 7', 'Aunt Helena', 'Kovač'),
+                ('08-meridian.md', 'Chapter 8', 'MERIDIAN', 'Marcus'),
+            ]),
+            ('Part Two: The Fragments', [
+                ('09-the-true-source.md', 'Chapter 9', 'The True Source', 'Kira'),
+                ('10-the-calibration-grounds.md', 'Chapter 10', 'The Calibration Grounds', 'Dmitri'),
+                ('11-seventeen-minutes-asleep.md', 'Chapter 11', 'Seventeen Minutes Asleep', 'Julian'),
+                ('12-the-third-fragment.md', 'Chapter 12', 'The Third Fragment', 'Isaiah'),
+                ('13-the-table-of-contents.md', 'Chapter 13', 'The Table of Contents', 'Old Songs'),
+                ('14-stabilisation.md', 'Chapter 14', 'Stabilisation', 'Tanaka'),
+                ('15-the-warning.md', 'Chapter 15', 'The Warning', 'Marcus'),
+                ('16-fourteen-hundred.md', 'Chapter 16', 'Fourteen Hundred', 'Ruth'),
+            ]),
+            ('Part Three: The Concordance', [
+                ('17-the-remedy.md', 'Chapter 17', 'The Remedy', 'Marcus'),
+                ('18-the-league-of-the-record.md', 'Chapter 18', 'The League of the Record', 'Nikolai'),
+                ('19-the-false-entry.md', 'Chapter 19', 'The False Entry', 'Ruth'),
+                ('20-the-crossing.md', 'Chapter 20', 'The Crossing', 'Alexei'),
+                ('21-mrs-kerr.md', 'Chapter 21', 'Mrs. Kerr', 'Tanaka'),
+                ('22-two-old-people.md', 'Chapter 22', 'Two Old People', 'Old Songs'),
+                ('23-the-drafts.md', 'Chapter 23', 'The Drafts', 'Maya'),
+                ('24-the-remedy-was-ready.md', 'Chapter 24', 'The Remedy Was Ready', 'Kira'),
+            ]),
+            ('Part Four: Many Hands', [
+                ('25-0-58.md', 'Chapter 25', '0.58', 'Marcus'),
+                ('26-the-night-of-copies.md', 'Chapter 26', 'The Night of Copies', 'Dmitri'),
+                ('27-the-compilers-confession.md', 'Chapter 27', "The Compiler's Confession", 'Vance'),
+                ('28-the-reply.md', 'Chapter 28', 'The Reply', 'Kira'),
+                ('29-thank-you.md', 'Chapter 29', 'Thank You', 'Marcus'),
+                ('30-two-hands.md', 'Chapter 30', 'Two Hands', 'Nikolai'),
+            ]),
+            ('Epilogue', [
+                ('31-epilogue.md', 'Epilogue', 'The Round', None),
+            ]),
+        ],
+    },
 }
 
 

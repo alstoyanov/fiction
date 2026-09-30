@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Distributed Truth - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Distributed Truth</h1>
+            <div class="novel-meta">Novel 06 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="24-the-remedy-was-ready.html" class="nav-button">← Previous: Chapter 24: The Remedy Was Ready</a>
+            <div class="nav-center">Chapter 25: 0.58</div>
+            <a href="26-the-night-of-copies.html" class="nav-button">Next: Chapter 26: The Night of Copies →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 25: 0.58</h1>
+<p><em>Monday, January 14, 2109. The Justice Center, Veridica Capital</em></p>
+<hr>
+<p><em>January fourteenth, 2109. Oh-nine-fifty hours. Justice Center, main steps. Involved parties: Chen, M. Weather: overcast, minus two. Purpose of visit: public session, Concordance Act. Status of subject:</em></p>
+<p>Marcus stood at the bottom of the steps and let the entry settle, and did not finish it.</p>
+<p>Two years ago to the day he had stood on this same stone with the same habit, and the entry had ended in a word. <em>Commissioner.</em> He had been able to write it then. He had been dead for five months and alive for sixteen days, and there had been a word waiting at the end of the line for him to put down.</p>
+<p>He left the line open. He had been leaving lines open for five days, since the floor of the flat and the row of paper and Kira's level voice. <em>Then we don't give it a centre.</em> He had said it. He had meant it. He had not yet had to find out what it cost.</p>
+<p>There were cameras at the top of the steps. There were always cameras at the top of the steps. He went up past them, and a woman with a press badge called "Commissioner," not uncertainly now, and he nodded to her and went in.</p>
+<hr>
+<p>The Judge's chamber was on the upper floor, above the great hall where the Commission sat, and Marcus had been in it only twice.</p>
+<p>It was not a courtroom. The Judge did not need one. It was a long, pale room with a curved inner wall and no windows, lit evenly from the ceiling so that nobody in it cast much of a shadow. The public benches rose in tiers at the back, and they were full. On the floor below them was a single lectern, plain, with a microphone and a glass of water. To the right of the lectern, a little raised, the presiding chair. To the left, the commissioners' bench, where Kira sat in her dark coat with her hands folded on a closed notebook and her face composed into nothing at all.</p>
+<p>And behind the lectern, the full width of the curved wall, the panel.</p>
+<p>He had seen it installed in the autumn, when the Doctrine's language had been made visible for the first time: <em>weighted for known contamination</em>. It was a band of clean white light, perhaps a metre high, divided into rows. Each row would carry a speaker's name in plain capitals and, beside it, a figure to two decimal places, updated as The Judge received what the speaker said. Across the whole width of the band, at the height where 0.60 would fall on the scale, ran a single fine line in red. It was the only colour in the room.</p>
+<p>The rows were empty now. The line was not.</p>
+<p>Minister Chen Zhao came in from the side door and took the presiding chair, and the chamber stood, and sat. Someone had put a glass of tea at his elbow, and it steamed faintly in the even light. He smiled at the benches as if he were pleased to see each of them individually.</p>
+<p>At the very back, on the highest public bench, sat Dmitri Volkov. He had come as a member of the public. He had a seat with a view of every door. Marcus did not look at him for long. He did not need to.</p>
+<p><em>Justice Center, upper floor. Chamber of The Judge. Presiding: Chen Zhao. Commissioners' bench: Osman, K., and four others. Public benches: full. Doors: four. Panel: live.</em></p>
+<hr>
+<p>The clerk had the Act in front of her, in a white cover with the Concordance crest on it: an open book under two joined hands. She read the question in a clear, uninflected voice.</p>
+<p>"The matter before The Judge is the Concordance Act. The Judge is asked to determine whether a journal of testimony that has not been registered under the National Concordance shall be classed as an unverified record, so that the keeping of one is relevant to a citizen's contamination. The Judge will hear three speakers. It will then receive written testimony, and determine the matter in due course."</p>
+<p>Three speakers. Marcus had asked to go last. Nobody had argued.</p>
+<p>"Undersecretary Pell," said the Minister warmly. "For the League of the Record."</p>
+<p>The first row lit. <em>PELL, I.</em> Beside it: <em>0.11.</em></p>
+<p>Pell came to the lectern with a sheaf of paper he did not use. He was a heavy, neat man with a precise parting and the look, as always, of someone who had been insulted in a meeting some years ago and had not yet had the satisfaction. Marcus had disliked him for two years with a steady, uncomplicated dislike that he had come to value, because so little else was uncomplicated.</p>
+<p>He did not dislike him today. Pell was afraid.</p>
+<p>It was in the way he held the lectern. It was in his voice, which was louder than the room needed. He spoke about the storms. He spoke about seven months in which nobody on the lakeshore had been able to say with certainty what their own street had looked like the year before. He spoke about people on the lakeshore who had walked off quays onto piers that were not there. He said that the storms had taught Veridica something it should never have had to learn: that a memory could be <em>written</em>. And if a memory could be written, then every private book in the country was a book that anyone might have written in.</p>
+<p>"A nation of memories," said Pell, "is a nation of liars. Not because its people lie. Because they cannot know when they have been lied to." He looked up at the benches. "Burn them. All of them. Register nothing, index nothing, weigh nothing. Restore the one record that was built to be trusted, and trust it."</p>
+<p>He was right about one thing, Marcus thought. Memory could be written. He was right for the wrong reasons, and he would never know which reasons they were.</p>
+<p>The panel did not move while Pell spoke. <em>0.11.</em> When he sat down there was some applause, from the upper benches, loud and short.</p>
+<hr>
+<p>"Technical Director Wei," said the Minister. "For the government."</p>
+<p>The second row lit. <em>WEI, T. 0.03.</em></p>
+<p>Somebody on the benches made a small, approving sound at the number. Marcus heard it. He filed it.</p>
+<p>Wei came to the lectern the way he went everywhere, lightly, without hurry. He was tall and gray at the temples, and he thanked the Minister and the chamber and, by name, Undersecretary Pell, "whose fear is the fear of a great many honest people, and deserves an answer rather than a quarrel." He had no notes. He did not need them.</p>
+<p>He described the Concordance.</p>
+<p>He did it beautifully. Marcus had heard it once before, on the eighteenth of December, and had thought it beautiful then, and had spent the three weeks since learning exactly why it was. Every journal a citizen chose to register would be scanned and sealed, page by page, in the keeper's presence. Every page would be cross-referenced with every other page that mentioned the same day, the same street, the same hour, so that a man in one town who had seen something would find, without looking, that a woman in another town had seen it too. Where two books disagreed, the disagreement would be flagged and kept, "Kestrel-style", he said, with a small nod towards the lakeshore that drew a murmur from the benches, "because the people of the strip taught us that a record which keeps its disagreements is stronger than one which settles them." Keepers would be protected in law. Their books would be weighed by The Judge as testimony. And no journal would ever again be lost to a flood, or a fire, or a man with a leaflet and a can of fuel.</p>
+<p>"Nothing anyone has written down," said Wei, "should ever be lost again." He paused, and let the chamber feel the weight of it, and smiled a little. "We are only offering to keep it for them."</p>
+<p>The benches applauded. It was not the short loud applause Pell had had. It was long, and warm, and came from everywhere.</p>
+<p>Marcus did not applaud. He sat very still in the speaker's chair beside the lectern and looked at the man's back.</p>
+<p><em>Tuesday, November sixth, 2108, oh-eight-fourteen. Technical Director's office. First draft.</em> Five days after a card that said <em>tonight, alone</em>. Forty-one revisions. The last one at 11:40 on the morning of the publication it was built to answer.</p>
+<p>He could say it. He could stand up, in five minutes, in front of The Judge and a full chamber and the broadcast light, and read the dates out one by one, and watch the room turn.</p>
+<p>And then Wei would say, very kindly, that metadata could be forged. And then someone would ask who had pulled a restricted history from the Technical Director's store, and there was only one answer to that, and she was twenty-six and her father was in prison. And then it would be weighed. Once. In the one room they had been ready for since the sixth of November.</p>
+<p>He had decided on Wednesday night. He decided again, sitting there, and found that deciding it twice did not make it lighter.</p>
+<p>The argument would have to stand without her. It would have to stand on what anyone could read.</p>
+<hr>
+<p>"Commissioner Chen," said the Minister, and there was real fondness in it. "Who needs no introduction. Though I believe I'm obliged to make one."</p>
+<p>The benches laughed kindly. Marcus stood up and went to the lectern.</p>
+<p>The third row lit. <em>CHEN, M.</em> Beside it: <em>0.20.</em></p>
+<p>He looked at it for a moment. It was not a surprising number. He was a commissioner who spent his days among outlaws and storm survivors and the testimony of the dead, and who had himself been officially dead for five months, and The Judge weighed all of that, and should. <em>0.20.</em> A little under a third of the way to the red line.</p>
+<p>He put his hands flat on the lectern. His lists were in his inside pocket. He did not take them out.</p>
+<p>"I'm going to argue against the Concordance," he said. "I know how that sounds, in this room, this winter. I'm going to argue for something smaller. For journals that are kept free. On paper. Not registered. Not indexed. Checked by the people who wrote them, and by nobody else."</p>
+<p>A small stir on the benches. Not hostile yet. Curious.</p>
+<p>"On the seventeenth of December we published some pages," he said. "Everyone in this room has read them, or has been told what they say. I'm going to quote only from those. Nothing new." He did not look at Wei. "One of them describes how a record is held. It says that a record held in one place, with three backups that appear independent and are not, <em>may be restored from the true source.</em> Whoever holds the source. If outsiders corrupt it. If insiders reform it. Either way. <em>Restored from the true source.</em>"</p>
+<p>He let that sit.</p>
+<p>"Another, in the Compiler's own hand, says what happens to people who try to reform a design like that. It says the design <em>will make reformers into its own restorers.</em>" He looked up at the benches. "I've been a restorer. So has everyone on that bench. We were good at it. We were trusted. That was the point."</p>
+<p>"The Concordance would hold every journal in the country in one place. It would index them. That's its virtue. It's also exactly what it is. An index of every journal is a list of everyone who remembers." He heard his own voice go very plain, the way it went when he was sure. "And whatever can be restored can be edited."</p>
+<p>The panel did not move. Marcus had not expected it to. Arguing was not exposure.</p>
+<p>Then he did the thing he had come to do.</p>
+<hr>
+<p>He had thought about it for five days. He had not told Kira, because she would have tried to stop him and she would have been right. He had told only himself, in the flat at three in the morning, and written it under HOPES and then moved it, because it was not a hope. It was a method.</p>
+<p>The Concordance's argument was safety. <em>Register, and you will be protected. Register, and your book will be kept.</em> And its unspoken argument was the other side of that: <em>Don't register, and you will be exposed.</em> If he stood here and argued for free journals while keeping his own exposure hidden, so as to stay safely under the line, he would be making the Concordance's argument for it. He would be one more person who kept quiet about his book because keeping quiet was safer.</p>
+<p>So he would not keep quiet. He would put it on the record, one fact at a time, and let the room watch what that did.</p>
+<p>"I'll tell you what I'm asking you to protect," said Marcus. "So that you know."</p>
+<p>"I keep a journal. It's not registered."</p>
+<p>On the wall behind him the figure changed. He did not turn round. He could see it reflected, faintly, in the dark wood of the lectern's edge, and in two hundred faces. <em>0.27.</em></p>
+<p><em>Oh-ten-forty-one. Statement one. Index: 0.27.</em></p>
+<p>"Some of its contributors I have never met."</p>
+<p><em>0.34.</em></p>
+<p>A murmur went along the benches. Someone near the front said something to the person beside them, and the person beside them looked at the panel and then at Marcus.</p>
+<p>"Some of them are officially dead."</p>
+<p><em>0.41.</em></p>
+<p>The murmur stopped. It was quieter now than it had been at any point in the morning. Marcus kept his hands flat on the lectern. He could feel the grain of the wood under his palms.</p>
+<p>"Some live on the other shore."</p>
+<p><em>0.49.</em></p>
+<p>He heard Kira not move. He could not see her, because she was to his left and he was looking straight ahead at the benches, but he heard it, the particular stillness she had that was louder than anyone else's speech. On the highest bench, Dmitri's head had turned a few degrees. Not towards Marcus. Towards the nearest door.</p>
+<p>"It has been copied by hand into two other houses," said Marcus. "I will not tell this chamber which."</p>
+<p><em>0.53.</em></p>
+<p>He took a breath.</p>
+<p>"I will not register it. And I ask you not to make anyone else."</p>
+<p><em>0.58.</em></p>
+<hr>
+<p>Somebody laughed.</p>
+<p>It was not cruel. It was the startled, involuntary laugh of someone who has watched a man walk towards the edge of a roof and cannot believe he is still walking. It came from high on the left, and it broke something, and after it the benches were not quiet any more.</p>
+<p>A woman stood up in the fourth tier. She was middle-aged and neatly dressed and she had a journal of her own, Marcus could see the corner of it, held against her coat. Her voice carried without effort.</p>
+<p>"Then what are you afraid of?"</p>
+<p>It was a fair question. It was the fairest question anyone had asked him in two years. She meant: if your book is honest, why won't you let them keep it? She meant it sincerely. She had her book against her coat the way people in the street had held their books up to the broadcast screens on the eighteenth of December, as if to be counted.</p>
+<p>"Of being kept," said Marcus.</p>
+<p>It was not enough, and he knew it wasn't. He saw it not be enough. He saw the room decide, the way a room decides, all at once and without discussion: that the Commissioner was brave, perhaps, and tired, certainly, and that his index was very high, and that he was wrong.</p>
+<p>He went on anyway. He had a closing sentence. He had written it on Saturday and not needed to look at it since.</p>
+<p>"The only record nobody can restore," he said, "is one that's kept in many hands, by people who argue with each other, on paper, where they can see it. Let the people who wrote these books be their—"</p>
+<p>The word was not there.</p>
+<p>He knew it was a word. He knew its shape, roughly: three syllables, something about keeping, something about care, a word a historian used about archives. He reached for it and there was nothing under his hand. A smooth place, where it should have been, like a shelf cleared in the night with the dust still unmarked.</p>
+<p>It had not happened in public for a long time.</p>
+<p>The chamber waited. Two hundred people, and Kira, and Dmitri, and Wei on the government bench with his hands folded, and The Judge, which recorded the pause and weighed nothing in it, because it could not see what was missing.</p>
+<p>"Let them keep their own," said Marcus. "That's all."</p>
+<p>It was a worse sentence. It was also true. He did not soften it. He did not add anything. He stepped back from the lectern and went back to the speaker's chair and sat down in it, with his hands on his knees, and did not look at the wall.</p>
+<hr>
+<p>The Minister let the silence run a little, graciously, and then leaned towards his microphone.</p>
+<p>"I thank all three speakers," said Chen Zhao, "for restoring our confidence in open argument. It has been a morning of real disagreement, and real conviction, and I think we are all the better for it." He lifted his glass of tea very slightly, as if in a toast, and set it down. "The Judge will now receive written testimony on the matter. It will determine it on Monday, the fourth of February." He smiled at the benches. "Three weeks. I'm sure it will be glad of the time."</p>
+<p>The benches laughed, relieved. People began to stand.</p>
+<p>Marcus sat still.</p>
+<p><em>Oh-eleven-oh-six. Session closed. Determination set: Monday, February fourth. Room: lost.</em></p>
+<p>He wrote it in his head the way he wrote everything, and then, because it was accurate, he left it.</p>
+<p>Kira had not looked at the panel once. He knew that without having to check. When he turned his head at last she was looking at him, only at him, across the floor of the chamber, with her notebook closed under her hands and her face very calm, which meant that she was angrier than he had ever seen her, and not with him. She did not nod. She did not need to.</p>
+<p>At the back, on the highest bench, Dmitri was counting the doors. Marcus watched his eyes go round the room, one door, two, three, four, and back to one, and knew that he had been doing it since <em>0.41</em>.</p>
+<hr>
+<p>The rows on the panel went dark one by one as the speakers left the floor. <em>PELL, I.</em> went first. Then <em>WEI, T.</em> Marcus's row stayed lit, because he was still sitting beside the lectern, and it would stay lit until he stood.</p>
+<p>He looked at it now.</p>
+<p><em>CHEN, M. 0.58.</em></p>
+<p>It did not move. The Judge had received everything he had said, and weighed it, and arrived. Two points below the red line. Two points below custody. Close enough that a single night in the wrong kitchen, a single conversation logged in the wrong place, a single outlaw's handwriting in the wrong book, would carry him over it.</p>
+<p>And it was the number.</p>
+<p>He had not expected that. He did not know why he had not expected it. <em>0.58</em> was the figure The Judge had once calculated for him, honestly, in October of 2105, from everything he had really done: the café, the fountain, the questions he had asked about a fact that was no longer there. It was his real number. It had been his real number for a few days, before someone opened the file and typed <em>0.73</em> over it and sent him to Ashford. He had learned it at Ashford, from one line in his own acquisition file: <em>0.58 → 0.73 (adjusted; threshold compliance).</em> Later, Kira had read whose hand had done the adjusting.</p>
+<p>Two years ago, in the corridor behind the great hall below this one, a man had stopped him in a panel of white light and said <em>You remember,</em> and he had said <em>No. I checked.</em></p>
+<p>He looked up from the panel, across the chamber.</p>
+<p>Wei had not left. He was standing by the side door with his coat over his arm, pleasant, unhurried, waiting for the crowd at the door to thin. He was not looking at Marcus.</p>
+<p>He was looking at the panel too, with polite interest.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="24-the-remedy-was-ready.html" class="nav-button">← Previous: Chapter 24: The Remedy Was Ready</a>
+            <div class="nav-center">Chapter 25: 0.58</div>
+            <a href="26-the-night-of-copies.html" class="nav-button">Next: Chapter 26: The Night of Copies →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

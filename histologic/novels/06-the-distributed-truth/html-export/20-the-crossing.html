@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Distributed Truth - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>The Distributed Truth</h1>
+            <div class="novel-meta">Novel 06 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="19-the-false-entry.html" class="nav-button">← Previous: Chapter 19: The False Entry</a>
+            <div class="nav-center">Chapter 20: The Crossing</div>
+            <a href="21-mrs-kerr.html" class="nav-button">Next: Chapter 21: Mrs. Kerr →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 20: The Crossing</h1>
+<p><em>Wednesday, January 2 – Thursday, January 3, 2109. The border zone, the Drowned Causeway, and Chronos</em></p>
+<hr>
+<p>There were four ways into Chronos, and Alexei Volkov had used three of them.</p>
+<p>There was the lakeshore checkpoint, with its floodlights and its courteous officers who read your papers down to the second; that was for people with papers. There was the culvert gap east of the old pumping station, where two fence posts had slumped into a stream and neither nation would mend them, because mending them meant admitting whose they were. There was the ferry, which had not run since October.</p>
+<p>And there was the Drowned Causeway, which neither nation had bothered to put on a map for thirty years, because in clear weather you could see every metre of it from the Chronos shore, and in fog you couldn't see it at all.</p>
+<p>It had been the Phantom's road for ten years. He had taken thirty-odd people across it, not counting the ones who turned back at the first gap, and he had never once taken anyone who was dead on paper, and seventy, and couldn't swim.</p>
+<hr>
+<p>It started with a set of case notes, on the Sunday after Christmas.</p>
+<p>Kira drove out from the capital in the early afternoon and came into the farmhouse kitchen with a card folder held flat against her coat, the way she held anything that mattered.</p>
+<p>"From Tanaka," she said. "By Elena's courier. It came yesterday."</p>
+<p>She laid it on the table, squared to the edge: four typed sheets and a covering note in Tanaka's small upright hand. Alexei read the note over her shoulder, because nobody had ever stopped him.</p>
+<p><em>Clinical, not personal. The patient asks after him daily. I would like to know why.</em></p>
+<p>"Him," said Alexei, and looked at the stove.</p>
+<p>Old Songs was on the warm side of it with the blanket round his shoulders, humming the Lakeshore Air, each phrase lifting at the end. Alexei had stopped hearing it years ago, the way you stop hearing your own heartbeat. He heard it now because Kira had put the folder in the old man's hands.</p>
+<p>He read it twice, as he had read the Introduction in November at this table: the sheets held a little away from him, the object first and then the words. Alexei read it over his shoulder too, because he had no shame and never had.</p>
+<p>Where the patient's initials should have been there were two short black strokes of ink, pressed hard enough to dent the paper.</p>
+<p><em>Patient —, 72. Long-term, 9S. Lucid beyond her chart. Tremor, right hand.</em></p>
+<p><em>Reads every memorandum I write ("Write a twelfth").</em></p>
+<p><em>Asks after "the old man who sings on your broadcasts."</em></p>
+<p>And further down, from December:</p>
+<p><em>Knows the lineage of the stabilisation technique better than its own protocol does.</em></p>
+<p>The hospital was named, and the ward: 9S, the sealed cognitive ward on the ninth floor. The director wasn't. Since the seventeenth, a later line said, the patient had been eating less. The tremor was worse.</p>
+<p>Old Songs put the sheets down on his knee.</p>
+<p>Then he did a thing Alexei had never seen him do. He counted on his fingers, slowly, the way a child counts. Seventy. Then two more.</p>
+<p>The humming stopped.</p>
+<p>It stopped at the place where the phrase began to lift, as if someone had closed a door on it. Dmitri, by the window, turned his head. Kira's hands went flat on the table. Alexei's shoulders did something without asking him. In Wing C the old man's silence had meant <em>they're watching</em>.</p>
+<p>Nobody was watching. It was a farmhouse kitchen on a Sunday, with Elena's terrible coffee going black on the hob.</p>
+<p>"Misha," said Alexei.</p>
+<p>Old Songs didn't answer. He was looking at the two black strokes where the initials had been. In November, when Alexei had asked who Elise was, he'd said <em>someone I argued with on Thursdays</em>, and nothing more.</p>
+<p><em>Seventy-two</em>, Alexei thought. <em>She'd be about seventy-two.</em></p>
+<p>He didn't say it. Some things you let a man get to by himself.</p>
+<hr>
+<p>"No," said Elena, on the Wednesday evening, before anyone had asked her anything.</p>
+<p>She stood at the head of the kitchen table with her coat still on, looking at the room from left to right as if she were counting trucks back into the barn, and laid it out in order.</p>
+<p>"He has no papers. He's officially dead in Veridica, by his own choice, and in Chronos he never existed. Their interfaces record everything their citizens see. Every Chronos face he passes will log his face. Every porter, every nurse, every man walking his dog. You can't spoof four million pairs of eyes." She held up a finger. "And the doctor has already refused."</p>
+<p>Kira had written to Tanaka on the thirty-first, by the same courier, asking whether a visit might be arranged. The answer had come back on hospital notepaper folded in three, and it had been one word long.</p>
+<p><em>No.</em></p>
+<p>Alexei had admired it, as a piece of work. You could hear Tanaka's voice in the full stop.</p>
+<p>"So," said Elena. "That's the position."</p>
+<p>Nobody argued. Alexei sat on the bench under the window with one boot up, and waited, because in thirty-three years he'd learned that when Elena said <em>that's the position</em> she meant <em>now tell me why I'm wrong</em>.</p>
+<p>Old Songs got up from beside the stove.</p>
+<p>He folded the blanket and took down the old wool coat from the peg by the back door, too big in the shoulders and too short in the sleeves, and did up the buttons from the bottom, slowly. Then he looked at Elena with his pale eyes.</p>
+<p>"The record thinks I'm dead," he said. "Let it."</p>
+<p>That was all. He didn't say another word all night.</p>
+<p>Elena looked at him for a long moment. Then she looked round the room again, left to right, counting: not chairs, but people, and fog, and hours.</p>
+<p>"Lyosha," she said. "The causeway."</p>
+<p>He grinned before he could help it.</p>
+<hr>
+<p>The fog was due after ten. By eight the yard light had a halo on it and the poplars along the lane had gone soft at the edges: real fog, cold and ordinary, coming off the water as it did every winter.</p>
+<p>Marcus couldn't come. A Commissioner seen walking into Chronos through a marsh twelve days before the Concordance Act went to The Judge would be having a very different kind of January. But he could write to Julian Kovač, through Professor Park's secretariat, whose link since the stand-down carried letters across the lake in an hour instead of a week. Julian had answered within the hour. He hadn't asked a single question. He'd given a time and a place on the marsh road, and nothing else.</p>
+<p>Alexei had liked the man in the photographs from the talks, laughing on the bench under the pear tree, and he'd liked the orders published from his own log on the seventeenth, which had taken nerve. Whether he liked him in person he'd find out on the marsh road.</p>
+<p>"I am coming," said Dmitri, from the door, when Elena began to say who else.</p>
+<p>"Nobody asked you, Dima."</p>
+<p>"You will need someone to count," said Dmitri, and that was that, because it was true.</p>
+<hr>
+<p>The Drowned Causeway began at a concrete buffer stop at the end of a spur nobody had used since before the Founding. The rails had gone for scrap long ago. What was left was the embankment and the sleepers, a raised bed of stone and old timber running three and a half kilometres across the marsh towards the Chronos shore. In places it stood a metre clear of the water. In places it had slumped and the sleepers lay awash, black and slick. There were four gaps where the bed had gone altogether, and you crossed those on the old iron footings that stood under the surface like stepping stones, if you knew exactly where they were.</p>
+<p>Alexei knew. He'd counted them in daylight from the reeds, the first summer, when he was twenty-three and thought he'd live for ever.</p>
+<p>At 23:30 they stepped off the buffer stop into the fog.</p>
+<p>Dmitri went last, counting. Old Songs went in the middle, one hand on the back of Alexei's belt. The fog closed behind them within twenty paces, and after that there was nothing but the sleepers under their boots and the small wet noises of the marsh.</p>
+<p>It was cold, and that was all it was. A storm was a pressure behind the eyes and a certainty with no seam in it. This was wet wool and cold hands and nothing behind the eyes but his own tiredness. There had been no storms since the seventeenth. He still checked, the way you check a pocket for keys you know are there.</p>
+<p>At the first gap he counted the footings under his breath and put the old man's feet on them one at a time with his own hands, and Old Songs let him.</p>
+<hr>
+<p>Halfway across, where the stump of an old signal post stood up out of the bed like a finger, Old Songs began to sing.</p>
+<p>It was so quiet Alexei almost missed it. Not humming. Words, low and cracked, an old man singing to himself on a dark road.</p>
+<p><em>"Down by the water the ferry is late,</em> <em>lanterns are low on the pier…"</em></p>
+<p>Alexei's throat did something he wasn't ready for. He kept walking.</p>
+<p>Old Songs sang every evening now. It was the thing about him that had changed most, and Alexei was proud of it, as if he'd done it himself. In Wing C there had only been the hum: two seconds of it at the meal slot, three times a day, their mother's washing-up tune with no words at all, because words were for people who were free.</p>
+<p>They went on like that for a kilometre, the ferry verse and then the fog verse, very softly, and Alexei put the old man's feet on the footings at the third gap and the fourth, and for a while he was simply happy. It surprised him.</p>
+<p>Then, near the Chronos end, the fog ahead of them went faintly gold.</p>
+<p>Headlamps, low and steady, on the marsh road along the shore. Someone had parked with their lights on so that someone else could find them.</p>
+<p><em>"…who will remember the name—"</em></p>
+<p>The words stopped.</p>
+<p>They stopped in the middle of the line, and for a moment there was nothing but the water. Then, in the same breath, the old man was humming: the Lakeshore Air, low, lifting at the end like a question, the same tune with the words taken out of it.</p>
+<p>Alexei's shoulders knew it before he did.</p>
+<p>They went up and in, as if trying to make him smaller. For a second he was in a white cell with glass walls and his brothers on the other two sides of the triangle, and the slot in the door had opened, and there was that sound, two seconds of it, and then it was gone.</p>
+<p><em>Captivity</em>, said his body. It was the sound of a man who knew he was being recorded.</p>
+<p>The old man's hand on his belt hadn't tightened. He walked on towards the lights, humming, the way he'd pushed the trolley down Wing C: steady, harmless, furniture. He had been free for two and a half years, and the moment the first light of Chronos touched him he had gone back to being a prisoner. Nobody had told him to.</p>
+<p>From there on, the old man didn't sing a word.</p>
+<hr>
+<p>Julian Kovač was standing by a small gray car on the marsh road with his hands in his coat pockets.</p>
+<p>He looked like his photographs: a narrow, attentive face, dark hair cut short, eyes so blue they showed even by headlamp in the fog. He stood exactly as his aunt stood in doorways, hands in pockets, weight back, waiting. Two winters ago Alexei had suspected Helena Kovač of everything and ended by apologising to her. He found the likeness hard to look at.</p>
+<p>"Nine minutes early," said Julian, gently and precisely, as they came up off the causeway onto the road. "I didn't mind."</p>
+<p>Alexei was blunt with outsiders. It was a rule. It had kept him alive.</p>
+<p>"Your log's recording us," he said.</p>
+<p>"Everything I see." Julian looked at him steadily, and then at Dmitri, and then at the old man humming between them, and something in his face went soft and careful. "I thought you should know before you decided."</p>
+<p>Alexei stood with the marsh water running out of his boots and thought about it in routes and jurisdictions and exits, which was how he thought about everything. Their faces, their voices, the time to the nanosecond, the marsh road: all of it going into a Chronos citizen's life-log. Julian was going to walk three Veridicans into his nation's permanent record <em>under his own name</em>, and he'd said so before the first step, so they could turn round.</p>
+<p>That was either the bravest thing Alexei had seen a stranger do in a long time, or it was something else. He couldn't tell which. He decided he didn't have to know tonight. He only had to know the way out.</p>
+<p>"We decided on Sunday," he said. "Is the heater working?"</p>
+<p>Julian smiled, the small surprised smile of a man who hadn't expected to be liked. "It's Chronos," he said. "Everything's working."</p>
+<hr>
+<p>It took forty minutes to reach the city.</p>
+<p>Julian drove with both hands on the wheel, at exactly the limit. Old Songs sat in the back, very upright, humming. Dmitri watched the road behind.</p>
+<p>Chronos at three in the morning was the cleanest place Alexei had ever been. The roads were dry under the lamps as if someone had wiped them. Every junction had a clock, and every clock agreed with every other to the second. There were almost no cameras on the poles. A country where every citizen was a camera didn't need poles.</p>
+<p>At this hour, though, almost all of them were asleep. That was the real route, more than the fog or the marsh: a nation that recorded everything its people saw recorded very little while its people had their eyes shut. A single cyclist passed them at a junction and glanced at the car without interest. Alexei thought <em>one</em>, and saw Dmitri's head turn a fraction, and knew he'd thought it too.</p>
+<hr>
+<p>The hospital stood on a rise above the harbour, a long pale block lit on every floor. Julian took the car round by the service road to a ramp that went down under the building.</p>
+<p>"The Archive audits institutional records," he said. "Hospitals keep a great many. We come at odd hours."</p>
+<p>He held his Temporal Archive card to the reader on a steel door marked <em>RECORDS</em>, and the lock turned. It was 03:40 by the clock over the door.</p>
+<p>It was the only door Julian needed. One card, and a hospital's basement opened in the middle of the night without a question. Alexei didn't say anything.</p>
+<p>The basement records hall was long and low and very clean, rolling stacks of gray cabinets and a smell of warm dust. Beyond it a pale green service corridor ran to a service lift.</p>
+<p>"Two cameras," said Dmitri quietly, as they walked. "One at the corridor junction, facing the lift. One over the lift door. Fixed. No sweep."</p>
+<p>"They're for the trolleys," said Julian. "In case one goes missing."</p>
+<p>"And the porter."</p>
+<p>The night porter sat in a glass booth by the lift with a mug, a heavy, placid man in his sixties. Alexei's face arranged itself from long habit into the face of someone who was supposed to be there: bored, thinking about breakfast. Beside him, Old Songs hummed.</p>
+<p>The porter looked at Julian's card for exactly as long as it took to read, said something pleasant about the Archive keeping terrible hours, and went back to his mug.</p>
+<p>He didn't look at the rest of them at all.</p>
+<p><em>He logged us anyway</em>, Alexei thought, as the lift doors closed. <em>Three men and the Archive, 03:44. Every porter in this country's a witness, and not one of them knows it.</em></p>
+<hr>
+<p>The lift went up nine floors. The old man hummed the whole way, and Alexei felt it in his shoulders, and let it be there.</p>
+<p>The ninth-floor corridor was dim for the night, with a window at the far end full of fog and smeared harbour lights. There was a smell here: sharp, cold, faintly green, like cut stems in a florist's bucket. Old Songs stopped humming for a breath, then went on.</p>
+<p>Alexei knew that smell. He'd sniffed it on a set of songbook pages in November and said <em>all hospitals smell like that</em>. He'd been wrong, the way you're wrong about something small that turns out to be the whole thing.</p>
+<p>At the end of the corridor were two doors. One had a nameplate, <em>DIRECTOR</em>, with no name under it. The other was a pair of plain doors, like any others on the floor, with a dim blue night light showing in the gap beneath them and a small plain sign: <em>9S. Clinical seal in force.</em></p>
+<p>Julian stopped three metres short of them, his hands in his pockets.</p>
+<p>"Inside that door I'd drop out of my own log," he said, "and someone would ask me why."</p>
+<p>He took one hand out of his pocket as if to offer it, then didn't, and walked back to the lift, unhurried, a narrow man in a gray scarf. The doors closed, and he was gone. Alexei watched the numbers go down, and didn't know what he thought.</p>
+<hr>
+<p>"Well," he said. "Isn't this nice."</p>
+<p>Dmitri was looking at the ceiling. "No camera," he said. "None in this corridor at all."</p>
+<p>"Why would there be? It's Chronos. They've got porters."</p>
+<p>Old Songs stood very close to the doors with his hands in the pockets of his too-big coat, humming. The same tune as on the causeway, lifting at the end of every phrase. But on the causeway it had been a man hiding. Here it sounded like a man knocking.</p>
+<p>Alexei reached past him and pressed the night bell.</p>
+<p>Somewhere inside, very faintly, a single soft tone sounded.</p>
+<p>Nothing happened for a long moment. The old man hummed.</p>
+<p>Then the lock turned.</p>
+<hr>
+<p>Tanaka was on the other side of it.</p>
+<p>She was in a gray cardigan buttoned over her ward coat, her silver-streaked hair coming loose from its pins, holding the door half open with one small hand flat against it, as if she could hold the whole ward shut with that hand. She was on call; the patient had had a bad evening. Alexei had seen Yuki Tanaka calm through a fact storm with blood running down her temple, and he had never seen her face look like this.</p>
+<p>It was white. Not frightened-white. Furious. And under the fury, frightened, the way Tanaka was frightened, very precisely.</p>
+<p>She looked at Alexei. She looked at Dmitri. She looked at the old man, who had stopped humming.</p>
+<p>When she spoke, she kept her voice so low he had to lean in to hear it.</p>
+<p>"You should not be here," she said. "Nobody should be here. That is the point of this room."</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="19-the-false-entry.html" class="nav-button">← Previous: Chapter 19: The False Entry</a>
+            <div class="nav-center">Chapter 20: The Crossing</div>
+            <a href="21-mrs-kerr.html" class="nav-button">Next: Chapter 21: Mrs. Kerr →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

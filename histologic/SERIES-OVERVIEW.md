@@ -14,7 +14,7 @@
 | 3 | *The Divided Truth* | Short story (the Volkov triplets) | Nov 2104 (epilogue Nov 2105) | **Canon** |
 | 4 | *The Correction* | Novel, ~95,500 words | Oct 2105 – Aug 2106 (epilogue Nov 14, 2106) | **Canon.** Rewritten Sept 2026, first draft complete |
 | 5 | *The Lost Hour* | Novel, ~113,000 words | Nov 15, 2106 – Jan 2107 (epilogue Nov 2107) | **Canon.** Rewritten Sept 2026 from plot v3.1, first draft complete |
-| 6 | *The Distributed Truth* | Novel, ~110,000 words planned | Oct 30, 2108 – Feb 14, 2109 (epilogue Mar 15, 2109) | **Plot v2 (Sept 2026)** in `plots/06-the-distributed-truth-full.md`. Chapter summaries and chapters to do (old draft to be replaced) |
+| 6 | *The Distributed Truth* | Novel, ~114,000 words | Oct 30, 2108 – Feb 14, 2109 (epilogue Mar 15, 2109) | **Canon.** Rewritten Sept 2026 from plot v2, first draft complete |
 | 7 | *Battle of Truths* | Novel, ~110,000 words planned | Aug 14 – Dec 23, 2109 (epilogue Jan 10, 2110) | **Plot v3 (Sept 2026)** in `plots/07-battle-of-truths-full.md`. Chapter summaries and chapters to do (old draft to be replaced) |
 | 8 | *Battle of Blood* | Novel, ~110,000 words planned | Feb 12 – May 28, 2110 (epilogue Aug 15, 2110) | **Plot v2 (Sept 2026)** in `plots/08-battle-of-blood-full.md`. Chapter summaries and chapters to do (old draft to be replaced) |
 | 9 | *Architects of Chaos* | Novel, finale, ~110,000 words planned | Mar 15 – Nov 15, 2115 (epilogue Nov 15, 2135) | **Plot v2 (Sept 2026)** in `plots/09-architects-of-chaos-full.md`. Chapter summaries and chapters to do (old draft to be replaced) |
@@ -50,7 +50,7 @@ Canon detail: `novels/04-the-correction/`, `plots/04-the-correction-REVISED.md`,
 ## 4. Provisional Arc, Books 6–9 (Not Binding)
 These are the ideas carried forward from the pre-rewrite plots, adjusted to fit Books 1–5. Each book gets a full plot revision before it is written.
 
-### Book 6: *The Distributed Truth* (plot v2 written; see `plots/06-the-distributed-truth-full.md`)
+### Book 6: *The Distributed Truth* (first draft complete; see `plots/06-the-distributed-truth-full.md`)
 - **Premise:** the **Chronos Gap** (seventeen minutes erased from Chronos's life-logs on Dec 13, 2107, with the Lost Hour's seam) starts a **war of facts** with Chronos. Marcus is offered **Operation KINDRED**: befriend and use the Chronos historian **Julian Kovač** (Adrian's elder brother) to take Chronos's reconciliation key.
 - **Turn:** Julian was sent to do the same to him (**MERIDIAN**). Marcus refuses and publishes by many hands, in three nations: the orders, the Introduction, Principles Three and Five, and the Warning. The war stops.
 - **The trap:** the government confesses first and offers the **Concordance**, an index of every journal. The copy-X fragments were fed from inside, and the remedy was drafted in advance. Vance is found as "Mrs. Kerr" on Tanaka's sealed ward. The heroes refuse to give the networks a center. The **New Foundation** mirrors the manuscript, leaving blanks for the unseen principles.

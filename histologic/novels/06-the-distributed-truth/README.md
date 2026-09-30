@@ -1,6 +1,6 @@
 # The Distributed Truth (Histologic, Book 6)
 
-**Status:** plot v2 and chapter summaries done (Sept 2026). Chapters are still to be drafted. The earlier Nov 2025 draft, its summaries and `docs/` were deleted and are kept in git history.
+**Status:** first draft complete (Sept 2026): 32 chapters, ~114,000 words, from plot v2 and the chapter summaries. HTML export in `html-export/`, EPUB `the-distributed-truth.epub`. The earlier Nov 2025 draft, its summaries and `docs/` were deleted and are kept in git history.
 **Set:** Tuesday, October 30, 2108 to Thursday, February 14, 2109. The epilogue is on Friday, March 15, 2109.
 **Follows:** *The Lost Hour* (Book 5). **Followed by:** *Battle of Truths* (Book 7, provisional).
 
@@ -15,7 +15,7 @@ Seventeen minutes vanish from the life-logs of Chronos, and the scar of the Lost
 
 ## Folder
 - `chapters-summaries/`: the chapter summaries, with a README covering the drafting decisions, timeline, cast, twist and manuscript tables, and Old Songs' appearances.
-- `chapters/`: to be drafted.
+- `chapters/`: the drafted chapters, `00-prologue.md` … `31-epilogue.md`.
 
 ## Related
 - `plots/06-the-distributed-truth-full.md` and `-concise.md` (plot v2).
