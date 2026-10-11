@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Truths - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Truths</h1>
+            <div class="novel-meta">Novel 07 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="27-by-many-hands.html" class="nav-button">← Previous: Chapter 27: By Many Hands</a>
+            <div class="nav-center">Chapter 28: Enemies Outside</div>
+            <a href="29-colonel.html" class="nav-button">Next: Chapter 29: Colonel →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 28: Enemies Outside</h1>
+<p><em>Monday, December 16, 2109. The Sovereignty of Free Will</em></p>
+<hr>
+<p>Colonel Beatriz Martinez sent for him on Monday morning, with no reason given.</p>
+<p>She was SFW intelligence. He had not met her, but he knew of her, the way a reporter knows of the people who have read him closely: she was the officer who had read his spiked column on the Lost Hour Doctrine, two winters ago, the one the house had killed and he had sent to Veridica instead, and who had understood it, which almost nobody in the Sovereignty had. She was courteous and exact, and like everyone in the Sovereignty she had no interface. Her family, she told him once, as a credential, in the first minute, had come to the Sovereignty as refugees in the Fracture Years; she had the name and not the language of wherever the name was from; she was SFW to the bone and from somewhere else, which she said as though it explained why she, of all the officers in the building, had sent for the exiled Veridican.</p>
+<p>She took him three floors down, below the office where, in March, he had been shown by mistake into a room with a gray folder on the desk.</p>
+<hr>
+<p>The room had a desk and two chairs and a window over the harbour, and on the desk, squared to the edge, was the folder.</p>
+<p>Gray, with a red border. <em>HISTOLOGIC COORDINATION: STRATEGIC IMPLICATIONS.</em> It was thicker than it had been in March, thicker than it had been at the attaché's lunch in August. Martinez opened it and sat back and did not say anything, because she wanted to watch him read, the way he would have wanted to watch someone read, and he respected that, and read.</p>
+<p>She let him sit. She did not hurry him; she was the kind of officer who had learned that a document does its own work on a reader if you let it, and that a reader hurried is a reader who can later say he was rushed into agreeing. So Isaiah read it at his own pace, in the windowless room three floors below the office where he had been shown a folder by mistake in March, with Martinez across the table watching him the way he would have watched someone read, which he respected.</p>
+<p>The packet was marked <em>received Monday 14 October 2109.</em></p>
+<p>Eleven days before the night of the twenty-fifth.</p>
+<p>Inside it was an account of the operation. Not a report of it, after the fact; an account of it, in advance, eleven days in advance, of a thing that had not yet happened. It had the codename, which Isaiah had never known, which was not in Julian's log, which Isaiah's own headline had only brushed against by coincidence out of the Warning. It had the target: the Chronos Temporal Archive, the reconciliation rooms. It had the cover: the Joint Inquiry into the Rewriting. It had the access: through the co-chair, and a named Senior Historian. It had the date: Friday the twenty-fifth of October, overnight. It was accurate in every line he could check, which was most of them, because he had Julian's log, and the determination, and Kira's three lines, and the whole shape of the thing in his own study, and he checked it line against line, and it held.</p>
+<p>Someone had given the Sovereignty the operation before it happened. The whole of it. Eleven days early.</p>
+<hr>
+<p>The packets had come through channels inside Veridica, Martinez said, and each was sealed with the same electronic seam.</p>
+<p>She did not describe it well; she was not a technician; but she described it well enough, a chain closed backwards from its far edge, and Isaiah had seen it described in Kira's notes, the signature Kira had first read on a lost hour, the one that had taken a fact and typed a false probability and erased an afternoon and, if Kira was right, countersigned a Gap, though that last was a different hand on the same seam, and Isaiah did not pretend to follow the difference. He knew only that it was the seam Kira had taught him to recognise in words, and that the SFW's whole file on the operation had come sealed with it, from inside Veridica, eleven days before the operation ran.</p>
+<p>He did not say whose seam it was. He did not know whose seam it was; Kira had never named a name to him, only a pattern; and Isaiah did not name what he could not stand behind. He only knew it was the same.</p>
+<p>Behind the packet was a page of analysis, in a small military hand he had seen before, the attaché's. Its heading was the line he had read upside down in August at a lunch table and carried in his study for four months, unable to read it and able to read every word of it.</p>
+<p><em>Phase: justification.</em></p>
+<hr>
+<p>He filed the row in the study as he read, because that was what he did, in order, every item.</p>
+<p>August the twenty-third: the attaché had quoted the Gullhaven death toll at a lunch table a day before Veridica published it. <em>From where?</em> he had written then. He knew from where now.</p>
+<p>September the thirtieth: he had been asked to authenticate pages he had not published, copy VII, under a lamp that was not Kira's. The request sat in the folder too, clipped to a packet sealed with the same seam. The SFW had had copy VII in October because the SFW was being fed everything, from inside Veridica, by the hand with the seam.</p>
+<p>October the fourteenth: the operation, in full, eleven days early.</p>
+<p>November the eighteenth: his own column, "The Restorer", printed within the hour, uncut, large, because it said what the house wanted said. His condemnation of Marcus, in the Council's war brief, under <em>Grounds</em>, quoted in full, with his name, the question cut off.</p>
+<p>It was not a leak. A leak was a thing that got out. A leak was ragged, partial, a document half-photographed by a frightened clerk, arriving at the wrong moment, proving less than you wanted. He had lived on leaks for twenty years and he knew the look of one. This was not that. This was clean, complete, and timed: each item had arrived when it would do the most work, in the order a man would choose if he were building a case and not merely betraying one. The Gullhaven toll in August, a day early, to warm the house, to make the editor-in-chief say <em>confesses</em> the way men say <em>surrenders</em>. The pages in September and October, copy VII under a lamp that was not Kira's, to arm the house with design, to turn a grievance into a thesis. The operation in October, in full, eleven days early, to aim the house. And the column in November, his own, run whole and large and fast, to justify it, to give the case a witness with a trusted name and the inconvenient question cut off the end.</p>
+<p>It was a supply line. Somebody in Veridica was supplying the Sovereignty with the case for a war against Veridica, item by item, on a schedule, the way the manuscript itself had been let out, item by item, on a schedule, by a hand that controlled the release. And Isaiah stood in the windowless room and felt the two schedules line up in his mind like two columns of the same ledger, and did not say so, because he could not prove it, and because a man who starts seeing one hand behind everything has begun to think like the thing he is fighting.</p>
+<p>In the Council's war brief, under <em>Grounds</em>, his sentence. He heard belief in how people said words; he had read that brief now, over Martinez's shoulder; and the brief said <em>Veridica</em> the way a man says <em>the target</em>. The debate on the Council's posture, in November, had not been a debate on a posture. It had been the preface to this folder.</p>
+<hr>
+<p>Principle Two was in his coat.</p>
+<p>His prints of Kira's photographs of copy VII, pages five to twelve, sewn into the lining since September, where his notes had lived since Wing C. <em>Let there be enemies outside them all. Controlled conflict answers every question before it is asked.</em> He did not take them out. He did not show Martinez. It was not the time, and it was not hers to be given yet, and a page about design would turn this room into a seminar, and this room was not a seminar; it was the place where he understood, at last, what the folder was.</p>
+<p>The page had been written for a war of facts. <em>Controlled conflict, so long as it remains a war of facts and not of blood.</em> And someone, now, was arranging the other kind. Someone in Veridica was handing the Sovereignty the grounds, the pages, the dates, the codename, the column, everything a Council needs to decide that it has been wronged past bearing and must act, while on the other side of the world a fleet, Isaiah did not yet know about a fleet, but he knew the shape of a thing being built, and this was the shape of a war being built, from inside the nation it would be aimed at.</p>
+<p>"We are being given a war," said Martinez. She said it flatly, the way you state a finding. "The grounds, the evidence, the outrage. All of it, handed to us, in order, by someone who wants us to have it. I have spent my life in this building deciding what is true about the Histologic world, and I have never been handed a case this complete, and a case this complete is not evidence. It is a gift. I would like to know by whom."</p>
+<p>Isaiah set the question out in his head the way he set out an editorial, in order, with every unnecessary word struck, and then he said it, because it was the only honest end to the row he had filed.</p>
+<p>"Someone in Veridica wants to be invaded."</p>
+<p>Martinez did not disagree. She closed the folder.</p>
+<hr>
+<p>"You were never in this room, Mr. Okonkwo," she said.</p>
+<p>"No."</p>
+<p>"Write carefully."</p>
+<p>She did not know whose phrase it was. He did. A border guard, three years ago, in the fog, at a lakeshore checkpoint, had said the same two words to him as he crossed into Chronos with his whole life sewn into his coat. He did not tell Martinez. It was a coincidence, and he did not explain coincidences; a man who explains coincidences has started to see a design in everything, and that way lay the thing the Histologic world had done to itself. He only noted it, in the study, that the same two words had been said to him twice, at the two ends of the same exile, by two people warning him in good faith that the truth was dangerous to write, and let it stand without a line drawn between them.</p>
+<hr>
+<p>That night, in his rooms over the shop that sold notebooks, he wrote one letter.</p>
+<p>He wrote it by hand, on paper, and he sent it by the Synthesis courier, which was the one channel he still trusted, not the long link, because the long link might be the seam, and he would not put this on a channel he could not stand behind. The courier carried his prefix and the date and one line.</p>
+<p><em>Someone in Veridica wants to be invaded.</em></p>
+<p>He addressed it to Marcus.</p>
+<p>Then he sat in the parlour of the memory palace for a long time, among the true warm things, the fire, the pepper soup, the first byline over the fireplace. At the head of the table his aunt was watching him, as she had watched him write the headline in September, as she had gone still at <em>agreeing in substance</em>, and he did not look up at her, because he had understood, over the autumn, that his own mind had begun to tell him something about the woman at the head of the table that he was not ready to hear, and the parlour was the place he had made for things that were true and warm and safe, and he was not going to be the one who brought a knife into it tonight.</p>
+<p>He kept his eyes on the fire, and the letter went out into the dark, across the world, to a man who had won the Battle of Truths and did not yet know that the next battle was being built out of his victory, by a hand inside his own nation, with a familiar seam.</p>
+<p>Before he slept he wrote one more thing, in the study, on a card, because he was careful to keep the two lists apart, the things he knew and the things he only feared. On the card of things he knew he wrote: <em>The SFW received the operation in full, eleven days early, by a Veridican channel with Kira's seam. The house ran my column whole because it serves this.</em> And on the card of things he only feared, which went in the other drawer, he wrote: <em>The manuscript is being released on a schedule. The war is being built on a schedule. If it is one schedule, it is one hand. I cannot show it is one hand.</em> He looked at the second card for a while, and did not move it to the first drawer, because he could not show it, and a man who files a fear among the facts has started to lose the difference, and losing the difference was the sickness itself, and he would not catch it, not even to be right.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="27-by-many-hands.html" class="nav-button">← Previous: Chapter 27: By Many Hands</a>
+            <div class="nav-center">Chapter 28: Enemies Outside</div>
+            <a href="29-colonel.html" class="nav-button">Next: Chapter 29: Colonel →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

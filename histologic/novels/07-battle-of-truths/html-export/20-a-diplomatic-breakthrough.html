@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Truths - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Truths</h1>
+            <div class="novel-meta">Novel 07 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="19-they-wrote-us.html" class="nav-button">← Previous: Chapter 19: They Wrote Us</a>
+            <div class="nav-center">Chapter 20: A Diplomatic Breakthrough</div>
+            <a href="21-maximum.html" class="nav-button">Next: Chapter 21: Maximum →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 20: A Diplomatic Breakthrough</h1>
+<p><em>Monday, November 4, 2109. The flat by the old river; the Commission and the Justice Center, Veridica Capital; the farmhouse</em></p>
+<hr>
+<p><em>Nov 4, 2109. 06:00. Chronos determination, read on the Chronos broadcast. Veridica "bears no responsibility" for the Rewriting or the Chronos Gap. Probability: 0.93. Corrective broadcasting: ended, from noon.</em></p>
+<p>Marcus wrote it at the kitchen table before it was light, off the receiver, and under it, from Friday night's bulletin, carried over the water the same way:</p>
+<p><em>Kovač, J. Recording: maximum. Office: removed.</em></p>
+<p>He did not write a status for either. He did not have a status for either. He sat with the pencil over the page and the two entries done and the third field blank, the way it had been blank since August, and the receiver on the dresser went on in the calm Chronos voice to the next thing, which was the weather, which was exact.</p>
+<p>Chronos's Judge had read its collective will at 0.93 and found that Veridica bore no responsibility for either attack on the memory of Chronos. It was the number Marcus had set out, in August, to produce. It was the whole aim of the operation, stated as a probability, achieved. He looked at it and felt nothing he could name, which was becoming usual.</p>
+<p>He had wanted this number. That was the thing he kept having to hold. On the twenty-sixth of August, in Maitland's office, he had asked for an operation whose stated aim was exactly this: that Chronos's own Judge should read Chronos's own record and find Veridica guiltless, so that the storms would stop. He had got it. The dead had stopped at seven. A child at Marram End was the last of them, and there would be no more, and that was what the number meant, and it was a good thing, an unarguably good thing, that no more children would walk off slips towards lamps that were not there. And the number also meant that a nation of a hundred and fifty million had been made to find its enemy innocent by having its memory replaced, and that a man was at maximum in a cell by a harbour because of it, and that the Judge's 0.93 was not a finding at all but an echo, the record agreeing with itself after it had been made to say one thing. Both were true. He had learned, this autumn, that the hardest thing the system did to a man was not to make him do wrong; it was to make the wrong and the good be the same act, so that he could not undo the one without undoing the other, and had to carry both, and could put neither down.</p>
+<hr>
+<p>At noon the storms stopped.</p>
+<p>The Chronos transmitters fell silent along the lakeshore, and the Commission's bulletin carried the first report from the strip within the hour: no alert at the scheduled time, no storm at noon, no storm at all. The dead stood at seven, where they had stood since Marram End on the twenty-fifth of August. Seven, and no more. Marcus read the bulletin twice. Seven dead, and a child among them, and a ferryman who had gone into a harbour after a book, and the number had stopped, and it had stopped because of the thing he had done, and the thing he had done had rewritten a nation, and both of those were true, and he held them, and did not know where either of them went.</p>
+<p>At half past twelve Maitland was on every screen.</p>
+<p>He was calm and well tailored and tired, and he gave the numbers first, as he always did. The Joint Inquiry into the Rewriting had done its work. Chronos's own record now confirmed that Veridica had had no hand in either attack. The war of facts was over. He called it <em>a diplomatic breakthrough</em>, and he thanked the commissioners, and he did not say how it had been done, and not one of the people watching asked him, because the storms had stopped and a man wants, more than he wants the truth, for the storms to stop.</p>
+<hr>
+<p>The capital cheered the way it had cheered in December, when the first fact war had ended.</p>
+<p>Marcus walked through it to the Commission, and in the corridor outside the great hall colleagues shook his hand for the second time in a year, and told him he had saved lives, which was true, and congratulated him, and he thanked them, and his face did the right things. Kira was not there. She had gone out to the farmhouse on Saturday, the morning they came back across the causeway, and they had spoken since only in logistics, by the line, about couriers and the Reply and nothing else. He understood that she could not be in the capital being congratulated, and he could not blame her, and he missed her with a flat ache that he filed under nothing, because there was no column for it.</p>
+<p>At six there was a reception in the great hall.</p>
+<p>Tea and glasses under the tall windows, in the last of the light. Chen Zhao presided, warm and delighted, in his element, moving through the room with a word for everyone, and at a little after six he lifted his glass, and the room quieted for him, and he said:</p>
+<p>"To our restorers."</p>
+<p>The room drank.</p>
+<p>Marcus raised his glass, because not raising it would have been a statement, and he had no statement, and a man who makes a statement with a glass at a reception had better have worked out what he means by it, and Marcus had not. He raised it, and drank, and heard the toast land in him twice, the way Wei's sentences landed twice. Once as a kind old minister's warmth, <em>our restorers</em>, our clever brave commissioners who had ended a war. And once as page thirty, in a voice that half the people he loved could recite in the dark: <em>When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it.</em> He heard Vance at a stove in August, dry and exact: <em>They designed you to be the restorer.</em> He drank to his own name for the thing, in a hall full of people who thought the name was a compliment, and set the glass down, and his hand was steady.</p>
+<p>Wei applauded with the others. He had his glass in his right hand, and he caught Marcus's eye across the hall, once, and inclined his head, very slightly, the way a man acknowledges a good move across a board, and there was nothing more on his face than that, and nothing less.</p>
+<p>Marcus had thought, a great deal, since August, about Wei's part. Wei had supplied the tools and the name. Wei's tools had turned out to need no adapting, too clean, built for the job they were used for, Maya had said. Wei had stood at a side table in the First Minister's office and let Marcus ask for the thing, and had given it a name out of a page half the farmhouse could recite, and had then stepped back, pleasantly, and let Marcus carry it. Marcus could not prove that Wei had known the two records were one. He could not prove that Wei had built a knife that was always going to cut the whole of Chronos and handed it to the one person who would insist on holding it herself, so that when it did what it did, it would be Kira's hand on it and Marcus's name on the access and nobody's on the design. He could not prove any of it. He only knew that Wei was applauding, with his glass in his right hand, at a reception for a victory that had done, exactly, the thing the manuscript's author had written sixty years before anyone in this hall was born, and that Wei had inclined his head to him the way you salute a man who has made the move you set the board for.</p>
+<hr>
+<p>In the corridor behind the great hall, where the tall windows laid panels of lamplight across the floor, Maitland put his big hand briefly on Marcus's shoulder.</p>
+<p>"You saved us," he said, privately, quietly, meaning it. "Seven dead. It could have been seventy. It could have been the transmitter units and another winter of it. You stopped it. I won't forget that, whatever else." He took his hand away. "I know what it cost you. I don't suppose I know the half of it. But you saved us, Commissioner, and I wanted to say so where there wasn't a camera."</p>
+<p>"At what cost?" said Marcus.</p>
+<p>Maitland looked at him for a moment. Then he gave the answer he believed, which was the answer a First Minister had, which was a number.</p>
+<p>"Seven," he said. "And none since noon." And he went back into the great hall, to the reception, to the people who had won.</p>
+<p>Marcus stood in the corridor. He did not say the other costs. There was a man at maximum in a cell by a harbour, who had held a key since 2108 and whose record said 2104 and whose own log now lied to his face about a January morning; and there was a nation of a hundred and fifty million who had woken up agreeing; and there was a narrow hope about a bench in summer that Marcus had let a man carry. None of those was in Maitland's number. Maitland's number was seven, and none since noon, and it was true, and it was not the cost, and there was no way to say so to a man who had just thanked you with his hand on your shoulder in a place where there wasn't a camera.</p>
+<hr>
+<p>Walking out across the plaza, past the Lost Hour stone, pale by the fountain in the dark, Marcus reached for a word.</p>
+<p>There was a word, he thought, for a victory you cannot hand back. For a thing you have won that you would give anything to return, and cannot, because it is done, and the undoing would be worse than the thing. He reached for it, and there was a smooth place where it should have been, no edge to catch, and he did not know whether the white chair had taken it years ago or whether no language had ever needed a single word for this, because no one had ever needed it before tonight, and there was nobody on the plaza to ask.</p>
+<hr>
+<p>At nine he went to the farmhouse.</p>
+<p>Dmitri drove him, without being asked, and would have him back in the capital before midnight, because at 0.44 a night at the farmhouse would not move his index but a night that anyone logged would, and nobody logged the farmhouse, because the farmhouse was not in the record, which was the whole of why it was the farmhouse.</p>
+<p>In the kitchen the receiver on the dresser carried the Chronos broadcast, repeating the determination in the calm voice, <em>bears no responsibility, probability 0.93.</em> Old Songs sat beside it on the crate with the folded sack on it, and did not look round when Marcus came in, and did not hum. He had not hummed at Marcus since the fifth of October, in the yard, over the two cups of tea that were not his. Not the rising phrase, not the falling one. Nothing. He sat beside the voice on the dresser and listened to a nation being told its new history, and said nothing, and his silence was the only honest thing in the room.</p>
+<p>Vance was at the table with her cup held in both hands. She said nothing either.</p>
+<p>Kira came to the doorway from the yard. She looked at Marcus once, across the kitchen, and she did not come in.</p>
+<p>"They stopped," she said.</p>
+<p>"Yes."</p>
+<p>It was the most they had said to each other since Saturday.</p>
+<hr>
+<p>The flat, twenty to midnight.</p>
+<p>The lists were on the table where he had left them on the twenty-fourth of October, the night before the operation, folded, with CHECKED on the outside. He had not opened them since. He had not written a line in them since <em>I used him. Verification: me.</em></p>
+<p>He sat down in front of them with the pencil in his hand. The window over the table was dark; the capital lay below it, the Spire's light pulsing in its core the way it had pulsed every day of his life. He could have opened the lists. There were entries to make. <em>Storms stopped. Dead: seven, unchanged. Chronos determination: 0.93.</em> All of them true, all of them checkable, all of them belonging under CHECKED. He could have made the entries and filed them and gone to bed.</p>
+<p>He did not open the lists.</p>
+<p>He sat in front of them for a long time with the pencil in his hand, and the receiver's calm Chronos voice still in his head, <em>bears no responsibility</em>, and the old man's silence still on him across a kitchen, and he found that he could not make a true entry about a true thing, because the true things, tonight, were the cover, and the thing under them had no column, and he was afraid that if he opened the lists he would have to look for the column, and he knew there wasn't one, and he was not ready to be a man who kept a list with a thing in it that had no column.</p>
+<p>He left the lists folded, with CHECKED on the outside, and turned off the lamp, and sat in the dark.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="19-they-wrote-us.html" class="nav-button">← Previous: Chapter 19: They Wrote Us</a>
+            <div class="nav-center">Chapter 20: A Diplomatic Breakthrough</div>
+            <a href="21-maximum.html" class="nav-button">Next: Chapter 21: Maximum →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

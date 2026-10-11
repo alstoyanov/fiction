@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Truths - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Truths</h1>
+            <div class="novel-meta">Novel 07 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="16-one-source.html" class="nav-button">← Previous: Chapter 16: One Source</a>
+            <div class="nav-center">Chapter 17: The Causeway</div>
+            <a href="18-the-awakening.html" class="nav-button">Next: Chapter 18: The Awakening →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 17: The Causeway</h1>
+<p><em>Saturday, October 26, 2109, about 04:00 to about 09:10. The Chronos shore, the Drowned Causeway, and the farmhouse</em></p>
+<hr>
+<p>Alexei Volkov had held the marsh road since half past two, with the lights off, counting.</p>
+<p>He did not have Dmitri's gift for it, the way Dmitri could sit under a camera arc and know its period to the second, but he had his own version, worn in over ten years as the Phantom: he counted by feel, by the time a thing ought to take, and he was usually within a minute, which on a marsh road in fog was close enough. He had driven the four of them in and come back to the road, and now he sat in the cold cab with the engine off and the window down an inch to hear, and he counted the minutes the others were inside, and he felt his brothers the way he always felt them, as weight and cold and pressure, never as words.</p>
+<p>Dmitri was a steady cold weight at the edge of him, on the doors, in the Archive. Nikolai was cold hands, which was Nikolai afraid, which Nikolai nearly always was. And a little after twenty to three the cold in Nikolai's hands had gone sharply, suddenly colder, a drop like a window opening on winter, and Alexei had sat up in the dark cab and not known what it meant, because the bond did not carry facts, it only carried where they were and how they were, and what it told him was that something had happened to Nikolai that was worse than fear.</p>
+<p>He did not know what. He would not ask yet. He sat in the fog and counted and waited for the lights of the service door.</p>
+<hr>
+<p>At ten past four they came out.</p>
+<p>Four of them, out of the service door, into the fog, one at a time, the way you come out of a place you should not have been in: not hurrying, which was the discipline, but not slow either. Alexei brought the vehicle up to the step and counted them in. Kira first, with the case against her chest, not looking up. Then Dmitri, counting the others past him out of habit even now. Then Nikolai, whose hands, when Alexei caught his eye, were the hands of a man who had seen the bottom of something. Then Marcus, last, and Marcus came out of that door, Alexei thought, like a man who still has a key in his pocket that he has not worked out how to give back.</p>
+<p>Nobody told him what had happened. He did not ask. He put the vehicle in gear and drove them off the marsh road into the empty streets, and the fog was only fog, real and cold and ordinary, coming off the lake the way it came every autumn, and he was grateful for that at least, that there was one thing on this night that was exactly and only what it looked like.</p>
+<hr>
+<p>He drove the empty streets by the route he had planned in daylight from the reeds.</p>
+<p>There was one jurisdiction in which all five of them were illegal, and one way out of it that worked only in fog, and he had the route in his head, every turn, the way he had every route. Chronos at four in the morning was the cleanest place he had ever driven: dry roads under the lamps as though someone had wiped them, every junction with a clock, every clock agreeing. Almost no cameras on the poles, because a country where every citizen was a camera did not need poles, and at this hour the citizens were asleep, which was the real road, more than the fog: a country that recorded everything recorded very little while its people had their eyes shut.</p>
+<p>At a tram stop near the harbour an early-shift worker stood waiting, a man in a cap with a bag over his shoulder, and as the vehicle passed he glanced at it, the way you glance at anything that moves, and then he frowned, and checked something, in the way Chronos people checked things, a flick of attention to the corner of the sight where the log sat, and then he stopped frowning. He looked, for a moment, like a man who had seen something that did not fit, and then consulted the record, and found that it fitted after all, and was content.</p>
+<p>Alexei saw it in the mirror and did not know what he was seeing. He would understand it later, at the farmhouse, when the broadcast told him. It was the first thing he saw of the Awakening, a man at a tram stop deciding, on the authority of his own log, that whatever had troubled him had not happened. It was nothing. It was the whole of it.</p>
+<hr>
+<p>Behind them, about twenty to six, lamps appeared on the marsh road.</p>
+<p>Alexei saw them in the mirror as he brought the vehicle down to the causeway head: two cars, far back, moving slowly, sweeping the reeds with white lights. The reconciliation rooms had been opened at ten the night before on Julian's grant, and a night desk at Temporal Defence had noticed, the way a night desk notices a door opened out of hours, and someone had been sent to look. They were coming. Not fast; methodical; the Chronos way, thorough rather than quick. But coming.</p>
+<p>"Out," said Alexei. "Now. On foot. I'll take the vehicle on and leave it where it won't point at the causeway."</p>
+<hr>
+<p>The causeway-head post, about six o'clock.</p>
+<p>There was a guard on it. There was always a guard on it, though neither nation had ever agreed whose causeway it was, and the guard was young, alone, under a floodlight that the fog turned into a white room around him. Alexei had an answer ready for every question a border guard could ask five people coming off a drowned causeway before dawn. He had the wrong answer ready, as it turned out, because the guard did not ask any of them.</p>
+<p>The guard looked at five Veridicans walking out of the fog towards the water, and checked his log, and his face did a thing Alexei had never seen a border guard's face do. It cleared. It went from the faint alertness of a man at a post to the mild puzzlement of a man who cannot think why he is at the post at all.</p>
+<p>"You're going home, then," said the guard. It was not quite a question. "It's your shore."</p>
+<p>Alexei said nothing. The guard looked at the fog over the water, where the causeway ran out towards Veridica, and seemed to find it strange that he was standing a watch at a border that nobody disputed, where the far shore and this shore had always, as far as his log could now tell him, belonged to the same people. He could not think why he was here. He waved them on, towards the water, towards home.</p>
+<p>His interface logged all five of their faces as he did it. Alexei knew it. He went past the young man into the fog and did not look back, and thought: <em>his record will say he waved five citizens home across their own water. And his record is the only thing he has, and by tomorrow it will be everyone's, and nobody will ever be able to tell him it was wrong, because the thing that could tell him is the thing we changed.</em></p>
+<hr>
+<p>The Drowned Causeway, going back, six o'clock to half past seven.</p>
+<p>Alexei led. He knew every gap. Dmitri took the rear and counted them through the drowned stretches aloud, low, in the fog, the way he had on the way in. It was the same crossing backwards, and it was not the same at all, because on the way in they had been five people about to do a thing, and on the way out they were five people who had done it, and the difference was in the weight of every step.</p>
+<p>Halfway across, at the third gap, Nikolai stopped.</p>
+<p>He stopped on a sleeper with the water over his boots, in the middle of the gap, and did not go on, and the cold in his hands hit Alexei through the bond like a hand laid flat on the chest. Alexei knew what it was. It was February's match, and the key in Julian's name, and whatever Nikolai had seen on his relay line at twenty to three, all of it standing on him at once in the middle of a drowned causeway in the fog.</p>
+<p>Alexei went back. He did not make a speech; he never made a speech when it was one of his brothers; speeches were for the frightened strangers at the fence, and Nikolai was not a stranger. He said, "Kolya," once, and took his wrist, and put his feet on the footings one at a time with his own hands, the way the old man's feet had been put on them in January, and walked him across, one sleeper, and the next, and the next, until the bed stood clear of the water again and Nikolai could walk on his own, and then he let go of the wrist and went on leading, and said nothing, and Nikolai said nothing, and that was how they did it.</p>
+<p>Kira spoke once, in the middle of the long stretch, to nobody, into the fog. She gave a figure, a number, the final count of what the thing had touched, flat, the way she would have read it off a screen. Nobody answered her. Alexei heard the number and understood, then, what the drop in Nikolai's hands had been, and what had come out of the service door with them, and why Marcus walked like a man with a key he could not hand back. <em>All of it. It touched all of it.</em></p>
+<p>Marcus looked back once, at the Chronos shore dissolving in the fog behind them, and then he did not look back again.</p>
+<p>Behind them, the directorate lamps stopped at the causeway head. They did not follow into the fog. Nobody follows five people onto the Drowned Causeway in fog who does not already know where the stones are, and the only person who knew where the stones were was walking away from them into it.</p>
+<hr>
+<p>The Veridican end, about half past seven, in the first gray light.</p>
+<p>Elena was waiting with the truck. She counted them as they came up off the sleepers onto the dyke, left to right, the way she counted a patrol. "Five," she said, and asked nothing, because she had learned long ago that you did not ask a returning team anything until they were warm and fed and had slept, and that if it had gone wrong you would know it from their faces before anyone said a word, and she had already seen their faces.</p>
+<p>On the drive to the farmhouse Alexei tried a joke. He did not know what it was going to be until he started it; something about the heater in Chronos always working; and it died in his mouth halfway out, because nobody in the truck was going to laugh, and because he found, to his own surprise, that he did not want to make it land. He let it die. That frightened him more than the lamps on the marsh road had. He had made a joke at the fence with a bullet in his shoulder, once. He could not make one now.</p>
+<hr>
+<p>The farmhouse kitchen, about ten past nine.</p>
+<p>Nikolai's receiver stood on the dresser where it always stood, tuned, as it was every morning, to the Chronos broadcast that carried across the water. Nobody had turned it off. It was on when they came in, and the newsreader's voice was calm, as Chronos voices were always calm, reading the morning's determinations.</p>
+<p>There was a line about a reconciliation irregularity at the Temporal Archive overnight, corrected from the true source. There was a line Alexei did not follow about the lakeshore sovereignty. And then, in the same calm voice, between one determination and the next:</p>
+<p><em>Chronos Archive key-holder detained. Kovač, J.</em></p>
+<p>Nobody moved.</p>
+<p>Kira set the case down on the kitchen table, very carefully, with both hands, the way Tanaka set down a cup when she was afraid. Marcus stood in the doorway with the gray light behind him and did not come any further in. Old Songs was not in the kitchen; Vance was not in the kitchen; it was only the five of them and Elena and the voice on the dresser.</p>
+<p>Alexei looked round the room. His brothers. The woman he had gone back for on the causeway. The man in the doorway. The case on the table that held the thing they had carried across the water and used. The broadcast, calm, telling a hundred and fifty million people a new history, and telling five people in a farmhouse kitchen that a narrow man in a gray cardigan who had said <em>nine minutes early, I didn't mind</em> was in a cell.</p>
+<p>"We won," said Alexei, to the room, and his voice came out wrong, flat and hollow, nothing like his voice. "Why does nobody feel it?"</p>
+<p>Nobody answered him. He had asked the same question, in a different winter, on a different morning after, when they had come back from Ashford having got everyone out but two, and a van had gone over an embankment, and he had stood in a safe house at dawn and not been able to feel the escape for the three dead in it. He knew the shape of this morning. It was the shape of a thing won at a cost you could not yet count, where the winning and the cost were the same act and would not come apart, and you stood in a kitchen with the thing done and could not make yourself glad, because gladness was a thing you felt about a victory and this was not a victory, it was an outcome, and an outcome had no feeling in it at all, only a number, and the number this time was a hundred and fifty million, and you could not feel a number that size, which was perhaps why they had made the system out of numbers.</p>
+<p>Nobody answered him. The receiver went on, calm, to the weather, which in Chronos was always exact, and always true, because the weather was the one thing even Chronos did not pretend to write.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="16-one-source.html" class="nav-button">← Previous: Chapter 16: One Source</a>
+            <div class="nav-center">Chapter 17: The Causeway</div>
+            <a href="18-the-awakening.html" class="nav-button">Next: Chapter 18: The Awakening →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

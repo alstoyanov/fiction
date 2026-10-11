@@ -1,0 +1,119 @@
+# Chapter 8: The Knife
+
+*Friday, August 30, 2109. The Commission building, Veridica Capital; Nikolai and Maya's flat; the farmhouse; the flat by the old river*
+
+---
+
+*Aug 30, 2109. 06:40. Incident log. Dead since Aug 14: seven. Storms: scheduled. Border Security redeployment: pending. Nights slept at the flat since Wednesday: two. Words spoken between us that were not facts: none.*
+
+Kira closed the log and made coffee she did not drink.
+
+Marcus had come home from the farmhouse on Wednesday night and told her he was going to do it, and had slept beside her both nights since, and they had spoken in facts only: the inquiry, the crossing times, whether Chronos had accepted. It had. Maitland's office had proposed the joint inquiry on Tuesday morning and Chronos had taken it within two days, because Chronos wanted the misuse of its key traced with Veridican witnesses in the room. The inquiry would open in September, in the Archive's own reading rooms. Julian's acceptance had come through Park's secretariat on Thursday, in handwriting, and Marcus had left it on the kitchen table unopened for an hour before he read it.
+
+Kira had noticed the hour. She noticed most things. She had spent two and a half years learning not to say all of them aloud.
+
+Her reciting compulsion had come back on Wednesday night. She had lain in the dark with the specifications starting up in her, *layer one, key exchange, rotation interval ninety seconds*, the way they started when the world got too loud, the people she loved filed away inside the numbers so that the machine could not find them. She had stopped it by counting the pages of the Commission's brief on the table in the next room, which she could not see, but knew. Eleven pages. She had counted them four times and slept.
+
+It had been better for two years, the compulsion. By the Book 6 epilogue she had been able to write code in silence, a thing that had once been impossible, and she had let herself believe it was fading, the way a scar fades, into a thing you only found when you looked for it. It had come back this week whole, the way scars come back under strain, and she understood why, and the understanding did not help. In the white chair, long ago, the recitation had hidden the people she loved from a machine that fed on what you loved. Now there was no machine in the room. Now the thing she was reciting the specifications to hide from was the thing she was about to build out of specifications, a knife made of the exact material she used to protect the people she loved, turned outward, to go into the trust of a man across a lake. The vault would not close because she was about to make a weapon of the vault, and some part of her, below the part that reasoned, knew it, and recited, and would not stop.
+
+---
+
+The brief had come from Wei's office on Thursday. Two pages, no code in it, a thing written to be shown to commissioners who were not technicians.
+
+She read it standing at the kitchen counter in her coat before she went in. It set out the "technical approach" to RESTORATION in the kind of language that sounded like candour and gave nothing away: the restoration tooling adapted from the Concordance; a target described as *the Archive key's rights in the true source*; a note that *the image will be prepared by the Technical Director's office*.
+
+*Prepared by.* She read those two words three times.
+
+She knew what prepared-by meant, when the office that prepared the thing was the office whose tools had been too clean once before, whose restore path had accepted a countersignature in place of its own authority, whose design had been drafted six weeks before there was anything to answer. She was not going to let a thing go into the record of a nation of a hundred and fifty million people, through the trust of a man she did not know and Marcus loved, prepared by Thomas Wei and read by nobody who had cause to distrust him.
+
+She could not stop Marcus. She had tried, at the farmhouse, in front of witnesses, which was where she said the things she was most sure of, and he had thanked the old man and gone anyway. She could not stop him. She had decided, somewhere on Thursday night, that if she could not stop him she would not leave the cutting to Wei. That was the whole of her decision, and it frightened her, because she recognised it. It was the shape of every decision any of them had made for two and a half years. *I can't prevent it, so I'll stand in it, so that it's done right.* It was how good people were used.
+
+---
+
+She went to Wei's corridor at nine.
+
+He was at the technical floor, at the long bench, with his tablet and his cup in his right hand, and he saw her coming and set the cup down and waited, pleasant, attentive, giving her his whole face.
+
+"Director."
+
+"Commissioner."
+
+"I'll build the image," said Kira. She said it levelly, which was how she said things when she was most angry. "Myself. Nothing goes into Chronos that I haven't written or read line by line. Not your office's, not anyone's. Mine."
+
+Wei considered her for a moment. Then he smiled, the small, genuine, generous smile that everyone on the floor had learned to want, and that was the worst thing about him.
+
+"I'd hoped you would," he said. "You read code the way other people read faces. You'll have the tooling the day you start. Change whatever you like." He picked up his cup again. "I'd rather it were yours than mine. Honestly. These things ought to be built by the person who'll stand behind them."
+
+She looked at him, and he looked back, and she did not thank him, because his pleasure was unbearable and she would not add to it. She turned and went, and felt his eyes on her back down the length of the corridor, not unkindly, which was worse than if it had been.
+
+---
+
+Nikolai and Maya's flat, noon.
+
+Maya was on the counter with her tablet, timestamping. Nikolai had not slept either; she could see it. His profile had started this, the match in February and the match two weeks ago, and he carried it the way he carried everything, quietly, with both hands.
+
+"I said the key," he said, before she had got her coat off. He said it to the table. "In February, and again on the fourteenth. 'I know the key. I don't know the hand.' Everybody heard the first half."
+
+"I know," said Kira. "He heard the key."
+
+"Marcus."
+
+"Marcus."
+
+Nikolai looked at his hands. "I'll take the relay," he said. "When it's done. Whatever it is. I want to be the one watching the line, because I'm the one who put the key in his name, and if it's wrong I want to be looking at it when it goes." He said it flatly, without drama, the way he said the worst things. "I keep copies. If it's wrong, somebody should have a record of exactly how wrong."
+
+Maya said nothing. Kira did not ask her yet. Maya worked for Wei; Maya's part in this was a thing that would have to be decided carefully, later, and not at a kitchen table on a Friday.
+
+---
+
+The farmhouse, afternoon.
+
+Old Songs was in the barn; she could hear him, not humming, moving things. Elena was in the yard counting trucks back in, left to right, the way she counted everything. Kira told her the condition she meant to set.
+
+Elena heard her out without looking at her, her eyes on the cabs as they passed. When Kira had finished, she was quiet for a moment, and then she said the thing she had not said on Wednesday.
+
+"If he is going to do it," said Elena, "someone had better teach him properly. Or it will cost the other one more."
+
+"Teach him."
+
+"R-2. Turned the other way. To be the thing a lonely man is missing, on purpose, and to know what you are doing while you do it. It can be done clumsily or it can be done well. Done clumsily, it still works, and the man you do it to is destroyed, and he never understands why, and that is a cruelty on top of the betrayal." Elena pulled the barn door across a truck's tail. "Done well, he is still destroyed. But it is clean. There is one wound, not two." She looked at Kira for the first time. "I will teach him. Starting Monday. At the table."
+
+Kira understood, standing in the cold yard, that Elena was the only one of them who had done this. That she had sat at a café table by a fountain in 2105 and been the thing a lonely believer was missing, and done it well, and that it had cost her something she had carried for four years and never put down. The believer had been Marcus. That was the thing that sat under the whole conversation, unsaid, because it did not need saying: Elena was going to teach Marcus to do to Julian the exact thing Elena had done to Marcus, and both of them knew it, and neither of them said it, because saying it would have been a cruelty with no use in it. Kira understood that Elena was offering to teach Marcus the thing that had been done to Marcus, so that it would cost Julian less, and that this was the most terrible kindness she had ever heard one person offer another, and that Elena was offering it flatly, over the counting of trucks, because Elena had learned long ago that the terrible kindnesses were the only ones that were any use, and that a person who flinched from doing them was keeping their own hands clean at the cost of someone else's wound.
+
+She did not ask what it had cost. You did not ask Elena that.
+
+"Thank you," she said, which was inadequate, and Elena said, "Don't," and went into the barn.
+
+---
+
+Adrian came into her head for one paragraph, in the car on the way back, and she let him, because she had learned that the surest way to keep a thing from recurring all night was to let it run once, in daylight, under control.
+
+A bridge over the Meridian. Two weeks of evenings. A warehouse with no surveillance in it, where a man she had been falling in love with had told her he had been sent to recruit her, and had begged her to run, and had meant both the sending and the love, and she had learned to hold the two of them at once because there was no other way to hold them at all. Julian was his brother. Helena's other nephew. The narrow man in the gray scarf whom Marcus was going to do this to was Adrian's brother, and somewhere across a lake Adrian did not know, or did, and either way it was a thing that touched the family twice, the way the state touched that family, over and over, through the people who loved them.
+
+She filed it where she kept 7.3, and the bridge in the key rotation, and the warehouse in the hash chaining, and did not finish the thought. She had learned to not finish thoughts. It was a skill, like any other.
+
+---
+
+The flat, night.
+
+She laid it out for Marcus the way she laid out every fault she had ever found in any system, in order, so that there could be no mistake about what she was agreeing to and what she was not.
+
+"I build the image," she said. "Myself. And it is narrow. It does two things, and only two things. It takes away the Archive key's rights in the true source, so that key can't be used again, by anyone. And it puts back Chronos's own records of the two attacks: the Rewriting and the Gap, as they actually happened, from Chronos's side, so Chronos's Judge reads the truth and stops. Nothing else is touched. Not one other entry. Not one other day."
+
+"Yes," said Marcus.
+
+"I read every line of Wei's tooling before it goes anywhere near Chronos. Every line. And if I don't like a line, it stops. I have the right to stop it, up to the last second. Those are the terms."
+
+"Yes."
+
+"I won't touch Julian." She looked at him. "I won't build anything that uses him. That part's yours. I'll hold the knife. I won't hold the man."
+
+"Yes," said Marcus.
+
+He agreed to every point without arguing one of them, and that frightened her more than an argument would have. An argument meant he thought the terms could be better or worse. His agreeing to all of them, at once, without a word, meant he had stopped thinking the terms mattered, because the thing itself was already decided and the terms were only the shape of her consent to it. She knew that. She set the terms anyway, because they were the only part she could control, and because if she did not control the knife then Wei would, and she would rather it was her hand.
+
+"Then I'll hold the knife," said Kira, "so it only cuts what it should."
+
+She said it, and she heard herself say it, and she thought: *this is what it sounds like. This is exactly what it sounds like, when a good person agrees to a thing, for a good reason, with conditions.* She had read Principle Three. She had read *three backup systems that appear independent and are not*. She had helped publish it, in the Reply, in a hundred copies, believing it meant something she could stand outside of, a thing the designers did, not a thing she would ever do. She did not yet know how little her conditions would mean; she would learn that in a cold room in October with her hand on an abort she could not use; but some part of her, the engineer's part, the part that modelled the worst case of every system, had already run the model and did not like the answer and had filed it where the reciting came from. She knew only that she had just said a sentence that she would hear for the rest of her life, and that Marcus had let her say it, and that neither of them had anything left to say after it.
+
+She closed the journal. She did not recite anything, that night, which was its own kind of warning, because it meant she had already filed the people she loved so deep that even the machine in her could not reach them.

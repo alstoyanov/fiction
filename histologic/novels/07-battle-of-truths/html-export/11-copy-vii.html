@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Truths - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Truths</h1>
+            <div class="novel-meta">Novel 07 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="10-the-brother.html" class="nav-button">← Previous: Chapter 10: The Brother</a>
+            <div class="nav-center">Chapter 11: Copy VII</div>
+            <a href="12-the-diplomats-page.html" class="nav-button">Next: Chapter 12: The Diplomat's Page →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 11: Copy VII</h1>
+<p><em>Monday, September 23, 2109. The farmhouse; the lakeshore checkpoint</em></p>
+<hr>
+<p><em>Watch log. Monday, 23 September 2109. Farmhouse kitchen. Present: eight. Observer: Volkov, D. Position: the door.</em></p>
+<p>Dmitri stood with his back to the wall by the yard door, where he could see the kitchen and the window and the track beyond it, and counted the room, as he counted every room. Eight. Old Songs at the stove. Vance at the table's end with her cup. Kira, Marcus, Elena, Alexei, Nikolai at the long table, and himself at the door. He did not sit. He had not sat in a room with his back to open ground since he was thirty years old, and he was not going to begin with this on the table.</p>
+<p>The pages had come across on Saturday.</p>
+<p>Julian Kovač had given Marcus a card folder in the reading room on the twenty-first and said, "Read it first. Then tell me what it is." It was a loan, not a gift; he wanted it back by Tuesday, for a box in the Archive with an accession number, <em>where the record says they are</em>. Dmitri had driven Marcus across the lakeshore checkpoint on Saturday with the folder inside Marcus's coat, and had thought, at the barrier, with the floodlights on the fog, that he was helping to carry across a border a thing that a man had lent them in trust, so that they could read it and decide whether to destroy that man. He had thought it in those words. He had driven on through the barrier anyway, because he had decided, in the yard at Ashford four years ago, what he was for.</p>
+<p>Now Nikolai laid the sheets out on the long table under the lamp.</p>
+<hr>
+<p>Nine typed sheets. Dmitri counted them. Page one, then a gap, then pages five to eight, then nine to twelve. The type was uneven, pressing hard in some letters and light in others, and in every lowercase <em>e</em> there was a small bite out of the upper curve, as if the letter had once been dropped and never mended. In the lower right corner of every sheet, small, was a Roman numeral: VII.</p>
+<p>At the foot of page eight, there was a mark. Two capital letters, a raised dot, a number. <em>HV·01.</em> At the foot of page twelve, another: <em>SO·04.</em></p>
+<p>Dmitri looked at the marks. He had seen marks like them before, on photographs: <em>YP·02</em> on the pages that had come to the intake in November, <em>JM·08</em> on others, <em>CZ·11</em> on the torn page from the Lost Hour. Two capitals, a dot, a number no higher than twelve. Nobody could read them. He noted, because he noted such things, that the numbers did not follow the order of the pages: the first principle carried <em>01</em>, the second <em>04</em>. Whatever the numbers counted, it was not the order of the principles.</p>
+<p>Kira read the title aloud, in her level voice.</p>
+<p>"<em>The Foundation of Certainty. A design for the governance of a species that cannot agree on what happened.</em>"</p>
+<p>Nobody said anything for a moment. It was the first time any of them had heard the thing's name. For two years they had called it the design, the document, the pages, the manuscript. It had a name now, and the name was worse than not knowing it, because a thing with a name was a thing someone had meant.</p>
+<hr>
+<p>Then the contents. Kira read them off the title page, the headings on the left, the numerals and page numbers running to the right.</p>
+<p><em>The Compiler's Introduction …… 2.</em></p>
+<p><em>The Necessity of Singular Truth …… I …… 5.</em></p>
+<p><em>Legitimacy Through Controlled Opposition …… II …… 9.</em></p>
+<p><em>Strategic Ambiguity Through Backup Control …… III …… 13.</em></p>
+<p><em>Correction Over Punishment …… IV …… 18.</em></p>
+<p><em>Controlled Conflict and the Calibration Grounds …… V …… 23.</em></p>
+<p><em>Narrative Preemption, or The Restorer's Authority …… VI …… 29.</em></p>
+<p><em>Implementation Annex …… 33.</em></p>
+<p><em>Register of Contributors …… 39.</em></p>
+<p>Kira laid the Book 6 strip beside the right-hand edge of the title page, the torn finger of paper with its three numerals, <em>IV 18, V 23, VI 29</em>, and the numbers matched, line for line.</p>
+<p>"Everything we have falls into it," she said. She did not raise her voice; she never did, over the things that mattered most. "The Introduction is page two to four. We have it. Principle Three is thirteen to seventeen; we have it, the pages that came to the intake. Five is twenty-three to twenty-eight; we have it. Six begins at twenty-nine, and the torn page from the Lost Hour is page thirty. We have it." She put her finger on the strip. "This matched before and I didn't know what it matched. Now I do."</p>
+<p>"And the Warning," said Alexei, from the bench. "Where's the Warning? The handwritten one. The <em>build by many hands</em>."</p>
+<p>"It isn't listed," said Kira. "It was never part of what they typed. It's handwritten. It was added to one copy, later, and this is a different copy." She looked at the list. "Six principles, an Annex, and a Register."</p>
+<p>"A register of what," said Alexei.</p>
+<p>"Names," said Marcus. He said it quietly, from the table. "A Register of Contributors. It's a list of who wrote it."</p>
+<p>He filed it; Dmitri saw him file it, under the middle column, in his head. Nobody said a number. The only count anyone in the kitchen could say was the one from the Introduction, which Kira had read to them in November: <em>seventeen contributors</em>. The Register was a list. They did not know how long it was. They knew only that there was one, and that it existed, somewhere, in a copy that was not this one.</p>
+<p>Then Principle Four's title, which they could now read and could not read past: <em>Correction Over Punishment.</em></p>
+<p>Almost everyone in the kitchen had been corrected. Marcus. Kira. Dmitri, and his brothers, in a triangle of glass cells at a border facility, <em>State your name</em>. Old Songs, for forty years. Tanaka, who was not here, had run the ordinary version of it before it was run on her. There was a principle, numbered four, between pages eighteen and twenty-two, with that title, and not one of them had the text of it, and every one of them had lived inside it.</p>
+<p>Dmitri looked at the title for a long moment. <em>Correction Over Punishment.</em> Four words, on a contents page, typed in 2066, and behind the four words, pages eighteen to twenty-two, which they did not have, which someone had kept, in a copy somewhere, the text of the principle that had built the white room his father had been sent to on a work course and come home from empty. The thing had a page number. That was what he could not get past. The thing that had emptied his father, and taken three boys and put them in a triangle of glass to be corrected one at a time, <em>state your name</em>, and failed, and logged them as failures, the thing was a principle numbered four with a title and a page range, written down, by a hand, in a year, as calmly as a man writes a clause about drains. He did not say it. His face did nothing, which Nikolai had told him long ago meant a great deal, and Nikolai, at the far end of the table, who could feel what Dmitri's face hid, looked up once, and down again.</p>
+<p>Nobody said anything about that either. There was nothing to say that would not have been smaller than the thing.</p>
+<hr>
+<p>Nikolai read Principle One.</p>
+<p>"<em>Singular truth, mechanically verified, universally enforced. All other principles derive from this necessity. Democracy failed because it assumed humans could collectively determine what happened. We remove the assumption.</em>"</p>
+<p>He read it quietly, and set the page down, and looked at his hands.</p>
+<p>Then Dmitri read Principle Two. He read it because Kira held it out to him, and because he had read reports aloud to rooms for years, and his voice did not shake over official prose; it never had. He read it formally, in full, without a single contraction, the way he read everything that mattered.</p>
+<p>"<em>A system without opposition appears tyrannical; a system with uncontrolled opposition becomes unstable. Let there be several Histologic nations, differing in method and agreeing in substance, and let there be enemies outside them all. Peace would raise questions. Total war would end the system. Controlled conflict answers every question before it is asked.</em>"</p>
+<p>He squared the page to the edge of the table.</p>
+<p>"Then the war between the nations is not a war," he said. "It was built. Chronos and Veridica, the border, the storms, my father." He stopped on his father for exactly one beat and let it pass; his face did nothing. "And the operation is cutting a hand out of Chronos's record to stop a war that was designed to be fought. I do not think it should go on. I think the operation should stop."</p>
+<p>Marcus looked at him across the lamp.</p>
+<p>"Then the Chronos hand is theirs," he said. "The same design that built the war built Julian's key into it. If the war is one thing, then cutting the Chronos hand out of it is cutting <em>them</em> out of it. The people who designed it. That's not a reason to stop. That's the first reason I've heard to go on."</p>
+<p>"The people who designed it are not in the Archive," said Dmitri. "Julian Kovač is in the Archive."</p>
+<p>Marcus did not answer that.</p>
+<p>Alexei said he agreed with Marcus; he said it unhappily, because he wanted the storms stopped and would not pretend otherwise. Elena was silent. Kira looked at one phrase on the page for a long time, <em>differing in method and agreeing in substance</em>, and then at Nikolai, who had copied the whole of Principle Two into his notebook and underlined the word <em>agreeing</em>, twice. Neither of them said what they were looking at. Dmitri noted that they were looking at the same word, and that neither of them said it, and filed it, and did not know where it went.</p>
+<hr>
+<p>Vance had not spoken.</p>
+<p>She sat at the table's end with her right hand on the edge of page one, holding it flat so that the hand stayed still, and she looked at the numeral in the lower right corner, VII, for a long time, longer than she had looked at the words.</p>
+<p>"That copy," she said at last, "should not be in Chronos."</p>
+<p>Dmitri turned to her. He had built cases for a living. He asked the question a case asked.</p>
+<p>"If it should not be in Chronos," he said, "then it belongs somewhere else. It is someone's. Whose is it?"</p>
+<p>"No," said Vance.</p>
+<p>"One name," said Dmitri. "The one who holds that copy. Not the others."</p>
+<p>"No." She did not raise her voice. "Not that one, Mr. Volkov. Not any of them. I am sorry. You would do something very sensible with it, and it would be the wrong thing, and I have spent a long time learning the difference between a sensible thing and a right one, and I paid for the lesson, so I will not sell it to you cheap."</p>
+<p>Dmitri looked at her for a moment. His face did nothing, which Nikolai had told him long ago meant a great deal. Then he inclined his head and said nothing further. He had met, in his life, three or four people he could not move, and he had learned to know them by the second sentence. She was one.</p>
+<p>Old Songs, at the stove, hummed very low, and watched Vance watch the numeral, and said nothing at all.</p>
+<hr>
+<p>As the light went, before they left, Kira photographed every sheet.</p>
+<p>She did it quickly, under the lamp, while Marcus was out at the car, and she did not tell him. Dmitri saw her do it. He stood at the door and watched her lay each sheet flat and photograph it and square the stack again, nine sheets, and put her device away before Marcus came back in, and he said nothing, because he had understood, over two and a half years, that Kira kept copies of things the way Nikolai did, and that she had decided Marcus should not know she was keeping this one, and that she would have a reason, and that the reason was most likely <em>insurance</em>, which in this family meant the same thing as love.</p>
+<p>Marcus returned the originals to Julian the next day, Tuesday, across the checkpoint, and they went back into box 204117 in the Archive, so that copy VII stayed in Chronos, where the record said it was. When he handed the folder back he named no page and quoted nothing. The heroes held, after that, only Kira's photographs, which Marcus did not know about, and their notes.</p>
+<hr>
+<p>At dusk Dmitri drove to the lakeshore checkpoint to collect a pass of Kira's, and Major Sokolov came out into the floodlit fog with her hands in her coat pockets.</p>
+<p>"Volkov."</p>
+<p>"Major."</p>
+<p>She looked at him, and then out at the fog over the water. He did not tell her anything. He had never told her anything but the fact she needed and nothing around it, in four years under her command and in the two years since, and she had never once asked him a question whose answer she would then have to report.</p>
+<p>"Whatever it is," she said, to the fog, "I would rather not be told."</p>
+<p>Dmitri stood at the barrier in the white light and thought about a page typed in 2066 by someone who had never met his father, and about a war that had been built so that there would be a war, and about a narrow careful man across the lake who had lent them the proof of it and would be destroyed by the use they made of it.</p>
+<p>"I will protect it," he said, to the fog, because it was true, and because there was no one else he could say it to. "I do not agree with it. I have been an instrument before."</p>
+<p>Sokolov did not ask what he meant. She stood beside him in the white light with her hands in her coat pockets and looked at the fog over the water, the way she looked at most things, as if she were reading a distribution off it and finding the answer unsurprising. He had served under her for four years and been her instrument, and she had arrested him and then, on a night in another fog, let him go, and in all that time he had never once known what she was thinking, and he did not know now. He only knew that she was a person a man could say a true thing to without it being used, because she did not act on what she was told; she acted on what she decided; and what she was told and what she decided were kept, with her, in different rooms.</p>
+<p>Sokolov said nothing. After a moment she took the pass from the gatehouse and handed it to him, and went back inside, and the floodlights turned the fog white, and Dmitri drove home with the pass in his pocket and the whole of Principle Two in his head, where it would stay, and his father's work course, and a page range, eighteen to twenty-two, that he did not have and would not forget.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="10-the-brother.html" class="nav-button">← Previous: Chapter 10: The Brother</a>
+            <div class="nav-center">Chapter 11: Copy VII</div>
+            <a href="12-the-diplomats-page.html" class="nav-button">Next: Chapter 12: The Diplomat's Page →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

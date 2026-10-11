@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Truths - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Truths</h1>
+            <div class="novel-meta">Novel 07 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="28-enemies-outside.html" class="nav-button">← Previous: Chapter 28: Enemies Outside</a>
+            <div class="nav-center">Chapter 29: Colonel</div>
+            <a href="30-battle-of-truths.html" class="nav-button">Next: Chapter 30: Battle of Truths →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 29: Colonel</h1>
+<p><em>Friday, December 20, 2109. Border Security headquarters; the lakeshore checkpoint; Viktoria Sokolov's house; the Cabinet Office, Veridica Capital</em></p>
+<hr>
+<p>At nine o'clock they made her a Colonel.</p>
+<p>The ceremony was short. An unnamed general read the citation, which praised her judgement in the stand-down of December 2108, and pinned the insignia, and said the thing generals said, and it was over in eleven minutes. She said, "Thank you, sir," and nothing else.</p>
+<p>She noted three things, and interpreted none of them, because interpreting was not her work; noticing was her work; she had spent her whole career noticing and letting other people interpret, and being wrong less often than the people who interpreted. She noted that nobody was made Colonel, at her age, for standing units down; the service promoted for units used, not units withheld, and it had just promoted her for the one time in her career she had refused to use what she commanded. She noted that the citation named December 2108 and not August 2106, which she had expected, because nobody named August 2106, and she least of all. And she noted that the insignia was already engraved with her name when the general took it from the box, which meant the decision had been made some time ago, by someone who had known her answer before she gave it, which was a thing she filed and did not interpret.</p>
+<p>Ten months, from Major to Colonel. She had been a Captain for most of a decade. She said, "Thank you, sir," and let them pin it on, and did not interpret the speed of it, and the not-interpreting was itself a discipline, because the speed of it wanted interpreting, and she would not give it the satisfaction.</p>
+<p>She had been passed over for most of her career, and had understood why, and had not minded, or had minded in the way she minded everything, which was to note it and not interpret it. She was unreadable, and the service did not promote the unreadable, because the service wanted men it could predict. She had let the escapees through a checkpoint in the fog in August 2106 and told no one, and the not-telling had cost her nothing because no one had known there was anything to tell. She had stood her units down at five past two on the seventeenth of December 2108, in front of her own Ministry, on her own authority, and that had been a thing people knew, a public refusal of the kind the service did not forgive, and she had expected it to end her. Instead it had made her a Major in February and a Colonel now, and a man who had been disobeyed twice in public does not promote the man who disobeyed him unless the disobedience has become, to someone, useful. She noted that. She did not interpret it. But she noted, too, that she had begun to be unable not to see the shape of the thing, which was that she was being moved up, fast, by a hand she could not see, towards a command that did not fit the war that was coming, and that a thing moved deliberately towards a place it does not fit is a thing being positioned, and she filed the word <em>positioned</em> and did not say it, even to herself, more than once.</p>
+<hr>
+<p>At eleven she had her first brief as lakeshore commander, and it was on paper.</p>
+<p>She preferred paper. She had always preferred paper. It could be burned but it could not be adjusted in the night, and she had learned, over a career on a border where histories changed, that a thing you could hold was worth two things you could only read on a screen. The brief had three items.</p>
+<p>First: an SFW fleet was assembling in the Atlantic. Transports and escorts, more of them each week, with staging in unaligned territory, supply lines that had not been there in the summer. Veridica held the former East Coast; it had an Atlantic shore; and it shared no border at all with the Sovereignty, which was half the world away, so that a fleet in the Atlantic was a thing that had crossed a great deal of water on purpose, which was itself a fact, which she noted.</p>
+<p>Second: the staging. Unaligned territory, supply depots, fuel. A fleet did not sail without a shore to sail from and a shore to sail to, and the shore to sail from was being built, now, which meant the thing was not a demonstration. A demonstration did not build depots.</p>
+<p>Third: a line she read twice.</p>
+<p><em>SFW forces carry no neural interfaces.</em></p>
+<p>She read it twice because her whole career had been the transmitter units, the vehicle-mounted broadcasters that put a false history of a district over the true one, that made the storms, that she had run on the lakeshore for ten years. A soldier with no interface received no broadcast. No storm would reach him. No seeding would touch him. He could not be made to doubt his orders, or forget his mission, or walk off a slip towards a jetty that was not there. Every weapon she knew how to use, the whole of her profession, was useless against a man with nothing behind his ears. She read the line twice, and filed it, without comment, and did not interpret the feeling it gave her, which was the feeling of a locksmith told the enemy has no doors.</p>
+<p>There was a question in the margin of the brief, in another officer's hand. <em>Why the lakeshore command, if they come by sea?</em> She did not answer it. It was a good question. She initialled the page and did not answer it, because the answer, if there was one, was a thing someone wanted of her, and she did not yet know who, and she would not sign her name to a guess about who wanted what of her.</p>
+<hr>
+<p>At dusk she drove out to the lakeshore checkpoint herself, as she always did.</p>
+<p>Dmitri Volkov was at the barrier, with a Commission pass, on some errand of Osman's. He saw the insignia on her collar, which had been a Major's in the autumn and was a Colonel's now.</p>
+<p>"Colonel," said Dmitri.</p>
+<p>She gave him the line. "Colonel Sokolov. Lakeshore checkpoint. Traffic normal." And then, lower, on the way back to the car, not quite to him, the way she said the things she meant: "It was quicker this time."</p>
+<p>He did not answer. She did not wait for him to. She had never, in six years of knowing this man, from the four years he served under her to the two since he was officially dead and stood at her barriers with Commission passes and they both pretended not to know each other, waited for him to answer anything. She had said a thing that was true and let it stand, which was what she did instead of interpreting, and got into the car.</p>
+<hr>
+<p>At eight she had dinner with her mother.</p>
+<p>Viktoria Sokolov was retired Chancellor of Veridica, seventy-three, upright, elegant, with the title still on her door though she had left the office eleven years ago, and a house that was warm and exact, with nothing in it out of place. The good wine was already open when Yevgenia arrived, breathing, on the sideboard, two glasses out.</p>
+<p>Yevgenia noted it. She had not told her mother about the promotion. She had decided, that morning, driving in, not to tell her until the dinner, to see her mother's face do the thing it did when it was surprised, which was a thing Yevgenia had been trying to see her mother's face do for forty years. The wine was open. Two glasses. She noted it and did not interpret it, and sat down.</p>
+<p>They talked about the lakeshore, and a cousin, and the cold. And, because her mother asked, about the coast.</p>
+<p>She had been drafting, on her own time, a coastal defence plan that nobody had asked her for, since the brief about the fleet had come across her desk in outline a week before it came formally. She did it the way she did everything, by noticing: the landing beaches, the roads inland, the distance to the capital, where a fleet would come ashore if it meant to come ashore, and what that meant for a defence. Her mother asked about it, with real interest, over the second course, and Yevgenia, who did not say much to anyone, found herself saying a little, because it was her mother, and because the plan was the most interesting thing she had thought about in months.</p>
+<p>"The beaches," she said, of the landing ground, "are a door, not a wall. You cannot hold a beach. A beach is for passing through. You hold the roads behind it, and the ground above it, and you let them have the beach, because the beach is where they are weakest and where you most want them to think they are strong."</p>
+<p>Viktoria smiled at the phrase. <em>The beaches are a door, not a wall.</em> It was the only time Yevgenia said it aloud to anyone outside her own notebook, and she said it to her mother, over wine, and her mother smiled at it, and Yevgenia noted the smile, and did not interpret it, and would have a great deal of cause, in the spring, to remember that she had said it here, and to whom.</p>
+<p>Her mother listened to every answer completely. That was a thing Viktoria did that nobody else did: she did not wait for her turn to speak; she listened as though the answer would be examined later; and Yevgenia had grown up under that listening and had never been sure whether it was love or assessment, and had decided, long ago, that with her mother the two were perhaps not separable, and had stopped trying to separate them. Viktoria asked good questions about the coast. She asked where a fleet would land, and why there and not elsewhere, and what a defender did about a beach she could not hold, and she listened to the answers the way a chancellor listens to a brief, which Viktoria had been, once, for thirteen years, and Yevgenia answered the way she answered a superior officer, exactly, because it was easier than wondering why her mother wanted the brief.</p>
+<p>Near the end, over the last of the wine, Viktoria reached across and touched the new insignia on her daughter's collar, once, with one finger.</p>
+<p>"You have always been exactly where you should be," she said.</p>
+<p>Yevgenia heard it as a mother's pride, which it was. She heard it, also, as something else, which she did not name, because naming it was interpreting, and she did not interpret her mother, had never been able to, had spent forty years not knowing what her mother was thinking and being told it was love. She said, "Yes, Mother," and left the second glass half full, because she was driving, and because a half-full glass left on a table was a fact she could leave behind her, and she liked, at the end of an evening with her mother, to leave one true fact behind her that her mother had not arranged.</p>
+<hr>
+<p>At half past ten the First Minister sent for her.</p>
+<p>Maitland was tired and courteous and quick. He had the brief on his desk, the fleet, the staging, the soldiers with no interfaces. He asked her the question a First Minister asks.</p>
+<p>"Can the storms be turned on them? On the fleet. If it comes to it."</p>
+<p>"No, First Minister," said Yevgenia. She gave it in an order's register, plainly, because he deserved the plain answer and not a softened one. "They have no interfaces. There is nothing to turn. A storm is a broadcast, and a broadcast needs something to receive it, and they have nothing behind their ears. Every transmitter unit on the lakeshore is a weapon against Veridicans and Chronos citizens and no one else. Against the Sovereignty they are furniture."</p>
+<p>She heard herself say <em>furniture</em>, and thought, briefly, without interpreting it, of the old man her agent's brothers had spoken of once, years ago, in a report she had not been meant to read, the one who sang, who had let the whole world think he was furniture for forty years and had been wrong about everything except that. A thing everyone took for harmless because it could not be reached by the thing they used on everyone else. The SFW was that, she thought, at the scale of an army: a quarter of a billion people the whole Histologic apparatus could not touch, because they had refused the one thing that made a person touchable, and had been called barbarians for refusing it, and were now sailing an ocean towards a coast with the one advantage the designers of the whole system had never built a defence against, because the designers had assumed everyone would have something behind their ears. She did not say any of that. It was not an officer's thing to say to a First Minister. She filed it.</p>
+<p>Maitland looked at her. "Then what did we win in November?" he said. "If the next war can't be fought the way the last one was. What was it for?"</p>
+<p>She thought about the stand-down at five past two on the seventeenth of December, which had made her a Major. She thought about the Chronos determination of the fourth of November, 0.93, Veridica bears no responsibility, which Maitland had called a diplomatic breakthrough. She thought about a war of facts, won, over a lake, with transmitter units and a determination and a doctrine, all of it the only kind of war she had ever known how to prepare for.</p>
+<hr>
+<p>"We won the war of facts," said Colonel Yevgenia Sokolov. "They are not coming to fight that one."</p>
+<p>She let the pause stand after it, which was her signature, the real sentence last and the silence after it, and she did not say anything else, because there was nothing else that was true and useful, and she only ever said the things that were both.</p>
+<p>Maitland looked at her for a moment, and then at the brief, and then at the dark window, and did not answer her either, because there was no answer, because she was right, and a First Minister has no use for a true thing he cannot act on, and she had just given him one, and the giving of it was the whole of what she had come to do.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="28-enemies-outside.html" class="nav-button">← Previous: Chapter 28: Enemies Outside</a>
+            <div class="nav-center">Chapter 29: Colonel</div>
+            <a href="30-battle-of-truths.html" class="nav-button">Next: Chapter 30: Battle of Truths →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Truths - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Truths</h1>
+            <div class="novel-meta">Novel 07 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="05-the-attache.html" class="nav-button">← Previous: Chapter 5: The Attaché</a>
+            <div class="nav-center">Chapter 6: I Can't Authorise This</div>
+            <a href="07-the-falling-phrase.html" class="nav-button">Next: Chapter 7: The Falling Phrase →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 6: I Can't Authorise This</h1>
+<p><em>Monday, August 26, 2109. Marram End, the claimed strip; the Cabinet Office, and the flat by the old river, Veridica Capital</em></p>
+<hr>
+<p><em>Aug 26, 2109. 08:00. Commission casualty bulletin. Dead since Aug 14: seven.</em></p>
+<p>Marcus read it at the kitchen table before it was light, on the small screen, with his coffee going cold. Seven. A man on the shore road on Saturday night, which made six. And then, on Sunday night, at Marram End, a child. Seven. The press gave no name for the child. The press gave no name for any of them; Veridica kept its dead exact and unnamed, a number and a place and a cause, and the cause for six of the seven was <em>cognitive trauma during contradictory broadcast</em>, which was the bulletin's way of saying a storm, which was the broadcast's way of saying a weapon, which was Chronos's way of saying Veridica.</p>
+<p>He drove out to Marram End alone at first light, before the Commission sat, because he had decided in the night that he would not ask for a thing he had not looked at.</p>
+<hr>
+<p>Marram End was a lakeshore village in the strip, smaller than Kestrel Point, a single street of low houses behind a sea wall and a short stone slip going down into the lake. He left the car at the top of the street and walked down to the slip in the cold morning and stood on it and looked at the water.</p>
+<p>The slip ran out a few metres and stopped. Past the end of it there was open water, gray and flat, with the fog going off it in threads. That was Veridica's Marram End. In Chronos's history of this village a timber jetty ran out from the end of the slip a hundred metres into the lake, with lamps along it, and had done for a hundred years.</p>
+<p>He knew what had happened without being told, the way you know the end of a story you have heard the shape of before. On Sunday night the storms had been on the lakeshore, and a child had walked out along the slip in the dark, out past the end of it, towards the lamps on a jetty that was there in one history and not in the other, the way the Calloway girl had walked along the quay at Kestrel Point in the fog two autumns ago, towards a pier that was not there.</p>
+<p>Kira had copied that Kestrel entry out for him last November, in her own hand, into one of the journals, because she said he should have it. <em>W. Calloway (14) walked along the quay in the fog towards where the old pier used to be. R. Calloway came down the hill and caught hold of her coat at the edge of the quay. Her front foot was over the water. We sat down.</em> He had read it a dozen times. The difference between Kestrel Point and Marram End was one pair of hands at the right second, and a slip that was a little shorter, and nothing else at all.</p>
+<p>Marram End kept a paper book. A woman opened her door to him when he knocked, because she had seen his face on the broadcasts and knew what a commissioner was, and she brought it out and showed him Sunday's entry on the step, in the cold, without letting him take it inside. It was in four hands. Four people had written what they saw and signed each other's accounts, and where they differed, about the time, about who had reached the child first, they had left both, in the margin, with a name against each.</p>
+<p>He read it standing on the step. Then he gave it back, and thanked her, and said he was sorry, and she looked at him and did not say that sorry was no use, though her face said it, and he was grateful to her for not saying it aloud, and ashamed of being grateful.</p>
+<hr>
+<p>He did the sum on the drive back, because he could not stop himself doing sums.</p>
+<p>The Rewriting carried the key that had countersigned the Gap. The Archive's public roll said Julian had held that key since 2104. Julian had shown it to him in a garden, unasked, and said there was nothing behind it, and slept through seventeen minutes of the Gap in his own bed with his log saying so, and made a joke of it. Chronos's Judge would read Chronos's own record and nothing Veridica said, and Chronos's own record said Veridica had done it twice. So the storms would not stop while Chronos believed that. And the only way to change what Chronos believed was to change what Chronos's record said, from inside, and the only door into the inside of the Chronos Temporal Archive was a man who trusted him.</p>
+<p>He noticed, somewhere between two villages, that Nikolai's sentence did not come to mind. <em>I know the key. I don't know the hand.</em> He noticed that it did not come, the way you notice a sound stopping. He thought: <em>I should keep that where I can see it.</em> And then the road turned, and the lake came up on the left, and by the time it went again he had not kept it anywhere.</p>
+<hr>
+<p>At three o'clock he was in the First Minister's office.</p>
+<p>He had asked for the appointment at eleven, through Maitland's secretary, and been given it at three, which told him that Maitland had already cleared the afternoon, which told him that Maitland knew what he was coming to say before he said it. He did not mind. He had come to say it anyway.</p>
+<p>The office was as it had been in November, when he had first been brought up here at night and shown a folder with no signature line. Deep chairs, lamps with green shades, the long window south over the capital. The fire was not lit; it was August. Oskar Maitland sat behind the desk, big and tired and well tailored, with his chin on his fist, and Thomas Wei sat at the side table by the window with his tablet, courteous, waiting to be asked. There was no tea steaming in an armchair by the fire. Chen Zhao was not there.</p>
+<p>Marcus noted that. He noted it as a fact entry, the way he noted everything now: <em>Chen Zhao: not present.</em> He did not know yet where it went. He thought it meant that whatever was going to be done in this room, the Minister of Historical Integrity wished to be able to say he had not been in it. He was nearly right.</p>
+<p>"Numbers," said Maitland, when Marcus had sat down. "You'll have them fresher than mine."</p>
+<p>"Seven," said Marcus. "Since the fourteenth. The last was a child, last night, at Marram End. She walked off a slip towards a jetty that isn't there."</p>
+<p>Maitland closed his eyes for a moment. Then he opened them.</p>
+<p>"Border Security has asked me," he said, "to put the transmitter units back in the field. Our units. To answer the Chronos broadcast with our own, over the strip, so that at least our own people on our own shore hear one history and not two. I have said no. For now." He looked at Marcus. "I say <em>for now</em> because I can count, Commissioner, and the number goes up. If I keep saying no, I will watch it go up and do nothing. If I say yes, we are back where we were in the autumn, two nations broadcasting at the same towns, and the number goes up faster, and we will have started it again ourselves." He turned his chin on his fist. "So. You asked to see me. You have been to Marram End. Tell me what you came to tell me."</p>
+<p>Marcus told him.</p>
+<p>He told it in order, the way he told everything, without softening it and without a single word he had not weighed. He said that there was one way to stop the storms that was not a transmitter unit, and that he had refused it once, in this building, in November, and that he was asking for it now. He said that the Rewriting carried the key of the Chronos Temporal Archive, and that the man who held that key trusted him, and had given him, over the winter, exactly the kind of trust that could be used. He said that he could use it. He could get inside the Archive, with Julian's help, freely given, and he could see to it that Chronos's own record of both attacks was put back to the truth, so that Chronos's Judge would read the truth and the war of facts would stop. He said that the cover would be a joint inquiry into the Rewriting, co-chaired by himself and Julian, sitting in the Archive's own reading rooms, which Chronos would welcome, because Chronos wanted the misuse of its key traced with Veridican witnesses present.</p>
+<p>He said all of it looking at Maitland, and he did not look at Wei at the side table, because he did not want to see Wei's face while he said it.</p>
+<p>When he had finished there was a silence.</p>
+<p>"That is the operation you refused in the autumn," said Maitland.</p>
+<p>"Yes."</p>
+<p>"Why ask for it now?"</p>
+<p>"Because the record says it was him," said Marcus. "And in November it only wanted it to be."</p>
+<hr>
+<p>Wei spoke from the side table.</p>
+<p>He did it the way he did everything, quietly, courteously, when he was asked and not before. He had the tools, he said. His office had built restoration tooling for the Concordance, for exactly the case the Concordance had been sold on, so that a journal lost to a fire could be put back from its master. It would need adapting for the Chronos architecture. That was not trivial, but it was not the hard part. The hard part was the access, and the access was Marcus's to get or not.</p>
+<p>Then he said, lightly, as a man names a thing that is already obviously itself:</p>
+<p>"Call it RESTORATION. That's what it is."</p>
+<p>Marcus heard the word land.</p>
+<p>He heard it twice, the way he heard Wei's sentences twice now, always. Once as plain description: the operation put a record back, so you called it a restoration, and what else would you call it. And once as something else, from a torn page in a dead woman's voice that half the people he loved could recite in the dark. <em>When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it.</em> And under that, a folder label Kira had carried out of a data centre in 2106 and never explained, because she could not: <em>RESTORATION / XI.</em></p>
+<p>He looked at Wei. Wei looked back, courteous, attentive, with no more on his face than there ever was, which was a little more than there should have been.</p>
+<p>Marcus accepted the word.</p>
+<p>He did it deliberately, and he knew while he did it that he was doing it. Refusing a word was a thing you could afford when you had no dead. He had seven dead and a child among them, and a transmitter unit waiting in the wings that would make it fourteen, and he was not going to stand in a room and argue about what to call the only thing that would stop the number going up, while an old woman's sentence rang in his head to tell him he was walking into it. Walking into it was the point. The design had a place for him; the alternative was a slip at Marram End with a shorter stone.</p>
+<p>"RESTORATION," he said.</p>
+<hr>
+<p>Maitland looked at the window for a while.</p>
+<p>"I will propose the joint inquiry to Chronos in the morning," he said. "Through the Synthesis. Chronos will take it; it wants its key traced, and it will want to do the tracing where it can watch us. That part is clean. That part I can sign." He turned back. "The rest of it I cannot sign. There will be no order. There will be no paper. If you do this thing inside the Archive, you do it as a man, not as an instrument of this government, and if it goes wrong, this government will say, truthfully, that it authorised an inquiry and nothing else."</p>
+<p>He stood up, which meant that it was finished.</p>
+<p>"I can't authorise this," said Oskar Maitland. "But I won't stop you."</p>
+<p>Marcus recognised it. He had heard its shape before, in this building, in November, in a folder with no signature line, the deniability of a man who wished to be able to say he had never known. The difference was that in November he had been the one being handed it, and had refused. Now he was the one asking for it. He had crossed the room without moving.</p>
+<p>"I understand," he said.</p>
+<p>At the lift, Wei walked with him, his tablet under his arm.</p>
+<p>"If you want Commissioner Osman's eyes on the tooling," he said pleasantly, holding the lift for him, "I'd welcome them. She reads code the way other people read faces." He let that sit for exactly as long as it took the doors to begin to close. "She'll want to, I expect."</p>
+<p>He already knew she would. Marcus heard that too, and put it in the column with the rest, and said good evening, and went down.</p>
+<hr>
+<p>On the walk home he reached for a word.</p>
+<p>He crossed the plaza in the last of the light, past the Lost Hour stone, pale and waist-high by the fountain, where in two days it would be the fifteenth of the month and people would come and read out ordinary days. He wanted the word for what he had just done. Not <em>agreed</em>. Not <em>asked</em>. There was a word for a man who sets out, with his eyes open, knowing the shape of the thing he is walking into, to do it anyway because the alternative is worse. He reached for it, and there was a smooth place where it should have been, with no edge to catch, and he could not tell whether the white chair had taken it years ago or whether there had never been a single word for a thing like this, and there was nobody on the plaza to ask.</p>
+<hr>
+<p>The flat, half past eleven.</p>
+<p>Kira was not asleep. She was at the kitchen table with the journal open and a pencil in her hand and had plainly been waiting, though she did not say so. She looked at his face when he came in and knew, and did not ask him to tell her, because she knew he would, in order, because nobody had asked him not to.</p>
+<p>He told her. All of it: Marram End, the slip, the child, the transmitter units waiting, Maitland, the inquiry, Wei, the word. He did not soften the word. She listened without moving, with the pencil still in her hand, and when he had finished she looked at the journal for a while and then at him.</p>
+<p>"RESTORATION," she said.</p>
+<p>"Yes."</p>
+<p>"You know what the word is."</p>
+<p>"Yes."</p>
+<p>She did not say <em>this is wrong</em>. She would say it, he thought, when the others were there, because she would want it said in front of witnesses, which was her way. Tonight she only looked at him, and he saw in her face the thing he had not let himself see all day, which was that she was not only angry, she was afraid, and that the fear was for him and not for the operation.</p>
+<p>He sat down and took out his lists and unfolded them, and under CHECKED, where he kept the things he could verify, he wrote, in pencil, in the format of desk 14-08, the day's one true fact:</p>
+<p><em>Aug 26, 2109. 15:00. Cabinet Office. Involved parties: Chen, M.; Maitland, O.; Wei, T. Purpose: proposal of a joint Veridica–Chronos inquiry into the Rewriting. Status: agreed.</em></p>
+<p>He read it over. It was true. The inquiry had been agreed; Maitland would propose it in the morning; it would happen. Every word of the entry was a fact he could stand behind.</p>
+<p>It was also the first fact entry he had ever written knowing that its purpose was a lie. The inquiry was the cover. The entry was the cover's entry. He had written a true thing to stand in front of a thing that was not in any column at all.</p>
+<p>He looked at it for a moment, and then he filed it under CHECKED, because that was where it went, and he did not have a column for what it was.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="05-the-attache.html" class="nav-button">← Previous: Chapter 5: The Attaché</a>
+            <div class="nav-center">Chapter 6: I Can't Authorise This</div>
+            <a href="07-the-falling-phrase.html" class="nav-button">Next: Chapter 7: The Falling Phrase →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

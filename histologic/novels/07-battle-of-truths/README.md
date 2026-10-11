@@ -1,6 +1,6 @@
 # Battle of Truths (Histologic, Book 7)
 
-**Status:** plot v3 and chapter summaries done (Sept 2026). The chapters are still to be drafted. The earlier Nov 2025 draft, its summaries and its supporting documents have been deleted; git history keeps them.
+**Status:** plot v3 and chapter summaries done (Sept 2026). **First draft of all 32 chapters complete and enriched (Oct 2026), ~83,800 words; HTML and EPUB built.** The earlier Nov 2025 draft, its summaries and its supporting documents have been deleted; git history keeps them.
 **Set:** Wednesday, August 14 – Monday, December 23, 2109. The epilogue is set on Friday, January 10, 2110.
 **Follows:** *The Distributed Truth* (Book 6). **Followed by:** *Battle of Blood* (Book 8, provisional).
 
@@ -15,7 +15,9 @@ Two million journals are rewritten in a single night. The countersignature on th
 
 ## Folder
 - `chapters-summaries/`: the chapter summaries, plus a README with the drafting decisions, timeline, cast, twist and manuscript tables, and Old Songs' appearances.
-- `chapters/`: to be drafted.
+- `chapters/`: the 32 drafted chapters (Prologue + 30 + Epilogue).
+- `html-export/`: one HTML page per chapter plus `index.html`.
+- `battle-of-truths.epub`: the EPUB.
 
 ## Related
 - `plots/07-battle-of-truths-full.md` and `-concise.md` (plot v3).

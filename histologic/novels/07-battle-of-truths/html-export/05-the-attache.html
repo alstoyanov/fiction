@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Truths - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Truths</h1>
+            <div class="novel-meta">Novel 07 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="04-chronos-believes.html" class="nav-button">← Previous: Chapter 4: Chronos Believes</a>
+            <div class="nav-center">Chapter 5: The Attaché</div>
+            <a href="06-i-cant-authorise-this.html" class="nav-button">Next: Chapter 6: I Can't Authorise This →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 5: The Attaché</h1>
+<p><em>Friday, August 23 – Saturday, August 24, 2109. The Sovereignty of Free Will</em></p>
+<hr>
+<p>The front page ran it across five columns.</p>
+<p><em>HISTOLOGIC MEMORY IS WORTHLESS.</em></p>
+<p>Isaiah Okonkwo read the headline standing at the rack in the lobby of his own paper at half past eight in the morning, with his coat still on and the courtyard heat already coming through the glass doors behind him. He read it twice, the way he read anything that someone had written to be read once. Then he read the standfirst, which said that two million Veridican citizens had woken last week to find their private journals altered by an unknown hand, and that the Histologic world, which had built its whole order on the claim that its record could not lie, had been shown at last to be a house without a lock.</p>
+<p>It was not wrong. That was the difficulty with it. Every fact in it was true. It was only the verb in the headline that was wrong, and a headline was mostly verb.</p>
+<p>His own column ran underneath, below the fold, under his byline.</p>
+<p>He read it there, on the rack, in print, the way a reader would. He had written it on Tuesday night, carefully, about the Rewriting: what had been done, and how quietly, and what it meant to read your own name under a sentence you had never written. That was all there. He had ended it, as he ended everything, on a question. His last paragraph had been about the paper books along the lakeshore that had held when the screens had not, the ones kept by hand and copied by hand in other towns, and it had asked why a nation that had trusted its machines for forty years should now be told that the only record left standing was the oldest kind.</p>
+<p>The last paragraph was gone. The column ended one paragraph early, on a sentence about the screens.</p>
+<p>Upstairs, at his desk, the managing editor put his head round the door with his hands in his pockets, jingling something, and his reading glasses pushed up into his white hair.</p>
+<p>"Space," he said cheerfully, before Isaiah could ask. "We were tight. You'll forgive me. It's a very fine piece."</p>
+<p>"Thank you," said Isaiah.</p>
+<p>He did not argue. He filed it, in the study, under the current year, in the drawer he had labelled some months ago without admitting why. <em>The fourth this year</em>, he wrote on the card. <em>Cut: the paper books. Reason given: space.</em></p>
+<hr>
+<p>He laid out what he knew, as he did every morning, in order.</p>
+<p>On Thursday afternoon a message had come in on the long link from the capital, from Kira, three lines without a greeting, the way she wrote when she had not slept.</p>
+<p><em>Restore path. Paper held. Seventeen minutes, again.</em></p>
+<p>He had read it four times. He knew what the restore path was; she had written to him in January about the drafts, and about a component number, and about a technician on her knees on a flat's floor. He knew what <em>paper held</em> meant, and was glad of it, with a gladness he did not have time for. He knew what <em>seventeen minutes</em> meant. Everyone who had read the Chronos analysis of the Gap knew that.</p>
+<p>He knew Veridica's figures, because Veridica published them. The Historical Integrity Commission put out a casualty bulletin every morning at eight o'clock, capital time, which reached the Sovereignty a little after three in the afternoon. Since the night of the fourteenth it had reported dead. Not many. Veridica kept its numbers small and exact, and Isaiah respected that, as he respected anything that refused to round.</p>
+<p>Thursday's bulletin said three. A man in a lakeshore town called Gullhaven, on the night of the nineteenth, drowned in his own harbour after a dispute with neighbours over an altered entry. Two dead on the night of Wednesday the twenty-first, on the Veridican shore, in the storms that had begun again at noon that day when Chronos resumed its broadcasts at 0.91.</p>
+<p>Three. He had written the number in the study, under the date, with the bulletin's time beside it.</p>
+<p>He knew Chronos's 0.91. He knew the storms had come back. He knew nothing else, and he was careful, as he always was, to know exactly where <em>nothing else</em> began.</p>
+<hr>
+<p>At noon a note came up from the floor above. The editor-in-chief would be grateful for his company at lunch, as the paper's witness.</p>
+<p>He had been to the editor-in-chief's lunches four times in nearly three years. They were held in the private dining room on the top floor, a long, cool, handsome room with shutters half closed against the light and a table that could seat twelve and today seated five. The food was good. The talk was better. They were the kind of lunches at which a man in his position was shown, courteously and without anything being said, how much the house valued him, and on what terms.</p>
+<p>The editor-in-chief was a tall gray-bearded man of seventy who had founded the paper in the decade after the Fracture Years and still read every line of it. He shook Isaiah's hand with both of his. "Our witness," he said, "from the lake," and introduced him round the table.</p>
+<p>One of the guests was the attaché.</p>
+<p>Isaiah had seen him twice before. Once in December, in a corridor in this building, asking courteously for <em>the full set, for assessment</em>, and once, less than a year ago, in nothing but a memory of a room he had been shown into by mistake. A slim man in his forties in a civilian suit cut for a uniform's posture, standing as soldiers stand when they have been told not to. He had a careful voice and spoke in paragraphs. There was nothing behind his ears. Nobody in this building had an interface, and Isaiah, who had not had to check behind anyone's ears for nearly three years, caught himself checking anyway, and stopped.</p>
+<p>"Mr. Okonkwo," said the attaché, and inclined his head. "Your column this morning was very fine."</p>
+<p>"It was shorter than I wrote it."</p>
+<p>"Most things are." The attaché smiled slightly. "That is what editors are for."</p>
+<p>They sat. The shutters made bars of light across the cloth.</p>
+<hr>
+<p>They talked about the Rewriting all through the fish, and Isaiah listened.</p>
+<p>He listened the way he had listened at a staff table in Ashford, to the way people said words. The editor-in-chief said <em>Veridica</em> the way people say the name of a large animal that has fallen down. A woman from the Interior Ministry said <em>the journals</em> the way people say <em>their toys</em>. The attaché said very little at first. When he did speak, he spoke about the Rewriting with what Isaiah could only call professional appreciation. He spoke of its economy. Of the choice of altering nothing that would be noticed by the person whose journal it was, and everything that would be noticed by the person it was about. Of the timing, which he called <em>a signature, of course; whoever it was wished it read as the same hand that did the Gap</em>. Of the countersignatures, which could not be distinguished on a screen from honest ones.</p>
+<p>"It is very well made," he said. "One has to admire it as a piece of work, whoever's it is."</p>
+<p>He said it the way a man admires a weapon he does not own. With interest, and a little envy, and a small calculation underneath, about who did own it, and what else they had.</p>
+<p>Isaiah ate his fish and said that he expected the Commission would know more by the end of the month.</p>
+<p>"Oh, they will," said the attaché. "They are very thorough. It's a thorough sort of country."</p>
+<hr>
+<p>Over coffee, the editor-in-chief asked how bad it was. It was the question everyone at the table had been not asking, and he asked it plainly, as a newspaperman should.</p>
+<p>The attaché stirred his coffee once and laid the spoon down in the saucer.</p>
+<p>"Five dead since Gullhaven," he said. "Two more on the lakeshore last night. Storm deaths, on the Veridican side. A couple, I think, in one of the villages." He said it as a plain fact of the week, the way you would give the price of something. "It will not stay at five. They never do, once the broadcasting starts."</p>
+<p>Somebody said that it was terrible. Somebody else agreed.</p>
+<p>Isaiah held his cup.</p>
+<p>In the Sovereignty it was nearly one in the afternoon. In the capital of Veridica, across half the world and a lake, it was not yet dawn. The night the attaché was speaking of had not finished there. The Commission's bulletin, which would count the dead of that night, would not be written for another two hours and would not reach this building until three. And the bulletin in Isaiah's study, the last one, the one the whole world had, said three.</p>
+<p>He did not say anything. He drank his coffee.</p>
+<p>He was listening to how the man had said <em>five</em>. He had been listening to how people said numbers for twenty years, and numbers had their own sounds. People said a figure they had read in a particular way, a little careful, as though checking it against the page as they spoke. People said a figure they had worked out a little slower, with the working still in it. The attaché had said <em>five</em> in neither of those ways. He had said it the way people say a figure they have been handed. Something received, and passed on, and trusted.</p>
+<hr>
+<p>The attaché had brought a folder.</p>
+<p>He had kept it by his chair through lunch, on the floor, and over the coffee, when the editor-in-chief asked him a question about a date in March, he picked it up and opened it on his knee to check. He did it without any ceremony at all, as a man checks his diary. He turned perhaps four pages and found what he wanted and read out the date and closed it again.</p>
+<p>It took four seconds.</p>
+<p>Isaiah saw the cover in the first of them.</p>
+<p>It was gray, with a red border, and a typed label in the centre. He had seen it once before, in March, in a room in the Interior Ministry he had been shown into by mistake, squared to the edge of a desk under a window over the harbour. <em>HISTOLOGIC COORDINATION: STRATEGIC IMPLICATIONS.</em> He had not opened it then. He had not needed to. His own column from December had been clipped inside the cover with a paragraph underlined and one word in the margin in a small military hand. <em>Opportunity.</em></p>
+<p>It was thicker now.</p>
+<p>He saw, in the second second, that there was a new divider inside, a stiff card tab between the older pages and the newer, and that on the first page after the divider there was a single line of type, centred, in the same typeface as the label on the cover. Then the attaché's hand moved and the page turned, and he saw nothing else.</p>
+<p>He had read the line. It had taken less than a second. He had spent twenty years reading upside down across desks.</p>
+<p>He put it in the study at once, where he put the things he could not yet use, and finished his coffee, and thanked the editor-in-chief for lunch.</p>
+<hr>
+<p>Friday's bulletin reached the building at ten past three.</p>
+<p>He read it at his desk with the door closed. <em>Commission casualty bulletin, Friday 23 August 2109, 08:00. Dead since 14 August: three. Two further deaths reported overnight on the lakeshore are pending identification.</em></p>
+<p>Three.</p>
+<p>He sat with his hands folded on the desk for some time.</p>
+<p>It was possible that the attaché had friends on the lakeshore. It was possible that the Sovereignty kept observers in the claimed strip, as everyone kept observers everywhere, and that one of them had heard a siren and seen a stretcher and sent a line home in the night. It was possible that the attaché had simply guessed, and guessed right, and said the guess as though it were a fact because that was how soldiers said things. Isaiah did not know. He was very careful about that. He wrote <em>possible</em> three times in the study, with the three possibilities beside it, and did not cross out any of them.</p>
+<p>But he had heard how the man said it.</p>
+<hr>
+<p>That evening, in his rooms over the shop that sold notebooks, he sat in the good chair by the window with his hands folded and went down into the house.</p>
+<p>He filed it in the study, in order, as he filed everything. The date. The hour: 12:55 by the clock in the dining room, which he had looked at, because he always looked at clocks. The figure. The words, exactly, as near as he could set them down. <em>Five dead since Gullhaven. Two more on the lakeshore last night.</em> The time in the capital when it was said: before dawn, before the bulletin, before anyone there had counted.</p>
+<p>Then he went down the narrow stairs to the kitchen, where he kept his sources, the way his aunt had kept the good knives, each in its slot.</p>
+<p>He looked for a source for the number.</p>
+<p>There was none. He had nothing in the kitchen that could have told a man at a lunch table in the Sovereignty, at five to one, how many people had died on a Veridican shore road in the night. He went along the slots twice. He had not expected to find one. He had needed to look, so that he could write that he had looked.</p>
+<p>He did not go into the parlour. He did not want to, tonight.</p>
+<hr>
+<p>He woke at seven on Saturday and did not go out.</p>
+<p>At three in the afternoon, which was eight in the morning in the capital, the Commission's bulletin came in on the long link. He read it at the window.</p>
+<p><em>Commission casualty bulletin, Saturday 24 August 2109, 08:00. Dead since 14 August: five.</em> The two deaths of the night of Thursday into Friday were identified. A man and a woman, husband and wife, in a lakeshore village, in the storm of the small hours.</p>
+<p>Five.</p>
+<p>He read it twice. Then he went down into the study and found Friday's card, and wrote under it, in the plain upright hand he had used since school:</p>
+<p><em>A day early.</em></p>
+<p>He looked at it for a long time. He did not write <em>who told him</em>. He did not know who had told him. He did not know that anyone had. He knew that a man had said a number at a lunch table before the people whose dead it counted had counted them, and had said it as a thing received. That was what he knew. It was less than he wanted and more than he could use, and he had spent his life in exactly that place and knew how to wait in it.</p>
+<p>So he wrote the question instead, because that was what he did with what he did not know.</p>
+<p><em>From where?</em></p>
+<hr>
+<p>He did not sleep well that night. Towards two he gave it up and sat at the window in the dark, with the street empty below and the shutters of the notebook shop closed, and went down into the study one more time.</p>
+<p>The line was where he had put it at lunch, on the clear front of the newest shelf, the place an editor keeps empty for the thing that matters. He had kept it there all day, beside the number, without looking at it, the way you carry a stone in your pocket without taking it out. He took it out now.</p>
+<p>One line, in the typeface of the label on the cover, centred on the first page after a new divider in a gray folder with a red border, in a room where he had been the paper's witness.</p>
+<p>He could not read it yet. He could read every word of it, and he could not read it. It waited there in the study with the others, for what it meant.</p>
+<p><em>Phase: justification.</em></p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="04-chronos-believes.html" class="nav-button">← Previous: Chapter 4: Chronos Believes</a>
+            <div class="nav-center">Chapter 5: The Attaché</div>
+            <a href="06-i-cant-authorise-this.html" class="nav-button">Next: Chapter 6: I Can't Authorise This →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

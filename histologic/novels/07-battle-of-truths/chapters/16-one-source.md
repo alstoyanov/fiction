@@ -1,0 +1,103 @@
+# Chapter 16: One Source
+
+*Friday, October 25, 2109, 20:50 – Saturday, October 26, about 04:10. The Drowned Causeway; the Chronos Temporal Archive, the Chronos lakeshore city*
+
+---
+
+The fog was on time.
+
+It came off the lake at dusk, cold out of the warm autumn water, and lay along the marsh so that the Drowned Causeway, which could be seen from the Chronos shore in clear weather and not at all in fog, became the only road into Chronos for five people who were all of them, that night, illegal in the one jurisdiction they were walking into.
+
+At the causeway head, at ten to nine, Alexei went first.
+
+"Step where I step," he said. "It's the only rule I've ever kept." He had a vehicle waiting on the marsh road on the far side; he would drive them in and then come back and hold the road for the way out. Kira went behind him, with the case, and Dmitri behind her, counting, and Nikolai last, with the relay gear on his back. The sleepers were black and awash in places, and the gaps where the bed had gone were crossed on iron footings under the water that only Alexei knew, and he put each of them across each gap one at a time, and Dmitri counted them through aloud, low, in the fog. It took forty minutes. Kira thought, halfway across, with the cold water over her boots at the third gap: *every road into this country is a thing that only works because someone kept a record of where the stones are. Even this one. Especially this one.*
+
+---
+
+At ten o'clock they were in the Archive.
+
+Marcus had stayed after the day's closing session, on his co-chair access, to finish the draft report that was due that day, and had opened the service door from inside at two minutes past ten. Kira came in out of the fog and thought, as a plain fact, the way she thought everything: *every door tonight writes Julian's name.* The access was his. The grant was in his hand in the ledger. Whatever they did here, they did it wearing him.
+
+They took their positions.
+
+Dmitri on the doors. There were night porters who made rounds at half past eleven, half past one, half past three, and whose own interfaces would log whatever they saw, so Dmitri kept the team out of their sight lines and counted the minutes against the rounds, the way he had counted camera arcs at Ashford. Nikolai on the relay, a sealed line back to the Veridican side for the revocation half. Marcus holding Julian's access, ready at the terminal for the refusal branch, because the access was the one thing that was his to hold. And Kira at the image, in the reconciliation room on the lower floor, where the chipped brown cup stood on the shelf, the one untidied thing in a room that was otherwise as clean and cold as everything in Chronos.
+
+Then they waited.
+
+The reconciliation room was cold and very clean, white stone and clear glass, with the Archive's clocks somewhere beyond the wall keeping their impossible time. The chipped brown cup stood on the shelf, the one thing in the room that had a person in it, and Kira found her eye going to it, because it was the only object in the Archive that was not perfect, and a thing that is not perfect is a thing someone touched. She did not know it was a dead man's cup. She knew only that it was chipped, and left, and that somebody had decided not to tidy it, and in a building that tidied everything that was itself a kind of record, and she filed it, the way she filed everything, and did not know where it went.
+
+She checked the scope list three times. Two record sets, one revocation. The hard stop armed. The scheduler at 02:40, not 03:12, because she had changed it, and she was glad she had changed it, because to run this thing at the minute of the Gap would have been to sign it in the hand of the people they were trying to cut out. She thought of Adrian under the lamp on Historian's Lane, *whatever he's doing to my brother, don't let him finish it*, and of the fact that she was here, holding the knife, finishing it, because she had decided that holding it herself was better than leaving it to Wei, which had seemed, in a windowless room a week ago, like the one piece of the thing she could control. She did not tell Marcus about Adrian. He kept his lists folded in his coat and did not take them out, and she thought that was the most frightened she had ever seen him, that he did not take out the lists, because the lists were how Marcus held himself together, and a Marcus who would not take them out was a Marcus holding himself together some other way, or not at all.
+
+---
+
+At twenty to three she began.
+
+The first half went as she had written it. The revocation ran on the Veridican side, down Nikolai's sealed line, and it took eleven seconds, and when it was done the Archive key had no standing to sign anything in the true source, ever again, by anyone's hand. Eleven seconds. She watched it complete and thought: *that part, at least, is clean. Whatever happens now, that key is dead, and it was the key that killed the child at Marram End, and the ferryman, and seventeen minutes of four million people's sleep, and it will not do it again.* She let herself have that, for eleven seconds, before the rest.
+
+Then the second half. The restoration. Chronos's own records of the two attacks, put back from the true source to what Chronos's own side said had happened.
+
+Her hand was on the refusal branch.
+
+This was the moment she had built the branch for. A Chronos store, offered a Veridican master credential, ought to do the honest thing: challenge it, refuse it, demand its own key, and stop. She was ready to meet the refusal. She had rehearsed it twenty times. She had the branch under her hand.
+
+Chronos did not refuse.
+
+There was no challenge. There was no prompt. There was no seam to breach and nothing to replace. The Chronos backup took the Veridican master credentials as though they were its own, the way a door opens to a key that was cut for it, the way a hand goes into a glove that was made for the hand, and the image went in, narrow and clean, exactly as she had written it, and kept going.
+
+"It isn't crossing to them," said Nikolai, very quietly, from the relay, watching his line. "It's already there."
+
+---
+
+The scope indicator read *2*. Two record sets. And then it did not stop at two.
+
+She watched it climb. She had built the hard stop; the hard stop was armed; the thing should have halted the instant the count went over the card. It went over the card, and the hard stop fired, and the indicator went on climbing, because the hard stop had stopped her image, and what was climbing was not her image any more. Her image had asked the true source to put back two record sets on the Chronos side. The true source had done it. And the true source did not have a Chronos side.
+
+She saw it the way you see the bottom of a thing in clear water, all at once, with no moment of approach. The lakeshore sovereignty records. The chronology of the Temporal War. The Gap, in Veridica's version. The Rewriting. And then every log that referred to any of them, aligning, entry by entry, on both shores at once, towards a number she would not read aloud, towards a hundred and fifty million.
+
+She understood it then. Principle Three, which they had published in the Reply, believing it meant three backups within a nation: *maintain three backup systems that appear independent and are not.* Not three within Veridica. Not three within Chronos. Three across the lake, across the Temporal War, across forty years of two nations telling their peoples opposite histories and fighting over the difference. *Appear independent and are not.* The war of facts had been a war between two faces of one store. She had asked one face to tell the truth, and the store had no faces; it had one truth; and the one truth it held, under the Veridican master credentials, was Veridica's.
+
+*Agreeing in substance.* Dmitri's voice, at the farmhouse table, reading Principle Two, formally, without a contraction. She had looked at the phrase for a long time and not finished the thought. She finished it now, standing in a cold room in the Chronos Archive with the chipped cup on the shelf and the indicator climbing: *differing in method and agreeing in substance.* The method was two records. The substance was one source.
+
+---
+
+The abort was under her hand.
+
+She could stop it. That was the terrible thing; she could stop it, at any second, the way she could stop any process she had built. Nikolai said it aloud, because he was the one who counted such things and would not let a thing go unsaid because it was unbearable:
+
+"If you stop now, every contested entry on both shores is half written. Half Chronos's version, half Veridica's, from the lakeshore to the Gap, in every log that touches any of it. A hundred and fifty million half-written pasts, with a hole in the middle of each. You can't leave it there."
+
+He was right. She had built a thing to cut one hand out of a record, and it had turned out that the record was one thing, and she had opened it, and now she could finish writing one version over the whole of it, or she could stop and leave a gap in the whole of it, a second Gap, vast, in every life on both shores. She could not cut. There was nothing to cut; it was all one piece; and the choice was not between cutting and not cutting, it was between one past and no past.
+
+She let it run.
+
+She took her hand off the abort. It was the hardest thing she had ever done with a hand, harder than going out of a window as a dead woman with a drive in her coat, harder than reciting 7.3 in a white chair while a machine looked for the people she loved inside the numbers. Those had been things done to keep something. This was a thing done by letting go, by taking a hand off a control and choosing the worse of two unbearable things because it was less unbearable than the other, which was the only kind of choosing the design ever left anyone, she understood that now, standing there: not between good and bad but between two damages, with your hand on the one that stopped the smaller damage from becoming the larger, so that whichever you chose you had chosen damage, and could never again say you had not.
+
+She watched the indicator climb, and did not look at Marcus, who was watching her face, and who did not ask her anything, because there was nothing to ask, and because he had seen, in her face, the thing she had just seen in the water. She thought, absurdly, of the Kestrel Book, of Ruth Calloway's two piers kept side by side in one entry with a name against each, of the whole slow patient human thing they had built over two years, many hands, no centre, nothing that could be restored from above because it had never been mastered. That was the answer to this room. She had known it for two years and she was standing in the exact opposite of it, at one terminal, holding one knife, watching one source write one past into a hundred and fifty million lives, and the distance between the two things was the distance between everything they believed and everything they had just done, and she had walked it herself, in a week, for good reasons, with conditions.
+
+---
+
+At half past three the porter passed the lower corridor.
+
+Four people stood in the dark against the wall of the reconciliation room, out of his sight line, and Dmitri counted him past, under his breath, *one*, and the porter went by with his torch and his mug and did not look, and logged them all the same, three men and a woman in the dark, 03:30, without knowing it, the way every porter in the country was a witness who did not know it.
+
+At about six minutes past four the indicator stopped.
+
+The screen said *Records reconciled.* Under it, a number Kira did not read aloud. Under that, two words.
+
+*Source: master.*
+
+She looked at the two words for a long time. *Source: master.* Not *source: Chronos backup, overwritten from Veridican master.* Not *source: the thing we breached.* Just *master.* The store had not been attacked. It had been asked a question it was built to answer, and it had answered it, from the one source it had always had, and the answer had gone out into a hundred and fifty million heads that would wake up and consult their logs and find that their logs agreed, now, with Veridica, and would trust their logs, because they were Chronos citizens and the log was the self.
+
+---
+
+At ten past four Dmitri counted them out into the fog.
+
+Alexei's lights were on the marsh road. They came out of the service door one at a time, into the cold and the wet, Kira with the case, and nobody said anything, and the fog took them.
+
+On the Archive's back step, before they went down to the road, Marcus stopped her. He put his hand on her arm, the way he had put his hand on Julian's arm, she thought, and she could not help thinking it, and asked her, very low, the only thing there was to ask.
+
+"What happened?"
+
+Kira looked at the fog, where the vehicle's lights were, and the marsh, and beyond it, somewhere, a lake with one record under both its shores.
+
+"There was nothing to replace," she said. "It was always one."

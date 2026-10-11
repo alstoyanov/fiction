@@ -176,6 +176,61 @@ Marcus refuses, and publishes everything, by many hands, in three nations at onc
             ]),
         ],
     },
+    "07": {
+        "dir": Path("novels/07-battle-of-truths"),
+        "epub": "battle-of-truths.epub",
+        "title": "Battle of Truths",
+        "subtitle": "Novel 07 of the Histologic Series",
+        "description": """Two million journals are rewritten in a single night, and the countersignature belongs to the Chronos Archive key that Julian Kovač holds. Marcus Chen checks the record, and the record says what he fears. So he asks for the operation he once refused: to use the trust of the man he befriended, enter the Archive, and cut one hand out of Chronos's past.
+
+It works far beyond its purpose. The two nations' records turn out to be one system, and Chronos wakes believing Veridica's history. Then the truth comes in, piece by piece, and none of it helps: Julian was innocent, a letter proves it, and someone in Veridica has been handing the enemy a war before it happened.""",
+        "parts": [
+            ('Prologue', [
+                ('00-prologue.md', 'Prologue', 'The Rewriting', 'Ruth'),
+            ]),
+            ('Part One: The Rewriting', [
+                ('01-two-million-journals.md', 'Chapter 1', 'Two Million Journals', 'Kira'),
+                ('02-julian.md', 'Chapter 2', 'Julian?', 'Marcus'),
+                ('03-gullhaven.md', 'Chapter 3', 'Gullhaven', 'Ruth'),
+                ('04-chronos-believes.md', 'Chapter 4', 'Chronos Believes', 'Tanaka'),
+                ('05-the-attache.md', 'Chapter 5', 'The Attaché', 'Isaiah'),
+                ('06-i-cant-authorise-this.md', 'Chapter 6', "I Can't Authorise This", 'Marcus'),
+                ('07-the-falling-phrase.md', 'Chapter 7', 'The Falling Phrase', 'Old Songs'),
+                ('08-the-knife.md', 'Chapter 8', 'The Knife', 'Kira'),
+            ]),
+            ('Part Two: RESTORATION', [
+                ('09-lessons.md', 'Chapter 9', 'Lessons', 'Marcus'),
+                ('10-the-brother.md', 'Chapter 10', 'The Brother', 'Julian'),
+                ('11-copy-vii.md', 'Chapter 11', 'Copy VII', 'Dmitri'),
+                ('12-the-diplomats-page.md', 'Chapter 12', "The Diplomat's Page", 'Isaiah'),
+                ('13-the-two-maps.md', 'Chapter 13', 'The Two Maps', 'Old Songs'),
+                ('14-the-image.md', 'Chapter 14', 'The Image', 'Kira'),
+                ('15-the-key.md', 'Chapter 15', 'The Key', 'Marcus'),
+                ('16-one-source.md', 'Chapter 16', 'One Source', 'Kira'),
+            ]),
+            ('Part Three: The Awakening', [
+                ('17-the-causeway.md', 'Chapter 17', 'The Causeway', 'Alexei'),
+                ('18-the-awakening.md', 'Chapter 18', 'The Awakening', 'Tanaka'),
+                ('19-they-wrote-us.md', 'Chapter 19', 'They Wrote Us', 'Aubry'),
+                ('20-a-diplomatic-breakthrough.md', 'Chapter 20', 'A Diplomatic Breakthrough', 'Marcus'),
+                ('21-maximum.md', 'Chapter 21', 'Maximum', 'Julian'),
+                ('22-the-restorer.md', 'Chapter 22', 'The Restorer', 'Isaiah'),
+                ('23-some-of-it.md', 'Chapter 23', 'Some of It', 'Elena'),
+                ('24-the-folder.md', 'Chapter 24', 'The Folder', 'Kovač'),
+            ]),
+            ('Part Four: The Price', [
+                ('25-no-remedy.md', 'Chapter 25', 'No Remedy', 'Marcus'),
+                ('26-the-speech.md', 'Chapter 26', 'The Speech', 'Old Songs'),
+                ('27-by-many-hands.md', 'Chapter 27', 'By Many Hands', 'Kira'),
+                ('28-enemies-outside.md', 'Chapter 28', 'Enemies Outside', 'Isaiah'),
+                ('29-colonel.md', 'Chapter 29', 'Colonel', 'Sokolov'),
+                ('30-battle-of-truths.md', 'Chapter 30', 'Battle of Truths', 'Marcus'),
+            ]),
+            ('Epilogue', [
+                ('31-epilogue.md', 'Epilogue', 'The Coast', None),
+            ]),
+        ],
+    },
 }
 
 
