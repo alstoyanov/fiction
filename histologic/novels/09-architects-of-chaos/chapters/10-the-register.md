@@ -1,0 +1,105 @@
+# Chapter 10: The Register
+
+*Monday, April 22, 2115. Elena's farmhouse, the border zone*
+
+---
+
+Dmitri counted the room before he read the page, because you counted the room first; that was the order.
+
+Elena, Nikolai, Maya, Marcus, Kira, Kovač, Isaiah, Tanaka, and himself at the table, and Old Songs at the stove with his back half to them and a spoon in his hand that he was not using. Ten people. One page. He wrote it in his log in block capitals, the date and the count and the object, and he did not use a contraction, because he did not use contractions, and he had been told once by a doctor in a white room that this was a thing the correction had done to him and had decided, after, to keep it, because a man was entitled to carry one scar out the way he chose.
+
+The lamp was lit though it was daylight, because the day was grey off the lake and the page wanted reading clearly. Kovač broke her own inked initials on the card cover with a thumbnail, and slid page thirty-nine across the table to him, face up, and he turned it so the lamp fell square on it.
+
+Seventeen marks. Each beside a typed name. Twelve of the marks were countersigned in ink — real ink, faded to brown, a signature beside each, and beside each signature a small roman numeral, I through XII. Five were struck through with a single ruled line, legible under it, unsigned, no numeral. He would read them in order. He would read the mark first and then the name, because the mark was the thing they had hidden behind for fifty years and he wanted to say it out loud first, each time, before he said the person. Kira kept the table beside him, a mark to a page, matching each to its principle as he went.
+
+"HV dot oh-one," Dmitri read. "Doctor Hedda Voss. Copy one. Principle One."
+
+Kira wrote it. Nobody at the table knew the name. It went down clean.
+
+"YP dot oh-two. Doctor Yuri Petrov. Copy two. Principle Three, and the Annex."
+
+At the stove Old Songs hummed, once, a single falling phrase, down and done, the tune he used for *no.* Elena said it for him, flatly, without turning from whatever she was doing with her hands at the counter. "Not his family. Petrov is a common name. The page says so itself — look." And it did; someone had typed, in a parenthesis after the name, small, *no relation to the archivist,* so that even in 2066 someone had thought to forestall the coincidence, which told Dmitri something cold about how carefully these people had thought about who might one day read this page.
+
+"LW dot oh-three. Chairman Liu Wei. Copy three." He paused. "No principle against him. A note: *funding.*"
+
+"Liu is the family name," Kira said. "Nothing to do with Thomas Wei. Different man, different line." Nobody at the table knew what Liu Wei had been chairman of. Kira left a blank in that column and did not fill it.
+
+"SO dot oh-four. Ambassador Sarah Okonkwo. Copy four. Principle Two."
+
+Isaiah folded his hands on his knee and looked at the middle of the table and said nothing. He had had a letter since March; they all knew it; he was to take tea at Carver Street in a week. Dmitri waited. He waited exactly as long as a witness was owed when a name came up that was his — no less, which would have been disrespect, and no more, which would have been pity, and Isaiah did not want pity — and then Isaiah gave a small nod, meaning *go on,* and Dmitri went on.
+
+"AV dot oh-five. Professor Arkady Volkov. Copy five."
+
+Dmitri stopped.
+
+He had known it was coming; Kira had read him the marks in order days ago and he had had a week to be ready and he was not ready, because being ready for a thing and the thing arriving were different events, as the doctors had taught him. He set the page down flat and kept his hands on the table.
+
+Elena said it, because Elena said the hard things in the family so that the others would not have to. "Arkady was Ivan's cousin. Our grandfather's brother's son. A historian, in the capital." Her voice did not change. "He came to the flat once, on the lake, when I was small. Tall. He brought no present and corrected my spelling. He did not come to Ivan's funeral in 2090. I was told he was unwell." A beat. "He was not unwell. He was in this."
+
+Kira had turned back through the Annex pages while Elena spoke, and she found the line they had read past on the fifteenth, in the schedule for the Correction Registry and the calibration record, and she read it out now: "*Calibration record: method per AV dot oh-five.*" She looked up. "Every calibration run kept twice. Once in the factorepo as a natural storm. Once as a numbered run, in a ledger. His method. The way of keeping it so that the same event is both a disaster and an experiment, and the two records never meet."
+
+"Calibration run fourteen," said Dmitri. It was the number from Book 7, the number of the 2074 storm, the storm that had taken Old Songs' family; and at the stove Old Songs did not hum anything at all, which was worse than the falling phrase.
+
+And there was the other record, the one Nikolai had pulled out of the Ministry in 2105 and carried ever since: their father Ivan's file. *REFERRED: UNAUTHORISED INQUIRY INTO BROADCAST DISCREPANCY.* In 2089 Ivan Volkov, a broadcast engineer, had found two entries that did not match — a storm in the factorepo and a numbered run in a ledger he was not supposed to have seen — and he had asked about the discrepancy, once, the way an engineer asks, and he had been referred, and corrected, and in time become Test Subject 2471. The discrepancy he had found was his own cousin's design. His own cousin's method, keeping the same storm twice. Dmitri did not finish that thought aloud. He looked at it, inside, the full shape of it — a man corrected into ruin for reading, correctly, the handwriting of his own blood — and then he said the word he said when a thing could not be said:
+
+"Continuing."
+
+---
+
+"MT dot oh-six. Director Michiko Tanaka. Copy six. The Annex."
+
+Tanaka set her cup down on its saucer very carefully, so that it made no sound, which was its own kind of sound. "My grandfather's sister," she said. "His elder sister. Michiko." And then nothing more, because the rest of it was hers and not the table's, and she would carry it out of the room and open it alone and bring back whatever she chose to; Dmitri understood that, and respected it, and went on.
+
+"TK dot oh-seven. Cardinal Tobias Kovač. Copy seven. A note: *moral cover.*"
+
+Helena Kovač pushed her rimless glasses up her nose with one finger. "My uncle," she said. Her voice was as level as a ledger line. "My father's brother. Tobias." She was quiet a moment. "He is eighty-one and he is in Chronos and he is alive. I will tell Julian myself. Not by any courier and not by any tool. Myself." Dmitri wrote, in his own log, beside the mark: *H.K. to inform J.K. in person.* It was the kind of thing he kept track of.
+
+"JM dot oh-eight. Colonel Jerome Morrison. Copy eight. Principle Five."
+
+Principle Five was the calibration grounds; Principle Five was their father's death planned on paper, drafted by this man and carried out by Arkady's method, so that two names on one page had killed one man between them, and Dmitri held that fact flat too. Tanaka said, "James never speaks of a grandfather. He never has, in all the years." She took out her case book and wrote the name in it, *Jerome Morrison, JM·08,* and under it a short note Dmitri could not see.
+
+"VS dot oh-nine. Chancellor Viktoria Sokolov. Copy nine. The Annex."
+
+"The colonel's mother," said Elena, because everyone knew it and someone had to say it. Dmitri wrote, in his log: *Drive to coastal command tomorrow. Tell S. in person. No courier.* Nobody else would tell Yevgenia Sokolov that her mother's name was on this page, and a thing like that did not go by any wire, and he had a car and a day and he would do it himself.
+
+"WZ dot one-oh. Doctor Wei Zhang. Copy ten. Principle Four."
+
+Maya said, "His father," and that was all, and nobody at the table said Thomas Wei's name aloud, because Thomas Wei was a man who came to the Commission every Monday and inclined his head, and whose own account of himself was not yet written, and the table had learned to be careful with him in a way it had not decided the shape of yet.
+
+"CZ dot one-one. Minister Chen Zhao. Copy eleven. Principle Six."
+
+The lamp was steady. Copy eleven. The torn page Singh had carried out of a Ministry folder in 2106 had borne the numeral XI; the folder Kira had taken in 2105 had been labelled *RESTORATION / XI*; and here was the eleventh copy's owner, the man whose principle was the restorer's authority, the man Singh's nine-year list of restorers circled on every line. Marcus wrote the mark into his list beside the entry he had kept for the Minister for years, *CZ·11,* and he underlined nothing, and he put the list away, and his face did not change, which Dmitri noted, because Dmitri noted faces.
+
+"RA dot one-two. Rustam Aslanov. Copy twelve."
+
+Dmitri stopped again, but for a different reason. "No principle against him," he said. "No note. No section. No link." He looked up. "Does anyone place the name?"
+
+Nobody placed the name. Nikolai said he had never seen it in any record west of the lake, and he had searched most of them. It was a name with a mark and a copy numeral and a real ink signature, and nothing else, a signatory with no visible work, the twelfth of twelve, placed last. Nikolai wrote *Rustam Aslanov, RA·12* under UNCHECKED, and beside it, *unplaced,* and nobody at the table said the word *Chairman,* because the Chairman of the CNT was a man Veridica's record named only by his office and never by a name, and so there was nothing to connect, and the twelfth mark sat on the page like a door with no room behind it.
+
+---
+
+"Twelve signed," Dmitri said, because the count had to be stated, and he was the one who stated counts.
+
+In the quiet after it, Old Songs spoke from the stove, without turning, the only full sentence he had said in the house that day, in the thin voice that lifted at the end of a line:
+
+"Twelve shepherds tend the flock. Who tends the shepherds?"
+
+Nobody answered him. He had not asked it to be answered; Dmitri understood that; it was the kind of question that was an instruction to keep thinking, and he turned back to the page and kept reading, and the question stayed in the room over all of it, over the five struck-through marks, the way a tune stays in a room after the singer stops.
+
+Dmitri had counted a great many things in his life, under compulsion in the white room and by choice after it, and he had learned that a count was a way of holding a thing you could not otherwise hold. He counted the twelve signatures now, slowly, in his head, and then he counted the families at the table, and the two counts were nearly the same count, which was the whole horror of the page and the whole point of it: that twelve people in 1966 had reached forward sixty years and touched almost everyone in this kitchen, had arranged a cousin's death and a great-aunt's technology and an uncle's sermons and a mother's career and a father's ruin, so that the circle hunting them turned out to be, in large part, their own descendants, prepared or unprepared, used or declining. He did not find in himself the rage the others might have expected of him. He found instead the cold attention he brought to a casualty estimate, the determination to get the number right, because a number got right could not be used against you, and because the one defence a man had against a design that had planned his family was to see it exactly, without flinching and without inflating, and to refuse it the one thing it wanted from him, which was a reaction large enough to be useful.
+
+"The five," Dmitri said. "Struck through. Unsigned. No copy." He read them. "SA dot one-three. Doctor Sigrun Ahlgren. EO dot one-four. Professor Emeka Obi. AK dot one-five. Anselm Kerr." He looked up once; it was the same mark, the two letters and the number, that was ruled through on the page clipped to the copy, the page titled *ON KEEPING.* "LB dot one-six. Doctor Lorenzo Bassi. MR dot one-seven. Doctor Matthias Roe."
+
+Old Songs came to the table. He did it slowly, and he took an envelope off the dresser on the way, and a pencil, and he set the envelope down by Dmitri's hand and wrote on the back of it, in the shaking hand, pressing hard: *Ahlgren. Bassi. They asked with him. Spring 2067.* The two others of Book 5, the two who had asked about the missing journal alongside Kerr and been corrected alongside him in the spring of 2067 — Ahlgren and Bassi, here, struck through, two of the five who had put their names toward this circle and then withdrawn or balked and been struck out and, two of them at least, corrected for it afterward anyway, as if withdrawing had not been permitted. Of Obi and Roe the old man wrote nothing. He looked at those two names a while and shook his head, once, meaning *I do not know,* and went back to the stove. They had withdrawn, and what had become of them was not on the page, and nobody at the table knew.
+
+---
+
+The copying started at once, by many hands, because that was the rule now and because the alternative was to let one copy of the most dangerous page in the world sit in one place, and they had all read enough of the Warning to know what one hand holding one copy was worth. Each person copied the page once, in their own hand; Kovač logged every copy out against her register, the copyist and the time. Dmitri copied his in block capitals and counted the lines when he finished, and counted them again, and got seventeen both times, and signed it.
+
+---
+
+After midnight he could not sleep, which was usual, and he went up onto the barn roof, which was where Nikolai went when he could not sleep, because it was the nearest thing the farm had to the parapet of the hospital where three brothers had stood thirty years ago and learned that the storms were made. Nikolai was already up there, sitting with his back against the chimney, a dark shape against the stars that were out now the fog had sunk. Dmitri climbed up and sat on his left, where he had always sat, because Alexei had always had the right and the right was empty now and would stay empty, and that was not a thing either of them discussed. They did not look at each other. They looked out at the black lake.
+
+"Our father was corrected for reading his cousin's handwriting," Dmitri said.
+
+Nikolai said nothing for a while. Then he said, "Yeah," and that was all, and the two of them sat on the roof in the cold and did not say anything else, and below them in the orchard the plum trees were breaking into white that they could not see in the dark but knew was there.

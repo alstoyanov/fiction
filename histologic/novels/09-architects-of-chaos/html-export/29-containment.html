@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architects of Chaos - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Architects of Chaos</h1>
+            <div class="novel-meta">Novel 09 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="28-a-better-enemy.html" class="nav-button">← Previous: Chapter 28: A Better Enemy</a>
+            <div class="nav-center">Chapter 29: Containment</div>
+            <a href="30-the-lakeshore-air.html" class="nav-button">Next: Chapter 30: The Lakeshore Air →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 29: Containment</h1>
+<p><em>Tuesday, October 15, 2115. The capital</em></p>
+<hr>
+<p>Dmitri Volkov counted the room, because he counted every room. Eleven at the long table and one on the link screen at the far end. Maitland in the chair, grey and tired. Ministers he did not need to name, four of them. The defence staff's general, careful and competent, with a folder squared in front of him. Sokolov, in uniform, in from the coast overnight. Marcus, two seats from the First Minister. And Martinez, on the link from the SFW, her thick-walled office behind her, her hands out of shot.</p>
+<p>Dmitri had no title. Maitland had asked him, after the Justice Center steps in July, to sit at the end of the cabinet table when the east was discussed, and Dmitri had come, because a man who had stood on the steps and taken a war away from a crowd was obliged to stand at the table where the same war could be put back, and he spoke formally, without contractions, as he always had and always would.</p>
+<p>The pressure was in the numbers, and he kept the numbers. Eight days since the broadcast. Crowds on the Meridian Bridge every evening, counted in thousands, not tens of thousands, but every evening. In the SFW press, open calls for an offensive across the Caucasus line. In Veridica, a petition with a great many signatures to <em>bring the founders home,</em> which meant to reach into the Confederacy and take them, which meant a war. Wei's trial had opened the day before, and the courtroom was full, and the overflow stood in the corridor. The general's proposal, when he laid it out, was neither reckless nor cruel; it was professional, which was worse, because a professional plan was a plan a tired cabinet could say yes to. A precision strike on the CNT Council installation where Nikolai had traced the source in June. A coordinated SFW push to seize the émigrés before they scattered deeper. The general read his own casualty estimate aloud, evenly, as such men did, and Dmitri read it on the page in front of him and counted it twice, because a number like that should be counted twice by at least one person in the room, and he was that person, and the number did not get smaller the second time.</p>
+<p>"The Confederacy," the general finished, "has the largest conventional army in the world. I will not pretend otherwise. This is not a small thing I am proposing. But the moment of their exposure is the moment of their disorder, and it will not come again."</p>
+<hr>
+<p>Marcus spoke first against it, plainly, in the fact-entry rhythm he fell into when a thing mattered.</p>
+<p>"If we invade, we prove them right," he said. "Principle Two wanted enemies outside them all, and it wanted controlled conflict, because controlled conflict answers every question before it is asked. A war with the Confederacy now is not the breaking of the design. It is the design, running as written, with a better enemy and a cleaner map. Every soldier we send east is a sentence in a document drafted in 1966. They told us, eight days ago, in the woman's own mouth, that we need an enemy and cannot hold together without one. If we march, we agree with her. The only answer that is not in their book is the one where we do not march."</p>
+<p>Martinez came in on the link, and her voice was flat and certain, and Dmitri understood that she had decided this somewhere alone before the meeting, the way Sokolov decided things.</p>
+<p>"My soldiers died on a beach in a part they were cast for," she said. "Three thousand of them, in a week, playing a role written before their grandparents met. I have spent five years learning that, and I am not going to spend the next five learning it again on a different beach. The cycle breaks here. We defend, but we don't attack. The Sovereignty will hold its border where the border stands. We will not cross the Caucasus line. If they come at us, we will answer, and they will not come at us, because coming at us is the one thing that would cost them the argument they just made." She paused. "I buried the beach. I am not digging another one so that a dead man in 1966 can be proved right about all of us."</p>
+<p>Sokolov spoke, formally, in her staff register. Coastal command could hold the Atlantic coast indefinitely against anything short of a general war, and it would. The border was a border and she would keep it one. And then, low, on her way back to her chair, not quite to the table, her real sentence, the one that came last, as her real sentences always came last:</p>
+<p>"My mother would like us to come. She said as much, in the spring, in a letter. She would like us to march east and be broken on their army and prove her right about what we are." She sat. "That is reason enough, by itself, not to go."</p>
+<p>Dmitri spoke last, because he had learned that the man with the most reason should speak last, so that the room could not say the refusal had come from someone with nothing at stake.</p>
+<p>"My brother died in the last war someone arranged," he said. "I said that on the steps in July, to the crowd. I will say the rest of it here, at the table, where it can be minuted. I have counted the names on the stone in the plaza. I count them every month. There are the Lost Hour names, and there are the war's names, from both shores and from the Sovereignty, and my brother is one of them, and a general killed by his own enemy's ceasefire is one of them, and a girl of nine is one of them." He kept his hands flat on the table. "I would like it to stop getting longer. That is the whole of my position. I have more reason than anyone in this room to want the war, and I am telling you, as the man with the most reason, that the war is the thing they want, and that I will not give it to them, and that I would like the stone to stop getting longer. Containment."</p>
+<p>He stopped there, because he had said the whole of it, and he did not decorate it, because decoration was a thing he did not do. But he sat in the quiet after it and thought the part he did not say, which was that he had spent a cabinet morning doing the one thing the design had surely weighed and bet against when it drew its map. It had made the enemy, and it had made the war, and it had made, in the brothers, the kind of men who answered a wrong with force — who had been built by their own grief into exactly the instrument a vengeance would want. Alexei would have gone east. Dmitri knew it the way he knew his own hands; Alexei had been the one who acted, who crossed the room, who went out onto the overpass for three strangers; and Alexei was on the stone, and the stone was the reason Dmitri would not go. The design had counted on the war-making in them, and it had not counted on this: that a man could carry the whole weight of a brother's death and set it down on a cabinet table as a reason for peace, could take the exact force that was meant to drive him east and turn it, by main effort, into the thing that held the line. He did not think the design had a place for that. It was the one entry he was certain he could make that no one had made for him.</p>
+<hr>
+<p>What was decided, Maitland's vote settling it, was containment, and it had a shape, and Dmitri wrote the shape in his log as it was agreed, item by item.</p>
+<p>No strike. No crossing of any border.</p>
+<p>Every relay from Veridica, from Chronos, from the Sovereignty, to the Confederacy site would be cut, and Nikolai's open checking tools would watch for any reconciliation traffic to or from it, in public, so that any citizen of any nation could see for themselves whether the thing was still reaching out. Memoria and Axiom and Synthesis — the three nations that had signed the World Record — would be asked, openly, to let their own citizens check the merged record against the others with the same open tools, so that the three could learn, if they chose to learn, what their one source was and where it sat. Extradition of the named persons would be requested openly, through the forms, and refused, as everyone knew it would be refused, and the refusal would itself be a fact on the record. Nobody would be seized.</p>
+<p>And paper.</p>
+<p>Maitland accepted it. He said little. He was a man who had spent five years filling holes and he had the sense, Dmitri thought, to know that this was the first thing offered him in all that time that was not another hole and was also not a trap, and that the two were not the same, and that it had taken a cabinet of broken people to tell the difference.</p>
+<hr>
+<p>In the afternoon Dmitri went down to the copying room, which was in the basement archive of the testimony intake, the same basement where Helena Kovač had once hidden a dismantled man from the record, and where volunteers now sat at long tables under strip lights copying the Register and the Annex and Kerr's page by hand into the Confederacy's own languages, each copy checked against another by a second pair of hands, the pairing method in four alphabets. Elena ran it. Elena ran the routes too — the smuggling paths through the mountains that forty-seven years of border war had never managed to close, carried across from the Sovereignty side now with Martinez's quiet consent — and copies had been walking east since July, slowly, because paper walked, and she expected no word for months and said so to anyone who asked.</p>
+<p>Dmitri sat down at a table and copied page thirty-nine himself, in block capitals, one mark at a time, the way he copied everything, and he stopped at AV·05, Arkady Volkov, his father's cousin, the way he always stopped there, for exactly as long as a thing was owed and no longer, and then he went on and finished the page and counted its seventeen lines twice and signed it, and a volunteer at the next table countersigned it, a stranger, a young woman copying into a script Dmitri could not read, and the two of them nodded to each other and went on.</p>
+<p>He thought, copying, that this was the true shape of the containment the cabinet had voted for that morning, more than the cut relays or the open tools or the refused strike: a basement full of strangers copying a page by hand into four alphabets, to be walked east by nine carriers on four routes into a country that had never read its own history. The generals upstairs thought in divisions and the cabinet thought in borders, and both were necessary, and neither was the actual weapon. The actual weapon was this room. A war answered the design in the design's own language and lost, because the design spoke war fluently and had drawn the map. Paper answered it in the one language it had never allowed its enemy to learn, the language it had built a whole nation specifically to be unable to speak — the language of a true thing you could hold in your hand and hide under your floor and copy, badly, in your own alphabet, and pass to your neighbour. The Confederacy had the largest army in the world and no defence whatever against a page, because a page required readers, and readers who decided, and the Confederacy's whole forty-seven-year existence had been arranged so that its people would never read and never decide. The cabinet had voted not to invade. What they had actually voted to do, Dmitri thought, counting his seventeen lines a third time, was to teach the enemy to read.</p>
+<hr>
+<p>Late in the evening Elena came into the copying room with a courier's note folded small, and she did not say anything, she put it on the table in front of Dmitri and let him read it, which was how Elena delivered the things that mattered.</p>
+<p>It was the first report back from inside, from a packet that had gone in in July, three months walking. In a provincial town of the Confederacy — the note did not name it, for the sake of whoever had sent it — a hand copy of page thirty-nine had been found pinned to the Council noticeboard outside the district office. The courier had looked at it closely, because the courier had been told to look at anything like that closely. It was a hand copy of the Register, in the Confederacy's own language, pinned up in public on the Council's own board.</p>
+<p>And the hand was not any of theirs.</p>
+<p>Dmitri read that twice. The courier was certain. It was not the hand of any volunteer in the copying room; he had the specimens; he had checked; the copy on the noticeboard in a provincial town in the east had been made by someone inside the Confederacy, someone who had been handed a page that walked three months to reach them, and had copied it again, in their own hand, and pinned it up where their neighbours would read it, on the Council's own board, under the Council's own nose.</p>
+<p>Dmitri counted that. He counted it as one — one copy, one hand, one noticeboard — and then he sat with it a moment longer, under the strip lights, among the volunteers copying into four alphabets, and he counted it again, and the second time he counted it as more than one, because a page copied by a hand that was not theirs was not an end, it was a beginning, it was the many hands beginning in the one place the design had built to have no hands at all; and he did not write the number down, because there was not yet a number, there was only a direction, and the direction, for the first time in the book, was east and out of their hands and into other people's, which was the whole of what they had been trying to do, and it was working, slowly, the way paper works, which is to say permanently.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="28-a-better-enemy.html" class="nav-button">← Previous: Chapter 28: A Better Enemy</a>
+            <div class="nav-center">Chapter 29: Containment</div>
+            <a href="30-the-lakeshore-air.html" class="nav-button">Next: Chapter 30: The Lakeshore Air →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

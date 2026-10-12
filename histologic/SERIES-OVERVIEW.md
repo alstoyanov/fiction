@@ -17,7 +17,7 @@
 | 6 | *The Distributed Truth* | Novel, ~114,000 words | Oct 30, 2108 – Feb 14, 2109 (epilogue Mar 15, 2109) | **Canon.** Rewritten Sept 2026 from plot v2, first draft complete |
 | 7 | *Battle of Truths* | Novel, ~110,000 words planned | Aug 14 – Dec 23, 2109 (epilogue Jan 10, 2110) | **Plot v3 and chapter summaries (Sept 2026); first draft of all 32 chapters complete and enriched (Oct 2026, ~83,800 words).** See `novels/07-battle-of-truths/` |
 | 8 | *Battle of Blood* | Novel, ~110,000 words planned | Feb 12 – May 28, 2110 (epilogue Aug 15, 2110) | **Plot v2 and chapter summaries (Sept 2026); first draft of all 32 chapters complete (Oct 2026, ~64,000 words).** See `novels/08-battle-of-blood/` |
-| 9 | *Architects of Chaos* | Novel, finale, ~110,000 words planned | Mar 15 – Nov 15, 2115 (epilogue Nov 15, 2135) | **Plot v2 (Sept 2026)** in `plots/09-architects-of-chaos-full.md`. Chapter summaries and chapters to do (old draft to be replaced) |
+| 9 | *Architects of Chaos* | Novel, finale, ~110,000 words planned | Mar 15 – Nov 15, 2115 (epilogue Nov 15, 2135) | **Plot v2 and chapter summaries (Sept 2026); first draft complete and enriched (Oct 2026, ~78,400 words).** See `novels/09-architects-of-chaos/` |
 
 Story 03 happens *before* Stories 01–02 in-world, but it is read third. The triplets are already at Ashford when Marcus arrives.
 

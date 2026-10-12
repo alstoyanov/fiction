@@ -1,6 +1,6 @@
 # Architects of Chaos (Histologic, Book 9, Series Finale)
 
-**Status:** plot v2 and chapter summaries done (Sept 2026). The chapters are still to be drafted. The earlier Nov 2025 draft, its summaries and its documents have been deleted, and git history keeps them.
+**Status:** plot v2 and chapter summaries done (Sept 2026); first draft complete and enriched (Oct 2026, ~78,400 words), built to HTML and EPUB. The earlier Nov 2025 draft, its summaries and its documents have been deleted, and git history keeps them.
 **Set:** Friday, March 15 to Friday, November 15, 2115. The epilogue is on Tuesday, November 15, 2135.
 **Follows:** *Battle of Blood* (Book 8).
 
@@ -16,7 +16,9 @@ Singh returns from the dead. Old Songs solves Vance's riddle, and the Compiler's
 
 ## Folder
 - `chapters-summaries/`: the chapter summaries. Its README has the drafting decisions, the full Register with all seventeen marks, the riddle's solution, the timeline, the cast, and tables for the twists, the manuscript and Old Songs.
-- `chapters/`: to be drafted.
+- `chapters/`: the drafted chapters (Prologue + 30 + Epilogue).
+- `html-export/`: the built HTML edition.
+- `architects-of-chaos.epub`: the built EPUB.
 
 ## Related
 - `plots/09-architects-of-chaos-full.md` and `-concise.md` (plot v2).

@@ -286,6 +286,61 @@ Then they learn who invited it. Behind the front, under cover of the invasion, a
             ]),
         ],
     },
+    "09": {
+        "dir": Path("novels/09-architects-of-chaos"),
+        "epub": "architects-of-chaos.epub",
+        "title": "Architects of Chaos",
+        "subtitle": "Novel 09 of the Histologic Series",
+        "description": """Five years after both Judges died, the world is learning to live without a machine that decides. Then the dead come back: a Deputy Minister murdered in the Lost Hour walks out of a crowd, and an old archivist solves the riddle that leads to the Compiler's own copy of the manuscript, hidden for fifty years behind an unanswered letter. It names the twelve who designed the world, and almost every name is a family.
+
+When the heroes move to publish the names by many hands, the designers disclose first, and offer the peace everyone wants: one record for every nation, restored from a single source. It is the last trap, and the man they prepared to keep it is the one who has spent his life refusing. The series ends where it began, with a stone, a song, and the choice between one record and many hands.""",
+        "parts": [
+            ('Prologue', [
+                ('00-prologue.md', 'Prologue', 'The Fifteenth', 'Tanaka'),
+            ]),
+            ('Part One: The Riddle', [
+                ('01-where-is-east.md', 'Chapter 1', 'Where Is East?', 'Marcus'),
+                ('02-the-shelf-of-us.md', 'Chapter 2', 'The Shelf of Us', 'Old Songs'),
+                ('03-the-third-site.md', 'Chapter 3', 'The Third Site', 'Kira'),
+                ('04-carver-street.md', 'Chapter 4', 'Carver Street', 'Isaiah'),
+                ('05-the-filed-woman.md', 'Chapter 5', 'The Filed Woman', 'Singh'),
+                ('06-the-man-at-1421.md', 'Chapter 6', 'The Man at 14:21', 'Marcus'),
+                ('07-ask-him-twice.md', 'Chapter 7', 'Ask Him Twice', 'Old Songs'),
+                ('08-the-second-letter.md', 'Chapter 8', 'The Second Letter', 'Kovač'),
+            ]),
+            ('Part Two: The Register', [
+                ('09-the-annex.md', 'Chapter 9', 'The Annex', 'Kira'),
+                ('10-the-register.md', 'Chapter 10', 'The Register', 'Dmitri'),
+                ('11-the-parlour.md', 'Chapter 11', 'The Parlour', 'Isaiah'),
+                ('12-the-administrator.md', 'Chapter 12', 'The Administrator', 'Sokolov'),
+                ('13-heirs.md', 'Chapter 13', 'Heirs', 'Tanaka'),
+                ('14-uncle-tobias.md', 'Chapter 14', 'Uncle Tobias', 'Julian'),
+                ('15-copy-x.md', 'Chapter 15', 'Copy X', 'Marcus'),
+                ('16-ra-12.md', 'Chapter 16', 'RA·12', 'Nikolai'),
+            ]),
+            ('Part Three: The Disclosure', [
+                ('17-many-hands-once-more.md', 'Chapter 17', 'Many Hands, Once More', 'Kira'),
+                ('18-cast.md', 'Chapter 18', 'Cast', 'Martinez'),
+                ('19-the-orchard.md', 'Chapter 19', 'The Orchard', 'Elena'),
+                ('20-disclosed.md', 'Chapter 20', 'Disclosed', 'Isaiah'),
+                ('21-the-peace-everyone-wants.md', 'Chapter 21', 'The Peace Everyone Wants', 'Marcus'),
+                ('22-no-revenge.md', 'Chapter 22', 'No Revenge', 'Dmitri'),
+                ('23-one-source-again.md', 'Chapter 23', 'One Source, Again', 'Kira'),
+                ('24-the-heir.md', 'Chapter 24', 'The Heir', 'Marcus'),
+            ]),
+            ('Part Four: Many Hands', [
+                ('25-on-keeping.md', 'Chapter 25', 'On Keeping', 'Old Songs'),
+                ('26-refused.md', 'Chapter 26', 'Refused', 'Marcus'),
+                ('27-the-checkpoint.md', 'Chapter 27', 'The Checkpoint', 'Sokolov'),
+                ('28-a-better-enemy.md', 'Chapter 28', 'A Better Enemy', 'Isaiah'),
+                ('29-containment.md', 'Chapter 29', 'Containment', 'Dmitri'),
+                ('30-the-lakeshore-air.md', 'Chapter 30', 'The Lakeshore Air', 'Marcus'),
+            ]),
+            ('Epilogue', [
+                ('31-epilogue.md', 'Epilogue', 'Twenty Years', None),
+            ]),
+        ],
+    },
 }
 
 

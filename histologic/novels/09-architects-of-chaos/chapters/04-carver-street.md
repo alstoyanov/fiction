@@ -1,0 +1,71 @@
+# Chapter 4: Carver Street
+
+*Friday, March 29, 2115. The capital*
+
+---
+
+*IO-2115-088. 29 MARCH. Flat. Post: one letter, hand-addressed.*
+
+He filed the fact of the letter before he opened the letter, which was either discipline or cowardice, and Isaiah Okonkwo had been in the trade long enough to know that the two were frequently the same garment worn in different weather. He made coffee first. He knew the hand on the envelope — a diplomat's hand, sharp and elegant, every letter leaning the same few degrees, the hand of a person who had been taught to write so that a clerk in any of six languages could read it — and he knew it the way you know a voice through a wall, before the words, in the body, and he was not ready, and so he made coffee, and watched the water go dark through the grounds, and filed that too.
+
+He was forty-eight, and he was alive, which was a legal status he had spent three years without and would never again take as given. He lived in the capital, in a flat with too many books and a window that got the morning. *The Cost of Certainty*, his words and Tanaka's case notes bound together, had come out in 2112 and had done the thing he had not expected a book to do, which was to make him trusted. Not famous, exactly; the country had lost its appetite for the famous along with its appetite for the certain. Trusted. Strangers stopped him at tram stops and told him what they remembered — of a day, of a person gone, of the hour itself — and he had learned to let them, to stand at the stop and miss the tram and listen, because the listening was the whole of the work now and the writing only its residue. He still filed everything with a prefix and a sequence and a date. He still heard belief in the way a person leaned on a word. Some grooves do not wear out of a man. He had decided to be grateful for the ones that hadn't.
+
+It was a strange country to have ended up trusted in. Ten years ago a byline like his would have been a liability, a thing you lived down; a man who had been corrected and come back was a man with a hole in him where the truth should be, and the state had taught everyone to treat such men as the walking wounded of error, kindly, from a distance. Now the hole was the credential. The country had learned, the hard way, over a war and the death of a machine, that the people worth hearing about what had happened were precisely the ones it had once tried to erase — that a man who had sat in a white room and kept, by main force, one true thing against a machine built to take it was a man who knew the exact weight of a fact, because he had been made to pay it. They stopped him at tram stops now. They told him their dead. He had become, without meaning to, a kind of public ear, and he took the work seriously, more seriously than he had ever taken the writing, because the writing had only ever been the residue and the listening was the thing itself, and a country that had just learned to listen to itself needed, above all, people who could be trusted to do it well.
+
+He opened the letter.
+
+One sheet of heavy cream paper. Her hand, and every line precisely as long as it needed to be, which had always been the most frightening thing about her, more than the postings or the ribbons or the photographs with ministers: that she never wasted a word and never ran short of one, that she knew exactly how much to say and said exactly that.
+
+She had read his book, she wrote. Twice. She was old now and did not go about much, and she would like to see him. And then:
+
+*Come to tea at Carver Street on Monday the twenty-ninth of April, at four. The house is where it always was.*
+
+It was signed *Sarah*. Nothing else.
+
+There was no apology in it. In 2105, when they had taken him, when his name had gone into the record as an outlaw and his face into a white room, she had not called. She had been an Ambassador; a call would have been noted; he had told himself that, for twenty years, in a white chair and out of it, and it was even true, and it had never once stopped being the thing he could not forgive, the aunt at the head of the table who had the standing to say one word for him and had said none. The letter did not mention it. The letter did not mention the twenty years. The letter mentioned tea.
+
+He read it three times, which was how he read a source: once for what it said, once for what it did not say, and once for the shape of the silence between the two.
+
+The silence was the whole letter. A lesser correspondent would have apologised, or explained, or at least acknowledged the twenty years, if only to dismiss them; the acknowledgement would have given him something to push against, a surface, a handle. She gave him none. She wrote as if no time had passed and no wound had been dealt, as if the invitation were the most natural thing in the world, and in doing so she forced him to be the one who remembered, the one who could not let it go, the one carrying the grievance into a room where the other party had serenely declined to carry anything at all. It was a move. He knew it was a move because he had spent his life watching powerful people make exactly that move — the refusal to concede the terms of the quarrel, which leaves the other man quarrelling alone — and he knew it was a move and it worked on him anyway, which was the most frightening thing about it, that he could name the mechanism and still feel it operate, the way you can know the trick of an optical illusion and still see the lines bend.
+
+---
+
+The trouble, which he set down in his editorial voice because the editorial voice could hold things the rest of him could not, was that the house on Carver Street did not exist.
+
+*The old eastern quarter was cleared and rebuilt. Carver Street with it. I have believed this for twenty years and said it to myself in a white chair, where a man learns which of his beliefs are load-bearing.* He had never gone back to see it cleared. That was the hollow place in it. He had taken it on the record's word — the record, in those years, being a thing one took on its word or became an outlaw — and he had grieved the house as gone and never put his own two eyes on the gap where it had stood. So there were two possibilities, and he numbered them, because numbering was how he kept from choosing between them before the evidence was in.
+
+*One. The record I believed was wrong, and the house stood the whole time. Two. The house is gone, and she has built it again.*
+
+He filed the letter under UNCHECKED and wrote beneath it: *If I were a guessing man. Which, professionally, I am not.*
+
+And he decided — this took him most of the coffee — that he would not walk past Carver Street before the day. He could have. It was a tram and a short walk, and he could have stood at the end of the street tonight and had his answer. He wanted the answer the way a witness should have it: once, and first, and in her presence, with his own eyes seeing the thing for the first time in the room where it meant what it meant. A witness who scouts the scene before the event is no longer a witness. He had written that, more or less, in chapter nine.
+
+Two people had come back in one month. A woman nobody had seen for nine years was alive at a farmhouse, and on Thursday the circle would go out and hear her. An aunt he had not seen for twenty years had invited him to tea in a house that should not be standing. He noticed the pair of them and refused to make them into anything. *Two is a pattern looking for a third. I'll wait for the third.* It was his oldest rule and it had kept him from more errors than any other.
+
+---
+
+In the evening he read at a journal-network hall in the rebuilt eastern quarter, a few streets from where Carver Street was, or had been, or was again. A few hundred people came and sat on folding chairs under a strip of old bunting someone had never taken down. He read a chapter of the book — the one about the boy in Ward D who remembered his sister wrongly and chose, when he was shown the two accounts, to keep remembering her his way, and how Tanaka's case note on it was the most careful thing in the book and said, in the end, that she did not know whether he was right and that the not-knowing was the point. He answered questions. He ended, as he always ended, on a question he could not answer, because a reading that ended on an answer was a sermon and he was not in that trade.
+
+A woman near the front asked him, gently, about his family.
+
+"I had an aunt," he said, courteously, and heard the tense come out of his mouth a half-second before he could have chosen it, *had*, and stood with it in the lit hall, and did not correct it, because correcting it in front of three hundred people would have made it a thing, and it was not yet a thing. It was a letter and a date. He thanked them and the evening ended.
+
+On the walk to the tram he came to the end of a new street, clean pale brick, young trees staked against the wind, and the sign at the corner, enamelled and new, read *Carver Street*. He stood at the end of it for the length of a held breath. He could see down it a little way in the lamplight, doors and low railings, a street like any other new street. He did not turn into it. He got the tram.
+
+---
+
+At home he lay down on the bed with his shoes on, which he did when he meant to go into the palace, and he closed his eyes and opened the house.
+
+He went through it room by room, as you had to, because the palace punished hurry. The kitchen first, with its sources on their shelves, each a jar, each a smell — the pepper soup was a source and so was the paraffin of the lamp in the study and so was the particular damp of the cellar steps. The study, filed by year, the years he had back and the years he did not. The cellar door, whose colour he had lost in Unit 3 and had never recovered, so that in the palace it was a door of no colour at all, a door his eye slid off, and he had made his peace with it: a man was entitled to one door he could not paint.
+
+Then the parlour.
+
+He had refurnished it in 2108, after, when he had gone back into the palace and found the parlour stripped and had understood that he could not live in a mind with a stripped room in it. He had put the true, warm, harmless things back, one at a time, over a year: the pepper soup steaming on the sideboard, the worn rug, his first byline framed above the fireplace — a column of four hundred words about a tram timetable, the least important thing he had ever written and the first with his name on it. And at the head of the long table, since that year, Aunt Sarah had sat: sharp and elegant and upright, exactly as she was in the world, watching the room with the expression she had always had, the one that measured you and gave no sign of the sum. She had sat there every night since 2108. She had never once spoken. And the place in front of her, where a setting would go, had always been bare — no plate, no cup, nothing, a stretch of dark polished wood before her folded hands, which he had never questioned, the way you do not question the furniture of your own mind.
+
+Tonight there was a cup in front of her.
+
+A teacup. Her good china, the cream with the thin gold line that she had used for people who mattered and withheld from people who did not, set square on its saucer, the handle turned toward her right hand, ready, as though she had set it there herself and was waiting only for the pot.
+
+He had not put it there. He went back through the year of refurnishing in his memory, room by room, placement by placement, the way he went back through a source when a date felt wrong, and he had not put it there; he had left the place before her bare on purpose, because a setting implied a guest, and he had not been ready to decide who the guest was.
+
+He lay in the dark with his shoes on and looked at the cup, her good china, the handle turned to her hand, in a house on a street that had been cleared and was standing again, and he did not let himself make anything of it, because two was a pattern looking for a third, and he would wait, and he would go to tea.

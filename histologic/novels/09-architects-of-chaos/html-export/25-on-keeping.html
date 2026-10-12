@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architects of Chaos - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Architects of Chaos</h1>
+            <div class="novel-meta">Novel 09 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="24-the-heir.html" class="nav-button">← Previous: Chapter 24: The Heir</a>
+            <div class="nav-center">Chapter 25: On Keeping</div>
+            <a href="26-refused.html" class="nav-button">Next: Chapter 26: Refused →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 25: On Keeping</h1>
+<p><em>Monday, August 5, 2115. The farmhouse, and the Lost Hour stone</em></p>
+<hr>
+<p>He woke before the light, as the old do, and went down to the stove, and the damper took him three tries with the bad hand before the crack in the firebox door came up orange and drew. He was seventy-seven. His hands were worse this month than last, which was the direction they went now, one way, and he had made his peace with the direction. He put the kettle on with both hands, and while it came to the heat he went out to the orchard in the grey before dawn and stood between the two graves under the plum trees, where the fruit hung small and green now, and hummed the ferry verse under his breath, not for them exactly, for himself, the way you hum to keep your feet moving on a cold morning.</p>
+<p>He had known, since the basement floor in April, that he would have to speak. He had spent five years not speaking — had given one speech in nine years, in a cold back room in 2107, and had sworn it would be his last, because a man who sang did not need to speak and a man who spoke too often wore the words smooth — and he had understood, reading his teacher's page on the registry floor, that there was one thing left he would have to say aloud, in his own voice, in front of the living, and that no one else could say it because no one else had been there, no one else had sat across a reading-room table from Anselm Kerr, no one else carried, in a body gone frail, the direct human memory of the man whose answer the whole age had been living on without knowing it. He would have to give the page back its author. That was the last task. His hands would not write it and his voice would barely carry it, and he would do it anyway, once, today, and then he thought he might be allowed to stop.</p>
+<p>The monthly gatherings went on without him now. The road into the capital tired him more than it was worth most months, and he came only when something at the far end of it needed him, and today something did. Isaiah had chosen the date. Old Songs knew why, though Isaiah had told no one but him, in the truck, filing it in his head the way he filed everything: that on the fifth of August, nine years ago, Isaiah's own account of Wing C had come out through the Synthesis Institute, the first testimony from inside a correction unit that the world had ever read. The fifth of August was the day a witness had first been believed. It was a good day to read the names.</p>
+<hr>
+<p>The reading at the stone was the journal networks' doing, not the Commission's, and they had made it the way they made everything now, so that no one hand owned it. Every reader was drawn by lot from the crowd. A steward held a box of numbered tiles, and drew one, and whoever held the matching tile came to the stone and read one mark — the two letters, the name, and the copy numeral where there was one — and then went back into the crowd, and the next tile was drawn. The families stood among the others and read nothing, because to have the families read would have made it theirs, and it was not theirs, it was everyone's; it was the city's page now.</p>
+<p>The crowd was a few thousand in the August warmth. Kira had his elbow on one side. Dmitri stood on the other, close, because Dmitri had insisted on bringing the old man out the first time, back in the spring, and having started had not stopped, and now stood at his shoulder at every public thing as a matter of course, formally, saying nothing, a tall still presence that the crowd parted around.</p>
+<p>A tram driver drew the tile for AV·05 and read <em>Arkady Volkov, copy five,</em> in a flat workaday voice, and Old Songs watched Dmitri hear his own name read by a stranger and not move. A schoolgirl of perhaps thirteen drew SO·04 and read <em>Sarah Okonkwo, copy four,</em> carefully, the way you read in front of grown-ups, and Old Songs watched Isaiah hear it and fold his hands. He watched each of them hear it. That was what he had come for, mostly; not to read, but to watch the families hear their names come out of the mouths of people who did not know them, which was the whole of what the reading was for, the taking of a private wound and the laying of it in the common record where it could be carried by everyone a little instead of by one person entirely.</p>
+<p>A woman in a Ministry clerk's coat drew CZ·11 and read <em>Chen Zhao, copy eleven,</em> in a clear, level voice, without drama, the way you read a thing you have decided to read honestly. Old Songs looked at Marcus, who was a little apart, and Marcus was looking at the stone, at the names cut in its side, and not at the reader.</p>
+<hr>
+<p>When the steward drew the tile for SA·13 and a reader stepped up, Old Songs stood.</p>
+<p>Nobody had asked him to. Kira's hand came off his elbow and he felt Dmitri shift to let him go. The reader for SA·13 read <em>Sigrun Ahlgren, struck through, unsigned,</em> adding the words as the networks had agreed, so that the five would be marked as the five. Then EO·14, <em>Emeka Obi, struck through, unsigned.</em> And then the steward drew the tile for AK·15, and the reader who came up was a boy of about sixteen, gangling, nervous, and he read it in a voice that cracked once: "AK dot fifteen. Anselm Kerr. Struck through. Unsigned." And then he saw the old man standing at the stone, and something passed between them, and the boy held out the hand copy of Kerr's page toward him, the page titled <em>On Keeping,</em> without being told to, as though he had understood that this was why he had drawn the tile.</p>
+<p>Old Songs took it, and gave the one speech of his book, standing at the stone with the names cut in its side, in the thin dry voice that still lifted at the end of a line. It was plain. There was no riddle in it and no rhetoric.</p>
+<p>"I was a junior archivist here," he said, "in the sixties, before most of you were born, before the nation was. I kept the periodicals nobody read, in a back room. My desk had a lamp with a green shade and a drawer that stuck, and I have been back to that room this spring and the lamp is still there and the drawer still sticks, and that is the only thing in this whole business that has not changed." A small sound went through the crowd, not quite a laugh. "My master was a man named Anselm Kerr. He wore cotton gloves for the paper and took them off at eleven every morning to eat an apple, which he peeled in one long curl with a little pocketknife he kept for nothing else. He told me, <em>we keep what people would rather lose, Mikhail. Anyone can keep what they want to keep.</em> I thought he was a pompous old man." He paused. "I was right. He was also right. Both of those have been true my whole life and I have only lately learned to hold them at once."</p>
+<p>"He asked a question," Old Songs said. "When they took a journal out of this archive, in 'sixty-six — took it, swept it off the shelf into a box, which you do not do to an archive — he asked where it had gone. Politely. In writing. Twice. Two others asked with him, and for forty-eight years I did not know their names, and I know them now, and you have just heard them read: Sigrun Ahlgren. Lorenzo Bassi. They are on this page too, struck through, for asking." He looked at the stone. "Two more asked and then walked away. Emeka Obi. Matthias Roe. I don't know where they went. Nobody does. I would like someone to find out. That is a thing a record is for, and we have one again, and someone with better hands than mine should use it."</p>
+<p>"They corrected him," he said, "in the spring of 'sixty-seven, for asking. And one morning after, by the trolley, I said the shelf mark to him, quietly, to see if anything was left. And he smiled at me, very pleasantly, and said, <em>I'm afraid I don't know that one. Are you sure you have the number right?</em>" The old man's voice did not break; he had told this part to himself ten thousand times and it had worn smooth. "He was not lying. He was the most honest man I ever knew and he was not lying, because they had taken it out of him so cleanly that there was no hole for him to feel. That is the thing about it the rest of you have not had done to you, most of you. It does not leave a hole. It leaves a smooth place where a man used to be, and the man goes on, courteous, and does not know."</p>
+<p>He held up the page a little, the boy's hand copy, shaking.</p>
+<p>"The design," he said, "had one flaw it could not see, because it was not in the design. My teacher said no. They took his memory. They did not take the page." He let that sit. "Everything we did — all of it, these nine years, the journals, the many hands, the writing-down — we did with his words, and we did not know it. I stood in a cold room nine years ago and told a handful of frightened people to write it down, by many hands, and I thought the phrase was mine. It was his. I had heard it from him when I was twenty-five and lost the where of it and kept the what. And the woman who built the whole machine, who was cleverer than all of us, when she came to write down the one true thing in forty pages of lies — <em>build by many hands</em> — she took it from him too. She corrected him and then she stole his answer, because it was the only answer, and there was nowhere else to get it." He almost smiled. "It is the only thing I ever said in my life that I did not make up. And I did not know it until this April, on a basement floor. Keep that in mind, the next time one of you says a wise thing. You may be carrying it for someone who was not allowed to say it himself."</p>
+<hr>
+<p>He read the last lines from the boy's copy, slowly, the paper shaking in his hand so that Kira half rose to steady it and then did not, because it was his to hold.</p>
+<p>"<em>A record kept by one hand is a confession waiting for its torturer. Keep it by many hands.</em>"</p>
+<p>He gave the page back to the boy, who took it with both hands.</p>
+<p>And a thousand people said it back to the stone, unled, the way they said the refrain of the songs, rolling across the plaza and back: <em>Keep it by many hands.</em></p>
+<p>He heard it go out across the square and come back, and he heard, under it, the whole of what he had spent his life trying to make happen, which was a true thing in more than one mouth at the same time. A thousand people saying a dead archivist's sentence in a cold plaza — people who had not been born when Kerr was corrected, who would never know his face, who were saying his words now the way children say a round, by catching them from the person beside them. That was the resurrection the design could not prevent and had never found a defence against: not the record restored, which it could always restore again, but the sentence loose in the air, in a thousand throats, descended from no master, correctable by no one, because to correct it you would have to reach into a thousand people at once and take the same thing from each of them in the same instant, and even the machine at its height had only ever managed one mind at a time. Kerr had said no, and they had taken his memory, and here were his words, fifty years on, in more mouths than had ever been in any room he stood in, and Old Songs thought, hearing them, that this was the only kind of victory he had ever believed in, the kind that did not defeat anyone, that only made a thing impossible to lose.</p>
+<p>He sat down, on the chair Dmitri had set behind him without his noticing, because his legs had decided for him again. LB·16 and MR·17 were still to be read, and the steward drew the next tile, and a man came up to read <em>Lorenzo Bassi, struck through, unsigned,</em> and the reading went on without the old man, by many hands, which was exactly as he would have had it, because a reading that could not go on without him was a reading he had failed to teach.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="24-the-heir.html" class="nav-button">← Previous: Chapter 24: The Heir</a>
+            <div class="nav-center">Chapter 25: On Keeping</div>
+            <a href="26-refused.html" class="nav-button">Next: Chapter 26: Refused →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

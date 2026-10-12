@@ -1,0 +1,61 @@
+# Chapter 23: One Source, Again
+
+*Friday, July 19, 2115. The capital*
+
+---
+
+*Jul 19, 2115. Basement room B. Present: Osman, K.; Volkov, N.; Reeves, M. Object: World Record, Technical Schedule (60 pp.). Day 11.*
+
+Kira had read the Schedule end to end three times since the eighth, and somewhere in the third reading she had caught herself reciting it under her breath, a clause at a time, the way she recited things when she was frightened and would not show it — the compulsion that had gone quiet for years and came back only under load. She noticed it, in the basement, at six in the morning, her own lips moving over *integrity restoration from the reference source,* and she did not make herself stop, because the compulsion was information: it told her that the thing on the table in front of her was the most dangerous document she had read since the manuscript itself, and she trusted the compulsion more than she trusted her composure.
+
+It was a beautiful piece of work. She had to grant it that first, the way you grant a weapon its engineering before you refuse it, because refusing a thing you had not understood was just squeamishness and she did not permit herself squeamishness.
+
+Every nation's record — Veridica's rebuilt Civic Record, Chronos's human-kept record, the surviving Judged records of Memoria and Axiom and Synthesis — would be ingested into the World Record as a *contributing record.* Where two contributing records disagreed about a fact, the disagreement would go to Synthesis's Meta-Judge, the machine that already arbitrated between Synthesis's own three Judges, and the Meta-Judge would settle it, cleanly, finally, by rule. And a contributing record that was found to have been *corrupted* — her lips stopped on the word — corrupted by outsiders *or by insiders,* the Schedule said, in that order, in those words, would undergo *integrity restoration from the reference source.*
+
+She read the corruption clause twice, and then a third time, and then she set her photograph of page five of the Compiler's copy down beside it on the bench, Principle Three, and read the two together, and they were the same sentence in two typefaces sixty years apart. *Should outsiders corrupt the record, it may be restored from the true source. Should insiders reform it, it may be restored from the true source.* The Schedule had not even troubled to change the structure of it. *Outsiders or insiders.* A reformer and an invader, named in the same clause, treated identically, both corruption, both to be undone from the one source that could not be questioned. That was the whole of Principle Three, which was the whole of how her own fact had been deleted in 2105 and how an hour had been erased in 2106: the record was editable by whoever held the source, and here was a proposal to make every record in the world editable by whoever held one source, and to get every nation to vote for it, gratefully, as a defence against being edited.
+
+The reference source's location was given only as *held under distributed custody.* No address. No nation. She wrote that down exactly, in her incident log, because the vagueness was the tell, because a thing honestly distributed would have said where, and a thing that said *distributed custody* and no more was a thing with one address it did not want named.
+
+---
+
+On the sixteenth, the day after the heroes' publication, Synthesis had opened what it called a public inspection endpoint — a thing so that any nation, any engineer, any citizen could test the reconciliation in good faith. It was a sample contributing record, live, that you could submit changes to and watch it reconcile itself against the reference source, so that nobody need take the World Record on faith; you could poke it yourself. It was generous. Kira had learned, over five years and three books, that generosity in a system was a design choice, that a thing built to be inspected was a thing built to pass inspection, and that the open door was sometimes the most carefully engineered part of the whole house.
+
+She knew the move because she had spent her youth building the other side of it. She had been an architect of the Spire; she had built the places where facts were kept and the interfaces that let the right people check them; and she knew, from the inside, the particular art of designing a thing so that its honesty was its camouflage — so that the inspection port showed you exactly what it was built to show you, and the showing satisfied you, and you went away having verified the system against itself and called it proof. The World Record's public endpoint was the finest example of the art she had ever seen. It invited the whole world to check it, and it would answer every check truthfully, and every truthful answer would conceal the one fact that mattered, which was not in any single reconciliation but in the shape of all of them together: that every honest answer came back from the same place, signed by the same dead hand, and that a system you could inspect to your heart's content was still a system with one throat, if all the inspecting in the world routed, in the end, through one source.
+
+Nikolai probed it with the open checking tools, the honest instruments that compared and never decided. He submitted a trivial correction to the sample record — changed a date in a test entry, a thing of no consequence, a thing the system was meant to accept and reconcile — and the reconciliation came back within minutes, the sample record *restored* to agreement with the reference, his little change evaluated and, because it disagreed with the source, gently undone. And he traced the route of the reconciliation, because tracing routes was the thing he had spent five years learning to do: out through Synthesis, off the continent, across the unaligned strips, and east, through the same CNT relays he had matched to the Council's own infrastructure on the tenth of June, with the same timing habits as the third site's traffic of the twenty-first of May, 2110, thirteen thirty-one to thirteen thirty-five, and the same patient tending they had watched for five years in a garden they could not enter.
+
+"It's the garden," Nikolai said, quietly, looking at the trace. "The reference source is the garden. We've been watching them water the thing the whole world is about to be restored from."
+
+Kira sat back from the screen and let the whole of it assemble, because this was the moment the five years came together and she wanted to see it entire before she said it aloud. The patient tending she had watched since 2110, every three to five days, the small weeding and pruning of a thing held calm and certain — that had not been maintenance of a hidden archive. It had been the preparation of a public remedy. For five years, while the circle watched a garden and could not name the gardener, the design had been quietly grooming the one source into the shape it would need to be when the day came to offer it to the world as salvation; keeping it clean, keeping it current, keeping it ready, so that on the afternoon the heirs confessed and proposed the World Record, the reference source would already be a thing of patient, demonstrable, inspectable excellence, five years in the tending, better kept than any national record because it had been kept by people who knew exactly what it was for. She had thought she was watching them hide. She had been watching them prepare the gift. The garden and the remedy were one act, begun nine minutes before a machine died and continued every three to five days for five years, toward this.
+
+And the reconciliation notices that came back from the reference carried the Archive key's habits — the rotation, the padding, the particular care to leave no contradiction — the countersignature profile Nikolai had first built in the winter of 2108 from a key that had died with the Chronos Judge in 2110 and had gone on signing anyway. The dead key. The copy someone had kept. Here it was, signing the world's remedy, the hand on the source that every nation was being asked to trust.
+
+Maya, who had come down with the morning and run her own cold check beside Nikolai's, asked the technician's question, the one that mattered, in her flat way. "Can the reference be moved? Later. Can it be made truly distributed, actually spread out, once it's running — or is that just the word?"
+
+Kira found the clause and read it out. "*The reference source may be relocated only by resolution of its custodians.*" She looked up. "The custodians aren't named. So: it can be moved, by the people who hold it, if they agree to move it. Which means it stays exactly where it is, held by exactly who holds it, for exactly as long as they like, and the word *distributed* is doing no work at all except making you feel better."
+
+---
+
+She laid the whole of it out, levelly, in the cold way that was the only way she had ever been angry.
+
+Every nation would restore from one source. That source was the true source that had run east nine minutes before the cascade in 2110 and become a new original, bound to no ending, sitting on the machines of the country the design had built as its enemy. The heirs' remedy would take every record in the world — Veridica's, which they had rebuilt by hand from testimony; Chronos's, which the humans kept; all of them — and put them back, by open vote and with the gratitude of relieved populations, under the one hand that had held the source the entire time. It was Principle One, which she read aloud from her photograph of page five, because it deserved to be said in the room in its own words:
+
+*Singular truth, mechanically verified, universally enforced.*
+
+"They couldn't get it by force," she said. "The machine died. They couldn't get it by stealth; we were watching. So they're getting it by consent. They exposed themselves on purpose so they could offer the cure, and the cure is the disease, universally, forever, and everyone's going to vote for it because they're frightened and sorry and they want it to be over." She laid the Schedule beside her hand copy of the Annex, pages thirty-three through thirty-eight, *the placement of Histologic capitals and borders,* and thought of Veridica's own Concordance in 2108 — every registered journal held as a sealed master with a restore path from the master, the very path the Rewriting of 2109 had come in through; *restorable means editable;* Maya had found that component in the drafts in January of 2109 and written its number down by hand. Now Maya watched her write this one down, the relocation clause, the reference source, the dead key, in her own hand, in the log.
+
+---
+
+In the evening Marcus came from the Commission, where Chen Zhao had been warm and had said nothing about the Schedule, and Kira laid it out for him on the kitchen table the way she would lay out a fault report, in order: the corruption clause, the endpoint trace east, the dead key's habits on the reconciliation, the relocation clause with its unnamed custodians. Marcus listened the whole way through and asked one question.
+
+"Can anyone outside this room check it? Independently. Without us."
+
+"Yes," Kira said. "That's the one good thing. The endpoint is public. The Schedule is published. Anyone with Nikolai's tools — and they're open, anyone can build them — can run the exact probe we ran and watch the reconciliation go east and come back signed by a dead man's habits. We're not asking the world to take our word. We can't; that's the whole point of everything we've done; we don't ask anyone to take our word. The proof that the peace is the trap is a thing every nation can run for itself, as many times as it likes." She looked at the Schedule. "Whether they'll run it, when they're this tired and this frightened and this relieved — that I can't make them do."
+
+She closed the log.
+
+"It's the Concordance," she said. "For everyone. The whole world's record, restorable from one source, held in one place, by one hand, by consent."
+
+Marcus looked at Tamsin's door, which was ajar, and at the eight hand-copied pages still on the dresser from Monday, the pages that had turned out to be a confirmation of a confession instead of a revelation of a crime.
+
+"Then we say no to peace," he said. "That's going to be hard."

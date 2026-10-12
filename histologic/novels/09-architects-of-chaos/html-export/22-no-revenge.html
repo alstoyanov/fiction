@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architects of Chaos - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Architects of Chaos</h1>
+            <div class="novel-meta">Novel 09 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="21-the-peace-everyone-wants.html" class="nav-button">← Previous: Chapter 21: The Peace Everyone Wants</a>
+            <div class="nav-center">Chapter 22: No Revenge</div>
+            <a href="23-one-source-again.html" class="nav-button">Next: Chapter 23: One Source, Again →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 22: No Revenge</h1>
+<p><em>Wednesday, July 17, 2115. The capital</em></p>
+<hr>
+<p>Dmitri Volkov's inner voice was still a log, and it counted, because the counting was the thing that had come out of the white room with him and he had decided to keep it rather than mourn it. He was forty. Two days since the hand copies had confirmed the Register at the stone, and the city had moved, as he had known it would move, from shame to anger — shame being a thing a person cannot hold for long without turning it outward, anger being easier to carry.</p>
+<p><em>Two days. Four broken windows at Ministry addresses. One car burned, Archive District, night of the sixteenth. Nobody dead.</em> He kept the numbers because somebody had to keep them true, because <em>the city erupted</em> was the kind of sentence that started the next war, and <em>four windows and one car and nobody dead</em> was the kind of sentence that did not. He kept them modest because they were modest. He intended to go on keeping them modest.</p>
+<p>In the morning he went to Carver Street, where about two thousand people stood outside the plain new house that the Register had made famous, the house at the old number on the rebuilt street, with the old parlour moved into it piece by piece, where Ambassador Sarah Okonkwo, SO·04, was inside. Public Order officers held a thin line at the gate, not many of them, looking uncertain, because there was no law yet for what the crowd wanted and nothing to charge an old woman with that a court had worked out how to try. Placards carried her mark and the page number. Someone had chalked a single word on the pavement in letters a yard high — <em>ARITHMETIC</em> — and Dmitri looked at it and did not understand it and did not ask, because a thing he did not understand was a thing he logged and left for someone whose business it was.</p>
+<p>At nine forty-one a stone went through a front window. He logged the time. The curtain behind the broken pane moved, once, and an old woman looked out — upright, silver-haired, elegant, entirely without fear — and she looked at the crowd the way you look at weather you have no intention of going out in, with interest and no alarm, and let the curtain fall. Isaiah stood across the street, alone, his hands folded in front of him, not going in, not going away. Dmitri crossed and stood beside him. They did not speak. Dmitri stood with him for eleven minutes, which was the number he counted, and then he left him there, because Isaiah had come to stand across the street from his aunt's house and there was nothing a second man could add to that except to not leave him entirely alone at the start of it.</p>
+<p>By midday the thing had spread past Carver Street and become a mood with a demand in it. <em>Fetch them back.</em> The émigrés in the CNT included Viktoria Sokolov, whose mark was on the Register, and the news of RA·12 had made the CNT itself the design's own house, which meant that the enemy everyone had feared for forty-seven years was now also the place the Architects had gone to ground, which meant, to a city two days into its anger, a target. Some wanted the living Architects seized where they could be reached. Some wanted an army sent east. A retired officer on the afternoon radio said, gravely, that Veridica <em>could,</em> that the force existed, that the moment was now, that a people had a right. Dmitri listened to one call-in hour with a pencil and counted the callers who said <em>invade</em> or <em>east</em> or <em>take them:</em> nine of fourteen. He wrote it down. Nine of fourteen was not yet a war. It was the raw material of one.</p>
+<p>His own name was in it. The Register was in every paper and AV·05, Professor Arkady Volkov, was on page thirty-nine, and on the tram across the city a man looked at Dmitri a while, placing him, and then said, not unkindly, the way you would mention the weather to a stranger, "Your lot's on it too, isn't it. Volkov. I remember you from the corridor, the war. Your lot's on the page."</p>
+<p>"Yes," Dmitri said. "He was our father's cousin. Our father was corrected for reading his handwriting." He did not use a contraction. The man looked at him, and did not have anywhere to go with that, and got off at the next stop, which was two stops before his own; Dmitri had watched him mean to go further.</p>
+<p>Dmitri had been thinking, all that day, about what he was owed and what he owed. He was a man who kept accounts; it was the shape his mind had taken in the white room and kept after; and the account of what had been done to the Volkovs was long and exact and he could recite it. A father corrected for reading his cousin's handwriting, and dead of it. A brother on an overpass, going out for three strangers, first by thirty seconds and never minding. A storm manufactured in a ledger that had taken a family. A name on page thirty-nine that shared his blood. By any reckoning of debt he had ever been taught, he was owed a war; the city was holding one out to him, was all but begging him to lead it; and a lesser accountant would have taken it, would have called it justice, would have balanced the long column of the Volkov dead against a column of the design's dead and felt the books come even. Dmitri had looked at that reckoning for weeks and found the flaw in it, which was the flaw in all revenge, that it balanced nothing, that it only lengthened both columns, that a war fought to avenge the names on the stone could do nothing whatever except cut more names into the stone. The design wanted the books balanced. The design had drawn the columns. The only entry he could make that the design had not already planned for was to refuse to add to either one.</p>
+<hr>
+<p>At dusk the crowd gathered at the Justice Center, some thousands of them, perhaps five by his count, which he made from the steps as he came up them. Organisers with a loudhailer were reading the Register aloud as a charge sheet, mark by mark, name by name, and at every living name — Okonkwo, Sokolov, Kovač the elder, Chen Zhao — the crowd answered with one word, flat and rising, <em>east,</em> meaning fetch them, meaning go and get them, meaning the thing that started the next war.</p>
+<p>These were the steps where the dead had testified. On the eighth of December, 2106, Dmitri and Alexei had stood on these steps as two men the record said were dead, and an officer named Kade had said he had no warrant for a dead man, and Alexei had answered, <em>then you'd better prove I'm alive.</em> Dmitri had not been back to the steps since. He went up them now, without being asked, past the organisers, and enough people knew the face — the enforcer, the corpse, the company commander from the western corridor — that a murmur went through the crowd and the loudhailer faltered and, after a moment, stopped.</p>
+<p>He did not raise his voice. He had never once in his life raised his voice to a crowd and he did not start now; he spoke as if he were giving a report, in order, flatly, and the crowd leaned in to hear him, which was better than shouting.</p>
+<p>He said who he was, in order. An enforcer, once, who had arrested people on the record's word. A corpse, once, officially dead by the same record. A company commander in the western corridor in the last war. Then his father, Ivan Volkov, a broadcast engineer, corrected in the spring the three brothers turned fourteen, for asking once, in writing, about a discrepancy that was real; dead in the end as Test Subject 2471. Then Principle Five, the calibration grounds, his father's death planned on paper years before his father asked his question. Then the name on page thirty-nine, Arkady Volkov, his father's cousin, who had drawn the method by which his father's death was kept twice, once as a storm and once as a run. And then Alexei — his brother, first by thirty seconds — who had died on the overpass of the eastern ring road on the twenty-third of April, 2110, going out to bring three people home, in a war that Principle Two had cast before any of the three of them were born.</p>
+<p>"My brother died in the last war someone arranged," Dmitri said. "I will not give them the next one."</p>
+<p>He let it stand. The crowd was silent.</p>
+<p>"You want to go east and fetch them," he said. "I have more reason than anyone standing here. My cousin is on the page. My father died of it. My brother died in the war it drew. If this were a thing revenge could mend, I would be the one leading you east, and you would follow me, and we would be right to go." He paused. "It is not a thing revenge can mend. If we go east, we prove they were right — that we need an enemy, that we cannot hold together without one, that we will always, in the end, march. They built us an enemy because they believed we could not do without one. Every soldier we send east tells them they were correct about us." He looked out over the heads of the crowd, over the five thousand, to the dark city. "Alexei died so that we could be free. I will not waste that on them." Then he stopped. There was no appeal in it and no remedy and nothing for the crowd to do, no chant to pick up, no direction to march, only a man who had refused, standing on the steps where the dead had once stood, with nothing to offer them but the refusal.</p>
+<hr>
+<p>Nobody cheered.</p>
+<p>That was the thing he had known would happen and had counted on; a refusal is not a thing you cheer; a crowd that came for a war does not applaud a man who takes the war away from it. The loudhailer was lowered. There was a long silence on the steps, five thousand people holding a thing they had not been given permission to put down and discovering that they could put it down anyway, that nobody was going to make them carry it.</p>
+<p>He had not come to the steps to give a speech; he did not give speeches; he had come because he had understood, counting the callers on the radio that afternoon, that the war was going to be decided not in a cabinet room but in exactly this kind of square, by exactly this kind of crowd, and that a crowd offered a war wanted one thing above all, which was permission — permission to do the thing that grief and fury were already straining toward, permission from someone it respected, someone with standing, someone who had the right. The organisers with the loudhailer had been giving the crowd permission all evening, name by name, <em>east, east.</em> Dmitri had come to take the permission back. He was the one man in the city who could; he had the standing; his name was on the stone by proxy and on the page by blood; and he had spent it, all of it, the whole of the moral credit a dead brother and a corrected father had bought him, on the single sentence that the crowd least wanted to hear and most needed, which was that the man with the most right to the war was telling them there was no right to it. It was the most expensive thing he had ever said. He had nothing left after it. That was correct; a refusal that cost the refuser nothing was not a refusal, it was an opinion; and he had not come to offer an opinion.</p>
+<p>Then they began to leave. A few at first, down the steps and into the side streets, and then more, and then most, quietly, the anger going out of the square not in a rush but the way water goes out of a field, slowly, in every direction at once, leaving the ground changed. Dmitri stayed where he was and counted them out, because counting was the thing he did, and when the steps were empty, at half past ten, he had the number, and he stood a moment longer where the dead had testified, and then he went down into the emptied square and did not write the number down.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="21-the-peace-everyone-wants.html" class="nav-button">← Previous: Chapter 21: The Peace Everyone Wants</a>
+            <div class="nav-center">Chapter 22: No Revenge</div>
+            <a href="23-one-source-again.html" class="nav-button">Next: Chapter 23: One Source, Again →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+
