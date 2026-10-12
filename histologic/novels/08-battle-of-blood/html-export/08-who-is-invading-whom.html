@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Blood - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Blood</h1>
+            <div class="novel-meta">Novel 08 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="07-behind-the-lines.html" class="nav-button">← Previous: Chapter 7: Behind the Lines</a>
+            <div class="nav-center">Chapter 8: Who Is Invading Whom?</div>
+            <a href="09-the-wine-was-open.html" class="nav-button">Next: Chapter 9: The Wine Was Open →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 8: Who Is Invading Whom?</h1>
+<p><em>Friday, March 7, 2110. The capital and the border zone, Veridica</em></p>
+<hr>
+<p><em>Mar 7, 2110. 09:30. War cabinet. Involved parties: Maitland, O.; Chen, Z.; Wei, T.; Pell, I.; Chen, M. (adviser). Purpose: review of enemy objective.</em></p>
+<p>Marcus laid it out in the war cabinet the way he laid out an argument about the record, in order, with the pieces face up, because that was the only way he knew to make a room see a thing it did not want to see.</p>
+<p>Farahani, on the broadcast, to the nation: <em>We are not here for your cities.</em> True so far; the cities were not where the weight had gone.</p>
+<p>Kira's analysis, which he had from her and did not say he had from her: the axes of advance converged on the capital, on the central district, on the Spire. Ports at nought point nought five. Industry at nought point nought four.</p>
+<p>The damage log: bridges, rail yards, coastal relays, all struck. The capital's trunk cables and the Spire's power corridors, both within reach more than once, both untouched.</p>
+<p>The occupation, from the reports coming up the paper chain from behind the lines: disciplined, paying for bread, flogging its own thieves, handing out pencils at a table by a town hall door.</p>
+<p>"They want the Spire," said Marcus. "They want The Judge, intact. Everything they have done says so, and everything they have not done says so louder."</p>
+<p>He did not mention the map. Wei sat four places down the table with his tablet in front of him, courteous, waiting, and the map Wei had put on Kira's desk a week ago was folded in Marcus's own pocket now, and Marcus did not mention it, because a map that showed how to remove the core meant the core could be removed, and a thing that could be removed could be taken, and he was not going to say in this room, with Wei in it, that he knew the way in and out of the one thing the enemy had crossed an ocean for.</p>
+<p>"We should know how to deny them the core," he said.</p>
+<p>Maitland took his chin off his fist. "Destroy our own Judge."</p>
+<p>"Not yet," said Marcus. "But we should know how."</p>
+<p>The room was quiet for a moment. Maitland looked at the long window and neither agreed nor forbade. Chen Zhao, warm, with his glass of tea, said, "Cousin, it is the one thing keeping us alive. It is moving the whole city out of the way of the guns. You would blind us." Pell said, to the minutes, in his pleasant flat voice, "The adviser, at zero point five seven, proposes disarming the nation." Wei wrote one line on his tablet and said nothing, and Marcus watched him write it and could not read it, and noted, in his own head, <em>present, one line, said nothing.</em> The index on the registry stood at nought point five seven, unchanged, and Marcus noted it, and noted Pell noting it, and the two of them were building a thing between them, he could feel it, the way you feel a load coming onto a cable.</p>
+<p>Maitland closed the item without closing anything. "Find out whether it can be done," he said. "Tell me before you tell anyone else." It was not authority. It was not refusal. It was a tired man buying himself the right not to have decided, and Marcus recognised the shape of it, because he had asked for the same shape himself in August in this building, and had been handed it, and had used it.</p>
+<hr>
+<p>He drove west in the afternoon, himself, by day, because at nought point five seven he could go to the farmhouse only in daylight and had to be back before dark, and a commissioner's car on the farm track after nightfall was a thing the record would keep.</p>
+<p>The roads west were full of people going the other way. The coast was emptying into the interior, in the order The Judge had set, carts and cars and people on foot, and he drove against the current of it with the window down in the cold so that he would feel something true. He tried to count the carts at one point, out of the old habit, and lost the number somewhere in the forties, and reached for it and found a smooth place where the number should have been, and let it go. It was a small hole. He had learned which holes to fight for and which to let close, and a count of carts on a road was one to let close.</p>
+<p>He thought about Wei on the drive, because Wei was the hole in the middle of it. Wei had the architecture of the core; Wei was Head of Emergency Information; Wei had put a map on Kira's desk a week ago that showed how to take the core out, and said <em>you'll want this</em>, and walked away. A man who wanted the core defended did not hand you a map of how to remove it. A man who wanted it taken did not hand the map to the people trying to deny it to the enemy. Wei had done a thing that served either reading and settled neither, which was the thing Wei always did, and Marcus had learned that trying to read Wei was a way of being read by Wei, so he did not try; he only noted, driving, that the one man who could answer his question about the machine was the one man he would not ask, because asking Wei was a door he would not open, and that left one other person alive.</p>
+<p>The Judge had the architecture of its own core in Systems Architecture, which meant Wei had it, and Marcus would not ask Wei. The only other person alive who had compiled the whole design, who could tell him whether a machine built in 2066 had a way to be ended by the people who held it, was at a farmhouse in the border zone, at a stove, and he drove to her.</p>
+<hr>
+<p>The farmhouse barn still held the coast refugees. He came into the kitchen in the early dark of a winter afternoon and found Vance at the stove, stirring something in a pot with both hands on the spoon to hold it steady, and Old Songs on the bench beside the stove with a basket of potatoes between his knees, not humming. The old man looked at neither of them when Marcus came in. He had not hummed at Marcus, Kira had said, since October; and he did not hum now.</p>
+<p>The kitchen was warm and smelled of the thing in the pot and of the stove, and the barn beyond the window was quiet, the refugees settling for the afternoon, and it was the most ordinary room in the world, a woman at a stove and an old man with potatoes, and Marcus stood in it in his good Commission coat with a besieged capital behind him and felt the strangeness of having driven out of a war into a kitchen. He had done it before. He had driven out to this kitchen in another winter to ask this woman whether she had left a way to kill a machine, and she had said <em>there is a page</em>, and he had driven back with the sentence; and here he was again, with the war closer and the page still ungiven, and the ordinariness of the kitchen made the thing he had come to ask seem monstrous, which was perhaps why she stayed at the stove, so that it would be asked over an ordinary thing and not across a table like a tribunal.</p>
+<p>Marcus told her the pattern, standing, in order, the way he had told the cabinet. She stirred the pot and listened and did not interrupt. Then he asked her the thing he had come to ask.</p>
+<p>"When you built it," he said. "The Judge. Did you leave a way to stop it being used by whoever holds it? A way to kill it, if we had to?"</p>
+<p>Vance stopped stirring. She corrected the word, gently, without turning round, the way, Kira had told him, she corrected words, the way an old teacher corrects a pupil she is fond of.</p>
+<p>"'Kill,'" she said, "is a word for living things."</p>
+<p>A pause. The pot ticked against the ring. Old Songs did not look up from the potatoes.</p>
+<p>"There is a page," said Vance.</p>
+<p>Marcus stood very still. "May I see it."</p>
+<p>"No."</p>
+<p>"What's on it?"</p>
+<p>She turned back to the pot, and stirred it, and did not answer.</p>
+<p>"Where is it?"</p>
+<p>She said nothing at all. She stirred the pot, with both hands on the spoon, and the tremor went up the spoon into the surface of the thing she was stirring and made small rings in it, and the old man on the bench peeled a potato in one long curl and dropped the peel in the bucket and said nothing, and Marcus understood that the silence was not an argument he was going to win on a winter afternoon with the light already going and the road east to drive before dark. He understood that she had told him the one thing she meant to tell him, which was that an answer existed, and that she had decided, for reasons she was not going to give, that the time to give it was not now.</p>
+<p>He thanked her, which was a thing he did now instead of pressing, and she nodded without turning, and the old man did not look up, and he went out to the car.</p>
+<hr>
+<p>Dusk, in a lay-by on the road east, with the convoys of refugees still coming the other way in the dark, their lights swinging past him one after another, Marcus took out <em>QUESTIONS FOR THE WAR</em> and unfolded it on the wheel.</p>
+<p><em>Who is invading whom?</em></p>
+<p><em>Then what are they here for?</em></p>
+<p>He crossed out nothing. He never crossed out a question until it was answered, and these were not answered; they were only clearer. He wrote the new one under them, in his small pencil hand, by the light of the dashboard and the passing headlamps.</p>
+<p><em>What is on the page?</em></p>
+<p>He looked at it for a while. A page that existed, that Vance had built into a machine in 2066 and would not give him in 2110, that she would give, he thought, at some moment she had already fixed in her own mind and would not name. A page about ending the one thing the enemy had crossed an ocean for. He folded the list and put it away, and did not take out the sheet behind it, in Isaiah's hand, though he thought about it in the dark, with the lights going past. <em>Someone in Veridica wants to be invaded.</em> He still did not know who in the building it was about. But he had three questions on the list now, and they were starting, he thought, to point the same way, toward the Spire, toward the core, toward a page an old woman would not give him, and toward a hand in his own government that had wanted the enemy to come. He drove east, before the dark closed the gap entirely, and did not let himself close the question either.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="07-behind-the-lines.html" class="nav-button">← Previous: Chapter 7: Behind the Lines</a>
+            <div class="nav-center">Chapter 8: Who Is Invading Whom?</div>
+            <a href="09-the-wine-was-open.html" class="nav-button">Next: Chapter 9: The Wine Was Open →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

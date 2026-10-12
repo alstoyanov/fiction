@@ -19,7 +19,8 @@ Beneath it all lies a secret. The system was **designed**, including its wars, i
 | 5 | *The Lost Hour* (novel, ~113,000 words) | **Rewritten, first draft complete (Sept 2026)** |
 | 6 | *The Distributed Truth* (novel, ~114,000 words) | **Rewritten, first draft complete (Sept 2026)** |
 | 7 | *Battle of Truths* | **Rewritten; first draft of all chapters complete (Oct 2026)** |
-| 8–9 | *Battle of Blood*, *Architects of Chaos* | Plots and chapter summaries rewritten (Sept 2026); chapters to draft in order |
+| 8 | *Battle of Blood* | **Rewritten; first draft of all chapters complete (Oct 2026)** |
+| 9 | *Architects of Chaos* | Plots and chapter summaries rewritten (Sept 2026); chapters to draft |
 
 Details, dates and the provisional arc: **[SERIES-OVERVIEW.md](SERIES-OVERVIEW.md)**.
 

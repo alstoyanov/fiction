@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Blood - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Blood</h1>
+            <div class="novel-meta">Novel 08 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="30-it-moved.html" class="nav-button">← Previous: Chapter 30: It Moved</a>
+            <div class="nav-center">Epilogue: The Names</div>
+            <span class="nav-button disabled">Next →</span>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Epilogue: The Names</h1>
+<p><em>Friday, August 15, 2110. Veridica and Chronos</em></p>
+<hr>
+<p>In Chronos, in the morning, the count of the first human council was published, and the nation had elected people, for the first time in its history, to do the thing a machine had done for forty-three years, which was to decide. Julian Kovač was not on it, and did not want to be, and one of the council's first acts was to release him from maximum recording, and he felt no difference when it happened, only knew that it had, as he had known everything at maximum, by the indicator at the door changing, not by any sensation. Adrian was beside him, as he had been beside him for months, in the room that was his own again, where his eyes recorded nothing now but what any man's eyes recorded, which was nothing, which was the strangest thing of all, to look at a page and know that only he would ever know what was on it unless he chose to show it. He wrote one line in the journal that was his own again, and closed it before the thought about Marcus could form, the way he had learned to close it, and Adrian did not ask what he had written, and that was the whole of the privacy he had got back, and it was enough.</p>
+<hr>
+<p>At midday Colonel Yevgenia Sokolov stopped at the lakeshore checkpoint on her way back from the capital, as she always stopped, and Dmitri Volkov was there, because his company had been stood down and he had not yet decided what a man did after a war he survived.</p>
+<p>She had been offered the rank of General, she said, formally, and had refused it. "I would like to stay where I am." And then, low, on the way back to the car, the real sentence, the one that came last: "I was apparently very good at it." Dmitri did not use a contraction. He counted the cars through the checkpoint as he had always counted them, and he counted, among the people he knew, one fewer brother, the one who had been first by thirty seconds, who had never minded; and he did not say it, because it did not want saying to Sokolov, who read a thing without being told; and she nodded to him, once, and went, and the checkpoint was quiet, and traffic was normal.</p>
+<hr>
+<p>In the afternoon the Chronos field hospital at the eastern edge of the capital was being struck to go home, the tents coming down one by one over the frozen fields that were not frozen now, in August, and in the linen room, where Tanaka had read Principle Four aloud in April, Isaiah Okonkwo and Yuki Tanaka began the book.</p>
+<p><em>The Cost of Certainty.</em> His words, her case notes. He filed the first page with his prefix and a sequence number and the date, because a book begun in order was a book that would be finished in order; and she gave him one case note, unfinished at <em>Treatment:</em>, the way she had left it in April; and he did not finish it for her on the page, because a thing she had left open was a thing he had no right to close, and a book that began with an open line was, he thought, the only honest kind of book to write about a war that had ended with two nations having to decide for themselves, with no machine and no certainty, what any of it had meant.</p>
+<hr>
+<p>The visiting room was clean and warm and had its one tree in the yard, in leaf now, in August, and her father was thinner, and the war powers that had released him had lapsed with the ceasefire, and he was back where she had visited him every month for three years, and the first Saturday of the month had its visit again, as if the war and the broadcast and the city coming off the carrier had been a thing that happened between two prison visits, which, she supposed, for him, it had. He was courteous and interested and pleased to see her, and he did not ask about his trial or his sentence or whether he would be released again, because those were not interesting; he asked the one thing that was interesting, the thing he had wanted since the day on the calibration floor when he told her how to turn the carrier off and sent her away to do it so that he could not.</p>
+<p>Maya Reeves visited her father, who was back in prison, courteous and interested, pleased to see her, thinner. He asked her one question, the only question, the question he had wanted the answer to since the day he told her how to turn the carrier off.</p>
+<p>"Was it interesting?" said Dr. Reeves. "A population. Waking up."</p>
+<p>"Yes," said Maya, truthfully, because it had been, because a city coming off the dose over a morning, screaming and arguing and grieving and alive, had been the most interesting and most terrible thing she had ever watched, and she would not lie to him about it, because lying to him was a thing that gave him something and she gave him nothing now.</p>
+<p>That evening she wrote her monthly entry in the journal Nikolai had given her, and she wrote neither <em>He didn't do it</em> nor <em>He is doing it now.</em> She wrote the date, and left the line after it empty, because the two lines she had written for three years were both finished now, the one true and the one true, and there was nothing to write in their place yet, and an empty line under a date was a truer thing than either of the old lines would have been.</p>
+<hr>
+<p>In a private hand, dated the fifteenth of August, on a page with no scene around it and no reader, Thomas Wei wrote one line.</p>
+<p><em>They ended it themselves. That was in no one's design. Not even hers.</em></p>
+<hr>
+<p>At two o'clock in the afternoon, in the central plaza, the people came to the Lost Hour stone, as they came on the fifteenth of every month, and on the side of the stone there were new names cut, the war's dead, from both shores and from the Sovereignty, taken from the journals, because the journals were the record now, there being no other. Marcus found <em>Alexei Volkov</em> among the thousands, and <em>Nora Chen</em>, and stood and read them, and Kira stood beside him, and they were still together, strained and still together, and this time, during the song, her hand found his. Chen Zhao's Commission of Rebuilding had its first sitting the next week, and Marcus had not answered him, and the empty seat at it would wait, and that was a thing for another book.</p>
+<p>Marcus thought of the list, which he carried still, <em>QUESTIONS FOR THE WAR</em>, with its last entry, <em>Where is east?</em>, unanswered and perhaps unanswerable, a thing for another year. He thought of Chen Zhao's Commission and the empty seat at it and the offer he had not answered, and of page 30, and of a dead woman's warning that the design accepted offers, and he thought that he would go on the Commission or he would not, and either way the design had a place for it, and the only thing he had that the design did not have a place for was the thing happening now in the plaza, the names cut in the stone and the old man about to sing them, because the design kept a record and the record did not keep the dead and the song did. He put the list in his pocket and did not take it out again that afternoon.</p>
+<p>And Old Songs stood at the stone, officially dead, in the open air of the capital he did not go into, and sang "The Names."</p>
+<p>He sang <em>Alexei Volkov</em>, and <em>Elise Vance</em>, and <em>Nora Chen</em>, and the long list after them, from every side, Veridican and Chronos and Sovereignty, a general and a gunner and a girl of nine and a soldier from a ditch whose name a boy had carried inland, every verse one name, as long as the dead. He sang only a few of them aloud in full, because the dead were more than an afternoon, but he sang the shape of all of them, the pause where each name went, the refrain between.</p>
+<p><em>The record may forget them,</em> <em>the song will not forget;</em> <em>name them, and they stay.</em></p>
+<p>And children who did not know who he was, who had been born into a world with a machine in it and would grow up in a world without one, learned the refrain in the first few verses, the way children learn a round, <em>name them, and they stay</em>, and sang it with him, and went on singing it after he had stopped, their voices carrying it on through the plaza, past the stone with its new names, under the tall windows, so that the song went on in mouths that were not his, which was the thing he had wanted since he first hummed a tune through a slot in a cell door forty years ago: that the song should outlive the singer, because it had many singers.</p>
+<p>Every phrase of it lifted at the end, like a question, and the children did not try to answer it; they only sang it again, and again, carrying it on.</p>
+<p>Marcus had no fact entry for it. He stood with Kira's hand in his and the new names cut in the stone and the children's voices going on, and he did not reach for a column to put it in, because it did not go in a column, because it was the one thing in forty-four years that no record would ever hold and the song would, and he let it be that, and did not write it down.</p>
+<p>The machine is gone. The names remain.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="30-it-moved.html" class="nav-button">← Previous: Chapter 30: It Moved</a>
+            <div class="nav-center">Epilogue: The Names</div>
+            <span class="nav-button disabled">Next →</span>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

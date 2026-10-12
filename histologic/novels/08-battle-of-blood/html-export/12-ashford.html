@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Blood - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Blood</h1>
+            <div class="novel-meta">Novel 08 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="11-two-nations-one-core.html" class="nav-button">← Previous: Chapter 11: Two Nations, One Core</a>
+            <div class="nav-center">Chapter 12: Ashford</div>
+            <a href="13-artillery.html" class="nav-button">Next: Chapter 13: Artillery →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 12: Ashford</h1>
+<p><em>Friday, March 21, 2110. The capital, Veridica</em></p>
+<hr>
+<p>At ten to six in the morning Helena Kovač sat at the table in her flat with the file she did not like and the plant on the sill that she still watered too much, and she had not slept, and the guns to the east were audible now at night, a long way off, a pressure in the dark more than a sound.</p>
+<p>The file had come to the intake by Public Order courier on Tuesday, the morning after the order was signed, with a deadline of five o'clock on Friday. She had read her part of it three times, which was two more than she needed, because the reading was not the difficulty.</p>
+<p>It was a thick card cover with a typed label, and the label had two lines. The first: <em>STABILISATION OF SYMPATHISERS ORDER (WAR POWERS), 17 MARCH 2110.</em> And beneath it, as the file's own title, the thing that had kept her at the table in the dark since Tuesday: <em>CORRECTION OVER PUNISHMENT.</em></p>
+<p>Her copy was an extract only, <em>Schedule 3, Duties of the Registrar of Testimony</em>. She did not have the preamble, and she did not have the technical file; those were above her clearance, restricted under war powers. But the extract carried a recital, the dry legal sentence that said what the order was for, and the recital said the order was <em>regularising the stabilisation measures in effect in designated districts under emergency information powers since 24 February 2110.</em></p>
+<p>She read the date twice. The twenty-fourth of February. A law signed on the seventeenth of March, to regularise measures that had been running since the twenty-fourth of February. A law written for something that was already happening. She did not know what the measures were, and the order would not tell her, and the sentence told her only that whatever they were, they had been running for three weeks before anyone made them lawful. She noted it in her own folder, in her own hand, without comment, because a thing noted was a thing kept, and she had learned to keep things on paper because paper could not be adjusted in the night so that it had always said something else.</p>
+<hr>
+<p>The title she had seen before.</p>
+<p>She had seen it once, in Marcus's pencil, on his notes of copy VII's contents page, in the winter: <em>Correction Over Punishment …… IV …… 18.</em> The fourth principle of a design older than the nation, whose text nobody in the circle had, whose title they had known since Book 7 and nothing more. And here it was, on a government file, as the name of a law. Nobody in the circle had the text of Principle Four. Someone in the government had it, had had it, had put its heading on a file as if it were theirs to use.</p>
+<p>She wrote that down first, because it was true: <em>The order is titled with the heading of Principle Four. Someone in the government has the principle.</em> And then she wrote nothing after it, because there was nothing she could add that she could stand behind, and she did not add things she could not stand behind.</p>
+<hr>
+<p>Schedule 3, in order, the way she would brief a committee.</p>
+<p>One. The Registrar was to transfer to Public Order the intake's register of depositors: every citizen who had deposited a written journal or testimony since 2107, for assessment of sympathy.</p>
+<p>Two. The Registrar, as custodian of Ashford's records since 2107, was to countersign the recommissioning of Ashford Correctional Facility, for the treatment of enemy sympathy.</p>
+<p>Three. The categories to be assessed were journal keepers, and persons who had accepted SFW paper on the occupied coast.</p>
+<p>She sat and looked at the three duties for a while. They were asking the woman who had run Ashford for eleven years to sign it open again, and to hand over the names of the people who wrote things down. They were asking her to turn the register of testimony, which people had given freely, under a doctrine she had helped carry up the steps of the Justice Center, into a list of suspects. They were asking her, in a file that bore the title of a principle she did not have the text of, to do the thing she had spent the last four years of her life learning she could not go on doing.</p>
+<p>At nine the intake opened as it always did, and the depositors queued in the hall with their books, even now, even under the guns, and she watched them from the doorway of her office. An old man with a cloth-bound journal. A young woman copying something from one book into another at a writing desk, her tongue between her teeth. A boy with his dead father's diary in a carrier bag. Some of them were in Ashford's old files; she knew their names without looking; and the order wanted their names transferred to Public Order for assessment.</p>
+<p>She had built this intake, in a way. She had not designed the hall, but she had insisted on the paper, the ledger, the pens on chains, the slot in the wall that anyone could use at any hour; she had refused the Commission's very good electronic system and asked for a ledger, because paper could not be adjusted, and she had watched, over three years, a nation learn that a thing written in its own hand and brought to a counter was a thing that could not be taken away from it in the night. People trusted the intake. That was the thing the order asked her to spend. A woman brought her dead son's journal to a counter because she trusted that the counter would keep it and not use it; and the order asked the Registrar to take the register of everyone who had trusted the counter and hand it to the men who would decide which of them needed correcting; and Kovač stood in the doorway and watched the queue and understood that to sign Schedule 3 was to turn the one thing she had built that worked into a trap, and that a trap built out of people's trust was the worst kind, because it only worked once, and after it the counter was never trusted again, and a nation that could not trust a counter went back to trusting a machine, which was the whole of what the design had always wanted.</p>
+<p>At half past nine she telephoned Public Order and asked for the full order, with its preamble. The voice on the line was pleasant and certain and told her that the full order was restricted under war powers and not available to the Registrar. She said, "Thank you. I'll note that," in her administrative voice, because the line was recorded and the administrative voice was the one she kept for the record, and she noted it, in her folder, under the date.</p>
+<hr>
+<p>At a quarter past ten she took stock of what she had signed in her life, in a flat inventory, because the stocktaking was part of the decision and she would not skip it.</p>
+<p>Eleven years as Director of Ashford. <em>Remains processed according to standard protocols. No family viewing.</em> She had signed that form a hundred times. Ten false deaths certified, to get ten people out of a building alive. Four years of keeping a folder of the patients the protocols went too far with, on paper, because on paper nobody could adjust them, and doing nothing else with it for four years, keeping the folder instead of acting, telling herself the keeping was a kind of resistance when it was a cleaner way of doing nothing. And then the letter, last winter, that she had kept in a box for nearly two years without reading it closely, a frightened nephew's letter, and a boy at maximum across the lake because she had read the record and not her own cupboard. <em>Not again.</em> She had said it to herself in a cold flat in November, kneeling on the floor. She pushed her glasses up her nose.</p>
+<p>At eleven she typed the refusal on intake paper, three points, and signed it in her own name.</p>
+<p><em>1. The register of depositors is testimony, given freely under the Doctrine. It is not evidence against the people who gave it. I will not transfer it.</em></p>
+<p><em>2. I directed Ashford for eleven years. I will not countersign its reopening.</em></p>
+<p><em>3. I decline both duties in Schedule 3.</em></p>
+<p><em>H. Kovač, Registrar of Testimony.</em></p>
+<p>She sent the original back by the returning courier, and filed the carbon in her own folder. She knew exactly what the refusal would do, which was to delay a transfer by an afternoon and prevent nothing; the register would go to Public Order under someone else's signature by Monday; the only thing her refusal changed was whose name was on the thing. But it was on paper, in her hand, and that was the point of it. A refusal that could not be adjusted was a refusal that would still be there in ten years when someone asked who had said no.</p>
+<hr>
+<p>At twenty to four the removal came, quick and courteous.</p>
+<p>A letter from the Ministry of Historical Integrity, over Chen Zhao's signature, thanked her warmly for a lifetime of careful records and relieved her as Registrar of Testimony with immediate effect. There was no hard order in it anywhere; there never was, with him; only a kind one. An acting Registrar arrived, unnamed, with a Public Order officer and a handover inventory, and she handed over the keys the inventory listed: the office, the hall, the strongroom, the ring passing from her hand to the acting Registrar's with the small cold finality of a thing done.</p>
+<p>The key to the basement archive was not on the inventory. It was an old key, from 2107, that lived on her own ring with her flat keys, and the inventory did not list it, and nobody asked for it, because it was not on a form, and a thing not on a form did not exist to a handover. She noticed it on her ring, among the flat keys, and she said nothing, and put the ring back in her pocket, and noted, in the place where she noted things she would use later, that she still held one key to the one building she had once run, and that it opened the room under the intake where the paper of the Doctrine years was kept.</p>
+<p>On the shelf behind her desk were her own folders: Ashford, the Commission, the certificates, and at the end, in block capitals, <em>ANSWERED.</em> She took those, in one box. The depositors' boxes were the depositors', and she had no right to them and did not take them.</p>
+<p>The acting Registrar was a young man, pleasant and frightened, who did not meet her eyes and called her Director by mistake and then corrected himself, and she did not correct him back, because he would be signing Schedule 3 by Monday whatever he called her, and there was nothing to be gained by making him feel it. The Public Order officer stood by the strongroom and watched the keys change hands and ticked them off the inventory, and did not tick the one key that was not on it, because a thing not on the inventory did not exist to him, and Kovač kept her face still, the administrative face, the face for when the recording was on, and the recording was always on now.</p>
+<p>At half past six she walked out through the intake hall, past the queue that was still there, with the one box held against her coat, and she did not look back at the building. She looked at the queue. People were still bringing their books to a counter whose Registrar had just been removed for refusing to hand their names over, and did not know it, and stood patiently with their journals under the guns, and she thought that the queue was the only part of the whole day that was not about her, and so it was the part worth looking at, and she looked at it until she was through the door and into the street.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="11-two-nations-one-core.html" class="nav-button">← Previous: Chapter 11: Two Nations, One Core</a>
+            <div class="nav-center">Chapter 12: Ashford</div>
+            <a href="13-artillery.html" class="nav-button">Next: Chapter 13: Artillery →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

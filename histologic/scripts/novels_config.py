@@ -231,6 +231,61 @@ It works far beyond its purpose. The two nations' records turn out to be one sys
             ]),
         ],
     },
+    "08": {
+        "dir": Path("novels/08-battle-of-blood"),
+        "epub": "battle-of-blood.epub",
+        "title": "Battle of Blood",
+        "subtitle": "Novel 08 of the Histologic Series",
+        "description": """An SFW fleet lands on Veridica's Atlantic coast. Its soldiers have no interfaces, so no storm can turn them and no seeding can reach them, and every weapon Veridica spent forty years perfecting is useless. The Sovereignty has come for The Judge, which now holds the record of two nations, and the heroes fight a war they were never built for.
+
+Then they learn who invited it. Behind the front, under cover of the invasion, a whole people is being corrected by broadcast, and the order quotes a principle written in 1966. At the end, with the enemy at the gates, the First Minister signs the machine away to save the city, and that act, not a bomb, ends The Judge, by its maker's hidden design. This time the heroes ask Chronos first.""",
+        "parts": [
+            ('Prologue', [
+                ('00-prologue.md', 'Prologue', 'Landfall', 'Sokolov'),
+            ]),
+            ('Part One: Landfall', [
+                ('01-questions-for-the-war.md', 'Chapter 1', 'Questions for the War', 'Marcus'),
+                ('02-no-storm-will-turn-them.md', 'Chapter 2', 'No Storm Will Turn Them', 'Dmitri'),
+                ('03-embedded.md', 'Chapter 3', 'Embedded', 'Isaiah'),
+                ('04-the-names-longer.md', 'Chapter 4', 'The Names, Longer', 'Old Songs'),
+                ('05-the-judge-at-war.md', 'Chapter 5', 'The Judge at War', 'Kira'),
+                ('06-field-hospital.md', 'Chapter 6', 'Field Hospital', 'Tanaka'),
+                ('07-behind-the-lines.md', 'Chapter 7', 'Behind the Lines', 'Elena'),
+                ('08-who-is-invading-whom.md', 'Chapter 8', 'Who Is Invading Whom?', 'Marcus'),
+            ]),
+            ('Part Two: The Leak', [
+                ('09-the-wine-was-open.md', 'Chapter 9', 'The Wine Was Open', 'Sokolov'),
+                ('10-nora.md', 'Chapter 10', 'Nora', 'Isaiah'),
+                ('11-two-nations-one-core.md', 'Chapter 11', 'Two Nations, One Core', 'Nikolai'),
+                ('12-ashford.md', 'Chapter 12', 'Ashford', 'Kovač'),
+                ('13-artillery.md', 'Chapter 13', 'Artillery', 'Alexei'),
+                ('14-release.md', 'Chapter 14', 'Release', 'Maya'),
+                ('15-siege.md', 'Chapter 15', 'Siege', 'Marcus'),
+                ('16-not-before.md', 'Chapter 16', 'Not Before', 'Old Songs'),
+            ]),
+            ('Part Three: The Broadcast', [
+                ('17-certainty-is-care.md', 'Chapter 17', 'Certainty Is Care', 'Tanaka'),
+                ('18-read-your-own-book.md', 'Chapter 18', 'Read Your Own Book', 'Kira'),
+                ('19-across-the-lines.md', 'Chapter 19', 'Across the Lines', 'Isaiah'),
+                ('20-thirty-seconds.md', 'Chapter 20', 'Thirty Seconds', 'Dmitri'),
+                ('21-the-sympathisers.md', 'Chapter 21', 'The Sympathisers', 'Marcus'),
+                ('22-dad.md', 'Chapter 22', 'Dad', 'Maya'),
+                ('23-silence.md', 'Chapter 23', 'Silence', 'Nikolai'),
+            ]),
+            ('Part Four: Seven', [
+                ('24-terms.md', 'Chapter 24', 'Terms', 'Marcus'),
+                ('25-the-page.md', 'Chapter 25', 'The Page', 'Kira'),
+                ('26-consent.md', 'Chapter 26', 'Consent', 'Julian'),
+                ('27-the-core.md', 'Chapter 27', 'The Core', 'Nora Chen'),
+                ('28-truth-endures.md', 'Chapter 28', 'Truth Endures', 'Kira'),
+                ('29-elise.md', 'Chapter 29', 'Elise', 'Old Songs'),
+                ('30-it-moved.md', 'Chapter 30', 'It Moved', 'Marcus'),
+            ]),
+            ('Epilogue', [
+                ('31-epilogue.md', 'Epilogue', 'The Names', None),
+            ]),
+        ],
+    },
 }
 
 

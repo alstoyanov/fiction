@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Blood - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Blood</h1>
+            <div class="novel-meta">Novel 08 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="20-thirty-seconds.html" class="nav-button">← Previous: Chapter 20: Thirty Seconds</a>
+            <div class="nav-center">Chapter 21: The Sympathisers</div>
+            <a href="22-dad.html" class="nav-button">Next: Chapter 22: Dad →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 21: The Sympathisers</h1>
+<p><em>Wednesday, April 30, 2110. The besieged capital, Veridica</em></p>
+<hr>
+<p><em>Apr 30, 2110. 07:00. Public registry. Stabilisation of Sympathisers Order, list of persons of stabilisation concern. Compiled by: Public Order (Pell, I.). Status:</em></p>
+<p>Marcus read it at the kitchen table in the gray before dawn, with Kira beside him, and he left the last field open, because the status was not a thing he could write yet.</p>
+<p>The list ran to thousands of names, across the capital and the lakeshore, sorted into three kinds. Journal keepers. Doubters, which meant people whose index had risen after they spoke against Stabilisation. And people who had gathered, and at that third category Marcus stopped, because he recognised the source of it. The Judge had counted the cellars. It could not read what people read in a cellar under a bakery, but it could count thirty telemetry points gathered in a cellar at half past seven, and it had counted them, and Pell had turned the count into a category, and the people who had come to read their own books to each other were on a list for having come.</p>
+<p>Listed persons were to present for stabilisation assessment at the reopened Ashford.</p>
+<p>On the list were Ruth Calloway, of Kestrel Point, a journal keeper. Kira Osman. And Marcus Chen.</p>
+<p>Kira's index was below the line, so she had no custody order; but her Spire access was suspended, pending assessment, as of half past seven, and she was off war coordination. They read it together at the table, and she said nothing for a moment, and then she said, "Nikolai still has his," which was the thing that mattered, that one of them was still inside the Spire's systems, and Marcus noted it and did not ask what she meant to do with it, because she did not know yet and neither did he.</p>
+<hr>
+<p>At half past eight the war cabinet met, and Pell presented the list, and read from the order's preamble as if it were his own tongue.</p>
+<p>"'Certainty is care,'" said Pell, pleasantly, to the room, as a man reads out a principle he approves of.</p>
+<p>Marcus heard it. He heard the page Tanaka had read aloud in a linen room across a lake of fields, the page he had from Kira's hand copy, in a minister's mouth, as policy, as the preamble of a law that was rounding up the people who wrote things down; and he did not show that he heard it, because showing it was a thing that would be noted, and he was being noted enough. Chen Zhao, warm, with his glass of tea, said, "Restorative stabilisation, cousin. It is a kindness. Nobody is being made to suffer." Wei was at the end of the table, taking notes, and Marcus's fact entry recorded him as <em>present, said nothing.</em> Maitland was tired and did not meet his eye.</p>
+<p>"Your name is there because the record put it there, Marcus," said Maitland. "I can't take it off. I don't put the names on and I can't take them off. That is the whole of what the record is for."</p>
+<p>Marcus argued against the order, in order, as he had on the fourth. The patients' identical sentence, which he now had from Kira who had it from Tanaka. The broadcast schedule that matched the onset of the sentence district by district. The carrier that was a man's old calibration on the national network. He laid it out plainly, and the public registry panel on the wall showed his index, nought point five nine, while he spoke.</p>
+<p>At fifty-two minutes past ten, while he was still speaking, it became nought point six one.</p>
+<p>He watched it change. He was looking at the panel when it happened, because he had learned, in a white room, to watch the number that measured him rather than look away from it, and he saw the nine become a one, nought point six one, while his own voice was still in the air arguing that the order was wrong. The list had fed the record; the record fed the list; a man who argued against the order rose in the index for arguing, and the rise put him over the line, and the line put him on the list, and the list was the thing he was arguing against. It was a closed circle, and he had walked into the centre of it on purpose, because the alternative was to stop arguing, and he would not stop arguing, and so the circle closed on him exactly as it was built to close on anyone who would not stop. At four minutes past eleven a custody order was issued, automatically, by the machine, with no hand on it, for Marcus Chen, commissioner, civilian adviser to the war cabinet, index nought point six one.</p>
+<p>Nobody in the room looked at him when it issued. That was the thing he would remember: that a custody order came for a man at a cabinet table and nobody looked at him, because the order had come from the machine and not from any of them, and a thing the machine did was a thing no one in the room had done, and so no one in the room had to meet his eye. Maitland looked at the window. Chen Zhao looked at his tea. Pell looked at his folder, with the small satisfaction of a man whose list had been confirmed by a higher authority. Wei looked at his tablet and wrote one line. And Marcus stood up, at an ordinary pace, because he did not run.</p>
+<hr>
+<p>He did not run.</p>
+<p>It was his oldest rule, from a café by a fountain and a Ministry corridor and a white room: running proved the charge; a man who ran told the record he was guilty; and so he walked out of the cabinet room at an ordinary pace, with his heart going, with a Public Order officer in the corridor who looked at him and did not yet move, because the order was four minutes old and the building was large.</p>
+<p>Kovač was waiting in the corridor, in her dark coat, with her hands in her pockets. She had read the list at seven. She had been removed as Registrar in March, but nobody had asked for one key, because it was not on a form, and she had it still.</p>
+<p>"You won't be tried, Mr. Chen," she said, flat, in order, the way she briefed. "You'll be stabilised. There'll be nothing to prove afterwards, because you won't want to. That is the difference between this and a trial. A trial leaves a defendant. This leaves a grateful man."</p>
+<p>"I don't run," said Marcus.</p>
+<p>"You're not running," said Kovač. "You're being filed. There is a difference, and you of all people should see it. A man who runs is a man the record can follow. A man who is filed in the right box is a man the record stops looking for. I am going to put you in a box it has stopped looking at." She pushed her glasses up her nose. "The basement archive. Under the intake. The paper of the Doctrine years. Nobody has gone down there since I left, because it is not anyone's job now, and the key is not on a form."</p>
+<hr>
+<p>In the afternoon he went to the Chronos field hospital, as the war adviser, on a routine visit, and Morrison spoofed his telemetry.</p>
+<p>Morrison apologised too much while he did it, the way he always had, his pale eyes on the console and his hands steady; and when it was done, Marcus's trace ended in a shelled block two streets east, where a relay had failed at ten past three, and the record showed him as location unknown, neither dead nor defected, a man whose telemetry had stopped in a block the Sovereignty's guns had found. The Judge could no longer place him. It could place every other citizen in the besieged city, and it could not place him, because Morrison had reached into the thing Morrison had spent his life building and taken one man out of it. Tanaka put a hand on Marcus's arm and said only, "Mr. Chen," in the way she said a thing when there was too much to say, and he was glad of the economy of it.</p>
+<p>At dusk Kovač walked him across the seeded capital, through the orderly queues and the smiling volunteers, to the testimony intake. Under the spoof the broadcast still reached him, because a spoofed man still received, the record could lose him and the broadcast could not, and he felt the calm pressing at the edges of him as he walked, the dose reaching for his doubt, and he held his doubt the way he had learned to hold it, by remembering what he had written in January.</p>
+<p>The basement archive was rows of steel shelving under the intake, holding the paper testimony of the Doctrine years, boxes and folders and dates, the record their kind of people trusted because it could not be adjusted. There was a camp bed, a lamp, a bucket. It smelled of paper and damp and the faint cold mineral smell of concrete under a city. Marcus stood among the shelves with the lamp in his hand and read the labels, because reading was a thing to do, and the labels were dates and towns and the names of years, three years of a nation writing itself down by hand because it had learned it could not trust the machine to write it; and he was to be hidden among them, a commissioner the machine wanted corrected, filed in the one archive the machine did not read, which was the paper one, which was the one he had helped build.</p>
+<p>He put his paper copy of Nora's packets, the prints Isaiah had carried across the lines and sent him on the twenty-fourth, on a shelf among the folders, because a thing among the folders was a thing nobody would find. Kovač would carry one note a day to Kira. He wrote the first: <em>Filed. Safe. Read your book.</em></p>
+<p>At night the shelling shook dust down from the shelves, and he read his own journal by the lamp, to check that he still disagreed with the smiling city, and he did.</p>
+<p>In the dark between the shelves, Marcus wrote:</p>
+<p><em>Checked: the record wants me corrected. Unchecked: whether it's wrong.</em></p>
+<p>He looked at it for a while. Then he crossed out <em>whether</em>, because <em>whether</em> was a doubt he no longer had, because he had checked, in his own hand, in January and tonight both, and he was sure of the one thing the city had lost, which was that the record was wrong about him, and that being sure of it was the whole of what they were going to take, if they took him, and the one thing worth hiding in a basement to keep.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="20-thirty-seconds.html" class="nav-button">← Previous: Chapter 20: Thirty Seconds</a>
+            <div class="nav-center">Chapter 21: The Sympathisers</div>
+            <a href="22-dad.html" class="nav-button">Next: Chapter 22: Dad →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

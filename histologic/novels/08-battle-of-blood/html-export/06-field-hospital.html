@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Blood - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Blood</h1>
+            <div class="novel-meta">Novel 08 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="05-the-judge-at-war.html" class="nav-button">← Previous: Chapter 5: The Judge at War</a>
+            <div class="nav-center">Chapter 6: Field Hospital</div>
+            <a href="07-behind-the-lines.html" class="nav-button">Next: Chapter 7: Behind the Lines →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 6: Field Hospital</h1>
+<p><em>Monday, March 3, 2110. The Chronos field hospital, the eastern edge of the capital</em></p>
+<hr>
+<p><em>Mar 3, 2110. 06:40. Chronos Field Hospital, eastern edge of the capital. Beds: 180, of which erected: 96. Staff: Chronos, 212; Veridican, 4.</em></p>
+<p>Yuki Tanaka wrote it in the case book on her knee, in the triage tent, before the light was properly up, with the Chronos hospital badge clipped to the breast of her coat and her breath showing. She was fifty. She had been <em>STATUS: LIVING</em> in Veridica since December of 2106, which meant that for the first time in four years she stood on Veridican ground as a person the record admitted existed, and the strangeness of it had not worn off in the three days since the convoy crossed the lake. She was home, and lawfully, and the home she had come back to was a field of tents at the edge of the city that had made her a prisoner.</p>
+<p>Across the frozen fields to the north-east, over the stubble and the drainage ditches, the long low roofline of Ashford stood against the gray. She had looked at it once, when the convoy came in, and touched the thin pale scar on her right temple without deciding to, and had not looked at it again. It was there. It did not need looking at. A thing you had survived was a thing you kept in the place where you kept things, and you did not take it out to examine on a working morning.</p>
+<p>Chronos had sent the hospital because Chronos believed a history that had been written for it in a cold room in the Spire in October, by people she loved, and its Judge had read that history and found Veridica without responsibility for the wound of the Gap, at nought point nine three, so that Chronos was formally at peace with its old enemy, and more than at peace: a friend. When the Sovereignty landed, the friend sent a hospital, two hundred and twelve people and a hundred and eighty beds, across a lake, into a war. She knew exactly whose October had made that friendship. She had been in Chronos when the country woke up believing it. She said nothing, to anyone, about any of it, and she did not expect ever to be able to.</p>
+<hr>
+<p>Morrison had come with the convoy on Chronos papers.</p>
+<p>He wore a Chronos engineer's tabard and kept to the equipment tents, where the generators and the autoclaves and the cold-store units were, and he worked on them all day with his sleeves pushed up and his hands steady. In Veridica he was still officially dead, by his own choice, as she was officially alive by the Doctrine's; the two of them had crossed the fence into Chronos in different years for different reasons and come back the same way, under other papers, dead and living both wrong on the record and right in the only way that mattered, which was that they were here and breathing. Nobody in the capital had looked twice at a Chronos engineer named on a Chronos manifest. He had come, he had said on the lake crossing, in the flat way he said the few things he said, because somebody should be here who would know the look of a thing if it started, and she had not asked him what thing, because she had known.</p>
+<p>The first convoy of wounded came in at nine. Soldiers from the front on the capital road, and volunteers, and two civilians caught on a road the shelling had found. She worked triage until midday, and the work was the work: the quick hard sorting, this one now and that one later and this one not at all, the thing she had trained for in a life before any of it. She recited the surgical checklist under her breath between patients, the way she had recited it for twenty years, <em>step one, confirm patient identity</em>, not because this was surgery but because the checklist was the room she went into when the world was too much, and it held.</p>
+<p>The wounds were the wounds of the old war, which she had not treated in a long time: not the clean small scars of correction, the thin pale lines behind the ears, but the torn and dirty wounds of metal and blast, the kind her grandmother's generation had treated, that the Histologic world had thought itself done with. She set a boy's broken femur and splinted it and sent him back, and took a fragment from a man's shoulder and packed it and sent him back, and triaged a woman whose chest she could do nothing for and gave her something for the fear and sat with her for the three minutes she had to spare, which was all the medicine left; and between each she said a step of the checklist, <em>step nine, confirm allergies, step ten, confirm the anaesthetic plan</em>, and her husband's hands came and went in it, on the bow of a cello in a house in the hills, a man thirty years dead who lived in her now only in a list of forty-one steps, and she let him come and go and did not stop to feel it, because there was a convoy, and there would be another behind it, and a doctor who stopped to feel it was a doctor who lost the next one.</p>
+<p>At noon a shell found a Chronos ambulance on the road east, a kilometre off, and two orderlies died in it, both of them young, both of them named on a Chronos manifest and nowhere in the Veridican record. She wrote it in the case book and could not finish the line. <em>Cause of death: shrapnel. Reason:</em> and there she stopped, because the honest end of the line was that they had died for a past they had never had, driving ambulances for a friend who had been made a friend in a cold room in October, and she was not going to write that in a book a Chronos auditor might one day read, and she was not going to write anything false either, so she left it, the colon and the space, the way she had learned to leave the lines she could not bear to close.</p>
+<hr>
+<p>Through the afternoon, in triage, she took the histories, because taking the history was half the medicine: name, district, what happened, what hurts. And through the afternoon, five patients, then seven, then more, all of them volunteers from the capital's own districts, answered a question she had not asked with the same sentence.</p>
+<p>The first was a boy of nineteen with a hand shattered by a shell fragment, a bad wound, the kind that frightened the young because they could see it. She dressed it and gave him something for the pain and asked him, as she asked them all, whether he was afraid, because a frightened patient was a patient who moved and tore things, and she needed to know. And the boy, with his hand ruined and his face gray, smiled at her, a small contented smile, and said, "We must be certain now."</p>
+<p>She wrote it down. It was an odd thing to say, but the young said odd things in a war; they repeated what they heard; it meant nothing on its own.</p>
+<p>A woman of sixty with shrapnel in her thigh said it too, an hour later, in the same words, in the same flat, contented tone, with the same small smile, when Tanaka asked her whether the pain was bad. "We must be certain now." Not <em>I'll be all right</em>, not <em>it hurts</em>, not any of the hundred things a woman with metal in her leg says. That sentence, like a thing recited.</p>
+<p>A man with a head laceration. A woman who had lost a brother at the coast and did not cry. A boy with burns. By the end of the afternoon she had it in eleven files, verbatim, with the patient's home district written beside each one, because she wrote the home district beside everything, it was part of the history, and because, writing it, she saw without quite letting herself see that the districts were not eleven different districts. They were three. The same three, over and over.</p>
+<p>She did not diagnose it. That was the discipline. A wartime slogan was a wartime slogan; people under siege said the same brave things to each other because they heard them said; there was a phrase on every wall by now and it would be in every mouth. She did not call it anything. She put it in the place where she kept the things she could not yet explain, unlabelled, beside the empty bed by the east window on a ward across a lake, beside Reyna Moss praying for her in a white room, beside <em>nobody who can't be seeded has seen her body</em>. She wrote the phrase and the three districts and closed the files and did not mention it to Morrison, who was under a generator all afternoon with a lamp and a wrench and did not come up.</p>
+<p>In the evening, in the ward tents, a shell landed a kilometre off and she set down a cup of tea very carefully, with both hands, the way she set down a cup when she was afraid. The Chronos nurses around her did not flinch. They went on with the drug round, folding and checking, unhurried. Their logs had never recorded a shelling. They did not yet know how to be afraid of one, because being afraid of a thing was, in part, a thing you learned from the record of having survived it, and their record had no such thing in it, and so the shells were only a noise, and they worked through the noise, cheerful and tireless and new to the whole of it.</p>
+<hr>
+<p>At half past ten she was in the linen store behind the laundry, folding sheets, because she could not sleep and folding sheets was a thing her hands could do while the rest of her stood a little to one side with a clipboard, and a young Chronos nurse was folding beside her, a girl of perhaps twenty-two, tired and content, who had volunteered for this because her log told her Veridica was a friend.</p>
+<p>The girl folded a sheet and smoothed it and said, simply, warmly, every word of it going into her life-log as she said it, because a Chronos citizen's every word was kept: "Why is Veridica so grateful to us? We've only done what anyone would do. You'd do it for a friend who never hurt you."</p>
+<p>Tanaka folded the sheet in her hands and squared the corners.</p>
+<p>She knew the honest answer. The honest answer was that Chronos's memory of its friend who never hurt it had been written in Veridica, last October, in a cold room under this very district, by Marcus and Kira and Nikolai and the rest of them, and that the girl was folding sheets in a war because of a lie that people Tanaka loved had put into a hundred and fifty million heads to stop a different war. The honest answer was that there was no friend; there was a nation that had been rewritten into friendship; and that the girl's gratitude, and her two dead colleagues on the road east, and the whole clean willing hospital, were the cost of it.</p>
+<p>And she knew, as she knew the honest answer, that anything she said in this room would be in this girl's log for ever, kept to the nanosecond, available to any Chronos auditor who ever wondered what the Veridican doctor had said to a nurse in a linen store in the third week of a war. She had spent her life learning what it cost to put a thing in a person's head against their will. She was not going to put this in a girl's head, true as it was, and record herself doing it.</p>
+<p>"Get some sleep," said Tanaka. "You've done a long day."</p>
+<p>And she folded the next sheet, and the girl folded hers, and the shells went on a kilometre off, and the honest answer stayed where she kept things, which was the one place in two nations that did not record what was put there, which was inside her own head, which was, she thought, folding, the last unlogged room she had.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="05-the-judge-at-war.html" class="nav-button">← Previous: Chapter 5: The Judge at War</a>
+            <div class="nav-center">Chapter 6: Field Hospital</div>
+            <a href="07-behind-the-lines.html" class="nav-button">Next: Chapter 7: Behind the Lines →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

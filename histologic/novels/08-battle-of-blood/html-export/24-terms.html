@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Blood - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Blood</h1>
+            <div class="novel-meta">Novel 08 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="23-silence.html" class="nav-button">← Previous: Chapter 23: Silence</a>
+            <div class="nav-center">Chapter 24: Terms</div>
+            <a href="25-the-page.html" class="nav-button">Next: Chapter 25: The Page →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 24: Terms</h1>
+<p><em>Friday, May 16, 2110. The besieged capital and the western corridor, Veridica</em></p>
+<hr>
+<p><em>May 16, 2110. Basement archive, testimony intake. Day seventeen. Status: custody order (0.61). Location, per The Judge: unknown.</em></p>
+<p>Marcus wrote it at six, in the dark between the shelves, by the lamp, because the day had to be begun even in a basement, and a day begun with a fact entry was a day he had decided to keep. He had been down here since the thirtieth of April, since Morrison took him out of the record; he shaved in a sink meant for washing ink off hands; he knew the hour of the shelling above by the way the dust changed in the lamplight, a fine shaking down from the joists when a round landed near.</p>
+<p>The city had been awake for a week, since the carrier was cut at twelve minutes past three, and it was frightened for the right reasons now, and the testimony intake above him had become the place where people brought the names of their dead, on paper, because the record did not keep the enemy's dead and no longer, people felt, kept their own honestly either. Kovač filed them. Her count had passed the tens of thousands, soldiers and civilians, and she gave him the number flatly, as an item on an agenda, when she came down; and some of the names were the Sovereignty's, taken from the journals of people who had watched them die and copied the names off the tags.</p>
+<p>Since Wednesday the Sovereignty had held the streets around the Spire. It was at the gates. The Judge still coordinated what was left of the defence, and Marcus watched its panel on the stair when he went up for Kovač's note: every street, every shelter, every citizen's location, except his, which read <em>location unknown</em>, a man the machine had lost in a shelled block two streets east and could not find, because a man Morrison had spoofed was a man the record could lose.</p>
+<hr>
+<p>At ten past five Kovač came down with her hands in her coat pockets, and she had the terms.</p>
+<p>The draft terms had gone to the Commission's legal office on Thursday night for lawful form, she said, and she had not taken the draft, because she was removed and had no right to the draft; but she had copied it by hand, in her block capitals, because paper could not be adjusted and a thing she had copied in her own hand was a thing she would still have when the file was sealed. She read the key clause to him, and then gave him the copy.</p>
+<p><em>By order of the First Minister under the war powers, custody of the core of The Judge passes to the Sovereignty of Free Will, in exchange for a general ceasefire.</em></p>
+<p>The formal handover was set, she said, for Wednesday the twenty-first at half past one, in the Spire. She pushed her glasses up her nose. "It's lawful, Mr. Chen. I checked the form. The war powers cover it. He can do it, and he is going to do it, to stop the dying."</p>
+<p>Marcus read the clause, and saw what it was at once, the thing nobody else in the building seemed to see, because the building was looking at the ceasefire and he was looking at the core.</p>
+<p>The Judge was not one nation's machine any more. Since the twenty-sixth of October, Veridica's core had held Chronos's true source too; Nora's packets had said <em>the record of two nations</em>; Julian had written <em>if they take your Judge, they take ours</em>. Whoever held the core held the past of both. And the terms said nothing about Chronos. Nobody had asked Chronos. A hundred and fifty million people across a lake were about to have their past handed to the Sovereignty of Free Will in a clause that did not mention them, in exchange for a ceasefire in a war they were not even in.</p>
+<p>He sat with that in the dark between the shelves, with Kovač's hand-copied clause on his knee by the lamp, and he thought of October, of a cold room in the Spire and a knife held narrow and a scope indicator climbing past everything Kira had meant it to touch, and of what they had done to Chronos then without asking, and of Julian at maximum across a lake writing <em>I would like Chronos to be asked this time</em>. They had decided for Chronos once, by a knife, and it had rewritten a nation. Now Maitland was about to decide for Chronos again, by a signature, to save a city, and he did not even know he was deciding for Chronos, because the terms did not mention Chronos, because nobody in the great hall above him had thought about a hundred and fifty million people across a lake whose past was in the core being signed away. It was the same wrong, made twice, the second time by a good man to stop a slaughter, which was the worst way for a wrong to be made, because there was no one to blame for it and no way to stop it that did not cost the city.</p>
+<p>He wrote it under <em>QUESTIONS FOR THE WAR</em>, beneath the others, in his small pencil hand.</p>
+<p><em>Who asked Chronos?</em></p>
+<hr>
+<p>At eight Maitland was on the national broadcast, on Kovač's old receiver, which sat on a folder box among the shelves.</p>
+<p>He was tired and grieving and humane, the numbers first, then the terms in principle, then the date and the hour. He said one line that Marcus wrote down, because it was true and because it was the whole of why Marcus could not hate him: "I will not trade this city for a machine." Farahani's February promise stood behind it, <em>we are not here for your cities</em>, and Maitland had decided to believe it, and to give the Sovereignty the one thing it had come for, and keep the city, and stop the dying; and Marcus believed Maitland, and thought he was right about the city, and was afraid of what the terms gave away. <em>Both.</em> He let himself think the word once, the old word, the one Kira had taught him and Elena had taught Kira: a thing could be right and catastrophic at once, and a man had to hold both, and the holding was the whole of the job.</p>
+<p>And he remembered the sentence. In April Kira had come back from the farmhouse with Vance's words and told him: <em>I'll give it when they try to give it away. Not before.</em> He had kept the words on UNCHECKED ever since, under <em>What is on the page?</em>, for six weeks, not knowing what they meant. He read the clause again. <em>Custody of the core of The Judge passes to the Sovereignty of Free Will.</em> That was giving it away. That was the thing Vance had named, the thing she was waiting for, and it had a date on it now, Wednesday, half past one, and the page she would not give would be given, because the moment she had fixed in her own mind had come.</p>
+<hr>
+<p>Today's note had gone up to Kira at noon, as one went every day, carried by Kovač. Tonight Kira came herself, down the back stair, with Dmitri, whose company held the western corridor. Her name was on Pell's list and her Spire access was suspended, but she had no custody order; Marcus had one; and they went anyway, because the page was at the farmhouse and the farmhouse was reached through the corridor and the corridor closed at dusk.</p>
+<p>Kovač held the back door and did not come.</p>
+<p>"I'll keep the folders," she said. "It's what I do." She meant it as a joke against herself, the old joke, <em>I kept a folder, that's what I did</em>; and tonight it was not a joke, because keeping the folders was exactly what she was doing, staying in a basement with the paper of the Doctrine years while the city's one machine was signed away above her, and she knew it, and she pushed her glasses up her nose and held the door.</p>
+<hr>
+<p>Kira came down the back stair a little before ten, with Dmitri, and she had the day's note from Kira in her hand that Kovač had carried up, and she had come herself because the thing had gone past notes. She looked at Marcus in the lamplight among the folders, a commissioner living in a basement, thin, unshaven, hunted by his own record, and she did not say anything about how he looked, because they were a long way from saying things about how the other looked; she said, "She'll give it now. Vance. If they're giving it away, she'll give it. That's what the words meant." And Marcus said, "I know," because he had worked it out an hour ago, alone, among the folders, with the clause on his knee; and the two of them stood in the basement with the thing finally clear between them and did not need to say the rest of it, because the rest of it was a drive through a besieged city to a farmhouse to ask a dying woman for a page that would end two nations' machines, and that was not a thing you said, it was a thing you did.</p>
+<p>The western corridor ran toward the lakeshore under fire, and Dmitri drove, counting the shells aloud without a single contraction, and at a checkpoint short of his own lines a soldier knew Marcus's face from the published list.</p>
+<p>The Judge could not place him; the soldier could; a face was a thing a man carried in his head and the head was the one record the spoof had not reached. The soldier looked at him for a long time, a tired man a week off the dose, with his doubt back and his certainty gone, and Marcus did not run, because running proved the charge, and he sat in the car under the soldier's look and let himself be looked at.</p>
+<p>"Nobody's sure of anything now," the soldier said, at last, and it was not quite an accusation and not quite a mercy, and he waved them through.</p>
+<hr>
+<p>At about ten to five, the farmhouse lane, in real fog off the lake, with the far guns quiet and the dawn not yet up, there was a lamp lit in the kitchen window.</p>
+<p>Kira saw it first. "She's up."</p>
+<p>Marcus looked at the lamp in the window, before dawn, in a farmhouse at the end of a corridor out of a dying city, and began a fact entry in his head and did not finish it, because the end of it was a thing he did not yet have.</p>
+<p><em>Vance, E. Awake. Waiting for:</em></p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="23-silence.html" class="nav-button">← Previous: Chapter 23: Silence</a>
+            <div class="nav-center">Chapter 24: Terms</div>
+            <a href="25-the-page.html" class="nav-button">Next: Chapter 25: The Page →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

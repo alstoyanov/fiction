@@ -1,0 +1,59 @@
+# Chapter 5: The Judge at War
+
+*Thursday, February 27 – Friday, February 28, 2110. The Factorepo Spire, the capital*
+
+---
+
+*Feb 27, 2110. 22:10. Spire, war coordination. Staff on floor: thirty-one. Outputs pending: four hundred and six.*
+
+Kira Osman wrote it at the top of the night's sheet and then counted the floor to be sure of the thirty-one, because the room got loud and when it got loud she counted, and thirty-one people in a room the size of a tennis court threw a great deal of sound off the panels. Nikolai was at the next desk, where he had been since the twelfth, the two of them running the link between The Judge and the commands: the machine's determinations came up, and they turned them into things a tired colonel at the front could act on, and the colonel's reports went back and the machine ate them and gave more.
+
+She had spent five books fighting this machine, in one way or another, and she had spent the last three weeks watching it fight for them, and she had not reconciled the two things and did not try. It was the finest tool she had ever seen operated, and she had helped build parts of the Spire it lived in, and both were true.
+
+It had the whole national network: every road, every relay, and every citizen's position, carried in by the telemetry everyone wore from the age of eight. It moved evacuees around columns. It timed convoys to the minute and held junctions empty and filled them. It routed the ambulances not to the nearest hospital but to the one with a bed, because it knew which had a bed. Its language never changed, whatever it was doing: formal, probabilistic, exact, a determination and a number, no voice, no urgency, no advice, only the odds and the clock. It stated, and the officers read it out, and the reading-out was where the war was fought.
+
+And it was blind in one direction, which she made Nikolai log every shift, because the blindness was the truth of the thing. The Sovereignty's soldiers carried nothing that reported, and so they did not appear on the map. The Judge inferred them. It drew them from the holes: a town gone dark, a relay stopped, a column of telemetry broken and scattered on a road. The coastal relays had been dark since the landing week, and in the occupied strip the machine saw nothing at all and said so, as a number, *coverage: nil.* It was a map of a nation made entirely of light, and the enemy was the dark moving through it, felt only where the light went out.
+
+---
+
+At twenty to eleven a determination came up for a market town on the river road, eleven thousand people, and Kira pushed it through against the command's wishes, and spent the night watching it come true.
+
+*Probability of enemy advance through the town within 30 hours: 0.84. Recommended: full evacuation, north road, 23:30–04:00.* The front wanted to hold the town; it was a line on the map, a place to make a stand. Kira read the determination again, and the roads behind it, and the timing, and she called the command herself and argued it, levelly, which was how she argued when she was sure. A town held was a town fought through, house to house, with eleven thousand people in the houses. A town evacuated was a town the enemy walked into and found empty, and walked on. The machine had the roads and the clock. Let it move them.
+
+They let it. All night she watched eleven thousand points of light come off the town and north along the road in the order the machine had set, the far end of the column moving before the near end had finished forming, so that the road filled and did not jam. The Judge sent her a running count on the panel, updated each minute: *Evacuating: 11,040. Moved: 2,310. En route: 6,100. Remaining: 2,630.* She watched the last number fall, and the fourth column, *remaining*, drop toward zero through the small hours, and she thought, watching it, that she was watching a thing she would have given a great deal to have had at Ashford, a machine that could move everyone out of the path of a thing before the thing arrived; and she thought, in the same breath, that a machine that could move everyone could also hold everyone, could empty a town to save it or empty a town to take it, and that the difference between the two was not in the machine, which only moved the points of light where it was told, but in the hand on it, which tonight was hers and the command's and tomorrow might be anyone's.
+
+By a quarter past six on Friday morning the Sovereignty entered a town with nobody in it. No house-to-house. No civilian dead. She logged it: *Town: evacuated. Civilian casualties: none recorded.* She was proud of it, and underneath the pride was the other thing, which she also logged, to herself: that the machine had moved eleven thousand people in one night as easily as water down a drain, because it knew where every one of them was, and that a thing that could do that for you could do it to you, and that nobody in the room but her and Nikolai seemed to feel the second half of that at all.
+
+---
+
+In the morning she and Nikolai ran The Judge's analysis of the whole campaign, every enemy movement since the twelfth, and asked it where the Sovereignty was going, and it answered in numbers.
+
+*Objective probabilities. Ports: 0.05. Industrial districts: 0.04. Capital: 0.79.*
+
+She drew the projected axes on a paper map with a ruler, because a line she had drawn with her own hand was a line she had checked, and a line a screen drew for her was a line she had only been shown. The axes did not bend toward the harbours. They did not bend toward the factories or the power stations, which an army that wanted to cripple a nation would take first. They ran inland along the roads and converged on the capital, and inside the capital on the central district, and inside the central district they closed on one point, and she sat with the ruler in her hand and looked up at the ceiling of the building she was sitting in, which was the building the lines pointed at.
+
+She did not say the word. Nikolai did not say it either. He looked at her hands, which was what Nikolai did instead of saying a thing. She began a thought about what the core of this building held now, since October, since the night she had put a knife into a thing that turned out to be one thing, and she did not finish the thought, because the floor needed her and a thought you could not finish on a working floor was a thought that would make you useless. She filed it. It would land later; she could feel that it would land later; she set it down where it could land and went back to the outputs.
+
+There was one more thing, and she made Nikolai pull it from the damage log. The Sovereignty's aircraft had hit bridges, rail yards, coastal relays. They had not touched the capital's trunk cables. They had not touched the Spire's power corridors. Both had been within reach, more than once, and both still stood, and The Judge reported it without inference, as it reported everything, a list of what was struck and what was not. Kira made the inference it would not. You did not spare a thing you meant to destroy. You spared a thing you meant to take whole and working.
+
+---
+
+At twenty past one Thomas Wei came across the floor with nothing in his hands but a folded sheet of paper.
+
+She saw him come, because she had been watching for him on and off for two and a half years, the way you watch the one weather system that can ruin your harvest. He was Head of Emergency Information now; he had every reason to be on the war coordination floor; and he did not stop at any desk but hers. He did not speak to anyone on the way. He came to her desk, and put the folded sheet on it, and squared it to the edge with two fingers, and said, "You'll want this." Then he left, light on his feet, the way he moved, and she did not call after him and did not ask, because asking Wei a question was a way of being led by Wei, and she had learned that in a corridor in a different winter.
+
+She unfolded the sheet.
+
+It was a maintenance map of the Spire's core levels, the levels at and below the plaza, printed, from Systems Architecture's own archive. There was no author on it and no date. She knew these corridors, a little, from her years at the Spire on the sixtieth floor, but only as far as the doors she had been allowed through, and this map went past all of them: the rack halls, the cable galleries, the freight lifts, the service doors, the power corridors, all of it, drawn flat and exact. One dashed line was keyed with a single letter, **M**, and ran from a service door in the disused transit tunnel under the Spire, along and down, to the core's lower cable gallery, beneath the core hall itself. A maintenance route. A way in that did not go through any door she had ever been allowed through.
+
+---
+
+She knew these levels a little, from her years at the Spire, and she traced route M with a finger, the way she traced everything, to be sure it went where the legend said. It began at a service door she had never known was there, in the disused transit tunnel under the Spire, the old line that had been closed before she came to the Spire and sealed and forgotten; and it ran along and down, below the plaza, to the core's lower cable gallery, the space beneath the core hall itself, where the cables came up into the racks; and from the gallery a service stair went up into the hall. A way in from a sealed tunnel to the floor of the thing, that went through no door anyone guarded, because it went through doors no one remembered were there. She looked at it for a while. A route like that was not a thing a defence drew. A defence drew the doors it would hold. This drew the door nobody knew about, which was the door you used when you did not want to be seen using a door, going in or coming out.
+
+She read the legend last, the engineer's habit, because the legend told you what the map thought it was for.
+
+A defence map would have shown approaches and choke points and fields of fire: where you stand to stop a man getting in, where the corridors narrow, where one gun holds a hall. This legend showed none of that. It showed *withdrawal routes. Storage modules. Disconnection order. Freight lift 3, rated for rack load. Route M, maintenance access.* It was not a map for keeping the core. Every line on it was about getting the core out: how to disconnect it, in what order, which lift would bear the weight of a rack, which tunnel ran out under the city.
+
+She sat with it for a while. A map that showed how to remove a thing was a map made by someone who had thought about removing it. She did not know whether Wei had given it to her to help Veridica deny the core to the enemy, or to help the enemy take it, or for some third reason she could not see, and the map gave no sign, and his face had given none, and there had been only the two fingers squaring the edge. She folded it along its old creases, which were someone else's creases, and put it inside her jacket, and did not look toward the lifts Wei had taken.
+
+She would tell Marcus about it before the end of the week. Nikolai had seen it come. Nobody would tell the cabinet. It was, she thought, exactly the kind of thing their kind of people now did with a dangerous object: they kept it, on paper, in a pocket, and told the two or three they trusted, and waited to find out what it was for.

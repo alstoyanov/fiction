@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Blood - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Blood</h1>
+            <div class="novel-meta">Novel 08 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="16-not-before.html" class="nav-button">← Previous: Chapter 16: Not Before</a>
+            <div class="nav-center">Chapter 17: Certainty Is Care</div>
+            <a href="18-read-your-own-book.html" class="nav-button">Next: Chapter 18: Read Your Own Book →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 17: Certainty Is Care</h1>
+<p><em>Monday, April 14, 2110. The Chronos field hospital, the eastern edge of the capital</em></p>
+<hr>
+<p>At ten past six she went down the first line of beds, and the case notes came as they always came, in the clipped italic she thought in.</p>
+<p><em>Patient: male, 34, north district. Shrapnel, left thigh. Affect: calm, elevated. Asked whether he is afraid: "We must be certain now."</em></p>
+<p>Forty-one times, now, since the third of March. The same words, the same small contented smile, the same flat falling cadence. A shell landed somewhere to the east while she was taking the history, and the man did not flinch, and neither did the two patients in the beds either side of him, and she set her pen down for a moment and picked it up again.</p>
+<p>She asked the old question, the one from her Ashford years, the one she had used to find out how far a mind had gone: "Is there anything you are not sure of?" And the man said, "No," in the same falling cadence, the way they all said it, the way a settled thing is said, and she wrote the <em>No</em> down and the cadence beside it, because the cadence was the finding and the word was only the word.</p>
+<p>It was the <em>No</em> that frightened her, more than the sentence. A healthy mind, asked whether there was anything it was not sure of, took a moment, and found something, because there was always something; a person who was sure of everything was a person who had stopped living in the world, where nothing was ever quite sure; and she had used that question for twenty years precisely because the healthy failed it and the corrected passed it. These passed it. Forty-one of them passed it, in the same cadence, with the same small smile, a whole district of people who, asked what they doubted, found nothing, which was not a thing a district of living minds could do, which was a thing that had been done to them, carefully, by someone who knew that the quickest way to make a person certain was not to give them a certainty but to take away their doubt, and leave the certainty to grow in the space where the doubt had been.</p>
+<p>She ran the differential in her head, as she walked the line, because running the differential was the discipline and the discipline was the thing that kept her from either diagnosing too soon or refusing to diagnose at all.</p>
+<p>Not confabulation. Confabulation was individual; each confabulator built a different false story out of their own materials; these forty-one had built the same sentence.</p>
+<p>Not a storm. A storm flickered; a storm was two things at once, two piers, two weddings, a contradiction a mind could feel tearing; nothing here flickered; these people were not torn, they were settled, which was the opposite.</p>
+<p>Not the seeding she had diagnosed in Book 5, where a broadcast painted one detail over a memory and left the small true things alone; that left a seam, a bandaged hand, a thing that did not fit; here there was no seam, because here nothing had been painted in. Something had been taken out. The doubt had been taken out, and a sentence left in its place, and that was a thing she had seen the plan of once, at a kitchen table in 2105, reading a protocol with her cup set down because she was afraid she would drop it: <em>erase, then seed.</em> Reeves's phrase.</p>
+<hr>
+<p>In her office she had pinned a paper map of the capital's districts to the wall, and she had pencilled onto it the onset date of each of the forty-one, and the map told her the thing the individual files could not.</p>
+<p>The onsets did not spread. A thing that spread, an infection, a rumour, a fear, moved from person to person and street to street, fuzzily, with a front. These did not spread. They arrived. District by district, cleanly, a whole district at once, as if a switch had been thrown over it. Three districts came first, with onsets from the last week of February, her earliest patients, the ones from the third of March. Then the rest, about a week apart, from late March.</p>
+<p><em>Presentation: identical, forty-one patients. Doubt: absent. This is clinically impossible. Onset: district by district.</em></p>
+<p>She wrote <em>clinically impossible</em> and underlined it, because it was the true word. Doubt was not a thing a healthy mind could be without. A mind without any doubt at all, a whole district of them, was not a healthy district; it was a treated one.</p>
+<hr>
+<p>At eleven Morrison came, because she had sent for him, and he took one reading of a sleeping patient with an assessment band and looked at the gain trace on the little screen and went gray, and his hands shook, for the first time since 2106.</p>
+<p>He had made himself a rule, years ago, that his hands would not shake unless it meant something, and they had been steady for four years, and they shook now, and she watched them shake and knew what it meant before he said it.</p>
+<p>"It's mine," said Morrison. "The calibration. Wing C. The one I built so the cradles would work properly." He put the band down carefully, because his hands were not to be trusted with it. "It's on the national network, Yuki. The whole carrier. It's my calibration, running into districts."</p>
+<p>"James," said Tanaka. "Say that again."</p>
+<p>He said it again. His hands shook while he said it.</p>
+<hr>
+<p>At half past three Maya came through the shelling, with the copied technical file of the Stabilisation of Sympathisers Order, which had come to her desk in the Commission's technical office for a routine network-load review, with an office stamp and no name on the routing slip.</p>
+<p>They went into the linen room, behind the laundry, the one room no Chronos orderly entered in the afternoon, because a Chronos orderly's every word went into a log and the linen room was where you went to say a thing you did not want logged; and the irony of that was not lost on any of the three of them, that the one private room in a Chronos hospital was the laundry.</p>
+<p>Tanaka opened the file.</p>
+<p>The cover: <em>Correction Over Punishment</em>, which Maya said she had seen the title of before, from Kovač, from Marcus's notes, and which Tanaka had not, and which meant nothing to Tanaka yet except that it was the name of a thing older than the order. Signed the seventeenth of March under war powers; only a notice of it had ever been public.</p>
+<p>The preamble: legal language, the recitals, the war powers, and then, without attribution, a quotation, set off as a quotation, a paragraph in a different register from the law around it.</p>
+<p>The annex: the broadcast schedule, by district. Its first three lines were the three early districts, and against them the words <em>continued from 24 February 2110 under emergency information powers</em>; and then one district a week from the twenty-fourth of March. She laid her pencilled district map beside the annex, and the onsets matched the schedule to within days. The broadcasting had begun three weeks before the law that authorised it. The law had legalised it after the fact. She wrote that down as a finding, not a feeling: <em>The broadcasting began before the law. The law regularised it.</em></p>
+<p>The technical sign-off, at the foot: <em>Dr. Reeves, Director of Stabilisation Broadcasting.</em></p>
+<p>And clipped behind the annex, one typed page. The type uneven, a bite out of every lowercase <em>e</em>. A copy numeral in the lower right corner: X. A page number: 19.</p>
+<p>"X," said Maya, very quietly. "Like the intake pages. Book 6." She did not touch it. "Page nineteen. The circle's notes put Four at eighteen."</p>
+<p>The page carried no mark. Tanaka did not know why that should matter and Maya did not explain it; it was an odd page, in the middle of a principle, and it carried no two-letter cipher at its foot, only the numeral and the number and the chipped <em>e</em>.</p>
+<hr>
+<p>Tanaka read it aloud, slowly, the way she had read a protocol at a kitchen table in 2105, and it matched the preamble word for word.</p>
+<p>"'Do not punish the doubter; heal him. Punishment makes martyrs; correction makes converts. The aim is not obedience but belief: a citizen who, corrected, experiences his certainty as his own. Correction is compassion. Certainty is care.'"</p>
+<p>She heard it land in the room. In <em>experiences his certainty as his own</em> she heard Continuity's stated aim, the thing she had refused to administer in 2105, <em>genuine belief, experienced as self-originated</em>; the protocol she had put her cup down over had been a paraphrase of this page; the page was older than the protocol, older than Ashford, older than the nation; it was the thing her torture had been built from, and she had refused it once and been made a subject of it, and here it was, typed, with a chipped <em>e</em>, on a page an SFW courier had never carried and a government technician had put in her hand by mistake.</p>
+<p>She set the page down the way she had once set down the cup, with both hands, because she was not sure one would hold it.</p>
+<p>She was in two rooms at once, reading it. She was in the linen room, with Morrison gray beside her and Maya furious and weeping, and the typed page with its chipped <em>e</em> on the folded sheets between them. And she was at her own kitchen table, twenty-five years younger, reading a protocol Reeves had asked her to lead, coming to the words <em>reduce to baseline</em>, and setting her cup down because she was afraid she would drop it, and refusing it the next morning, politely, in writing, and being arrested three weeks later for refusing. The protocol she had refused had been a paraphrase of this page. She had known, at the kitchen table, that it was wrong, and had refused it, and been made a subject of it; and now here was the page itself, older than the protocol, older than her refusal, older than the white room they had emptied her in, typed in 1966, and being broadcast into a city; and the whole of her life, the refusal and the correction and the exile and the coming home, was a thing that had happened in the shadow of this one page, which she was reading for the first time, aloud, in a laundry, in a war.</p>
+<p>In <em>Certainty is care</em> she heard her forty-one patients, the same words in their mouths, <em>we must be certain now</em>, the slogan that was not a slogan but a dose. Morrison said, almost to himself, "He used to say 'healing.' Reeves. In the sessions. He'd say 'we're healing him.'" Maya cried, and was furious in the same breath, the way she did everything that cost her: "Somebody put this in my queue. For a <em>network-load review</em>. Somebody filed this the way you file anything."</p>
+<p>And the why of it was on the pages Isaiah had sent, from copy VII, which Kira had, which Tanaka had read: Principle Two. <em>Controlled conflict answers every question before it is asked.</em> Under a war, correction was care, and nobody asked, because a city under siege did not ask who was broadcasting calm into it; it was grateful for the calm. The war was the cover. The war had always been going to be the cover. Morrison said the name of the thing, the name they had all been circling for three weeks and had not had: "Phase Two."</p>
+<hr>
+<p>In the evening she copied the page by hand, into her case book and into two journals by the pairing method, one of them for Kira, because a thing kept in one hand could be taken and a thing kept in many could not. She kept the typed page itself, folded, in the case book. Maya took the file back and marked it <em>reviewed</em> and returned it to the queue it had come from, because a file that did not come back was a file someone came looking for.</p>
+<p>Night, in her office, with the map of the districts on the wall and the onset dates pencilled on it, she wrote the diagnosis, and came to the last line, and stopped.</p>
+<p><em>Aetiology: a principle. Author: unknown. Treatment:</em></p>
+<p>She left it unfinished, the colon and the space, because she did not have the treatment, and because she had learned, in a long life of writing down hard things, that an honest unfinished line was worth more than a finished lie, and that there were some lines a clinician had no right to close until she could close them true.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="16-not-before.html" class="nav-button">← Previous: Chapter 16: Not Before</a>
+            <div class="nav-center">Chapter 17: Certainty Is Care</div>
+            <a href="18-read-your-own-book.html" class="nav-button">Next: Chapter 18: Read Your Own Book →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

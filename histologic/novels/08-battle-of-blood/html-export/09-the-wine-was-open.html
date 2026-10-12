@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Blood - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Blood</h1>
+            <div class="novel-meta">Novel 08 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="08-who-is-invading-whom.html" class="nav-button">← Previous: Chapter 8: Who Is Invading Whom?</a>
+            <div class="nav-center">Chapter 9: The Wine Was Open</div>
+            <a href="10-nora.html" class="nav-button">Next: Chapter 10: Nora →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 9: The Wine Was Open</h1>
+<p><em>Monday, March 10, 2110. Coastal command, the road, and the capital, Veridica</em></p>
+<hr>
+<p>At half past six in the morning the courier's case reached Colonel Yevgenia Sokolov at coastal command, which had withdrawn inland after the landing into a requisitioned district school, and she opened it on the table in what had been a classroom, with the small chairs stacked against the wall and a child's number chart still pinned above the blackboard.</p>
+<p>It had come up from the capital through the war coordination's courier channel, still in a guerrilla's oilcloth, with a cover slip from the Commission's office that said only where it had been taken and that it had been forwarded unopened. Someone behind the enemy's lines had taken it off a courier and sent it inland hand to hand and it had found its way to her, because it was a military document and she commanded the coast. She was grateful, in the flat way she was grateful for anything, to whoever had had the sense not to read it aloud along the way.</p>
+<p>Inside was the Sovereignty's landing and advance plan, in their own script, which she could not read; and behind it, in Veridican, in Veridican staff format, an annex.</p>
+<p>She read the annex the way she read everything, as an order, listing what it contained and letting it mean nothing until she had it all.</p>
+<p>Every battery she had placed, Battery 1 to Battery 9, each at its own grid reference, her references, and against each one, in the enemy's margin, the script she had learned over the past month to read as <em>avoid</em>.</p>
+<p>The three inland roads she had meant to hold, each marked with an hour at which it was to be taken.</p>
+<p>The beach between Battery 4 and Battery 5, the gap she had left on purpose because the marsh and the single road behind it were better held from the ridge than walled on the sand, marked as the first wave's landing ground. The gap the Sovereignty had come ashore through, in strength, on the landing day, as if it had been drawn on a chart and handed to the man who steered the leading craft.</p>
+<p>And at the head of the annex, typed as its summary line, as the line a staff officer puts at the top to tell you in one sentence what the plan is: <em>The beaches are a door, not a wall.</em></p>
+<hr>
+<p>She did the check, because a thing unchecked was a rumour and she did not act on rumours.</p>
+<p>She took the official coastal defence plan out of her own safe, the plan adopted in January when they gave her the command, the plan that was her own private work made into the nation's, and she read it line by line against the annex. The battery positions matched. The roads matched. The whole of it matched, because the annex was her plan, turned inside out, every <em>hold</em> become <em>avoid</em>, every arc of fire become a line to step around.</p>
+<p>The phrase was not in it.</p>
+<p><em>The beaches are a door, not a wall.</em> It was not in the official plan. It was not in any briefing she had given; she had briefed the plan a dozen times and never once said it; it was not a line you put in a briefing, it was a line you kept in your own head to remind yourself of the shape of the thing. It was in her notebook, which had been in her coat since December, and which she had written in. And she had said it aloud exactly once, to one person, on the twentieth of December, at her mother's table, over the good wine, when her mother had asked her about the coast.</p>
+<p>She wrote three facts in a column on a sheet of the school's paper, in her own hand. <em>The annex is my plan.</em> <em>The phrase is in my notebook and nowhere else.</em> <em>I said it aloud once, on 20 Dec, to V. Sokolov.</em> She looked at the column and initialled it, <em>Y.S.</em>, because a thing written in her own hand was a thing she had decided to know.</p>
+<p>Then she wrote a second column, because the first column was not the whole of it and a half-truth was worse than a lie. <em>Major, Feb 2109. Very quick.</em> <em>Colonel, 20 Dec 2109. Insignia already engraved.</em> <em>Coastal command, Jan 2110, which made my private plan the nation's plan.</em> She looked at the second column for a while. Then she wrote one word under it, <em>arranged</em>, and a question mark, and then she crossed out the question mark, because the question mark was a thing you wrote when you had not decided, and she had decided, and a report did not lie about what its writer knew.</p>
+<hr>
+<p>She drove to the capital herself, a hundred and forty kilometres, in real weather, gray and hard, with the wind across the road and the convoys moving the other way, out of the city or toward it, she could no longer tell which was which.</p>
+<p>Her mother's house was in a quiet district that the war had not yet reached, and the plate on the door still read <em>Chancellor V. Sokolov</em>, the retired title her mother had kept on her door for eleven years, and the door was unlocked.</p>
+<p>The house was cold. The heating was off, which her mother would never have allowed; her mother kept the house exactly, warm and ordered, nothing out of place, a house like a well-run department. It was still ordered. The study desk had been cleared, not abandoned but cleared, wiped down, the drawers shut, the way a desk is left for an inspection, or by a person who does not intend to be asked about it later.</p>
+<p>She went through the house the way she went through anything, room by room, in order, noting and not interpreting. The kitchen, clean, the cloths folded, the dry goods in their jars, nothing taken that a person fleeing would take, which meant her mother had not fled; a person who fled took food and money and left the house a wreck; her mother had left the house like a department handed over at the end of a posting, in order, complete, for the next occupant. The study, the desk cleared and wiped, the drawers shut and, she found, empty, not ransacked but emptied, the papers of thirteen years as Chancellor and eleven in retirement gone, carried off or burned, she could not tell which. A photograph still on the wall, 2093, her mother and a man she did not know at some function, which told her nothing. Her own childhood room, untouched, a thing kept as a museum keeps a thing, which she did not go into.</p>
+<p>In the dining room the table was laid for nobody. Two glasses stood on it, side by side, clean, the way they had stood in December. The good wine was on the table, the bottle her mother kept for the occasions she decided were occasions, and the cork was out, and the bottle was open, and Sokolov put the back of two fingers against it and found it at room temperature and, when she tipped it a little, flat. It had been open for days.</p>
+<p>Propped against the bottle was a note, one line, in her mother's hand, the upright elegant hand that had signed a nation's business for thirteen years.</p>
+<p><em>You were always exactly where you should be.</em></p>
+<p>She stood and read it, and heard December in it, her mother's finger on the new insignia and her mother's voice, <em>You have always been exactly where you should be</em>, and this was the same sentence, moved into the past tense, closed, a thing said about a thing that was finished. She heard the echo. She did not let herself hear the difference between <em>have always been</em> and <em>were always</em>, between a present that goes on and a past that is over, because hearing the difference was interpreting, and interpreting her mother was a thing she had never once in forty years been able to do, and she was not going to begin in a cold dining room with a flat bottle of wine.</p>
+<p>She was Border Security. She was entitled to one record, and she checked it from the house, on the plate by the door. A private travel order, issued for the former Chancellor, eastbound, through unaligned territory, dated the sixth of March. She noted the date. The courier had been taken on the fifth. Her mother had left the morning after. She did not interpret that either. She wrote it in the column, in her head, where she wrote the things she would not put on paper in another person's house.</p>
+<p>She sat at the table for an hour, in her coat, with her hands in her pockets, and poured nothing into either glass, and the narration of her own mind gave her the clock on the mantel, and the two clean glasses, and the flat wine, and the note against the bottle, and did not give her what she felt, because she did not let it, because a colonel who let herself feel a thing like this in the first hour of knowing it was a colonel who would be no use for the rest of the day, and there was a great deal of day left.</p>
+<hr>
+<p>At half past ten that night she was in the First Minister's office, and Maitland received her alone, tired and courteous, and she reported it formally, in full, in the first person, because a thing like this reported in the third person was a thing you were trying to stand outside of, and she would not stand outside it.</p>
+<p>The annex. The phrase. The dinner on the twentieth of December. The promotions. The house. The cleared desk. The two glasses and the open wine. The note. The travel order of the sixth of March.</p>
+<p>She did not spare herself in the report, because a report that spared its writer was a report that lied by omission, and she would not lie to Maitland, who had given her a command when others would not. She told him that the phrase was hers, from her own notebook, said aloud once, at her mother's table, and that therefore the leak came from her mother or from her, and that it did not come from her. She told him she had been promoted three times in fourteen months, each time faster than the service promoted, and that she had not asked why, and that she was asking why now, too late. She laid her own promotions in front of him as evidence against herself, because they were evidence and she would not pretend otherwise, and she watched him take them, and watched him decide, as she had decided, that a thing could be true, that she could be the daughter of whoever had done this, and still be the one officer on the coast he could not afford to lose, and that both of those were facts, and a war was run on facts and not on the comfort of them.</p>
+<p>Maitland listened to all of it with his chin on his fist and did not interrupt, and when she finished he was quiet for a moment, and then he asked the question.</p>
+<p>"Was your mother part of whatever this is, Colonel?"</p>
+<p>"I do not know what 'this' is, First Minister," said Sokolov. "She was part of the plan's leaving the country. The phrase in the enemy's hands could only have come from her table. That much is a fact. The rest is above me."</p>
+<p>"Who else knows?"</p>
+<p>"You," she said. "And now it is written."</p>
+<p>He nodded. He said he would tell Marcus Chen in the morning, because Chen kept a list, and a thing like this belonged on a list where someone was trying to make the pieces fit, and Sokolov only placed the guns. Then he asked her, not unkindly, whether she wished to be relieved of coastal command, given what the annex was and whose hand had leaked it, because a commander whose plan was in the enemy's case was a commander some ministers would want replaced on the principle of it.</p>
+<p>Sokolov stood, flat, with her hands in her coat pockets, and gave him the real sentence, the one she had been carrying up the hundred and forty kilometres of road, the one she would say to no one else and had decided to say to him because he had asked her a straight question and deserved a straight answer and because it was true.</p>
+<p>"My mother has gone east, First Minister. I would like to stay where I am. I am apparently very good at it."</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="08-who-is-invading-whom.html" class="nav-button">← Previous: Chapter 8: Who Is Invading Whom?</a>
+            <div class="nav-center">Chapter 9: The Wine Was Open</div>
+            <a href="10-nora.html" class="nav-button">Next: Chapter 10: Nora →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

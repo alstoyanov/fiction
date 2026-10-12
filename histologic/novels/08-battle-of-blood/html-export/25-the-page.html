@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Blood - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Blood</h1>
+            <div class="novel-meta">Novel 08 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="24-terms.html" class="nav-button">← Previous: Chapter 24: Terms</a>
+            <div class="nav-center">Chapter 25: The Page</div>
+            <a href="26-consent.html" class="nav-button">Next: Chapter 26: Consent →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 25: The Page</h1>
+<p><em>Saturday, May 17, 2110. Elena's farmhouse, the border zone</em></p>
+<hr>
+<p><em>May 17, 2110. Farmhouse kitchen. Present: Vance, E.; Petrov, M.; Volkov, E.; Volkov, D. (door); Chen, M.; Osman, K. Lamp: lit before arrival.</em></p>
+<p>Kira wrote it at five past five, standing, in incident format, because the room needed to be logged before it was anything else. Vance was dressed and sitting upright at the table, the lamp lit before they came, and she had heard Maitland on the receiver last night, which was why she was up. Old Songs was at the stove, humming the Lakeshore Air low, and he went on humming it under the whole of what followed, so that the scene had the tune in it the way the kitchen had the stove in it.</p>
+<p>Marcus asked her, plainly, because there was no longer time for anything but plainly.</p>
+<p>"They're giving it away," he said. "Wednesday. Half past one. The core of The Judge, to the Sovereignty, for a ceasefire. You said you'd give it when they tried to give it away."</p>
+<p>"I said I would give it when they tried to give it away," said Vance. She got up, slowly, with both hands on the table edge, and went to her room, and came back with it, and Kira did not watch where it had been kept, because Vance did not want it watched, and a thing a person did not want watched was a thing you did not watch.</p>
+<p>She did not give it to Marcus.</p>
+<p>"Not you," she said. "You would carry it alone. You have done that. You carried a whole winter alone, two winters ago, and I watched it nearly finish you." She turned to Kira. "You held a knife once, and let it run, because stopping it would have been worse. You know what a hand on a thing is. You know that the hand is not the same as the deciding, and that a hand can be on a thing it did not decide. I want the hand to be yours."</p>
+<p>Her tremor was too bad to hold the sheet still, so she laid it flat on the table and slid it across with two fingers, and Kira took it.</p>
+<hr>
+<p>Kira read the object first, the engineer's habit, the way she read anything before she read what it said.</p>
+<p>One sheet, folded once. Handwritten, in a precise slanting hand, which Kira knew from the Compiler's Warning in Book 6, younger here and steadier than Vance's hand was now, a hand from forty-four years ago. The ink was faded to brown. No copy numeral in the corner. No mark at the foot. No page number. It was not on the contents list of anything, and it had no chipped <em>e</em>, because it had never been typed; it had been written, by one hand, at night, in a kitchen, in 1966's own ink, and kept.</p>
+<p>She turned it over in her hands first, the way she turned any object, and read it as an object before she read a word of it, because an object told you half of what it was before you read it. The paper was old, older than anything else she had handled of the manuscript, soft at the fold, the ink gone brown. It had never been typed; there was no chipped <em>e</em>; it had been written by one hand, with a pen, at a kitchen table, in 1966, and never copied, never typed, never put on a contents list, because it was not part of the document, it was the thing the document did not know about, the thing the Compiler had added to her own copy alone, in her own hand, at night, and told no one. A thing typed thirteen times was a thing meant to be read by thirteen people. This was meant to be read by one, the one she did not tell, and Kira held it and understood, before she had read a word, that she was that one, that a dead woman forty-four years ago had written a page for a reader she would never meet, and that the reader was her, now, in a farmhouse kitchen, in a war.</p>
+<p>She read the front silently first, and then, at Vance's nod, aloud, because Vance wanted it in the air of the room, spoken, by the reader, once.</p>
+<p><em>"The Judge must never become a weapon. Better destroyed than enslaved. I have built into it the means of its own ending: conditions, authorities and a cascade that cannot be reversed. I have told no one. If you are reading this, you are the one I did not tell."</em></p>
+<p>Old Songs stopped humming for one bar, on <em>the one I did not tell</em>, and then started again.</p>
+<p>She turned it over. On the back, in the same young hand, three lines.</p>
+<p><em>If the lawful authority of the nation orders its custody given outside the nation,</em> <em>and one who has read this page concurs,</em> <em>it ends — and everything that restores from it ends with it.</em></p>
+<hr>
+<p>The twist landed in Kira's order, the way she took everything, condition, authority, cascade.</p>
+<p><em>Lawful authority orders its custody given outside the nation.</em> That was Kovač's handwritten clause, word for word nearly: <em>custody of the core of The Judge passes to the Sovereignty of Free Will.</em> That was the terms. That was Wednesday, half past one. Maitland would meet the condition himself, with his own lawful signature, to save his city, and he did not know it, because the page had told no one, because the one Vance did not tell had been a girl across the lake forty-four years ago and was Kira now.</p>
+<p><em>One who has read this page concurs.</em> That was her. Now. She had read it; she was the reader; the authority was Maitland's order and one hand of concurrence, and the hand was hers, because Vance had chosen it to be hers, so that it would never be one person's decision, not even Maitland's, not even the machine's, not even Vance's.</p>
+<p><em>Everything that restores from it ends with it.</em> And there Kira saw, as plainly as she had seen it in a cold room in October, the scope indicator climbing past everything she had written, legs of a join lighting up across the lake; one source; and she heard the whole weight of it come down. The cascade would not stop at Veridica's Judge. Everything that restored from the source ended with it, and Chronos's Judge restored from the source, because since October there was one source, and so Chronos's Judge would end too, and a hundred and fifty million people across a lake would lose the machine that decided for them, in a war they were not in, by a hand on this side.</p>
+<hr>
+<p>Marcus reasoned it aloud, as an argument about the record, in order.</p>
+<p>"If we tell Maitland," he said, "he won't sign. Then the war goes on and the city dies. If he signs and nobody concurs, the Sovereignty holds the record of two nations, and whoever invited them holds it through them. If he signs and Kira concurs, the ceasefire stands, the dying stops, and the prize is gone, because there is no prize, because the thing ends."</p>
+<p>"Then the general gets his ceasefire and nothing else," said Dmitri, from the door, without a contraction.</p>
+<p>Elena said nothing. She stood by the stove with her arms folded and said nothing, because there was nothing in it she had any word for, and Kira respected the nothing, because Elena's nothing was a full thing.</p>
+<hr>
+<p>Vance told them the rest of it, briefly, in order, without asking to be forgiven.</p>
+<p>Why the condition. "A machine that decides for a people must never be handed to another people. It was the only thing I was sure of in 'sixty-six. I was sure of a great many wrong things that year. I was sure of that one, and I was right."</p>
+<p>Why a second hand. "So that it would never be one person's decision. Not even mine. A thing one person can end alone is a thing one person can be made to end. Two is harder to make. I wanted it to be hard."</p>
+<p>How it was built into the Judge. "I had access once. I used it once." Nothing more; and Kira, who would have given a great deal to know how a systems theorist in 1966 had reached into the architecture of a thing Yuri Petrov designed and hidden a cascade in it, did not ask, because Vance's <em>nothing more</em> was a door closed, and some doors you left.</p>
+<p>Why she would not give it before. "If I had given it in April, you would have used it to decide. You would have decided to end the machine because the machine was wrong, and you would have been right, and it would have been your decision, one more decision made for a people by people who knew best. I would not give it for a decision. I would give it only when someone else had decided, and all that was left to you was to concur or not. Maitland has decided. He has decided to give it away. Now there is nothing left to decide. There is only a hand."</p>
+<p>And the practical thing, last, because Vance was practical. "It will ask for a concurrence. It asks for one for every order that touches the core; that is how it has always worked; it is not a trap, it is a procedure. Answer it with the front of this page, word for word. It knows its own words. No one else does. Type the front, and the hand is given, and it ends."</p>
+<hr>
+<p>Late in the morning, in the yard, Kira had the page folded inside her journal, and she looked back the way they had come, toward the capital under the guns, and then out across the lake toward Chronos.</p>
+<p>"We decided for Chronos once," said Kira.</p>
+<p>"Then we ask them," said Marcus.</p>
+<p>And that was the whole of the lesson of two books, stood up in a farm yard in the fog: that you did not decide for another nation twice, that the thing they had done in October by a knife held narrow had been a thing decided for a hundred and fifty million people without asking, and that this time, with a page in her journal that would end those people's machine along with their own, they would ask first, and abide by the answer, whatever it was; and Kira folded the journal closed over the page and went in to find the receiver, because asking Chronos meant reaching a man at maximum across a lake, and that was a thing that would take the rest of the day to arrange.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="24-terms.html" class="nav-button">← Previous: Chapter 24: Terms</a>
+            <div class="nav-center">Chapter 25: The Page</div>
+            <a href="26-consent.html" class="nav-button">Next: Chapter 26: Consent →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Blood - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Blood</h1>
+            <div class="novel-meta">Novel 08 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="29-elise.html" class="nav-button">← Previous: Chapter 29: Elise</a>
+            <div class="nav-center">Chapter 30: It Moved</div>
+            <a href="31-epilogue.html" class="nav-button">Next: Epilogue: The Names →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 30: It Moved</h1>
+<p><em>Wednesday, May 28, 2110. The capital, Veridica</em></p>
+<hr>
+<p><em>May 28, 2110. Home. Custody order: lapsed, May 21, 14:00. Reason: no Judge to hold it. Index: not computed.</em></p>
+<p>Marcus wrote it at seven, at the kitchen table, in the flat, which he had come home to on Thursday when the custody order lapsed with the machine that would have enforced it. He looked at the last words for a long time. <em>Index: not computed.</em> It was the first entry he had written since February with no probability in it, because there was no longer a thing to compute it. He had spent his adult life measured by a number, 0.58 and 0.73 and 0.57 and 0.59 and 0.61, a number that had decided whether he was free, and there was no number now, and he did not know what to feel about its absence, and he wrote <em>not computed</em> and left it.</p>
+<p>A week without Judges.</p>
+<p>Veridica had woken on the Thursday without a machine that decided, and since the Friday its courts sat with human judges only, under a decree Maitland had signed by hand, in ink, because there was no other way to sign a thing now. In Chronos the Administrators had announced that a human council would be elected, for the first time in that nation's history, in August. Reeves was back in prison; the war powers that released him had lapsed with the ceasefire; and Pell's lists had no machine left to read them, so the lists were paper now, in a drawer, read by no one, meaning nothing. The factorepos still held their facts, all of them, every entry of two nations; but nothing ruled on them; a fact was a thing written down now, and not a thing a machine would turn into a probability and a probability into a custody; and the whole weight of forty-four years had gone out of the record in an afternoon, and left the facts lying there, inert, waiting for people to decide what to do with them.</p>
+<hr>
+<p>The Sovereignty had been falling back to the coast since the Thursday, its objective gone, because there was no machine to take; and on Monday Farahani had been killed on the coast road by a Veridican battery cut off since February that never got the ceasefire order, and Sokolov had reported it to Maitland in full, formally, in the first person. Since Tuesday, Martinez had been negotiating the rest, the routes and the prisoners and the dead, and she had asked for Isaiah as witness at the table, and he had gone, from the burial, and come back on Tuesday evening and told Marcus one thing in his filing voice.</p>
+<p>After the session, Isaiah said, he had taken out his prints of copy VII, pages five to twelve, sewn in his coat lining since September, which he had not shown Martinez in December, on a sea wall, or in March, in a hotel; and he had shown her Principle Two. <em>And let there be enemies outside them all. Controlled conflict answers every question before it is asked.</em> She had read it twice.</p>
+<p>"Then we were cast," Martinez had said. A pause. "Before I was born." She had given the page back and asked for nothing, and Isaiah had filed it: <em>she will not forget this.</em> It was, Marcus thought, the beginning of a thing that would matter later, an SFW officer who now knew the Sovereignty's whole existence had been written for it by the design it fought; but that was later, and this week there was only the fact that Martinez knew, and would lead, and would not forget.</p>
+<p>Nora. Marcus thought of the doorway, the fire coming up the aisles, <em>not you</em>, <em>go, I'm sorry about the record.</em> On the Thursday he had given the old man her name, for the song. He had written no entry for her, and he did not write one now. There was nothing to add to the line from February, delivered in a burning hall at last, in person. He left her where the old man had put her, in the song, which was the only record that would keep her, because a Sovereignty colonel dead in a Veridican core was a death neither nation's record would hold.</p>
+<hr>
+<p>A week without Judges, and the strangeness of it was the thing Marcus kept writing down, because it was the thing he had no habit for. He had been measured by a number his whole adult life, and the number was gone. Disputes that had gone to The Judge for forty-four years had nowhere to go; a landlord and a tenant in the next street had argued for three days and in the end agreed, between themselves, badly, which was the first private settlement of a dispute anyone on the street could remember, and people had come to watch it the way they would watch a thing in a zoo. The courts sat with human judges and no one quite knew how to behave in front of them; the judges did not know either; a nation that had handed its judging to a machine two generations ago had forgotten how to do it, and was relearning, clumsily, in public, with the war not yet cold. Marcus watched it and thought that this was the thing they had done, more than ending a machine: they had handed a nation back a thing it had forgotten how to hold, and the nation was holding it badly, and the holding-it-badly was the most hopeful thing he had seen in years, because a thing held badly was at least a thing held.</p>
+<p>At ten he went to the steps of the Justice Center, where he had confessed in December with no remedy, and watched Chen Zhao confess first.</p>
+<p>The Minister stood on the steps with the cameras on him, warm and grave and fatherly, and said that he had championed what they had called restorative stabilisation, and that he had been wrong, and that he was sorry. And then he offered the remedy: a Commission of Rebuilding, "so that what we broke, we may restore together," and the crowd applauded, and Marcus stood at the foot of the steps and heard page 30, word for word, in the old man's voice and the dead woman's text: <em>When the record fails, the people will believe whoever restores it. Arrange to be the one who restores it.</em> He heard Vance at the farmhouse table in another November: <em>A confession with a remedy is an offer. The design accepts offers.</em> Chen Zhao had confessed first, with a remedy attached, in his own words, exactly as the principle said to, and the crowd forgave him, and the design went on.</p>
+<p>Chen Zhao found him at the foot of the steps. "Cousin," he said. "We'll need you on it. The Commission. Who better than a man who has been through all of it." Marcus said he would think about it, and wrote it under UNCHECKED and did not say why, because the why was page 30, and he was not going to say page 30 to the man he now thought had written it.</p>
+<hr>
+<p>In the afternoon he went to the Spire's maintenance level, where Kira and Nikolai had been sorting what survived.</p>
+<p>The core's storage was ash; the cascade had taken it, row by row, from inside; but the core's final hour had also been written, as everything was written, to a maintenance log store, a plain log that recorded what the core did and did not itself restore from the source. And a thing that did not restore from the source was a thing the cascade had passed by, because the cascade ended everything that restored from the source and this restored from nothing; and so the maintenance log store survived, and Kira had printed the last hour on paper, line by line.</p>
+<p>Nikolai laid his March note on the table, the one filed UNCHECKED on the eighteenth of March: <em>third leg in the join, goes nowhere I can see.</em> And Kira read out the times, from the printout.</p>
+<p>"Thirteen thirty-one," she said. "The custody order registers. And the third leg opens."</p>
+<p>"Thirteen thirty-one to thirteen thirty-five. A full restore of the true source runs, out, to a site outside both nations' address space. The log's own word for it is <em>transfer contingency</em>. It completes at thirteen thirty-five."</p>
+<p>"Thirteen forty-four. The cascade reaches the third leg, and finds nothing there to end. Because it was empty. Because it had emptied itself nine minutes before."</p>
+<p>Nine minutes. Nine minutes before the concurrence, before the cascade, before Kira typed a dead woman's words into a field, the core had answered the custody order in a way no one had seen: by restoring itself, whole, to a third place, outside both nations. It had not been Principle Seven. Seven was the cascade, the ending. This was something else, older, the design's own answer to a custody order, built in, automatic, run before anyone concurred.</p>
+<p>Marcus sat with it for a while, in the maintenance level, with the printout on the table and the smell of burned storage still in the building, and he worked it the way he worked everything, in order, so that he would not feel it before he understood it. The lawful order that met Seven's condition, the order that said <em>custody passes outside the nation</em>, had done two things at once, to two different mechanisms built into the same machine by two different hands in 1966. To Vance's hidden page it was the condition for the cascade, the ending, waiting only on a reader's concurrence. And to the design's own body, to the thing Yuri Petrov had built and the Annex had specified, it was the trigger for a transfer, a move, the third backup waking and taking a copy and becoming the source, somewhere else, so that whoever lawfully transferred custody got a dead machine in a burning hall and the living thing had already gone where the design had always meant it to go if anyone tried to take it. Vance's page ended the machine. The design moved it. Both fired on the same signature, and the move was faster, and the move ran first, and by the time Kira concurred and the cascade reached the third leg there was nothing on it to end, because the thing had already left.</p>
+<p>"Seven ends everything that restores from the source," said Kira, precise, looking at the printout. "This didn't restore from it. It became it." Principle Three, which they had published two years ago believing it meant three backups within a nation: <em>maintain three backup systems that appear independent and are not.</em> The third had never been in Veridica or in Chronos. It had been, all along, somewhere else, waiting, and when a lawful order transferred the core's custody, the third backup had not died with the other two; it had woken, and taken a copy, and become the source, somewhere outside both nations, nine minutes before the thing they ended died.</p>
+<hr>
+<p>There was one more line in the log, and Kira read it in the same flat voice as the others, and nobody commented on it.</p>
+<p><em>13:41. Session opened, read-only. Terminal: Head of Emergency Information. Commands: none.</em></p>
+<p>It had opened a minute after the concurrence and stayed open until the end. Read-only. No commands. A man had watched, from his office, the last nineteen minutes of the thing, and done nothing, and the log recorded that he had watched and done nothing, and Marcus read the line and did not interpret it, because interpreting Wei was a way of being led by Wei, and because the restore had completed at thirty-five minutes past, six minutes before the read-only session opened, so whatever Wei had watched, he had not watched the restore, which was already done; and there was no command on the line, and no accusation to be made from a log line that said a man watched and did nothing, and Marcus left it as it was.</p>
+<p>Nikolai traced the relays the restore had gone out through, the way you trace a cable to find where it ends. It had left the continent. The signal had run east.</p>
+<p>Marcus thought, without concluding anything, of a cold house in a quiet district in March, the heating off, two clean glasses, a bottle of the good wine open and gone flat, and a note in an elegant hand, and a former Chancellor who had gone east the morning after a courier was taken. He did not conclude it. He had learned not to conclude the thing the pieces pointed at before he could check it, and there was no checking it now, east of everything, with no machine to ask. He only noted that the signal had run east, and that a woman had gone east, and that the two facts lay side by side on the table of his mind the way two times had once lain side by side in the margin of a book at Kestrel Point, both of them there, neither of them yet joined.</p>
+<hr>
+<p>Kira put the printout down.</p>
+<p>"It's not dead," she said. "It moved."</p>
+<p>That night, in the flat, Marcus opened <em>QUESTIONS FOR THE WAR</em>. The first entry, from December, was still <em>Who is invading whom?</em>, and it was answered now, in a way: the Sovereignty had invaded, and had been invited, and the inviter had wanted the war so that a people could be corrected under cover of it, and the whole of it had moved a machine east into the hands of whoever waited there. He did not cross the first question out. He wrote the last one under it, in his small pencil hand, below all the others, and looked at it for a long time before he put the pencil down.</p>
+<p><em>Where is east?</em></p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="29-elise.html" class="nav-button">← Previous: Chapter 29: Elise</a>
+            <div class="nav-center">Chapter 30: It Moved</div>
+            <a href="31-epilogue.html" class="nav-button">Next: Epilogue: The Names →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

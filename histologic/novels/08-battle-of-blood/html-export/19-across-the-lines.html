@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Blood - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Blood</h1>
+            <div class="novel-meta">Novel 08 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="18-read-your-own-book.html" class="nav-button">← Previous: Chapter 18: Read Your Own Book</a>
+            <div class="nav-center">Chapter 19: Across the Lines</div>
+            <a href="20-thirty-seconds.html" class="nav-button">Next: Chapter 20: Thirty Seconds →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 19: Across the Lines</h1>
+<p><em>Wednesday, April 23, 2110. The SFW lines and the eastern suburbs, the besieged capital</em></p>
+<hr>
+<p>In the morning Isaiah Okonkwo filed the depot, because he filed everything, and because a day he had decided to pay attention to was a day he filed before it began, and he had decided to pay attention to this one.</p>
+<p>The Sovereignty's forward headquarters had moved again, into a requisitioned logistics depot east of the capital, and he was the witness still, courteous and watched, with the photographs of Nora's packets sewn into the lining of his coat since the fourteenth of March, where his prints of copy VII had been since September, where his Wing C notes had been since 2106. He had carried his whole record in a coat for four years. Today he would carry it across a line.</p>
+<p>Farahani passed in the corridor, precise and polite, and asked nothing. Martinez said "Mr. Okonkwo" and nothing else, and he could not classify the look she gave him, and he noted that he could not, because a look he could not classify from Martinez was a look that meant either she knew he was going and was letting him, or she did not and he was about to find out whether she was watching the gates. He did not know which. He would not claim to know which.</p>
+<p>Nora brought him coffee at noon and talked about the Spire as the end of the war.</p>
+<p>"When it's over," she said, "I'll tell him myself. Marcus. I've rehearsed it enough times." She said it the way she said everything, certain, warm when she chose, believing every word; and he heard, in how she said <em>free</em>, the way she had always said it, the sound of a person who has crossed an ocean for a reason and cannot afford for the reason to be wrong. He filed her, again, under <em>the sincere</em>, and felt the full weight of what he was about to carry out of her building, which was the proof that her reason was wrong, that the war she had crossed an ocean to fight for was a war that had been given to her by the people it would profit, and that she was, without knowing it, their instrument, as her father's correction had been and her own defection had been. He did not tell her. It was not his to tell her here, in her building, with her coffee in his hand. He drank the coffee and thanked her and filed the weight of it.</p>
+<hr>
+<p>At nine in the evening he walked out of the depot on his standing witness's pass, toward a forward aid post he had visited before, and did not arrive.</p>
+<p>At a burned-out bus depot in the eastern suburbs, in the dark, Alexei was waiting, with two of Elena's people: a woman with a rifle and a boy of about nineteen with a radio. Alexei looked at the coat and said, "Mr. Okonkwo. You've sewn your coat again," and Isaiah said, "It is where I keep things, Mr. Volkov," and they went.</p>
+<p>They went through gardens and over fences and along a rail cutting, in the dark, and Alexei talked low the whole way, because Isaiah needed it, because a man crossing a line in the dark needed a voice to walk beside. He talked about Wing C, about the soup Old Songs had dropped to save a coded book, about Dmitri being the bossiest, about his aunt's terrible tea. He moved, Isaiah noticed, the way water moved, finding the low ground and the dark and the gap in a fence before Isaiah had seen there was a fence, a man who had spent ten years as the Phantom getting people across lines in the dark, and his talking and his moving were the same thing, both of them a way of making the crossing feel like nothing, like a walk, so that the frightened man beside him would not freeze; and Isaiah, who was the frightened man, let himself be walked, and filed, even now, even here, the craft of it, because filing was what he had instead of nerve.</p>
+<p>He asked once, in the cutting, whether Isaiah was sure. "It was arithmetic," said Isaiah, and Alexei said, "Most hard things are," which was Isaiah's own line, given back to him in the dark, and Isaiah let him have it, because a man carrying you across a line had earned your lines.</p>
+<p>"You know what you're carrying," Alexei said, a little further on, not a question.</p>
+<p>"The reason they came," said Isaiah. "And the proof it was given to them."</p>
+<p>"And you're taking it to Marcus."</p>
+<p>"To the list," said Isaiah. "Whoever keeps the list. It happens to be Marcus."</p>
+<p>Alexei was quiet for a few steps. "He'll put it in a column," he said. "He'll find the right column for the end of the world and he'll put it there and he'll feel better." It was fond, and it was tired, and it was the last thing he said about his friends, and Isaiah filed it without knowing it was the last.</p>
+<p>Nikolai's voice came through the boy's radio, from the war coordination floor in the Spire, the fixed point of the route, giving them the ground ahead. Beyond the siege line the network did not reach, and so The Judge could not see any of them; they moved through a hole in the map, which was the only safe place in the city for a fugitive, a defector, and two guerrillas, the one place the machine was blind.</p>
+<hr>
+<p>The eastern ring road was six lanes on an embankment, and it was the Sovereignty's line. The underpasses were watched. The one way across was a service overpass, its concrete parapet chest-high, and on the far side was Veridican ground: allotments, and a volunteer picket among the cabbages.</p>
+<p>Alexei went first onto the deck, low, fast, and waved them after, and they came, the woman and the boy and Isaiah, bent double behind the parapet, forty metres of open concrete between them and the far steps, with the wind off the embankment and the city dark behind them and the enemy's line dark ahead. Isaiah counted the metres as he went, because counting was what he had, and he was at perhaps the twentieth of the forty when the light changed.</p>
+<p>They were halfway across when a gun opened up from a position on the ring road below.</p>
+<p>A flare went up at thirty-eight minutes to midnight, and then the fire, and they went flat behind the parapet, the four of them, pinned, with forty metres of open deck between them and the far steps. Isaiah saw it as arithmetic, because arithmetic was what he had instead of nerve: four people, one gun, forty metres of open deck. The gun had the deck. Someone had to take the gun's attention off the deck, or none of them crossed, and the proof sewn into his coat did not cross, and the one person who kept a list did not get the thing the list needed.</p>
+<p>"We don't leave people," said Alexei, taking the woman's rifle. "That's the whole point of me."</p>
+<p>Isaiah began to argue, in order, the way he argued, laying out the alternatives, and Alexei cut across him, quoting him back to himself with the old wide boyish grin that changed his whole face even in the dark: "It's arithmetic, Isaiah. Most hard things are." And he sent the woman and the boy with Isaiah, toward the far steps, and he stayed.</p>
+<p>At twenty-one minutes to midnight he said the last words, and Isaiah, who never claimed more than he knew, knew these exactly, because he was three feet away and his whole life was the keeping of exact words.</p>
+<p>"Tell Elena I love her. Tell Dima he was first by thirty seconds, and I never minded."</p>
+<p>Then he moved along the parapet, away from the three of them, firing up at the gun, and the gun followed him along the parapet, away, and the deck was clear, and the three of them went across it to the far steps while the gun was looking the other way.</p>
+<hr>
+<p>They reached the steps, and the embankment, and the allotments, and the volunteer picket among the cabbages took them in.</p>
+<p>Isaiah counted, because counting was what he had when a thing was past bearing. Forty seconds of Alexei's rifle, moving away along the ring road. Then the enemy gun alone, firing at a thing that had stopped firing back. Then nothing. The boy of nineteen called into the radio, and Nikolai's voice came back, "Lyosha?", and there was no answer, and there was no trace, because the network ended at the line, and a man who fell beyond it did not fall into the record; he simply stopped reporting, and a thing that stopped reporting was, to the machine, only absent, not dead; and so Alexei Volkov was, at eighteen minutes to midnight on the twenty-third of April, missing, and would stay missing in the record until a hand wrote otherwise.</p>
+<p>The picket did not know what to do with three people who came out of the enemy's dark into the allotments, two of them armed and one of them a tall old man in a coat, and for a moment Isaiah thought they might be shot by their own side, having crossed a line to reach it; but the boy of nineteen said a word, a name, Volkov, and a thing changed in the picket's faces, because the name meant something even here, even among volunteers who had never met the Phantom, and they were taken in among the cabbages and given water and not shot.</p>
+<p>At two minutes to midnight, among the cabbages, before he let the picket take him anywhere or ask him anything, Isaiah took out his paper and wrote the entry, with his prefix and the time, because a thing not written in order was a thing lost.</p>
+<p><em>IO. 23 April. 23:41. Overpass, eastern ring road. A. Volkov:</em> and then the words, exactly, every one of them, so that nothing was lost and nothing read out of order, so that when the time came to carry the words west they would be whole, in a hand, kept the way the dead were kept now, by many hands and much paper, against a machine that did not know yet that there was anything to know.</p>
+<p>He stood in Veridica, alive, with the other side's prize sewn into his coat, and he did not feel his hands.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="18-read-your-own-book.html" class="nav-button">← Previous: Chapter 18: Read Your Own Book</a>
+            <div class="nav-center">Chapter 19: Across the Lines</div>
+            <a href="20-thirty-seconds.html" class="nav-button">Next: Chapter 20: Thirty Seconds →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

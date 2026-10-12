@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Blood - Histologic Series</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --line: #3d7ea6;
+            --line-dark: #2b5d7d;
+            --heading: #1f4e6b;
+            --bg-dark: #f4f6f8;
+            --bg-medium: #ffffff;
+            --bg-light: #e9edf1;
+            --text-primary: #1c2530;
+            --text-secondary: #5b6775;
+            --accent: #4a9eff;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--line);
+            margin-bottom: 3rem;
+        }
+
+        .series-title {
+            font-size: 0.9rem;
+            color: var(--line);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--heading);
+            margin-bottom: 1rem;
+            text-shadow: none;
+        }
+
+        .novel-meta {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            background: var(--bg-light);
+            border: 2px solid var(--line);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chapter-nav-title {
+            flex: 1 1 100%;
+            text-align: center;
+            color: var(--line);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .nav-button {
+            background: var(--line);
+            color: var(--bg-dark);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: var(--heading);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(61, 126, 166, 0.25);
+        }
+
+        .nav-button:disabled,
+        .nav-button.disabled {
+            background: var(--bg-medium);
+            color: var(--text-secondary);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .nav-button:disabled:hover,
+        .nav-button.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chapter Content */
+        .chapter-content {
+            background: rgba(233, 237, 241, 0.8);
+            border-left: 4px solid var(--line);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .chapter-content h1 {
+            color: var(--line);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--line-dark);
+            padding-bottom: 0.5rem;
+        }
+
+        .chapter-content h2 {
+            color: var(--heading);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .chapter-content h3 {
+            color: var(--line);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .chapter-content em {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .chapter-content strong {
+            color: var(--heading);
+        }
+
+        .chapter-content hr {
+            border: none;
+            border-top: 2px solid var(--line);
+            margin: 2rem 0;
+            opacity: 0.5;
+        }
+
+        .chapter-content blockquote {
+            border-left: 4px solid var(--line);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Chapter Info */
+        .chapter-info {
+            background: var(--bg-light);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-info strong {
+            color: var(--line);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 2px solid var(--line);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .chapter-nav {
+                display: none;
+            }
+
+            .chapter-content {
+                background: white;
+                border-left-color: #333;
+            }
+
+            h1, h2, h3 {
+                color: black;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chapter-nav {
+                flex-direction: column;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="series-title">Histologic Series</div>
+            <h1>Battle of Blood</h1>
+            <div class="novel-meta">Novel 08 of the Histologic Series</div>
+        </header>
+
+        <!-- Top Navigation -->
+        <nav class="chapter-nav">
+            <div class="chapter-nav-title">Chapter Navigation</div>
+            <a href="03-embedded.html" class="nav-button">← Previous: Chapter 3: Embedded</a>
+            <div class="nav-center">Chapter 4: The Names, Longer</div>
+            <a href="05-the-judge-at-war.html" class="nav-button">Next: Chapter 5: The Judge at War →</a>
+        </nav>
+
+        <!-- Chapter Info -->
+        
+
+        <!-- Chapter Content -->
+        <article class="chapter-content">
+            <h1>Chapter 4: The Names, Longer</h1>
+<p><em>Monday, February 24, 2110. Elena's farmhouse, the border zone</em></p>
+<hr>
+<p>There were forty-odd people in the barn now, and Mikhail Petrov peeled potatoes for all of them.</p>
+<p>He was seventy-one, and his hands were slow and sure at it, the way they were sure at anything a long time in the doing: the knife going round, the peel coming off in one curl and dropping into the bucket, the way Kerr had peeled an apple at eleven o'clock every morning sixty years ago in a reading room, one long curl, gloves off and then on again. He did not think about Kerr. He peeled the potatoes and watched the barn through the kitchen window, where the refugees from the coast lay in the hay under blankets from every house for twenty kilometres, families and old people and a few children, come inland ahead of the war with what they could carry. Elena and Alexei were on the coast. Dmitri was at the front. Kira and Nikolai were in the capital. Two of Elena's people ran the farmhouse, and he helped where an old man could, which was at the stove.</p>
+<p>The names came on paper. They did not come from the bulletin; the bulletin counted only what reported to the record, and the enemy dead were <em>not recorded</em>, which he had heard on the dresser radio and understood at once as the whole of the matter. The names came west by the pairing couriers, copied out of journals in the coastal towns, and in the refugees' own books, which they carried the way he had once seen people carry bread through a famine, against the body, the last thing they would give up. Coastal people had written down their dead: a harbourmaster, a gunner, neighbours, a girl of nine. And they had written down the Sovereignty's dead too, the soldiers they had buried themselves when there was no one else to do it, copying the names off the paper tags the enemy wore, because the enemy's dead carried their names on cords around their necks, having nothing behind the ears to carry them. A fisherman's widow had copied a name off a tag with a stub of pencil and sent it west. And there was Dmitri's hand, three formal lines about a lieutenant, carried by a courier that morning: <em>He was a teacher. He wrote every night. He went out onto a road that was not there.</em> He read it twice. He knew the hand, and he knew the man who had written it would not have written three lines unless he meant them to be sung.</p>
+<hr>
+<p>Vance sat at the kitchen table while he worked, with her cup in both hands, and the tremor shook it now, so that the tea slopped onto the wood, and she had stopped trying to keep it from him. She was seventy-four. The tremor had been in her hand since Book 6, when she first came across the lake as a dead woman in a mortuary van, and it had got worse through the autumn, and this winter it had stopped being a thing she could hide behind a grip.</p>
+<p>The radio on the dresser carried Farahani's sentence again, as it had carried it most evenings since the thirteenth, in the man's careful accented Veridican: <em>We are not here for your cities.</em> Vance listened to it with her head a little on one side, the way, Mikhail thought, she had once listened to a line of verse across a reading-room table when she was deciding whether it scanned. She said, to no one, precisely: "No. They wouldn't be." She said it the way she had once, he thought, read a line of an essay and judged it true: a woman weighing a claim and finding it sound. <em>We are not here for your cities.</em> Of course they were not. Cities were not what the thing in the Spire was for, and a mind that had helped design the thing heard at once what the cities were worth to an enemy who understood it, which was nothing; the enemy wanted the one thing worth wanting, and Vance knew, better than anyone alive, exactly what that was and exactly where it lay, and she said <em>no, they wouldn't be</em> the way a person says a thing they have known for forty-four years and only now heard said aloud by someone else.</p>
+<p>And then, after a moment, in a different voice, lower: "The page—"</p>
+<p>She stopped. She put both hands around the cup.</p>
+<p>He did not ask. He had watched her take a page out of wherever she kept it, in January, on the night of the Epilogue, and read it and put it back, and he had asked her nothing then either, because a thing a person was not ready to say was a thing you did not reach for; what you reached for got heat, and heat was dangerous, and he had learned that in rooms worse than this one. He hummed one phrase of the Lakeshore Air, low, the phrase that lifted at the end and asked nothing and only said <em>I am here</em>, and he went back to the potatoes, and after a while her hands came off the cup and she picked up the newspaper and corrected something in it under her breath, which was how he knew she was all right.</p>
+<hr>
+<p>At dusk he sang in the yard by the barn door, with words, because at the farmhouse he was free, and the refugees came out in their coats and stood in the cold to hear it.</p>
+<p>"The Names" had grown. He sang the opening the way he always sang it, and the barn was quiet to let him:</p>
+<p><em>Who went down to the water?</em> <em>Name them, and they stay.</em></p>
+<p>Then one verse to a name, as the song was built, as long as the dead. The dead of Wing C, who were old to him now and would never not be sung. The thirty-one of the war of facts two winters ago. The ferryman of Gullhaven, who went into a harbour after a book. And then the new war, verse by verse: a gunner from Battery 5, whose name a comrade had carried inland; a harbourmaster who stayed at his post; a girl of nine from a coast-road town, whose name he sang low and slow and did not hurry. A soldier of the Sovereignty of Free Will, whose name a fisherman's widow had copied off a tag in the mud and sent west because no one else would keep it. The lieutenant who was a teacher and wrote every night and walked out onto a road that was not there. He sang each name once, in the third line, where the song had room for one. The prose of the evening did not keep them; the song did.</p>
+<p>Nobody in the barn objected to the Sovereignty's names among their own. The coastal people had buried those men with their own hands, and a man you have buried is a man whose name you have earned the right to be troubled by. A few of them had learned the refrain in the first week and sang it with him, low: <em>name them, and they stay.</em></p>
+<p>He had wondered, the first evening a Sovereignty name came to him, whether anyone would object; whether a widow whose husband had been killed by the Sovereignty's guns would stand in a cold yard and hear an enemy soldier's name sung into the same song as her man's, and walk away. None had. He thought he understood why, and it was not forgiveness, which was too large a thing to ask of people three weeks into a war; it was that the song did not take sides, because the dead did not take sides, because a name was a name and the water took everyone the same, and a person who had buried a stranger with their own hands had learned that a dead man was a dead man before he was an enemy. The song was older than the war. It was older than the nations. It had been sung on this shore before there was a record to forget anyone, and it would be sung after, and it did not know the difference between a Veridican gunner and a Sovereignty soldier, and that was not a flaw in the song, it was the whole of the song, and the people in the barn heard that in it and did not object.</p>
+<p>The song ran past half an hour. People went in to settle the children and came back out into the cold to hear the rest. The war was in the barn now, in the names, and the names were from both sides of a beach.</p>
+<hr>
+<p>Near the end a boy came to the front.</p>
+<p>He was about ten, and had come inland with his grandmother, and he pushed through the coats to stand in front of the old man and wait, the way a child waits who has decided a thing and is afraid of it. When Mikhail finished a verse the boy said, in a rush, that there was a soldier. On the landing day, outside his town, a soldier of the Sovereignty had died in a ditch, and the boy had been close enough to hear him, and the man had said his own name, twice, slowly, the way you say a thing you want kept, as if he were handing it to the boy to carry. And the boy had carried it, all the way inland, because nobody had written it down and he did not know what else to do with it.</p>
+<p>"Will you put him in," the boy said. "He wasn't ours. But I've got his name."</p>
+<p>Mikhail crouched down, which cost his knees, and said, "Say it to me."</p>
+<p>The boy said it. Mikhail repeated it, carefully, the way he had learned words in his life that no one had ever taught him, the old way, mouth to ear, the way a song is kept when there is no paper and no record and no machine, only one person who heard and one who will remember. He said it back until the boy nodded that he had it right. Then he stood, and sang it into the third line, <em>— went down to the water — / name them, and they stay</em>, and the boy mouthed it with him, his lips moving on the name, and his face did the thing a face does when a thing it has carried alone is finally shared and does not have to be carried alone any more.</p>
+<p>He closed the song the way it closed, exactly:</p>
+<p><em>The record may forget them,</em> <em>the song will not forget;</em> <em>name them, and they stay.</em></p>
+<p>The last phrase lifted at the end, like a question, as every phrase of that tune did.</p>
+<hr>
+<p>Night. The yard was empty and the barn had gone quiet and the children were down. Mikhail stood a long time in the cold with his breath showing, and did not go in.</p>
+<p>The last name in the song tonight had come from no record and no paper and no machine. It had come from a boy's memory of a dying man's voice, mouth to ear to mouth, kept because a child had decided to keep it. That was how the songs had been kept before the Fracture Years, before the record, before any of them. It was, he thought, the way the Sovereignty kept its own, with no interface and a tag on a cord and a name said aloud to whoever was near; and it struck him, standing there, that the enemy across the beach and the old man at the stove were keeping the dead the same way, by many hands and many mouths, against a machine that would not keep them at all.</p>
+<p>The song was as long as the dead. Tomorrow it would be longer. He went in, and closed the door on the cold, and did not sing "The Names" again that night, but held the boy's soldier's name in him, once more, so that it would still be there in the morning when the machine, which did not have it, woke up still not having it.</p>
+        </article>
+
+        <!-- Bottom Navigation -->
+        <nav class="chapter-nav">
+            <a href="03-embedded.html" class="nav-button">← Previous: Chapter 3: Embedded</a>
+            <div class="nav-center">Chapter 4: The Names, Longer</div>
+            <a href="05-the-judge-at-war.html" class="nav-button">Next: Chapter 5: The Judge at War →</a>
+        </nav>
+
+        <footer>
+            <p><strong>The Correction</strong> - Novel 04 of the Histologic Series</p>
+            <p>© 2025 - All Rights Reserved</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                Generated from Markdown source
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+

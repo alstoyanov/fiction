@@ -1,6 +1,6 @@
 # Battle of Blood (Histologic, Book 8)
 
-**Status:** plot v2 and chapter summaries done (Sept 2026). The chapters are still to be drafted. The Nov 2025 draft, its summaries and its documents were deleted; they are in git history.
+**Status:** plot v2 and chapter summaries done (Sept 2026). **First draft of all 32 chapters complete (Oct 2026), ~64,000 words; HTML and EPUB built.** The Nov 2025 draft, its summaries and its documents were deleted; they are in git history.
 **Set:** Wednesday, February 12 to Wednesday, May 28, 2110. The epilogue is on Friday, August 15, 2110.
 **Follows:** *Battle of Truths* (Book 7). **Followed by:** *Architects of Chaos* (Book 9, the finale, provisional).
 
@@ -18,7 +18,9 @@ Alexei Volkov, Colonel Nora Chen, Dr. Elise Vance, and General Farahani.
 
 ## Folder
 - `chapters-summaries/`: the chapter summaries, plus a README with the drafting decisions, timeline, cast, twist and manuscript tables, Old Songs' appearances, the canonical wording of the back of the Seven page, and Vance's riddle.
-- `chapters/`: to be drafted.
+- `chapters/`: the 32 drafted chapters (Prologue + 30 + Epilogue).
+- `html-export/`: one HTML page per chapter plus `index.html`.
+- `battle-of-blood.epub`: the EPUB.
 
 ## Related
 - `plots/08-battle-of-blood-full.md` and `-concise.md` (plot v2).
