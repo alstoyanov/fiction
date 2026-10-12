@@ -10,7 +10,7 @@ In Chronos, in the morning, the count of the first human council was published, 
 
 At midday Colonel Yevgenia Sokolov stopped at the lakeshore checkpoint on her way back from the capital, as she always stopped, and Dmitri Volkov was there, because his company had been stood down and he had not yet decided what a man did after a war he survived.
 
-She had been offered the rank of General, she said, formally, and had refused it. "I would like to stay where I am." And then, low, on the way back to the car, the real sentence, the one that came last: "I was apparently very good at it." Dmitri did not use a contraction. He counted the cars through the checkpoint as he had always counted them, and he counted, among the people he knew, one fewer brother, the one who had been first by thirty seconds, who had never minded; and he did not say it, because it did not want saying to Sokolov, who read a thing without being told; and she nodded to him, once, and went, and the checkpoint was quiet, and traffic was normal.
+She had been offered the rank of General, she said, formally, and had refused it. "I would like to stay where I am." And then, low, on the way back to the car, the real sentence, the one that came last: "I was apparently very good at it." Dmitri did not use a contraction. He counted the cars through the checkpoint as he had always counted them, and he counted, among the people he knew, one fewer brother, the one who had come out second by thirty seconds and had never once minded it; and he did not say it, because it did not want saying to Sokolov, who read a thing without being told; and she nodded to him, once, and went, and the checkpoint was quiet, and traffic was normal.
 
 ---
 
