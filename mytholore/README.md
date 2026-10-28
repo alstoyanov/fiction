@@ -28,6 +28,9 @@ mytholore/
 ├── _templates/                ← copy these to start something new
 │   ├── mythology/             ← a new mythology folder (README + album-ideas.md)
 │   └── album/                 ← a new album folder (README, lore, tracks, art, release)
+├── personal/                  ← albums not based on any mythology (own sound per album)
+│   ├── README.md              ← index of personal albums and their rules
+│   └── <NN-album-slug>/       ← same layout as below, with concept.md instead of lore.md
 └── mythologies/
     ├── README.md              ← index of every mythology and album, with status
     └── <mythology>/           ← e.g. norse/, egyptian/, yoruba/, aztec/
@@ -44,6 +47,9 @@ mytholore/
                 └── release-notes.md   ← descriptions, tags, platform links
 ```
 
+## Personal Albums
+Not every album is mythological. **Personal albums** (philosophical or autobiographical concept albums) live in `personal/`, numbered in release order (`01-the-crucible-of-choice`). Each sets its **own sound** in its README and may step outside the band's default sound above. Their rules are in `personal/README.md`.
+
 ## Naming Rules
 - **Folders and files:** lowercase kebab-case (`the-twilight-of-the-gods`), with no spaces or special characters.
 - **Mythology folders:** name them after the tradition, not the region: `norse`, `greek`, `celtic-irish`, `slavic`, `egyptian`, `mesopotamian`, `yoruba`, `aztec`, `inca`, `lakota`. Use a hyphenated qualifier when one region has several traditions (`celtic-irish`, `celtic-welsh`).
@@ -53,8 +59,9 @@ mytholore/
 
 ## Starting Something New
 1. **A new mythology:** copy `_templates/mythology/` to `mythologies/<mythology>/` and fill in its README. Add a row to `mythologies/README.md`.
-2. **A new album:** copy `_templates/album/` to `mythologies/<mythology>/<NN-album-slug>/`. Fill in `README.md` and `lore.md` **before** writing any lyrics. Then add the album to the mythology's README and to the index.
-3. Follow `guides/workflow.md` from there.
+2. **A new personal album:** copy `_templates/album/` to `personal/<NN-album-slug>/`, rename `lore.md` to `concept.md`, and follow `personal/README.md`.
+3. **A new mythology album:** copy `_templates/album/` to `mythologies/<mythology>/<NN-album-slug>/`. Fill in `README.md` and `lore.md` **before** writing any lyrics. Then add the album to the mythology's README and to the index.
+4. Follow `guides/workflow.md` from there.
 
 ## Moving Existing Albums In
 For each album you've already released or drafted:
