@@ -32,6 +32,7 @@ personal/
 |---|-------|--------|------------------|-------|--------|----------|
 | 01 | *The Crucible of Choice* | `01-the-crucible-of-choice/` | The terror and freedom of owning every choice | Cinematic rap metal / nu-metal / hard rock | Writing | — |
 | 04 | *Masks and Mirrors* | `04-masks-and-mirrors/` | The war between identity and image, and the freedom of being seen | Dark cinematic orchestral hip hop | Writing | — |
+| 10 | *Questions Without Answers* | `10-questions-without-answers/` | The biggest questions, and living meaningfully without the answers | Philosophical orchestral rap | Writing | — |
 
 ## Ideas (not started)
 - 
